@@ -1,201 +1,133 @@
-# CLO3D MCP Server
+# CLO3D MCP — Python / Windows Named Pipe
 
-Talk to CLO3D from Claude, Cursor, or any MCP client. Create patterns, swap fabrics, run simulations, export models. All from a chat window.
+Один скрипт внутри CLO запускает отдельный MCP HTTP-процесс для текущего
+сеанса. Ассистент подключается по `http://127.0.0.1:8765/mcp`.
+Обмен с CLO — Named Pipe, **без файлов запросов, ответов и heartbeat**.
 
-If you use CLO3D and you've wished you could script repetitive tasks without digging through the API docs, this is for you.
+Это транспортный MVP: **пять диагностических инструментов**, не полный набор
+построения одежды. Проверенная среда: Windows, CLO 2026.1, встроенный Python
+3.11.8 x64, внешний CPython 3.11.9, официальный MCP SDK 1.26.0.
+P0–P3 приняты реальными проверками; P4 (нагрузка/длительная работа) выполняется.
 
-```
-Your AI assistant  <-->  MCP Server  <-->  CLO3D Plugin  <-->  CLO3D
-```
+## Подготовка
 
-## Quick Start
+- Один экземпляр CLO с Python Script Editor и действующей лицензией.
+- Установленные `uv` и CPython 3.11. Исходники должны оставаться доступны CLO.
+- Из корня checkout выполнить во внешнем PowerShell, **не внутри CLO**:
 
-### 1. Load the plugin in CLO3D
-
-One Python file, no dependencies.
-
-1. Open CLO3D
-2. **Script > Script Editor**
-3. Open `plugin/clo3d_mcp_plugin.py`
-4. Hit **Run**
-
-You'll see `[CLO MCP] Plugin started` and `[CLO MCP] Listening for commands in: ...` in the console.
-
-Run it once per CLO3D session. On Windows the plugin listens through a native timer driven by CLO3D's own event loop, so CLO3D stays fully usable. On other platforms it falls back to a blocking loop: the Script Editor stays busy while the plugin listens. Re-running the script replaces the previous listener.
-
-### 2. Connect your AI client
-
-**Claude Code:**
-```bash
-claude mcp add clo3d -- uvx --from git+https://github.com/Ubani-Studio/clo3d-mcp clo3d-mcp
+```powershell
+uv sync --frozen --python 3.11
 ```
 
-**Claude Desktop** (add to `claude_desktop_config.json`):
+Launcher ожидает `.venv/Scripts/python.exe`. Никаких установок пакетов в
+встроенный Python CLO, собственного C++, CLO SDK или Qt не требуется.
+Python-пакет декларирует 3.10+, но новый runtime проверен только на указанной
+выше среде; совместимость с другими версиями не обещается.
+
+## Запуск
+
+1. Открыть CLO, для диагностики — расходную тестовую сцену.
+2. В **Script → Script Editor** открыть `plugin/clo3d_mcp_start.py` и нажать Run.
+3. Закрыть Script Editor. Launcher возвращает управление, callback обслуживается
+   UI CLO. STARTED — ещё не готовность; ожидается READY и/или `ready=True` в MCP.
+4. Если CLO не задаёт `__file__`, указать абсолютный путь к корню checkout
+   в `ROOT` в начале launcher. Не подменять внешний Python на `sys.executable` CLO.
+
+Повторный запуск в **том же CLO** даёт ALREADY_STARTED, не второй процесс.
+Второй экземпляр CLO на том же порту не поддерживается: занятый порт — ошибка,
+чужой сервер не завершается. После изменения runtime-модулей открыть свежий CLO,
+не перезагружать модули с сохранёнными native callbacks на месте.
+
+## Текущий проект OpenCode / OpenChamber
+
+`opencode.json` уже содержит project-local remote `clo`:
+
 ```json
 {
-  "mcpServers": {
-    "clo3d": {
-      "command": "uvx",
-      "args": ["--from", "git+https://github.com/Ubani-Studio/clo3d-mcp", "clo3d-mcp"]
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "servers": {
+      "clo": {
+        "type": "remote",
+        "url": "http://127.0.0.1:8765/mcp",
+        "protocol": "legacy"
+      }
     }
   }
 }
 ```
 
-### 3. Go
+`legacy` здесь — classic MCP initialize официального SDK 1.26, **не файловый IPC**.
+В другом checkout добавить project-local remote через
+`opencode mcp add clo --url http://127.0.0.1:8765/mcp`.
+Проверить `opencode mcp list` или панель MCP / `/mcps`. Конфигурация
+перечитывается без перезапуска OpenCode. До запуска CLO или после его закрытия
+ECONNREFUSED нормально. Глобальные настройки проекта не требуются.
 
-Ask things like:
-- *"What patterns are in this project?"*
-- *"Set the front bodice fabric to red"*
-- *"Run 100 steps of simulation then export as GLB"*
-- *"Export a turntable of all colorways"*
+## Инструменты нового пути
 
-## What you get (46 tools)
+- `ping`: реальный round trip через FIFO в UI executor CLO.
+- `get_pattern_count`: последовательное чтение числа лекал.
+- `transport_status`: внешняя очередь/HTTP; доступен и при занятом CLO.
+- `get_session_info`: CLO session ID, PID и readiness (не MCP HTTP session ID).
+- `create_test_rectangle`: **один** квадрат 100×100 в координатах API (мм)
+  в начале 2D. Изменяет сцену; запускать осознанно, не повторять после timeout.
 
-### Scene
-| Tool | What it does |
-|------|-------------|
-| `get_project_info` | Project name, file path, CLO version, piece counts |
-| `new_project` | Start fresh |
-| `open_file` | Open .zprj, .zpac, .obj, .fbx, .avt |
-| `save_project` | Save as .zprj |
-| `get_garment_info` | Dump full garment metadata to JSON |
+Новый путь не загружает extensions и не публикует legacy-команды импорта,
+экспорта, симуляции, произвольной геометрии или exec.
 
-### Patterns
-| Tool | What it does |
-|------|-------------|
-| `get_pattern_count` | How many pieces |
-| `get_pattern_list` | All pieces with names and indices |
-| `get_pattern_info` | Full detail on one piece |
-| `get_pattern_bounding_box` | Width and height |
-| `set_pattern_name` | Rename a piece |
-| `copy_pattern` | Duplicate at a given position |
-| `delete_pattern` | Remove a piece |
-| `flip_pattern` | Flip horizontal or vertical |
-| `create_pattern` | Build a new piece from vertex points |
-| `get_arrangement_list` | Get avatar arrangement points |
+## Остановка
 
-### Fabrics
-| Tool | What it does |
-|------|-------------|
-| `get_fabric_list` | All fabrics with indices |
-| `add_fabric` | Load a .zfab or .jfab |
-| `replace_fabric` | Swap an existing fabric |
-| `assign_fabric_to_pattern` | Put a fabric on a pattern piece |
-| `set_fabric_color` | Set PBR base color (RGB) |
-| `get_fabric_for_pattern` | Check which fabric is on a piece |
+Внутри того же CLO запустить `plugin/clo3d_mcp_stop.py`, закрыть редактор
+на несколько секунд. FINISHED должен показать stopped, exit code0,
+оба cleanup_pending=False и error=None. Повторный stop выводит отчёт.
+После обычного закрытия CLO его MCP завершается сам по pinned process handle.
+Управляется только принадлежащий сеансу child, не процессы по имени/порту.
 
-### Export
-| Tool | What it does |
-|------|-------------|
-| `export_obj` | OBJ with options |
-| `export_fbx` | FBX |
-| `export_glb` | GLB (binary glTF) |
-| `export_gltf` | glTF |
-| `export_thumbnail` | 3D viewport screenshot |
-| `export_snapshot` | Multi-view snapshots |
-| `export_turntable` | 360 turntable image sequence |
-| `export_tech_pack` | Tech pack with JSON + images |
+## Гарантии и ограничения
 
-### Import
-| Tool | What it does |
-|------|-------------|
-| `import_file` | Auto-detect and import any supported format |
+- Один выполняемый CLO job, внешняя FIFO32, bounded history128/waiters128.
+- Раздельные deadlines очереди/dispatch. Timeout и отмена после dispatch
+  **не останавливают CLO API**. Следующий job не идёт поверх незавершённого.
+- Отправленные команды автоматически не повторяются. `outcome_unknown` означает
+  необходимость сверить сцену; exactly-once через падение процесса не обещается.
+- Долгий синхронный CLO API может блокировать UI. Пауза callback или модальное
+  окно не считаются смертью CLO. Readiness подтверждает только текущий сеанс.
+- HTTP только loopback, строгие Host/Origin checks. **HTTP без отдельной
+  аутентификации**: доверяем локальным процессам машины. Не открывать порт
+  наружу, не ставить proxy; loopback не защита от вредоносного локального ПО.
+- Pipe — ACL текущего пользователя, peer PID и HMAC. Секрет в памяти, не в логах.
+- До 16 удерживаемых поколений callback за жизнь CLO, затем нужен его перезапуск.
+- Поддержка не-Windows и нескольких CLO не входит в новый путь.
 
-### Simulation
-| Tool | What it does |
-|------|-------------|
-| `simulate` | Run cloth sim for N steps |
+## Диагностика и тесты
 
-### Colorways
-| Tool | What it does |
-|------|-------------|
-| `get_colorways` | List all colorways |
-| `set_current_colorway` | Switch the active colorway |
+`http_bind_failed`: порт занят, не убивать владельца порта. NOT_STARTED:
+проверить корень проекта и подготовленную `.venv`. Нет строки READY:
+проверить `get_session_info` — в принятом CLO callback работал, хотя вывод
+READY не появился. Не запускать launcher бесконечно и не скрывать сбои retries.
 
-## How it works
-
-Two pieces:
-
-**The plugin** (`plugin/clo3d_mcp_plugin.py`) runs inside CLO3D. It's a single Python file that polls a shared temp directory for JSON commands, calls the CLO3D Python API, and writes results back. No external dependencies, no sockets, works with CLO3D's built-in Python.
-
-**The MCP server** (`src/clo3d_mcp/`) is a Python package that writes commands to that directory and reads responses. Any MCP-compatible client (Claude, Cursor, etc.) can use it.
-
-```
-┌─────────────────┐   file-based IPC  ┌──────────────────┐     CLO3D API     ┌────────┐
-│   MCP Server    │ ◄──────────────► │   CLO3D Plugin    │ ◄──────────────► │ CLO3D  │
-│   (clo3d-mcp)   │  %TEMP%/clo3d_mcp │  (Python script)  │                  │        │
-└─────────────────┘                   └──────────────────┘                  └────────┘
+```powershell
+uv run --frozen --with pytest pytest -q
 ```
 
-## Your own tools
+Windows CI запускает эту же suite, включая actual pipe/process тесты без CLO.
+Локальные fake API и HTTP/pipe проверки **не заменяют** ручную приёмку CLO.
+Реальные результаты и инструкции:
 
-Keep house tools (your blocks, your naming scheme, your grading rules) in your own folder, private if you like, and the server loads them beside the built-ins. No fork.
+- [План и границы этапов](docs/PYTHON_TRANSPORT_PLAN.md)
+- [Принятый P3](docs/P3_MCP_CHECK.md)
+- [P4: ограниченная нагрузка и ручные проверки](docs/P4_TRANSPORT_CHECK.md)
 
-```python
-# my_tools/house.py
-def register(ext):
-    @ext.tool()
-    def prefix_pieces(prefix: str) -> dict:
-        """Prefix every pattern piece name."""
-        pieces = ext.send("get_pattern_list")["patterns"]
-        for p in pieces:
-            ext.send("set_pattern_name", {"pattern_index": p["index"], "name": f"{prefix}-{p['name']}"})
-        return {"renamed": len(pieces)}
-```
+## Legacy и происхождение
 
-Point the server at the folder:
+Upstream: [Ubani-Studio/clo3d-mcp](https://github.com/Ubani-Studio/clo3d-mcp),
+автор исходного проекта Alabo MacPepple-Jaja. Исходные handlers и тесты сохранены.
+Историческая инструкция с каталогом бизнес-инструментов сохранена в
+[docs/LEGACY_README.md](docs/LEGACY_README.md); это **не** инструкция нового пути.
+`uv run clo3d-mcp` / `src/clo3d_mcp/server.py` и
+`plugin/clo3d_mcp_plugin.py` остаются отдельным stdio/file legacy-режимом.
+Новый launcher никогда не переключается на него автоматически.
 
-```bash
-claude mcp add clo3d -e CLO3D_MCP_EXTENSIONS=/path/to/my_tools -- uvx --from git+https://github.com/Ubani-Studio/clo3d-mcp clo3d-mcp
-```
-
-Several folders or files are separated by `:` (`;` on Windows). Files starting with `_` are skipped, so helpers can sit beside the tools. `ext.send` uses the commands the plug-in already handles. A file that fails to load is named in the server's log and by the `list_extensions` tool, never skipped in silence, and an extension cannot replace a built-in tool.
-
-## Troubleshooting
-
-**"Cannot find CLO3D communication directory"**: Is CLO3D running? Did you run the plugin script?
-
-**Plugin errors**: Check the Script Editor console in CLO3D for Python tracebacks.
-
-**Every call times out although the plugin says it started**: CLO3D's embedded Python does not run background threads once a script returns. Make sure you run the current plugin, which does not rely on a background thread.
-
-**Simulation/export timeout**: These can take a while. The default timeout is 180 seconds.
-
-**Custom comm directory**: Set the `CLO3D_MCP_DIR` environment variable to override the default shared directory path.
-
-## Requirements
-
-- CLO3D with Python scripting support
-- Python 3.10+
-- uv or pip
-
-## Testing
-
-clo3d-mcp is tested by the people who use it, on the CLO3D versions they run. If you try it, working or not, file a
-[Tested on](https://github.com/Ubani-Studio/clo3d-mcp/issues/new?template=tested-on.yml) report: your CLO3D version, OS, client
-and what happened. It takes two minutes, failures count as much as successes, and every tester is credited in the next release.
-
-Questions, ideas and polls on what to build next live in [Discussions](https://github.com/Ubani-Studio/clo3d-mcp/discussions).
-
-## Development
-
-```bash
-git clone https://github.com/Ubani-Studio/clo3d-mcp.git
-cd clo3d-mcp
-
-# Install dev dependencies
-uv sync --dev
-
-# Run tests (no CLO3D needed, uses a mock server)
-uv run pytest tests/ -v
-
-# Run the MCP server locally
-uv run clo3d-mcp
-```
-
-## License
-
-MIT for the code authored here. See [LICENSE](LICENSE).
-
-This repository contains no CLO3D SDK material. The plugin uses only the Python API that ships inside CLO3D, so you need your own CLO3D licence and nothing else from CLO.
+MIT, см. [LICENSE](LICENSE). SDK/сцены CLO в репозиторий не включены;
+нужна собственная лицензия CLO.
