@@ -405,7 +405,7 @@ def queue_roundtrip():
     asyncio.run(scenario())
 
 
-def service_roundtrip(load=False):
+def service_roundtrip(load=False, patterns=False):
     """Full CLO launcher model -> child -> official HTTP -> pipe -> fake API."""
     import asyncio
     import socket
@@ -440,8 +440,15 @@ def service_roundtrip(load=False):
             count[0] += 1
             return {"created": True, "pattern_count": count[0]}
 
-        probe = PipeProbe(Timer(), lambda: count[0], 1, report=lambda _: None,
-                          profile="service", create_rectangle=create, port=port)
+        handler = None
+        read_count = lambda: count[0]
+        if patterns:
+            from test_pattern_api import adapter
+            native, handler = adapter()
+            read_count = native.GetPatternCount
+        probe = PipeProbe(Timer(), read_count, 1, report=lambda _: None,
+                          profile="service", create_rectangle=create, port=port,
+                          command_handler=handler)
         root = Path(__file__).resolve().parents[1]
         spawn = subprocess.Popen
 
@@ -477,7 +484,28 @@ def service_roundtrip(load=False):
                         while not (await client.call_tool("transport_status")).structuredContent["ready"]:
                             await asyncio.sleep(0.001)
                     await asyncio.wait_for(acknowledged(), 3)
-                    if load:
+                    if patterns:
+                        from test_pattern_api import POINTS
+                        from clo3d_mcp.pattern_contract import PATTERN_COMMANDS
+                        names = {tool.name for tool in (await client.list_tools()).tools}
+                        assert set(PATTERN_COMMANDS) <= names
+                        created = await client.call_tool("create_pattern", {"points": POINTS, "name": "front"})
+                        assert not created.isError and created.structuredContent["verified"]
+                        copied = await client.call_tool("copy_pattern_with_offset", {
+                            "pattern_index": 0, "expected_name": "front", "name": "back", "dx": 200, "dy": 30})
+                        assert copied.structuredContent["pattern"]["position_mm"] == [200.0, 30.0]
+                        moved = await client.call_tool("move_pattern_relative", {
+                            "pattern_index": 1, "expected_name": "back", "dx": -10, "dy": 5})
+                        assert moved.structuredContent["pattern"]["position_mm"] == [190.0, 35.0]
+                        native.fail_after_create = True
+                        failed = await client.call_tool("create_pattern", {"points": POINTS, "name": "failed"})
+                        assert failed.isError and failed.structuredContent == {
+                            "ok": False, "error": "scene_change_unverified", "scene_may_have_changed": True}
+                        assert native.mutations.count("create") == 2  # no repeat after error
+                        readback = await client.call_tool("get_pattern_list")
+                        assert readback.structuredContent["pattern_count"] == 3
+                        assert not probe.executor.seen
+                    elif load:
                         async def requests():
                             for batch in range(100):
                                 results = await asyncio.gather(*[
@@ -539,6 +567,10 @@ async def service_client_checks(client, probe, count):
 
 def service_load():
     service_roundtrip(load=True)
+
+
+def service_patterns():
+    service_roundtrip(patterns=True)
 
 
 def malformed_frames():

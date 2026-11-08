@@ -4,7 +4,8 @@ import hashlib
 import hmac
 import os
 
-from clo3d_mcp.protocol import CAPABILITIES, SERVICE_CAPABILITIES, ProtocolError, message, validate
+from clo3d_mcp.protocol import CAPABILITIES, SERVICE_CAPABILITIES, PATTERN_CAPABILITIES, ProtocolError, message, validate
+from clo3d_mcp.pattern_contract import PATTERN_COMMANDS, ERROR_CODES, CommandError, validate_result
 
 
 def proof(key, role, session_id, pid):
@@ -29,7 +30,7 @@ class Executor:
     This is not the external FIFO or crash-safe exactly-once execution.
     """
 
-    def __init__(self, session_id, key, server_pid, read_count, create_rectangle=None):
+    def __init__(self, session_id, key, server_pid, read_count, create_rectangle=None, command_handler=None):
         self.session_id = session_id
         self.key = key
         self.server_pid = server_pid
@@ -41,7 +42,12 @@ class Executor:
         self.last_count = None
         self.handshakes = 0
         self.create_rectangle = create_rectangle
+        self.command_handler = command_handler
+        if command_handler is not None and create_rectangle is None:
+            raise ValueError("Pattern package requires service profile")
         self.capabilities = SERVICE_CAPABILITIES if create_rectangle is not None else CAPABILITIES
+        if command_handler is not None:
+            self.capabilities = PATTERN_CAPABILITIES
         self.high_water = 0
 
     def connected(self, observed_pid):
@@ -101,6 +107,10 @@ class Executor:
                         raise ValueError("Invalid CLO pattern count")
                     self.last_count = count
                     result = {"pattern_count": count}
+                elif frame["command"] in PATTERN_COMMANDS:
+                    self.api_calls += 1
+                    result = self.command_handler(frame["command"], frame["params"])
+                    validate_result(frame["command"], result)
                 else:
                     self.api_calls += 1
                     result = self.create_rectangle()
@@ -110,6 +120,9 @@ class Executor:
                         raise ValueError("Invalid diagnostic creation result")
                     self.last_count = result["pattern_count"]
                 response = message("RESULT", self.session_id, job_id=job_id, result=result)
+            except CommandError as exc:
+                code = exc.code if exc.code in ERROR_CODES else "command_error"
+                response = message("ERROR", self.session_id, job_id=job_id, code=code)
             except Exception:
                 # No API exception details/scene paths sent to peer or logs.
                 response = message("ERROR", self.session_id, job_id=job_id, code="command_error")

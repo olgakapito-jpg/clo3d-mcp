@@ -157,7 +157,9 @@ def test_occupied_port_is_error_and_never_touched():
 def test_sdk_security_and_only_official_framework():
     svc = service(8765)
     mcp = build_mcp(svc)
-    assert type(mcp).__module__ == "mcp.server.fastmcp.server"
+    from mcp.server.fastmcp import FastMCP
+    assert isinstance(mcp, FastMCP)
+    assert FastMCP.__module__ == "mcp.server.fastmcp.server"
     assert mcp.settings.host == "127.0.0.1"
     security = mcp.settings.transport_security
     assert security.enable_dns_rebinding_protection
@@ -266,6 +268,69 @@ def test_http_queue_overflow_and_disconnect_release_all_callers_without_replay(m
             assert await asyncio.wait_for(running, 4) == 0
         finally:
             disconnect.set()
+            svc.parent.is_alive = False
+            if not running.done():
+                await asyncio.wait_for(running, 4)
+    asyncio.run(scenario())
+
+
+def test_pattern_package_real_http_validates_raw_arguments_and_runs_stateful_executor(monkeypatch):
+    from test_pattern_api import POINTS, adapter
+    from clo3d_mcp.pattern_contract import PATTERN_COMMANDS
+
+    async def scenario():
+        import clo3d_mcp.transport_server as module
+        native, api = adapter()
+
+        async def simulated_pipe(svc):
+            svc.queue.on_connected()
+            svc.queue.on_ready()
+            svc.executor_verified = svc.ready_acknowledged = True
+            while svc.parent.alive() and not svc.stop_requested:
+                svc.queue.tick()
+                job = svc.queue.dispatch()
+                if job is not None:
+                    result = api(job["command"], job["params"])
+                    svc.queue.receive(message("RESULT", "s", job_id=job["job_id"], result=result))
+                    svc.queue.on_ready()
+                await asyncio.sleep(0.001)
+
+        monkeypatch.setattr(module, "pipe_loop", simulated_pipe)
+        with socket.socket() as probe:
+            probe.bind(("127.0.0.1", 0))
+            svc = Service("unused", "s", b"k" * 32, 123, Parent(),
+                          port=probe.getsockname()[1], pattern_package=True)
+        running = asyncio.create_task(run(svc))
+        try:
+            await bounded_until(lambda: svc.status()["ready"])
+            async with streamable_http_client("http://127.0.0.1:%d/mcp" % svc.port) as (read, write, _):
+                async with ClientSession(read, write) as client:
+                    await client.initialize()
+                    tools = {t.name: t for t in (await client.list_tools()).tools}
+                    assert set(PATTERN_COMMANDS) <= set(tools)
+                    assert tools["delete_pattern"].annotations.destructiveHint
+                    assert not tools["move_pattern_relative"].annotations.idempotentHint
+                    for command, args in [
+                        ("get_pattern_list", {"extra": 1}),
+                        ("get_pattern_geometry", {"pattern_index": True}),
+                        ("get_pattern_geometry", {"pattern_index": "0"}),
+                        ("create_pattern", {"points": "[[0,0],[10,0],[0,10]]", "name": "a"}),
+                        ("create_pattern", {"points": [[0, 0], [10, 0], [0, True]], "name": "a"}),
+                    ]:
+                        reply = await client.call_tool(command, args)
+                        assert reply.isError, command
+                    assert svc.queue.queue.sequence == 0 and native.mutations == []
+                    created = await client.call_tool("create_pattern", {"points": POINTS, "name": "a"})
+                    assert not created.isError and created.structuredContent["pattern"]["area_mm2"] == 7800
+                    moved = await client.call_tool("move_pattern_relative", {
+                        "pattern_index": 0, "expected_name": "a", "dx": 20, "dy": -10})
+                    assert moved.structuredContent["pattern"]["position_mm"] == [20.0, -10.0]
+                    deleted = await client.call_tool("delete_pattern", {"pattern_index": 0, "expected_name": "a"})
+                    assert deleted.structuredContent["pattern_count"] == 0
+                    assert native.mutations == ["create", "name", "move", "delete"]
+            svc.parent.is_alive = False
+            assert await asyncio.wait_for(running, 4) == 0
+        finally:
             svc.parent.is_alive = False
             if not running.done():
                 await asyncio.wait_for(running, 4)

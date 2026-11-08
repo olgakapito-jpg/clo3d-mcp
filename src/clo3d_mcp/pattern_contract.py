@@ -1,0 +1,192 @@
+"""Bounded first pattern package. Stdlib only, shared by HTTP/queue/CLO.
+
+Not a generic API dispatcher. Coordinates are millimetres; polygons are simple
+straight outlines only. Curves, sewing, avatars and simulation are not enabled.
+"""
+
+import math
+
+
+PATTERN_COMMANDS = [
+    "list_clo_api", "describe_clo_api", "get_pattern_list", "get_pattern_geometry",
+    "create_pattern", "set_pattern_name", "copy_pattern_with_offset",
+    "move_pattern_relative", "delete_pattern",
+]
+API_MODULES = ("pattern_api", "export_api", "fabric_api", "import_api", "utility_api")
+ERROR_CODES = ("api_unavailable", "stale_pattern", "scene_change_unverified", "invalid_parameters")
+MAX_PATTERNS = 256
+MAX_COORDINATE = 100000.0
+
+
+class CommandError(ValueError):
+    """A fixed public error code, never an API exception or private path."""
+
+    def __init__(self, code):
+        self.code = code
+        super().__init__(code)
+
+
+def number(value, bound=MAX_COORDINATE):
+    return (type(value) in (int, float) and math.isfinite(value)
+            and abs(value) <= bound)
+
+
+def name(value):
+    if not isinstance(value, str) or not 1 <= len(value) <= 128:
+        return False
+    return all(ord(char) >= 32 and not 0xD800 <= ord(char) <= 0xDFFF for char in value)
+
+
+def index(value):
+    return type(value) is int and 0 <= value < MAX_PATTERNS
+
+
+def _cross(a, b, c):
+    return (b[0] - a[0]) * (c[1] - a[1]) - (b[1] - a[1]) * (c[0] - a[0])
+
+
+def _on_segment(a, b, c):
+    return (min(a[0], b[0]) <= c[0] <= max(a[0], b[0])
+            and min(a[1], b[1]) <= c[1] <= max(a[1], b[1]))
+
+
+def _intersects(a, b, c, d):
+    ab_c, ab_d, cd_a, cd_b = _cross(a, b, c), _cross(a, b, d), _cross(c, d, a), _cross(c, d, b)
+    if ((ab_c > 0 > ab_d or ab_d > 0 > ab_c)
+            and (cd_a > 0 > cd_b or cd_b > 0 > cd_a)):
+        return True
+    return any(cross == 0 and _on_segment(p, q, r) for cross, p, q, r in (
+        (ab_c, a, b, c), (ab_d, a, b, d), (cd_a, c, d, a), (cd_b, c, d, b)))
+
+
+def polygon(points):
+    if (not isinstance(points, list) or not 3 <= len(points) <= 64
+            or any(not isinstance(p, list) or len(p) != 2 or not all(number(v) for v in p)
+                   for p in points)):
+        return False
+    if len({tuple(p) for p in points}) != len(points):
+        return False
+    if abs(sum(p[0] * q[1] - q[0] * p[1] for p, q in zip(points, points[1:] + points[:1]))) < 0.02:
+        return False
+    n = len(points)
+    for i in range(n):
+        # Reject adjacent collinear edges too: they may overlap/backtrack.
+        if abs(_cross(points[i - 1], points[i], points[(i + 1) % n])) < 1e-8:
+            return False
+        for j in range(i + 1, n):
+            if j == i + 1 or (i == 0 and j == n - 1):
+                continue
+            if _intersects(points[i], points[(i + 1) % n], points[j], points[(j + 1) % n]):
+                return False
+    return True
+
+
+def validate_params(command, params):
+    """Reject extra keys, bool-as-int, non-finite numbers and oversized work."""
+    if not isinstance(params, dict):
+        raise CommandError("invalid_parameters")
+    fields = {
+        "list_clo_api": set(), "describe_clo_api": {"module", "functions"},
+        "get_pattern_list": set(), "get_pattern_geometry": {"pattern_index"},
+        "create_pattern": {"points", "name"},
+        "set_pattern_name": {"pattern_index", "expected_name", "name"},
+        "copy_pattern_with_offset": {"pattern_index", "expected_name", "name", "dx", "dy"},
+        "move_pattern_relative": {"pattern_index", "expected_name", "dx", "dy"},
+        "delete_pattern": {"pattern_index", "expected_name"},
+    }
+    valid = command in fields and set(params) == fields[command]
+    if valid:
+        for key, value in params.items():
+            if key == "pattern_index":
+                valid = index(value)
+            elif key in ("name", "expected_name"):
+                valid = name(value)
+            elif key in ("dx", "dy"):
+                valid = number(value)
+            elif key == "points":
+                valid = polygon(value)
+            elif key == "module":
+                valid = value in API_MODULES
+            elif key == "functions":
+                valid = (isinstance(value, list) and 1 <= len(value) <= 16
+                         and all(isinstance(v, str) and 1 <= len(v) <= 128
+                                 and v.isascii() and v.isidentifier() and not v.startswith("_")
+                                 for v in value))
+            if not valid:
+                break
+    if not valid:
+        raise CommandError("invalid_parameters")
+    return params
+
+
+def json_value(value, depth=0):
+    """A small JSON tree; explicitly disallow non-finite/bool numeric tricks."""
+    if depth > 6:
+        return False
+    if value is None or type(value) is bool:
+        return True
+    if type(value) in (int, float):
+        return number(value, 1e16)
+    if isinstance(value, str):
+        return len(value) <= 16384 and not any(0xD800 <= ord(c) <= 0xDFFF for c in value)
+    if isinstance(value, list):
+        return len(value) <= 512 and all(json_value(v, depth + 1) for v in value)
+    if isinstance(value, dict):
+        return (len(value) <= 512 and all(isinstance(k, str) and len(k) <= 128
+                and json_value(v, depth + 1) for k, v in value.items()))
+    return False
+
+
+def geometry(value):
+    return (isinstance(value, dict)
+            and set(value) == {"index", "name", "position_mm", "area_mm2", "bounding_box"}
+            and index(value["index"]) and name(value["name"])
+            and isinstance(value["position_mm"], list) and len(value["position_mm"]) == 2
+            and all(number(v) for v in value["position_mm"])
+            and number(value["area_mm2"], 1e16) and value["area_mm2"] >= 0
+            and value["bounding_box"] is not None and json_value(value["bounding_box"]))
+
+
+def validate_result(command, result):
+    """Command-specific shape checks before external queue caches a result."""
+    valid = isinstance(result, dict) and json_value(result)
+    if not valid:
+        raise CommandError("invalid_result")
+    keys = set(result)
+    if command == "list_clo_api":
+        valid = (keys == {"modules"} and isinstance(result["modules"], dict)
+                 and set(result["modules"]) == set(API_MODULES)
+                 and all(isinstance(v, list) and all(isinstance(n, str) for n in v)
+                         for v in result["modules"].values()))
+    elif command == "describe_clo_api":
+        valid = (keys == {"module", "functions"} and result["module"] in API_MODULES
+                 and isinstance(result["functions"], dict)
+                 and all(isinstance(v, dict) and set(v) == {"available", "doc"}
+                         and type(v["available"]) is bool and isinstance(v["doc"], str)
+                         for v in result["functions"].values()))
+    elif command == "get_pattern_list":
+        valid = (keys == {"pattern_count", "patterns"} and type(result["pattern_count"]) is int
+                 and isinstance(result["patterns"], list)
+                 and result["pattern_count"] == len(result["patterns"]) <= MAX_PATTERNS
+                 and all(isinstance(v, dict) and set(v) == {"index", "name"}
+                         and v["index"] == i and type(v["index"]) is int and name(v["name"])
+                         for i, v in enumerate(result["patterns"])))
+    elif command == "get_pattern_geometry":
+        valid = keys == {"pattern"} and geometry(result["pattern"])
+    elif command in ("create_pattern", "copy_pattern_with_offset", "set_pattern_name", "move_pattern_relative"):
+        valid = (keys == {"verified", "pattern_count", "pattern", "executor_ms"}
+                 and result["verified"] is True and geometry(result["pattern"])
+                 and type(result["pattern_count"]) is int
+                 and 0 < result["pattern_count"] <= MAX_PATTERNS
+                 and result["pattern"]["index"] < result["pattern_count"]
+                 and number(result["executor_ms"], 1e12) and result["executor_ms"] >= 0)
+    elif command == "delete_pattern":
+        valid = (keys == {"verified", "pattern_count", "deleted_name", "executor_ms"}
+                 and result["verified"] is True and name(result["deleted_name"])
+                 and type(result["pattern_count"]) is int and 0 <= result["pattern_count"] < MAX_PATTERNS
+                 and number(result["executor_ms"], 1e12) and result["executor_ms"] >= 0)
+    else:
+        valid = False
+    if not valid:
+        raise CommandError("invalid_result")
+    return result

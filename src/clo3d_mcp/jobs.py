@@ -12,6 +12,7 @@ import math
 import time
 
 from clo3d_mcp.protocol import ProtocolError, encode, message, validate
+from clo3d_mcp.pattern_contract import PATTERN_COMMANDS, CommandError, validate_result
 
 
 TERMINAL = frozenset({"succeeded", "failed", "cancelled", "unknown"})
@@ -45,6 +46,7 @@ class _Job:
     command: str
     queued_deadline: float
     execution_timeout: float
+    params: object = None
     state: str = "queued"
     dispatched_deadline: float = None
     result: object = None
@@ -92,9 +94,10 @@ class JobQueue:
             raise ValueError("Deadline duration must be finite and positive")
         return value
 
-    def submit(self, command, *, queued_timeout=30.0, execution_timeout=30.0):
+    def submit(self, command, *, params=None, queued_timeout=30.0, execution_timeout=30.0):
         # Whitelist and parameter checks precede any mutation.
-        message("JOB", self.session_id, job_id="validate", command=command, params={})
+        params = {} if params is None else deepcopy(params)
+        encode(message("JOB", self.session_id, job_id="validate", command=command, params=params))
         self._duration(queued_timeout)
         self._duration(execution_timeout)
         self.tick()
@@ -104,7 +107,7 @@ class JobQueue:
             raise QueueError("queue_full")
         self.sequence += 1
         job_id = "job_%d" % self.sequence
-        job = _Job(job_id, command, self.clock() + queued_timeout, execution_timeout)
+        job = _Job(job_id, command, self.clock() + queued_timeout, execution_timeout, params=params)
         self.jobs[job_id] = job
         self.waiting.append(job_id)
         return job_id
@@ -173,7 +176,7 @@ class JobQueue:
         job.dispatched_deadline = self.clock() + job.execution_timeout
         self.active_id = job.job_id
         self.ready_credit = False
-        return message("JOB", self.session_id, job_id=job.job_id, command=job.command, params={})
+        return message("JOB", self.session_id, job_id=job.job_id, command=job.command, params=deepcopy(job.params))
 
     def started(self, session_id, job_id):
         """Optional explicit execution evidence; never called just for pipe ACK."""
@@ -207,7 +210,13 @@ class JobQueue:
             raise ProtocolError("Result was not dispatched")
         if frame["kind"] == "RESULT":
             result = frame["result"]
-            if job.command == "ping":
+            if job.command in PATTERN_COMMANDS:
+                try:
+                    validate_result(job.command, result)
+                except CommandError:
+                    raise ProtocolError("Invalid pattern result") from None
+                valid = True
+            elif job.command == "ping":
                 valid = set(result) == {"pong"} and result["pong"] is True
             elif job.command == "get_pattern_count":
                 valid = (set(result) == {"pattern_count"}
@@ -221,8 +230,8 @@ class JobQueue:
             job.state, job.result, job.error = "succeeded", deepcopy(result), None
         else:
             # duplicate_job is not proof of success, nor permission to retry.
-            code = "command_error" if frame["code"] == "command_error" else "outcome_unknown"
-            job.state = "failed" if code == "command_error" else "unknown"
+            code = "outcome_unknown" if frame["code"] == "duplicate_job" else frame["code"]
+            job.state = "unknown" if code == "outcome_unknown" else "failed"
             job.error = code
         job.reply = deepcopy(frame)
         self._publish(job)

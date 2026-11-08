@@ -20,7 +20,7 @@ def test_reject_arbitrary_devices_and_remote_paths(value):
     "basic", "reconnect", "fragmentation", "stalled_writer", "pending_connect_and_handles",
     "midframe", "python_identity", "bad_authentication", "external_roundtrip", "queue_roundtrip",
     "queue_probe_roundtrip",
-    "service_roundtrip", "service_parent_exit", "service_load", "malformed_frames",
+    "service_roundtrip", "service_parent_exit", "service_load", "malformed_frames", "service_patterns",
 ])
 def test_real_pipe(scenario):
     result = subprocess.run(

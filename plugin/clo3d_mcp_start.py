@@ -39,6 +39,11 @@ def main():
     timer_module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(timer_module)
     import pattern_api
+    import export_api
+    import fabric_api
+    import import_api
+    import utility_api
+    from clo3d_mcp.pattern_api import PatternAPI
     from clo3d_mcp.pipe_runtime import start
 
     def create_rectangle():
@@ -53,7 +58,10 @@ def main():
         return {"created": True, "pattern_count": after}
 
     start(registry, timer_module.WindowsTimer(), pattern_api.GetPatternCount,
-          python, root, profile="service", create_rectangle=create_rectangle)
+          python, root, profile="service", create_rectangle=create_rectangle,
+          command_handler=PatternAPI({"pattern_api": pattern_api, "export_api": export_api,
+                                      "fabric_api": fabric_api, "import_api": import_api,
+                                      "utility_api": utility_api}))
 
 
 if __name__ == "__main__":

@@ -7,6 +7,7 @@ import json
 import socket
 import time
 from typing import Any
+from pydantic import StrictFloat, StrictInt, StrictStr
 
 from mcp.server.fastmcp import FastMCP
 from mcp.server.transport_security import TransportSecuritySettings
@@ -15,19 +16,42 @@ import uvicorn
 
 from clo3d_mcp.async_jobs import AsyncJobQueue
 from clo3d_mcp.jobs import QueueError
-from clo3d_mcp.protocol import SERVICE_CAPABILITIES, ProtocolError, message
+from clo3d_mcp.protocol import SERVICE_CAPABILITIES, PATTERN_CAPABILITIES, ProtocolError, message
+from clo3d_mcp.pattern_contract import PATTERN_COMMANDS, CommandError, validate_params
 from clo3d_mcp.queue_session import QueueSession
 from clo3d_mcp.transport.channel import Channel
 from clo3d_mcp.transport.winpipe import Pipe
 from clo3d_mcp.transport.winprocess import ProcessHandle
 
 
+def tool_error(code):
+    data = {"ok": False, "error": code}
+    if code in ("scene_change_unverified", "outcome_unknown"):
+        data["scene_may_have_changed"] = True
+    return CallToolResult(isError=True, structuredContent=data,
+                          content=[TextContent(type="text", text=json.dumps(data))])
+
+
+class SessionMCP(FastMCP):
+    async def call_tool(self, name, arguments):
+        # Official SDK 1.26 defaults to ignoring extra arguments and pre-parses
+        # JSON strings. Validate the RAW pattern payload before either happens.
+        if name in PATTERN_COMMANDS:
+            try:
+                validate_params(name, arguments)
+            except CommandError:
+                return tool_error("invalid_parameters")
+        return await super().call_tool(name, arguments)
+
+
 class Service:
-    def __init__(self, name, session_id, key, client_pid, parent, port=8765):
+    def __init__(self, name, session_id, key, client_pid, parent, port=8765, pattern_package=False):
         self.name, self.key, self.client_pid = name, key, client_pid
         self.parent, self.port = parent, port
         self.queue = AsyncJobQueue(session_id)
-        self.session = QueueSession(self.queue, key, client_pid, SERVICE_CAPABILITIES)
+        self.pattern_package = pattern_package
+        self.capabilities = PATTERN_CAPABILITIES if pattern_package else SERVICE_CAPABILITIES
+        self.session = QueueSession(self.queue, key, client_pid, self.capabilities)
         self.http_serving = False
         self.executor_verified = False
         self.ready_announced = False
@@ -44,20 +68,21 @@ class Service:
                     and not queue["quarantined"] and not self.stop_requested,
                     endpoint="http://127.0.0.1:%d/mcp" % self.port, error=self.failure)
 
-    async def call(self, command):
+    async def call(self, command, params=None):
         try:
             if not self.status()["ready"]:
                 raise QueueError("executor_unavailable")
-            return {"ok": True, **(await self.queue.call(command))}
-        except QueueError as exc:
-            data = {"ok": False, "error": exc.code}
-            return CallToolResult(isError=True, structuredContent=data,
-                                  content=[TextContent(type="text", text=json.dumps(data))])
+            if params is not None:
+                validate_params(command, params)
+            return {"ok": True, **(await self.queue.call(command, params=params))}
+        except (QueueError, CommandError, ProtocolError) as exc:
+            code = exc.code if isinstance(exc, (QueueError, CommandError)) else "invalid_parameters"
+            return tool_error(code)
 
 
 def build_mcp(service):
     """No handles/tasks at import. SDK retains its own Host/Origin middleware."""
-    mcp = FastMCP(
+    mcp = SessionMCP(
         "CLO session", host="127.0.0.1", port=service.port,
         streamable_http_path="/mcp", json_response=True, log_level="ERROR",
         transport_security=TransportSecuritySettings(
@@ -86,7 +111,7 @@ def build_mcp(service):
     async def get_session_info() -> dict[str, Any]:
         """CLO session identity and readiness (not the MCP HTTP session identity)."""
         return dict(service.status(), clo_pid=service.client_pid, server_pid=os.getpid(),
-                    capabilities=list(SERVICE_CAPABILITIES))
+                    capabilities=list(service.capabilities))
 
     @mcp.tool(annotations=ToolAnnotations(readOnlyHint=False, destructiveHint=False,
                                         idempotentHint=False, openWorldHint=False))
@@ -98,7 +123,84 @@ def build_mcp(service):
         """
         return await service.call("create_test_rectangle")
 
+    if service.pattern_package:
+        add_pattern_tools(mcp, service, read)
     return mcp
+
+
+def add_pattern_tools(mcp, service, read):
+    """Explicit tools only; no registration of arbitrary CLO functions."""
+    mutation = ToolAnnotations(readOnlyHint=False, destructiveHint=True,
+                               idempotentHint=False, openWorldHint=False)
+
+    @mcp.tool(annotations=read)
+    async def list_clo_api() -> dict[str, Any]:
+        """List public callable names in five fixed CLO modules, without invoking them.
+
+        Presence is not proof that a native call is safe or compatible.
+        """
+        return await service.call("list_clo_api", {})
+
+    @mcp.tool(annotations=read)
+    async def describe_clo_api(module: StrictStr, functions: list[StrictStr]) -> dict[str, Any]:
+        """Read bounded docstrings/signatures, not execute API. At most 16 public names."""
+        return await service.call("describe_clo_api", {"module": module, "functions": functions})
+
+    @mcp.tool(annotations=read)
+    async def get_pattern_list() -> dict[str, Any]:
+        """Read indices/names; bounded to 256 pieces. Indices can change after deletion."""
+        return await service.call("get_pattern_list", {})
+
+    @mcp.tool(annotations=read)
+    async def get_pattern_geometry(pattern_index: StrictInt) -> dict[str, Any]:
+        """Read 2D position in mm, area in mm2 and bounding box from CLO."""
+        return await service.call("get_pattern_geometry", {"pattern_index": pattern_index})
+
+    @mcp.tool(annotations=mutation)
+    async def create_pattern(points: list[list[StrictInt | StrictFloat]], name: StrictStr) -> dict[str, Any]:
+        """Create ONE simple straight polygon, 3-64 [x,y] points in mm, unique name.
+
+        No curves/holes/self-intersection. Verifies count/name/area using CLO.
+        No automatic retry or rollback, even if the verification fails.
+        """
+        return await service.call("create_pattern", {"points": points, "name": name})
+
+    @mcp.tool(annotations=mutation)
+    async def set_pattern_name(pattern_index: StrictInt, expected_name: StrictStr,
+                               name: StrictStr) -> dict[str, Any]:
+        """Rename a uniquely named piece after stale-index check; verify by reading back."""
+        return await service.call("set_pattern_name", {"pattern_index": pattern_index,
+                                  "expected_name": expected_name, "name": name})
+
+    @mcp.tool(annotations=mutation)
+    async def copy_pattern_with_offset(pattern_index: StrictInt, expected_name: StrictStr,
+                                       name: StrictStr, dx: StrictInt | StrictFloat,
+                                       dy: StrictInt | StrictFloat) -> dict[str, Any]:
+        """Copy ONE piece by dx/dy mm, unique new name; verify count, position and area.
+
+        Never retry automatically: a failed readback may follow a successful copy.
+        """
+        return await service.call("copy_pattern_with_offset", {"pattern_index": pattern_index,
+                                  "expected_name": expected_name, "name": name, "dx": dx, "dy": dy})
+
+    @mcp.tool(annotations=mutation)
+    async def move_pattern_relative(pattern_index: StrictInt, expected_name: StrictStr,
+                                    dx: StrictInt | StrictFloat, dy: StrictInt | StrictFloat) -> dict[str, Any]:
+        """Move whole piece by dx/dy mm; verify actual displacement and unchanged area.
+
+        Does NOT move individual pattern points. Never retry automatically.
+        """
+        return await service.call("move_pattern_relative", {"pattern_index": pattern_index,
+                                  "expected_name": expected_name, "dx": dx, "dy": dy})
+
+    @mcp.tool(annotations=mutation)
+    async def delete_pattern(pattern_index: StrictInt, expected_name: StrictStr) -> dict[str, Any]:
+        """Delete ONE uniquely named piece after stale-index check; verify remaining list.
+
+        Indices shift. Read the list again before further operations. No automatic retry.
+        """
+        return await service.call("delete_pattern", {"pattern_index": pattern_index,
+                                  "expected_name": expected_name})
 
 
 async def pipe_loop(service):
@@ -226,7 +328,9 @@ def main():
         port = int(os.environ.pop("CLO_MCP_HTTP_PORT", "8765"))
         if not 1 <= port <= 65535:
             return 2
-        service = Service(name, session_id, key, client_pid, parent, port=port)
+        pattern_package = os.environ.pop("CLO_MCP_PATTERN_PACKAGE", "0") == "1"
+        service = Service(name, session_id, key, client_pid, parent, port=port,
+                          pattern_package=pattern_package)
         return asyncio.run(run(service))
     except Exception:
         # A fixed exit code carries a useful startup diagnosis without IPC files

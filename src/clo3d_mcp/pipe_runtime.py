@@ -15,11 +15,12 @@ from clo3d_mcp.transport.winpipe import Pipe
 
 class PipeProbe:
     def __init__(self, timer, read_count, generation, report=print, profile="p1", create_rectangle=None,
-                 port=8765):
+                 port=8765, command_handler=None):
         if profile not in ("p1", "p2", "service"):
             raise ValueError("Unknown diagnostic profile")
         self.profile = profile
         self.create_rectangle = create_rectangle
+        self.command_handler = command_handler
         self.service_ready = False
         self.port = port
         self.timer = timer
@@ -104,6 +105,7 @@ class PipeProbe:
                     parent = ProcessHandle(os.getpid())
                     env["CLO_MCP_PARENT_HANDLE"] = str(parent.handle)
                     env["CLO_MCP_HTTP_PORT"] = str(self.port)
+                    env["CLO_MCP_PATTERN_PACKAGE"] = "1" if self.command_handler is not None else "0"
                     startup = subprocess.STARTUPINFO()
                     startup.lpAttributeList = {"handle_list": [parent.handle]}
                     options["startupinfo"] = startup
@@ -117,7 +119,8 @@ class PipeProbe:
                 if parent is not None:
                     parent.close()
             self.executor = Executor(self.session_id, self.key, self.process.pid, self.read_count,
-                                     self.create_rectangle if self.profile == "service" else None)
+                                     self.create_rectangle if self.profile == "service" else None,
+                                     self.command_handler if self.profile == "service" else None)
             self.state = "connecting"
             self.emit("STARTED (not yet connected)")
         except BaseException:
@@ -319,7 +322,7 @@ class PipeProbe:
                 self.state = "stopping"
 
 
-def start(registry, timer, read_count, python, root, profile="p1", create_rectangle=None):
+def start(registry, timer, read_count, python, root, profile="p1", create_rectangle=None, command_handler=None):
     current = registry.get("current")
     if current is not None:
         if current.state not in ("stopped", "failed"):
@@ -331,7 +334,7 @@ def start(registry, timer, read_count, python, root, profile="p1", create_rectan
     if len(retained) >= 16:
         raise RuntimeError("P1 diagnostic generation limit; restart CLO")
     probe = PipeProbe(timer, read_count, len(retained) + 1, profile=profile,
-                      create_rectangle=create_rectangle)
+                      create_rectangle=create_rectangle, command_handler=command_handler)
     retained.append(probe)
     registry["current"] = probe
     try:

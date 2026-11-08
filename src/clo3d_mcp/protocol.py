@@ -5,12 +5,15 @@ import math
 import re
 import struct
 
+from clo3d_mcp.pattern_contract import PATTERN_COMMANDS, ERROR_CODES, CommandError, validate_params
+
 
 VERSION = 1
 MAX_PAYLOAD = 1024 * 1024
 MAX_CHUNK = 64 * 1024
 CAPABILITIES = ["ping", "get_pattern_count"]
 SERVICE_CAPABILITIES = CAPABILITIES + ["create_test_rectangle"]
+PATTERN_CAPABILITIES = SERVICE_CAPABILITIES + PATTERN_COMMANDS
 IDENTIFIER = re.compile(r"[A-Za-z0-9_-]{1,128}\Z")
 KINDS = {
     "HELLO": {"pid", "proof", "capabilities"},
@@ -48,20 +51,25 @@ def validate(message, session_id=None):
         if not isinstance(job_id, str) or not IDENTIFIER.fullmatch(job_id):
             raise ProtocolError("Invalid job identifier")
     if kind in ("HELLO", "HELLO_ACK"):
-        if message["capabilities"] not in (CAPABILITIES, SERVICE_CAPABILITIES):
+        if message["capabilities"] not in (CAPABILITIES, SERVICE_CAPABILITIES, PATTERN_CAPABILITIES):
             raise ProtocolError("Unsupported diagnostic capabilities")
         if type(message["pid"]) is not int or not 0 < message["pid"] <= 0xFFFFFFFF:
             raise ProtocolError("Invalid peer PID")
         if not isinstance(message["proof"], str) or not re.fullmatch(r"[a-f0-9]{64}", message["proof"]):
             raise ProtocolError("Invalid authentication proof")
     if kind == "JOB":
-        if not isinstance(message["command"], str) or message["command"] not in SERVICE_CAPABILITIES:
+        if not isinstance(message["command"], str) or message["command"] not in PATTERN_CAPABILITIES:
             raise ProtocolError("Command is not allowed")
-        if message["params"] != {}:
+        if message["command"] in PATTERN_COMMANDS:
+            try:
+                validate_params(message["command"], message["params"])
+            except CommandError:
+                raise ProtocolError("Invalid command parameters") from None
+        elif message["params"] != {}:
             raise ProtocolError("Diagnostic commands accept no parameters")
     if kind == "RESULT" and not isinstance(message["result"], dict):
         raise ProtocolError("Result must be an object")
-    if kind == "ERROR" and message["code"] not in ("command_error", "duplicate_job"):
+    if kind == "ERROR" and message["code"] not in ("command_error", "duplicate_job") + ERROR_CODES:
         raise ProtocolError("Invalid command error code")
     return message
 
