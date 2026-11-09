@@ -388,3 +388,28 @@ absolute API-mm frame и translation invariance; rotation/scale не прове�
 Итог: tool20 работает на реальной сцене; кривые дают arc-like length и chord
 mid; orientation не использовать как direction. Rotation, invalid indices,
 failed/partial и дочерние формы остаются открытыми.
+
+## 10. Rotation/scale и failure-пути — границы
+
+**Rotation/scale:** в official API целевой CLO2026.1.336 нет symbol для поворота
+или масштаба pattern piece; есть только `FlipPatternPiece`/`FlipPatternNormal`
+(зеркало/mesh normal), не rotation/scale. Поэтому отдельный transform-tool не
+реализуется и rotation/scale-frame не проверяется; переносить выводы с move
+нельзя. Flip — отдельная mutation с неполной документацией, не входит в этот
+этап.
+
+**Invalid index (MCP):** live `get_pattern_lines({pattern_index:5})` на сцене из
+одной детали и неверное `expected_name` вернули `stale_pattern` до native
+вызова — guard работает; native не вызывался.
+
+**Native failed/empty:** публичный tool не пропускает invalid index, поэтому
+подготовлен `diagnostics/clo3d_mcp_line_failure_probe.py`: один
+`GetPatternLineInfo(count)` (первый несуществующий индекс) с теми же guards и
+one-shot marker. Он покажет literal failed/empty и наличие `message`, не выводя
+текст. Запуск — один Run в текущей сессии; другой native вызов не выполняется,
+retry нет. Partial/malformed реальный binding не производит: это остаётся
+fake-only contract, не real evidence.
+
+Ожидаемый отчёт: `clo_line_failure_probe_v1`, `invalid_index=count`, `calls=1`,
+`native.status_token`, `message_present`, `lines_length`. Локальные тесты —
+`tests/test_line_failure_probe.py`.
