@@ -9,18 +9,19 @@ fit has no objective MCP getter. Run once in Script Editor with the service idle
 import json
 
 
-def collect(pattern, utility, api_types):
+def collect(pattern, export_api, utility, api_types):
     report = {"schema": "clo_redrape_probe_v1", "status": "blocked",
-              "evidence": "single_redrape_call_visual_only"}
+              "evidence": "single_redrape_call_visual_only", "stage": "preflight"}
     try:
         if not hasattr(api_types, "ImportExportOption"):
             return dict(report, stop_reason="api_types_option_unavailable")
-        avatars = utility.GetAvatarCount()
+        avatars = export_api.GetAvatarCount()
         count = pattern.GetPatternCount()
         if type(avatars) is not int or avatars < 1:
             return dict(report, stop_reason="avatar_required")
         if type(count) is not int or not 1 <= count <= 256:
             return dict(report, stop_reason="unexpected_pattern_count")
+        report.update(avatar_count=avatars, pattern_count=count, stage="option")
         try:
             option = api_types.ImportExportOption()
         except Exception:
@@ -35,16 +36,18 @@ def collect(pattern, utility, api_types):
                     flags.append(name)
                 except Exception:
                     pass
-        report.update(avatar_count=avatars, pattern_count=count, flags=flags)
+        report.update(flags=flags, stage="redrape")
         try:
             result = utility.ReDrape3DArrangement(option)
-        except Exception:
-            return dict(report, status="command_error", stop_reason="native_exception_no_retry")
+        except Exception as exc:
+            return dict(report, status="command_error", stop_reason="native_exception_no_retry",
+                        error_type=type(exc).__name__)
         report["native_return_type"] = type(result).__name__
         report["pattern_count_after"] = pattern.GetPatternCount()
         return dict(report, status="observed", stop_reason="stop_no_retry")
-    except Exception:
-        return dict(report, status="command_error", stop_reason="native_exception_no_retry")
+    except Exception as exc:
+        return dict(report, status="command_error", stop_reason="native_exception_no_retry",
+                    error_type=type(exc).__name__)
 
 
 def run_probe():
@@ -63,19 +66,20 @@ def run_probe():
                 or runtime.callback_thread != runtime.owner_thread
                 or runtime.timer.visible_window_threads() != {runtime.owner_thread}):
             return dict(blocked, stop_reason="verified_ui_thread_required")
-        runs = getattr(builtins, "_clo3d_mcp_redrape_probe_runs", None)
+        runs = getattr(builtins, "_clo3d_mcp_redrape_probe_runs_v2", None)
         if runs is None:
             runs = set()
-            builtins._clo3d_mcp_redrape_probe_runs = runs
+            builtins._clo3d_mcp_redrape_probe_runs_v2 = runs
         if type(runs) is not set or len(runs) >= 16 or runtime.session_id in runs:
             return dict(blocked, stop_reason="one_shot_already_used_or_limit")
         runs.add(runtime.session_id)
         runtime.busy = True
         try:
             import pattern_api
+            import export_api
             import utility_api
             import ApiTypes
-            return collect(pattern_api, utility_api, ApiTypes)
+            return collect(pattern_api, export_api, utility_api, ApiTypes)
         finally:
             runtime.busy = False
     except Exception:

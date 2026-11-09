@@ -55,9 +55,10 @@ def setup(monkeypatch, utility, pattern, api_types=ApiTypes):
         busy=False, executor=SimpleNamespace(state="ready"), timer=timer,
         owner_thread=7, callback_thread=7, session_id="private-session")
     monkeypatch.setattr(builtins, "_clo3d_mcp_service", {"version": 1, "current": runtime}, raising=False)
-    monkeypatch.setattr(builtins, "_clo3d_mcp_redrape_probe_runs", set(), raising=False)
+    monkeypatch.setattr(builtins, "_clo3d_mcp_redrape_probe_runs_v2", set(), raising=False)
     monkeypatch.setitem(sys.modules, "pattern_api", pattern)
     monkeypatch.setitem(sys.modules, "utility_api", utility)
+    monkeypatch.setitem(sys.modules, "export_api", utility)
     monkeypatch.setitem(sys.modules, "ApiTypes", api_types)
     return runtime
 
@@ -116,6 +117,9 @@ def test_source_allowlist():
     tree = ast.parse(PATH.read_text(encoding="utf-8"))
     util = {n.attr for n in ast.walk(tree) if isinstance(n, ast.Attribute)
             and isinstance(n.value, ast.Name) and n.value.id == "utility"}
-    assert util == {"GetAvatarCount", "ReDrape3DArrangement"}
+    assert util == {"ReDrape3DArrangement"}
+    exp = {n.attr for n in ast.walk(tree) if isinstance(n, ast.Attribute)
+           and isinstance(n.value, ast.Name) and n.value.id == "export_api"}
+    assert exp == {"GetAvatarCount"}
     imports = {n.name for node in ast.walk(tree) if isinstance(node, ast.Import) for n in node.names}
-    assert imports == {"json", "builtins", "pattern_api", "utility_api", "ApiTypes"}
+    assert imports == {"json", "builtins", "pattern_api", "export_api", "utility_api", "ApiTypes"}
