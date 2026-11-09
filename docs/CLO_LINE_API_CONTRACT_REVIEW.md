@@ -422,16 +422,24 @@ fake-only contract, не real evidence.
 native (multi-curve раскладка), хотя одиночная curve-вершина работает. Для
 параметрического проектирования нужен программный multi-curve путь.
 
-Скрипт `diagnostics/clo3d_mcp_base_shape_probe.py` (один Run, verified idle
-service): создаёт **одну own** деталь `MCP_BASESHAPE_PROBE`, затем на ней
-последовательно вызывает `CreateBaseShapeWithPoints(index, typed_points, True)`
-для вариантов: same straight, one spline, two spline, one Bezier, two Bezier.
-После каждого шага читает area/bbox/lineCount/lengths и число internal shapes.
-Возвращает `clo_base_shape_probe_v1` с return/эффектом по каждому шагу.
+Скрипт `diagnostics/clo3d_mcp_base_shape_probe.py` выполнен один раз
+(own `MCP_BASESHAPE_PROBE` index13, затем удалён): 5 вызовов
+`CreateBaseShapeWithPoints(index, typed_points, True)` вернули int 2,3,4,5,6,
+но area9600.00195/bbox120×80/lineCount4/длины120–80 и internal_shapes0
+**не изменились** ни для straight, ни для 1/2 spline, ни для 1/2 Bezier.
+Вывод: в этой сборке/контексте вызов не заменяет base outline и не создаёт
+видимую internal shape; как путь программного multi-curve он не работает
+(return не является доказательством эффекта). Оставленная деталь удалена
+плановым fresh-list шагом.
 
-Границы: 1 own pattern, 5 base-shape calls, без retry, без чужих деталей; при
-исключении STOP. Оставленная деталь — own fixture, удаляется отдельным шагом.
-Если `CreateBaseShapeWithPoints` реально меняет outline для multi-curve, это
-кандидат на tool `replace_base_shape`; если добавляет internal shape или
-отклоняет — фиксируем ограничение и ищем другой путь (например, curve sampling).
+Границы: 1 own pattern, 5 base-shape calls, без retry, без чужих деталей; любое
+исключение — STOP. Return int не считать успехом: единственный критерий —
+изменение area/bbox/lines/internal shapes.
+
+Следствие для параметрического построения: программный multi-curve через
+`CreateBaseShapeWithPoints` в этой сборке недоступен. Нужен другой источник
+геометрии кривой: например, пользовательский экспорт примера в DXF (UI, read-only
+файл в acceptance-output) с последующим разбором vertices/bulges и offline-fit
+кривой; либо явная curve-модель (arc/Bezier) по endpoints+length+tangent
+assumptions, которая является аппроксимацией, а не точным восстановлением.
 Локальные тесты — `tests/test_base_shape_probe.py`.
