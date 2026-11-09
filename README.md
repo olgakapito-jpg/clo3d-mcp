@@ -119,6 +119,8 @@ ECONNREFUSED нормально. Глобальные настройки про�
   path, readback avatar count+1; pose/measurement/fit не входят.
 - Arrangement: `get_arrangement` — read-only пресет/offsets/orientation по каждой
   детали; units native_unspecified, set/drape не входят.
+- Fitting: `set_arrangement` — назначить arrangement point одной детали и вызвать
+  ReDrape; readback preset, 3D visual-only.
 
 Новый путь не загружает extensions и не публикует legacy-команды импорта,
 экспорта, симуляции или exec. Параметризованное создание: до 64 точек, прямые или curve-вершины (0/2/3);

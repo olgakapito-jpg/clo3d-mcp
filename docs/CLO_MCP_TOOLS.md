@@ -462,6 +462,22 @@ bad shape/numeric → invalid_native_result, без retry. Set/arrangement/drape
 Composition: fresh list → get_arrangement → при необходимости будущие setters.
 Anti-selection: «поставь на аватар/сделай посадку» — не этот tool.
 
+## 24. set_arrangement
+
+**Source, fitting assignment.** `SetArrangement(pattern_index, arrangement_index)`
+из библиотеки `GetArrangementList` (110 avatar points), затем один
+`ReDrape3DArrangement(ApiTypes.ImportExportOption)` с flags
+`bAddArrangementPoints/bAutoCreateFittingSuit/bMoveGarment`. Required fresh
+pattern index/unique name, arrangement_index<library; readback
+`GetArrangementOfPattern` должен совпасть с library preset по name/type/offset/
+orientation. Result `{ok:true,verified:true,pattern_index,pattern_name,
+arrangement_name,offset{x,y,z},orientation,type,units:"native_unspecified",
+redrape:true}`. Offset units/degrees не заявлены; 3D fit visual-only; другие
+детали не переставляются; ошибка после SetArrangement может оставить assignment,
+без retry/cleanup. Live probe: Body_Front/Back/Arm points → детали встали на
+аватар (UI подтверждён). Anti-selection: mass-layout всех деталей и simulation —
+отдельные пакеты. Evidence: `CLO_FIT_CHECK.md`.
+
 ## Ошибки и безопасные действия
 
 - invalid_parameters: проверить schema/bounds/extras, не пробовать наугад.

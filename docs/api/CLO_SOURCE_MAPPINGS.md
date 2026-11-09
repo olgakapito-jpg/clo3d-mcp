@@ -22,7 +22,7 @@ LICENSE/NOTICE: pinned URLs и SHA-256 в JSON; NOTICE указывает upstre
 - `shared_donor_legacy_tool_names`: `44`
 - `donor_only_tool_names`: `126`
 - `legacy_only_tool_names`: `['import_dxf', 'list_extensions', 'ping']`
-- `current_tools`: `23`
+- `current_tools`: `24`
 
 ## Схема и доказательства
 
@@ -81,6 +81,7 @@ Legacy copy_pattern/CopyPatternPiecePos не объявлен эквивален
 - `list_clo_api` (pattern_package): нет фиксированного native вызова; evidence `docs/PATTERN_API_CHECK.md`.
 - `move_pattern_relative` (pattern_package): `pattern_api.SetPatternPieceMove`; evidence `docs/PATTERN_API_CHECK.md`.
 - `ping` (base_service): нет фиксированного native вызова; evidence `docs/P3_MCP_CHECK.md`.
+- `set_arrangement` (pattern_package): `pattern_api.SetArrangement`, `pattern_api.GetArrangementList`, `pattern_api.GetArrangementOfPattern`; evidence `docs/PATTERN_API_CHECK.md`.
 - `set_pattern_name` (pattern_package): `pattern_api.SetPatternPieceName`; evidence `docs/PATTERN_API_CHECK.md`.
 - `transport_status` (base_service): нет фиксированного native вызова; evidence `docs/P3_MCP_CHECK.md`.
 

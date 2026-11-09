@@ -302,6 +302,23 @@ def add_pattern_tools(mcp, service, read):
         return await service.call("get_arrangement")
 
     @mcp.tool(annotations=mutation)
+    async def set_arrangement(pattern_index: StrictInt, expected_name: StrictStr,
+                              arrangement_index: StrictInt) -> dict[str, Any]:
+        """Assign ONE avatar arrangement point to ONE uniquely named pattern and ReDrape.
+
+        Requires fresh index/unique name and a required arrangement_index from get_arrangement's
+        library (0..library-1). Calls SetArrangement then ReDrape3DArrangement
+        with ApiTypes.ImportExportOption flags; verifies the assigned preset and
+        returns pattern/arrangement/offset/orientation/type. Offset units remain
+        native_unspecified; 3D fit is visual-only. No retry/cleanup, no other
+        patterns are reassigned, and errors after SetArrangement may leave the
+        assignment applied.
+        """
+        return await service.call("set_arrangement", {
+            "pattern_index": pattern_index, "expected_name": expected_name,
+            "arrangement_index": arrangement_index})
+
+    @mcp.tool(annotations=mutation)
     async def add_seamline_pair(pattern_a_index: StrictInt, expected_name_a: StrictStr,
                                 line_a_index: StrictInt, pattern_b_index: StrictInt,
                                 expected_name_b: StrictStr, line_b_index: StrictInt,

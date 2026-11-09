@@ -17,7 +17,7 @@ PATTERN_COMMANDS = [
     "get_fabric_list", "get_avatars",
     "get_pattern_fabric", "assign_pattern_fabric",
     "get_pattern_outline", "get_pattern_lines",
-    "add_seamline_pair", "import_avatar", "get_arrangement",
+    "add_seamline_pair", "import_avatar", "get_arrangement", "set_arrangement",
 ]
 API_MODULES = ("pattern_api", "export_api", "fabric_api", "import_api", "utility_api")
 ERROR_CODES = ("api_unavailable", "stale_pattern", "scene_change_unverified", "invalid_parameters",
@@ -115,6 +115,7 @@ def validate_params(command, params):
                               "direction_a", "direction_b"},
         "import_avatar": {"file_path"},
         "get_arrangement": set(),
+        "set_arrangement": {"pattern_index", "expected_name", "arrangement_index"},
         "assign_pattern_fabric": {"pattern_index", "expected_name", "fabric_index",
                                   "expected_fabric_name", "expected_current_fabric_index"},
     }
@@ -127,7 +128,8 @@ def validate_params(command, params):
                   and any(type(t) is int and t in (2, 3) for t in curve_types))
         for key, value in params.items():
             if key in ("pattern_index", "fabric_index", "expected_current_fabric_index",
-                       "pattern_a_index", "pattern_b_index", "line_a_index", "line_b_index"):
+                       "pattern_a_index", "pattern_b_index", "line_a_index", "line_b_index",
+                       "arrangement_index"):
                 valid = index(value)
             elif key == "expected_fabric_name":
                 valid = inventory_name(value)
@@ -307,6 +309,18 @@ def validate_result(command, result):
                  and result["verified"] is True
                  and type(result["avatar_count"]) is int
                  and 0 <= result["avatar_count"] <= MAX_AVATARS)
+    elif command == "set_arrangement":
+        valid = (keys == {"verified", "pattern_index", "pattern_name", "arrangement_name",
+                          "offset", "orientation", "type", "units", "redrape"}
+                 and result["verified"] is True and result["redrape"] is True
+                 and index(result["pattern_index"]) and name(result["pattern_name"])
+                 and inventory_name(result["arrangement_name"])
+                 and isinstance(result["offset"], dict)
+                 and set(result["offset"]) == {"x", "y", "z"}
+                 and all(number(v) for v in result["offset"].values())
+                 and number(result["orientation"])
+                 and type(result["type"]) is str and 1 <= len(result["type"]) <= 32
+                 and result["units"] == "native_unspecified")
     elif command == "get_arrangement":
         pieces = result.get("pieces")
         valid = (keys == {"pattern_count", "arrangement_library_count", "pieces", "units"}

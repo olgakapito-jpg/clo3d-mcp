@@ -10,11 +10,11 @@
     },
     {
       "path": "clo_source_mappings.json",
-      "sha256": "ca2c43a64c60c8deb9b6a08ae9e09b07eedad1b951e74fb63e045c5f83541a50"
+      "sha256": "b81342c7fcac690c3749437460e539137cf33d29d9c2d6d50c36337799158e89"
     },
     {
       "path": "current_operation_scope.json",
-      "sha256": "70f0ba3d525e9fa75adfe7c521fcd45990e159c4d95864db464fa765297960f2"
+      "sha256": "4efc57fce980eaca2bbda3abbcf82bad9e33f8614f5651f6d9e583145633ca22"
     },
     {
       "path": "review_gates.json",
@@ -29,8 +29,8 @@
     "additional_interfaces": 6,
     "donor_tools": 170,
     "local_legacy_tools": 47,
-    "current_tools": 23,
-    "current_native_operations": 22,
+    "current_tools": 24,
+    "current_native_operations": 23,
     "historical_docstring_names": 43,
     "nonofficial_mapping_names": 4,
     "official_names_with_donor_reference": 332,
@@ -111,13 +111,13 @@
     },
     {
       "path": "coverage/pattern_api-03.json",
-      "sha256": "265bbe3461f25383cd4ae842a8475fc8fcba184bd9132fcdc78bfa3013522941",
-      "count": 67
+      "sha256": "b640e5bf9a4855d4bbc0f197dd326fb2ec6119541b86cd0170feb759fb4d371e",
+      "count": 66
     },
     {
       "path": "coverage/pattern_api-04.json",
-      "sha256": "2b5c204c6dd31f7f93946d3012591120832d4c6a601d1337ecfe1beca131c805",
-      "count": 35
+      "sha256": "0a67fa7616208b0e870c60b024dd662250db3afa8b8eadffb2585ef2c7a7d0e0",
+      "count": 36
     },
     {
       "path": "coverage/rest_api-01.json",

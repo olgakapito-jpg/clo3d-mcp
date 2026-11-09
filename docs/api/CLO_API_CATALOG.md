@@ -12,7 +12,7 @@ Target только **CLO2026.1.336**, SDK11.0.1. Это offline source specific
 - Отдельные документированные types/options: **77**; дополнительные
   interfaces: **6**. Не прибавляются к implemented tools.
 - Donor tools: **170**, local legacy: **47**,
-  current enabled tools: **23**, current native-operation scopes: **22**.
+  current enabled tools: **24**, current native-operation scopes: **23**.
 - Исторические docstring observations: **43** names;
   это presence/callability на уровне symbol, не точная проверка overload.
 - Official names со static donor mapping: **332**;

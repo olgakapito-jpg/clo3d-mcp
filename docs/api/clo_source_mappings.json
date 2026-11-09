@@ -261,15 +261,15 @@
       },
       {
         "path": "src/clo3d_mcp/pattern_api.py",
-        "sha256": "85e333fa41338019351a7a59dc98035c6ea4297ca9b1588d79812839791a9d65",
-        "bytes": 28067,
-        "lines": 551
+        "sha256": "b4f4384de9e37fc087d924e37c5fdbdd6388aad4cfcd4545456cbea9e2762d60",
+        "bytes": 31475,
+        "lines": 619
       },
       {
         "path": "src/clo3d_mcp/pattern_contract.py",
-        "sha256": "53d942f461ec0651ffe8e74b19ab6b0bb9b4c22d40a1d022969bdd6e39325d8a",
-        "bytes": 18317,
-        "lines": 363
+        "sha256": "d1f7ee933589c2d8b9b74c4e485bc12d870f7e015f9c3dfa3c64ea94ca062212",
+        "bytes": 19286,
+        "lines": 377
       },
       {
         "path": "src/clo3d_mcp/pipe_runtime.py",
@@ -297,9 +297,9 @@
       },
       {
         "path": "src/clo3d_mcp/transport_server.py",
-        "sha256": "27895763407a1941cb3071c6dc1ec7a170fbdd9b8432a8e6132cb70bf1670a02",
-        "bytes": 26927,
-        "lines": 528
+        "sha256": "86fef774bee449b9828802d0f6359ba09a38e8fd61d9921a092884343aba7c47",
+        "bytes": 27935,
+        "lines": 545
       },
       {
         "path": "tests/test_arrangement_api.py",
@@ -309,7 +309,7 @@
       },
       {
         "path": "tests/test_fabric_assignment_api.py",
-        "sha256": "2bbb070d083b56e9caca79b17acb3c07be4e59f7aa031c20079be7d47ec5f692",
+        "sha256": "ec2d7158fc292a578aa459ecc288dff32c90f4d86d864e240807935ce962b1bd",
         "bytes": 19410,
         "lines": 429
       },
@@ -321,7 +321,7 @@
       },
       {
         "path": "tests/test_inventory_api.py",
-        "sha256": "ca45493991c525039b4904080434c2b884477ac41d9606f579231addf7968429",
+        "sha256": "f16ca383d8a8cb647c82d9bb4fb620ed470140ff9137780a734ee4c4b58bb13c",
         "bytes": 12876,
         "lines": 295
       },
@@ -339,7 +339,7 @@
       },
       {
         "path": "tests/test_pattern_outline.py",
-        "sha256": "e0d34a9a2a0a9cd9a99fe13bd17d892165ea528ee51f5ae3fcd679a6f888115a",
+        "sha256": "a0df58583ddedcad11d2ea2516e8cd12a7cdd631d8dbf4a27973c9f6fd45f125",
         "bytes": 10506,
         "lines": 269
       },
@@ -354,6 +354,12 @@
         "sha256": "38b7fc441c0fc8fb89f6ff8a4808f1d5256101a3e59da86a219a72ffc6b33c4c",
         "bytes": 3068,
         "lines": 83
+      },
+      {
+        "path": "tests/test_set_arrangement_api.py",
+        "sha256": "83fe6e4f4b72166efb18367c334707c79b26adafbdaf8cebf6e7df466fada713",
+        "bytes": 5053,
+        "lines": 138
       },
       {
         "path": "tests/test_transport_server.py",
@@ -431,8 +437,8 @@
       "tools_shards": [
         {
           "path": "mappings/current_tools_01.json",
-          "sha256": "98bc8a7161a6ae0e9248ad6405368284c0b2303a3a066e4de09324a3c9efe949",
-          "entries": 23
+          "sha256": "3484ac835166bfa6131eaea4ba12aaf7f3190d58a074c5e69e1c2af119d0cc1e",
+          "entries": 24
         }
       ]
     }
@@ -454,7 +460,7 @@
       "list_extensions",
       "ping"
     ],
-    "current_tools": 23
+    "current_tools": 24
   },
   "limitations": [
     "Static AST evidence only. No donor/local inspected module import, no CLO call, restart, mutation or SDK execution.",

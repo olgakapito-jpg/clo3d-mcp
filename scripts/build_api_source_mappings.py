@@ -46,6 +46,7 @@ LOCAL_INPUTS = (
     "tests/test_pattern_outline.py", "docs/CLO_OUTLINE_CHECK.md",
     "tests/test_pattern_lines.py", "tests/test_seam_api.py",
     "tests/test_import_avatar_api.py", "tests/test_arrangement_api.py",
+    "tests/test_set_arrangement_api.py",
     "docs/CLO_LINE_API_CONTRACT_REVIEW.md", "docs/CLO_SEAMLINING_CHECK.md",
     "docs/CLO_FIT_CHECK.md",
 )
@@ -335,6 +336,7 @@ CURRENT_PRIMARY = {
     "add_seamline_pair": ["AddSeamlinePairGroup"],
     "import_avatar": ["ImportFile"],
     "get_arrangement": ["GetArrangementList", "GetArrangementOfPattern"],
+    "set_arrangement": ["SetArrangement", "GetArrangementList", "GetArrangementOfPattern"],
     "create_pattern": ["CreatePatternWithPoints", "SetPatternPieceName"],
     "set_pattern_name": ["SetPatternPieceName"],
     "copy_pattern_with_offset": ["CopyPatternPieceMove", "SetPatternPieceName"],
@@ -342,7 +344,7 @@ CURRENT_PRIMARY = {
     "delete_pattern": ["DeletePatternPiece"],
 }
 PATTERN_TOOLS = frozenset(("list_clo_api", "describe_clo_api", "get_pattern_list", "get_pattern_geometry",
-                           "create_pattern", "set_pattern_name", "copy_pattern_with_offset", "move_pattern_relative", "delete_pattern", "get_pattern_outline", "get_pattern_lines", "get_arrangement", "add_seamline_pair", "import_avatar"))
+                           "create_pattern", "set_pattern_name", "copy_pattern_with_offset", "move_pattern_relative", "delete_pattern", "get_pattern_outline", "get_pattern_lines", "get_arrangement", "set_arrangement", "add_seamline_pair", "import_avatar"))
 DOMAIN_TOOLS = frozenset(("get_fabric_list", "get_avatars",
                           "get_pattern_fabric", "assign_pattern_fabric"))
 BASE_SERVICE_TOOLS = frozenset(("ping", "get_pattern_count", "transport_status",
@@ -395,6 +397,10 @@ def current_inventory(files):
             supporting = ["export_api.GetAvatarCount"]
         if name == "get_arrangement":
             supporting = ["pattern_api.GetPatternCount", "pattern_api.GetPatternPieceName"]
+        if name == "set_arrangement":
+            supporting = ["pattern_api.GetPatternCount", "pattern_api.GetPatternPieceName",
+                          "pattern_api.GetArrangementList", "pattern_api.GetArrangementOfPattern",
+                          "pattern_api.GetPatternPieceArea", "pattern_api.GetBoundingBoxOfPattern"]
         if name == "create_test_rectangle":
             supporting = ["pattern_api.GetPatternCount"]
         if assignment_tool:
@@ -403,7 +409,7 @@ def current_inventory(files):
             if name == "assign_pattern_fabric":
                 supporting += ["fabric_api.GetFabricIndexForPattern"] + ["pattern_api." + n for n in GEOMETRY_IDS]
         tool["primary_native_ids"] = primary
-        tool["primary_native_role"] = "effect" if name in ("create_pattern", "set_pattern_name", "copy_pattern_with_offset", "move_pattern_relative", "delete_pattern", "create_test_rectangle", "assign_pattern_fabric", "add_seamline_pair", "import_avatar") else "read_or_introspection"
+        tool["primary_native_role"] = "effect" if name in ("create_pattern", "set_pattern_name", "copy_pattern_with_offset", "move_pattern_relative", "delete_pattern", "create_test_rectangle", "assign_pattern_fabric", "add_seamline_pair", "import_avatar", "set_arrangement") else "read_or_introspection"
         tool["supporting_native_ids"] = sorted(set(supporting) - set(primary))
         tool["native_ids"] = sorted(set(primary + supporting))
         tool["native_reference_evidence"] = [{**ref, "role": "primary_effect_or_read" if ref["id"] in primary else "preflight_or_readback"} for ref in all_refs if ref["id"] in tool["native_ids"]]

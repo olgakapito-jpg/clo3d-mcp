@@ -401,6 +401,72 @@ class PatternAPI:
         return {"pattern_count": len(pieces), "arrangement_library_count": len(library),
                 "pieces": pieces, "units": "native_unspecified"}
 
+    def _set_arrangement(self, p):
+        """Assign one avatar arrangement point, then ReDrape; assignment is verified."""
+        self._require("GetPatternCount", "GetPatternPieceName", "GetArrangementList",
+                      "SetArrangement", "GetArrangementOfPattern")
+        before = self._list()
+        i, expected = p["pattern_index"], p["expected_name"]
+        items = before["patterns"]
+        if (i >= len(items) or items[i]["name"] != expected
+                or sum(v["name"] == expected for v in items) != 1):
+            raise CommandError("stale_pattern")
+        library = self.pattern.GetArrangementList()
+        if type(library) is not list or not 1 <= len(library) <= 4096:
+            raise CommandError("invalid_native_result")
+        arrangement_index = p["arrangement_index"]
+        if arrangement_index >= len(library):
+            raise CommandError("invalid_parameters")
+        entry = library[arrangement_index]
+        keys = ("ArrangementName", "ArrangementOffsetX", "ArrangementOffsetY",
+                "ArrangementOffsetZ", "ArrangementOrientation", "ArrangementType")
+        if type(entry) is not dict or not all(type(entry.get(k)) is str for k in keys):
+            raise CommandError("invalid_native_result")
+        try:
+            import ApiTypes
+            option = ApiTypes.ImportExportOption()
+        except Exception:
+            raise CommandError("api_unavailable") from None
+        flags = []
+        for flag in ("bAddArrangementPoints", "bAutoCreateFittingSuit", "bMoveGarment"):
+            if hasattr(option, flag):
+                try:
+                    setattr(option, flag, True)
+                    flags.append(flag)
+                except Exception:
+                    pass
+        try:
+            self.pattern.SetArrangement(i, arrangement_index)
+        except Exception:
+            raise CommandError("scene_change_unverified") from None
+        value = self.pattern.GetArrangementOfPattern(i)
+        if (type(value) is not dict
+                or any(value.get(k) != entry[k] for k in keys)):
+            raise CommandError("scene_change_unverified")
+
+        def numeric(text):
+            if type(text) is not str or not re.fullmatch(r"-?\d+(\.\d+)?", text):
+                raise CommandError("invalid_native_result")
+            number_value = float(text)
+            if not math.isfinite(number_value) or abs(number_value) > 1e16:
+                raise CommandError("invalid_native_result")
+            return number_value
+
+        try:
+            self.modules["utility_api"].ReDrape3DArrangement(option)
+        except Exception:
+            raise CommandError("scene_change_unverified") from None
+        if self._list() != before:
+            raise CommandError("inventory_changed")
+        return {"verified": True, "pattern_index": i, "pattern_name": expected,
+                "arrangement_name": entry["ArrangementName"],
+                "offset": {"x": numeric(entry["ArrangementOffsetX"]),
+                           "y": numeric(entry["ArrangementOffsetY"]),
+                           "z": numeric(entry["ArrangementOffsetZ"])},
+                "orientation": numeric(entry["ArrangementOrientation"]),
+                "type": entry["ArrangementType"], "units": "native_unspecified",
+                "redrape": True}
+
     @staticmethod
     def _near(a, b):
         return math.isclose(a, b, rel_tol=1e-5, abs_tol=0.05)
@@ -438,6 +504,8 @@ class PatternAPI:
             result = self._import_avatar(params)
         elif command == "get_arrangement":
             result = self._arrangements()
+        elif command == "set_arrangement":
+            result = self._set_arrangement(params)
         else:
             result = self._mutate(command, params)
             # Includes preflight, native setter(s) AND verification reads, not

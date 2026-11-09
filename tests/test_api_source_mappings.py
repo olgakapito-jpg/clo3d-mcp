@@ -111,7 +111,7 @@ def test_snapshot_normalized_integrity_inventory_and_local_rebuild(snapshot):
     assert snapshot["counts"]["shared_donor_legacy_tool_names"] == 44
     assert snapshot["counts"]["legacy_tools"] == 47
     assert snapshot["counts"]["legacy_handlers"] == 47
-    assert snapshot["counts"]["current_tools"] == 23
+    assert snapshot["counts"]["current_tools"] == 24
     assert {t["name"] for t in snapshot["donor"]["tools"] if not t["native_ids"]} == {
         "list_clo_api", "describe_clo_api", "find_api_types"}
 
@@ -135,7 +135,7 @@ def test_local_aliases_and_dev_extras_are_explicit(snapshot):
 
 def test_current_inventory_is_separate_and_acceptance_is_limited(snapshot):
     tools = {t["name"]: t for t in snapshot["local"]["current"]["tools"]}
-    assert len(tools) == 23
+    assert len(tools) == 24
     assert tools["get_pattern_outline"]["primary_native_ids"] == ["pattern_api.GetPatternOutlinePoints"]
     assert tools["get_pattern_outline"]["supporting_native_ids"] == ["pattern_api.GetPatternCount", "pattern_api.GetPatternPieceName"]
     assert tools["get_pattern_outline"]["acceptance"]["status"] == "blocked_real_outline_invalid_native_result"
@@ -171,7 +171,7 @@ def test_loader_interface_and_small_artifacts(snapshot):
     loaded = mapping.load_mappings(ROOT / mapping.SNAPSHOT)
     assert len(loaded["donor_tools"]) == 170
     assert len(loaded["local_legacy_tools"]) == 47
-    assert len(loaded["current_tools"]) == 23
+    assert len(loaded["current_tools"]) == 24
     assert loaded["source_refs"]["donor"]
     for path, text in mapping.artifacts(snapshot).items():
         assert len(text.encode("utf-8")) <= 200000, path

@@ -31,9 +31,9 @@ def trace(inv):
     return evaluation.synthetic_examples(inv)[0]
 
 
-def test_current23_inventory_ast_without_server_imports(inv):
-    assert len(inv["tools"]) == 23
-    assert set(inv["profiles"]["current23"]["capabilities"]) == evaluation.CURRENT - evaluation.EXTERNAL
+def test_current24_inventory_ast_without_server_imports(inv):
+    assert len(inv["tools"]) == 24
+    assert set(inv["profiles"]["current24"]["capabilities"]) == evaluation.CURRENT - evaluation.EXTERNAL
     for size in (14, 16, 18):
         assert len(inv["profiles"]["current" + str(size)]["tools"]) == size
         assert "get_pattern_outline" not in inv["profiles"]["current" + str(size)]["tools"]
@@ -41,6 +41,9 @@ def test_current23_inventory_ast_without_server_imports(inv):
         assert "add_seamline_pair" not in inv["profiles"]["current" + str(size)]["tools"]
         assert "import_avatar" not in inv["profiles"]["current" + str(size)]["tools"]
         assert "get_arrangement" not in inv["profiles"]["current" + str(size)]["tools"]
+        assert "set_arrangement" not in inv["profiles"]["current" + str(size)]["tools"]
+    assert len(inv["profiles"]["current23"]["tools"]) == 23
+    assert "set_arrangement" not in inv["profiles"]["current23"]["tools"]
     assert len(inv["profiles"]["current22"]["tools"]) == 22
     assert "get_arrangement" not in inv["profiles"]["current22"]["tools"]
     assert len(inv["profiles"]["current21"]["tools"]) == 21
@@ -369,7 +372,7 @@ def test_fixture_and_scope_and_diagnostic_guards(inv, data, trace):
 def test_cli_check_and_self_test(capsys):
     assert evaluation.main(["--check", "--self-test"]) == 0
     result = json.loads(capsys.readouterr().out)
-    assert result["cases"] >= 20 and result["tools"] == 23
+    assert result["cases"] >= 20 and result["tools"] == 24
     assert result["self_test"] == {"valid_accepted": 2, "invalid_rejected": 6}
     assert "not_llm" in result["evidence"]
 
