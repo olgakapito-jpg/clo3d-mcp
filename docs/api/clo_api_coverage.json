@@ -14,11 +14,11 @@
     },
     {
       "path": "current_operation_scope.json",
-      "sha256": "b901e5ad4d0eb2b74d0757267e03c4f3afcc8e31a10a7482a2a770a3b075e0c6"
+      "sha256": "a7564a7e2ccc23a9c5291060d7600e306904bd8cc297435f0a5e461b58368342"
     },
     {
       "path": "review_gates.json",
-      "sha256": "486e96c66263b74fa307b376d336b0151e7778c8365e2e73ddcf020b6b241fb4"
+      "sha256": "89f5563060246a0b236d55259524f636cf30a5a7c36535b4e71f9cb41cb92fa7"
     }
   ],
   "runtime_evidence": "docs/CLO_API_RUNTIME_EVIDENCE.md",

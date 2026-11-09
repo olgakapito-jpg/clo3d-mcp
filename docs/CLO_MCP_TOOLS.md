@@ -383,7 +383,10 @@ tessellation, seam/lineIndex topology, graded points или форму крив�
 snapshot и не durable identity. Строгий bounded JSON: exact str≤64KiB, depth16,
 duplicate keys/NaN/Infinity rejected, documented fields only. Errors:
 stale_pattern, inventory_changed, invalid_native_result, api_unavailable,
-command_error. При любом error/unknown STOP, без retry и без fallback на outline.
+command_error. Native invalid index наблюдался как `{"status":"failed","message"}`;
+публичный tool превращает любой non-success/malformed в `invalid_native_result`,
+не отдавая message. При любом error/unknown STOP, без retry и без fallback на
+outline.
 
 Valid synthetic: `{"pattern_index":0,"expected_name":"panel"}`.
 Invalid/no-call: bool/string index, extra keys, несовпадающее/неуникальное имя.
