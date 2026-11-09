@@ -70,10 +70,12 @@ Source/live, принятые ранее подпакеты:
   marker одноразового probe не сбрасывать. Деталь `MCP_B06_outline_03cc0407`
   оставлена как есть. `../../../docs/CLO_OUTLINE_CHECK.md`.
 - Линии (20): `get_pattern_lines` read-only, required fresh index/unique
-  expected_name, один native read; `status="success"`,4 lines, absolute API-mm
-  frame на тестовом прямоугольнике; длины 4/4 совпали с `GetLineLength`
-  (delta0.0). Кривые/failure/frame после move/rotate не заявлены; не outline
-  fallback. `../../../docs/CLO_LINE_API_CONTRACT_REVIEW.md`.
+  expected_name, один native read; `status="success"`, absolute API-mm frame;
+  длины 4/4 совпали с `GetLineLength` на прямоугольнике. Live: на кривых
+  `length_mm` > chord (arc-like), `mid_mm` — середина endpoints, `orientation`
+  — dominant-axis; move/restore подтвердил translation invariance. Rotation,
+  failure и дочерние формы открыты; не outline fallback.
+  `../../../docs/CLO_LINE_API_CONTRACT_REVIEW.md`.
 
 Worker restart не перезагружает embedded modules: `CLO_INVENTORY_CHECK.md`.
 Не менять overload и не добавлять fallback автоматически. Sewing/simulation/

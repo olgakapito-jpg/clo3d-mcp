@@ -20,8 +20,10 @@ API линий проверен отдельно: `CLO_LINE_API_CONTRACT_REVIEW.
 `GetPatternLineInfo` на own120×80 детали вернул `status="success"`,4 lines,
 только documented fields; координаты — absolute API-mm frame, не bbox-local.
 Length-correspondence выполнен:4/4 2-аргументных `GetLineLength` по returned
-indices0–3 дали120/80/120/80 с delta0.0 и multiset match. Это единичные сэмплы:
-кривые, failure и frame после move/rotate остаются отдельными gates.
+indices0–3 дали120/80/120/80 с delta0.0 и multiset match. Live tool20 на
+существующих деталях: `length_mm` arc-like на кривых (>chord), `mid_mm` —
+середина endpoints, orientation — dominant-axis; move/restore подтвердил
+absolute frame. Rotation, invalid indices и failed/partial остаются открытыми.
 
 ## Общие контракты
 
@@ -368,11 +370,14 @@ Required `pattern_index` strict int0–255, `expected_name` exact1–128 из fr
 `get_pattern_list`, уникальное. Result
 `{ok:true,pattern_index,pattern_name,line_count,bounding_box_mm:{min_x,min_y,max_x,max_y,width,height},lines:[{line_index,length_mm,orientation,location,start_mm,end_mm,mid_mm,mid_norm}],units:"mm",coordinate_frame:"api_2d_mm"}`.
 `line_count`1–512 == len(lines); `line_index` уникальны0–511, native order
-сохраняется; `mid_norm`0–1 внутри bbox. Координаты — native 2D мм; на тестовом
-прямоугольнике совпали с absolute create/geometry frame (не bbox-local), но
-направление Y и frame после move/rotate отдельно не установлены. `length_mm` —
-native длина линии в мм; arc-vs-chord на кривых не установлен. Не выводить
-closure, tessellation, seam/lineIndex topology или graded points.
+сохраняется; `mid_norm`0–1 внутри bbox. Координаты — native 2D мм; live-проверка
+move `[25,−30]`/restore подтвердила absolute API frame и translation invariance,
+не bbox-local; rotation/scale не проверялись. `length_mm` — native длина: на
+прямых равна chord, на кривых больше chord (arc-like, max48.69мм в сэмпле), но
+независимого arc-измерения нет. `mid_mm` — арифметическая середина start/end
+даже на кривых, не точка дуги. `orientation` — dominant-axis label, не точное
+направление (наклонный сегмент может быть `vertical`). Не выводить closure,
+tessellation, seam/lineIndex topology, graded points или форму кривой.
 
 Один native line-info read плюс list/count checks, до256patterns; не atomic
 snapshot и не durable identity. Строгий bounded JSON: exact str≤64KiB, depth16,

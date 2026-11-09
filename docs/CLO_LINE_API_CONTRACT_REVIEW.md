@@ -359,5 +359,32 @@ real run выполнен (ниже), UI-аномалий не заявлено.
 Не установлено: длины/семантика на кривых (arc vs chord), поведение после
 move/rotate/scale, invalid indices/failure, дочерние формы, устойчивость на
 нескольких деталях. Это один сэмпл — evidence, не production acceptance.
-MCP tool линий по-прежнему не реализован; proposal `get_pattern_lines` остаётся
-без изменений.
+MCP tool линий реализован (tool20); curve/frame evidence — раздел9.
+
+## 9. Live tool20 и семантика кривых/frame — 2026-11-09
+
+Live session `467a65735650b657b53409e1d531e970`, `server_build == executor_build
+== 68635cd893cd`, capability 20. `get_pattern_lines` на fixture index5 вернул те
+же4 линии0–3,120/80/120/80; длины равны chord на прямоугольнике.
+
+Read-only чтение существующих деталей `"2"`,`"3"`,`"5"`,`"6"`,`"1"`:
+11/6/11/6/14 линий. **`length_mm` не является chord**: на криволинейных сегментах
+длина больше расстояния start–end (max48.6934мм на `"1"`;3.6791/5.1709/3.6792/
+5.1709 на остальных; на прямом fixture разница0). Значит native length ведёт
+себя как arc length; независимого arc-измерения нет, поэтому это inference, не
+доказанная единица для всех кривых.
+
+**`mid_mm` — арифметическая середина endpoints даже на кривых** (max отклонение
+0.0001мм на всех5 деталях), а не точка на дуге. `mid_norm` — та же середина,
+нормализованная к bbox (0..1). **`orientation` — не точный вектор**: наклонные
+сегменты с |dy|>|dx| помечены `vertical` (например `"2"` line0: dx117,dy380),
+поэтому это dominant-axis/region label, не геометрия направления.
+
+Frame: move своей fixture `[25,−30]` → все start/end/mid сдвинулись ровно на
+`[25,−30]` (ошибка0), длины и mid_norm не изменились, bbox сдвинулся; restore
+`[−25,+30]` вернул точный baseline `[2000,1250]-[2120,1330]`. Это подтверждает
+absolute API-mm frame и translation invariance; rotation/scale не проверялись.
+
+Итог: tool20 работает на реальной сцене; кривые дают arc-like length и chord
+mid; orientation не использовать как direction. Rotation, invalid indices,
+failed/partial и дочерние формы остаются открытыми.
