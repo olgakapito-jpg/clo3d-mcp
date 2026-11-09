@@ -424,6 +424,8 @@ readback требует seam count +1 и неизменные line lengths/geome
 `{ok:true,verified:true,seam_count}`; native false/exception или drift →
 `invalid_native_result`/`scene_change_unverified`, без retry и cleanup.
 Probe 2026-11-09: native return bool true, count16→17, lines/geometry unchanged.
+Live tool gate on build975dcebc4e10: own MCP_SEAM_C/D line0 →
+`{verified:true,seam_count:18}`, readback lines/geometry unchanged.
 Valid synthetic: `{"pattern_a_index":0,"expected_name_a":"panel","line_a_index":0,
 "pattern_b_index":1,"expected_name_b":"back","line_b_index":0,
 "direction_a":true,"direction_b":true}`. Composition: fresh list → lines → seam →
