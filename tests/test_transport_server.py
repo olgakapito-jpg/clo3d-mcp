@@ -353,6 +353,10 @@ def test_pattern_package_real_http_validates_raw_arguments_and_runs_stateful_exe
                         ("create_pattern", {"points": "[[0,0],[10,0],[0,10]]", "name": "a"}),
                         ("create_pattern", {"points": [[0, 0], [10, 0], [0, True]], "name": "a"}),
                         ("create_pattern", {"points": POINTS, "name": "a", "vertex_types": [0, 1, 0, 0]}),
+                        ("add_seamline_pair", {"pattern_a_index": 0, "expected_name_a": "a",
+                                               "line_a_index": 0, "pattern_b_index": 1,
+                                               "expected_name_b": "b", "line_b_index": 0,
+                                               "direction_a": 1, "direction_b": True}),
                     ]:
                         reply = await client.call_tool(command, args)
                         assert reply.isError, command

@@ -22,7 +22,7 @@ LICENSE/NOTICE: pinned URLs и SHA-256 в JSON; NOTICE указывает upstre
 - `shared_donor_legacy_tool_names`: `44`
 - `donor_only_tool_names`: `126`
 - `legacy_only_tool_names`: `['import_dxf', 'list_extensions', 'ping']`
-- `current_tools`: `20`
+- `current_tools`: `21`
 
 ## Схема и доказательства
 
@@ -60,6 +60,7 @@ Legacy copy_pattern/CopyPatternPiecePos не объявлен эквивален
 
 ## Current19 и граница приёмки
 
+- `add_seamline_pair` (pattern_package): `pattern_api.AddSeamlinePairGroup`; evidence `docs/PATTERN_API_CHECK.md`.
 - `assign_pattern_fabric` (pattern_package): `fabric_api.AssignFabricToPattern`; evidence `docs/CLO_FABRIC_ASSIGNMENT_CHECK.md`.
 - `copy_pattern_with_offset` (pattern_package): `pattern_api.CopyPatternPieceMove`, `pattern_api.SetPatternPieceName`; evidence `docs/PATTERN_API_CHECK.md`.
 - `create_pattern` (pattern_package): `pattern_api.CreatePatternWithPoints`, `pattern_api.SetPatternPieceName`; evidence `docs/PATTERN_API_CHECK.md`.

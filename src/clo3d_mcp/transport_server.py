@@ -7,7 +7,7 @@ import json
 import socket
 import time
 from typing import Any
-from pydantic import StrictFloat, StrictInt, StrictStr
+from pydantic import StrictBool, StrictFloat, StrictInt, StrictStr
 
 from mcp.server.fastmcp import FastMCP
 from mcp.server.transport_security import TransportSecuritySettings
@@ -288,6 +288,27 @@ def add_pattern_tools(mcp, service, read):
         """
         return await service.call("get_pattern_lines", {
             "pattern_index": pattern_index, "expected_name": expected_name})
+
+    @mcp.tool(annotations=mutation)
+    async def add_seamline_pair(pattern_a_index: StrictInt, expected_name_a: StrictStr,
+                                line_a_index: StrictInt, pattern_b_index: StrictInt,
+                                expected_name_b: StrictStr, line_b_index: StrictInt,
+                                direction_a: StrictBool, direction_b: StrictBool) -> dict[str, Any]:
+        """Sew ONE whole outer line of pattern A to ONE whole outer line of pattern B.
+
+        Required fresh real-pattern indices/unique expected names and line indices
+        from get_pattern_lines; directions are native booleans (true forward).
+        Calls the 6-argument AddSeamlinePairGroup only; child overloads, partial
+        ratios, topstitch, buttons and delete are not included. Verifies seam group
+        count +1 and unchanged line lengths/geometry/order; returns seam_count.
+        Native false/exception or mismatched readback is an error, never retried;
+        no automatic cleanup. Not a material/3D/sewing-quality guarantee.
+        """
+        return await service.call("add_seamline_pair", {
+            "pattern_a_index": pattern_a_index, "expected_name_a": expected_name_a,
+            "line_a_index": line_a_index, "pattern_b_index": pattern_b_index,
+            "expected_name_b": expected_name_b, "line_b_index": line_b_index,
+            "direction_a": direction_a, "direction_b": direction_b})
 
     @mcp.tool(annotations=mutation)
     async def create_pattern(points: list[list[StrictInt | StrictFloat]], name: StrictStr,

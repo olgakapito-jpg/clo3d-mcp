@@ -112,6 +112,9 @@ ECONNREFUSED нормально. Глобальные настройки про�
 - Lines: `get_pattern_lines` — read-only внешние линии (lineIndex, length_mm,
   orientation, location, start/end/mid, mid_norm), один native read; кривые и
   frame после move/rotate отдельно не заявлены.
+- Seams: `add_seamline_pair` — один whole-line seam по lineIndex обеих деталей,
+  strict bool directions, readback seam count+1 и неизменных линий/geometry;
+  partial/merge/child overloads не входят.
 
 Новый путь не загружает extensions и не публикует legacy-команды импорта,
 экспорта, симуляции или exec. Параметризованное создание: до 64 точек, прямые или curve-вершины (0/2/3);

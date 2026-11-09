@@ -31,13 +31,16 @@ def trace(inv):
     return evaluation.synthetic_examples(inv)[0]
 
 
-def test_current20_inventory_ast_without_server_imports(inv):
-    assert len(inv["tools"]) == 20
-    assert set(inv["profiles"]["current20"]["capabilities"]) == evaluation.CURRENT - evaluation.EXTERNAL
+def test_current21_inventory_ast_without_server_imports(inv):
+    assert len(inv["tools"]) == 21
+    assert set(inv["profiles"]["current21"]["capabilities"]) == evaluation.CURRENT - evaluation.EXTERNAL
     for size in (14, 16, 18):
         assert len(inv["profiles"]["current" + str(size)]["tools"]) == size
         assert "get_pattern_outline" not in inv["profiles"]["current" + str(size)]["tools"]
         assert "get_pattern_lines" not in inv["profiles"]["current" + str(size)]["tools"]
+        assert "add_seamline_pair" not in inv["profiles"]["current" + str(size)]["tools"]
+    assert len(inv["profiles"]["current20"]["tools"]) == 20
+    assert "add_seamline_pair" not in inv["profiles"]["current20"]["tools"]
     assert len(inv["profiles"]["current19"]["tools"]) == 19
     assert "get_pattern_outline" in inv["profiles"]["current19"]["tools"]
     assert "get_pattern_lines" not in inv["profiles"]["current19"]["tools"]
@@ -360,7 +363,7 @@ def test_fixture_and_scope_and_diagnostic_guards(inv, data, trace):
 def test_cli_check_and_self_test(capsys):
     assert evaluation.main(["--check", "--self-test"]) == 0
     result = json.loads(capsys.readouterr().out)
-    assert result["cases"] >= 20 and result["tools"] == 20
+    assert result["cases"] >= 20 and result["tools"] == 21
     assert result["self_test"] == {"valid_accepted": 2, "invalid_rejected": 6}
     assert "not_llm" in result["evidence"]
 

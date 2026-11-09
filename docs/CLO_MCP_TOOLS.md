@@ -410,6 +410,26 @@ fresh target; cross-domain → `get_pattern_fabric`. Anti-selection: конеч�
 контура — `get_pattern_outline` (limited), управляющие точки кривых/швов — tool нет.
 Evidence: `CLO_LINE_API_CONTRACT_REVIEW.md`.
 
+## 21. add_seamline_pair
+
+**Source, whole outer line pair.** Один `pattern_api.AddSeamlinePairGroup` 6-arg
+overload: `(pattern_a, line_a, pattern_b, line_b, direction_a, direction_b)`.
+Child overloads (childA/childB), `AddSeamlinePairGroupPartial`, topstitch, buttons,
+`MergeSewnPatterns`, `DeleteLine` в tool не входят.
+
+Required: fresh real-pattern indices/уникальные `expected_name_a/b`, `line_a_index/
+line_b_index` из `get_pattern_lines`, strict bool directions (true forward),
+разные детали. Preflight проверяет line count и geometry; один native call;
+readback требует seam count +1 и неизменные line lengths/geometry/order. Result
+`{ok:true,verified:true,seam_count}`; native false/exception или drift →
+`invalid_native_result`/`scene_change_unverified`, без retry и cleanup.
+Probe 2026-11-09: native return bool true, count16→17, lines/geometry unchanged.
+Valid synthetic: `{"pattern_a_index":0,"expected_name_a":"panel","line_a_index":0,
+"pattern_b_index":1,"expected_name_b":"back","line_b_index":0,
+"direction_a":true,"direction_b":true}`. Composition: fresh list → lines → seam →
+read seam count/connectivity отдельно. Anti-selection: partial seam/merge/curve
+editing — не этот tool. Evidence: `CLO_SEAMLINING_CHECK.md`.
+
 ## Ошибки и безопасные действия
 
 - invalid_parameters: проверить schema/bounds/extras, не пробовать наугад.

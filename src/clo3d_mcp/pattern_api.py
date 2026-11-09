@@ -271,6 +271,65 @@ class PatternAPI:
                                     "width": float(box["width"]), "height": float(box["height"])},
                 "lines": output, "coordinate_frame": "api_2d_mm", "units": "mm"}
 
+    def _seam(self, p):
+        """One whole-line seam pair with readback; no child overloads or retry."""
+        self._require("GetPatternCount", "GetPatternPieceName", "GetPatternLineInfo",
+                      "GetPatternPieceArea", "GetBoundingBoxOfPattern",
+                      "GetSeamlinePairGroupCount", "AddSeamlinePairGroup")
+        before = self._list()
+        a, b = p["pattern_a_index"], p["pattern_b_index"]
+        if a == b:
+            raise CommandError("invalid_parameters")
+        for index, expected in ((a, p["expected_name_a"]), (b, p["expected_name_b"])):
+            items = before["patterns"]
+            if (index >= len(items) or items[index]["name"] != expected
+                    or sum(v["name"] == expected for v in items) != 1):
+                raise CommandError("stale_pattern")
+
+        def line_lengths(index):
+            data = _line_json(self.pattern.GetPatternLineInfo(index))
+            lines = data.get("lines")
+            if (data.get("status") != "success" or type(data.get("lineCount")) is not int
+                    or type(lines) is not list or data["lineCount"] != len(lines)
+                    or not 1 <= len(lines) <= MAX_LINES):
+                raise CommandError("invalid_native_result")
+            lengths = [item.get("length") for item in lines if type(item) is dict]
+            if len(lengths) != len(lines) or not all(number(v) and v >= 0 for v in lengths):
+                raise CommandError("invalid_native_result")
+            return [float(v) for v in lengths]
+
+        lines_a, lines_b = line_lengths(a), line_lengths(b)
+        if p["line_a_index"] >= len(lines_a) or p["line_b_index"] >= len(lines_b):
+            raise CommandError("invalid_parameters")
+        geometry_a, geometry_b = self._geometry(a), self._geometry(b)
+        seams = self.pattern.GetSeamlinePairGroupCount()
+        if type(seams) is not int or seams < 0:
+            raise CommandError("invalid_native_result")
+        try:
+            created = self.pattern.AddSeamlinePairGroup(
+                a, p["line_a_index"], b, p["line_b_index"],
+                p["direction_a"], p["direction_b"])
+        except Exception:
+            raise CommandError("scene_change_unverified") from None
+        if type(created) is not bool or created is not True:
+            raise CommandError("invalid_native_result")
+        if self._list() != before:
+            raise CommandError("inventory_changed")
+        seams_after = self.pattern.GetSeamlinePairGroupCount()
+        if type(seams_after) is not int or seams_after != seams + 1:
+            raise CommandError("scene_change_unverified")
+        if line_lengths(a) != lines_a or line_lengths(b) != lines_b:
+            raise CommandError("scene_change_unverified")
+        after_a, after_b = self._geometry(a), self._geometry(b)
+        for old, new in ((geometry_a, after_a), (geometry_b, after_b)):
+            if (old["name"] != new["name"] or old["index"] != new["index"]
+                    or old["bounding_box"] != new["bounding_box"]
+                    or not self._near(old["area_mm2"], new["area_mm2"])
+                    or not all(self._near(x, y) for x, y in
+                               zip(old["position_mm"], new["position_mm"]))):
+                raise CommandError("scene_change_unverified")
+        return {"verified": True, "seam_count": seams_after}
+
     @staticmethod
     def _near(a, b):
         return math.isclose(a, b, rel_tol=1e-5, abs_tol=0.05)
@@ -302,6 +361,8 @@ class PatternAPI:
             result = self._outline(params)
         elif command == "get_pattern_lines":
             result = self._lines(params)
+        elif command == "add_seamline_pair":
+            result = self._seam(params)
         else:
             result = self._mutate(command, params)
             # Includes preflight, native setter(s) AND verification reads, not

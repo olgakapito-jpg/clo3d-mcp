@@ -1,7 +1,8 @@
 # Швы (seamline pairs) — контракт и bounded probe
 
-Target: CLO2026.1.336. Статус: **contract review + один real probe подготовлен;
-MCP tool ещё не реализован**. Это отдельный домен, не продолжение построения.
+Target: CLO2026.1.336. Статус: **contract review + real probe пройдены; MCP tool
+`add_seamline_pair` реализован в source, live требует Stop→Start**. Это отдельный
+домен, не продолжение построения.
 
 ## API-факты
 
@@ -37,6 +38,19 @@ MCP tool ещё не реализован**. Это отдельный доме�
 Ожидаемый JSON `clo_seam_probe_v1`: `seams_before/after`, `native_return_type`,
 `native_return`/`native_return_int`, `lines_after == lines_before`,
 `geometry_after == geometry_before`, `connectivity_after.group_count`.
+
+## Результат probe 2026-11-09
+
+Сцена: example pieces + own `MCP_SEAM_A` index5/`MCP_SEAM_B` index6, line0
+длина120. Один `AddSeamlinePairGroup(5,0,6,0,True,True)`:
+
+- `native_return_type=bool`, literal `true` (docstring с name string опровергнут);
+- `seams_before=16`, `seams_after=17`;
+- line lengths/line count и area/bbox обеих деталей не изменились;
+- `connectivity_after` status success, group_count3.
+
+Вывод: whole-line seam создаётся и readback-verifiable. Child overloads и
+partial остаются отдельными gate.
 
 ## Границы
 

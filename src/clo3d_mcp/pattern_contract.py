@@ -16,6 +16,7 @@ PATTERN_COMMANDS = [
     "get_fabric_list", "get_avatars",
     "get_pattern_fabric", "assign_pattern_fabric",
     "get_pattern_outline", "get_pattern_lines",
+    "add_seamline_pair",
 ]
 API_MODULES = ("pattern_api", "export_api", "fabric_api", "import_api", "utility_api")
 ERROR_CODES = ("api_unavailable", "stale_pattern", "scene_change_unverified", "invalid_parameters",
@@ -108,6 +109,9 @@ def validate_params(command, params):
         "get_pattern_fabric": {"pattern_index", "expected_name"},
         "get_pattern_outline": {"pattern_index", "expected_name"},
         "get_pattern_lines": {"pattern_index", "expected_name"},
+        "add_seamline_pair": {"pattern_a_index", "expected_name_a", "line_a_index",
+                              "pattern_b_index", "expected_name_b", "line_b_index",
+                              "direction_a", "direction_b"},
         "assign_pattern_fabric": {"pattern_index", "expected_name", "fabric_index",
                                   "expected_fabric_name", "expected_current_fabric_index"},
     }
@@ -119,12 +123,15 @@ def validate_params(command, params):
         curved = (isinstance(curve_types, list)
                   and any(type(t) is int and t in (2, 3) for t in curve_types))
         for key, value in params.items():
-            if key in ("pattern_index", "fabric_index", "expected_current_fabric_index"):
+            if key in ("pattern_index", "fabric_index", "expected_current_fabric_index",
+                       "pattern_a_index", "pattern_b_index", "line_a_index", "line_b_index"):
                 valid = index(value)
             elif key == "expected_fabric_name":
                 valid = inventory_name(value)
-            elif key in ("name", "expected_name"):
+            elif key in ("name", "expected_name", "expected_name_a", "expected_name_b"):
                 valid = name(value)
+            elif key in ("direction_a", "direction_b"):
+                valid = type(value) is bool
             elif key == "vertex_types":
                 valid = (isinstance(value, list) and 3 <= len(value) <= 64
                          and all(type(v) is int and v in (0, 2, 3) for v in value)
@@ -283,6 +290,10 @@ def validate_result(command, result):
                  and bounding_box(result["bounding_box_mm"])
                  and result["coordinate_frame"] == "api_2d_mm"
                  and result["units"] == "mm")
+    elif command == "add_seamline_pair":
+        valid = (keys == {"verified", "seam_count"}
+                 and result["verified"] is True
+                 and type(result["seam_count"]) is int and result["seam_count"] >= 0)
     elif command == "get_fabric_list":
         valid = (keys == {"fabric_count", "fabrics"}
                  and inventory_result(result, "fabric", MAX_FABRICS))

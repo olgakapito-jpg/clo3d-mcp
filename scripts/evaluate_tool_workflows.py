@@ -19,7 +19,8 @@ DATASET = ROOT / "tests/evals/clo_tool_selection.json"
 MAX_BYTES = 200000
 EXTERNAL = {"get_session_info", "transport_status"}
 MUTATIONS = {"create_pattern", "set_pattern_name", "copy_pattern_with_offset",
-             "move_pattern_relative", "delete_pattern", "assign_pattern_fabric"}
+             "move_pattern_relative", "delete_pattern", "assign_pattern_fabric",
+             "add_seamline_pair"}
 DIAGNOSTIC = "create_test_rectangle"
 CURRENT = EXTERNAL | MUTATIONS | {DIAGNOSTIC, "ping", "get_pattern_count", "list_clo_api",
                                  "describe_clo_api", "get_pattern_list", "get_pattern_geometry",
@@ -116,7 +117,7 @@ CONTRACT = contract_module()
 def inventory(root=ROOT):
     """AST only: decorators, public args, literal command mapping and capabilities.
 
-    Deliberately fails closed when the current20 registration shape changes.
+    Deliberately fails closed when the current21 registration shape changes.
     Does not inspect legacy server.py or claim a currently running profile.
     """
     tree = ast.parse((root / "src/clo3d_mcp/transport_server.py").read_text(encoding="utf-8"))
@@ -168,20 +169,23 @@ def inventory(root=ROOT):
                 constants[name] = literal(node.value)
     require(set(constants.get("PATTERN_CAPABILITIES", [])) == CURRENT - EXTERNAL, "capability_inventory_drift")
     profiles = {
-        "current20": {"tools": sorted(tools), "capabilities": constants["PATTERN_CAPABILITIES"]},
-        "current19": {"tools": sorted(CURRENT - {"get_pattern_lines"}),
+        "current21": {"tools": sorted(tools), "capabilities": constants["PATTERN_CAPABILITIES"]},
+        "current20": {"tools": sorted(CURRENT - {"add_seamline_pair"}),
                       "capabilities": [c for c in constants["PATTERN_CAPABILITIES"]
-                                       if c != "get_pattern_lines"]},
-        "current18": {"tools": sorted(CURRENT - {"get_pattern_lines", "get_pattern_outline"}),
+                                       if c != "add_seamline_pair"]},
+        "current19": {"tools": sorted(CURRENT - {"add_seamline_pair", "get_pattern_lines"}),
                       "capabilities": [c for c in constants["PATTERN_CAPABILITIES"]
-                                       if c not in {"get_pattern_lines", "get_pattern_outline"}]},
-        "current16": {"tools": sorted(CURRENT - {"get_pattern_lines", "get_pattern_fabric", "assign_pattern_fabric", "get_pattern_outline"}),
+                                       if c not in {"add_seamline_pair", "get_pattern_lines"}]},
+        "current18": {"tools": sorted(CURRENT - {"add_seamline_pair", "get_pattern_lines", "get_pattern_outline"}),
                       "capabilities": [c for c in constants["PATTERN_CAPABILITIES"]
-                                        if c not in {"get_pattern_lines", "get_pattern_fabric", "assign_pattern_fabric", "get_pattern_outline"}]},
+                                       if c not in {"add_seamline_pair", "get_pattern_lines", "get_pattern_outline"}]},
+        "current16": {"tools": sorted(CURRENT - {"add_seamline_pair", "get_pattern_lines", "get_pattern_fabric", "assign_pattern_fabric", "get_pattern_outline"}),
+                      "capabilities": [c for c in constants["PATTERN_CAPABILITIES"]
+                                        if c not in {"add_seamline_pair", "get_pattern_lines", "get_pattern_fabric", "assign_pattern_fabric", "get_pattern_outline"}]},
         # Historical selection fixtures keep their exact old capabilities.
-        "current14": {"tools": sorted(CURRENT - {"get_pattern_lines", "get_fabric_list", "get_avatars", "get_pattern_fabric", "assign_pattern_fabric", "get_pattern_outline"}),
+        "current14": {"tools": sorted(CURRENT - {"add_seamline_pair", "get_pattern_lines", "get_fabric_list", "get_avatars", "get_pattern_fabric", "assign_pattern_fabric", "get_pattern_outline"}),
                       "capabilities": [c for c in constants["PATTERN_CAPABILITIES"]
-                                        if c not in {"get_pattern_lines", "get_fabric_list", "get_avatars", "get_pattern_fabric", "assign_pattern_fabric", "get_pattern_outline"}]},
+                                        if c not in {"add_seamline_pair", "get_pattern_lines", "get_fabric_list", "get_avatars", "get_pattern_fabric", "assign_pattern_fabric", "get_pattern_outline"}]},
         "diagnostic5": {"tools": sorted(EXTERNAL | set(constants["SERVICE_CAPABILITIES"])),
                         "capabilities": constants["SERVICE_CAPABILITIES"]},
     }
