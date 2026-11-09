@@ -238,8 +238,6 @@ def start_probe(registry, backend, read_count, clock=time.monotonic, report=prin
         if current.timer_id is not None or current.busy:
             raise RuntimeError("Previous callback needs owner-thread stop before restart")
     retained = registry.setdefault("retained", [])
-    if len(retained) >= 16:
-        raise RuntimeError("P0 limit: 16 generations retained; restart CLO before more tests")
     probe = Probe(backend, read_count, len(retained) + 1, clock, report)
     # Retain BEFORE handing any callback address to Windows. Never discard on
     # KillTimer: queued WM_TIMER can still hold that native address.

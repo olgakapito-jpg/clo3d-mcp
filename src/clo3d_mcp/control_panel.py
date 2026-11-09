@@ -33,7 +33,7 @@ class PanelController:
         clean = current is None or (
             current.timer_id is None and current.pipe is None and not current.busy)
         terminal = state in ("stopped", "failed")
-        can_start = terminal and clean and not busy and len(registry.get("retained", [])) < 16
+        can_start = terminal and clean and not busy
         can_stop = current is not None and not busy and (
             not terminal or not clean) and state not in ("requesting_stop", "draining_stop", "stopping")
         labels = {
@@ -45,11 +45,9 @@ class PanelController:
         } if current is not None else {"stopped": "Остановлен"}
         text = "Состояние: " + labels.get(state, "Неизвестно")
         if current is not None:
-            text += "\nЗапуск: %d / 16" % current.generation
+            text += "\nПоколение: %d" % current.generation
         if terminal and not clean:
             text += "\nОчистка не завершена — нажмите Стоп."
-        if terminal and clean and len(registry.get("retained", [])) >= 16:
-            text += "\nДостигнут лимит запусков — перезапустите CLO."
         error = self.error or (current.error if current is not None else None)
         if error:
             # Never expose exceptions containing private paths, peer payloads or tokens.
@@ -95,15 +93,18 @@ class GuiPanel:
         self.status = 0
         self.buttons = {}
         self.closed = False
+        self.kind = None
+        self.last_show = None
 
     def _text(self):
         text, can_start, can_stop = self.controller.status()
         return text.replace("\n", " | "), can_start, can_stop
 
-    def create(self):
+    def create(self, force_tool=False):
         if not self.gui.IsGuiAvailable():
             raise RuntimeError("CLO GUI is unavailable (headless or non-main thread)")
-        window = self.gui.CreateDockPanel(self.TITLE, self.SIDE, self.NAME)
+        window = 0 if force_tool else self.gui.CreateDockPanel(self.TITLE, self.SIDE, self.NAME)
+        self.kind = "dock" if window else "tool"
         if not window:
             window = self.gui.CreateToolWindow(self.TITLE, 460, 240)
         if not window:
@@ -126,12 +127,19 @@ class GuiPanel:
     def show(self):
         if self.window == 0 or self.closed:
             self.create()
-        if not self.gui.ShowWindow(self.window):
-            # Stale handle after a close: rebuild once, never keep an invalid window.
-            self.window = 0
-            self.create()
-            if not self.gui.ShowWindow(self.window):
-                raise RuntimeError("CLO refused to show the panel")
+        self.last_show = self.gui.ShowWindow(self.window)
+        if self.last_show:
+            return
+        # A dock handle can exist while ShowWindow fails; force one tool window.
+        self.create(force_tool=True)
+        self.last_show = self.gui.ShowWindow(self.window)
+        if not self.last_show:
+            raise RuntimeError("CLO refused to show the panel")
+
+    def report(self):
+        widgets = len([handle for handle in self.buttons.values() if handle])
+        return "kind=%s window=%s widgets=%s shown=%s" % (
+            self.kind, self.window, widgets, self.last_show)
 
     def refresh(self):
         if self.window == 0 or self.closed:

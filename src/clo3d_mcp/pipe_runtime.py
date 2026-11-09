@@ -332,8 +332,6 @@ def start(registry, timer, read_count, python, root, profile="p1", create_rectan
         if current.timer_id is not None or current.pipe is not None or current.busy:
             raise RuntimeError("Previous P1 generation needs cleanup")
     retained = registry.setdefault("retained", [])
-    if len(retained) >= 16:
-        raise RuntimeError("P1 diagnostic generation limit; restart CLO")
     probe = PipeProbe(timer, read_count, len(retained) + 1, profile=profile,
                       create_rectangle=create_rectangle, command_handler=command_handler)
     retained.append(probe)

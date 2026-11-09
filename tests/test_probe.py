@@ -310,16 +310,14 @@ def test_manual_stop_reason_and_elapsed_are_preserved(env):
 
 def test_generation_and_diagnostics_memory_bounded(env):
     _, _, _, _, _, registry, start = env
-    for _ in range(16):
+    for _ in range(17):
         probe = start()
         probe.stop()
     for _ in range(100):
         probe.emit("x" * 1000)
     assert len(probe.events) == 32
     assert all(len(event) <= 500 for event in probe.events)
-    with pytest.raises(RuntimeError, match="16 generations"):
-        start()
-    assert len(registry["retained"]) == 16
+    assert len(registry["retained"]) == 17
 
 
 def test_closed_console_does_not_break_callbacks(env):

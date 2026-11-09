@@ -255,9 +255,9 @@
       },
       {
         "path": "src/clo3d_mcp/pipe_runtime.py",
-        "sha256": "5ef9d44e85bd1eac61f04ae7147883d6d89ac57df2a07ad9059bc5c56637f8e1",
-        "bytes": 16059,
-        "lines": 347
+        "sha256": "c914991504091fe2ad990907ec6f78c88a063c6b45210e9364b8d1e112e223d5",
+        "bytes": 15957,
+        "lines": 345
       },
       {
         "path": "src/clo3d_mcp/pipe_session.py",

@@ -84,11 +84,17 @@ def test_failed_cleanup_can_be_stopped_again_but_not_restarted():
     assert calls == ["stop"]
 
 
-def test_generation_limit_and_unknown_registry_fail_closed():
-    for registry in ({"version": 1, "retained": [None] * 16}, {"version": 2}):
-        controller = PanelController(lambda: registry, lambda: pytest.fail("start"), lambda: 11)
-        assert controller.status()[1:] == (False, False)
-        controller.act("start")
+def test_unknown_registry_fails_closed_and_retained_generations_do_not_block_start():
+    controller = PanelController(lambda: {"version": 2}, lambda: pytest.fail("start"), lambda: 11)
+    assert controller.status()[1:] == (False, False)
+    controller.act("start")
+
+    calls = []
+    registry = {"version": 1, "retained": [None] * 40}
+    controller = PanelController(lambda: registry, lambda: calls.append("start"), lambda: 11)
+    assert controller.status() == ("Состояние: Остановлен", True, False)
+    controller.act("start")
+    assert calls == ["start"]
 
 
 def test_reentrant_or_executing_buttons_do_nothing():
@@ -132,7 +138,7 @@ def test_existing_panel_reused_without_loading_native_modules(monkeypatch):
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     calls = []
-    panel = SimpleNamespace(show=lambda: calls.append("show"))
+    panel = SimpleNamespace(show=lambda: calls.append("show"), report=lambda: "fake")
     monkeypatch.setattr(builtins, "_clo3d_mcp_panel",
                         {"version": 1, "root": str(ROOT), "panel": panel}, raising=False)
     module.main()
@@ -264,7 +270,9 @@ def test_gui_panel_stale_show_handle_rebuilds_once():
     panel.create()
     with pytest.raises(RuntimeError, match="show"):
         panel.show()
-    assert [c[0] for c in gui.calls].count("dock") == 2
+    assert panel.kind == "tool"
+    assert [c[0] for c in gui.calls].count("tool") == 1
+    assert "shown=False" in panel.report()
 
 
 def test_panel_has_no_blocking_loop_network_or_external_dependency():

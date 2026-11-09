@@ -28,6 +28,7 @@ def main():
         if registry.get("version") != 1 or registry.get("root") != str(root):
             raise RuntimeError("Panel belongs to another version/project; restart CLO")
         registry["panel"].show()
+        print("[CLO MCP] PANEL_READY " + registry["panel"].report())
         return
 
     def load(name, path):
@@ -57,6 +58,7 @@ def main():
     builtins._clo3d_mcp_panel = {"version": 1, "root": str(root), "panel": panel}
     panel.create()
     panel.show()
+    print("[CLO MCP] PANEL_READY " + panel.report())
 
 
 if __name__ == "__main__":
