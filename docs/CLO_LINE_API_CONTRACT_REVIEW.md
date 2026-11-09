@@ -414,3 +414,24 @@ fake-only contract, не real evidence.
 
 Итог failure-пути: invalid index → `status=failed` + message; пустой success для
 несуществующего индекса не наблюдён.
+
+## 11. CreateBaseShapeWithPoints — диагностика multi-curve
+
+Причина: пример пользователя имеет 10 рёбер body с длинными curve-проймами и
+5 рёбер sleeve с curve-окатом; повтор через `CreatePatternWithPoints` отклонён
+native (multi-curve раскладка), хотя одиночная curve-вершина работает. Для
+параметрического проектирования нужен программный multi-curve путь.
+
+Скрипт `diagnostics/clo3d_mcp_base_shape_probe.py` (один Run, verified idle
+service): создаёт **одну own** деталь `MCP_BASESHAPE_PROBE`, затем на ней
+последовательно вызывает `CreateBaseShapeWithPoints(index, typed_points, True)`
+для вариантов: same straight, one spline, two spline, one Bezier, two Bezier.
+После каждого шага читает area/bbox/lineCount/lengths и число internal shapes.
+Возвращает `clo_base_shape_probe_v1` с return/эффектом по каждому шагу.
+
+Границы: 1 own pattern, 5 base-shape calls, без retry, без чужих деталей; при
+исключении STOP. Оставленная деталь — own fixture, удаляется отдельным шагом.
+Если `CreateBaseShapeWithPoints` реально меняет outline для multi-curve, это
+кандидат на tool `replace_base_shape`; если добавляет internal shape или
+отклоняет — фиксируем ограничение и ищем другой путь (например, curve sampling).
+Локальные тесты — `tests/test_base_shape_probe.py`.
