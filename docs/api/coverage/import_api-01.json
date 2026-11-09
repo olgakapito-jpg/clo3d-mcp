@@ -1,0 +1,2372 @@
+{
+  "rows": [
+    {
+      "id": "import_api.ImportAVAC#e606cf461ad5c22e",
+      "module": "import_api",
+      "symbol": "ImportAVAC",
+      "qualified_name": "import_api.ImportAVAC",
+      "overload": "import_api.ImportAVAC#e606cf461ad5c22e",
+      "signature": "def ImportAVAC(_filePath : str, _apfFilePath : str) -> bool",
+      "domain": "io",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 9790,
+          "block": 859
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 10318,
+          "block": 859,
+          "anchor": "import-api"
+        },
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 9813,
+          "block": 861
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 10342,
+          "block": 861,
+          "anchor": "import-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [
+        "import_avatar"
+      ],
+      "legacy_tools": [
+        "import_avatar"
+      ],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "import_api.ImportAVAC",
+      "documentation_issues": [],
+      "review_gates": [
+        "avatar-import-format"
+      ]
+    },
+    {
+      "id": "import_api.ImportAlembic#8b7599937e74aac4",
+      "module": "import_api",
+      "symbol": "ImportAlembic",
+      "qualified_name": "import_api.ImportAlembic",
+      "overload": "import_api.ImportAlembic#8b7599937e74aac4",
+      "signature": "def ImportAlembic(filePath : str, option : ImportAlembicOption) -> bool",
+      "domain": "io",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 10216,
+          "block": 899
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 10764,
+          "block": 899,
+          "anchor": "import-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [
+        {
+          "name": "ImportAlembicOption",
+          "basis": "annotation",
+          "status": "resolved",
+          "type_id": "type:ImportAlembicOption"
+        }
+      ],
+      "official_record_id": "import_api.ImportAlembic",
+      "documentation_issues": [],
+      "review_gates": [
+        "binding-types"
+      ]
+    },
+    {
+      "id": "import_api.ImportAsGraphic#75263b34d0571d6a",
+      "module": "import_api",
+      "symbol": "ImportAsGraphic",
+      "qualified_name": "import_api.ImportAsGraphic",
+      "overload": "import_api.ImportAsGraphic#75263b34d0571d6a",
+      "signature": "def ImportAsGraphic(_filePath : str) -> None",
+      "domain": "io",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 10012,
+          "block": 879
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 10550,
+          "block": 879,
+          "anchor": "import-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [
+        "import_as_graphic"
+      ],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "import_api.ImportAsGraphic",
+      "documentation_issues": [],
+      "review_gates": []
+    },
+    {
+      "id": "import_api.ImportAsGraphicW#d48a2c7219324e4b",
+      "module": "import_api",
+      "symbol": "ImportAsGraphicW",
+      "qualified_name": "import_api.ImportAsGraphicW",
+      "overload": "import_api.ImportAsGraphicW#d48a2c7219324e4b",
+      "signature": "def ImportAsGraphicW(_filePath : str) -> None",
+      "domain": "io",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 10031,
+          "block": 881
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 10570,
+          "block": 881,
+          "anchor": "import-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "import_api.ImportAsGraphicW",
+      "documentation_issues": [],
+      "review_gates": []
+    },
+    {
+      "id": "import_api.ImportAvatar#7496e001213182a4",
+      "module": "import_api",
+      "symbol": "ImportAvatar",
+      "qualified_name": "import_api.ImportAvatar",
+      "overload": "import_api.ImportAvatar#7496e001213182a4",
+      "signature": "def ImportAvatar(_avtPath : str, _opt : ImportExportOption) -> bool",
+      "domain": "io",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 10094,
+          "block": 887
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 10636,
+          "block": 887,
+          "anchor": "import-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [
+        {
+          "name": "ImportExportOption",
+          "basis": "annotation",
+          "status": "resolved",
+          "type_id": "type:ImportExportOption"
+        }
+      ],
+      "official_record_id": "import_api.ImportAvatar",
+      "documentation_issues": [],
+      "review_gates": [
+        "avatar-import-format",
+        "binding-types"
+      ]
+    },
+    {
+      "id": "import_api.ImportAvatarMeasurement#7a10dee652398769",
+      "module": "import_api",
+      "symbol": "ImportAvatarMeasurement",
+      "qualified_name": "import_api.ImportAvatarMeasurement",
+      "overload": "import_api.ImportAvatarMeasurement#7a10dee652398769",
+      "signature": "def ImportAvatarMeasurement(_csvPath : str, _avtPath : str, _opt : ImportExportOption) -> bool",
+      "domain": "io",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 10075,
+          "block": 885
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 10616,
+          "block": 885,
+          "anchor": "import-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [
+        {
+          "name": "ImportExportOption",
+          "basis": "annotation",
+          "status": "resolved",
+          "type_id": "type:ImportExportOption"
+        }
+      ],
+      "official_record_id": "import_api.ImportAvatarMeasurement",
+      "documentation_issues": [],
+      "review_gates": [
+        "binding-types"
+      ]
+    },
+    {
+      "id": "import_api.ImportCPT#7e7745d953d64ee1",
+      "module": "import_api",
+      "symbol": "ImportCPT",
+      "qualified_name": "import_api.ImportCPT",
+      "overload": "import_api.ImportCPT#7e7745d953d64ee1",
+      "signature": "def ImportCPT(_filePath : str) -> bool",
+      "domain": "io",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 9576,
+          "block": 839
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 10094,
+          "block": 839,
+          "anchor": "import-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "import_api.ImportCPT",
+      "documentation_issues": [],
+      "review_gates": []
+    },
+    {
+      "id": "import_api.ImportCPTW#61f89d1840c2c525",
+      "module": "import_api",
+      "symbol": "ImportCPTW",
+      "qualified_name": "import_api.ImportCPTW",
+      "overload": "import_api.ImportCPTW#61f89d1840c2c525",
+      "signature": "def ImportCPTW(_filePath : str) -> bool",
+      "domain": "io",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 9597,
+          "block": 841
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 10116,
+          "block": 841,
+          "anchor": "import-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "import_api.ImportCPTW",
+      "documentation_issues": [],
+      "review_gates": []
+    },
+    {
+      "id": "import_api.ImportDXF#00f0f8e71624e24d",
+      "module": "import_api",
+      "symbol": "ImportDXF",
+      "qualified_name": "import_api.ImportDXF",
+      "overload": "import_api.ImportDXF#00f0f8e71624e24d",
+      "signature": "def ImportDXF(_filePath : str, loadOption : ImportDxfOption) -> bool",
+      "domain": "io",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 9702,
+          "block": 851
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 10226,
+          "block": 851,
+          "anchor": "import-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [
+        "import_dxf"
+      ],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [
+        {
+          "name": "ImportDxfOption",
+          "basis": "annotation",
+          "status": "resolved",
+          "type_id": "type:ImportDxfOption"
+        }
+      ],
+      "official_record_id": "import_api.ImportDXF",
+      "documentation_issues": [],
+      "review_gates": [
+        "binding-types"
+      ]
+    },
+    {
+      "id": "import_api.ImportDXFW#17b3e2547714c834",
+      "module": "import_api",
+      "symbol": "ImportDXFW",
+      "qualified_name": "import_api.ImportDXFW",
+      "overload": "import_api.ImportDXFW#17b3e2547714c834",
+      "signature": "def ImportDXFW(_filePath : str, loadOption : ImportDxfOption) -> bool",
+      "domain": "io",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 9725,
+          "block": 853
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 10250,
+          "block": 853,
+          "anchor": "import-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [
+        {
+          "name": "ImportDxfOption",
+          "basis": "annotation",
+          "status": "resolved",
+          "type_id": "type:ImportDxfOption"
+        }
+      ],
+      "official_record_id": "import_api.ImportDXFW",
+      "documentation_issues": [],
+      "review_gates": [
+        "binding-types"
+      ]
+    },
+    {
+      "id": "import_api.ImportFBX#e95562e31f5fefdf",
+      "module": "import_api",
+      "symbol": "ImportFBX",
+      "qualified_name": "import_api.ImportFBX",
+      "overload": "import_api.ImportFBX#e95562e31f5fefdf",
+      "signature": "def ImportFBX(_filePath : str, _options : ImportExportOption) -> bool",
+      "domain": "io",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 9878,
+          "block": 867
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 10410,
+          "block": 867,
+          "anchor": "import-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [
+        {
+          "name": "ImportExportOption",
+          "basis": "annotation",
+          "status": "resolved",
+          "type_id": "type:ImportExportOption"
+        }
+      ],
+      "official_record_id": "import_api.ImportFBX",
+      "documentation_issues": [],
+      "review_gates": [
+        "binding-types"
+      ]
+    },
+    {
+      "id": "import_api.ImportFBXW#9a8c989bd070eb2e",
+      "module": "import_api",
+      "symbol": "ImportFBXW",
+      "qualified_name": "import_api.ImportFBXW",
+      "overload": "import_api.ImportFBXW#9a8c989bd070eb2e",
+      "signature": "def ImportFBXW(_filePath : str, _options : ImportExportOption) -> bool",
+      "domain": "io",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 9901,
+          "block": 869
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 10434,
+          "block": 869,
+          "anchor": "import-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [
+        {
+          "name": "ImportExportOption",
+          "basis": "annotation",
+          "status": "resolved",
+          "type_id": "type:ImportExportOption"
+        }
+      ],
+      "official_record_id": "import_api.ImportFBXW",
+      "documentation_issues": [],
+      "review_gates": [
+        "binding-types"
+      ]
+    },
+    {
+      "id": "import_api.ImportFile#968f4d5bda16ccf4",
+      "module": "import_api",
+      "symbol": "ImportFile",
+      "qualified_name": "import_api.ImportFile",
+      "overload": "import_api.ImportFile#968f4d5bda16ccf4",
+      "signature": "def ImportFile(filePath : str) -> bool",
+      "domain": "io",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 9316,
+          "block": 815
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 9822,
+          "block": 815,
+          "anchor": "import-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [
+        "import_file",
+        "open_file"
+      ],
+      "legacy_tools": [
+        "import_avatar",
+        "import_file",
+        "open_file"
+      ],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "import_api.ImportFile",
+      "documentation_issues": [],
+      "review_gates": [
+        "avatar-import-format"
+      ]
+    },
+    {
+      "id": "import_api.ImportFile#e061c2c4d94ead2a",
+      "module": "import_api",
+      "symbol": "ImportFile",
+      "qualified_name": "import_api.ImportFile",
+      "overload": "import_api.ImportFile#e061c2c4d94ead2a",
+      "signature": "def ImportFile(filePath : str, _options : ImportExportOption) -> bool",
+      "domain": "io",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 9836,
+          "block": 863
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 10366,
+          "block": 863,
+          "anchor": "import-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [
+        "import_file",
+        "open_file"
+      ],
+      "legacy_tools": [
+        "import_avatar",
+        "import_file",
+        "open_file"
+      ],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [
+        {
+          "name": "ImportExportOption",
+          "basis": "annotation",
+          "status": "resolved",
+          "type_id": "type:ImportExportOption"
+        },
+        {
+          "name": "ImportExportOption",
+          "basis": "documentation_mention",
+          "status": "resolved",
+          "type_id": "type:ImportExportOption"
+        }
+      ],
+      "official_record_id": "import_api.ImportFile",
+      "documentation_issues": [],
+      "review_gates": [
+        "avatar-import-format",
+        "binding-types"
+      ]
+    },
+    {
+      "id": "import_api.ImportFileW#29de141c142b7f88",
+      "module": "import_api",
+      "symbol": "ImportFileW",
+      "qualified_name": "import_api.ImportFileW",
+      "overload": "import_api.ImportFileW#29de141c142b7f88",
+      "signature": "def ImportFileW(filePath : str) -> bool",
+      "domain": "io",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 9337,
+          "block": 817
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 9844,
+          "block": 817,
+          "anchor": "import-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "import_api.ImportFileW",
+      "documentation_issues": [],
+      "review_gates": []
+    },
+    {
+      "id": "import_api.ImportFileW#ed96de6288a9cefd",
+      "module": "import_api",
+      "symbol": "ImportFileW",
+      "qualified_name": "import_api.ImportFileW",
+      "overload": "import_api.ImportFileW#ed96de6288a9cefd",
+      "signature": "def ImportFileW(filePath : str, _options : ImportExportOption) -> bool",
+      "domain": "io",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 9857,
+          "block": 865
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 10388,
+          "block": 865,
+          "anchor": "import-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [
+        {
+          "name": "ImportExportOption",
+          "basis": "annotation",
+          "status": "resolved",
+          "type_id": "type:ImportExportOption"
+        },
+        {
+          "name": "ImportExportOption",
+          "basis": "documentation_mention",
+          "status": "resolved",
+          "type_id": "type:ImportExportOption"
+        }
+      ],
+      "official_record_id": "import_api.ImportFileW",
+      "documentation_issues": [],
+      "review_gates": [
+        "binding-types"
+      ]
+    },
+    {
+      "id": "import_api.ImportGLTF#30b62e7937787c7c",
+      "module": "import_api",
+      "symbol": "ImportGLTF",
+      "qualified_name": "import_api.ImportGLTF",
+      "overload": "import_api.ImportGLTF#30b62e7937787c7c",
+      "signature": "def ImportGLTF(_filePath : str, _options : ImportExportOption) -> bool",
+      "domain": "io",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 9924,
+          "block": 871
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 10458,
+          "block": 871,
+          "anchor": "import-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [
+        {
+          "name": "ImportExportOption",
+          "basis": "annotation",
+          "status": "resolved",
+          "type_id": "type:ImportExportOption"
+        }
+      ],
+      "official_record_id": "import_api.ImportGLTF",
+      "documentation_issues": [],
+      "review_gates": [
+        "binding-types"
+      ]
+    },
+    {
+      "id": "import_api.ImportGLTFW#843c1c19137b2dd4",
+      "module": "import_api",
+      "symbol": "ImportGLTFW",
+      "qualified_name": "import_api.ImportGLTFW",
+      "overload": "import_api.ImportGLTFW#843c1c19137b2dd4",
+      "signature": "def ImportGLTFW(_filePath : str, _options : ImportExportOption) -> bool",
+      "domain": "io",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 9947,
+          "block": 873
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 10482,
+          "block": 873,
+          "anchor": "import-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [
+        {
+          "name": "ImportExportOption",
+          "basis": "annotation",
+          "status": "resolved",
+          "type_id": "type:ImportExportOption"
+        }
+      ],
+      "official_record_id": "import_api.ImportGLTFW",
+      "documentation_issues": [],
+      "review_gates": [
+        "binding-types"
+      ]
+    },
+    {
+      "id": "import_api.ImportGarmentInformation#9fa76090d45118a9",
+      "module": "import_api",
+      "symbol": "ImportGarmentInformation",
+      "qualified_name": "import_api.ImportGarmentInformation",
+      "overload": "import_api.ImportGarmentInformation#9fa76090d45118a9",
+      "signature": "def ImportGarmentInformation(filePath : str) -> bool",
+      "domain": "io",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 9404,
+          "block": 823
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 9914,
+          "block": 823,
+          "anchor": "import-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [
+        "import_garment_information"
+      ],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "import_api.ImportGarmentInformation",
+      "documentation_issues": [],
+      "review_gates": []
+    },
+    {
+      "id": "import_api.ImportGarmentInformationConfigData#50004bfd7751715b",
+      "module": "import_api",
+      "symbol": "ImportGarmentInformationConfigData",
+      "qualified_name": "import_api.ImportGarmentInformationConfigData",
+      "overload": "import_api.ImportGarmentInformationConfigData#50004bfd7751715b",
+      "signature": "def ImportGarmentInformationConfigData(filePath : str) -> bool",
+      "domain": "io",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 9446,
+          "block": 827
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 9958,
+          "block": 827,
+          "anchor": "import-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "import_api.ImportGarmentInformationConfigData",
+      "documentation_issues": [],
+      "review_gates": []
+    },
+    {
+      "id": "import_api.ImportGarmentInformationConfigDataW#e07fa41cb846352c",
+      "module": "import_api",
+      "symbol": "ImportGarmentInformationConfigDataW",
+      "qualified_name": "import_api.ImportGarmentInformationConfigDataW",
+      "overload": "import_api.ImportGarmentInformationConfigDataW#e07fa41cb846352c",
+      "signature": "def ImportGarmentInformationConfigDataW(filePath : str) -> bool",
+      "domain": "io",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 9467,
+          "block": 829
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 9980,
+          "block": 829,
+          "anchor": "import-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "import_api.ImportGarmentInformationConfigDataW",
+      "documentation_issues": [],
+      "review_gates": []
+    },
+    {
+      "id": "import_api.ImportGarmentInformationW#a50e74d1499ffeab",
+      "module": "import_api",
+      "symbol": "ImportGarmentInformationW",
+      "qualified_name": "import_api.ImportGarmentInformationW",
+      "overload": "import_api.ImportGarmentInformationW#a50e74d1499ffeab",
+      "signature": "def ImportGarmentInformationW(filePath : str) -> bool",
+      "domain": "io",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 9425,
+          "block": 825
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 9936,
+          "block": 825,
+          "anchor": "import-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "import_api.ImportGarmentInformationW",
+      "documentation_issues": [],
+      "review_gates": []
+    },
+    {
+      "id": "import_api.ImportGraphicStyleFromImage#9a817e0104262676",
+      "module": "import_api",
+      "symbol": "ImportGraphicStyleFromImage",
+      "qualified_name": "import_api.ImportGraphicStyleFromImage",
+      "overload": "import_api.ImportGraphicStyleFromImage#9a817e0104262676",
+      "signature": "def ImportGraphicStyleFromImage(_filePath : str) -> bool",
+      "domain": "io",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 9748,
+          "block": 855
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 10274,
+          "block": 855,
+          "anchor": "import-api"
+        },
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 9769,
+          "block": 857
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 10296,
+          "block": 857,
+          "anchor": "import-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [
+        "import_graphic_style"
+      ],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "import_api.ImportGraphicStyleFromImage",
+      "documentation_issues": [],
+      "review_gates": []
+    },
+    {
+      "id": "import_api.ImportMeasurement#546affd78007b519",
+      "module": "import_api",
+      "symbol": "ImportMeasurement",
+      "qualified_name": "import_api.ImportMeasurement",
+      "overload": "import_api.ImportMeasurement#546affd78007b519",
+      "signature": "def ImportMeasurement(_csvPath : str) -> bool",
+      "domain": "io",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 10113,
+          "block": 889
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 10656,
+          "block": 889,
+          "anchor": "import-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [
+        "import_avatar_measurements"
+      ],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "import_api.ImportMeasurement",
+      "documentation_issues": [],
+      "review_gates": []
+    },
+    {
+      "id": "import_api.ImportOBJ#5660b826d2f09597",
+      "module": "import_api",
+      "symbol": "ImportOBJ",
+      "qualified_name": "import_api.ImportOBJ",
+      "overload": "import_api.ImportOBJ#5660b826d2f09597",
+      "signature": "def ImportOBJ(_filePath : str, _options : ImportExportOption) -> bool",
+      "domain": "io",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 9488,
+          "block": 831
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 10002,
+          "block": 831,
+          "anchor": "import-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [
+        {
+          "name": "ImportExportOption",
+          "basis": "annotation",
+          "status": "resolved",
+          "type_id": "type:ImportExportOption"
+        }
+      ],
+      "official_record_id": "import_api.ImportOBJ",
+      "documentation_issues": [],
+      "review_gates": [
+        "binding-types"
+      ]
+    },
+    {
+      "id": "import_api.ImportOBJW#203b505dfdf489d2",
+      "module": "import_api",
+      "symbol": "ImportOBJW",
+      "qualified_name": "import_api.ImportOBJW",
+      "overload": "import_api.ImportOBJW#203b505dfdf489d2",
+      "signature": "def ImportOBJW(_filePath : str, _options : ImportExportOption) -> bool",
+      "domain": "io",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 9511,
+          "block": 833
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 10026,
+          "block": 833,
+          "anchor": "import-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [
+        {
+          "name": "ImportExportOption",
+          "basis": "annotation",
+          "status": "resolved",
+          "type_id": "type:ImportExportOption"
+        }
+      ],
+      "official_record_id": "import_api.ImportOBJW",
+      "documentation_issues": [],
+      "review_gates": [
+        "binding-types"
+      ]
+    },
+    {
+      "id": "import_api.ImportPose#51c3013d705d0493",
+      "module": "import_api",
+      "symbol": "ImportPose",
+      "qualified_name": "import_api.ImportPose",
+      "overload": "import_api.ImportPose#51c3013d705d0493",
+      "signature": "def ImportPose(_filePath : str) -> bool",
+      "domain": "io",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 10132,
+          "block": 891
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 10676,
+          "block": 891,
+          "anchor": "import-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [
+        "import_pose"
+      ],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "import_api.ImportPose",
+      "documentation_issues": [],
+      "review_gates": []
+    },
+    {
+      "id": "import_api.ImportPose#fee9c2c020901129",
+      "module": "import_api",
+      "symbol": "ImportPose",
+      "qualified_name": "import_api.ImportPose",
+      "overload": "import_api.ImportPose#fee9c2c020901129",
+      "signature": "def ImportPose(_filePath : str, _bPoseAndTranslation : bool, _bBottomToGround : bool) -> bool",
+      "domain": "io",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 10170,
+          "block": 895
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 10716,
+          "block": 895,
+          "anchor": "import-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [
+        "import_pose"
+      ],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "import_api.ImportPose",
+      "documentation_issues": [],
+      "review_gates": []
+    },
+    {
+      "id": "import_api.ImportPoseW#47a110b59d24b168",
+      "module": "import_api",
+      "symbol": "ImportPoseW",
+      "qualified_name": "import_api.ImportPoseW",
+      "overload": "import_api.ImportPoseW#47a110b59d24b168",
+      "signature": "def ImportPoseW(_filePath : str) -> bool",
+      "domain": "io",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 10151,
+          "block": 893
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 10696,
+          "block": 893,
+          "anchor": "import-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "import_api.ImportPoseW",
+      "documentation_issues": [],
+      "review_gates": []
+    },
+    {
+      "id": "import_api.ImportPoseW#7b1697cf9524dc7b",
+      "module": "import_api",
+      "symbol": "ImportPoseW",
+      "qualified_name": "import_api.ImportPoseW",
+      "overload": "import_api.ImportPoseW#7b1697cf9524dc7b",
+      "signature": "def ImportPoseW(_filePath : str, _bPoseAndTranslation : bool, _bBottomToGround : bool) -> bool",
+      "domain": "io",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 10193,
+          "block": 897
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 10740,
+          "block": 897,
+          "anchor": "import-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "import_api.ImportPoseW",
+      "documentation_issues": [],
+      "review_gates": []
+    },
+    {
+      "id": "import_api.ImportSMP#9b2393df6e66a817",
+      "module": "import_api",
+      "symbol": "ImportSMP",
+      "qualified_name": "import_api.ImportSMP",
+      "overload": "import_api.ImportSMP#9b2393df6e66a817",
+      "signature": "def ImportSMP(_filePath : str) -> bool",
+      "domain": "io",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 9970,
+          "block": 875
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 10506,
+          "block": 875,
+          "anchor": "import-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "import_api.ImportSMP",
+      "documentation_issues": [],
+      "review_gates": []
+    },
+    {
+      "id": "import_api.ImportSMPW#3240912b4b623578",
+      "module": "import_api",
+      "symbol": "ImportSMPW",
+      "qualified_name": "import_api.ImportSMPW",
+      "overload": "import_api.ImportSMPW#3240912b4b623578",
+      "signature": "def ImportSMPW(_filePath : str) -> bool",
+      "domain": "io",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 9991,
+          "block": 877
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 10528,
+          "block": 877,
+          "anchor": "import-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "import_api.ImportSMPW",
+      "documentation_issues": [],
+      "review_gates": []
+    },
+    {
+      "id": "import_api.ImportTrim#ddc42c417aea1b9b",
+      "module": "import_api",
+      "symbol": "ImportTrim",
+      "qualified_name": "import_api.ImportTrim",
+      "overload": "import_api.ImportTrim#ddc42c417aea1b9b",
+      "signature": "def ImportTrim(_filePath : str, _bTranslateToOrigin : bool) -> None",
+      "domain": "io",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 10050,
+          "block": 883
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 10590,
+          "block": 883,
+          "anchor": "import-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [
+        "import_trim"
+      ],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "import_api.ImportTrim",
+      "documentation_issues": [],
+      "review_gates": []
+    },
+    {
+      "id": "import_api.ImportVLP#a4eedbdf6e050e9e",
+      "module": "import_api",
+      "symbol": "ImportVLP",
+      "qualified_name": "import_api.ImportVLP",
+      "overload": "import_api.ImportVLP#a4eedbdf6e050e9e",
+      "signature": "def ImportVLP(_filePath : str) -> bool",
+      "domain": "io",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 9618,
+          "block": 843
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 10138,
+          "block": 843,
+          "anchor": "import-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "import_api.ImportVLP",
+      "documentation_issues": [],
+      "review_gates": []
+    },
+    {
+      "id": "import_api.ImportVLPW#1d7cffdbd01ec2ca",
+      "module": "import_api",
+      "symbol": "ImportVLPW",
+      "qualified_name": "import_api.ImportVLPW",
+      "overload": "import_api.ImportVLPW#1d7cffdbd01ec2ca",
+      "signature": "def ImportVLPW(_filePath : str) -> bool",
+      "domain": "io",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 9639,
+          "block": 845
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 10160,
+          "block": 845,
+          "anchor": "import-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "import_api.ImportVLPW",
+      "documentation_issues": [],
+      "review_gates": []
+    },
+    {
+      "id": "import_api.ImportVMP#c10810590ccca64d",
+      "module": "import_api",
+      "symbol": "ImportVMP",
+      "qualified_name": "import_api.ImportVMP",
+      "overload": "import_api.ImportVMP#c10810590ccca64d",
+      "signature": "def ImportVMP(_filePath : str) -> bool",
+      "domain": "io",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 9534,
+          "block": 835
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 10050,
+          "block": 835,
+          "anchor": "import-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "import_api.ImportVMP",
+      "documentation_issues": [],
+      "review_gates": []
+    },
+    {
+      "id": "import_api.ImportVMPW#9720fea6f5aa92da",
+      "module": "import_api",
+      "symbol": "ImportVMPW",
+      "qualified_name": "import_api.ImportVMPW",
+      "overload": "import_api.ImportVMPW#9720fea6f5aa92da",
+      "signature": "def ImportVMPW(_filePath : str) -> bool",
+      "domain": "io",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 9555,
+          "block": 837
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 10072,
+          "block": 837,
+          "anchor": "import-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "import_api.ImportVMPW",
+      "documentation_issues": [],
+      "review_gates": []
+    },
+    {
+      "id": "import_api.ImportVRP#5eeb80a89e1a5e81",
+      "module": "import_api",
+      "symbol": "ImportVRP",
+      "qualified_name": "import_api.ImportVRP",
+      "overload": "import_api.ImportVRP#5eeb80a89e1a5e81",
+      "signature": "def ImportVRP(_filePath : str) -> bool",
+      "domain": "io",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 9660,
+          "block": 847
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 10182,
+          "block": 847,
+          "anchor": "import-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "import_api.ImportVRP",
+      "documentation_issues": [],
+      "review_gates": []
+    },
+    {
+      "id": "import_api.ImportVRPW#8f0cc9a5937fb30d",
+      "module": "import_api",
+      "symbol": "ImportVRPW",
+      "qualified_name": "import_api.ImportVRPW",
+      "overload": "import_api.ImportVRPW#8f0cc9a5937fb30d",
+      "signature": "def ImportVRPW(_filePath : str) -> bool",
+      "domain": "io",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 9681,
+          "block": 849
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 10204,
+          "block": 849,
+          "anchor": "import-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "import_api.ImportVRPW",
+      "documentation_issues": [],
+      "review_gates": []
+    },
+    {
+      "id": "import_api.ImportZpac#84788b33f217c66a",
+      "module": "import_api",
+      "symbol": "ImportZpac",
+      "qualified_name": "import_api.ImportZpac",
+      "overload": "import_api.ImportZpac#84788b33f217c66a",
+      "signature": "def ImportZpac(filePath : str, loadOption : ImportExportOption) -> bool",
+      "domain": "io",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 10237,
+          "block": 901
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 10786,
+          "block": 901,
+          "anchor": "import-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [
+        {
+          "name": "ImportExportOption",
+          "basis": "annotation",
+          "status": "resolved",
+          "type_id": "type:ImportExportOption"
+        }
+      ],
+      "official_record_id": "import_api.ImportZpac",
+      "documentation_issues": [],
+      "review_gates": [
+        "binding-types"
+      ]
+    },
+    {
+      "id": "import_api.ImportZprj#0c0d454b0712ed3b",
+      "module": "import_api",
+      "symbol": "ImportZprj",
+      "qualified_name": "import_api.ImportZprj",
+      "overload": "import_api.ImportZprj#0c0d454b0712ed3b",
+      "signature": "def ImportZprj(filePath : str, loadOption : ImportZPRJOption) -> bool",
+      "domain": "io",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 9358,
+          "block": 819
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 9866,
+          "block": 819,
+          "anchor": "import-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [
+        {
+          "name": "ImportZPRJOption",
+          "basis": "annotation",
+          "status": "resolved",
+          "type_id": "type:ImportZPRJOption"
+        }
+      ],
+      "official_record_id": "import_api.ImportZprj",
+      "documentation_issues": [],
+      "review_gates": [
+        "binding-types"
+      ]
+    },
+    {
+      "id": "import_api.ImportZprjW#fd269da04b66e1a0",
+      "module": "import_api",
+      "symbol": "ImportZprjW",
+      "qualified_name": "import_api.ImportZprjW",
+      "overload": "import_api.ImportZprjW#fd269da04b66e1a0",
+      "signature": "def ImportZprjW(filePath : str, loadOption : ImportZPRJOption) -> bool",
+      "domain": "io",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 9381,
+          "block": 821
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 9890,
+          "block": 821,
+          "anchor": "import-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [
+        {
+          "name": "ImportZPRJOption",
+          "basis": "annotation",
+          "status": "resolved",
+          "type_id": "type:ImportZPRJOption"
+        }
+      ],
+      "official_record_id": "import_api.ImportZprjW",
+      "documentation_issues": [],
+      "review_gates": [
+        "binding-types"
+      ]
+    }
+  ]
+}

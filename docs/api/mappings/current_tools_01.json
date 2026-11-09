@@ -1,0 +1,2732 @@
+[
+  {
+    "name": "copy_pattern_with_offset",
+    "function": "add_pattern_tools.copy_pattern_with_offset",
+    "path": "src/clo3d_mcp/transport_server.py",
+    "lines": [
+      178,
+      186
+    ],
+    "signature": "copy_pattern_with_offset(pattern_index: StrictInt, expected_name: StrictStr, name: StrictStr, dx: StrictInt | StrictFloat, dy: StrictInt | StrictFloat) -> dict[str, Any]",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "pattern_index",
+        "kind": "positional_or_keyword",
+        "annotation": "StrictInt",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "expected_name",
+        "kind": "positional_or_keyword",
+        "annotation": "StrictStr",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "name",
+        "kind": "positional_or_keyword",
+        "annotation": "StrictStr",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "dx",
+        "kind": "positional_or_keyword",
+        "annotation": "StrictInt | StrictFloat",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "dy",
+        "kind": "positional_or_keyword",
+        "annotation": "StrictInt | StrictFloat",
+        "required": true,
+        "default": null
+      }
+    ],
+    "description": "Copy ONE piece by dx/dy mm, unique new name; verify count, position and area.\n\nNever retry automatically: a failed readback may follow a successful copy.",
+    "routes": [
+      {
+        "command": "copy_pattern_with_offset",
+        "path": "src/clo3d_mcp/transport_server.py",
+        "lines": [
+          185,
+          186
+        ]
+      }
+    ],
+    "contract_acceptance": "existing_limited_evidence_not_full_official_overload_or_build_acceptance",
+    "primary_native_ids": [
+      "pattern_api.CopyPatternPieceMove",
+      "pattern_api.SetPatternPieceName"
+    ],
+    "primary_native_role": "effect",
+    "supporting_native_ids": [
+      "pattern_api.GetBoundingBoxOfPattern",
+      "pattern_api.GetPatternCount",
+      "pattern_api.GetPatternPieceArea",
+      "pattern_api.GetPatternPieceName",
+      "pattern_api.GetPatternPiecePos"
+    ],
+    "native_ids": [
+      "pattern_api.CopyPatternPieceMove",
+      "pattern_api.GetBoundingBoxOfPattern",
+      "pattern_api.GetPatternCount",
+      "pattern_api.GetPatternPieceArea",
+      "pattern_api.GetPatternPieceName",
+      "pattern_api.GetPatternPiecePos",
+      "pattern_api.SetPatternPieceName"
+    ],
+    "native_reference_evidence": [
+      {
+        "id": "pattern_api.GetPatternCount",
+        "kind": "direct_call",
+        "expression": "self.pattern.GetPatternCount()",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          27,
+          27
+        ],
+        "role": "preflight_or_readback"
+      },
+      {
+        "id": "pattern_api.GetPatternPieceName",
+        "kind": "direct_call",
+        "expression": "self.pattern.GetPatternPieceName(i)",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          35,
+          35
+        ],
+        "role": "preflight_or_readback"
+      },
+      {
+        "id": "pattern_api.GetPatternPieceName",
+        "kind": "direct_call",
+        "expression": "self.pattern.GetPatternPieceName(i)",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          86,
+          86
+        ],
+        "role": "preflight_or_readback"
+      },
+      {
+        "id": "pattern_api.GetPatternPiecePos",
+        "kind": "direct_call",
+        "expression": "self.pattern.GetPatternPiecePos(i)",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          87,
+          87
+        ],
+        "role": "preflight_or_readback"
+      },
+      {
+        "id": "pattern_api.GetPatternPieceArea",
+        "kind": "direct_call",
+        "expression": "self.pattern.GetPatternPieceArea(i)",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          88,
+          88
+        ],
+        "role": "preflight_or_readback"
+      },
+      {
+        "id": "pattern_api.GetBoundingBoxOfPattern",
+        "kind": "direct_call",
+        "expression": "self.pattern.GetBoundingBoxOfPattern(i)",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          89,
+          89
+        ],
+        "role": "preflight_or_readback"
+      },
+      {
+        "id": "pattern_api.SetPatternPieceName",
+        "kind": "direct_call",
+        "expression": "self.pattern.SetPatternPieceName(i, p['name'])",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          162,
+          162
+        ],
+        "role": "primary_effect_or_read"
+      },
+      {
+        "id": "pattern_api.CopyPatternPieceMove",
+        "kind": "direct_call",
+        "expression": "self.pattern.CopyPatternPieceMove(i, float(p['dx']), float(p['dy']))",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          175,
+          175
+        ],
+        "role": "primary_effect_or_read"
+      },
+      {
+        "id": "pattern_api.SetPatternPieceName",
+        "kind": "direct_call",
+        "expression": "self.pattern.SetPatternPieceName(i, p['name'])",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          197,
+          197
+        ],
+        "role": "primary_effect_or_read"
+      },
+      {
+        "id": "pattern_api.GetPatternCount",
+        "kind": "callable_reference",
+        "expression": "pattern_api.GetPatternCount",
+        "path": "plugin/clo3d_mcp_start.py",
+        "lines": [
+          60,
+          60
+        ],
+        "role": "preflight_or_readback"
+      },
+      {
+        "id": "pattern_api.GetPatternCount",
+        "kind": "direct_call",
+        "expression": "pattern_api.GetPatternCount()",
+        "path": "plugin/clo3d_mcp_start.py",
+        "lines": [
+          52,
+          52
+        ],
+        "role": "preflight_or_readback"
+      },
+      {
+        "id": "pattern_api.GetPatternCount",
+        "kind": "direct_call",
+        "expression": "pattern_api.GetPatternCount()",
+        "path": "plugin/clo3d_mcp_start.py",
+        "lines": [
+          55,
+          55
+        ],
+        "role": "preflight_or_readback"
+      }
+    ],
+    "mapping_method": "reviewed_command_branch_selection_plus_AST_reference_locations; not_execution_trace",
+    "profile": "pattern_package",
+    "contract_evidence": [
+      {
+        "function": "validate_params",
+        "path": "src/clo3d_mcp/pattern_contract.py",
+        "lines": [
+          84,
+          119
+        ]
+      },
+      {
+        "function": "validate_result",
+        "path": "src/clo3d_mcp/pattern_contract.py",
+        "lines": [
+          150,
+          192
+        ]
+      }
+    ],
+    "contract_scope": "strict raw command params/results via pattern_contract",
+    "adapter_evidence": [
+      {
+        "function": "PatternAPI.__call__",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          113,
+          138
+        ]
+      },
+      {
+        "function": "PatternAPI._mutate",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          140,
+          235
+        ]
+      },
+      {
+        "function": "PatternAPI._target",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          93,
+          102
+        ]
+      },
+      {
+        "function": "PatternAPI._list",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          32,
+          38
+        ]
+      },
+      {
+        "function": "PatternAPI._geometry",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          81,
+          91
+        ]
+      }
+    ],
+    "test_evidence": [
+      {
+        "function": "test_full_mutation_readback_and_shifted_index_guard",
+        "path": "tests/test_pattern_api.py",
+        "lines": [
+          77,
+          95
+        ],
+        "kind": "syntactic_test_reference_not_test_result"
+      },
+      {
+        "function": "test_failure_never_repeats_mutation_or_deletes_after_unknown",
+        "path": "tests/test_verify_patterns.py",
+        "lines": [
+          53,
+          59
+        ],
+        "kind": "syntactic_test_reference_not_test_result"
+      }
+    ],
+    "acceptance": {
+      "status": "historical_limited_pattern_acceptance",
+      "reference": "docs/PATTERN_API_CHECK.md",
+      "scope": "CLO 2026.1; simple straight polygons; count/name/position/area/bbox and load10 <=2 test pieces, <=256 total; introspection presence/docstrings only. Not curves/holes/avatar/sewing/simulation/import/export/point editing; exact patch build not recorded.",
+      "performed_by_this_builder": false
+    }
+  },
+  {
+    "name": "create_pattern",
+    "function": "add_pattern_tools.create_pattern",
+    "path": "src/clo3d_mcp/transport_server.py",
+    "lines": [
+      162,
+      168
+    ],
+    "signature": "create_pattern(points: list[list[StrictInt | StrictFloat]], name: StrictStr) -> dict[str, Any]",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "points",
+        "kind": "positional_or_keyword",
+        "annotation": "list[list[StrictInt | StrictFloat]]",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "name",
+        "kind": "positional_or_keyword",
+        "annotation": "StrictStr",
+        "required": true,
+        "default": null
+      }
+    ],
+    "description": "Create ONE simple straight polygon, 3-64 [x,y] points in mm, unique name.\n\nNo curves/holes/self-intersection. Verifies count/name/area using CLO.\nNo automatic retry or rollback, even if the verification fails.",
+    "routes": [
+      {
+        "command": "create_pattern",
+        "path": "src/clo3d_mcp/transport_server.py",
+        "lines": [
+          168,
+          168
+        ]
+      }
+    ],
+    "contract_acceptance": "existing_limited_evidence_not_full_official_overload_or_build_acceptance",
+    "primary_native_ids": [
+      "pattern_api.CreatePatternWithPoints",
+      "pattern_api.SetPatternPieceName"
+    ],
+    "primary_native_role": "effect",
+    "supporting_native_ids": [
+      "pattern_api.GetBoundingBoxOfPattern",
+      "pattern_api.GetPatternCount",
+      "pattern_api.GetPatternPieceArea",
+      "pattern_api.GetPatternPieceName",
+      "pattern_api.GetPatternPiecePos"
+    ],
+    "native_ids": [
+      "pattern_api.CreatePatternWithPoints",
+      "pattern_api.GetBoundingBoxOfPattern",
+      "pattern_api.GetPatternCount",
+      "pattern_api.GetPatternPieceArea",
+      "pattern_api.GetPatternPieceName",
+      "pattern_api.GetPatternPiecePos",
+      "pattern_api.SetPatternPieceName"
+    ],
+    "native_reference_evidence": [
+      {
+        "id": "pattern_api.GetPatternCount",
+        "kind": "direct_call",
+        "expression": "self.pattern.GetPatternCount()",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          27,
+          27
+        ],
+        "role": "preflight_or_readback"
+      },
+      {
+        "id": "pattern_api.GetPatternPieceName",
+        "kind": "direct_call",
+        "expression": "self.pattern.GetPatternPieceName(i)",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          35,
+          35
+        ],
+        "role": "preflight_or_readback"
+      },
+      {
+        "id": "pattern_api.GetPatternPieceName",
+        "kind": "direct_call",
+        "expression": "self.pattern.GetPatternPieceName(i)",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          86,
+          86
+        ],
+        "role": "preflight_or_readback"
+      },
+      {
+        "id": "pattern_api.GetPatternPiecePos",
+        "kind": "direct_call",
+        "expression": "self.pattern.GetPatternPiecePos(i)",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          87,
+          87
+        ],
+        "role": "preflight_or_readback"
+      },
+      {
+        "id": "pattern_api.GetPatternPieceArea",
+        "kind": "direct_call",
+        "expression": "self.pattern.GetPatternPieceArea(i)",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          88,
+          88
+        ],
+        "role": "preflight_or_readback"
+      },
+      {
+        "id": "pattern_api.GetBoundingBoxOfPattern",
+        "kind": "direct_call",
+        "expression": "self.pattern.GetBoundingBoxOfPattern(i)",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          89,
+          89
+        ],
+        "role": "preflight_or_readback"
+      },
+      {
+        "id": "pattern_api.CreatePatternWithPoints",
+        "kind": "direct_call",
+        "expression": "self.pattern.CreatePatternWithPoints([(float(x), float(y), 0) for x, y in p['points']])",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          154,
+          154
+        ],
+        "role": "primary_effect_or_read"
+      },
+      {
+        "id": "pattern_api.SetPatternPieceName",
+        "kind": "direct_call",
+        "expression": "self.pattern.SetPatternPieceName(i, p['name'])",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          162,
+          162
+        ],
+        "role": "primary_effect_or_read"
+      },
+      {
+        "id": "pattern_api.SetPatternPieceName",
+        "kind": "direct_call",
+        "expression": "self.pattern.SetPatternPieceName(i, p['name'])",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          197,
+          197
+        ],
+        "role": "primary_effect_or_read"
+      },
+      {
+        "id": "pattern_api.GetPatternCount",
+        "kind": "callable_reference",
+        "expression": "pattern_api.GetPatternCount",
+        "path": "plugin/clo3d_mcp_start.py",
+        "lines": [
+          60,
+          60
+        ],
+        "role": "preflight_or_readback"
+      },
+      {
+        "id": "pattern_api.GetPatternCount",
+        "kind": "direct_call",
+        "expression": "pattern_api.GetPatternCount()",
+        "path": "plugin/clo3d_mcp_start.py",
+        "lines": [
+          52,
+          52
+        ],
+        "role": "preflight_or_readback"
+      },
+      {
+        "id": "pattern_api.CreatePatternWithPoints",
+        "kind": "direct_call",
+        "expression": "pattern_api.CreatePatternWithPoints(points)",
+        "path": "plugin/clo3d_mcp_start.py",
+        "lines": [
+          54,
+          54
+        ],
+        "role": "primary_effect_or_read"
+      },
+      {
+        "id": "pattern_api.GetPatternCount",
+        "kind": "direct_call",
+        "expression": "pattern_api.GetPatternCount()",
+        "path": "plugin/clo3d_mcp_start.py",
+        "lines": [
+          55,
+          55
+        ],
+        "role": "preflight_or_readback"
+      }
+    ],
+    "mapping_method": "reviewed_command_branch_selection_plus_AST_reference_locations; not_execution_trace",
+    "profile": "pattern_package",
+    "contract_evidence": [
+      {
+        "function": "validate_params",
+        "path": "src/clo3d_mcp/pattern_contract.py",
+        "lines": [
+          84,
+          119
+        ]
+      },
+      {
+        "function": "validate_result",
+        "path": "src/clo3d_mcp/pattern_contract.py",
+        "lines": [
+          150,
+          192
+        ]
+      }
+    ],
+    "contract_scope": "strict raw command params/results via pattern_contract",
+    "adapter_evidence": [
+      {
+        "function": "PatternAPI.__call__",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          113,
+          138
+        ]
+      },
+      {
+        "function": "PatternAPI._mutate",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          140,
+          235
+        ]
+      },
+      {
+        "function": "PatternAPI._target",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          93,
+          102
+        ]
+      },
+      {
+        "function": "PatternAPI._list",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          32,
+          38
+        ]
+      },
+      {
+        "function": "PatternAPI._geometry",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          81,
+          91
+        ]
+      }
+    ],
+    "test_evidence": [
+      {
+        "function": "test_full_mutation_readback_and_shifted_index_guard",
+        "path": "tests/test_pattern_api.py",
+        "lines": [
+          77,
+          95
+        ],
+        "kind": "syntactic_test_reference_not_test_result"
+      },
+      {
+        "function": "test_bad_parameters_rejected_before_api_and_queue",
+        "path": "tests/test_pattern_api.py",
+        "lines": [
+          115,
+          123
+        ],
+        "kind": "syntactic_test_reference_not_test_result"
+      },
+      {
+        "function": "test_invalid_polygons",
+        "path": "tests/test_pattern_api.py",
+        "lines": [
+          133,
+          135
+        ],
+        "kind": "syntactic_test_reference_not_test_result"
+      },
+      {
+        "function": "test_unknown_native_methods_refused_before_mutation",
+        "path": "tests/test_pattern_api.py",
+        "lines": [
+          138,
+          143
+        ],
+        "kind": "syntactic_test_reference_not_test_result"
+      },
+      {
+        "function": "test_native_side_effect_then_exception_explicit_and_no_rollback_or_retry",
+        "path": "tests/test_pattern_api.py",
+        "lines": [
+          146,
+          151
+        ],
+        "kind": "syntactic_test_reference_not_test_result"
+      },
+      {
+        "function": "test_silent_setter_failure_is_not_success",
+        "path": "tests/test_pattern_api.py",
+        "lines": [
+          154,
+          160
+        ],
+        "kind": "syntactic_test_reference_not_test_result"
+      },
+      {
+        "function": "test_duplicate_names_and_stale_index_refused_before_setter",
+        "path": "tests/test_pattern_api.py",
+        "lines": [
+          163,
+          172
+        ],
+        "kind": "syntactic_test_reference_not_test_result"
+      },
+      {
+        "function": "test_queue_copies_params_and_rejects_wrong_result_shape",
+        "path": "tests/test_pattern_api.py",
+        "lines": [
+          185,
+          197
+        ],
+        "kind": "syntactic_test_reference_not_test_result"
+      },
+      {
+        "function": "test_parameterized_mutation_dedup_after_error_and_reconnect",
+        "path": "tests/test_pattern_api.py",
+        "lines": [
+          200,
+          215
+        ],
+        "kind": "syntactic_test_reference_not_test_result"
+      },
+      {
+        "function": "test_value_record_geometry_conversion_and_unknown_shape",
+        "path": "tests/test_pattern_api.py",
+        "lines": [
+          218,
+          228
+        ],
+        "kind": "syntactic_test_reference_not_test_result"
+      },
+      {
+        "function": "test_native_box_string_dictionary_preserved_without_guessing_numeric_layout",
+        "path": "tests/test_pattern_api.py",
+        "lines": [
+          231,
+          241
+        ],
+        "kind": "syntactic_test_reference_not_test_result"
+      },
+      {
+        "function": "test_pattern_package_real_http_validates_raw_arguments_and_runs_stateful_executor",
+        "path": "tests/test_transport_server.py",
+        "lines": [
+          304,
+          364
+        ],
+        "kind": "syntactic_test_reference_not_test_result"
+      }
+    ],
+    "acceptance": {
+      "status": "historical_limited_pattern_acceptance",
+      "reference": "docs/PATTERN_API_CHECK.md",
+      "scope": "CLO 2026.1; simple straight polygons; count/name/position/area/bbox and load10 <=2 test pieces, <=256 total; introspection presence/docstrings only. Not curves/holes/avatar/sewing/simulation/import/export/point editing; exact patch build not recorded.",
+      "performed_by_this_builder": false
+    }
+  },
+  {
+    "name": "create_test_rectangle",
+    "function": "build_mcp.create_test_rectangle",
+    "path": "src/clo3d_mcp/transport_server.py",
+    "lines": [
+      120,
+      126
+    ],
+    "signature": "create_test_rectangle() -> dict[str, Any]",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [],
+    "description": "Add ONE fixed 100 x 100 mm diagnostic square at the 2D origin.\n\nMutates the disposable scene; no arbitrary geometry/exec. Never retry\nautomatically after a timeout, disconnect or unknown outcome.",
+    "routes": [
+      {
+        "command": "create_test_rectangle",
+        "path": "src/clo3d_mcp/transport_server.py",
+        "lines": [
+          126,
+          126
+        ]
+      }
+    ],
+    "contract_acceptance": "existing_limited_evidence_not_full_official_overload_or_build_acceptance",
+    "primary_native_ids": [
+      "pattern_api.CreatePatternWithPoints"
+    ],
+    "primary_native_role": "effect",
+    "supporting_native_ids": [
+      "pattern_api.GetPatternCount"
+    ],
+    "native_ids": [
+      "pattern_api.CreatePatternWithPoints",
+      "pattern_api.GetPatternCount"
+    ],
+    "native_reference_evidence": [
+      {
+        "id": "pattern_api.GetPatternCount",
+        "kind": "direct_call",
+        "expression": "self.pattern.GetPatternCount()",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          27,
+          27
+        ],
+        "role": "preflight_or_readback"
+      },
+      {
+        "id": "pattern_api.CreatePatternWithPoints",
+        "kind": "direct_call",
+        "expression": "self.pattern.CreatePatternWithPoints([(float(x), float(y), 0) for x, y in p['points']])",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          154,
+          154
+        ],
+        "role": "primary_effect_or_read"
+      },
+      {
+        "id": "pattern_api.GetPatternCount",
+        "kind": "callable_reference",
+        "expression": "pattern_api.GetPatternCount",
+        "path": "plugin/clo3d_mcp_start.py",
+        "lines": [
+          60,
+          60
+        ],
+        "role": "preflight_or_readback"
+      },
+      {
+        "id": "pattern_api.GetPatternCount",
+        "kind": "direct_call",
+        "expression": "pattern_api.GetPatternCount()",
+        "path": "plugin/clo3d_mcp_start.py",
+        "lines": [
+          52,
+          52
+        ],
+        "role": "preflight_or_readback"
+      },
+      {
+        "id": "pattern_api.CreatePatternWithPoints",
+        "kind": "direct_call",
+        "expression": "pattern_api.CreatePatternWithPoints(points)",
+        "path": "plugin/clo3d_mcp_start.py",
+        "lines": [
+          54,
+          54
+        ],
+        "role": "primary_effect_or_read"
+      },
+      {
+        "id": "pattern_api.GetPatternCount",
+        "kind": "direct_call",
+        "expression": "pattern_api.GetPatternCount()",
+        "path": "plugin/clo3d_mcp_start.py",
+        "lines": [
+          55,
+          55
+        ],
+        "role": "preflight_or_readback"
+      }
+    ],
+    "mapping_method": "reviewed_command_branch_selection_plus_AST_reference_locations; not_execution_trace",
+    "profile": "base_service",
+    "contract_evidence": [
+      {
+        "function": "build_mcp",
+        "path": "src/clo3d_mcp/transport_server.py",
+        "lines": [
+          85,
+          130
+        ]
+      },
+      {
+        "function": "validate",
+        "path": "src/clo3d_mcp/protocol.py",
+        "lines": [
+          34,
+          74
+        ]
+      },
+      {
+        "function": "Executor.receive",
+        "path": "src/clo3d_mcp/pipe_session.py",
+        "lines": [
+          64,
+          131
+        ]
+      }
+    ],
+    "contract_scope": "base tool declaration/protocol/executor result checks; not pattern-command raw exact-key parity",
+    "adapter_evidence": [
+      {
+        "function": "Service.call",
+        "path": "src/clo3d_mcp/transport_server.py",
+        "lines": [
+          71,
+          82
+        ]
+      },
+      {
+        "function": "Executor.receive",
+        "path": "src/clo3d_mcp/pipe_session.py",
+        "lines": [
+          64,
+          131
+        ]
+      },
+      {
+        "function": "main.create_rectangle",
+        "path": "plugin/clo3d_mcp_start.py",
+        "lines": [
+          49,
+          58
+        ]
+      }
+    ],
+    "test_evidence": [
+      {
+        "function": "test_mutation_never_reexecutes_duplicate_even_after_reconnect",
+        "path": "tests/test_service_executor.py",
+        "lines": [
+          38,
+          47
+        ],
+        "kind": "syntactic_test_reference_not_test_result"
+      },
+      {
+        "function": "test_mutation_error_not_retried",
+        "path": "tests/test_service_executor.py",
+        "lines": [
+          50,
+          60
+        ],
+        "kind": "syntactic_test_reference_not_test_result"
+      },
+      {
+        "function": "test_p1_cannot_gain_mutation_capability",
+        "path": "tests/test_service_executor.py",
+        "lines": [
+          63,
+          68
+        ],
+        "kind": "syntactic_test_reference_not_test_result"
+      },
+      {
+        "function": "test_http_sdk_initialize_list_concurrent_calls_and_busy_status",
+        "path": "tests/test_transport_server.py",
+        "lines": [
+          38,
+          140
+        ],
+        "kind": "syntactic_test_reference_not_test_result"
+      }
+    ],
+    "acceptance": {
+      "status": "historical_transport_diagnostic_evidence",
+      "reference": "docs/P3_MCP_CHECK.md",
+      "scope": "Existing P0-P3 transport/base diagnostic scope only; not full native API or full tool-authoring DoD.",
+      "performed_by_this_builder": false
+    }
+  },
+  {
+    "name": "delete_pattern",
+    "function": "add_pattern_tools.delete_pattern",
+    "path": "src/clo3d_mcp/transport_server.py",
+    "lines": [
+      199,
+      205
+    ],
+    "signature": "delete_pattern(pattern_index: StrictInt, expected_name: StrictStr) -> dict[str, Any]",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "pattern_index",
+        "kind": "positional_or_keyword",
+        "annotation": "StrictInt",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "expected_name",
+        "kind": "positional_or_keyword",
+        "annotation": "StrictStr",
+        "required": true,
+        "default": null
+      }
+    ],
+    "description": "Delete ONE uniquely named piece after stale-index check; verify remaining list.\n\nIndices shift. Read the list again before further operations. No automatic retry.",
+    "routes": [
+      {
+        "command": "delete_pattern",
+        "path": "src/clo3d_mcp/transport_server.py",
+        "lines": [
+          204,
+          205
+        ]
+      }
+    ],
+    "contract_acceptance": "existing_limited_evidence_not_full_official_overload_or_build_acceptance",
+    "primary_native_ids": [
+      "pattern_api.DeletePatternPiece"
+    ],
+    "primary_native_role": "effect",
+    "supporting_native_ids": [
+      "pattern_api.GetBoundingBoxOfPattern",
+      "pattern_api.GetPatternCount",
+      "pattern_api.GetPatternPieceArea",
+      "pattern_api.GetPatternPieceName",
+      "pattern_api.GetPatternPiecePos"
+    ],
+    "native_ids": [
+      "pattern_api.DeletePatternPiece",
+      "pattern_api.GetBoundingBoxOfPattern",
+      "pattern_api.GetPatternCount",
+      "pattern_api.GetPatternPieceArea",
+      "pattern_api.GetPatternPieceName",
+      "pattern_api.GetPatternPiecePos"
+    ],
+    "native_reference_evidence": [
+      {
+        "id": "pattern_api.GetPatternCount",
+        "kind": "direct_call",
+        "expression": "self.pattern.GetPatternCount()",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          27,
+          27
+        ],
+        "role": "preflight_or_readback"
+      },
+      {
+        "id": "pattern_api.GetPatternPieceName",
+        "kind": "direct_call",
+        "expression": "self.pattern.GetPatternPieceName(i)",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          35,
+          35
+        ],
+        "role": "preflight_or_readback"
+      },
+      {
+        "id": "pattern_api.GetPatternPieceName",
+        "kind": "direct_call",
+        "expression": "self.pattern.GetPatternPieceName(i)",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          86,
+          86
+        ],
+        "role": "preflight_or_readback"
+      },
+      {
+        "id": "pattern_api.GetPatternPiecePos",
+        "kind": "direct_call",
+        "expression": "self.pattern.GetPatternPiecePos(i)",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          87,
+          87
+        ],
+        "role": "preflight_or_readback"
+      },
+      {
+        "id": "pattern_api.GetPatternPieceArea",
+        "kind": "direct_call",
+        "expression": "self.pattern.GetPatternPieceArea(i)",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          88,
+          88
+        ],
+        "role": "preflight_or_readback"
+      },
+      {
+        "id": "pattern_api.GetBoundingBoxOfPattern",
+        "kind": "direct_call",
+        "expression": "self.pattern.GetBoundingBoxOfPattern(i)",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          89,
+          89
+        ],
+        "role": "preflight_or_readback"
+      },
+      {
+        "id": "pattern_api.DeletePatternPiece",
+        "kind": "direct_call",
+        "expression": "self.pattern.DeletePatternPiece(i)",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          178,
+          178
+        ],
+        "role": "primary_effect_or_read"
+      },
+      {
+        "id": "pattern_api.GetPatternCount",
+        "kind": "callable_reference",
+        "expression": "pattern_api.GetPatternCount",
+        "path": "plugin/clo3d_mcp_start.py",
+        "lines": [
+          60,
+          60
+        ],
+        "role": "preflight_or_readback"
+      },
+      {
+        "id": "pattern_api.GetPatternCount",
+        "kind": "direct_call",
+        "expression": "pattern_api.GetPatternCount()",
+        "path": "plugin/clo3d_mcp_start.py",
+        "lines": [
+          52,
+          52
+        ],
+        "role": "preflight_or_readback"
+      },
+      {
+        "id": "pattern_api.GetPatternCount",
+        "kind": "direct_call",
+        "expression": "pattern_api.GetPatternCount()",
+        "path": "plugin/clo3d_mcp_start.py",
+        "lines": [
+          55,
+          55
+        ],
+        "role": "preflight_or_readback"
+      }
+    ],
+    "mapping_method": "reviewed_command_branch_selection_plus_AST_reference_locations; not_execution_trace",
+    "profile": "pattern_package",
+    "contract_evidence": [
+      {
+        "function": "validate_params",
+        "path": "src/clo3d_mcp/pattern_contract.py",
+        "lines": [
+          84,
+          119
+        ]
+      },
+      {
+        "function": "validate_result",
+        "path": "src/clo3d_mcp/pattern_contract.py",
+        "lines": [
+          150,
+          192
+        ]
+      }
+    ],
+    "contract_scope": "strict raw command params/results via pattern_contract",
+    "adapter_evidence": [
+      {
+        "function": "PatternAPI.__call__",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          113,
+          138
+        ]
+      },
+      {
+        "function": "PatternAPI._mutate",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          140,
+          235
+        ]
+      },
+      {
+        "function": "PatternAPI._target",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          93,
+          102
+        ]
+      },
+      {
+        "function": "PatternAPI._list",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          32,
+          38
+        ]
+      },
+      {
+        "function": "PatternAPI._geometry",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          81,
+          91
+        ]
+      }
+    ],
+    "test_evidence": [
+      {
+        "function": "test_full_mutation_readback_and_shifted_index_guard",
+        "path": "tests/test_pattern_api.py",
+        "lines": [
+          77,
+          95
+        ],
+        "kind": "syntactic_test_reference_not_test_result"
+      },
+      {
+        "function": "test_duplicate_names_and_stale_index_refused_before_setter",
+        "path": "tests/test_pattern_api.py",
+        "lines": [
+          163,
+          172
+        ],
+        "kind": "syntactic_test_reference_not_test_result"
+      },
+      {
+        "function": "test_pattern_package_real_http_validates_raw_arguments_and_runs_stateful_executor",
+        "path": "tests/test_transport_server.py",
+        "lines": [
+          304,
+          364
+        ],
+        "kind": "syntactic_test_reference_not_test_result"
+      },
+      {
+        "function": "test_failure_never_repeats_mutation_or_deletes_after_unknown",
+        "path": "tests/test_verify_patterns.py",
+        "lines": [
+          53,
+          59
+        ],
+        "kind": "syntactic_test_reference_not_test_result"
+      }
+    ],
+    "acceptance": {
+      "status": "historical_limited_pattern_acceptance",
+      "reference": "docs/PATTERN_API_CHECK.md",
+      "scope": "CLO 2026.1; simple straight polygons; count/name/position/area/bbox and load10 <=2 test pieces, <=256 total; introspection presence/docstrings only. Not curves/holes/avatar/sewing/simulation/import/export/point editing; exact patch build not recorded.",
+      "performed_by_this_builder": false
+    }
+  },
+  {
+    "name": "describe_clo_api",
+    "function": "add_pattern_tools.describe_clo_api",
+    "path": "src/clo3d_mcp/transport_server.py",
+    "lines": [
+      147,
+      149
+    ],
+    "signature": "describe_clo_api(module: StrictStr, functions: list[StrictStr]) -> dict[str, Any]",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "module",
+        "kind": "positional_or_keyword",
+        "annotation": "StrictStr",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "functions",
+        "kind": "positional_or_keyword",
+        "annotation": "list[StrictStr]",
+        "required": true,
+        "default": null
+      }
+    ],
+    "description": "Read bounded docstrings/signatures, not execute API. At most 16 public names.",
+    "routes": [
+      {
+        "command": "describe_clo_api",
+        "path": "src/clo3d_mcp/transport_server.py",
+        "lines": [
+          149,
+          149
+        ]
+      }
+    ],
+    "contract_acceptance": "existing_limited_evidence_not_full_official_overload_or_build_acceptance",
+    "primary_native_ids": [],
+    "primary_native_role": "read_or_introspection",
+    "supporting_native_ids": [],
+    "native_ids": [],
+    "native_reference_evidence": [],
+    "mapping_method": "reviewed_command_branch_selection_plus_AST_reference_locations; not_execution_trace",
+    "profile": "pattern_package",
+    "contract_evidence": [
+      {
+        "function": "validate_params",
+        "path": "src/clo3d_mcp/pattern_contract.py",
+        "lines": [
+          84,
+          119
+        ]
+      },
+      {
+        "function": "validate_result",
+        "path": "src/clo3d_mcp/pattern_contract.py",
+        "lines": [
+          150,
+          192
+        ]
+      }
+    ],
+    "contract_scope": "strict raw command params/results via pattern_contract",
+    "adapter_evidence": [
+      {
+        "function": "PatternAPI.__call__",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          113,
+          138
+        ]
+      }
+    ],
+    "test_evidence": [
+      {
+        "function": "test_bad_parameters_rejected_before_api_and_queue",
+        "path": "tests/test_pattern_api.py",
+        "lines": [
+          115,
+          123
+        ],
+        "kind": "syntactic_test_reference_not_test_result"
+      },
+      {
+        "function": "test_introspection_does_not_call_functions_and_reports_absence",
+        "path": "tests/test_pattern_api.py",
+        "lines": [
+          175,
+          182
+        ],
+        "kind": "syntactic_test_reference_not_test_result"
+      }
+    ],
+    "acceptance": {
+      "status": "historical_limited_pattern_acceptance",
+      "reference": "docs/PATTERN_API_CHECK.md",
+      "scope": "CLO 2026.1; simple straight polygons; count/name/position/area/bbox and load10 <=2 test pieces, <=256 total; introspection presence/docstrings only. Not curves/holes/avatar/sewing/simulation/import/export/point editing; exact patch build not recorded.",
+      "performed_by_this_builder": false
+    }
+  },
+  {
+    "name": "get_pattern_count",
+    "function": "build_mcp.get_pattern_count",
+    "path": "src/clo3d_mcp/transport_server.py",
+    "lines": [
+      103,
+      105
+    ],
+    "signature": "get_pattern_count() -> dict[str, Any]",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [],
+    "description": "Read the number of pattern pieces through the sequential CLO executor.",
+    "routes": [
+      {
+        "command": "get_pattern_count",
+        "path": "src/clo3d_mcp/transport_server.py",
+        "lines": [
+          105,
+          105
+        ]
+      }
+    ],
+    "contract_acceptance": "existing_limited_evidence_not_full_official_overload_or_build_acceptance",
+    "primary_native_ids": [
+      "pattern_api.GetPatternCount"
+    ],
+    "primary_native_role": "read_or_introspection",
+    "supporting_native_ids": [],
+    "native_ids": [
+      "pattern_api.GetPatternCount"
+    ],
+    "native_reference_evidence": [
+      {
+        "id": "pattern_api.GetPatternCount",
+        "kind": "direct_call",
+        "expression": "self.pattern.GetPatternCount()",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          27,
+          27
+        ],
+        "role": "primary_effect_or_read"
+      },
+      {
+        "id": "pattern_api.GetPatternCount",
+        "kind": "callable_reference",
+        "expression": "pattern_api.GetPatternCount",
+        "path": "plugin/clo3d_mcp_start.py",
+        "lines": [
+          60,
+          60
+        ],
+        "role": "primary_effect_or_read"
+      },
+      {
+        "id": "pattern_api.GetPatternCount",
+        "kind": "direct_call",
+        "expression": "pattern_api.GetPatternCount()",
+        "path": "plugin/clo3d_mcp_start.py",
+        "lines": [
+          52,
+          52
+        ],
+        "role": "primary_effect_or_read"
+      },
+      {
+        "id": "pattern_api.GetPatternCount",
+        "kind": "direct_call",
+        "expression": "pattern_api.GetPatternCount()",
+        "path": "plugin/clo3d_mcp_start.py",
+        "lines": [
+          55,
+          55
+        ],
+        "role": "primary_effect_or_read"
+      }
+    ],
+    "mapping_method": "reviewed_command_branch_selection_plus_AST_reference_locations; not_execution_trace",
+    "profile": "base_service",
+    "contract_evidence": [
+      {
+        "function": "build_mcp",
+        "path": "src/clo3d_mcp/transport_server.py",
+        "lines": [
+          85,
+          130
+        ]
+      },
+      {
+        "function": "validate",
+        "path": "src/clo3d_mcp/protocol.py",
+        "lines": [
+          34,
+          74
+        ]
+      },
+      {
+        "function": "Executor.receive",
+        "path": "src/clo3d_mcp/pipe_session.py",
+        "lines": [
+          64,
+          131
+        ]
+      }
+    ],
+    "contract_scope": "base tool declaration/protocol/executor result checks; not pattern-command raw exact-key parity",
+    "adapter_evidence": [
+      {
+        "function": "Service.call",
+        "path": "src/clo3d_mcp/transport_server.py",
+        "lines": [
+          71,
+          82
+        ]
+      },
+      {
+        "function": "Executor.receive",
+        "path": "src/clo3d_mcp/pipe_session.py",
+        "lines": [
+          64,
+          131
+        ]
+      },
+      {
+        "function": "main",
+        "path": "plugin/clo3d_mcp_start.py",
+        "lines": [
+          6,
+          64
+        ]
+      }
+    ],
+    "test_evidence": [
+      {
+        "function": "test_http_sdk_initialize_list_concurrent_calls_and_busy_status",
+        "path": "tests/test_transport_server.py",
+        "lines": [
+          38,
+          140
+        ],
+        "kind": "syntactic_test_reference_not_test_result"
+      },
+      {
+        "function": "test_service_success_waits_for_own_ready_without_blocking_status",
+        "path": "tests/test_transport_server.py",
+        "lines": [
+          170,
+          186
+        ],
+        "kind": "syntactic_test_reference_not_test_result"
+      },
+      {
+        "function": "test_http_queue_overflow_and_disconnect_release_all_callers_without_replay",
+        "path": "tests/test_transport_server.py",
+        "lines": [
+          250,
+          301
+        ],
+        "kind": "syntactic_test_reference_not_test_result"
+      }
+    ],
+    "acceptance": {
+      "status": "historical_transport_diagnostic_evidence",
+      "reference": "docs/P3_MCP_CHECK.md",
+      "scope": "Existing P0-P3 transport/base diagnostic scope only; not full native API or full tool-authoring DoD.",
+      "performed_by_this_builder": false
+    }
+  },
+  {
+    "name": "get_pattern_geometry",
+    "function": "add_pattern_tools.get_pattern_geometry",
+    "path": "src/clo3d_mcp/transport_server.py",
+    "lines": [
+      157,
+      159
+    ],
+    "signature": "get_pattern_geometry(pattern_index: StrictInt) -> dict[str, Any]",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "pattern_index",
+        "kind": "positional_or_keyword",
+        "annotation": "StrictInt",
+        "required": true,
+        "default": null
+      }
+    ],
+    "description": "Read 2D position in mm, area in mm2 and bounding box from CLO.",
+    "routes": [
+      {
+        "command": "get_pattern_geometry",
+        "path": "src/clo3d_mcp/transport_server.py",
+        "lines": [
+          159,
+          159
+        ]
+      }
+    ],
+    "contract_acceptance": "existing_limited_evidence_not_full_official_overload_or_build_acceptance",
+    "primary_native_ids": [
+      "pattern_api.GetPatternPieceName",
+      "pattern_api.GetPatternPiecePos",
+      "pattern_api.GetPatternPieceArea",
+      "pattern_api.GetBoundingBoxOfPattern"
+    ],
+    "primary_native_role": "read_or_introspection",
+    "supporting_native_ids": [
+      "pattern_api.GetPatternCount"
+    ],
+    "native_ids": [
+      "pattern_api.GetBoundingBoxOfPattern",
+      "pattern_api.GetPatternCount",
+      "pattern_api.GetPatternPieceArea",
+      "pattern_api.GetPatternPieceName",
+      "pattern_api.GetPatternPiecePos"
+    ],
+    "native_reference_evidence": [
+      {
+        "id": "pattern_api.GetPatternCount",
+        "kind": "direct_call",
+        "expression": "self.pattern.GetPatternCount()",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          27,
+          27
+        ],
+        "role": "preflight_or_readback"
+      },
+      {
+        "id": "pattern_api.GetPatternPieceName",
+        "kind": "direct_call",
+        "expression": "self.pattern.GetPatternPieceName(i)",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          35,
+          35
+        ],
+        "role": "primary_effect_or_read"
+      },
+      {
+        "id": "pattern_api.GetPatternPieceName",
+        "kind": "direct_call",
+        "expression": "self.pattern.GetPatternPieceName(i)",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          86,
+          86
+        ],
+        "role": "primary_effect_or_read"
+      },
+      {
+        "id": "pattern_api.GetPatternPiecePos",
+        "kind": "direct_call",
+        "expression": "self.pattern.GetPatternPiecePos(i)",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          87,
+          87
+        ],
+        "role": "primary_effect_or_read"
+      },
+      {
+        "id": "pattern_api.GetPatternPieceArea",
+        "kind": "direct_call",
+        "expression": "self.pattern.GetPatternPieceArea(i)",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          88,
+          88
+        ],
+        "role": "primary_effect_or_read"
+      },
+      {
+        "id": "pattern_api.GetBoundingBoxOfPattern",
+        "kind": "direct_call",
+        "expression": "self.pattern.GetBoundingBoxOfPattern(i)",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          89,
+          89
+        ],
+        "role": "primary_effect_or_read"
+      },
+      {
+        "id": "pattern_api.GetPatternCount",
+        "kind": "callable_reference",
+        "expression": "pattern_api.GetPatternCount",
+        "path": "plugin/clo3d_mcp_start.py",
+        "lines": [
+          60,
+          60
+        ],
+        "role": "preflight_or_readback"
+      },
+      {
+        "id": "pattern_api.GetPatternCount",
+        "kind": "direct_call",
+        "expression": "pattern_api.GetPatternCount()",
+        "path": "plugin/clo3d_mcp_start.py",
+        "lines": [
+          52,
+          52
+        ],
+        "role": "preflight_or_readback"
+      },
+      {
+        "id": "pattern_api.GetPatternCount",
+        "kind": "direct_call",
+        "expression": "pattern_api.GetPatternCount()",
+        "path": "plugin/clo3d_mcp_start.py",
+        "lines": [
+          55,
+          55
+        ],
+        "role": "preflight_or_readback"
+      }
+    ],
+    "mapping_method": "reviewed_command_branch_selection_plus_AST_reference_locations; not_execution_trace",
+    "profile": "pattern_package",
+    "contract_evidence": [
+      {
+        "function": "validate_params",
+        "path": "src/clo3d_mcp/pattern_contract.py",
+        "lines": [
+          84,
+          119
+        ]
+      },
+      {
+        "function": "validate_result",
+        "path": "src/clo3d_mcp/pattern_contract.py",
+        "lines": [
+          150,
+          192
+        ]
+      }
+    ],
+    "contract_scope": "strict raw command params/results via pattern_contract",
+    "adapter_evidence": [
+      {
+        "function": "PatternAPI.__call__",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          113,
+          138
+        ]
+      },
+      {
+        "function": "PatternAPI._geometry",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          81,
+          91
+        ]
+      }
+    ],
+    "test_evidence": [
+      {
+        "function": "test_full_mutation_readback_and_shifted_index_guard",
+        "path": "tests/test_pattern_api.py",
+        "lines": [
+          77,
+          95
+        ],
+        "kind": "syntactic_test_reference_not_test_result"
+      },
+      {
+        "function": "test_bad_parameters_rejected_before_api_and_queue",
+        "path": "tests/test_pattern_api.py",
+        "lines": [
+          115,
+          123
+        ],
+        "kind": "syntactic_test_reference_not_test_result"
+      },
+      {
+        "function": "test_value_record_geometry_conversion_and_unknown_shape",
+        "path": "tests/test_pattern_api.py",
+        "lines": [
+          218,
+          228
+        ],
+        "kind": "syntactic_test_reference_not_test_result"
+      },
+      {
+        "function": "test_native_box_string_dictionary_preserved_without_guessing_numeric_layout",
+        "path": "tests/test_pattern_api.py",
+        "lines": [
+          231,
+          241
+        ],
+        "kind": "syntactic_test_reference_not_test_result"
+      },
+      {
+        "function": "test_pattern_package_real_http_validates_raw_arguments_and_runs_stateful_executor",
+        "path": "tests/test_transport_server.py",
+        "lines": [
+          304,
+          364
+        ],
+        "kind": "syntactic_test_reference_not_test_result"
+      }
+    ],
+    "acceptance": {
+      "status": "historical_limited_pattern_acceptance",
+      "reference": "docs/PATTERN_API_CHECK.md",
+      "scope": "CLO 2026.1; simple straight polygons; count/name/position/area/bbox and load10 <=2 test pieces, <=256 total; introspection presence/docstrings only. Not curves/holes/avatar/sewing/simulation/import/export/point editing; exact patch build not recorded.",
+      "performed_by_this_builder": false
+    }
+  },
+  {
+    "name": "get_pattern_list",
+    "function": "add_pattern_tools.get_pattern_list",
+    "path": "src/clo3d_mcp/transport_server.py",
+    "lines": [
+      152,
+      154
+    ],
+    "signature": "get_pattern_list() -> dict[str, Any]",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [],
+    "description": "Read indices/names; bounded to 256 pieces. Indices can change after deletion.",
+    "routes": [
+      {
+        "command": "get_pattern_list",
+        "path": "src/clo3d_mcp/transport_server.py",
+        "lines": [
+          154,
+          154
+        ]
+      }
+    ],
+    "contract_acceptance": "existing_limited_evidence_not_full_official_overload_or_build_acceptance",
+    "primary_native_ids": [
+      "pattern_api.GetPatternCount",
+      "pattern_api.GetPatternPieceName"
+    ],
+    "primary_native_role": "read_or_introspection",
+    "supporting_native_ids": [],
+    "native_ids": [
+      "pattern_api.GetPatternCount",
+      "pattern_api.GetPatternPieceName"
+    ],
+    "native_reference_evidence": [
+      {
+        "id": "pattern_api.GetPatternCount",
+        "kind": "direct_call",
+        "expression": "self.pattern.GetPatternCount()",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          27,
+          27
+        ],
+        "role": "primary_effect_or_read"
+      },
+      {
+        "id": "pattern_api.GetPatternPieceName",
+        "kind": "direct_call",
+        "expression": "self.pattern.GetPatternPieceName(i)",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          35,
+          35
+        ],
+        "role": "primary_effect_or_read"
+      },
+      {
+        "id": "pattern_api.GetPatternPieceName",
+        "kind": "direct_call",
+        "expression": "self.pattern.GetPatternPieceName(i)",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          86,
+          86
+        ],
+        "role": "primary_effect_or_read"
+      },
+      {
+        "id": "pattern_api.GetPatternCount",
+        "kind": "callable_reference",
+        "expression": "pattern_api.GetPatternCount",
+        "path": "plugin/clo3d_mcp_start.py",
+        "lines": [
+          60,
+          60
+        ],
+        "role": "primary_effect_or_read"
+      },
+      {
+        "id": "pattern_api.GetPatternCount",
+        "kind": "direct_call",
+        "expression": "pattern_api.GetPatternCount()",
+        "path": "plugin/clo3d_mcp_start.py",
+        "lines": [
+          52,
+          52
+        ],
+        "role": "primary_effect_or_read"
+      },
+      {
+        "id": "pattern_api.GetPatternCount",
+        "kind": "direct_call",
+        "expression": "pattern_api.GetPatternCount()",
+        "path": "plugin/clo3d_mcp_start.py",
+        "lines": [
+          55,
+          55
+        ],
+        "role": "primary_effect_or_read"
+      }
+    ],
+    "mapping_method": "reviewed_command_branch_selection_plus_AST_reference_locations; not_execution_trace",
+    "profile": "pattern_package",
+    "contract_evidence": [
+      {
+        "function": "validate_params",
+        "path": "src/clo3d_mcp/pattern_contract.py",
+        "lines": [
+          84,
+          119
+        ]
+      },
+      {
+        "function": "validate_result",
+        "path": "src/clo3d_mcp/pattern_contract.py",
+        "lines": [
+          150,
+          192
+        ]
+      }
+    ],
+    "contract_scope": "strict raw command params/results via pattern_contract",
+    "adapter_evidence": [
+      {
+        "function": "PatternAPI.__call__",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          113,
+          138
+        ]
+      },
+      {
+        "function": "PatternAPI._list",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          32,
+          38
+        ]
+      }
+    ],
+    "test_evidence": [
+      {
+        "function": "test_bad_parameters_rejected_before_api_and_queue",
+        "path": "tests/test_pattern_api.py",
+        "lines": [
+          115,
+          123
+        ],
+        "kind": "syntactic_test_reference_not_test_result"
+      },
+      {
+        "function": "test_pattern_package_real_http_validates_raw_arguments_and_runs_stateful_executor",
+        "path": "tests/test_transport_server.py",
+        "lines": [
+          304,
+          364
+        ],
+        "kind": "syntactic_test_reference_not_test_result"
+      }
+    ],
+    "acceptance": {
+      "status": "historical_limited_pattern_acceptance",
+      "reference": "docs/PATTERN_API_CHECK.md",
+      "scope": "CLO 2026.1; simple straight polygons; count/name/position/area/bbox and load10 <=2 test pieces, <=256 total; introspection presence/docstrings only. Not curves/holes/avatar/sewing/simulation/import/export/point editing; exact patch build not recorded.",
+      "performed_by_this_builder": false
+    }
+  },
+  {
+    "name": "get_session_info",
+    "function": "build_mcp.get_session_info",
+    "path": "src/clo3d_mcp/transport_server.py",
+    "lines": [
+      113,
+      116
+    ],
+    "signature": "get_session_info() -> dict[str, Any]",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [],
+    "description": "CLO session identity and readiness (not the MCP HTTP session identity).",
+    "routes": [],
+    "contract_acceptance": "existing_limited_evidence_not_full_official_overload_or_build_acceptance",
+    "primary_native_ids": [],
+    "primary_native_role": "read_or_introspection",
+    "supporting_native_ids": [],
+    "native_ids": [],
+    "native_reference_evidence": [],
+    "mapping_method": "reviewed_command_branch_selection_plus_AST_reference_locations; not_execution_trace",
+    "profile": "base_service",
+    "contract_evidence": [
+      {
+        "function": "build_mcp",
+        "path": "src/clo3d_mcp/transport_server.py",
+        "lines": [
+          85,
+          130
+        ]
+      }
+    ],
+    "contract_scope": "base tool declaration/protocol/executor result checks; not pattern-command raw exact-key parity",
+    "adapter_evidence": [
+      {
+        "function": "Service.status",
+        "path": "src/clo3d_mcp/transport_server.py",
+        "lines": [
+          62,
+          69
+        ]
+      }
+    ],
+    "test_evidence": [
+      {
+        "function": "test_http_sdk_initialize_list_concurrent_calls_and_busy_status",
+        "path": "tests/test_transport_server.py",
+        "lines": [
+          38,
+          140
+        ],
+        "kind": "syntactic_test_reference_not_test_result"
+      }
+    ],
+    "acceptance": {
+      "status": "historical_transport_diagnostic_evidence",
+      "reference": "docs/P3_MCP_CHECK.md",
+      "scope": "Existing P0-P3 transport/base diagnostic scope only; not full native API or full tool-authoring DoD.",
+      "performed_by_this_builder": false
+    }
+  },
+  {
+    "name": "list_clo_api",
+    "function": "add_pattern_tools.list_clo_api",
+    "path": "src/clo3d_mcp/transport_server.py",
+    "lines": [
+      139,
+      144
+    ],
+    "signature": "list_clo_api() -> dict[str, Any]",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [],
+    "description": "List public callable names in five fixed CLO modules, without invoking them.\n\nPresence is not proof that a native call is safe or compatible.",
+    "routes": [
+      {
+        "command": "list_clo_api",
+        "path": "src/clo3d_mcp/transport_server.py",
+        "lines": [
+          144,
+          144
+        ]
+      }
+    ],
+    "contract_acceptance": "existing_limited_evidence_not_full_official_overload_or_build_acceptance",
+    "primary_native_ids": [],
+    "primary_native_role": "read_or_introspection",
+    "supporting_native_ids": [],
+    "native_ids": [],
+    "native_reference_evidence": [],
+    "mapping_method": "reviewed_command_branch_selection_plus_AST_reference_locations; not_execution_trace",
+    "profile": "pattern_package",
+    "contract_evidence": [
+      {
+        "function": "validate_params",
+        "path": "src/clo3d_mcp/pattern_contract.py",
+        "lines": [
+          84,
+          119
+        ]
+      },
+      {
+        "function": "validate_result",
+        "path": "src/clo3d_mcp/pattern_contract.py",
+        "lines": [
+          150,
+          192
+        ]
+      }
+    ],
+    "contract_scope": "strict raw command params/results via pattern_contract",
+    "adapter_evidence": [
+      {
+        "function": "PatternAPI.__call__",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          113,
+          138
+        ]
+      }
+    ],
+    "test_evidence": [
+      {
+        "function": "test_introspection_does_not_call_functions_and_reports_absence",
+        "path": "tests/test_pattern_api.py",
+        "lines": [
+          175,
+          182
+        ],
+        "kind": "syntactic_test_reference_not_test_result"
+      }
+    ],
+    "acceptance": {
+      "status": "historical_limited_pattern_acceptance",
+      "reference": "docs/PATTERN_API_CHECK.md",
+      "scope": "CLO 2026.1; simple straight polygons; count/name/position/area/bbox and load10 <=2 test pieces, <=256 total; introspection presence/docstrings only. Not curves/holes/avatar/sewing/simulation/import/export/point editing; exact patch build not recorded.",
+      "performed_by_this_builder": false
+    }
+  },
+  {
+    "name": "move_pattern_relative",
+    "function": "add_pattern_tools.move_pattern_relative",
+    "path": "src/clo3d_mcp/transport_server.py",
+    "lines": [
+      189,
+      196
+    ],
+    "signature": "move_pattern_relative(pattern_index: StrictInt, expected_name: StrictStr, dx: StrictInt | StrictFloat, dy: StrictInt | StrictFloat) -> dict[str, Any]",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "pattern_index",
+        "kind": "positional_or_keyword",
+        "annotation": "StrictInt",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "expected_name",
+        "kind": "positional_or_keyword",
+        "annotation": "StrictStr",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "dx",
+        "kind": "positional_or_keyword",
+        "annotation": "StrictInt | StrictFloat",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "dy",
+        "kind": "positional_or_keyword",
+        "annotation": "StrictInt | StrictFloat",
+        "required": true,
+        "default": null
+      }
+    ],
+    "description": "Move whole piece by dx/dy mm; verify actual displacement and unchanged area.\n\nDoes NOT move individual pattern points. Never retry automatically.",
+    "routes": [
+      {
+        "command": "move_pattern_relative",
+        "path": "src/clo3d_mcp/transport_server.py",
+        "lines": [
+          195,
+          196
+        ]
+      }
+    ],
+    "contract_acceptance": "existing_limited_evidence_not_full_official_overload_or_build_acceptance",
+    "primary_native_ids": [
+      "pattern_api.SetPatternPieceMove"
+    ],
+    "primary_native_role": "effect",
+    "supporting_native_ids": [
+      "pattern_api.GetBoundingBoxOfPattern",
+      "pattern_api.GetPatternCount",
+      "pattern_api.GetPatternPieceArea",
+      "pattern_api.GetPatternPieceName",
+      "pattern_api.GetPatternPiecePos"
+    ],
+    "native_ids": [
+      "pattern_api.GetBoundingBoxOfPattern",
+      "pattern_api.GetPatternCount",
+      "pattern_api.GetPatternPieceArea",
+      "pattern_api.GetPatternPieceName",
+      "pattern_api.GetPatternPiecePos",
+      "pattern_api.SetPatternPieceMove"
+    ],
+    "native_reference_evidence": [
+      {
+        "id": "pattern_api.GetPatternCount",
+        "kind": "direct_call",
+        "expression": "self.pattern.GetPatternCount()",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          27,
+          27
+        ],
+        "role": "preflight_or_readback"
+      },
+      {
+        "id": "pattern_api.GetPatternPieceName",
+        "kind": "direct_call",
+        "expression": "self.pattern.GetPatternPieceName(i)",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          35,
+          35
+        ],
+        "role": "preflight_or_readback"
+      },
+      {
+        "id": "pattern_api.GetPatternPieceName",
+        "kind": "direct_call",
+        "expression": "self.pattern.GetPatternPieceName(i)",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          86,
+          86
+        ],
+        "role": "preflight_or_readback"
+      },
+      {
+        "id": "pattern_api.GetPatternPiecePos",
+        "kind": "direct_call",
+        "expression": "self.pattern.GetPatternPiecePos(i)",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          87,
+          87
+        ],
+        "role": "preflight_or_readback"
+      },
+      {
+        "id": "pattern_api.GetPatternPieceArea",
+        "kind": "direct_call",
+        "expression": "self.pattern.GetPatternPieceArea(i)",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          88,
+          88
+        ],
+        "role": "preflight_or_readback"
+      },
+      {
+        "id": "pattern_api.GetBoundingBoxOfPattern",
+        "kind": "direct_call",
+        "expression": "self.pattern.GetBoundingBoxOfPattern(i)",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          89,
+          89
+        ],
+        "role": "preflight_or_readback"
+      },
+      {
+        "id": "pattern_api.SetPatternPieceMove",
+        "kind": "direct_call",
+        "expression": "self.pattern.SetPatternPieceMove(i, float(p['dx']), float(p['dy']))",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          167,
+          167
+        ],
+        "role": "primary_effect_or_read"
+      },
+      {
+        "id": "pattern_api.GetPatternCount",
+        "kind": "callable_reference",
+        "expression": "pattern_api.GetPatternCount",
+        "path": "plugin/clo3d_mcp_start.py",
+        "lines": [
+          60,
+          60
+        ],
+        "role": "preflight_or_readback"
+      },
+      {
+        "id": "pattern_api.GetPatternCount",
+        "kind": "direct_call",
+        "expression": "pattern_api.GetPatternCount()",
+        "path": "plugin/clo3d_mcp_start.py",
+        "lines": [
+          52,
+          52
+        ],
+        "role": "preflight_or_readback"
+      },
+      {
+        "id": "pattern_api.GetPatternCount",
+        "kind": "direct_call",
+        "expression": "pattern_api.GetPatternCount()",
+        "path": "plugin/clo3d_mcp_start.py",
+        "lines": [
+          55,
+          55
+        ],
+        "role": "preflight_or_readback"
+      }
+    ],
+    "mapping_method": "reviewed_command_branch_selection_plus_AST_reference_locations; not_execution_trace",
+    "profile": "pattern_package",
+    "contract_evidence": [
+      {
+        "function": "validate_params",
+        "path": "src/clo3d_mcp/pattern_contract.py",
+        "lines": [
+          84,
+          119
+        ]
+      },
+      {
+        "function": "validate_result",
+        "path": "src/clo3d_mcp/pattern_contract.py",
+        "lines": [
+          150,
+          192
+        ]
+      }
+    ],
+    "contract_scope": "strict raw command params/results via pattern_contract",
+    "adapter_evidence": [
+      {
+        "function": "PatternAPI.__call__",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          113,
+          138
+        ]
+      },
+      {
+        "function": "PatternAPI._mutate",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          140,
+          235
+        ]
+      },
+      {
+        "function": "PatternAPI._target",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          93,
+          102
+        ]
+      },
+      {
+        "function": "PatternAPI._list",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          32,
+          38
+        ]
+      },
+      {
+        "function": "PatternAPI._geometry",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          81,
+          91
+        ]
+      }
+    ],
+    "test_evidence": [
+      {
+        "function": "test_full_mutation_readback_and_shifted_index_guard",
+        "path": "tests/test_pattern_api.py",
+        "lines": [
+          77,
+          95
+        ],
+        "kind": "syntactic_test_reference_not_test_result"
+      },
+      {
+        "function": "test_bad_parameters_rejected_before_api_and_queue",
+        "path": "tests/test_pattern_api.py",
+        "lines": [
+          115,
+          123
+        ],
+        "kind": "syntactic_test_reference_not_test_result"
+      },
+      {
+        "function": "test_silent_setter_failure_is_not_success",
+        "path": "tests/test_pattern_api.py",
+        "lines": [
+          154,
+          160
+        ],
+        "kind": "syntactic_test_reference_not_test_result"
+      },
+      {
+        "function": "test_pattern_package_real_http_validates_raw_arguments_and_runs_stateful_executor",
+        "path": "tests/test_transport_server.py",
+        "lines": [
+          304,
+          364
+        ],
+        "kind": "syntactic_test_reference_not_test_result"
+      }
+    ],
+    "acceptance": {
+      "status": "historical_limited_pattern_acceptance",
+      "reference": "docs/PATTERN_API_CHECK.md",
+      "scope": "CLO 2026.1; simple straight polygons; count/name/position/area/bbox and load10 <=2 test pieces, <=256 total; introspection presence/docstrings only. Not curves/holes/avatar/sewing/simulation/import/export/point editing; exact patch build not recorded.",
+      "performed_by_this_builder": false
+    }
+  },
+  {
+    "name": "ping",
+    "function": "build_mcp.ping",
+    "path": "src/clo3d_mcp/transport_server.py",
+    "lines": [
+      98,
+      100
+    ],
+    "signature": "ping() -> dict[str, Any]",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [],
+    "description": "Round trip through FIFO to the CLO UI executor, not an HTTP health ping.",
+    "routes": [
+      {
+        "command": "ping",
+        "path": "src/clo3d_mcp/transport_server.py",
+        "lines": [
+          100,
+          100
+        ]
+      }
+    ],
+    "contract_acceptance": "existing_limited_evidence_not_full_official_overload_or_build_acceptance",
+    "primary_native_ids": [],
+    "primary_native_role": "read_or_introspection",
+    "supporting_native_ids": [],
+    "native_ids": [],
+    "native_reference_evidence": [],
+    "mapping_method": "reviewed_command_branch_selection_plus_AST_reference_locations; not_execution_trace",
+    "profile": "base_service",
+    "contract_evidence": [
+      {
+        "function": "build_mcp",
+        "path": "src/clo3d_mcp/transport_server.py",
+        "lines": [
+          85,
+          130
+        ]
+      },
+      {
+        "function": "validate",
+        "path": "src/clo3d_mcp/protocol.py",
+        "lines": [
+          34,
+          74
+        ]
+      },
+      {
+        "function": "Executor.receive",
+        "path": "src/clo3d_mcp/pipe_session.py",
+        "lines": [
+          64,
+          131
+        ]
+      }
+    ],
+    "contract_scope": "base tool declaration/protocol/executor result checks; not pattern-command raw exact-key parity",
+    "adapter_evidence": [
+      {
+        "function": "Service.call",
+        "path": "src/clo3d_mcp/transport_server.py",
+        "lines": [
+          71,
+          82
+        ]
+      },
+      {
+        "function": "Executor.receive",
+        "path": "src/clo3d_mcp/pipe_session.py",
+        "lines": [
+          64,
+          131
+        ]
+      }
+    ],
+    "test_evidence": [
+      {
+        "function": "test_service_requires_server_generated_monotonic_ids",
+        "path": "tests/test_service_executor.py",
+        "lines": [
+          80,
+          83
+        ],
+        "kind": "syntactic_test_reference_not_test_result"
+      },
+      {
+        "function": "test_http_sdk_initialize_list_concurrent_calls_and_busy_status",
+        "path": "tests/test_transport_server.py",
+        "lines": [
+          38,
+          140
+        ],
+        "kind": "syntactic_test_reference_not_test_result"
+      },
+      {
+        "function": "test_missing_readiness_ack_is_bounded_and_never_dispatches_client_job",
+        "path": "tests/test_transport_server.py",
+        "lines": [
+          197,
+          247
+        ],
+        "kind": "syntactic_test_reference_not_test_result"
+      },
+      {
+        "function": "test_http_queue_overflow_and_disconnect_release_all_callers_without_replay",
+        "path": "tests/test_transport_server.py",
+        "lines": [
+          250,
+          301
+        ],
+        "kind": "syntactic_test_reference_not_test_result"
+      }
+    ],
+    "acceptance": {
+      "status": "historical_transport_diagnostic_evidence",
+      "reference": "docs/P3_MCP_CHECK.md",
+      "scope": "Existing P0-P3 transport/base diagnostic scope only; not full native API or full tool-authoring DoD.",
+      "performed_by_this_builder": false
+    }
+  },
+  {
+    "name": "set_pattern_name",
+    "function": "add_pattern_tools.set_pattern_name",
+    "path": "src/clo3d_mcp/transport_server.py",
+    "lines": [
+      171,
+      175
+    ],
+    "signature": "set_pattern_name(pattern_index: StrictInt, expected_name: StrictStr, name: StrictStr) -> dict[str, Any]",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "pattern_index",
+        "kind": "positional_or_keyword",
+        "annotation": "StrictInt",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "expected_name",
+        "kind": "positional_or_keyword",
+        "annotation": "StrictStr",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "name",
+        "kind": "positional_or_keyword",
+        "annotation": "StrictStr",
+        "required": true,
+        "default": null
+      }
+    ],
+    "description": "Rename a uniquely named piece after stale-index check; verify by reading back.",
+    "routes": [
+      {
+        "command": "set_pattern_name",
+        "path": "src/clo3d_mcp/transport_server.py",
+        "lines": [
+          174,
+          175
+        ]
+      }
+    ],
+    "contract_acceptance": "existing_limited_evidence_not_full_official_overload_or_build_acceptance",
+    "primary_native_ids": [
+      "pattern_api.SetPatternPieceName"
+    ],
+    "primary_native_role": "effect",
+    "supporting_native_ids": [
+      "pattern_api.GetBoundingBoxOfPattern",
+      "pattern_api.GetPatternCount",
+      "pattern_api.GetPatternPieceArea",
+      "pattern_api.GetPatternPieceName",
+      "pattern_api.GetPatternPiecePos"
+    ],
+    "native_ids": [
+      "pattern_api.GetBoundingBoxOfPattern",
+      "pattern_api.GetPatternCount",
+      "pattern_api.GetPatternPieceArea",
+      "pattern_api.GetPatternPieceName",
+      "pattern_api.GetPatternPiecePos",
+      "pattern_api.SetPatternPieceName"
+    ],
+    "native_reference_evidence": [
+      {
+        "id": "pattern_api.GetPatternCount",
+        "kind": "direct_call",
+        "expression": "self.pattern.GetPatternCount()",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          27,
+          27
+        ],
+        "role": "preflight_or_readback"
+      },
+      {
+        "id": "pattern_api.GetPatternPieceName",
+        "kind": "direct_call",
+        "expression": "self.pattern.GetPatternPieceName(i)",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          35,
+          35
+        ],
+        "role": "preflight_or_readback"
+      },
+      {
+        "id": "pattern_api.GetPatternPieceName",
+        "kind": "direct_call",
+        "expression": "self.pattern.GetPatternPieceName(i)",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          86,
+          86
+        ],
+        "role": "preflight_or_readback"
+      },
+      {
+        "id": "pattern_api.GetPatternPiecePos",
+        "kind": "direct_call",
+        "expression": "self.pattern.GetPatternPiecePos(i)",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          87,
+          87
+        ],
+        "role": "preflight_or_readback"
+      },
+      {
+        "id": "pattern_api.GetPatternPieceArea",
+        "kind": "direct_call",
+        "expression": "self.pattern.GetPatternPieceArea(i)",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          88,
+          88
+        ],
+        "role": "preflight_or_readback"
+      },
+      {
+        "id": "pattern_api.GetBoundingBoxOfPattern",
+        "kind": "direct_call",
+        "expression": "self.pattern.GetBoundingBoxOfPattern(i)",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          89,
+          89
+        ],
+        "role": "preflight_or_readback"
+      },
+      {
+        "id": "pattern_api.SetPatternPieceName",
+        "kind": "direct_call",
+        "expression": "self.pattern.SetPatternPieceName(i, p['name'])",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          162,
+          162
+        ],
+        "role": "primary_effect_or_read"
+      },
+      {
+        "id": "pattern_api.SetPatternPieceName",
+        "kind": "direct_call",
+        "expression": "self.pattern.SetPatternPieceName(i, p['name'])",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          197,
+          197
+        ],
+        "role": "primary_effect_or_read"
+      },
+      {
+        "id": "pattern_api.GetPatternCount",
+        "kind": "callable_reference",
+        "expression": "pattern_api.GetPatternCount",
+        "path": "plugin/clo3d_mcp_start.py",
+        "lines": [
+          60,
+          60
+        ],
+        "role": "preflight_or_readback"
+      },
+      {
+        "id": "pattern_api.GetPatternCount",
+        "kind": "direct_call",
+        "expression": "pattern_api.GetPatternCount()",
+        "path": "plugin/clo3d_mcp_start.py",
+        "lines": [
+          52,
+          52
+        ],
+        "role": "preflight_or_readback"
+      },
+      {
+        "id": "pattern_api.GetPatternCount",
+        "kind": "direct_call",
+        "expression": "pattern_api.GetPatternCount()",
+        "path": "plugin/clo3d_mcp_start.py",
+        "lines": [
+          55,
+          55
+        ],
+        "role": "preflight_or_readback"
+      }
+    ],
+    "mapping_method": "reviewed_command_branch_selection_plus_AST_reference_locations; not_execution_trace",
+    "profile": "pattern_package",
+    "contract_evidence": [
+      {
+        "function": "validate_params",
+        "path": "src/clo3d_mcp/pattern_contract.py",
+        "lines": [
+          84,
+          119
+        ]
+      },
+      {
+        "function": "validate_result",
+        "path": "src/clo3d_mcp/pattern_contract.py",
+        "lines": [
+          150,
+          192
+        ]
+      }
+    ],
+    "contract_scope": "strict raw command params/results via pattern_contract",
+    "adapter_evidence": [
+      {
+        "function": "PatternAPI.__call__",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          113,
+          138
+        ]
+      },
+      {
+        "function": "PatternAPI._mutate",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          140,
+          235
+        ]
+      },
+      {
+        "function": "PatternAPI._target",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          93,
+          102
+        ]
+      },
+      {
+        "function": "PatternAPI._list",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          32,
+          38
+        ]
+      },
+      {
+        "function": "PatternAPI._geometry",
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "lines": [
+          81,
+          91
+        ]
+      }
+    ],
+    "test_evidence": [
+      {
+        "function": "test_full_mutation_readback_and_shifted_index_guard",
+        "path": "tests/test_pattern_api.py",
+        "lines": [
+          77,
+          95
+        ],
+        "kind": "syntactic_test_reference_not_test_result"
+      }
+    ],
+    "acceptance": {
+      "status": "historical_limited_pattern_acceptance",
+      "reference": "docs/PATTERN_API_CHECK.md",
+      "scope": "CLO 2026.1; simple straight polygons; count/name/position/area/bbox and load10 <=2 test pieces, <=256 total; introspection presence/docstrings only. Not curves/holes/avatar/sewing/simulation/import/export/point editing; exact patch build not recorded.",
+      "performed_by_this_builder": false
+    }
+  },
+  {
+    "name": "transport_status",
+    "function": "build_mcp.transport_status",
+    "path": "src/clo3d_mcp/transport_server.py",
+    "lines": [
+      108,
+      110
+    ],
+    "signature": "transport_status() -> dict[str, Any]",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [],
+    "description": "External queue/HTTP state; responds even while a CLO API call is busy.",
+    "routes": [],
+    "contract_acceptance": "existing_limited_evidence_not_full_official_overload_or_build_acceptance",
+    "primary_native_ids": [],
+    "primary_native_role": "read_or_introspection",
+    "supporting_native_ids": [],
+    "native_ids": [],
+    "native_reference_evidence": [],
+    "mapping_method": "reviewed_command_branch_selection_plus_AST_reference_locations; not_execution_trace",
+    "profile": "base_service",
+    "contract_evidence": [
+      {
+        "function": "build_mcp",
+        "path": "src/clo3d_mcp/transport_server.py",
+        "lines": [
+          85,
+          130
+        ]
+      }
+    ],
+    "contract_scope": "base tool declaration/protocol/executor result checks; not pattern-command raw exact-key parity",
+    "adapter_evidence": [
+      {
+        "function": "Service.status",
+        "path": "src/clo3d_mcp/transport_server.py",
+        "lines": [
+          62,
+          69
+        ]
+      }
+    ],
+    "test_evidence": [
+      {
+        "function": "test_http_sdk_initialize_list_concurrent_calls_and_busy_status",
+        "path": "tests/test_transport_server.py",
+        "lines": [
+          38,
+          140
+        ],
+        "kind": "syntactic_test_reference_not_test_result"
+      },
+      {
+        "function": "test_http_queue_overflow_and_disconnect_release_all_callers_without_replay",
+        "path": "tests/test_transport_server.py",
+        "lines": [
+          250,
+          301
+        ],
+        "kind": "syntactic_test_reference_not_test_result"
+      }
+    ],
+    "acceptance": {
+      "status": "historical_transport_diagnostic_evidence",
+      "reference": "docs/P3_MCP_CHECK.md",
+      "scope": "Existing P0-P3 transport/base diagnostic scope only; not full native API or full tool-authoring DoD.",
+      "performed_by_this_builder": false
+    }
+  }
+]

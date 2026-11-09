@@ -36,6 +36,24 @@ if unavailable, read its `SKILL.md` directly. Do not load unrelated skills.
 - `windows-named-pipe`: Windows ctypes, framing, overlapped I/O and cleanup.
 - `python-mcp-session`: FastMCP HTTP, external queue and session lifecycle.
 - `transport-verification`: tests, fault injection and real-CLO acceptance.
+- `clo-mcp-tool-design`: tool contracts/descriptions, API traceability,
+  discoverability and composition examples; load before adding/documenting tools.
+- `clo-tool-workflows`: safe tool selection/composition and domain skill
+  templates; load before multi-tool CLO work or authoring workflow skills.
+
+## Tool documentation and workflow quality
+
+- Follow `docs/CLO_MCP_TOOL_AUTHORING.md`. Every new tool needs a precise
+  description, parameter/result semantics, effects/limits, errors and a safe
+  next action, plus valid/invalid/composition examples and coverage evidence.
+- Keep live MCP metadata, validators, tool cards and workflow/skill references
+  consistent. Documentation never enables a missing tool or expands permission.
+- Use `docs/CLO_MCP_TOOLS.md` for current tools; native API introspection and
+  legacy handlers are not proof a corresponding MCP tool is available.
+- Compose mutations sequentially with readback; never pre-enqueue dependent
+  changes or automatically clean up the scene after error/unknown outcome.
+- A workflow recipe is not an atomic composite tool. Test selection/composition
+  in fake evaluations; real CLO runs remain explicit acceptance gates.
 
 ## Engineering invariants
 

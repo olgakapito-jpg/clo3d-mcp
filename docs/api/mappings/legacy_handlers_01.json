@@ -1,0 +1,2194 @@
+[
+  {
+    "command": "add_fabric",
+    "function": "handle_add_fabric",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        521,
+        521
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        188,
+        191
+      ]
+    },
+    "native_ids": [
+      "fabric_api.AddFabric"
+    ],
+    "references": [
+      {
+        "id": "fabric_api.AddFabric",
+        "kind": "direct_call",
+        "expression": "fabric_api.AddFabric(file_path)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          190,
+          190
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_add_fabric"
+    ]
+  },
+  {
+    "command": "assign_fabric",
+    "function": "handle_assign_fabric",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        522,
+        522
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        194,
+        199
+      ]
+    },
+    "native_ids": [
+      "fabric_api.AssignFabricToPattern"
+    ],
+    "references": [
+      {
+        "id": "fabric_api.AssignFabricToPattern",
+        "kind": "direct_call",
+        "expression": "fabric_api.AssignFabricToPattern(fabric_index, pattern_index, option)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          198,
+          198
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_assign_fabric"
+    ]
+  },
+  {
+    "command": "copy_colorway",
+    "function": "handle_copy_colorway",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        544,
+        544
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        447,
+        454
+      ]
+    },
+    "native_ids": [
+      "utility_api.CopyColorway"
+    ],
+    "references": [
+      {
+        "id": "utility_api.CopyColorway",
+        "kind": "direct_call",
+        "expression": "utility_api.CopyColorway(index, copy_option)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          452,
+          452
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_copy_colorway"
+    ]
+  },
+  {
+    "command": "copy_pattern",
+    "function": "handle_copy_pattern",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        514,
+        514
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        132,
+        137
+      ]
+    },
+    "native_ids": [
+      "pattern_api.CopyPatternPiecePos"
+    ],
+    "references": [
+      {
+        "id": "pattern_api.CopyPatternPiecePos",
+        "kind": "direct_call",
+        "expression": "pattern_api.CopyPatternPiecePos(index, x, y)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          136,
+          136
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_copy_pattern"
+    ]
+  },
+  {
+    "command": "create_pattern",
+    "function": "handle_create_pattern",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        517,
+        517
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        154,
+        165
+      ]
+    },
+    "native_ids": [
+      "pattern_api.CreatePatternWithPoints"
+    ],
+    "references": [
+      {
+        "id": "pattern_api.CreatePatternWithPoints",
+        "kind": "direct_call",
+        "expression": "pattern_api.CreatePatternWithPoints(point_tuples)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          164,
+          164
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_create_pattern"
+    ]
+  },
+  {
+    "command": "delete_colorway",
+    "function": "handle_delete_colorway",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        545,
+        545
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        457,
+        460
+      ]
+    },
+    "native_ids": [
+      "utility_api.DeleteColorwayItem"
+    ],
+    "references": [
+      {
+        "id": "utility_api.DeleteColorwayItem",
+        "kind": "direct_call",
+        "expression": "utility_api.DeleteColorwayItem(index)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          459,
+          459
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_delete_colorway"
+    ]
+  },
+  {
+    "command": "delete_fabric",
+    "function": "handle_delete_fabric",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        526,
+        526
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        233,
+        236
+      ]
+    },
+    "native_ids": [
+      "fabric_api.DeleteFabric"
+    ],
+    "references": [
+      {
+        "id": "fabric_api.DeleteFabric",
+        "kind": "direct_call",
+        "expression": "fabric_api.DeleteFabric(fabric_index)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          235,
+          235
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_delete_fabric"
+    ]
+  },
+  {
+    "command": "delete_pattern",
+    "function": "handle_delete_pattern",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        515,
+        515
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        140,
+        143
+      ]
+    },
+    "native_ids": [
+      "pattern_api.DeletePatternPiece"
+    ],
+    "references": [
+      {
+        "id": "pattern_api.DeletePatternPiece",
+        "kind": "direct_call",
+        "expression": "pattern_api.DeletePatternPiece(index)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          142,
+          142
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_delete_pattern"
+    ]
+  },
+  {
+    "command": "export_fbx",
+    "function": "handle_export_fbx",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        528,
+        528
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        262,
+        269
+      ]
+    },
+    "native_ids": [
+      "export_api.ExportFBX",
+      "export_api.ImportExportOption"
+    ],
+    "references": [
+      {
+        "id": "export_api.ImportExportOption",
+        "kind": "direct_call",
+        "expression": "export_api.ImportExportOption()",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          265,
+          265
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "export_api.ExportFBX",
+        "kind": "direct_call",
+        "expression": "export_api.ExportFBX(file_path, options)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          266,
+          266
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "export_api.ExportFBX",
+        "kind": "direct_call",
+        "expression": "export_api.ExportFBX(file_path)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          268,
+          268
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_export_fbx"
+    ]
+  },
+  {
+    "command": "export_glb",
+    "function": "handle_export_glb",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        529,
+        529
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        287,
+        294
+      ]
+    },
+    "native_ids": [
+      "export_api.ExportGLB",
+      "export_api.ImportExportOption",
+      "export_api.NewImportExportOption"
+    ],
+    "references": [
+      {
+        "id": "export_api.ExportGLB",
+        "kind": "direct_call",
+        "expression": "export_api.ExportGLB(file_path, _build_export_option(params.get('options')))",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          291,
+          291
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "export_api.ExportGLB",
+        "kind": "direct_call",
+        "expression": "export_api.ExportGLB(file_path)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          293,
+          293
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "export_api.ImportExportOption",
+        "kind": "direct_call",
+        "expression": "export_api.ImportExportOption()",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          278,
+          278
+        ],
+        "via": [
+          {
+            "function": "_build_export_option",
+            "path": "plugin/clo3d_mcp_plugin.py",
+            "lines": [
+              291,
+              291
+            ]
+          }
+        ],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "export_api.NewImportExportOption",
+        "kind": "direct_call",
+        "expression": "export_api.NewImportExportOption()",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          280,
+          280
+        ],
+        "via": [
+          {
+            "function": "_build_export_option",
+            "path": "plugin/clo3d_mcp_plugin.py",
+            "lines": [
+              291,
+              291
+            ]
+          }
+        ],
+        "confidence": "syntactic_indirect"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "_build_export_option",
+      "handle_export_glb"
+    ]
+  },
+  {
+    "command": "export_gltf",
+    "function": "handle_export_gltf",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        530,
+        530
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        297,
+        304
+      ]
+    },
+    "native_ids": [
+      "export_api.ExportGLTF",
+      "export_api.ImportExportOption",
+      "export_api.NewImportExportOption"
+    ],
+    "references": [
+      {
+        "id": "export_api.ExportGLTF",
+        "kind": "direct_call",
+        "expression": "export_api.ExportGLTF(file_path, _build_export_option(params.get('options')), False)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          300,
+          300
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "export_api.ExportGLTF",
+        "kind": "direct_call",
+        "expression": "export_api.ExportGLTF(file_path)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          303,
+          303
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "export_api.ImportExportOption",
+        "kind": "direct_call",
+        "expression": "export_api.ImportExportOption()",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          278,
+          278
+        ],
+        "via": [
+          {
+            "function": "_build_export_option",
+            "path": "plugin/clo3d_mcp_plugin.py",
+            "lines": [
+              301,
+              301
+            ]
+          }
+        ],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "export_api.NewImportExportOption",
+        "kind": "direct_call",
+        "expression": "export_api.NewImportExportOption()",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          280,
+          280
+        ],
+        "via": [
+          {
+            "function": "_build_export_option",
+            "path": "plugin/clo3d_mcp_plugin.py",
+            "lines": [
+              301,
+              301
+            ]
+          }
+        ],
+        "confidence": "syntactic_indirect"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "_build_export_option",
+      "handle_export_gltf"
+    ]
+  },
+  {
+    "command": "export_obj",
+    "function": "handle_export_obj",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        527,
+        527
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        241,
+        259
+      ]
+    },
+    "native_ids": [
+      "export_api.ExportOBJ",
+      "export_api.NewImportExportOption"
+    ],
+    "references": [
+      {
+        "id": "export_api.NewImportExportOption",
+        "kind": "direct_call",
+        "expression": "export_api.NewImportExportOption()",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          245,
+          245
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "export_api.ExportOBJ",
+        "kind": "direct_call",
+        "expression": "export_api.ExportOBJ(file_path, opt)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          249,
+          249
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "export_api.ExportOBJ",
+        "kind": "direct_call",
+        "expression": "export_api.ExportOBJ(file_path)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          251,
+          251
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_export_obj"
+    ]
+  },
+  {
+    "command": "export_snapshot",
+    "function": "handle_export_snapshot",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        532,
+        532
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        313,
+        316
+      ]
+    },
+    "native_ids": [
+      "export_api.ExportSnapshot3D"
+    ],
+    "references": [
+      {
+        "id": "export_api.ExportSnapshot3D",
+        "kind": "direct_call",
+        "expression": "export_api.ExportSnapshot3D(file_path)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          315,
+          315
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_export_snapshot"
+    ]
+  },
+  {
+    "command": "export_tech_pack",
+    "function": "handle_export_tech_pack",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        534,
+        534
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        329,
+        350
+      ]
+    },
+    "native_ids": [
+      "export_api.ExportTechPack",
+      "export_api.ExportTechPackToStream"
+    ],
+    "references": [
+      {
+        "id": "export_api.ExportTechPack",
+        "kind": "direct_call",
+        "expression": "export_api.ExportTechPack(file_path, option_cls())",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          337,
+          337
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "export_api.ExportTechPackToStream",
+        "kind": "direct_call",
+        "expression": "export_api.ExportTechPackToStream(file_path)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          340,
+          340
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [
+      {
+        "expression": "getattr(export_api, 'ExportTechpackOption', None)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          335,
+          335
+        ],
+        "via": []
+      }
+    ],
+    "reachable_functions": [
+      "handle_export_tech_pack"
+    ]
+  },
+  {
+    "command": "export_thumbnail",
+    "function": "handle_export_thumbnail",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        531,
+        531
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        307,
+        310
+      ]
+    },
+    "native_ids": [
+      "export_api.ExportThumbnail3D"
+    ],
+    "references": [
+      {
+        "id": "export_api.ExportThumbnail3D",
+        "kind": "direct_call",
+        "expression": "export_api.ExportThumbnail3D(file_path)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          309,
+          309
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_export_thumbnail"
+    ]
+  },
+  {
+    "command": "export_turntable",
+    "function": "handle_export_turntable",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        533,
+        533
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        319,
+        326
+      ]
+    },
+    "native_ids": [
+      "export_api.ExportTurntableImages"
+    ],
+    "references": [
+      {
+        "id": "export_api.ExportTurntableImages",
+        "kind": "direct_call",
+        "expression": "export_api.ExportTurntableImages(file_path, num_images, width, height)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          324,
+          324
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_export_turntable"
+    ]
+  },
+  {
+    "command": "flip_pattern",
+    "function": "handle_flip_pattern",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        516,
+        516
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        146,
+        151
+      ]
+    },
+    "native_ids": [
+      "pattern_api.FlipPatternPiece"
+    ],
+    "references": [
+      {
+        "id": "pattern_api.FlipPatternPiece",
+        "kind": "direct_call",
+        "expression": "pattern_api.FlipPatternPiece(index, horizontal, each)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          150,
+          150
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_flip_pattern"
+    ]
+  },
+  {
+    "command": "get_arrangement_list",
+    "function": "handle_get_arrangement_list",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        518,
+        518
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        168,
+        170
+      ]
+    },
+    "native_ids": [
+      "pattern_api.GetArrangementList"
+    ],
+    "references": [
+      {
+        "id": "pattern_api.GetArrangementList",
+        "kind": "direct_call",
+        "expression": "pattern_api.GetArrangementList()",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          169,
+          169
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_get_arrangement_list"
+    ]
+  },
+  {
+    "command": "get_avatar_genders",
+    "function": "handle_get_avatar_genders",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        548,
+        548
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        485,
+        487
+      ]
+    },
+    "native_ids": [
+      "export_api.GetAvatarGenderList"
+    ],
+    "references": [
+      {
+        "id": "export_api.GetAvatarGenderList",
+        "kind": "direct_call",
+        "expression": "export_api.GetAvatarGenderList()",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          486,
+          486
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_get_avatar_genders"
+    ]
+  },
+  {
+    "command": "get_avatars",
+    "function": "handle_get_avatars",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        546,
+        546
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        465,
+        476
+      ]
+    },
+    "native_ids": [
+      "export_api.GetAvatarCount",
+      "export_api.GetAvatarGenderList",
+      "export_api.GetAvatarNameList"
+    ],
+    "references": [
+      {
+        "id": "export_api.GetAvatarCount",
+        "kind": "direct_call",
+        "expression": "export_api.GetAvatarCount()",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          466,
+          466
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "export_api.GetAvatarNameList",
+        "kind": "direct_call",
+        "expression": "export_api.GetAvatarNameList()",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          467,
+          467
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "export_api.GetAvatarGenderList",
+        "kind": "direct_call",
+        "expression": "export_api.GetAvatarGenderList()",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          468,
+          468
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_get_avatars"
+    ]
+  },
+  {
+    "command": "get_bounding_box",
+    "function": "handle_get_bounding_box",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        512,
+        512
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        119,
+        122
+      ]
+    },
+    "native_ids": [
+      "pattern_api.GetBoundingBoxOfPattern"
+    ],
+    "references": [
+      {
+        "id": "pattern_api.GetBoundingBoxOfPattern",
+        "kind": "direct_call",
+        "expression": "pattern_api.GetBoundingBoxOfPattern(index)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          121,
+          121
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_get_bounding_box"
+    ]
+  },
+  {
+    "command": "get_colorways",
+    "function": "handle_get_colorways",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        541,
+        541
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        420,
+        431
+      ]
+    },
+    "native_ids": [
+      "export_api.GetColorwayNameList",
+      "utility_api.GetColorwayCount",
+      "utility_api.GetCurrentColorwayIndex"
+    ],
+    "references": [
+      {
+        "id": "utility_api.GetColorwayCount",
+        "kind": "direct_call",
+        "expression": "utility_api.GetColorwayCount()",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          421,
+          421
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "export_api.GetColorwayNameList",
+        "kind": "direct_call",
+        "expression": "export_api.GetColorwayNameList()",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          422,
+          422
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "utility_api.GetCurrentColorwayIndex",
+        "kind": "direct_call",
+        "expression": "utility_api.GetCurrentColorwayIndex()",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          423,
+          423
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_get_colorways"
+    ]
+  },
+  {
+    "command": "get_fabric_count",
+    "function": "handle_get_fabric_count",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        519,
+        519
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        175,
+        177
+      ]
+    },
+    "native_ids": [
+      "fabric_api.GetFabricCount"
+    ],
+    "references": [
+      {
+        "id": "fabric_api.GetFabricCount",
+        "kind": "direct_call",
+        "expression": "fabric_api.GetFabricCount(True)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          176,
+          176
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_get_fabric_count"
+    ]
+  },
+  {
+    "command": "get_fabric_for_pattern",
+    "function": "handle_get_fabric_for_pattern",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        524,
+        524
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        218,
+        221
+      ]
+    },
+    "native_ids": [
+      "fabric_api.GetFabricIndexForPattern"
+    ],
+    "references": [
+      {
+        "id": "fabric_api.GetFabricIndexForPattern",
+        "kind": "direct_call",
+        "expression": "fabric_api.GetFabricIndexForPattern(pattern_index)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          220,
+          220
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_get_fabric_for_pattern"
+    ]
+  },
+  {
+    "command": "get_fabric_list",
+    "function": "handle_get_fabric_list",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        520,
+        520
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        180,
+        185
+      ]
+    },
+    "native_ids": [
+      "fabric_api.GetFabricCount"
+    ],
+    "references": [
+      {
+        "id": "fabric_api.GetFabricCount",
+        "kind": "direct_call",
+        "expression": "fabric_api.GetFabricCount(True)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          181,
+          181
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_get_fabric_list"
+    ]
+  },
+  {
+    "command": "get_garment_info",
+    "function": "handle_get_garment_info",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        508,
+        508
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        81,
+        89
+      ]
+    },
+    "native_ids": [
+      "export_api.ExportGarmentInformationToStream"
+    ],
+    "references": [
+      {
+        "id": "export_api.ExportGarmentInformationToStream",
+        "kind": "direct_call",
+        "expression": "export_api.ExportGarmentInformationToStream()",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          82,
+          82
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_get_garment_info"
+    ]
+  },
+  {
+    "command": "get_pattern_count",
+    "function": "handle_get_pattern_count",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        509,
+        509
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        94,
+        96
+      ]
+    },
+    "native_ids": [
+      "pattern_api.GetPatternCount"
+    ],
+    "references": [
+      {
+        "id": "pattern_api.GetPatternCount",
+        "kind": "direct_call",
+        "expression": "pattern_api.GetPatternCount()",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          95,
+          95
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_get_pattern_count"
+    ]
+  },
+  {
+    "command": "get_pattern_info",
+    "function": "handle_get_pattern_info",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        511,
+        511
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        108,
+        116
+      ]
+    },
+    "native_ids": [
+      "pattern_api.GetPatternInformation",
+      "pattern_api.GetPatternPieceName"
+    ],
+    "references": [
+      {
+        "id": "pattern_api.GetPatternInformation",
+        "kind": "direct_call",
+        "expression": "pattern_api.GetPatternInformation(index)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          110,
+          110
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "pattern_api.GetPatternPieceName",
+        "kind": "direct_call",
+        "expression": "pattern_api.GetPatternPieceName(index)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          115,
+          115
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_get_pattern_info"
+    ]
+  },
+  {
+    "command": "get_pattern_list",
+    "function": "handle_get_pattern_list",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        510,
+        510
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        99,
+        105
+      ]
+    },
+    "native_ids": [
+      "pattern_api.GetPatternCount",
+      "pattern_api.GetPatternPieceName"
+    ],
+    "references": [
+      {
+        "id": "pattern_api.GetPatternCount",
+        "kind": "direct_call",
+        "expression": "pattern_api.GetPatternCount()",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          100,
+          100
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "pattern_api.GetPatternPieceName",
+        "kind": "direct_call",
+        "expression": "pattern_api.GetPatternPieceName(i)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          103,
+          103
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_get_pattern_list"
+    ]
+  },
+  {
+    "command": "get_project_info",
+    "function": "handle_get_project_info",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        504,
+        504
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        45,
+        61
+      ]
+    },
+    "native_ids": [
+      "fabric_api.GetFabricCount",
+      "pattern_api.GetPatternCount",
+      "utility_api.GetColorwayCount",
+      "utility_api.GetMajorVersion",
+      "utility_api.GetMinorVersion",
+      "utility_api.GetPatchVersion",
+      "utility_api.GetProjectFilePath",
+      "utility_api.GetProjectName"
+    ],
+    "references": [
+      {
+        "id": "utility_api.GetProjectName",
+        "kind": "direct_call",
+        "expression": "utility_api.GetProjectName()",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          46,
+          46
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "utility_api.GetProjectFilePath",
+        "kind": "direct_call",
+        "expression": "utility_api.GetProjectFilePath()",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          47,
+          47
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "utility_api.GetMajorVersion",
+        "kind": "direct_call",
+        "expression": "utility_api.GetMajorVersion()",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          48,
+          48
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "utility_api.GetMinorVersion",
+        "kind": "direct_call",
+        "expression": "utility_api.GetMinorVersion()",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          49,
+          49
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "utility_api.GetPatchVersion",
+        "kind": "direct_call",
+        "expression": "utility_api.GetPatchVersion()",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          50,
+          50
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "pattern_api.GetPatternCount",
+        "kind": "direct_call",
+        "expression": "pattern_api.GetPatternCount()",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          51,
+          51
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "fabric_api.GetFabricCount",
+        "kind": "direct_call",
+        "expression": "fabric_api.GetFabricCount(True)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          52,
+          52
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "utility_api.GetColorwayCount",
+        "kind": "direct_call",
+        "expression": "utility_api.GetColorwayCount()",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          53,
+          53
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_get_project_info"
+    ]
+  },
+  {
+    "command": "import_avatar",
+    "function": "handle_import_avatar",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        537,
+        537
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        381,
+        392
+      ]
+    },
+    "native_ids": [
+      "import_api.ImportAVAC",
+      "import_api.ImportFile"
+    ],
+    "references": [
+      {
+        "id": "import_api.ImportAVAC",
+        "kind": "direct_call",
+        "expression": "import_api.ImportAVAC(file_path, apf_path)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          387,
+          387
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "import_api.ImportFile",
+        "kind": "direct_call",
+        "expression": "import_api.ImportFile(file_path)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          390,
+          390
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_import_avatar"
+    ]
+  },
+  {
+    "command": "import_dxf",
+    "function": "handle_import_dxf",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        536,
+        536
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        364,
+        378
+      ]
+    },
+    "native_ids": [
+      "import_api.ImportDXF"
+    ],
+    "references": [
+      {
+        "id": "import_api.ImportDXF",
+        "kind": "direct_call",
+        "expression": "import_api.ImportDXF(file_path, opt)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          376,
+          376
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [
+      {
+        "expression": "getattr(opt, k)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          378,
+          378
+        ],
+        "via": []
+      }
+    ],
+    "reachable_functions": [
+      "handle_import_dxf"
+    ]
+  },
+  {
+    "command": "import_fabric",
+    "function": "handle_import_fabric",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        538,
+        538
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        395,
+        398
+      ]
+    },
+    "native_ids": [
+      "fabric_api.AddFabric"
+    ],
+    "references": [
+      {
+        "id": "fabric_api.AddFabric",
+        "kind": "direct_call",
+        "expression": "fabric_api.AddFabric(file_path)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          397,
+          397
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_import_fabric"
+    ]
+  },
+  {
+    "command": "import_file",
+    "function": "handle_import_file",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        535,
+        535
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        355,
+        358
+      ]
+    },
+    "native_ids": [
+      "import_api.ImportFile"
+    ],
+    "references": [
+      {
+        "id": "import_api.ImportFile",
+        "kind": "direct_call",
+        "expression": "import_api.ImportFile(file_path)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          357,
+          357
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_import_file"
+    ]
+  },
+  {
+    "command": "new_project",
+    "function": "handle_new_project",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        505,
+        505
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        64,
+        66
+      ]
+    },
+    "native_ids": [
+      "utility_api.NewProject"
+    ],
+    "references": [
+      {
+        "id": "utility_api.NewProject",
+        "kind": "direct_call",
+        "expression": "utility_api.NewProject()",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          65,
+          65
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_new_project"
+    ]
+  },
+  {
+    "command": "open_file",
+    "function": "handle_open_file",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        506,
+        506
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        69,
+        72
+      ]
+    },
+    "native_ids": [
+      "import_api.ImportFile"
+    ],
+    "references": [
+      {
+        "id": "import_api.ImportFile",
+        "kind": "direct_call",
+        "expression": "import_api.ImportFile(file_path)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          71,
+          71
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_open_file"
+    ]
+  },
+  {
+    "command": "ping",
+    "function": "handle_ping",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        502,
+        502
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        35,
+        40
+      ]
+    },
+    "native_ids": [],
+    "references": [],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_ping"
+    ]
+  },
+  {
+    "command": "replace_fabric",
+    "function": "handle_replace_fabric",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        525,
+        525
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        224,
+        230
+      ]
+    },
+    "native_ids": [
+      "fabric_api.ReplaceFabric"
+    ],
+    "references": [
+      {
+        "id": "fabric_api.ReplaceFabric",
+        "kind": "direct_call",
+        "expression": "fabric_api.ReplaceFabric(fabric_index, file_path)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          228,
+          228
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_replace_fabric"
+    ]
+  },
+  {
+    "command": "save_file",
+    "function": "handle_save_file",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        507,
+        507
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        75,
+        78
+      ]
+    },
+    "native_ids": [
+      "export_api.ExportZPrj"
+    ],
+    "references": [
+      {
+        "id": "export_api.ExportZPrj",
+        "kind": "direct_call",
+        "expression": "export_api.ExportZPrj(file_path)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          77,
+          77
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_save_file"
+    ]
+  },
+  {
+    "command": "set_colorway_name",
+    "function": "handle_set_colorway_name",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        543,
+        543
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        440,
+        444
+      ]
+    },
+    "native_ids": [
+      "utility_api.SetColorwayName"
+    ],
+    "references": [
+      {
+        "id": "utility_api.SetColorwayName",
+        "kind": "direct_call",
+        "expression": "utility_api.SetColorwayName(index, name)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          443,
+          443
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_set_colorway_name"
+    ]
+  },
+  {
+    "command": "set_current_colorway",
+    "function": "handle_set_current_colorway",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        542,
+        542
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        434,
+        437
+      ]
+    },
+    "native_ids": [
+      "utility_api.SetCurrentColorwayIndex"
+    ],
+    "references": [
+      {
+        "id": "utility_api.SetCurrentColorwayIndex",
+        "kind": "direct_call",
+        "expression": "utility_api.SetCurrentColorwayIndex(index)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          436,
+          436
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_set_current_colorway"
+    ]
+  },
+  {
+    "command": "set_fabric_color",
+    "function": "handle_set_fabric_color",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        523,
+        523
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        202,
+        215
+      ]
+    },
+    "native_ids": [
+      "fabric_api.SetFabricPBRMaterialBaseColor"
+    ],
+    "references": [
+      {
+        "id": "fabric_api.SetFabricPBRMaterialBaseColor",
+        "kind": "direct_call",
+        "expression": "fabric_api.SetFabricPBRMaterialBaseColor(fabric_index, material_face, r_f, g_f, b_f, a_f)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          214,
+          214
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_set_fabric_color"
+    ]
+  },
+  {
+    "command": "set_pattern_name",
+    "function": "handle_set_pattern_name",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        513,
+        513
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        125,
+        129
+      ]
+    },
+    "native_ids": [
+      "pattern_api.SetPatternPieceName"
+    ],
+    "references": [
+      {
+        "id": "pattern_api.SetPatternPieceName",
+        "kind": "direct_call",
+        "expression": "pattern_api.SetPatternPieceName(index, name)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          128,
+          128
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_set_pattern_name"
+    ]
+  },
+  {
+    "command": "set_simulation_quality",
+    "function": "handle_set_simulation_quality",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        540,
+        540
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        409,
+        415
+      ]
+    },
+    "native_ids": [
+      "utility_api.SetSimulationQuality"
+    ],
+    "references": [
+      {
+        "id": "utility_api.SetSimulationQuality",
+        "kind": "direct_call",
+        "expression": "utility_api.SetSimulationQuality(quality, simulation_mode)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          414,
+          414
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_set_simulation_quality"
+    ]
+  },
+  {
+    "command": "show_hide_avatar",
+    "function": "handle_show_hide_avatar",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        547,
+        547
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        479,
+        482
+      ]
+    },
+    "native_ids": [
+      "utility_api.SetShowHideAvatar"
+    ],
+    "references": [
+      {
+        "id": "utility_api.SetShowHideAvatar",
+        "kind": "direct_call",
+        "expression": "utility_api.SetShowHideAvatar(show)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          481,
+          481
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_show_hide_avatar"
+    ]
+  },
+  {
+    "command": "simulate",
+    "function": "handle_simulate",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        539,
+        539
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        403,
+        406
+      ]
+    },
+    "native_ids": [
+      "utility_api.Simulate"
+    ],
+    "references": [
+      {
+        "id": "utility_api.Simulate",
+        "kind": "direct_call",
+        "expression": "utility_api.Simulate(steps)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          405,
+          405
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_simulate"
+    ]
+  },
+  {
+    "command": "stop",
+    "function": "handle_stop",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        503,
+        503
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        494,
+        498
+      ]
+    },
+    "native_ids": [],
+    "references": [],
+    "dynamic_expressions": [
+      {
+        "expression": "getattr(builtins, '_clo3d_mcp', None)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          495,
+          495
+        ],
+        "via": []
+      }
+    ],
+    "reachable_functions": [
+      "handle_stop"
+    ]
+  }
+]

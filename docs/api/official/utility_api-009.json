@@ -1,0 +1,2310 @@
+{
+  "kind": "methods",
+  "records": [
+    {
+      "id": "utility_api.SetWindControllerSettings",
+      "qualified_name": "utility_api.SetWindControllerSettings",
+      "module": "utility_api",
+      "symbol": "SetWindControllerSettings",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetWindControllerSettings#36c69806ddc47371",
+          "signature_normalized": "def SetWindControllerSettings(_index : int, _op : WindControllerOptions) -> bool",
+          "signature_raw": "def SetWindControllerSettings(_index : int, _op : WindControllerOptions) -> bool",
+          "parameters": [
+            {
+              "raw": "_index : int",
+              "name": "_index",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_op : WindControllerOptions",
+              "name": "_op",
+              "annotation_raw": "WindControllerOptions"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def SetWindControllerSettings(_index : int, _op : WindControllerOptions) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief It is a function that sets the configuration values for the wind controller.\n@param _index : It is the index of the wincontroller list.\n@param  _op : It is a parameter of the WindControllerOptions struct.\n@return It returns false if the index is invalid.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 23292,
+                  "block": 2031
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 24397,
+                  "block": 2031,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetWindControllerSettings()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief It is a function that sets the configuration values for the wind controller.\n/// @param _index : It is the index of the wincontroller list.\n/// @param  _op : It is a parameter of the WindControllerOptions struct.\n/// @return It returns false if the index is invalid.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 23303,
+                    "block": 2032
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 24408,
+                    "block": 2032,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "WindControllerOptions",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:WindControllerOptions"
+            },
+            {
+              "name": "WindControllerOptions",
+              "basis": "documentation_mention",
+              "status": "resolved",
+              "type_id": "type:WindControllerOptions"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param _index : It is the index of the wincontroller list.",
+            "@param  _op : It is a parameter of the WindControllerOptions struct."
+          ],
+          "return_docs_raw": [
+            "@return It returns false if the index is invalid."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetWindPosition",
+      "qualified_name": "utility_api.SetWindPosition",
+      "module": "utility_api",
+      "symbol": "SetWindPosition",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetWindPosition#f0ac3fc4206e6298",
+          "signature_normalized": "def SetWindPosition(_xPos : float, _yPos : float, _zPos : float) -> None",
+          "signature_raw": "def SetWindPosition(_xPos : float, _yPos : float, _zPos : float) -> None",
+          "parameters": [
+            {
+              "raw": "_xPos : float",
+              "name": "_xPos",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_yPos : float",
+              "name": "_yPos",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_zPos : float",
+              "name": "_zPos",
+              "annotation_raw": "float"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetWindPosition(_xPos : float, _yPos : float, _zPos : float) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief It is a function that sets the position of the wind.\n@param _xPos : Position along the X-axis.\n@param _yPos : Position along the Y-axis.\n@param _zPos : Position along the Z-axis.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 24638,
+                  "block": 2143
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 25799,
+                  "block": 2143,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetWindPosition(float _xPos, float _yPos, float _zPos)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief It is a function that sets the position of the wind.\n/// @param _xPos : Position along the X-axis.\n/// @param _yPos : Position along the Y-axis.\n/// @param _zPos : Position along the Z-axis.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 24649,
+                    "block": 2144
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 25810,
+                    "block": 2144,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _xPos : Position along the X-axis.",
+            "@param _yPos : Position along the Y-axis.",
+            "@param _zPos : Position along the Z-axis."
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetWindRotation",
+      "qualified_name": "utility_api.SetWindRotation",
+      "module": "utility_api",
+      "symbol": "SetWindRotation",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetWindRotation#1126fc6bff30dac3",
+          "signature_normalized": "def SetWindRotation(_xAngle : float, _yAngle : float, _zAngle : float) -> None",
+          "signature_raw": "def SetWindRotation(_xAngle : float, _yAngle : float, _zAngle : float) -> None",
+          "parameters": [
+            {
+              "raw": "_xAngle : float",
+              "name": "_xAngle",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_yAngle : float",
+              "name": "_yAngle",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_zAngle : float",
+              "name": "_zAngle",
+              "annotation_raw": "float"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetWindRotation(_xAngle : float, _yAngle : float, _zAngle : float) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief It is a function that sets the rotation of the wind.\n@param _xAngle : Rotation angle around the X-axis in degrees.\n@param _yAngle : Rotation angle around the Y-axis in degrees.\n@param _zAngle : Rotation angle around the Z-axis in degrees.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 24596,
+                  "block": 2139
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 25755,
+                  "block": 2139,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetWindRotation(float _xAngle, float _yAngle, float _zAngle)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief It is a function that sets the rotation of the wind.\n/// @param _xAngle : Rotation angle around the X-axis in degrees.\n/// @param _yAngle : Rotation angle around the Y-axis in degrees.\n/// @param _zAngle : Rotation angle around the Z-axis in degrees.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 24607,
+                    "block": 2140
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 25766,
+                    "block": 2140,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _xAngle : Rotation angle around the X-axis in degrees.",
+            "@param _yAngle : Rotation angle around the Y-axis in degrees.",
+            "@param _zAngle : Rotation angle around the Z-axis in degrees."
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetZipperBottomStopperStyle",
+      "qualified_name": "utility_api.SetZipperBottomStopperStyle",
+      "module": "utility_api",
+      "symbol": "SetZipperBottomStopperStyle",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetZipperBottomStopperStyle#1ef0507441721bf1",
+          "signature_normalized": "def SetZipperBottomStopperStyle(_zipperStyleIndex : int, _filePath : str) -> None",
+          "signature_raw": "def SetZipperBottomStopperStyle(_zipperStyleIndex : int, _filePath : str) -> None",
+          "parameters": [
+            {
+              "raw": "_zipperStyleIndex : int",
+              "name": "_zipperStyleIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetZipperBottomStopperStyle(_zipperStyleIndex : int, _filePath : str) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Update the zipper bottom stopper style.\n@param _zipperStyleIndex: The zipper style index.\n@param _filePath: Bottom stopper file path (.zsp, .zst)\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 23655,
+                  "block": 2061
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 24775,
+                  "block": 2061,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetZipperBottomStopperStyle(int _zipperStyleIndex, const std::string& _filePath)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Update the zipper bottom stopper style.\n/// @param _zipperStyleIndex: The zipper style index.\n/// @param _filePath: Bottom stopper file path (.zsp, .zst)",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 23665,
+                    "block": 2062
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 24785,
+                    "block": 2062,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _zipperStyleIndex: The zipper style index.",
+            "@param _filePath: Bottom stopper file path (.zsp, .zst)"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetZipperPullerStyle",
+      "qualified_name": "utility_api.SetZipperPullerStyle",
+      "module": "utility_api",
+      "symbol": "SetZipperPullerStyle",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetZipperPullerStyle#28a72c84180d3014",
+          "signature_normalized": "def SetZipperPullerStyle(_zipperStyleIndex : int, _filePath : str) -> None",
+          "signature_raw": "def SetZipperPullerStyle(_zipperStyleIndex : int, _filePath : str) -> None",
+          "parameters": [
+            {
+              "raw": "_zipperStyleIndex : int",
+              "name": "_zipperStyleIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetZipperPullerStyle(_zipperStyleIndex : int, _filePath : str) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Update the zipper puller style.\n@param _zipperStyleIndex: The zipper style index.\n@param _filePath: Puller file path. (.zpl, .zpu)\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 23613,
+                  "block": 2057
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 24731,
+                  "block": 2057,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetZipperPullerStyle(int _zipperStyleIndex, const std::string& _filePath)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Update the zipper puller style.\n/// @param _zipperStyleIndex: The zipper style index.\n/// @param _filePath: Puller file path. (.zpl, .zpu)",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 23623,
+                    "block": 2058
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 24741,
+                    "block": 2058,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _zipperStyleIndex: The zipper style index.",
+            "@param _filePath: Puller file path. (.zpl, .zpu)"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetZipperSliderStyle",
+      "qualified_name": "utility_api.SetZipperSliderStyle",
+      "module": "utility_api",
+      "symbol": "SetZipperSliderStyle",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetZipperSliderStyle#6a4bd2264303984f",
+          "signature_normalized": "def SetZipperSliderStyle(_zipperStyleIndex : int, _filePath : str) -> None",
+          "signature_raw": "def SetZipperSliderStyle(_zipperStyleIndex : int, _filePath : str) -> None",
+          "parameters": [
+            {
+              "raw": "_zipperStyleIndex : int",
+              "name": "_zipperStyleIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetZipperSliderStyle(_zipperStyleIndex : int, _filePath : str) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Update the zipper slider style.\n@param _zipperStyleIndex: The zipper style index.\n@param _filePath: Slider file path. (.zsd, .zsl, .zss)\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 23592,
+                  "block": 2055
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 24709,
+                  "block": 2055,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetZipperSliderStyle(int _zipperStyleIndex, const std::string& _filePath)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Update the zipper slider style.\n/// @param _zipperStyleIndex: The zipper style index.\n/// @param _filePath: Slider file path. (.zsd, .zsl, .zss)",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 23602,
+                    "block": 2056
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 24719,
+                    "block": 2056,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _zipperStyleIndex: The zipper style index.",
+            "@param _filePath: Slider file path. (.zsd, .zsl, .zss)"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetZipperStyleAssetType",
+      "qualified_name": "utility_api.SetZipperStyleAssetType",
+      "module": "utility_api",
+      "symbol": "SetZipperStyleAssetType",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetZipperStyleAssetType#d55897f5789f2a47",
+          "signature_normalized": "def SetZipperStyleAssetType(_zipperStyleIndex : int, _typeIndex : int) -> None",
+          "signature_raw": "def SetZipperStyleAssetType(_zipperStyleIndex : int, _typeIndex : int) -> None",
+          "parameters": [
+            {
+              "raw": "_zipperStyleIndex : int",
+              "name": "_zipperStyleIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_typeIndex : int",
+              "name": "_typeIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetZipperStyleAssetType(_zipperStyleIndex : int, _typeIndex : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Update the zipper style asset type.\n@param _zipperStyleIndex: The zipper style index.\n@param _typeIndex: The asset type index.\n0: Custom(No Change)\n1: Plastic_01\n2: Plastic_02\n3: Metal\n4: Nylon\n5: Reverse_Nylon\n6: Invisible\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 23472,
+                  "block": 2047
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 24585,
+                  "block": 2047,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetZipperStyleAssetType(int _zipperStyleIndex, int _typeIndex)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Update the zipper style asset type.\n/// @param _zipperStyleIndex: The zipper style index.\n/// @param _typeIndex: The asset type index.\n/// 0: Custom(No Change)\n/// 1: Plastic_01\n/// 2: Plastic_02\n/// 3: Metal\n/// 4: Nylon\n/// 5: Reverse_Nylon\n/// 6: Invisible",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 23489,
+                    "block": 2048
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 24602,
+                    "block": 2048,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _zipperStyleIndex: The zipper style index.",
+            "@param _typeIndex: The asset type index."
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetZipperStyleFunctionType",
+      "qualified_name": "utility_api.SetZipperStyleFunctionType",
+      "module": "utility_api",
+      "symbol": "SetZipperStyleFunctionType",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetZipperStyleFunctionType#6aab9c94d490639c",
+          "signature_normalized": "def SetZipperStyleFunctionType(_zipperStyleIndex : int, _typeIndex : int) -> None",
+          "signature_raw": "def SetZipperStyleFunctionType(_zipperStyleIndex : int, _typeIndex : int) -> None",
+          "parameters": [
+            {
+              "raw": "_zipperStyleIndex : int",
+              "name": "_zipperStyleIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_typeIndex : int",
+              "name": "_typeIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetZipperStyleFunctionType(_zipperStyleIndex : int, _typeIndex : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Update the zipper style function type.\n@param _zipperStyleIndex: The zipper style index.\n@param _typeIndex: The function type index.\n0: One way\n1: Two way(Bottom to bottom)\n2: Two way(Head to head)\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 23418,
+                  "block": 2043
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 24529,
+                  "block": 2043,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetZipperStyleFunctionType(int _zipperStyleIndex, int _typeIndex)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Update the zipper style function type.\n/// @param _zipperStyleIndex: The zipper style index.\n/// @param _typeIndex: The function type index.\n/// 0: One way\n/// 1: Two way(Bottom to bottom)\n/// 2: Two way(Head to head)",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 23431,
+                    "block": 2044
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 24542,
+                    "block": 2044,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _zipperStyleIndex: The zipper style index.",
+            "@param _typeIndex: The function type index."
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetZipperStyleName",
+      "qualified_name": "utility_api.SetZipperStyleName",
+      "module": "utility_api",
+      "symbol": "SetZipperStyleName",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetZipperStyleName#cd92aca2c5a11092",
+          "signature_normalized": "def SetZipperStyleName(_zipperStyleIndex : int, _name : str) -> None",
+          "signature_raw": "def SetZipperStyleName(_zipperStyleIndex : int, _name : str) -> None",
+          "parameters": [
+            {
+              "raw": "_zipperStyleIndex : int",
+              "name": "_zipperStyleIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_name : str",
+              "name": "_name",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetZipperStyleName(_zipperStyleIndex : int, _name : str) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Updates the zipper style name.\n@param _zipperStyleIndex: The zipper style index.\n@param _name: Name.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 23376,
+                  "block": 2039
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 24485,
+                  "block": 2039,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetZipperStyleName(int _zipperStyleIndex, const std::string& _name)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Updates the zipper style name.\n/// @param _zipperStyleIndex: The zipper style index.\n/// @param _name: Name.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 23386,
+                    "block": 2040
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 24495,
+                    "block": 2040,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _zipperStyleIndex: The zipper style index.",
+            "@param _name: Name."
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetZipperStyleTapeThickness",
+      "qualified_name": "utility_api.SetZipperStyleTapeThickness",
+      "module": "utility_api",
+      "symbol": "SetZipperStyleTapeThickness",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetZipperStyleTapeThickness#015d6571964146b3",
+          "signature_normalized": "def SetZipperStyleTapeThickness(_zipperStyleIndex : int, _tapeThickness : float) -> None",
+          "signature_raw": "def SetZipperStyleTapeThickness(_zipperStyleIndex : int, _tapeThickness : float) -> None",
+          "parameters": [
+            {
+              "raw": "_zipperStyleIndex : int",
+              "name": "_zipperStyleIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_tapeThickness : float",
+              "name": "_tapeThickness",
+              "annotation_raw": "float"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetZipperStyleTapeThickness(_zipperStyleIndex : int, _tapeThickness : float) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Update the zipper style tape thickness.\n@param _zipperStyleIndex: The zipper style index.\n@param _tapeThickness: Tape thickness (mm)\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 23760,
+                  "block": 2071
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 24885,
+                  "block": 2071,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetZipperStyleTapeThickness(int _zipperStyleIndex, float _tapeThickness)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Update the zipper style tape thickness.\n/// @param _zipperStyleIndex: The zipper style index.\n/// @param _tapeThickness: Tape thickness (mm)",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 23770,
+                    "block": 2072
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 24895,
+                    "block": 2072,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _zipperStyleIndex: The zipper style index.",
+            "@param _tapeThickness: Tape thickness (mm)"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetZipperStyleTeethType",
+      "qualified_name": "utility_api.SetZipperStyleTeethType",
+      "module": "utility_api",
+      "symbol": "SetZipperStyleTeethType",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetZipperStyleTeethType#fed8bd495d8daad1",
+          "signature_normalized": "def SetZipperStyleTeethType(_zipperStyleIndex : int, _typeIndex : int) -> None",
+          "signature_raw": "def SetZipperStyleTeethType(_zipperStyleIndex : int, _typeIndex : int) -> None",
+          "parameters": [
+            {
+              "raw": "_zipperStyleIndex : int",
+              "name": "_zipperStyleIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_typeIndex : int",
+              "name": "_typeIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetZipperStyleTeethType(_zipperStyleIndex : int, _typeIndex : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Update the zipper style teeth type.\n@param _zipperStyleIndex: The zipper style index.\n@param _typeIndex: The teeth type index.\n0: Texture\n1: OBJ\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 23542,
+                  "block": 2051
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 24657,
+                  "block": 2051,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetZipperStyleTeethType(int _zipperStyleIndex, int _typeIndex)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Update the zipper style teeth type.\n/// @param _zipperStyleIndex: The zipper style index.\n/// @param _typeIndex: The teeth type index.\n/// 0: Texture\n/// 1: OBJ",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 23554,
+                    "block": 2052
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 24669,
+                    "block": 2052,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _zipperStyleIndex: The zipper style index.",
+            "@param _typeIndex: The teeth type index."
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetZipperStyleTeethWidth",
+      "qualified_name": "utility_api.SetZipperStyleTeethWidth",
+      "module": "utility_api",
+      "symbol": "SetZipperStyleTeethWidth",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetZipperStyleTeethWidth#450d2d01769cf102",
+          "signature_normalized": "def SetZipperStyleTeethWidth(_zipperStyleIndex : int, _teethWidth : float) -> None",
+          "signature_raw": "def SetZipperStyleTeethWidth(_zipperStyleIndex : int, _teethWidth : float) -> None",
+          "parameters": [
+            {
+              "raw": "_zipperStyleIndex : int",
+              "name": "_zipperStyleIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_teethWidth : float",
+              "name": "_teethWidth",
+              "annotation_raw": "float"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetZipperStyleTeethWidth(_zipperStyleIndex : int, _teethWidth : float) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Update the zipper style teeth width.\n@param _zipperStyleIndex: The zipper style index.\n@param _teethWidth: Teeth width (mm)\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 23676,
+                  "block": 2063
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 24797,
+                  "block": 2063,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetZipperStyleTeethWidth(int _zipperStyleIndex, float _teethWidth)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Update the zipper style teeth width.\n/// @param _zipperStyleIndex: The zipper style index.\n/// @param _teethWidth: Teeth width (mm)",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 23686,
+                    "block": 2064
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 24807,
+                    "block": 2064,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _zipperStyleIndex: The zipper style index.",
+            "@param _teethWidth: Teeth width (mm)"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetZipperStyleWeight",
+      "qualified_name": "utility_api.SetZipperStyleWeight",
+      "module": "utility_api",
+      "symbol": "SetZipperStyleWeight",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetZipperStyleWeight#0b5bf9d6bc424057",
+          "signature_normalized": "def SetZipperStyleWeight(_zipperStyleIndex : int, _weight : float) -> None",
+          "signature_raw": "def SetZipperStyleWeight(_zipperStyleIndex : int, _weight : float) -> None",
+          "parameters": [
+            {
+              "raw": "_zipperStyleIndex : int",
+              "name": "_zipperStyleIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_weight : float",
+              "name": "_weight",
+              "annotation_raw": "float"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetZipperStyleWeight(_zipperStyleIndex : int, _weight : float) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Update the zipper style weight.\n@param _zipperStyleIndex: The zipper style index.\n@param _weight: Weight (g)\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 23718,
+                  "block": 2067
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 24841,
+                  "block": 2067,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetZipperStyleWeight(int _zipperStyleIndex, float _weight)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Update the zipper style weight.\n/// @param _zipperStyleIndex: The zipper style index.\n/// @param _weight: Weight (g)",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 23728,
+                    "block": 2068
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 24851,
+                    "block": 2068,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _zipperStyleIndex: The zipper style index.",
+            "@param _weight: Weight (g)"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetZipperTopStopperStyle",
+      "qualified_name": "utility_api.SetZipperTopStopperStyle",
+      "module": "utility_api",
+      "symbol": "SetZipperTopStopperStyle",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetZipperTopStopperStyle#2656c83b99fad356",
+          "signature_normalized": "def SetZipperTopStopperStyle(_zipperStyleIndex : int, _filePath : str) -> None",
+          "signature_raw": "def SetZipperTopStopperStyle(_zipperStyleIndex : int, _filePath : str) -> None",
+          "parameters": [
+            {
+              "raw": "_zipperStyleIndex : int",
+              "name": "_zipperStyleIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetZipperTopStopperStyle(_zipperStyleIndex : int, _filePath : str) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Update the zipper top stopper style.\n@param _zipperStyleIndex: The zipper style index.\n@param _filePath: Top stopper file path. (.zsp, .zst)\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 23634,
+                  "block": 2059
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 24753,
+                  "block": 2059,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetZipperTopStopperStyle(int _zipperStyleIndex, const std::string& _filePath)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Update the zipper top stopper style.\n/// @param _zipperStyleIndex: The zipper style index.\n/// @param _filePath: Top stopper file path. (.zsp, .zst)",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 23644,
+                    "block": 2060
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 24763,
+                    "block": 2060,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _zipperStyleIndex: The zipper style index.",
+            "@param _filePath: Top stopper file path. (.zsp, .zst)"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetZoomView",
+      "qualified_name": "utility_api.SetZoomView",
+      "module": "utility_api",
+      "symbol": "SetZoomView",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetZoomView#e23875d5903dadf5",
+          "signature_normalized": "def SetZoomView() -> None",
+          "signature_raw": "def SetZoomView() -> None",
+          "parameters": [],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetZoomView() -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Zoom cloth\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 20842,
+                  "block": 1811
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 21837,
+                  "block": 1811,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetZoomCloth()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Zoom cloth",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 20850,
+                    "block": 1812
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 21845,
+                    "block": 1812,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.Simulate",
+      "qualified_name": "utility_api.Simulate",
+      "module": "utility_api",
+      "symbol": "Simulate",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.Simulate#4b94ee3583b43d34",
+          "signature_normalized": "def Simulate(_steps : int) -> bool",
+          "signature_raw": "def Simulate(_steps : int) -> bool",
+          "parameters": [
+            {
+              "raw": "_steps : int",
+              "name": "_steps",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def Simulate(_steps : int) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Simulate the garment in multi steps. All dynamics properties (time step, CG iteration count, ...) follow the current simulation properties\n@param _steps: how many steps(=frames) to simulate\n@return if it succeeds, return true.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 18098,
+                  "block": 1555
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 18965,
+                  "block": 1555,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "Simulate(unsigned int _steps)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Simulate the garment in multi steps. All dynamics properties (time step, CG iteration count, ...) follow the current simulation properties\n/// @param _steps: how many steps(=frames) to simulate\n/// @return if it succeeds, return true.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 18108,
+                    "block": 1556
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 18975,
+                    "block": 1556,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _steps: how many steps(=frames) to simulate"
+          ],
+          "return_docs_raw": [
+            "@return if it succeeds, return true."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.StartNesting",
+      "qualified_name": "utility_api.StartNesting",
+      "module": "utility_api",
+      "symbol": "StartNesting",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.StartNesting#a650f1c164f5e97f",
+          "signature_normalized": "def StartNesting() -> None",
+          "signature_raw": "def StartNesting() -> None",
+          "parameters": [],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def StartNesting() -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Start Nesting Simulation\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 18406,
+                  "block": 1587
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 19289,
+                  "block": 1587,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "StartNesting()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Start Nesting Simulation",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 18414,
+                    "block": 1588
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 19297,
+                    "block": 1588,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.StopNesting",
+      "qualified_name": "utility_api.StopNesting",
+      "module": "utility_api",
+      "symbol": "StopNesting",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.StopNesting#ccc01166932fd16a",
+          "signature_normalized": "def StopNesting() -> None",
+          "signature_raw": "def StopNesting() -> None",
+          "parameters": [],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def StopNesting() -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Stop Nesting process\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 19002,
+                  "block": 1651
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 19917,
+                  "block": 1651,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "StopNesting()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Stop Nesting process",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 19010,
+                    "block": 1652
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 19925,
+                    "block": 1652,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.TerminatePlugInFromList",
+      "qualified_name": "utility_api.TerminatePlugInFromList",
+      "module": "utility_api",
+      "symbol": "TerminatePlugInFromList",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.TerminatePlugInFromList#9727a7cde6f67311",
+          "signature_normalized": "def TerminatePlugInFromList(_pluginListIndex : int) -> None",
+          "signature_raw": "def TerminatePlugInFromList(_pluginListIndex : int) -> None",
+          "parameters": [
+            {
+              "raw": "_pluginListIndex : int",
+              "name": "_pluginListIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def TerminatePlugInFromList(_pluginListIndex : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Terminate Plug In From PluginList\n@param _pluginListIndex: PluginList index to use the plugin\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 19772,
+                  "block": 1719
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 20721,
+                  "block": 1719,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "TerminatePlugInFromList(unsigned int _pluginListIndex)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Terminate Plug In From PluginList\n/// @param _pluginListIndex: PluginList index to use the plugin",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 19781,
+                    "block": 1720
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 20730,
+                    "block": 1720,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _pluginListIndex: PluginList index to use the plugin"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.UVPacking",
+      "qualified_name": "utility_api.UVPacking",
+      "module": "utility_api",
+      "symbol": "UVPacking",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.UVPacking#004899eacbe11126",
+          "signature_normalized": "def UVPacking(_bAll : bool, _bFixScaleRatio : bool, _bAdvancedSearch : bool, _padding : float, _fidelity : int, _roationAngleOptions : list[int]) -> bool",
+          "signature_raw": "def UVPacking(_bAll : bool, _bFixScaleRatio : bool, _bAdvancedSearch : bool, _padding : float, _fidelity : int, _roationAngleOptions : list[int]) -> bool",
+          "parameters": [
+            {
+              "raw": "_bAll : bool",
+              "name": "_bAll",
+              "annotation_raw": "bool"
+            },
+            {
+              "raw": "_bFixScaleRatio : bool",
+              "name": "_bFixScaleRatio",
+              "annotation_raw": "bool"
+            },
+            {
+              "raw": "_bAdvancedSearch : bool",
+              "name": "_bAdvancedSearch",
+              "annotation_raw": "bool"
+            },
+            {
+              "raw": "_padding : float",
+              "name": "_padding",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_fidelity : int",
+              "name": "_fidelity",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_roationAngleOptions : list[int]",
+              "name": "_roationAngleOptions",
+              "annotation_raw": "list[int]"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def UVPacking(_bAll : bool, _bFixScaleRatio : bool, _bAdvancedSearch : bool, _padding : float, _fidelity : int, _roationAngleOptions : list[int]) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Packing patterns in UV editor\n@param _bAll: true for all patterns, false for selected patterns\n@param _bFixScaleRatio: true - preserve current patterns size; false - rescale patterns\n@param _bAdvancedSearch: true - use genetic algorithm to find improved solution\n@param _padding: related values for UV packing padding (0.001 = 1 padding value in the UV tile)\n@param _fidelity: (1-5) how simplified (internally) the patterns are for nesting (1=most simplified, 5=least simplified).\n@param _roationAngleOptions: rotation angle(degree) options for packing, default value is 0 degree ex) {0, 180} can rotate up side down\n@return If packing succeeds, return true.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 19533,
+                  "block": 1697
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 20471,
+                  "block": 1697,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "UVPacking(bool _bAll, float _textureFillSeam, int _imgSize)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Packing patterns in UV editor\n/// @param _bAll: true for all patterns, false for selected patterns\n/// @param _bFixScaleRatio: true - preserve current patterns size; false - rescale patterns\n/// @param _bAdvancedSearch: true - use genetic algorithm to find improved solution\n/// @param _padding: related values for UV packing padding (0.001 = 1 padding value in the UV tile)\n/// @param _fidelity: (1-5) how simplified (internally) the patterns are for nesting (1=most simplified, 5=least simplified).\n/// @param _roationAngleOptions: rotation angle(degree) options for packing, default value is 0 degree ex) {0, 180} can rotate up side down\n/// @return If packing succeeds, return true.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 19548,
+                    "block": 1698
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 20486,
+                    "block": 1698,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _bAll: true for all patterns, false for selected patterns",
+            "@param _bFixScaleRatio: true - preserve current patterns size; false - rescale patterns",
+            "@param _bAdvancedSearch: true - use genetic algorithm to find improved solution",
+            "@param _padding: related values for UV packing padding (0.001 = 1 padding value in the UV tile)",
+            "@param _fidelity: (1-5) how simplified (internally) the patterns are for nesting (1=most simplified, 5=least simplified).",
+            "@param _roationAngleOptions: rotation angle(degree) options for packing, default value is 0 degree ex) {0, 180} can rotate up side down"
+          ],
+          "return_docs_raw": [
+            "@return If packing succeeds, return true."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.UnfastenAllButtons",
+      "qualified_name": "utility_api.UnfastenAllButtons",
+      "module": "utility_api",
+      "symbol": "UnfastenAllButtons",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.UnfastenAllButtons#cf653e6d73628ac8",
+          "signature_normalized": "def UnfastenAllButtons() -> int",
+          "signature_raw": "def UnfastenAllButtons() -> int",
+          "parameters": [],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "def UnfastenAllButtons() -> int",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Remove every button fastener in the scene and spring the freed button heads back to their resting position. Inverse of FastenButtons. The button heads and holes themselves are kept.\n@return The number of fasteners removed.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 23182,
+                  "block": 2019
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 24281,
+                  "block": 2019,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "UnfastenAllButtons()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Remove every button fastener in the scene and spring the freed button heads back to their resting position. Inverse of FastenButtons. The button heads and holes themselves are kept.\n/// @return The number of fasteners removed.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 23191,
+                    "block": 2020
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 24290,
+                    "block": 2020,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return The number of fasteners removed."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.UnlinkGraphicStyleAllColorways",
+      "qualified_name": "utility_api.UnlinkGraphicStyleAllColorways",
+      "module": "utility_api",
+      "symbol": "UnlinkGraphicStyleAllColorways",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.UnlinkGraphicStyleAllColorways#8546b5a385b81637",
+          "signature_normalized": "def UnlinkGraphicStyleAllColorways(_graphicStyleIndex : int) -> bool",
+          "signature_raw": "def UnlinkGraphicStyleAllColorways(_graphicStyleIndex : int) -> bool",
+          "parameters": [
+            {
+              "raw": "_graphicStyleIndex : int",
+              "name": "_graphicStyleIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def UnlinkGraphicStyleAllColorways(_graphicStyleIndex : int) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Unlinks the specified graphic style across all colorways so that each colorway holds an independent copy.\nAfter calling this, modifying the graphic style in one colorway will not affect other colorways.\n@param _graphicStyleIndex: Index of the graphic style to unlink.\n@return true if the unlink succeeded; otherwise false.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 24703,
+                  "block": 2149
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 25867,
+                  "block": 2149,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "UnlinkGraphicStyleAllColorways(int _graphicStyleIndex)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Unlinks the specified graphic style across all colorways so that each colorway holds an independent copy.\n/// After calling this, modifying the graphic style in one colorway will not affect other colorways.\n/// @param _graphicStyleIndex: Index of the graphic style to unlink.\n/// @return true if the unlink succeeded; otherwise false.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 24714,
+                    "block": 2150
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 25878,
+                    "block": 2150,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _graphicStyleIndex: Index of the graphic style to unlink."
+          ],
+          "return_docs_raw": [
+            "@return true if the unlink succeeded; otherwise false."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.UpdateCloStyleForPlugIn",
+      "qualified_name": "utility_api.UpdateCloStyleForPlugIn",
+      "module": "utility_api",
+      "symbol": "UpdateCloStyleForPlugIn",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.UpdateCloStyleForPlugIn#cae4eccb41beaf8f",
+          "signature_normalized": "def UpdateCloStyleForPlugIn(_pWidget : QWidget*) -> None",
+          "signature_raw": "def UpdateCloStyleForPlugIn(_pWidget : QWidget*) -> None",
+          "parameters": [
+            {
+              "raw": "_pWidget : QWidget*",
+              "name": "_pWidget",
+              "annotation_raw": "QWidget*"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def UpdateCloStyleForPlugIn(_pWidget : QWidget*) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Set CLO style-sheet code to QWidget.\n@param _pWidget: Root widget pointer of Plug-In Window.\nex> QWidget, QDialog, QFrame, etc...\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 20411,
+                  "block": 1769
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 21385,
+                  "block": 1769,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "UpdateCloStyleForPlugIn(QWidget* _pWidget)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Set CLO style-sheet code to QWidget.\n/// @param _pWidget: Root widget pointer of Plug-In Window.\n/// ex> QWidget, QDialog, QFrame, etc...",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 20421,
+                    "block": 1770
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 21395,
+                    "block": 1770,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "QWidget",
+              "basis": "annotation",
+              "status": "unresolved",
+              "type_id": null
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param _pWidget: Root widget pointer of Plug-In Window."
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [
+            "unresolved_annotation_type"
+          ],
+          "contract_status": "ambiguous"
+        },
+        {
+          "id": "utility_api.UpdateCloStyleForPlugIn#7184480fa8dfbdae",
+          "signature_normalized": "def UpdateCloStyleForPlugIn(_pWidget : QWidget*, _type : CloWidgetType) -> None",
+          "signature_raw": "def UpdateCloStyleForPlugIn(_pWidget : QWidget*, _type : CloWidgetType) -> None",
+          "parameters": [
+            {
+              "raw": "_pWidget : QWidget*",
+              "name": "_pWidget",
+              "annotation_raw": "QWidget*"
+            },
+            {
+              "raw": "_type : CloWidgetType",
+              "name": "_type",
+              "annotation_raw": "CloWidgetType"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def UpdateCloStyleForPlugIn(_pWidget : QWidget*, _type : CloWidgetType) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Set the style-sheet code corresponding to the CloWidgetType.\n@param _pWidget: Widget pointer to set style-sheet code\n@param _type: CloWidgetType of widget pointer\nex> TitleBar, ComboBox, Slider, ScrollArea, Dialog, Frame, etc...\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 20432,
+                  "block": 1771
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 21407,
+                  "block": 1771,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "UpdateCloStyleForPlugIn(QWidget* _pWidget, Marvelous::CloWidgetType _type)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Set the style-sheet code corresponding to the CloWidgetType.\n/// @param _pWidget: Widget pointer to set style-sheet code\n/// @param _type: CloWidgetType of widget pointer\n/// ex> TitleBar, ComboBox, Slider, ScrollArea, Dialog, Frame, etc...",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 20443,
+                    "block": 1772
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 21418,
+                    "block": 1772,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "CloWidgetType",
+              "basis": "annotation",
+              "status": "unresolved",
+              "type_id": null
+            },
+            {
+              "name": "QWidget",
+              "basis": "annotation",
+              "status": "unresolved",
+              "type_id": null
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param _pWidget: Widget pointer to set style-sheet code",
+            "@param _type: CloWidgetType of widget pointer"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [
+            "unresolved_annotation_type"
+          ],
+          "contract_status": "ambiguous"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.UpdateColorways",
+      "qualified_name": "utility_api.UpdateColorways",
+      "module": "utility_api",
+      "symbol": "UpdateColorways",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.UpdateColorways#579a44224605dbaf",
+          "signature_normalized": "def UpdateColorways(bUpdateSnapshot : bool) -> None",
+          "signature_raw": "def UpdateColorways(bUpdateSnapshot : bool) -> None",
+          "parameters": [
+            {
+              "raw": "bUpdateSnapshot : bool",
+              "name": "bUpdateSnapshot",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def UpdateColorways(bUpdateSnapshot : bool) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Update Colorways in the CLO software\n@param bUpdateSnapshot: put the value to true to update the colorway's snapshot\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 17828,
+                  "block": 1543
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 18691,
+                  "block": 1543,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "UpdateColorways(bool bUpdateSnapshot = true)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Update Colorways in the CLO software\n/// @param bUpdateSnapshot: put the value to true to update the colorway's snapshot",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 17837,
+                    "block": 1544
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 18700,
+                    "block": 1544,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param bUpdateSnapshot: put the value to true to update the colorway's snapshot"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.UpdatePropertyWindow",
+      "qualified_name": "utility_api.UpdatePropertyWindow",
+      "module": "utility_api",
+      "symbol": "UpdatePropertyWindow",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.UpdatePropertyWindow#906edb5945b51375",
+          "signature_normalized": "def UpdatePropertyWindow() -> None",
+          "signature_raw": "def UpdatePropertyWindow() -> None",
+          "parameters": [],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def UpdatePropertyWindow() -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Update the PropertyWindow \n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 21756,
+                  "block": 1899
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 22795,
+                  "block": 1899,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "UpdatePropertyWindow()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Update the PropertyWindow",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 21764,
+                    "block": 1900
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 22803,
+                    "block": 1900,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.UsePlugInFromList",
+      "qualified_name": "utility_api.UsePlugInFromList",
+      "module": "utility_api",
+      "symbol": "UsePlugInFromList",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.UsePlugInFromList#47b419d009faeb1a",
+          "signature_normalized": "def UsePlugInFromList(_pluginListIndex : int) -> None",
+          "signature_raw": "def UsePlugInFromList(_pluginListIndex : int) -> None",
+          "parameters": [
+            {
+              "raw": "_pluginListIndex : int",
+              "name": "_pluginListIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def UsePlugInFromList(_pluginListIndex : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Use Plug In From PluginList\n@param _pluginListIndex: PluginList index to use the plugin\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 19753,
+                  "block": 1717
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 20701,
+                  "block": 1717,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "UsePlugInFromList(unsigned int _pluginListIndex)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Use Plug In From PluginList\n/// @param _pluginListIndex: PluginList index to use the plugin",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 19762,
+                    "block": 1718
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 20710,
+                    "block": 1718,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _pluginListIndex: PluginList index to use the plugin"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.ValidateCLOFile",
+      "qualified_name": "utility_api.ValidateCLOFile",
+      "module": "utility_api",
+      "symbol": "ValidateCLOFile",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.ValidateCLOFile#7e8756eff804a3ed",
+          "signature_normalized": "def ValidateCLOFile(filePath : str) -> map[str, str]",
+          "signature_raw": "def ValidateCLOFile(filePath : str) -> map[str, str]",
+          "parameters": [
+            {
+              "raw": "filePath : str",
+              "name": "filePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "map[str, str]",
+          "occurrences": [
+            {
+              "signature_raw": "def ValidateCLOFile(filePath : str) -> map[str, str]",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Validate whether the given file is a CLO native file by checking its file signature.\n@param filePath: The absolute path to the file to validate.\n@return A map containing \"isValid\" (\"true\" / \"false\") and \"fileType\" (string, e.g., \"CLO Fabric\", \"CLO Button\").\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 17471,
+                  "block": 1509
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 18317,
+                  "block": 1509,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ValidateCLOFile(const string& filePath)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Validate whether the given file is a CLO native file by checking its file signature.\n/// @param filePath: The absolute path to the file to validate.\n/// @return A map containing \"isValid\" (\"true\" / \"false\") and \"fileType\" (string, e.g., \"CLO Fabric\", \"CLO Button\").",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 17481,
+                    "block": 1510
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 18327,
+                    "block": 1510,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param filePath: The absolute path to the file to validate."
+          ],
+          "return_docs_raw": [
+            "@return A map containing \"isValid\" (\"true\" / \"false\") and \"fileType\" (string, e.g., \"CLO Fabric\", \"CLO Button\")."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.ValidateCLOFileW",
+      "qualified_name": "utility_api.ValidateCLOFileW",
+      "module": "utility_api",
+      "symbol": "ValidateCLOFileW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.ValidateCLOFileW#c0c5d6a23b2c1801",
+          "signature_normalized": "def ValidateCLOFileW(filePath : str) -> map[str, str]",
+          "signature_raw": "def ValidateCLOFileW(filePath : str) -> map[str, str]",
+          "parameters": [
+            {
+              "raw": "filePath : str",
+              "name": "filePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "map[str, str]",
+          "occurrences": [
+            {
+              "signature_raw": "def ValidateCLOFileW(filePath : str) -> map[str, str]",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Validate whether the given file is a CLO native file by checking its file signature.\n@param filePath: The absolute path to the file to validate.\n@return A map containing \"isValid\" (\"true\" / \"false\") and \"fileType\" (string, e.g., \"CLO Fabric\", \"CLO Button\").\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 17492,
+                  "block": 1511
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 18339,
+                  "block": 1511,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ValidateCLOFileW(const wstring& filePath)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Validate whether the given file is a CLO native file by checking its file signature.\n/// @param filePath: The absolute path to the file to validate.\n/// @return A map containing \"isValid\" (\"true\" / \"false\") and \"fileType\" (string, e.g., \"CLO Fabric\", \"CLO Button\").",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 17502,
+                    "block": 1512
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 18349,
+                    "block": 1512,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param filePath: The absolute path to the file to validate."
+          ],
+          "return_docs_raw": [
+            "@return A map containing \"isValid\" (\"true\" / \"false\") and \"fileType\" (string, e.g., \"CLO Fabric\", \"CLO Button\")."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.stringToMD5",
+      "qualified_name": "utility_api.stringToMD5",
+      "module": "utility_api",
+      "symbol": "stringToMD5",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.stringToMD5#78701b6ebded2006",
+          "signature_normalized": "def stringToMD5(str : str) -> str",
+          "signature_raw": "def stringToMD5(str : str) -> str",
+          "parameters": [
+            {
+              "raw": "str : str",
+              "name": "str",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def stringToMD5(str : str) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Create MD5 hashing string from string\n@param str: the source string to hash \n@return MD5 hashed string\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 16962,
+                  "block": 1463
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 17785,
+                  "block": 1463,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "stringToMD5(const string& str)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Create MD5 hashing string from string\n/// @param str: the source string to hash \n/// @return MD5 hashed string",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 16972,
+                    "block": 1464
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 17795,
+                    "block": 1464,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param str: the source string to hash "
+          ],
+          "return_docs_raw": [
+            "@return MD5 hashed string"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.toUtf8",
+      "qualified_name": "utility_api.toUtf8",
+      "module": "utility_api",
+      "symbol": "toUtf8",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.toUtf8#d516cfc98b633d0c",
+          "signature_normalized": "def toUtf8(str : str) -> str",
+          "signature_raw": "def toUtf8(str : str) -> str",
+          "parameters": [
+            {
+              "raw": "str : str",
+              "name": "str",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def toUtf8(str : str) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Convert and get the string encoded in UTF-8 from wstring\n@param str: target wstring to convert\n@return string in UTF8 from wstring encoded by UCS-2 in Windows or UTF-8 in Mac OS\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 16326,
+                  "block": 1411
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 17123,
+                  "block": 1411,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "toUtf8(const std::wstring &str)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Convert and get the string encoded in UTF-8 from wstring\n/// @param str: target wstring to convert\n/// @return string in UTF8 from wstring encoded by UCS-2 in Windows or UTF-8 in Mac OS",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 16336,
+                    "block": 1412
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 17133,
+                    "block": 1412,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param str: target wstring to convert"
+          ],
+          "return_docs_raw": [
+            "@return string in UTF8 from wstring encoded by UCS-2 in Windows or UTF-8 in Mac OS"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    }
+  ]
+}

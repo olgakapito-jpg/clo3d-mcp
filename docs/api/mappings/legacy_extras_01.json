@@ -1,0 +1,58 @@
+[
+  {
+    "function": "handle_reload_plugin",
+    "path": "plugin/clo3d_mcp_plugin.py",
+    "lines": [
+      589,
+      602
+    ],
+    "native_references": [],
+    "helper_calls": [],
+    "dynamic_expressions": [
+      {
+        "expression": "getattr(builtins, '_clo3d_mcp_retired', [])",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          597,
+          597
+        ]
+      },
+      {
+        "expression": "getattr(builtins, '_clo3d_mcp', None)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          598,
+          598
+        ]
+      },
+      {
+        "expression": "exec(compile(src, path, 'exec'), ns)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          601,
+          601
+        ]
+      }
+    ]
+  },
+  {
+    "function": "handle_run_script",
+    "path": "plugin/clo3d_mcp_plugin.py",
+    "lines": [
+      566,
+      586
+    ],
+    "native_references": [],
+    "helper_calls": [],
+    "dynamic_expressions": [
+      {
+        "expression": "exec(compile(code, params.get('path') or '<run_script>', 'exec'), ns)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          583,
+          583
+        ]
+      }
+    ]
+  }
+]

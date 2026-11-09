@@ -1,0 +1,700 @@
+{
+  "rows": [
+    {
+      "id": "fabric_api.SetRoughnessValueMapInvert#60468b493e05a16e",
+      "module": "fabric_api",
+      "symbol": "SetRoughnessValueMapInvert",
+      "qualified_name": "fabric_api.SetRoughnessValueMapInvert",
+      "overload": "fabric_api.SetRoughnessValueMapInvert#60468b493e05a16e",
+      "signature": "def SetRoughnessValueMapInvert(_colorwayIndex : int, _index : int, _face : int, _bInvert : bool) -> None",
+      "domain": "fabric",
+      "owner_task": "A2",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 5884,
+          "block": 521
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 6245,
+          "block": 521,
+          "anchor": "fabric-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [
+        "set_fabric_material"
+      ],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "fabric_api.SetRoughnessValueMapInvert",
+      "documentation_issues": [],
+      "review_gates": []
+    },
+    {
+      "id": "fabric_api.SetRoughnessValueMapInvert#8e6307cf90e15c78",
+      "module": "fabric_api",
+      "symbol": "SetRoughnessValueMapInvert",
+      "qualified_name": "fabric_api.SetRoughnessValueMapInvert",
+      "overload": "fabric_api.SetRoughnessValueMapInvert#8e6307cf90e15c78",
+      "signature": "def SetRoughnessValueMapInvert(_index : int, _face : int, _bInvert : bool) -> None",
+      "domain": "fabric",
+      "owner_task": "A2",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 5865,
+          "block": 519
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 6225,
+          "block": 519,
+          "anchor": "fabric-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [
+        "set_fabric_material"
+      ],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "fabric_api.SetRoughnessValueMapInvert",
+      "documentation_issues": [],
+      "review_gates": []
+    },
+    {
+      "id": "fabric_api.SetSubstancePreset#094f663eb2b3368a",
+      "module": "fabric_api",
+      "symbol": "SetSubstancePreset",
+      "qualified_name": "fabric_api.SetSubstancePreset",
+      "overload": "fabric_api.SetSubstancePreset#094f663eb2b3368a",
+      "signature": "def SetSubstancePreset(colorwayIndex : int, fabricIndex : int, materialFace : int, presetIndex : int) -> None",
+      "domain": "fabric",
+      "owner_task": "A2",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 4914,
+          "block": 441
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 5235,
+          "block": 441,
+          "anchor": "fabric-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [
+        "set_substance"
+      ],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "fabric_api.SetSubstancePreset",
+      "documentation_issues": [],
+      "review_gates": []
+    },
+    {
+      "id": "fabric_api.SetSubstancePreset#c94bd646b590e25e",
+      "module": "fabric_api",
+      "symbol": "SetSubstancePreset",
+      "qualified_name": "fabric_api.SetSubstancePreset",
+      "overload": "fabric_api.SetSubstancePreset#c94bd646b590e25e",
+      "signature": "def SetSubstancePreset(fabricIndex : int, materialFace : int, presetIndex : int) -> None",
+      "domain": "fabric",
+      "owner_task": "A2",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 4891,
+          "block": 439
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 5211,
+          "block": 439,
+          "anchor": "fabric-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [
+        "set_substance"
+      ],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "fabric_api.SetSubstancePreset",
+      "documentation_issues": [],
+      "review_gates": []
+    },
+    {
+      "id": "fabric_api.SetSubstanceResolution#52b2544c333ae13d",
+      "module": "fabric_api",
+      "symbol": "SetSubstanceResolution",
+      "qualified_name": "fabric_api.SetSubstanceResolution",
+      "overload": "fabric_api.SetSubstanceResolution#52b2544c333ae13d",
+      "signature": "def SetSubstanceResolution(colorwayIndex : int, fabricIndex : int, materialFace : int, resolutionIndex : int) -> None",
+      "domain": "fabric",
+      "owner_task": "A2",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 4962,
+          "block": 445
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 5285,
+          "block": 445,
+          "anchor": "fabric-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [
+        "set_substance"
+      ],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "fabric_api.SetSubstanceResolution",
+      "documentation_issues": [],
+      "review_gates": []
+    },
+    {
+      "id": "fabric_api.SetSubstanceResolution#a1f882ea89d7f613",
+      "module": "fabric_api",
+      "symbol": "SetSubstanceResolution",
+      "qualified_name": "fabric_api.SetSubstanceResolution",
+      "overload": "fabric_api.SetSubstanceResolution#a1f882ea89d7f613",
+      "signature": "def SetSubstanceResolution(fabricIndex : int, materialFace : int, resolutionIndex : int) -> None",
+      "domain": "fabric",
+      "owner_task": "A2",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 4939,
+          "block": 443
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 5261,
+          "block": 443,
+          "anchor": "fabric-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [
+        "set_substance"
+      ],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "fabric_api.SetSubstanceResolution",
+      "documentation_issues": [],
+      "review_gates": []
+    },
+    {
+      "id": "fabric_api.SetTextureMapping#7dae0f81857e65fa",
+      "module": "fabric_api",
+      "symbol": "SetTextureMapping",
+      "qualified_name": "fabric_api.SetTextureMapping",
+      "overload": "fabric_api.SetTextureMapping#7dae0f81857e65fa",
+      "signature": "def SetTextureMapping(_colorwayIndex : int, _fabricIndex : int, _mappingType : int) -> None",
+      "domain": "fabric",
+      "owner_task": "A2",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 4868,
+          "block": 437
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 5187,
+          "block": 437,
+          "anchor": "fabric-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [
+        "set_texture_mapping"
+      ],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "fabric_api.SetTextureMapping",
+      "documentation_issues": [],
+      "review_gates": []
+    },
+    {
+      "id": "fabric_api.SetTextureMapping#44c1b00dad54d342",
+      "module": "fabric_api",
+      "symbol": "SetTextureMapping",
+      "qualified_name": "fabric_api.SetTextureMapping",
+      "overload": "fabric_api.SetTextureMapping#44c1b00dad54d342",
+      "signature": "def SetTextureMapping(fabricIndex : int, mappingType : int) -> None",
+      "domain": "fabric",
+      "owner_task": "A2",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 4847,
+          "block": 435
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 5165,
+          "block": 435,
+          "anchor": "fabric-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [
+        "set_texture_mapping"
+      ],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "fabric_api.SetTextureMapping",
+      "documentation_issues": [],
+      "review_gates": []
+    },
+    {
+      "id": "fabric_api.SetUseSameColorAsFront#4a392855448ba467",
+      "module": "fabric_api",
+      "symbol": "SetUseSameColorAsFront",
+      "qualified_name": "fabric_api.SetUseSameColorAsFront",
+      "overload": "fabric_api.SetUseSameColorAsFront#4a392855448ba467",
+      "signature": "def SetUseSameColorAsFront(colorwayIndex : int, fabricIndex : int, materialFace : int, _useSameColor : bool) -> None",
+      "domain": "fabric",
+      "owner_task": "A2",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 5214,
+          "block": 465
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 5547,
+          "block": 465,
+          "anchor": "fabric-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [
+        "set_fabric_material"
+      ],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "fabric_api.SetUseSameColorAsFront",
+      "documentation_issues": [],
+      "review_gates": []
+    },
+    {
+      "id": "fabric_api.SetUseSameColorAsFront#99a67200d986647e",
+      "module": "fabric_api",
+      "symbol": "SetUseSameColorAsFront",
+      "qualified_name": "fabric_api.SetUseSameColorAsFront",
+      "overload": "fabric_api.SetUseSameColorAsFront#99a67200d986647e",
+      "signature": "def SetUseSameColorAsFront(fabricIndex : int, materialFace : int, _useSameColor : bool) -> None",
+      "domain": "fabric",
+      "owner_task": "A2",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 5191,
+          "block": 463
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 5523,
+          "block": 463,
+          "anchor": "fabric-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [
+        "set_fabric_material"
+      ],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "fabric_api.SetUseSameColorAsFront",
+      "documentation_issues": [],
+      "review_gates": []
+    },
+    {
+      "id": "fabric_api.SetUseSameMaterialAsFront#bfaada4a3f65ada6",
+      "module": "fabric_api",
+      "symbol": "SetUseSameMaterialAsFront",
+      "qualified_name": "fabric_api.SetUseSameMaterialAsFront",
+      "overload": "fabric_api.SetUseSameMaterialAsFront#bfaada4a3f65ada6",
+      "signature": "def SetUseSameMaterialAsFront(colorwayIndex : int, fabricIndex : int, materialFace : int, _useSameMaterial : bool) -> None",
+      "domain": "fabric",
+      "owner_task": "A2",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 5116,
+          "block": 457
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 5445,
+          "block": 457,
+          "anchor": "fabric-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [
+        "set_fabric_material"
+      ],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "fabric_api.SetUseSameMaterialAsFront",
+      "documentation_issues": [],
+      "review_gates": []
+    },
+    {
+      "id": "fabric_api.SetUseSameMaterialAsFront#fd91499f76ca1ef0",
+      "module": "fabric_api",
+      "symbol": "SetUseSameMaterialAsFront",
+      "qualified_name": "fabric_api.SetUseSameMaterialAsFront",
+      "overload": "fabric_api.SetUseSameMaterialAsFront#fd91499f76ca1ef0",
+      "signature": "def SetUseSameMaterialAsFront(fabricIndex : int, materialFace : int, _useSameMaterial : bool) -> None",
+      "domain": "fabric",
+      "owner_task": "A2",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 5091,
+          "block": 455
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 5419,
+          "block": 455,
+          "anchor": "fabric-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [
+        "set_fabric_material"
+      ],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "fabric_api.SetUseSameMaterialAsFront",
+      "documentation_issues": [],
+      "review_gates": []
+    },
+    {
+      "id": "fabric_api.TransformAOPOnFabric#29ab4f210f2642e1",
+      "module": "fabric_api",
+      "symbol": "TransformAOPOnFabric",
+      "qualified_name": "fabric_api.TransformAOPOnFabric",
+      "overload": "fabric_api.TransformAOPOnFabric#29ab4f210f2642e1",
+      "signature": "def TransformAOPOnFabric(_aopMode : int, _colorwayIndex : int, _fabricIndex : int, _styleChipIndex : int, _transformOptions : TransformOptions, _materialSide : int) -> str",
+      "domain": "fabric",
+      "owner_task": "A2",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 9251,
+          "block": 811
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 9757,
+          "block": 811,
+          "anchor": "fabric-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [
+        {
+          "name": "TransformOptions",
+          "basis": "annotation",
+          "status": "resolved",
+          "type_id": "type:TransformOptions"
+        }
+      ],
+      "official_record_id": "fabric_api.TransformAOPOnFabric",
+      "documentation_issues": [],
+      "review_gates": [
+        "binding-types"
+      ]
+    }
+  ]
+}

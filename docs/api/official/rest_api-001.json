@@ -1,0 +1,754 @@
+{
+  "kind": "methods",
+  "records": [
+    {
+      "id": "rest_api.CallRESTGet",
+      "qualified_name": "rest_api.CallRESTGet",
+      "module": "rest_api",
+      "symbol": "CallRESTGet",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "rest_api.CallRESTGet#b2267c5b870f80d6",
+          "signature_normalized": "def CallRESTGet(url : str, headerNameAndValueList : list[tuple[str, str]], progressBarText : str) -> str",
+          "signature_raw": "def CallRESTGet(url : str, headerNameAndValueList : list[tuple[str, str]], progressBarText : str) -> str",
+          "parameters": [
+            {
+              "raw": "url : str",
+              "name": "url",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "headerNameAndValueList : list[tuple[str, str]]",
+              "name": "headerNameAndValueList",
+              "annotation_raw": "list[tuple[str, str]]"
+            },
+            {
+              "raw": "progressBarText : str",
+              "name": "progressBarText",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def CallRESTGet(url : str, headerNameAndValueList : list[tuple[str, str]], progressBarText : str) -> str",
+              "documentation_raw": "\"\"\"\n@brief HTTP GET Method\n@param url : e.g. https://api.clo3d.com/customers?version=2.5.9999.299999&userid=clo\n@param headerNameAndValueList : pair list of input HTTP request header parameters\n@param progressBarText : text for the progress bar\n@return string = HTTP Response header + \"\\r\\n\\r\\n\" + HTTP Response body                         \n\"\"\"",
+              "section": "REST_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 15870,
+                  "block": 1369
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 16648,
+                  "block": 1369,
+                  "anchor": "rest-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "CallRESTGet(const string& url, const vector<pair<string, string>>& headerNameAndValueList, const string& progressBarText)",
+                "documentation_raw": "/// @brief HTTP GET Method\n/// @param url : e.g. https://api.clo3d.com/customers?version=2.5.9999.299999&userid=clo\n/// @param headerNameAndValueList : pair list of input HTTP request header parameters\n/// @param progressBarText : text for the progress bar\n/// @return string = HTTP Response header + \"\\r\\n\\r\\n\" + HTTP Response body",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 15881,
+                    "block": 1370
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 16659,
+                    "block": 1370,
+                    "anchor": "rest-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param url : e.g. https://api.clo3d.com/customers?version=2.5.9999.299999&userid=clo",
+            "@param headerNameAndValueList : pair list of input HTTP request header parameters",
+            "@param progressBarText : text for the progress bar"
+          ],
+          "return_docs_raw": [
+            "@return string = HTTP Response header + \"\\r\\n\\r\\n\" + HTTP Response body                         "
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "rest_api.CallRESTPost",
+      "qualified_name": "rest_api.CallRESTPost",
+      "module": "rest_api",
+      "symbol": "CallRESTPost",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "rest_api.CallRESTPost#fc9872741814dd5d",
+          "signature_normalized": "def CallRESTPost(url : str, postField : str, headerNameAndValueList : list[tuple[str, str]], progressBarText : str) -> str",
+          "signature_raw": "def CallRESTPost(url : str, postField : str, headerNameAndValueList : list[tuple[str, str]], progressBarText : str) -> str",
+          "parameters": [
+            {
+              "raw": "url : str",
+              "name": "url",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "postField : str",
+              "name": "postField",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "headerNameAndValueList : list[tuple[str, str]]",
+              "name": "headerNameAndValueList",
+              "annotation_raw": "list[tuple[str, str]]"
+            },
+            {
+              "raw": "progressBarText : str",
+              "name": "progressBarText",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def CallRESTPost(url : str, postField : str, headerNameAndValueList : list[tuple[str, str]], progressBarText : str) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup REST_API\n@brief HTTP POST Method\n@param url : the full URL for REST API call\n@param postField HTTP Post Body parameter               e.g. \"{\"parameter1\":20,\"parameter2\":100,\"date\":\"2017-12-13T00:00:00\"}\"\n@param headerNameAndValueList : pair list of input HTTP request header parameters\n@param progressBarText : text for the progress bar\n@return string = HTTP Response header + \"\\r\\n\\r\\n\" + HTTP Response body\n\"\"\"",
+              "section": "REST_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 15893,
+                  "block": 1371
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 16672,
+                  "block": 1371,
+                  "anchor": "rest-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "CallRESTPost(const string& url, string *postField, const vector<pair<string, string>>& headerNameAndValueList, const string& progressBarText)",
+                "documentation_raw": "/// @ingroup REST_API\n/// @brief HTTP POST Method\n/// @param url : the full URL for REST API call\n/// @param postField HTTP Post Body parameter           e.g. \"{\"parameter1\":20,\"parameter2\":100,\"date\":\"2017-12-13T00:00:00\"}\"\n/// @param headerNameAndValueList : pair list of input HTTP request header parameters\n/// @param progressBarText : text for the progress bar\n/// @return string = HTTP Response header + \"\\r\\n\\r\\n\" + HTTP Response body",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 15906,
+                    "block": 1372
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 16685,
+                    "block": 1372,
+                    "anchor": "rest-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param url : the full URL for REST API call",
+            "@param postField HTTP Post Body parameter               e.g. \"{\"parameter1\":20,\"parameter2\":100,\"date\":\"2017-12-13T00:00:00\"}\"",
+            "@param headerNameAndValueList : pair list of input HTTP request header parameters",
+            "@param progressBarText : text for the progress bar"
+          ],
+          "return_docs_raw": [
+            "@return string = HTTP Response header + \"\\r\\n\\r\\n\" + HTTP Response body"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "rest_api.CallRESTPost2",
+      "qualified_name": "rest_api.CallRESTPost2",
+      "module": "rest_api",
+      "symbol": "CallRESTPost2",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "rest_api.CallRESTPost2#5d769a2aaaf39b27",
+          "signature_normalized": "def CallRESTPost2(url : str, postField : char, sizeInByte : int, headerNameAndValueList : list[tuple[str, str]], progressBarText : str) -> str",
+          "signature_raw": "def CallRESTPost2(url : str, postField : char, sizeInByte : int, headerNameAndValueList : list[tuple[str, str]], progressBarText : str) -> str",
+          "parameters": [
+            {
+              "raw": "url : str",
+              "name": "url",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "postField : char",
+              "name": "postField",
+              "annotation_raw": "char"
+            },
+            {
+              "raw": "sizeInByte : int",
+              "name": "sizeInByte",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "headerNameAndValueList : list[tuple[str, str]]",
+              "name": "headerNameAndValueList",
+              "annotation_raw": "list[tuple[str, str]]"
+            },
+            {
+              "raw": "progressBarText : str",
+              "name": "progressBarText",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def CallRESTPost2(url : str, postField : char, sizeInByte : int, headerNameAndValueList : list[tuple[str, str]], progressBarText : str) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup REST_API\n@brief HTTP POST Method 2\n@param url : the full URL for REST API call\n@param postField HTTP Post Body parameter\n@param sizeInByte The size of postField in bytes\n@param headerNameAndValueList : pair list of input HTTP request header parameters\n@param progressBarText : text for the progress bar\n@return string = HTTP Response header + \"\\r\\n\\r\\n\" + HTTP Response body\n\"\"\"",
+              "section": "REST_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 15920,
+                  "block": 1373
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 16700,
+                  "block": 1373,
+                  "anchor": "rest-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "CallRESTPost2(const string& url, unsigned char *postField, unsigned int& sizeInByte, const vector<pair<string, string>>& headerNameAndValueList, const string& progressBarText)",
+                "documentation_raw": "/// @ingroup REST_API\n/// @brief HTTP POST Method 2\n/// @param url : the full URL for REST API call\n/// @param postField HTTP Post Body parameter\n/// @param sizeInByte The size of postField in bytes\n/// @param headerNameAndValueList : pair list of input HTTP request header parameters\n/// @param progressBarText : text for the progress bar\n/// @return string = HTTP Response header + \"\\r\\n\\r\\n\" + HTTP Response body",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 15934,
+                    "block": 1374
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 16714,
+                    "block": 1374,
+                    "anchor": "rest-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param url : the full URL for REST API call",
+            "@param postField HTTP Post Body parameter",
+            "@param sizeInByte The size of postField in bytes",
+            "@param headerNameAndValueList : pair list of input HTTP request header parameters",
+            "@param progressBarText : text for the progress bar"
+          ],
+          "return_docs_raw": [
+            "@return string = HTTP Response header + \"\\r\\n\\r\\n\" + HTTP Response body"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "rest_api.CallRESTPostWithMultipartFormData",
+      "qualified_name": "rest_api.CallRESTPostWithMultipartFormData",
+      "module": "rest_api",
+      "symbol": "CallRESTPostWithMultipartFormData",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "rest_api.CallRESTPostWithMultipartFormData#b0fc19907dff440d",
+          "signature_normalized": "def CallRESTPostWithMultipartFormData(url : str, filePath : str, headerNameAndValueList : list[tuple[str, str]], progressBarText : str) -> str",
+          "signature_raw": "def CallRESTPostWithMultipartFormData(url : str, filePath : str, headerNameAndValueList : list[tuple[str, str]], progressBarText : str) -> str",
+          "parameters": [
+            {
+              "raw": "url : str",
+              "name": "url",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "filePath : str",
+              "name": "filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "headerNameAndValueList : list[tuple[str, str]]",
+              "name": "headerNameAndValueList",
+              "annotation_raw": "list[tuple[str, str]]"
+            },
+            {
+              "raw": "progressBarText : str",
+              "name": "progressBarText",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def CallRESTPostWithMultipartFormData(url : str, filePath : str, headerNameAndValueList : list[tuple[str, str]], progressBarText : str) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup REST_API\n@brief HTTP POST with multipart/form-data Method\n@param url : the full URL for REST API call\n@param filePath : path of file to send via REST API\n@param headerNameAndValueList : pair list of input HTTP request header parameters\n@param progressBarText : text for the progress bar\n@return string = HTTP Response header + \"\\r\\n\\r\\n\" + HTTP Response body\n\"\"\"",
+              "section": "REST_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 15949,
+                  "block": 1375
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 16730,
+                  "block": 1375,
+                  "anchor": "rest-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "CallRESTPostWithMultipartFormData(const string& url, const string& filePath, const vector<pair<string, string>>& headerNameAndValueList, const string& progressBarText)",
+                "documentation_raw": "/// @ingroup REST_API\n/// @brief HTTP POST with multipart/form-data Method\n/// @param url : the full URL for REST API call\n/// @param filePath : path of file to send via REST API\n/// @param headerNameAndValueList : pair list of input HTTP request header parameters\n/// @param progressBarText : text for the progress bar\n/// @return string = HTTP Response header + \"\\r\\n\\r\\n\" + HTTP Response body",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 15962,
+                    "block": 1376
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 16743,
+                    "block": 1376,
+                    "anchor": "rest-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param url : the full URL for REST API call",
+            "@param filePath : path of file to send via REST API",
+            "@param headerNameAndValueList : pair list of input HTTP request header parameters",
+            "@param progressBarText : text for the progress bar"
+          ],
+          "return_docs_raw": [
+            "@return string = HTTP Response header + \"\\r\\n\\r\\n\" + HTTP Response body"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "rest_api.CallRESTPostWithMultipartFormData#38a16e27d40c5788",
+          "signature_normalized": "def CallRESTPostWithMultipartFormData(url : str, filePathList : list[str], headerNameAndValueList : list[tuple[str, str]], progressBarText : str) -> str",
+          "signature_raw": "def CallRESTPostWithMultipartFormData(url : str, filePathList : list[str], headerNameAndValueList : list[tuple[str, str]], progressBarText : str) -> str",
+          "parameters": [
+            {
+              "raw": "url : str",
+              "name": "url",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "filePathList : list[str]",
+              "name": "filePathList",
+              "annotation_raw": "list[str]"
+            },
+            {
+              "raw": "headerNameAndValueList : list[tuple[str, str]]",
+              "name": "headerNameAndValueList",
+              "annotation_raw": "list[tuple[str, str]]"
+            },
+            {
+              "raw": "progressBarText : str",
+              "name": "progressBarText",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def CallRESTPostWithMultipartFormData(url : str, filePathList : list[str], headerNameAndValueList : list[tuple[str, str]], progressBarText : str) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup REST_API\n@brief HTTP POST with multipart/form-data Method\n@param url : the full URL for REST API call\n@param filePathList : path list of files to send via REST API\n@param headerNameAndValueList : pair list of input HTTP request header parameters\n@param progressBarText : text for the progress bar\n@return string = HTTP Response header + \"\\r\\n\\r\\n\" + HTTP Response body\n\"\"\"",
+              "section": "REST_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 15976,
+                  "block": 1377
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 16758,
+                  "block": 1377,
+                  "anchor": "rest-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "CallRESTPostWithMultipartFormData(const string& url, const vector<string>& filePathList, const vector<pair<string, string>>& headerNameAndValueList, const string& progressBarText)",
+                "documentation_raw": "/// @ingroup REST_API\n/// @brief HTTP POST with multipart/form-data Method\n/// @param url : the full URL for REST API call\n/// @param filePathList : path list of files to send via REST API\n/// @param headerNameAndValueList : pair list of input HTTP request header parameters\n/// @param progressBarText : text for the progress bar\n/// @return string = HTTP Response header + \"\\r\\n\\r\\n\" + HTTP Response body",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 15989,
+                    "block": 1378
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 16771,
+                    "block": 1378,
+                    "anchor": "rest-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param url : the full URL for REST API call",
+            "@param filePathList : path list of files to send via REST API",
+            "@param headerNameAndValueList : pair list of input HTTP request header parameters",
+            "@param progressBarText : text for the progress bar"
+          ],
+          "return_docs_raw": [
+            "@return string = HTTP Response header + \"\\r\\n\\r\\n\" + HTTP Response body"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "rest_api.CallRESTPut",
+      "qualified_name": "rest_api.CallRESTPut",
+      "module": "rest_api",
+      "symbol": "CallRESTPut",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "rest_api.CallRESTPut#c8ded759a6ac375a",
+          "signature_normalized": "def CallRESTPut(restReq : CloApiRestRequest, progressBarText : str) -> str",
+          "signature_raw": "def CallRESTPut(restReq : CloApiRestRequest, progressBarText : str) -> str",
+          "parameters": [
+            {
+              "raw": "restReq : CloApiRestRequest",
+              "name": "restReq",
+              "annotation_raw": "CloApiRestRequest"
+            },
+            {
+              "raw": "progressBarText : str",
+              "name": "progressBarText",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def CallRESTPut(restReq : CloApiRestRequest, progressBarText : str) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup REST_API\n@brief HTTP PUT Method \n@param restRequests : Request list with header, body, url and attachements\n@param progressBarText : text for the progress bar\n@return string = HTTP Response header + \"\\r\\n\\r\\n\" + HTTP Response body\n\"\"\"",
+              "section": "REST_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 16047,
+                  "block": 1383
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 16832,
+                  "block": 1383,
+                  "anchor": "rest-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "CallRESTPut(const Marvelous::CloApiRestRequest& restReq, const std::string& progressBarText)",
+                "documentation_raw": "/// @ingroup REST_API\n/// @brief HTTP PUT Method \n/// @param restRequests : Request list with header, body, url and attachements\n/// @param progressBarText : text for the progress bar\n/// @return string = HTTP Response header + \"\\r\\n\\r\\n\" + HTTP Response body",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 16058,
+                    "block": 1384
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 16843,
+                    "block": 1384,
+                    "anchor": "rest-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "CloApiRestRequest",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:CloApiRestRequest"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param restRequests : Request list with header, body, url and attachements",
+            "@param progressBarText : text for the progress bar"
+          ],
+          "return_docs_raw": [
+            "@return string = HTTP Response header + \"\\r\\n\\r\\n\" + HTTP Response body"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "rest_api.CallbackRestMultiRequest",
+      "qualified_name": "rest_api.CallbackRestMultiRequest",
+      "module": "rest_api",
+      "symbol": "CallbackRestMultiRequest",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "rest_api.CallbackRestMultiRequest#83f1b9ba86b194e7",
+          "signature_normalized": "def CallbackRestMultiRequest(restRequests : list[CloApiRestRequest], callbackFunc : std::function[None (CloApiRestResponse)], callbackFinished : std::function[None()]) -> None",
+          "signature_raw": "def CallbackRestMultiRequest(restRequests : list[CloApiRestRequest], callbackFunc : std::function[None (CloApiRestResponse)], callbackFinished : std::function[None()]) -> None",
+          "parameters": [
+            {
+              "raw": "restRequests : list[CloApiRestRequest]",
+              "name": "restRequests",
+              "annotation_raw": "list[CloApiRestRequest]"
+            },
+            {
+              "raw": "callbackFunc : std::function[None (CloApiRestResponse)]",
+              "name": "callbackFunc",
+              "annotation_raw": "std::function[None (CloApiRestResponse)]"
+            },
+            {
+              "raw": "callbackFinished : std::function[None()]",
+              "name": "callbackFinished",
+              "annotation_raw": "std::function[None()]"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def CallbackRestMultiRequest(restRequests : list[CloApiRestRequest], callbackFunc : std::function[None (CloApiRestResponse)], callbackFinished : std::function[None()]) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup REST_API\n@brief It uses the CloApiRestRequest structure to make multiple Http requests and then trigger each callbackFunc when each server responds. The callbackFinished is trrigered after all requests have been responded to.\n@param restRequests : Request list with header, body, url and attachements\n@param callbackFunc : When the server responds, a callback function is called with CloApiRestResponse.\n@param callbackFinished : The callbackFinished function is called last after all requests have been responded to.\n\"\"\"",
+              "section": "REST_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 16024,
+                  "block": 1381
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 16808,
+                  "block": 1381,
+                  "anchor": "rest-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "CallbackRestMultiRequest(const std::vector<Marvelous::CloApiRestRequest>& restRequests, const std::function<void (Marvelous::CloApiRestResponse)>& callbackFunc, const std::function<void()>& callbackFinished)",
+                "documentation_raw": "/// @ingroup REST_API\n/// @brief It uses the CloApiRestRequest structure to make multiple Http requests and then trigger each callbackFunc when each server responds. The callbackFinished is trrigered after all requests have been responded to.\n/// @param restRequests : Request list with header, body, url and attachements\n/// @param callbackFunc : When the server responds, a callback function is called with CloApiRestResponse.\n/// @param callbackFinished : The callbackFinished function is called last after all requests have been responded to.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 16035,
+                    "block": 1382
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 16819,
+                    "block": 1382,
+                    "anchor": "rest-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "CloApiRestRequest",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:CloApiRestRequest"
+            },
+            {
+              "name": "CloApiRestRequest",
+              "basis": "documentation_mention",
+              "status": "resolved",
+              "type_id": "type:CloApiRestRequest"
+            },
+            {
+              "name": "CloApiRestResponse",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:CloApiRestResponse"
+            },
+            {
+              "name": "CloApiRestResponse",
+              "basis": "documentation_mention",
+              "status": "resolved",
+              "type_id": "type:CloApiRestResponse"
+            },
+            {
+              "name": "std::function",
+              "basis": "annotation",
+              "status": "unresolved",
+              "type_id": null
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param restRequests : Request list with header, body, url and attachements",
+            "@param callbackFunc : When the server responds, a callback function is called with CloApiRestResponse.",
+            "@param callbackFinished : The callbackFinished function is called last after all requests have been responded to."
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [
+            "unresolved_annotation_type",
+            "cpp_spelling_in_python_declaration"
+          ],
+          "contract_status": "ambiguous"
+        }
+      ]
+    },
+    {
+      "id": "rest_api.CallbackRestRequest",
+      "qualified_name": "rest_api.CallbackRestRequest",
+      "module": "rest_api",
+      "symbol": "CallbackRestRequest",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "rest_api.CallbackRestRequest#015f25eaf1a7cf9b",
+          "signature_normalized": "def CallbackRestRequest(restRequest : CloApiRestRequest, callbackFunc : std::function[None (CloApiRestResponse)]) -> None",
+          "signature_raw": "def CallbackRestRequest(restRequest : CloApiRestRequest, callbackFunc : std::function[None (CloApiRestResponse)]) -> None",
+          "parameters": [
+            {
+              "raw": "restRequest : CloApiRestRequest",
+              "name": "restRequest",
+              "annotation_raw": "CloApiRestRequest"
+            },
+            {
+              "raw": "callbackFunc : std::function[None (CloApiRestResponse)]",
+              "name": "callbackFunc",
+              "annotation_raw": "std::function[None (CloApiRestResponse)]"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def CallbackRestRequest(restRequest : CloApiRestRequest, callbackFunc : std::function[None (CloApiRestResponse)]) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup REST_API\n@brief It makes an Http request with a CloApiRestRequest structure and then triggers a callbackFunc when the server responds\n@param restRequest : It is the request with header, body, url and attachements\n@param callbackFunc : When the server responds, a callback function is called with CloApiRestResponse.\n\"\"\"",
+              "section": "REST_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 16003,
+                  "block": 1379
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 16786,
+                  "block": 1379,
+                  "anchor": "rest-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "CallbackRestRequest(const Marvelous::CloApiRestRequest& restReq, const std::function<void (Marvelous::CloApiRestResponse)>& callbackFunc)",
+                "documentation_raw": "/// @ingroup REST_API\n/// @brief It makes an Http request with a CloApiRestRequest structure and then triggers a callbackFunc when the server responds\n/// @param restRequest : It is the request with header, body, url and attachements\n/// @param callbackFunc : When the server responds, a callback function is called with CloApiRestResponse.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 16013,
+                    "block": 1380
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 16796,
+                    "block": 1380,
+                    "anchor": "rest-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "CloApiRestRequest",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:CloApiRestRequest"
+            },
+            {
+              "name": "CloApiRestRequest",
+              "basis": "documentation_mention",
+              "status": "resolved",
+              "type_id": "type:CloApiRestRequest"
+            },
+            {
+              "name": "CloApiRestResponse",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:CloApiRestResponse"
+            },
+            {
+              "name": "CloApiRestResponse",
+              "basis": "documentation_mention",
+              "status": "resolved",
+              "type_id": "type:CloApiRestResponse"
+            },
+            {
+              "name": "std::function",
+              "basis": "annotation",
+              "status": "unresolved",
+              "type_id": null
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param restRequest : It is the request with header, body, url and attachements",
+            "@param callbackFunc : When the server responds, a callback function is called with CloApiRestResponse."
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [
+            "unresolved_annotation_type",
+            "cpp_spelling_in_python_declaration"
+          ],
+          "contract_status": "ambiguous"
+        }
+      ]
+    }
+  ]
+}

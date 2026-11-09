@@ -1,0 +1,235 @@
+{
+  "schema_version": 1,
+  "target": "CLO2026.1.336",
+  "checked_on": "2026-11-09",
+  "scope": "offline_join_not_native_execution_or_full_overload_acceptance",
+  "inputs": [
+    {
+      "path": "clo_official_api.json",
+      "sha256": "c93ae49d5b3f62063bf86dcd0b46668729691f794a1fefc6f83d6550918ac703"
+    },
+    {
+      "path": "clo_source_mappings.json",
+      "sha256": "e4efce4b74c2fe1ca02371a5237347ab6498df283e7c49712816d7722e3cd108"
+    },
+    {
+      "path": "current_operation_scope.json",
+      "sha256": "2f70bdb63f8ed9d5322c9667ee369240d71a90096002ac9677572007496deb5e"
+    },
+    {
+      "path": "review_gates.json",
+      "sha256": "e2757798041c40f83a36a362b79e93dc1c748869555de397775a9a1a1d142d54"
+    }
+  ],
+  "runtime_evidence": "docs/CLO_API_RUNTIME_EVIDENCE.md",
+  "counts": {
+    "declarations": 1134,
+    "official_names": 890,
+    "official_types": 77,
+    "additional_interfaces": 6,
+    "donor_tools": 170,
+    "local_legacy_tools": 47,
+    "current_tools": 14,
+    "current_native_operations": 10,
+    "historical_docstring_names": 43,
+    "nonofficial_mapping_names": 4,
+    "official_names_with_donor_reference": 332,
+    "per_overload_implemented_claims": 0,
+    "per_overload_real_pass_claims": 0,
+    "official_names_with_legacy_reference": 50,
+    "declarations_by_module": {
+      "export_api": 123,
+      "fabric_api": 284,
+      "gui_api": 39,
+      "import_api": 42,
+      "pattern_api": 233,
+      "rest_api": 8,
+      "utility_api": 405
+    }
+  },
+  "historical_runtime_source": {
+    "path": "docs/CLO_API_RUNTIME_EVIDENCE.md",
+    "sha256": "22ffaac5bc58cdf006a3395dc34ee4ba94eb68cae91a16c2c046cf1092381650",
+    "hash_scope": "historical_document_bytes_not_exact_overload"
+  },
+  "status_policy": "Every official declaration accounted for; source reference never elevates per-overload implementation/real status. Current limited operations recorded separately. runtime_presence/binding_status are historical symbol-level docstring observations, not exact-overload evidence or confirmation of the installed target build.",
+  "shards": [
+    {
+      "path": "coverage/export_api-01.json",
+      "sha256": "0ebf4b8dfff36568c99c8027de49f27451f83834822213058f93913898a675f9",
+      "count": 67
+    },
+    {
+      "path": "coverage/export_api-02.json",
+      "sha256": "ff55f94e988d6e61cde98d65350d9034be4dcc341fea4c837f94820ee8510877",
+      "count": 56
+    },
+    {
+      "path": "coverage/fabric_api-01.json",
+      "sha256": "a705f5b197ccef51bce06a94d2290102bc429c3ff9e6930a3ee05990575336fa",
+      "count": 68
+    },
+    {
+      "path": "coverage/fabric_api-02.json",
+      "sha256": "0317cda4e36a5f672731d807234296948b31502fd7c467ccdd8fd8d1925f2d19",
+      "count": 68
+    },
+    {
+      "path": "coverage/fabric_api-03.json",
+      "sha256": "08bf5fe453dfb366345393990e516ba0c4c416dbf9349058aacad70fc67922e6",
+      "count": 68
+    },
+    {
+      "path": "coverage/fabric_api-04.json",
+      "sha256": "dd3ae335eb5e934c11f11b94fca3d666917c27619721a420970dd2629f7a974c",
+      "count": 67
+    },
+    {
+      "path": "coverage/fabric_api-05.json",
+      "sha256": "56dc7da9a65c01d1100341f390a536e4fbc93e956ae7902707c2fd8ca53c82be",
+      "count": 13
+    },
+    {
+      "path": "coverage/gui_api-01.json",
+      "sha256": "21be0f7494ed768fb56a27e6c0e62b72a041aefd12d6b6be836f5ef252d32270",
+      "count": 39
+    },
+    {
+      "path": "coverage/import_api-01.json",
+      "sha256": "09c9e868abe803f24c932f3d9e35283e5829fa2156a7e2268da67d1156d05ad5",
+      "count": 42
+    },
+    {
+      "path": "coverage/pattern_api-01.json",
+      "sha256": "3f99a5bfa72d22045e313606b6dbb63280432eb2e31ce4d2b8198667126d10b0",
+      "count": 66
+    },
+    {
+      "path": "coverage/pattern_api-02.json",
+      "sha256": "9d10ffaf64114057ccde118e8486d30ede6d245ee32d5934b98311c4f95c69f9",
+      "count": 67
+    },
+    {
+      "path": "coverage/pattern_api-03.json",
+      "sha256": "54f6be4b0e058d42cdc1aec35f8f9050ba9aa72e576f3b21806924d22b3dda6b",
+      "count": 67
+    },
+    {
+      "path": "coverage/pattern_api-04.json",
+      "sha256": "2c6f24f07edd836b234f54c71b53dc948fa76796234dd8d02102537a0b2682e6",
+      "count": 33
+    },
+    {
+      "path": "coverage/rest_api-01.json",
+      "sha256": "d989ae29f6e42811097a6c40abab3ad58d3b7bcbe4cc7766225daa8faae6f54c",
+      "count": 8
+    },
+    {
+      "path": "coverage/utility_api-01.json",
+      "sha256": "c5229c6c6f3e00db224f3b7359153534b18dc33b8331fb55112bd8f3b8182a10",
+      "count": 67
+    },
+    {
+      "path": "coverage/utility_api-02.json",
+      "sha256": "965352a58602139804b1020d047e7f0069d78759b9bda50dea773eefddb4db1b",
+      "count": 65
+    },
+    {
+      "path": "coverage/utility_api-03.json",
+      "sha256": "a3391f980ed5d2e727041f9d9fd4d50b1ffac29262ef551b6f56b13600ef0930",
+      "count": 66
+    },
+    {
+      "path": "coverage/utility_api-04.json",
+      "sha256": "35f641f82e7b3c9b0ccd6b04af58887abdf3a3eb72b141423ca7aa67b097d2ba",
+      "count": 67
+    },
+    {
+      "path": "coverage/utility_api-05.json",
+      "sha256": "8362ba1ca89d67b30ad081816ca8b14a08ec5fed75159851f5a3b5e829951789",
+      "count": 65
+    },
+    {
+      "path": "coverage/utility_api-06.json",
+      "sha256": "5a54681dd87018f403dccdfe4157d0689d98621e1507a1a22c71774d4e4697e2",
+      "count": 67
+    },
+    {
+      "path": "coverage/utility_api-07.json",
+      "sha256": "2bd68c4dd0f8a1aab6cf5eae65fb9b26226896b5860ece5204669b212398caa5",
+      "count": 8
+    }
+  ],
+  "nonofficial_entries": [
+    {
+      "qualified_name": "export_api.ExportTechpackOption",
+      "official_status": "not_in_documented_python_method_universe",
+      "mapping": {
+        "donor_tools": [
+          "export_tech_pack"
+        ],
+        "legacy_tools": []
+      },
+      "runtime_observation": null,
+      "implementation": "blocked",
+      "verification": "not_tested",
+      "reason": "May be removed method, type/factory or runtime-only name. Not silently excluded or declared a callable method."
+    },
+    {
+      "qualified_name": "export_api.ImportExportOption",
+      "official_status": "not_in_documented_python_method_universe",
+      "mapping": {
+        "donor_tools": [
+          "export_fbx",
+          "export_glb",
+          "export_gltf"
+        ],
+        "legacy_tools": [
+          "export_fbx",
+          "export_glb",
+          "export_gltf"
+        ]
+      },
+      "runtime_observation": null,
+      "implementation": "blocked",
+      "verification": "not_tested",
+      "reason": "May be removed method, type/factory or runtime-only name. Not silently excluded or declared a callable method."
+    },
+    {
+      "qualified_name": "export_api.NewImportExportOption",
+      "official_status": "not_in_documented_python_method_universe",
+      "mapping": {
+        "donor_tools": [
+          "export_obj"
+        ],
+        "legacy_tools": [
+          "export_glb",
+          "export_gltf",
+          "export_obj"
+        ]
+      },
+      "runtime_observation": null,
+      "implementation": "blocked",
+      "verification": "not_tested",
+      "reason": "May be removed method, type/factory or runtime-only name. Not silently excluded or declared a callable method."
+    },
+    {
+      "qualified_name": "utility_api.GetNestingBufferSpacing",
+      "official_status": "not_in_documented_python_method_universe",
+      "mapping": {
+        "donor_tools": [
+          "get_nesting_status"
+        ],
+        "legacy_tools": []
+      },
+      "runtime_observation": null,
+      "implementation": "blocked",
+      "verification": "not_tested",
+      "reason": "May be removed method, type/factory or runtime-only name. Not silently excluded or declared a callable method."
+    }
+  ],
+  "type_closure_reference": "clo_official_api.json",
+  "mapping_reference": "clo_source_mappings.json",
+  "current_scope_reference": "current_operation_scope.json",
+  "review_gate_reference": "review_gates.json"
+}

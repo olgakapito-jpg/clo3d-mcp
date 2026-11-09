@@ -1,0 +1,379 @@
+{
+  "schema_version": 1,
+  "kind": "static_source_mappings",
+  "checked_on": "2026-11-09",
+  "generator": "scripts/build_api_source_mappings.py",
+  "native_id_format": "module.symbol",
+  "donor": {
+    "repository": "adriendelmas/clo3d-mcp-extended",
+    "revision": "df150d95db604e4651bbbdfb151b8204209a7d12",
+    "tree": {
+      "url": "https://api.github.com/repos/adriendelmas/clo3d-mcp-extended/git/trees/df150d95db604e4651bbbdfb151b8204209a7d12?recursive=1",
+      "sha256": "ceef56a8e0f9991c100800c669dde5c04fa811dcefa6e656da559943372ad022",
+      "response_sha": "df150d95db604e4651bbbdfb151b8204209a7d12",
+      "truncated": false
+    },
+    "sources": [
+      {
+        "path": "LICENSE",
+        "sha256": "069ceef6192e0b3bdf627f069f5b76da42e359d6191a31e758f0ac3ce364d2f2",
+        "bytes": 1144,
+        "lines": 22,
+        "url": "https://raw.githubusercontent.com/adriendelmas/clo3d-mcp-extended/df150d95db604e4651bbbdfb151b8204209a7d12/LICENSE",
+        "browse_url": "https://github.com/adriendelmas/clo3d-mcp-extended/blob/df150d95db604e4651bbbdfb151b8204209a7d12/LICENSE",
+        "git_blob_sha1": "3a6d7579c4461fd8cc5a5645d61f3d986fe76a39"
+      },
+      {
+        "path": "NOTICE",
+        "sha256": "cae038886e4e04eb35cef9c6241956f200af0515c13acb9cd712f2ae71ca5659",
+        "bytes": 633,
+        "lines": 17,
+        "url": "https://raw.githubusercontent.com/adriendelmas/clo3d-mcp-extended/df150d95db604e4651bbbdfb151b8204209a7d12/NOTICE",
+        "browse_url": "https://github.com/adriendelmas/clo3d-mcp-extended/blob/df150d95db604e4651bbbdfb151b8204209a7d12/NOTICE",
+        "git_blob_sha1": "e0deef5131e633d352cbdd57fbf0e651e888526e"
+      },
+      {
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "sha256": "41d27d5337f661a819be30b84686dd1afafbfc834bcd55f4965f0eba0d09acdd",
+        "bytes": 82587,
+        "lines": 1969,
+        "url": "https://raw.githubusercontent.com/adriendelmas/clo3d-mcp-extended/df150d95db604e4651bbbdfb151b8204209a7d12/plugin/clo3d_mcp_plugin.py",
+        "browse_url": "https://github.com/adriendelmas/clo3d-mcp-extended/blob/df150d95db604e4651bbbdfb151b8204209a7d12/plugin/clo3d_mcp_plugin.py",
+        "git_blob_sha1": "bb35ac6d8574b85aa765e456831f40b6ff4f34eb"
+      },
+      {
+        "path": "src/clo3d_mcp/extended/__init__.py",
+        "sha256": "5e4db8e3b31f1853c1669b077dc77deaa07b7cbedd8874a94808cd59c4bb81ca",
+        "bytes": 233,
+        "lines": 3,
+        "url": "https://raw.githubusercontent.com/adriendelmas/clo3d-mcp-extended/df150d95db604e4651bbbdfb151b8204209a7d12/src/clo3d_mcp/extended/__init__.py",
+        "browse_url": "https://github.com/adriendelmas/clo3d-mcp-extended/blob/df150d95db604e4651bbbdfb151b8204209a7d12/src/clo3d_mcp/extended/__init__.py",
+        "git_blob_sha1": "41208b1b676b7525d5d937136f807fb32598adde"
+      },
+      {
+        "path": "src/clo3d_mcp/extended/avatar.py",
+        "sha256": "2a408d00d885b76b1cb78505d6407b9a3d4046a6b6e9624e2e0285c84a1a504a",
+        "bytes": 3443,
+        "lines": 99,
+        "url": "https://raw.githubusercontent.com/adriendelmas/clo3d-mcp-extended/df150d95db604e4651bbbdfb151b8204209a7d12/src/clo3d_mcp/extended/avatar.py",
+        "browse_url": "https://github.com/adriendelmas/clo3d-mcp-extended/blob/df150d95db604e4651bbbdfb151b8204209a7d12/src/clo3d_mcp/extended/avatar.py",
+        "git_blob_sha1": "e53fd71d050029602353823b5a007fd0426764ab"
+      },
+      {
+        "path": "src/clo3d_mcp/extended/docs.py",
+        "sha256": "6bf60253bdb708ce5bd6285d7797024bbe60cae00aa46a5a215a4bdc2c39945f",
+        "bytes": 913,
+        "lines": 27,
+        "url": "https://raw.githubusercontent.com/adriendelmas/clo3d-mcp-extended/df150d95db604e4651bbbdfb151b8204209a7d12/src/clo3d_mcp/extended/docs.py",
+        "browse_url": "https://github.com/adriendelmas/clo3d-mcp-extended/blob/df150d95db604e4651bbbdfb151b8204209a7d12/src/clo3d_mcp/extended/docs.py",
+        "git_blob_sha1": "df1c6897a7962b7ef364d300d9604b621a968f5b"
+      },
+      {
+        "path": "src/clo3d_mcp/extended/files.py",
+        "sha256": "20148a5c6a980b7f5497292e2d989c542e2dc36032fe6afa2a0ca2cf15ebc0c0",
+        "bytes": 2391,
+        "lines": 64,
+        "url": "https://raw.githubusercontent.com/adriendelmas/clo3d-mcp-extended/df150d95db604e4651bbbdfb151b8204209a7d12/src/clo3d_mcp/extended/files.py",
+        "browse_url": "https://github.com/adriendelmas/clo3d-mcp-extended/blob/df150d95db604e4651bbbdfb151b8204209a7d12/src/clo3d_mcp/extended/files.py",
+        "git_blob_sha1": "079b72bbc52e129730f25edccaf8121f0ec955b3"
+      },
+      {
+        "path": "src/clo3d_mcp/extended/geometry.py",
+        "sha256": "d13730e2798752b07dc833e05e48220de60b85d6c342e1b5ed835ccbde5a6624",
+        "bytes": 9508,
+        "lines": 217,
+        "url": "https://raw.githubusercontent.com/adriendelmas/clo3d-mcp-extended/df150d95db604e4651bbbdfb151b8204209a7d12/src/clo3d_mcp/extended/geometry.py",
+        "browse_url": "https://github.com/adriendelmas/clo3d-mcp-extended/blob/df150d95db604e4651bbbdfb151b8204209a7d12/src/clo3d_mcp/extended/geometry.py",
+        "git_blob_sha1": "4346f2f6ea3a999d3f6add2182f1d30aefc69332"
+      },
+      {
+        "path": "src/clo3d_mcp/extended/materials.py",
+        "sha256": "a2dc18ef333ea99b75fde7b05168b7cf90410c126333ee862d4050688b20ce43",
+        "bytes": 19421,
+        "lines": 373,
+        "url": "https://raw.githubusercontent.com/adriendelmas/clo3d-mcp-extended/df150d95db604e4651bbbdfb151b8204209a7d12/src/clo3d_mcp/extended/materials.py",
+        "browse_url": "https://github.com/adriendelmas/clo3d-mcp-extended/blob/df150d95db604e4651bbbdfb151b8204209a7d12/src/clo3d_mcp/extended/materials.py",
+        "git_blob_sha1": "2d5aa695f8c812140743be0127386ce5834a1b0b"
+      },
+      {
+        "path": "src/clo3d_mcp/extended/nesting.py",
+        "sha256": "a894f6886d5bbd7cdb4c2bd3801d8117ceaeaf310b15ca20f79e0ad0c55f41b6",
+        "bytes": 1247,
+        "lines": 33,
+        "url": "https://raw.githubusercontent.com/adriendelmas/clo3d-mcp-extended/df150d95db604e4651bbbdfb151b8204209a7d12/src/clo3d_mcp/extended/nesting.py",
+        "browse_url": "https://github.com/adriendelmas/clo3d-mcp-extended/blob/df150d95db604e4651bbbdfb151b8204209a7d12/src/clo3d_mcp/extended/nesting.py",
+        "git_blob_sha1": "5ea26765e23c8945b3670faf7129ce6fea5d3a42"
+      },
+      {
+        "path": "src/clo3d_mcp/extended/sewing.py",
+        "sha256": "52896ce1fa957e730ab538862df05c458f2ecd61562a156376662e0b436199a7",
+        "bytes": 8393,
+        "lines": 172,
+        "url": "https://raw.githubusercontent.com/adriendelmas/clo3d-mcp-extended/df150d95db604e4651bbbdfb151b8204209a7d12/src/clo3d_mcp/extended/sewing.py",
+        "browse_url": "https://github.com/adriendelmas/clo3d-mcp-extended/blob/df150d95db604e4651bbbdfb151b8204209a7d12/src/clo3d_mcp/extended/sewing.py",
+        "git_blob_sha1": "348fd0a9f1935448f3b4e040bda424143cdb48ca"
+      },
+      {
+        "path": "src/clo3d_mcp/extended/simulation.py",
+        "sha256": "04a7b9c0038267211009201f8c25b0f12ffb827c37997080a629204fdd3ee9c0",
+        "bytes": 7594,
+        "lines": 159,
+        "url": "https://raw.githubusercontent.com/adriendelmas/clo3d-mcp-extended/df150d95db604e4651bbbdfb151b8204209a7d12/src/clo3d_mcp/extended/simulation.py",
+        "browse_url": "https://github.com/adriendelmas/clo3d-mcp-extended/blob/df150d95db604e4651bbbdfb151b8204209a7d12/src/clo3d_mcp/extended/simulation.py",
+        "git_blob_sha1": "f44a069bdeaa13cdd284bbf128663dd8963471c4"
+      },
+      {
+        "path": "src/clo3d_mcp/extended/visuals.py",
+        "sha256": "01dada9763c66527f74a32659b5a11e739b7bdd4730fdb5320a09da11af68cab",
+        "bytes": 5317,
+        "lines": 118,
+        "url": "https://raw.githubusercontent.com/adriendelmas/clo3d-mcp-extended/df150d95db604e4651bbbdfb151b8204209a7d12/src/clo3d_mcp/extended/visuals.py",
+        "browse_url": "https://github.com/adriendelmas/clo3d-mcp-extended/blob/df150d95db604e4651bbbdfb151b8204209a7d12/src/clo3d_mcp/extended/visuals.py",
+        "git_blob_sha1": "b0084ce23da3fb73d0d04351999589575ca3036a"
+      },
+      {
+        "path": "src/clo3d_mcp/server.py",
+        "sha256": "4e0db8dcef97590e604487c838d40ebc147b1b51297e62fcbed84d90b5f64bfd",
+        "bytes": 11859,
+        "lines": 379,
+        "url": "https://raw.githubusercontent.com/adriendelmas/clo3d-mcp-extended/df150d95db604e4651bbbdfb151b8204209a7d12/src/clo3d_mcp/server.py",
+        "browse_url": "https://github.com/adriendelmas/clo3d-mcp-extended/blob/df150d95db604e4651bbbdfb151b8204209a7d12/src/clo3d_mcp/server.py",
+        "git_blob_sha1": "35b2a490e373f405368f392508575e3f81c84469"
+      }
+    ],
+    "license": {
+      "identifier": "MIT",
+      "copyright": [
+        "Copyright (c) 2026 Violet Sphinx (original clo3d-mcp)",
+        "Copyright (c) 2026 adriendelmas (clo3d-mcp-extended)"
+      ],
+      "license_url": "https://raw.githubusercontent.com/adriendelmas/clo3d-mcp-extended/df150d95db604e4651bbbdfb151b8204209a7d12/LICENSE",
+      "notice_url": "https://raw.githubusercontent.com/adriendelmas/clo3d-mcp-extended/df150d95db604e4651bbbdfb151b8204209a7d12/NOTICE",
+      "notice_summary": "Derived from Ubani-Studio/clo3d-mcp (MIT); no CLO SDK sources included; not affiliated with CLO Virtual Fashion Inc.",
+      "reuse": "Normalized source facts, signatures and tool descriptions only; no donor executable implementation copied or executed. Retain donor LICENSE/NOTICE if later copying code or substantial fragments."
+    },
+    "normalized_sha256": "26990cb1c4277a8fe118fb25daae49bb0abfa0b1b333b5990d88f16d1aef3bfc",
+    "tools_shards": [
+      {
+        "path": "mappings/donor_tools_01.json",
+        "sha256": "74d59fb4d91bfb8b8d11b01662f4b3a2439521285807c11b8528d7c0d9747345",
+        "entries": 133
+      },
+      {
+        "path": "mappings/donor_tools_02.json",
+        "sha256": "ba0162ff93f94f288886742f9cdae6c53159a3e2ef9d8852ab1b3a5783996a6e",
+        "entries": 37
+      }
+    ],
+    "handlers_shards": [
+      {
+        "path": "mappings/donor_handlers_01.json",
+        "sha256": "86399c6d545ea54b91cc99ae822710bb6518a8f5e49f8368d36d8a84440b6cd0",
+        "entries": 123
+      },
+      {
+        "path": "mappings/donor_handlers_02.json",
+        "sha256": "17012ab1e5c7c72223eec0e49dd37953028589f1de86d4f067042d0f0b0a98cd",
+        "entries": 49
+      }
+    ],
+    "handler_functions_outside_registry_shards": [
+      {
+        "path": "mappings/donor_extras_01.json",
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+        "entries": 0
+      }
+    ]
+  },
+  "local": {
+    "sources": [
+      {
+        "path": "docs/P3_MCP_CHECK.md",
+        "sha256": "f18207e0381762f83c2906496fd6344b4de7532c5c539d58edb2a3bf21cd0f81",
+        "bytes": 14853,
+        "lines": 163
+      },
+      {
+        "path": "docs/PATTERN_API_CHECK.md",
+        "sha256": "6413227742cb37cb002d466ad61922dfb9c0c6bbb322ce49a3fcea0880ff0391",
+        "bytes": 16619,
+        "lines": 190
+      },
+      {
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "sha256": "4915288c2bb0f1000c77ea495354ba05d338f329260471daa89efd2b8e879f0f",
+        "bytes": 31455,
+        "lines": 825
+      },
+      {
+        "path": "plugin/clo3d_mcp_start.py",
+        "sha256": "70b98b2b5d0d495299f10e07002ba8fd3939c5adf001829a375e227e5da684dc",
+        "bytes": 3096,
+        "lines": 71
+      },
+      {
+        "path": "src/clo3d_mcp/pattern_api.py",
+        "sha256": "cb62a5596457f87553c6251568c45ca59d505f1dcdfa081877921877476d3008",
+        "bytes": 11845,
+        "lines": 235
+      },
+      {
+        "path": "src/clo3d_mcp/pattern_contract.py",
+        "sha256": "e0eee940d2bb24267b32071aabc85a84b329c2b7b181a8c0e6d1b1a36f10895a",
+        "bytes": 8546,
+        "lines": 192
+      },
+      {
+        "path": "src/clo3d_mcp/pipe_runtime.py",
+        "sha256": "bc88c6817e776539d35a57994e3664eb9d89a992f4a3909f02b8fb7283863ea3",
+        "bytes": 16018,
+        "lines": 346
+      },
+      {
+        "path": "src/clo3d_mcp/pipe_session.py",
+        "sha256": "b5b6b8f710053c520550b5f15fab198ae52d9191ad14ae8737c4eb4a599581df",
+        "bytes": 6298,
+        "lines": 131
+      },
+      {
+        "path": "src/clo3d_mcp/protocol.py",
+        "sha256": "cc5fae44fcc8b1039d85cf4767cacfd1daa97ea35cff052e729f11fcd038e02e",
+        "bytes": 6572,
+        "lines": 162
+      },
+      {
+        "path": "src/clo3d_mcp/server.py",
+        "sha256": "73c6480b09992478b5deac210acac598bf05206c764afd9091acbdc8f8dcddf7",
+        "bytes": 17436,
+        "lines": 544
+      },
+      {
+        "path": "src/clo3d_mcp/transport_server.py",
+        "sha256": "cb17a0b5526c5695ba5f14ecbce17785806f0984f9b164d6a7a2d11f8d5c1841",
+        "bytes": 16295,
+        "lines": 347
+      },
+      {
+        "path": "tests/test_pattern_api.py",
+        "sha256": "d4f816faa2d73e1726dd3fec92c90ffd6ac798d99e6a12d9bbb76f226cfcdaa2",
+        "bytes": 10941,
+        "lines": 250
+      },
+      {
+        "path": "tests/test_service_executor.py",
+        "sha256": "38b7fc441c0fc8fb89f6ff8a4808f1d5256101a3e59da86a219a72ffc6b33c4c",
+        "bytes": 3068,
+        "lines": 83
+      },
+      {
+        "path": "tests/test_transport_server.py",
+        "sha256": "5f73e597d576e6f63efb38a9a299d59e031ba0a795d65a77fb8061cc8d7f736e",
+        "bytes": 17900,
+        "lines": 364
+      },
+      {
+        "path": "tests/test_verify_patterns.py",
+        "sha256": "537bc3aabcac7b56b303863656295e8e0a3464c9fb4cca4be70e636421059df6",
+        "bytes": 2737,
+        "lines": 66
+      }
+    ],
+    "legacy": {
+      "shared_native_alias_candidates": [
+        {
+          "tools": [
+            "open_file",
+            "import_file"
+          ],
+          "shared_native_id": "import_api.ImportFile",
+          "status": "shared_native_name_only_not_contract_equivalence"
+        },
+        {
+          "tools": [
+            "add_fabric",
+            "import_fabric"
+          ],
+          "shared_native_id": "fabric_api.AddFabric",
+          "status": "shared_native_name_only_not_contract_equivalence"
+        }
+      ],
+      "current_replacement_limits": [
+        {
+          "legacy_tool": "get_pattern_bounding_box",
+          "current_tool": "get_pattern_geometry",
+          "scope": "bbox field only; get_pattern_info/GetPatternInformation not fully covered"
+        },
+        {
+          "legacy_tool": "copy_pattern",
+          "current_tool": "copy_pattern_with_offset",
+          "scope": "relative offset only; CopyPatternPiecePos != CopyPatternPieceMove positional semantics"
+        },
+        {
+          "legacy_tool": "create_pattern",
+          "current_tool": "create_pattern",
+          "scope": "simple straight 3-64 pair polygon only, not legacy triplets/curves"
+        }
+      ],
+      "tools_shards": [
+        {
+          "path": "mappings/legacy_tools_01.json",
+          "sha256": "90993443b86724bb45ee9dc420209e3f5fecfd8069436fc6bd4159bff674f7b4",
+          "entries": 47
+        }
+      ],
+      "handlers_shards": [
+        {
+          "path": "mappings/legacy_handlers_01.json",
+          "sha256": "a34a994411e65b693a51a5036506bb32bd9fa83241b17a97f2fd82fc96d4b83e",
+          "entries": 47
+        }
+      ],
+      "handler_functions_outside_registry_shards": [
+        {
+          "path": "mappings/legacy_extras_01.json",
+          "sha256": "0eafb2cd20742b07254f1755d76b503d46a41db0291c56a746c19c7cde1b40c8",
+          "entries": 2
+        }
+      ]
+    },
+    "current": {
+      "profile_note": "14 only with pattern_package enabled; 5 base tools otherwise. Static declarations, not a live tools/list response.",
+      "tools_shards": [
+        {
+          "path": "mappings/current_tools_01.json",
+          "sha256": "561d947f5bdc08df68a2ce3f9521f0383be69521456555b122ccc64cc5110be7",
+          "entries": 14
+        }
+      ]
+    }
+  },
+  "counts": {
+    "donor_tools": 170,
+    "donor_handlers": 172,
+    "donor_server_tools": 33,
+    "donor_extended_tools": 137,
+    "donor_reachable_native_ids": 336,
+    "donor_tools_without_native_references": 3,
+    "legacy_tools": 47,
+    "legacy_handlers": 47,
+    "legacy_handler_functions_outside_registry": 2,
+    "shared_donor_legacy_tool_names": 44,
+    "donor_only_tool_names": 126,
+    "legacy_only_tool_names": [
+      "import_dxf",
+      "list_extensions",
+      "ping"
+    ],
+    "current_tools": 14
+  },
+  "limitations": [
+    "Static AST evidence only. No donor/local inspected module import, no CLO call, restart, mutation or SDK execution.",
+    "Native ids are module.symbol. No inferred official overload, binding/type availability, error semantics, units or contract acceptance.",
+    "Helper reachability is a conservative syntactic graph including conditional/fallback paths, not proof that a call occurs. One shortest evidence path per helper; callable references remain distinct from direct calls.",
+    "getattr/dynamic module/type lookup and strings are reported as unresolved expressions, never expanded into guessed native calls. Arbitrary alias/dataflow, closures, decorators and reflection are not evaluated.",
+    "Current14 command-to-native selection is explicitly reviewed metadata tied to AST callsite evidence; references may be shared preflight/readback/conditional sites and are not an execution trace.",
+    "Exact descriptions are source docstrings (ast.get_docstring clean=True), signatures are ast.unparse-normalized Python declarations, not generated MCP JSON schemas or live tools/list.",
+    "Test function references establish traceability only, not execution/pass status or complete scenario coverage. Historical acceptance remains limited to cited documents and no new real CLO gate is closed.",
+    "Official coverage join and reconciliation of removed names/types are separate; raw donor symbol matches are not coverage percentages."
+  ]
+}

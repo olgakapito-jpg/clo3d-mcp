@@ -1,0 +1,32 @@
+EXPORT_API
+**********
+
+.. tabs::
+
+	.. code-tab:: python
+
+		def Export(_options : Thing, label : str = "two  spaces") -> str
+		"""
+		@brief Export without opening a dialog; distance in mm.
+		@param _options options to use.
+		@return Output path or empty string.
+		"""
+
+	.. code-tab:: c++
+
+		Export(const Thing& _options)
+		/// @brief Native reference only.
+
+.. tabs::
+
+	.. code-tab:: python
+
+		def Export(_options : Thing, label : str = "two  spaces") -> str
+		"""
+		@brief Second occurrence must survive deduplication.
+		"""
+
+	.. code-tab:: c++
+
+		Export(const Thing& _options)
+		/// @brief Second native reference.

@@ -1,0 +1,3188 @@
+{
+  "kind": "types",
+  "records": [
+    {
+      "id": "type:AlembicUnit",
+      "name": "AlembicUnit",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nValues for ImportAlembicOption.aUnit, the unit of the .abc file. Read them from an instance, for example ApiTypes.AlembicUnit().MEASURE_UNIT_CM.\n\"\"\"\nMEASURE_UNIT_MM:float        # millimeters (0.01)\nMEASURE_UNIT_CM:float        # centimeters (0.1)\nMEASURE_UNIT_INCH:float      # inches (0.254)\nMEASURE_UNIT_FEET:float      # feet (3.048)\nMEASURE_UNIT_M:float         # meters (10)\nMEASURE_UNIT_8_FEET:float    # 8 feet (24.384)\nMEASURE_UNIT_8_6_FEET:float  # 8.6 feet (26.2128)\nMEASURE_UNIT_AUTO:float      # automatic (0.01, the same value as MEASURE_UNIT_MM)",
+      "description_raw": "Values for ImportAlembicOption.aUnit, the unit of the .abc file. Read them from an instance, for example ApiTypes.AlembicUnit().MEASURE_UNIT_CM.",
+      "members": [
+        {
+          "raw": "MEASURE_UNIT_MM:float        # millimeters (0.01)",
+          "documentation_raw": "millimeters (0.01)",
+          "name": "MEASURE_UNIT_MM",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "MEASURE_UNIT_CM:float        # centimeters (0.1)",
+          "documentation_raw": "centimeters (0.1)",
+          "name": "MEASURE_UNIT_CM",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "MEASURE_UNIT_INCH:float      # inches (0.254)",
+          "documentation_raw": "inches (0.254)",
+          "name": "MEASURE_UNIT_INCH",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "MEASURE_UNIT_FEET:float      # feet (3.048)",
+          "documentation_raw": "feet (3.048)",
+          "name": "MEASURE_UNIT_FEET",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "MEASURE_UNIT_M:float         # meters (10)",
+          "documentation_raw": "meters (10)",
+          "name": "MEASURE_UNIT_M",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "MEASURE_UNIT_8_FEET:float    # 8 feet (24.384)",
+          "documentation_raw": "8 feet (24.384)",
+          "name": "MEASURE_UNIT_8_FEET",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "MEASURE_UNIT_8_6_FEET:float  # 8.6 feet (26.2128)",
+          "documentation_raw": "8.6 feet (26.2128)",
+          "name": "MEASURE_UNIT_8_6_FEET",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "MEASURE_UNIT_AUTO:float      # automatic (0.01, the same value as MEASURE_UNIT_MM)",
+          "documentation_raw": "automatic (0.01, the same value as MEASURE_UNIT_MM)",
+          "name": "MEASURE_UNIT_AUTO",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 78,
+              "block": 5
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 241,
+              "block": 5,
+              "anchor": "alembicunit"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:AttachFileInfo",
+      "name": "AttachFileInfo",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nAttachFileInfo structure for attaching files when using REST API\n\"\"\"\nfileName:str  # The fileName\nfilePath:str  # The file path",
+      "description_raw": "AttachFileInfo structure for attaching files when using REST API",
+      "members": [
+        {
+          "raw": "fileName:str  # The fileName",
+          "documentation_raw": "The fileName",
+          "name": "fileName",
+          "kind": "field",
+          "annotation_raw": "str",
+          "type_references": []
+        },
+        {
+          "raw": "filePath:str  # The file path",
+          "documentation_raw": "The file path",
+          "name": "filePath",
+          "kind": "field",
+          "annotation_raw": "str",
+          "type_references": []
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 459,
+              "block": 21
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 590,
+              "block": 21,
+              "anchor": "attachfileinfo"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:ButtonPairEdgeOrigin",
+      "name": "ButtonPairEdgeOrigin",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nCorner of the placement edge that the along-edge distances are measured from. Used by\nPatternAPI::PlaceButtonPairsOnEdge / DistributeButtonPairsOnEdge through ButtonPairPlacementOption.\nThe 2D window Y axis points up, so TOP is the edge endpoint with the greater Y.\n\"\"\"\nBUTTON_PAIR_EDGE_ORIGIN_TOP = 0     # Distances start at the upper corner of the edge (greater 2D-window Y)\nBUTTON_PAIR_EDGE_ORIGIN_BOTTOM = 1  # Distances start at the lower corner of the edge (smaller 2D-window Y)",
+      "description_raw": "Corner of the placement edge that the along-edge distances are measured from. Used by\nPatternAPI::PlaceButtonPairsOnEdge / DistributeButtonPairsOnEdge through ButtonPairPlacementOption.\nThe 2D window Y axis points up, so TOP is the edge endpoint with the greater Y.",
+      "members": [
+        {
+          "raw": "BUTTON_PAIR_EDGE_ORIGIN_TOP = 0     # Distances start at the upper corner of the edge (greater 2D-window Y)",
+          "documentation_raw": "Distances start at the upper corner of the edge (greater 2D-window Y)",
+          "name": "BUTTON_PAIR_EDGE_ORIGIN_TOP",
+          "kind": "enum_value",
+          "value_raw": "0",
+          "type_references": []
+        },
+        {
+          "raw": "BUTTON_PAIR_EDGE_ORIGIN_BOTTOM = 1  # Distances start at the lower corner of the edge (smaller 2D-window Y)",
+          "documentation_raw": "Distances start at the lower corner of the edge (smaller 2D-window Y)",
+          "name": "BUTTON_PAIR_EDGE_ORIGIN_BOTTOM",
+          "kind": "enum_value",
+          "value_raw": "1",
+          "type_references": []
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 1311,
+              "block": 71
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 1342,
+              "block": 71,
+              "anchor": "buttonpairedgeorigin"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:ButtonPairPlacementOption",
+      "name": "ButtonPairPlacementOption",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nOptional settings for PatternAPI::PlaceButtonPairsOnEdge / DistributeButtonPairsOnEdge. The default\nconstructor is a safe configuration: distances measured from the TOP corner, the project's current button head\nand buttonhole styles, style-default buttonhole size and unrotated items.\n\"\"\"\nedgeOrigin:ButtonPairEdgeOrigin  # Corner the along-edge distances are measured from. Default BUTTON_PAIR_EDGE_ORIGIN_TOP\nbuttonHeadStyleIndex:int         # Button head style index (order of GetButtonHeadStyleListWithIndex). -1 (default) = the current default button head style\nbuttonholeStyleIndex:int         # Buttonhole style index. -1 (default) = the current default buttonhole style\nbuttonholeWidth:float            # Per-instance buttonhole width in mm. 0 (default) keeps the style size. Set together with buttonholeHeight\nbuttonholeHeight:float           # Per-instance buttonhole height in mm. 0 (default) keeps the style size. Set together with buttonholeWidth\nbuttonAngleDegree:float          # Rotation applied to every created button head, in degrees. Default 0\nbuttonholeAngleDegree:float      # Rotation applied to every created buttonhole, in degrees. Default 0",
+      "description_raw": "Optional settings for PatternAPI::PlaceButtonPairsOnEdge / DistributeButtonPairsOnEdge. The default\nconstructor is a safe configuration: distances measured from the TOP corner, the project's current button head\nand buttonhole styles, style-default buttonhole size and unrotated items.",
+      "members": [
+        {
+          "raw": "edgeOrigin:ButtonPairEdgeOrigin  # Corner the along-edge distances are measured from. Default BUTTON_PAIR_EDGE_ORIGIN_TOP",
+          "documentation_raw": "Corner the along-edge distances are measured from. Default BUTTON_PAIR_EDGE_ORIGIN_TOP",
+          "name": "edgeOrigin",
+          "kind": "field",
+          "annotation_raw": "ButtonPairEdgeOrigin",
+          "type_references": [
+            {
+              "name": "ButtonPairEdgeOrigin",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:ButtonPairEdgeOrigin"
+            }
+          ]
+        },
+        {
+          "raw": "buttonHeadStyleIndex:int         # Button head style index (order of GetButtonHeadStyleListWithIndex). -1 (default) = the current default button head style",
+          "documentation_raw": "Button head style index (order of GetButtonHeadStyleListWithIndex). -1 (default) = the current default button head style",
+          "name": "buttonHeadStyleIndex",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "buttonholeStyleIndex:int         # Buttonhole style index. -1 (default) = the current default buttonhole style",
+          "documentation_raw": "Buttonhole style index. -1 (default) = the current default buttonhole style",
+          "name": "buttonholeStyleIndex",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "buttonholeWidth:float            # Per-instance buttonhole width in mm. 0 (default) keeps the style size. Set together with buttonholeHeight",
+          "documentation_raw": "Per-instance buttonhole width in mm. 0 (default) keeps the style size. Set together with buttonholeHeight",
+          "name": "buttonholeWidth",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "buttonholeHeight:float           # Per-instance buttonhole height in mm. 0 (default) keeps the style size. Set together with buttonholeWidth",
+          "documentation_raw": "Per-instance buttonhole height in mm. 0 (default) keeps the style size. Set together with buttonholeWidth",
+          "name": "buttonholeHeight",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "buttonAngleDegree:float          # Rotation applied to every created button head, in degrees. Default 0",
+          "documentation_raw": "Rotation applied to every created button head, in degrees. Default 0",
+          "name": "buttonAngleDegree",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "buttonholeAngleDegree:float      # Rotation applied to every created buttonhole, in degrees. Default 0",
+          "documentation_raw": "Rotation applied to every created buttonhole, in degrees. Default 0",
+          "name": "buttonholeAngleDegree",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 1325,
+              "block": 72
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 1354,
+              "block": 72,
+              "anchor": "buttonpairplacementoption"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:CLO_API_UNIT",
+      "name": "CLO_API_UNIT",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nUnit types\n\"\"\"\nCLO_API_MILIMETER = 0   # milimeter\nCLO_API_CENTIMETER = 1  # centimeter\nCLO_API_INCH = 2        # inch\nCLO_API_METER = 3       # meter\nCLO_API_FEET = 4        # feet",
+      "description_raw": "Unit types",
+      "members": [
+        {
+          "raw": "CLO_API_MILIMETER = 0   # milimeter",
+          "documentation_raw": "milimeter",
+          "name": "CLO_API_MILIMETER",
+          "kind": "enum_value",
+          "value_raw": "0",
+          "type_references": []
+        },
+        {
+          "raw": "CLO_API_CENTIMETER = 1  # centimeter",
+          "documentation_raw": "centimeter",
+          "name": "CLO_API_CENTIMETER",
+          "kind": "enum_value",
+          "value_raw": "1",
+          "type_references": []
+        },
+        {
+          "raw": "CLO_API_INCH = 2        # inch",
+          "documentation_raw": "inch",
+          "name": "CLO_API_INCH",
+          "kind": "enum_value",
+          "value_raw": "2",
+          "type_references": []
+        },
+        {
+          "raw": "CLO_API_METER = 3       # meter",
+          "documentation_raw": "meter",
+          "name": "CLO_API_METER",
+          "kind": "enum_value",
+          "value_raw": "3",
+          "type_references": []
+        },
+        {
+          "raw": "CLO_API_FEET = 4        # feet",
+          "documentation_raw": "feet",
+          "name": "CLO_API_FEET",
+          "kind": "enum_value",
+          "value_raw": "4",
+          "type_references": []
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 185,
+              "block": 8
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 342,
+              "block": 8,
+              "anchor": "clo-api-unit"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:CleanedPathResult",
+      "name": "CleanedPathResult",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nResult of UtilityAPI::CleanFilePath - one sanitized file name / path in several representations.\n\"\"\"\ndetected_type:str              # \"filename\" or \"fullpath\"\nuniversal_clean_path:str       # cleaned path using forward slashes '/'\nwindows_native_path:str        # cleaned path using backslashes '\\'\nwindows_long_path_variant:str  # windows_native_path with the \\\\?\\ (or \\\\?\\UNC\\) prefix for long absolute paths\nisolated_filename:str          # the cleaned final file name only\nhttp_safe_filename:str         # percent-encoded form of isolated_filename",
+      "description_raw": "Result of UtilityAPI::CleanFilePath - one sanitized file name / path in several representations.",
+      "members": [
+        {
+          "raw": "detected_type:str              # \"filename\" or \"fullpath\"",
+          "documentation_raw": "\"filename\" or \"fullpath\"",
+          "name": "detected_type",
+          "kind": "field",
+          "annotation_raw": "str",
+          "type_references": []
+        },
+        {
+          "raw": "universal_clean_path:str       # cleaned path using forward slashes '/'",
+          "documentation_raw": "cleaned path using forward slashes '/'",
+          "name": "universal_clean_path",
+          "kind": "field",
+          "annotation_raw": "str",
+          "type_references": []
+        },
+        {
+          "raw": "windows_native_path:str        # cleaned path using backslashes '\\'",
+          "documentation_raw": "cleaned path using backslashes '\\'",
+          "name": "windows_native_path",
+          "kind": "field",
+          "annotation_raw": "str",
+          "type_references": []
+        },
+        {
+          "raw": "windows_long_path_variant:str  # windows_native_path with the \\\\?\\ (or \\\\?\\UNC\\) prefix for long absolute paths",
+          "documentation_raw": "windows_native_path with the \\\\?\\ (or \\\\?\\UNC\\) prefix for long absolute paths",
+          "name": "windows_long_path_variant",
+          "kind": "field",
+          "annotation_raw": "str",
+          "type_references": []
+        },
+        {
+          "raw": "isolated_filename:str          # the cleaned final file name only",
+          "documentation_raw": "the cleaned final file name only",
+          "name": "isolated_filename",
+          "kind": "field",
+          "annotation_raw": "str",
+          "type_references": []
+        },
+        {
+          "raw": "http_safe_filename:str         # percent-encoded form of isolated_filename",
+          "documentation_raw": "percent-encoded form of isolated_filename",
+          "name": "http_safe_filename",
+          "kind": "field",
+          "annotation_raw": "str",
+          "type_references": []
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 563,
+              "block": 29
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 678,
+              "block": 29,
+              "anchor": "cleanedpathresult"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:CloApiAnchorPoint",
+      "name": "CloApiAnchorPoint",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nPoint of a graphic's box, in the graphic's own directions after rotation. Used by RepositionGraphicByAnchor, ReplaceGraphicStyleFromImage and PlaceTopstitchOnInternalLine.\nLayout (Y increases upward):\n  8(LEFT_UP)----1(UP)----2(RIGHT_UP)\n      |                       |\n  7(LEFT)    0(CENTER)   3(RIGHT)\n      |                       |\n  6(LEFT_DOWN)--5(DOWN)--4(RIGHT_DOWN)\n\"\"\"\nCLOAPI_ANCHOR_CENTER = 0      # center of the box\nCLOAPI_ANCHOR_UP = 1          # midpoint of the top edge\nCLOAPI_ANCHOR_RIGHT_UP = 2    # top-right corner\nCLOAPI_ANCHOR_RIGHT = 3       # midpoint of the right edge\nCLOAPI_ANCHOR_RIGHT_DOWN = 4  # bottom-right corner\nCLOAPI_ANCHOR_DOWN = 5        # midpoint of the bottom edge\nCLOAPI_ANCHOR_LEFT_DOWN = 6   # bottom-left corner\nCLOAPI_ANCHOR_LEFT = 7        # midpoint of the left edge\nCLOAPI_ANCHOR_LEFT_UP = 8     # top-left corner",
+      "description_raw": "Point of a graphic's box, in the graphic's own directions after rotation. Used by RepositionGraphicByAnchor, ReplaceGraphicStyleFromImage and PlaceTopstitchOnInternalLine.\nLayout (Y increases upward):\n  8(LEFT_UP)----1(UP)----2(RIGHT_UP)\n      |                       |\n  7(LEFT)    0(CENTER)   3(RIGHT)\n      |                       |\n  6(LEFT_DOWN)--5(DOWN)--4(RIGHT_DOWN)",
+      "members": [
+        {
+          "raw": "CLOAPI_ANCHOR_CENTER = 0      # center of the box",
+          "documentation_raw": "center of the box",
+          "name": "CLOAPI_ANCHOR_CENTER",
+          "kind": "enum_value",
+          "value_raw": "0",
+          "type_references": []
+        },
+        {
+          "raw": "CLOAPI_ANCHOR_UP = 1          # midpoint of the top edge",
+          "documentation_raw": "midpoint of the top edge",
+          "name": "CLOAPI_ANCHOR_UP",
+          "kind": "enum_value",
+          "value_raw": "1",
+          "type_references": []
+        },
+        {
+          "raw": "CLOAPI_ANCHOR_RIGHT_UP = 2    # top-right corner",
+          "documentation_raw": "top-right corner",
+          "name": "CLOAPI_ANCHOR_RIGHT_UP",
+          "kind": "enum_value",
+          "value_raw": "2",
+          "type_references": []
+        },
+        {
+          "raw": "CLOAPI_ANCHOR_RIGHT = 3       # midpoint of the right edge",
+          "documentation_raw": "midpoint of the right edge",
+          "name": "CLOAPI_ANCHOR_RIGHT",
+          "kind": "enum_value",
+          "value_raw": "3",
+          "type_references": []
+        },
+        {
+          "raw": "CLOAPI_ANCHOR_RIGHT_DOWN = 4  # bottom-right corner",
+          "documentation_raw": "bottom-right corner",
+          "name": "CLOAPI_ANCHOR_RIGHT_DOWN",
+          "kind": "enum_value",
+          "value_raw": "4",
+          "type_references": []
+        },
+        {
+          "raw": "CLOAPI_ANCHOR_DOWN = 5        # midpoint of the bottom edge",
+          "documentation_raw": "midpoint of the bottom edge",
+          "name": "CLOAPI_ANCHOR_DOWN",
+          "kind": "enum_value",
+          "value_raw": "5",
+          "type_references": []
+        },
+        {
+          "raw": "CLOAPI_ANCHOR_LEFT_DOWN = 6   # bottom-left corner",
+          "documentation_raw": "bottom-left corner",
+          "name": "CLOAPI_ANCHOR_LEFT_DOWN",
+          "kind": "enum_value",
+          "value_raw": "6",
+          "type_references": []
+        },
+        {
+          "raw": "CLOAPI_ANCHOR_LEFT = 7        # midpoint of the left edge",
+          "documentation_raw": "midpoint of the left edge",
+          "name": "CLOAPI_ANCHOR_LEFT",
+          "kind": "enum_value",
+          "value_raw": "7",
+          "type_references": []
+        },
+        {
+          "raw": "CLOAPI_ANCHOR_LEFT_UP = 8     # top-left corner",
+          "documentation_raw": "top-left corner",
+          "name": "CLOAPI_ANCHOR_LEFT_UP",
+          "kind": "enum_value",
+          "value_raw": "8",
+          "type_references": []
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 579,
+              "block": 30
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 692,
+              "block": 30,
+              "anchor": "cloapianchorpoint"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:CloApiAvatarMeasurement",
+      "name": "CloApiAvatarMeasurement",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nOne measurement defined on an avatar, returned by UtilityAPI::GetAvatarMeasurements.\n\"\"\"\nmeasurementName:str  # Name shown in the Object Browser / Property Editor.\nmeasurementType:str  # \"Tape\", \"Circumference\", \"Height\", \"Linear\" or \"Default\".\nvalue:float          # Active-shape length (basic or surface fit), in `unit`.\nbasicLength:float    # Basic (convex-fit) length, in `unit`.\nsurfaceLength:float  # Surface-fit length, in `unit`.\nunit:str             # Current CLO display unit (\"mm\", \"cm\" or \"in\").",
+      "description_raw": "One measurement defined on an avatar, returned by UtilityAPI::GetAvatarMeasurements.",
+      "members": [
+        {
+          "raw": "measurementName:str  # Name shown in the Object Browser / Property Editor.",
+          "documentation_raw": "Name shown in the Object Browser / Property Editor.",
+          "name": "measurementName",
+          "kind": "field",
+          "annotation_raw": "str",
+          "type_references": []
+        },
+        {
+          "raw": "measurementType:str  # \"Tape\", \"Circumference\", \"Height\", \"Linear\" or \"Default\".",
+          "documentation_raw": "\"Tape\", \"Circumference\", \"Height\", \"Linear\" or \"Default\".",
+          "name": "measurementType",
+          "kind": "field",
+          "annotation_raw": "str",
+          "type_references": []
+        },
+        {
+          "raw": "value:float          # Active-shape length (basic or surface fit), in `unit`.",
+          "documentation_raw": "Active-shape length (basic or surface fit), in `unit`.",
+          "name": "value",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "basicLength:float    # Basic (convex-fit) length, in `unit`.",
+          "documentation_raw": "Basic (convex-fit) length, in `unit`.",
+          "name": "basicLength",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "surfaceLength:float  # Surface-fit length, in `unit`.",
+          "documentation_raw": "Surface-fit length, in `unit`.",
+          "name": "surfaceLength",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "unit:str             # Current CLO display unit (\"mm\", \"cm\" or \"in\").",
+          "documentation_raw": "Current CLO display unit (\"mm\", \"cm\" or \"in\").",
+          "name": "unit",
+          "kind": "field",
+          "annotation_raw": "str",
+          "type_references": []
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 1280,
+              "block": 69
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 1315,
+              "block": 69,
+              "anchor": "cloapiavatarmeasurement"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:CloApiGraphicDimensions",
+      "name": "CloApiGraphicDimensions",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nWidth and height of a graphic style or of a placed graphic, in mm.\n\"\"\"\nwidth:float   # width in mm (-1 when GetGraphicStyleDimensions fails)\nheight:float  # height in mm (-1 when GetGraphicStyleDimensions fails)",
+      "description_raw": "Width and height of a graphic style or of a placed graphic, in mm.",
+      "members": [
+        {
+          "raw": "width:float   # width in mm (-1 when GetGraphicStyleDimensions fails)",
+          "documentation_raw": "width in mm (-1 when GetGraphicStyleDimensions fails)",
+          "name": "width",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "height:float  # height in mm (-1 when GetGraphicStyleDimensions fails)",
+          "documentation_raw": "height in mm (-1 when GetGraphicStyleDimensions fails)",
+          "name": "height",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 538,
+              "block": 27
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 657,
+              "block": 27,
+              "anchor": "cloapigraphicdimensions"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:CloApiGraphicPlacementPoints",
+      "name": "CloApiGraphicPlacementPoints",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nCenter, corners and edge midpoints of a placed graphic, returned by UtilityAPI::GetGraphicStylePlacementPoints.\n\"\"\"\ncenter:CloApiGraphicPosition             # center of the graphic's placement box\ncorners:list[CloApiGraphicPosition]      # box corners: bottom-left, bottom-right, top-right, top-left (empty for a 3D query)\nedgeCenters:list[CloApiGraphicPosition]  # edge midpoints: bottom, right, top, left (empty for a 3D query)",
+      "description_raw": "Center, corners and edge midpoints of a placed graphic, returned by UtilityAPI::GetGraphicStylePlacementPoints.",
+      "members": [
+        {
+          "raw": "center:CloApiGraphicPosition             # center of the graphic's placement box",
+          "documentation_raw": "center of the graphic's placement box",
+          "name": "center",
+          "kind": "field",
+          "annotation_raw": "CloApiGraphicPosition",
+          "type_references": [
+            {
+              "name": "CloApiGraphicPosition",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:CloApiGraphicPosition"
+            }
+          ]
+        },
+        {
+          "raw": "corners:list[CloApiGraphicPosition]      # box corners: bottom-left, bottom-right, top-right, top-left (empty for a 3D query)",
+          "documentation_raw": "box corners: bottom-left, bottom-right, top-right, top-left (empty for a 3D query)",
+          "name": "corners",
+          "kind": "field",
+          "annotation_raw": "list[CloApiGraphicPosition]",
+          "type_references": [
+            {
+              "name": "CloApiGraphicPosition",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:CloApiGraphicPosition"
+            }
+          ]
+        },
+        {
+          "raw": "edgeCenters:list[CloApiGraphicPosition]  # edge midpoints: bottom, right, top, left (empty for a 3D query)",
+          "documentation_raw": "edge midpoints: bottom, right, top, left (empty for a 3D query)",
+          "name": "edgeCenters",
+          "kind": "field",
+          "annotation_raw": "list[CloApiGraphicPosition]",
+          "type_references": [
+            {
+              "name": "CloApiGraphicPosition",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:CloApiGraphicPosition"
+            }
+          ]
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 550,
+              "block": 28
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 667,
+              "block": 28,
+              "anchor": "cloapigraphicplacementpoints"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:CloApiGraphicPosition",
+      "name": "CloApiGraphicPosition",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nA 2D point of a graphic placement, in mm, in the pattern piece's own frame (before it is moved, rotated or flipped), y up.\n\"\"\"\nx:float  # X coordinate in mm\ny:float  # Y coordinate in mm, y up",
+      "description_raw": "A 2D point of a graphic placement, in mm, in the pattern piece's own frame (before it is moved, rotated or flipped), y up.",
+      "members": [
+        {
+          "raw": "x:float  # X coordinate in mm",
+          "documentation_raw": "X coordinate in mm",
+          "name": "x",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "y:float  # Y coordinate in mm, y up",
+          "documentation_raw": "Y coordinate in mm, y up",
+          "name": "y",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 526,
+              "block": 26
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 647,
+              "block": 26,
+              "anchor": "cloapigraphicposition"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:CloApiGuiChoiceResult",
+      "name": "CloApiGuiChoiceResult",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nAnswer of gui_api.AskChoice and gui_api.AskMultiChoice\n\"\"\"\naccepted:bool              # true only when the user pressed OK. false on cancel, close or headless mode\nselectedIndex:int          # AskChoice: index of the picked option. AskMultiChoice: first checked index. -1 unless accepted\nselectedValue:str          # AskChoice: caption of the picked option. AskMultiChoice: caption of the first checked option. Empty unless accepted\nselectedIndices:list[int]  # Every selected index in ascending order. Empty unless accepted",
+      "description_raw": "Answer of gui_api.AskChoice and gui_api.AskMultiChoice",
+      "members": [
+        {
+          "raw": "accepted:bool              # true only when the user pressed OK. false on cancel, close or headless mode",
+          "documentation_raw": "true only when the user pressed OK. false on cancel, close or headless mode",
+          "name": "accepted",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "selectedIndex:int          # AskChoice: index of the picked option. AskMultiChoice: first checked index. -1 unless accepted",
+          "documentation_raw": "AskChoice: index of the picked option. AskMultiChoice: first checked index. -1 unless accepted",
+          "name": "selectedIndex",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "selectedValue:str          # AskChoice: caption of the picked option. AskMultiChoice: caption of the first checked option. Empty unless accepted",
+          "documentation_raw": "AskChoice: caption of the picked option. AskMultiChoice: caption of the first checked option. Empty unless accepted",
+          "name": "selectedValue",
+          "kind": "field",
+          "annotation_raw": "str",
+          "type_references": []
+        },
+        {
+          "raw": "selectedIndices:list[int]  # Every selected index in ascending order. Empty unless accepted",
+          "documentation_raw": "Every selected index in ascending order. Empty unless accepted",
+          "name": "selectedIndices",
+          "kind": "field",
+          "annotation_raw": "list[int]",
+          "type_references": []
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 1385,
+              "block": 76
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 1406,
+              "block": 76,
+              "anchor": "cloapiguichoiceresult"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:CloApiGuiFormField",
+      "name": "CloApiGuiFormField",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nOne row of a gui_api.AskForm dialog. key must be unique inside the form and is the key of CloApiGuiFormResult.values\n\"\"\"\nkey:str                      # Result key. Required and unique inside one form\nlabel:str                    # Caption shown next to the input\ntype:CloApiGuiFormFieldType  # Input kind. Default GUI_FIELD_TEXT\ndefaultValue:str             # Initial value as text. Choice: option caption. Check: true or false. Number: decimal text\noptions:list[str]            # Option captions for GUI_FIELD_CHOICE. Ignored by the other kinds",
+      "description_raw": "One row of a gui_api.AskForm dialog. key must be unique inside the form and is the key of CloApiGuiFormResult.values",
+      "members": [
+        {
+          "raw": "key:str                      # Result key. Required and unique inside one form",
+          "documentation_raw": "Result key. Required and unique inside one form",
+          "name": "key",
+          "kind": "field",
+          "annotation_raw": "str",
+          "type_references": []
+        },
+        {
+          "raw": "label:str                    # Caption shown next to the input",
+          "documentation_raw": "Caption shown next to the input",
+          "name": "label",
+          "kind": "field",
+          "annotation_raw": "str",
+          "type_references": []
+        },
+        {
+          "raw": "type:CloApiGuiFormFieldType  # Input kind. Default GUI_FIELD_TEXT",
+          "documentation_raw": "Input kind. Default GUI_FIELD_TEXT",
+          "name": "type",
+          "kind": "field",
+          "annotation_raw": "CloApiGuiFormFieldType",
+          "type_references": [
+            {
+              "name": "CloApiGuiFormFieldType",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:CloApiGuiFormFieldType"
+            }
+          ]
+        },
+        {
+          "raw": "defaultValue:str             # Initial value as text. Choice: option caption. Check: true or false. Number: decimal text",
+          "documentation_raw": "Initial value as text. Choice: option caption. Check: true or false. Number: decimal text",
+          "name": "defaultValue",
+          "kind": "field",
+          "annotation_raw": "str",
+          "type_references": []
+        },
+        {
+          "raw": "options:list[str]            # Option captions for GUI_FIELD_CHOICE. Ignored by the other kinds",
+          "documentation_raw": "Option captions for GUI_FIELD_CHOICE. Ignored by the other kinds",
+          "name": "options",
+          "kind": "field",
+          "annotation_raw": "list[str]",
+          "type_references": []
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 1358,
+              "block": 74
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 1383,
+              "block": 74,
+              "anchor": "cloapiguiformfield"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:CloApiGuiFormFieldType",
+      "name": "CloApiGuiFormFieldType",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nKind of input row in gui_api.AskForm. The value of every field is reported as text in CloApiGuiFormResult.values\n\"\"\"\nGUI_FIELD_TEXT = 0    # Single-line text input. Value is the entered text\nGUI_FIELD_CHOICE = 1  # Drop-down list built from options. Value is the selected option caption\nGUI_FIELD_CHECK = 2   # Check box. Value is true or false\nGUI_FIELD_NUMBER = 3  # Decimal number input. Value is the number as decimal text",
+      "description_raw": "Kind of input row in gui_api.AskForm. The value of every field is reported as text in CloApiGuiFormResult.values",
+      "members": [
+        {
+          "raw": "GUI_FIELD_TEXT = 0    # Single-line text input. Value is the entered text",
+          "documentation_raw": "Single-line text input. Value is the entered text",
+          "name": "GUI_FIELD_TEXT",
+          "kind": "enum_value",
+          "value_raw": "0",
+          "type_references": []
+        },
+        {
+          "raw": "GUI_FIELD_CHOICE = 1  # Drop-down list built from options. Value is the selected option caption",
+          "documentation_raw": "Drop-down list built from options. Value is the selected option caption",
+          "name": "GUI_FIELD_CHOICE",
+          "kind": "enum_value",
+          "value_raw": "1",
+          "type_references": []
+        },
+        {
+          "raw": "GUI_FIELD_CHECK = 2   # Check box. Value is true or false",
+          "documentation_raw": "Check box. Value is true or false",
+          "name": "GUI_FIELD_CHECK",
+          "kind": "enum_value",
+          "value_raw": "2",
+          "type_references": []
+        },
+        {
+          "raw": "GUI_FIELD_NUMBER = 3  # Decimal number input. Value is the number as decimal text",
+          "documentation_raw": "Decimal number input. Value is the number as decimal text",
+          "name": "GUI_FIELD_NUMBER",
+          "kind": "enum_value",
+          "value_raw": "3",
+          "type_references": []
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 1344,
+              "block": 73
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 1371,
+              "block": 73,
+              "anchor": "cloapiguiformfieldtype"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:CloApiGuiFormResult",
+      "name": "CloApiGuiFormResult",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nAnswer of gui_api.AskForm\n\"\"\"\naccepted:bool         # true only when the user pressed OK. false on cancel, close or headless mode\nvalues:map[str, str]  # Field key to value as text. Empty unless accepted",
+      "description_raw": "Answer of gui_api.AskForm",
+      "members": [
+        {
+          "raw": "accepted:bool         # true only when the user pressed OK. false on cancel, close or headless mode",
+          "documentation_raw": "true only when the user pressed OK. false on cancel, close or headless mode",
+          "name": "accepted",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "values:map[str, str]  # Field key to value as text. Empty unless accepted",
+          "documentation_raw": "Field key to value as text. Empty unless accepted",
+          "name": "values",
+          "kind": "field",
+          "annotation_raw": "map[str, str]",
+          "type_references": []
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 1399,
+              "block": 77
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 1418,
+              "block": 77,
+              "anchor": "cloapiguiformresult"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:CloApiGuiTextResult",
+      "name": "CloApiGuiTextResult",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nAnswer of gui_api.AskText\n\"\"\"\naccepted:bool  # true only when the user pressed OK. false on cancel, close or headless mode\nvalue:str      # Entered text. Empty unless accepted",
+      "description_raw": "Answer of gui_api.AskText",
+      "members": [
+        {
+          "raw": "accepted:bool  # true only when the user pressed OK. false on cancel, close or headless mode",
+          "documentation_raw": "true only when the user pressed OK. false on cancel, close or headless mode",
+          "name": "accepted",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "value:str      # Entered text. Empty unless accepted",
+          "documentation_raw": "Entered text. Empty unless accepted",
+          "name": "value",
+          "kind": "field",
+          "annotation_raw": "str",
+          "type_references": []
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 1373,
+              "block": 75
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 1396,
+              "block": 75,
+              "anchor": "cloapiguitextresult"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:CloApiInternalShape",
+      "name": "CloApiInternalShape",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nRoot container for internal-line geometry: a named group of line segments and the intersection points between them.\n\"\"\"\nname:str                                     # name of the shape, for example \"InternalShape_0\"\nlines:list[CloApiLine]                       # line segments of the shape: internal lines that cross or touch within 0.5 mm\nintersections:list[CloApiIntersectionPoint]  # points where the shape's lines cross or touch",
+      "description_raw": "Root container for internal-line geometry: a named group of line segments and the intersection points between them.",
+      "members": [
+        {
+          "raw": "name:str                                     # name of the shape, for example \"InternalShape_0\"",
+          "documentation_raw": "name of the shape, for example \"InternalShape_0\"",
+          "name": "name",
+          "kind": "field",
+          "annotation_raw": "str",
+          "type_references": []
+        },
+        {
+          "raw": "lines:list[CloApiLine]                       # line segments of the shape: internal lines that cross or touch within 0.5 mm",
+          "documentation_raw": "line segments of the shape: internal lines that cross or touch within 0.5 mm",
+          "name": "lines",
+          "kind": "field",
+          "annotation_raw": "list[CloApiLine]",
+          "type_references": [
+            {
+              "name": "CloApiLine",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:CloApiLine"
+            }
+          ]
+        },
+        {
+          "raw": "intersections:list[CloApiIntersectionPoint]  # points where the shape's lines cross or touch",
+          "documentation_raw": "points where the shape's lines cross or touch",
+          "name": "intersections",
+          "kind": "field",
+          "annotation_raw": "list[CloApiIntersectionPoint]",
+          "type_references": [
+            {
+              "name": "CloApiIntersectionPoint",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:CloApiIntersectionPoint"
+            }
+          ]
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 663,
+              "block": 35
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 766,
+              "block": 35,
+              "anchor": "cloapiinternalshape"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:CloApiIntersectionPoint",
+      "name": "CloApiIntersectionPoint",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nThe coordinate where two lines meet, referencing both lines by their line numbers.\n\"\"\"\ncoordinate:CloApiPoint  # point where the two lines cross or touch\nlineANumber:int         # lineNumber of the first line (default -1)\nlineBNumber:int         # lineNumber of the second line (default -1)",
+      "description_raw": "The coordinate where two lines meet, referencing both lines by their line numbers.",
+      "members": [
+        {
+          "raw": "coordinate:CloApiPoint  # point where the two lines cross or touch",
+          "documentation_raw": "point where the two lines cross or touch",
+          "name": "coordinate",
+          "kind": "field",
+          "annotation_raw": "CloApiPoint",
+          "type_references": [
+            {
+              "name": "CloApiPoint",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:CloApiPoint"
+            }
+          ]
+        },
+        {
+          "raw": "lineANumber:int         # lineNumber of the first line (default -1)",
+          "documentation_raw": "lineNumber of the first line (default -1)",
+          "name": "lineANumber",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "lineBNumber:int         # lineNumber of the second line (default -1)",
+          "documentation_raw": "lineNumber of the second line (default -1)",
+          "name": "lineBNumber",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 650,
+              "block": 34
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 755,
+              "block": 34,
+              "anchor": "cloapiintersectionpoint"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:CloApiLine",
+      "name": "CloApiLine",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nA straight 2D line segment identified by a line number and its two endpoints.\nCurved internal lines are represented by their start/end points (chord).\n\"\"\"\nlineNumber:int     # 0-based number of the line among the pattern's internal-shape lines (default -1)\nstart:CloApiPoint  # start point of the line\nend:CloApiPoint    # end point of the line",
+      "description_raw": "A straight 2D line segment identified by a line number and its two endpoints.\nCurved internal lines are represented by their start/end points (chord).",
+      "members": [
+        {
+          "raw": "lineNumber:int     # 0-based number of the line among the pattern's internal-shape lines (default -1)",
+          "documentation_raw": "0-based number of the line among the pattern's internal-shape lines (default -1)",
+          "name": "lineNumber",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "start:CloApiPoint  # start point of the line",
+          "documentation_raw": "start point of the line",
+          "name": "start",
+          "kind": "field",
+          "annotation_raw": "CloApiPoint",
+          "type_references": [
+            {
+              "name": "CloApiPoint",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:CloApiPoint"
+            }
+          ]
+        },
+        {
+          "raw": "end:CloApiPoint    # end point of the line",
+          "documentation_raw": "end point of the line",
+          "name": "end",
+          "kind": "field",
+          "annotation_raw": "CloApiPoint",
+          "type_references": [
+            {
+              "name": "CloApiPoint",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:CloApiPoint"
+            }
+          ]
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 636,
+              "block": 33
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 743,
+              "block": 33,
+              "anchor": "cloapiline"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:CloApiPoint",
+      "name": "CloApiPoint",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nA 2D coordinate in the pattern 2D space. Used by the internal-line geometry APIs.\n\"\"\"\nx:float  # X coordinate in mm, in the pattern piece's own frame\ny:float  # Y coordinate in mm, in the pattern piece's own frame, y up",
+      "description_raw": "A 2D coordinate in the pattern 2D space. Used by the internal-line geometry APIs.",
+      "members": [
+        {
+          "raw": "x:float  # X coordinate in mm, in the pattern piece's own frame",
+          "documentation_raw": "X coordinate in mm, in the pattern piece's own frame",
+          "name": "x",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "y:float  # Y coordinate in mm, in the pattern piece's own frame, y up",
+          "documentation_raw": "Y coordinate in mm, in the pattern piece's own frame, y up",
+          "name": "y",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 624,
+              "block": 32
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 733,
+              "block": 32,
+              "anchor": "cloapipoint"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:CloApiRestRequest",
+      "name": "CloApiRestRequest",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nCloApiRestRequest structure that requests http when using REST API\n\"\"\"\nheader:list[tuple[str, str]]       # Http header\nmethod:HttpMethodType              # Http method Type\npayload:str                        # Http payload supports json/raw.\nurl:str                            # Request url\nattachements:list[AttachFileInfo]  # List of Http attachments, but with PUT method there can be only one file.\nformData:list[MimeData]            # List of multi form-data",
+      "description_raw": "CloApiRestRequest structure that requests http when using REST API",
+      "members": [
+        {
+          "raw": "header:list[tuple[str, str]]       # Http header",
+          "documentation_raw": "Http header",
+          "name": "header",
+          "kind": "field",
+          "annotation_raw": "list[tuple[str, str]]",
+          "type_references": []
+        },
+        {
+          "raw": "method:HttpMethodType              # Http method Type",
+          "documentation_raw": "Http method Type",
+          "name": "method",
+          "kind": "field",
+          "annotation_raw": "HttpMethodType",
+          "type_references": [
+            {
+              "name": "HttpMethodType",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:HttpMethodType"
+            }
+          ]
+        },
+        {
+          "raw": "payload:str                        # Http payload supports json/raw.",
+          "documentation_raw": "Http payload supports json/raw.",
+          "name": "payload",
+          "kind": "field",
+          "annotation_raw": "str",
+          "type_references": []
+        },
+        {
+          "raw": "url:str                            # Request url",
+          "documentation_raw": "Request url",
+          "name": "url",
+          "kind": "field",
+          "annotation_raw": "str",
+          "type_references": []
+        },
+        {
+          "raw": "attachements:list[AttachFileInfo]  # List of Http attachments, but with PUT method there can be only one file.",
+          "documentation_raw": "List of Http attachments, but with PUT method there can be only one file.",
+          "name": "attachements",
+          "kind": "field",
+          "annotation_raw": "list[AttachFileInfo]",
+          "type_references": [
+            {
+              "name": "AttachFileInfo",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:AttachFileInfo"
+            }
+          ]
+        },
+        {
+          "raw": "formData:list[MimeData]            # List of multi form-data",
+          "documentation_raw": "List of multi form-data",
+          "name": "formData",
+          "kind": "field",
+          "annotation_raw": "list[MimeData]",
+          "type_references": [
+            {
+              "name": "MimeData",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:MimeData"
+            }
+          ]
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 497,
+              "block": 24
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 622,
+              "block": 24,
+              "anchor": "cloapirestrequest"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:CloApiRestResponse",
+      "name": "CloApiRestResponse",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nCloApiRestResponse structure that responses http when using REST API\n\"\"\"\nheader:str        # Http header\nbuffer:str        # Http response body\nresponseCode:int  # Http response code",
+      "description_raw": "CloApiRestResponse structure that responses http when using REST API",
+      "members": [
+        {
+          "raw": "header:str        # Http header",
+          "documentation_raw": "Http header",
+          "name": "header",
+          "kind": "field",
+          "annotation_raw": "str",
+          "type_references": []
+        },
+        {
+          "raw": "buffer:str        # Http response body",
+          "documentation_raw": "Http response body",
+          "name": "buffer",
+          "kind": "field",
+          "annotation_raw": "str",
+          "type_references": []
+        },
+        {
+          "raw": "responseCode:int  # Http response code",
+          "documentation_raw": "Http response code",
+          "name": "responseCode",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 513,
+              "block": 25
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 636,
+              "block": 25,
+              "anchor": "cloapirestresponse"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:CloApiRgb",
+      "name": "CloApiRgb",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nRGB Values structure for Color related api calls in CLO API\n\"\"\"\nR:int  # Red: 0 ~ 255\nG:int  # Green: 0 ~ 255\nB:int  # Blue: 0 ~ 255",
+      "description_raw": "RGB Values structure for Color related api calls in CLO API",
+      "members": [
+        {
+          "raw": "R:int  # Red: 0 ~ 255",
+          "documentation_raw": "Red: 0 ~ 255",
+          "name": "R",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "G:int  # Green: 0 ~ 255",
+          "documentation_raw": "Green: 0 ~ 255",
+          "name": "G",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "B:int  # Blue: 0 ~ 255",
+          "documentation_raw": "Blue: 0 ~ 255",
+          "name": "B",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 403,
+              "block": 17
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 542,
+              "block": 17,
+              "anchor": "cloapirgb"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:CloApiRgba",
+      "name": "CloApiRgba",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nRGBA Values structure for Color related api calls in CLO API\n\"\"\"\nR:int  # Red: 0 ~ 255\nG:int  # Green: 0 ~ 255\nB:int  # Blue: 0 ~ 255\nA:int  # Alpha: 0 ~ 255",
+      "description_raw": "RGBA Values structure for Color related api calls in CLO API",
+      "members": [
+        {
+          "raw": "R:int  # Red: 0 ~ 255",
+          "documentation_raw": "Red: 0 ~ 255",
+          "name": "R",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "G:int  # Green: 0 ~ 255",
+          "documentation_raw": "Green: 0 ~ 255",
+          "name": "G",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "B:int  # Blue: 0 ~ 255",
+          "documentation_raw": "Blue: 0 ~ 255",
+          "name": "B",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "A:int  # Alpha: 0 ~ 255",
+          "documentation_raw": "Alpha: 0 ~ 255",
+          "name": "A",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 432,
+              "block": 19
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 567,
+              "block": 19,
+              "anchor": "cloapirgba"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:CloGroundData",
+      "name": "CloGroundData",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nTip-to-ground drape measurement returned by TestAPI::GetTiptoGroundData: the heights of the four corners of a 4-line pattern.\n\"\"\"\nindex:int      # index of the measured pattern (the last 4-line pattern in the pattern list); -1 if none\navg_pos:float  # average height of the four corners in mm; -1 if none\nr:float        # height (3D Y, mm) of the start point of the pattern's line 0; -1 if none\ng:float        # height (3D Y, mm) of the start point of the pattern's line 1; -1 if none\nb:float        # height (3D Y, mm) of the start point of the pattern's line 2; -1 if none\ny:float        # height (3D Y, mm) of the start point of the pattern's line 3; -1 if none",
+      "description_raw": "Tip-to-ground drape measurement returned by TestAPI::GetTiptoGroundData: the heights of the four corners of a 4-line pattern.",
+      "members": [
+        {
+          "raw": "index:int      # index of the measured pattern (the last 4-line pattern in the pattern list); -1 if none",
+          "documentation_raw": "index of the measured pattern (the last 4-line pattern in the pattern list); -1 if none",
+          "name": "index",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "avg_pos:float  # average height of the four corners in mm; -1 if none",
+          "documentation_raw": "average height of the four corners in mm; -1 if none",
+          "name": "avg_pos",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "r:float        # height (3D Y, mm) of the start point of the pattern's line 0; -1 if none",
+          "documentation_raw": "height (3D Y, mm) of the start point of the pattern's line 0; -1 if none",
+          "name": "r",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "g:float        # height (3D Y, mm) of the start point of the pattern's line 1; -1 if none",
+          "documentation_raw": "height (3D Y, mm) of the start point of the pattern's line 1; -1 if none",
+          "name": "g",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "b:float        # height (3D Y, mm) of the start point of the pattern's line 2; -1 if none",
+          "documentation_raw": "height (3D Y, mm) of the start point of the pattern's line 2; -1 if none",
+          "name": "b",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "y:float        # height (3D Y, mm) of the start point of the pattern's line 3; -1 if none",
+          "documentation_raw": "height (3D Y, mm) of the start point of the pattern's line 3; -1 if none",
+          "name": "y",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 416,
+              "block": 18
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 553,
+              "block": 18,
+              "anchor": "clogrounddata"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:ExportDxfOption",
+      "name": "ExportDxfOption",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nOptions for ExportDxf as parameters without dialogs in CLO API\n\"\"\"\nm_bDuplicateNotch:bool          # if true, duplicate sewing-line notches on the seam allowance (default: true)\nm_bCheckedConvertCtoS:bool      # if true, convert curve points to straight points to export\nm_bExportWithoutGrading:bool    # if true, export without grading information\nm_bOptimizeCurvePoints:bool     # if true, optimize curve points with removing the points close to some points\nm_bExportWithoutBaselines:bool  # if true, export only out lines without base lines\nm_bExportSelectedPatterns:bool  # if true, export selected patterns\nm_ExportDXFFormatType:int       # 0: DXF-AAMA, 1: DXF-ASTM, 2: Gerber(DXF-AAMA)\nm_ExportBBType:int              # 1: Use Bounding box covering all the patterns, 2: use Bounding Box for each pattern\nm_fScale:float                  # scale variables\nm_RotateAngle:float             # Rotation angle for patterns\nm_bMetric:bool                  # Measurement unit shown on DXF, true: Metric, false: English",
+      "description_raw": "Options for ExportDxf as parameters without dialogs in CLO API",
+      "members": [
+        {
+          "raw": "m_bDuplicateNotch:bool          # if true, duplicate sewing-line notches on the seam allowance (default: true)",
+          "documentation_raw": "if true, duplicate sewing-line notches on the seam allowance (default: true)",
+          "name": "m_bDuplicateNotch",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "m_bCheckedConvertCtoS:bool      # if true, convert curve points to straight points to export",
+          "documentation_raw": "if true, convert curve points to straight points to export",
+          "name": "m_bCheckedConvertCtoS",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "m_bExportWithoutGrading:bool    # if true, export without grading information",
+          "documentation_raw": "if true, export without grading information",
+          "name": "m_bExportWithoutGrading",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "m_bOptimizeCurvePoints:bool     # if true, optimize curve points with removing the points close to some points",
+          "documentation_raw": "if true, optimize curve points with removing the points close to some points",
+          "name": "m_bOptimizeCurvePoints",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "m_bExportWithoutBaselines:bool  # if true, export only out lines without base lines",
+          "documentation_raw": "if true, export only out lines without base lines",
+          "name": "m_bExportWithoutBaselines",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "m_bExportSelectedPatterns:bool  # if true, export selected patterns",
+          "documentation_raw": "if true, export selected patterns",
+          "name": "m_bExportSelectedPatterns",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "m_ExportDXFFormatType:int       # 0: DXF-AAMA, 1: DXF-ASTM, 2: Gerber(DXF-AAMA)",
+          "documentation_raw": "0: DXF-AAMA, 1: DXF-ASTM, 2: Gerber(DXF-AAMA)",
+          "name": "m_ExportDXFFormatType",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "m_ExportBBType:int              # 1: Use Bounding box covering all the patterns, 2: use Bounding Box for each pattern",
+          "documentation_raw": "1: Use Bounding box covering all the patterns, 2: use Bounding Box for each pattern",
+          "name": "m_ExportBBType",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "m_fScale:float                  # scale variables",
+          "documentation_raw": "scale variables",
+          "name": "m_fScale",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "m_RotateAngle:float             # Rotation angle for patterns",
+          "documentation_raw": "Rotation angle for patterns",
+          "name": "m_RotateAngle",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "m_bMetric:bool                  # Measurement unit shown on DXF, true: Metric, false: English",
+          "documentation_raw": "Measurement unit shown on DXF, true: Metric, false: English",
+          "name": "m_bMetric",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 318,
+              "block": 13
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 465,
+              "block": 13,
+              "anchor": "exportdxfoption"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:ExportTechPackType",
+      "name": "ExportTechPackType",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nExport Techpack types\n\"\"\"\nCLO_TECH_PACK = 0      # techpack used in CLO\nCLO_SET_TECH_PACK = 1  # techpack used in CLOSET\nCLO_SET_SREST = 2      # techpack used in SREST (used in CLOSET)\nCLO_API_TECH_PACK = 3  # techpack for CLO API (excludes the internal values used in CLO Virtual Fashion)\nCLO_DUMMY = 4          # n/a",
+      "description_raw": "Export Techpack types",
+      "members": [
+        {
+          "raw": "CLO_TECH_PACK = 0      # techpack used in CLO",
+          "documentation_raw": "techpack used in CLO",
+          "name": "CLO_TECH_PACK",
+          "kind": "enum_value",
+          "value_raw": "0",
+          "type_references": []
+        },
+        {
+          "raw": "CLO_SET_TECH_PACK = 1  # techpack used in CLOSET",
+          "documentation_raw": "techpack used in CLOSET",
+          "name": "CLO_SET_TECH_PACK",
+          "kind": "enum_value",
+          "value_raw": "1",
+          "type_references": []
+        },
+        {
+          "raw": "CLO_SET_SREST = 2      # techpack used in SREST (used in CLOSET)",
+          "documentation_raw": "techpack used in SREST (used in CLOSET)",
+          "name": "CLO_SET_SREST",
+          "kind": "enum_value",
+          "value_raw": "2",
+          "type_references": []
+        },
+        {
+          "raw": "CLO_API_TECH_PACK = 3  # techpack for CLO API (excludes the internal values used in CLO Virtual Fashion)",
+          "documentation_raw": "techpack for CLO API (excludes the internal values used in CLO Virtual Fashion)",
+          "name": "CLO_API_TECH_PACK",
+          "kind": "enum_value",
+          "value_raw": "3",
+          "type_references": []
+        },
+        {
+          "raw": "CLO_DUMMY = 4          # n/a",
+          "documentation_raw": "n/a",
+          "name": "CLO_DUMMY",
+          "kind": "enum_value",
+          "value_raw": "4",
+          "type_references": []
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 359,
+              "block": 15
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 502,
+              "block": 15,
+              "anchor": "exporttechpacktype"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:ExportTechpackOption",
+      "name": "ExportTechpackOption",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nOptions for Export Techpack as parameters without dialogs in CLO API\n\"\"\"\nm_bSaveZpac:bool                                               # if true, save garment as a (project name).zpac file and describe the path on the techpack json (CLO API only)\nm_bSaveZprj:bool                                               # if true, save project as a (project name).zprj file and describe the path on the techpack json (CLO API only)\nm_bCaptureSceneThumbnailWithoutAvatar:bool                     # if true, capture the thumbnail images as image files and describe the paths on the techpack json\nm_bCaptureSceneThumbnailWithMark:bool                          # if true, capture the thumbnail images with markers as image files and describe the paths on the techpack json (CLO API and CLOSET)\nm_bCaptureSceneThumbnailWithAvatar:bool                        # if true, capture the thumbnail images with avatars for all the colorways and describe the paths on the techpack json\nm_bCaptureItemThumbnail:bool                                   # if true, capture thumbnail for pattern piecese (for CLO API and Techpack Image)\nm_bCaptureHighResolutionFrontThumbnail:bool                    # if true, capture bigger thumbnail for 2D First Mode (CLOSET)\nm_bCapturePatternLayoutThumbnail:bool                          # if true, capture thumbnail for pattern layout (for CLO API and Techpack Image)\nm_bCapturePatternLayoutThumbnailWithFabricMark:bool            # if true, capture thumbnail for pattern layout with fabric marks (for CLO API and Techpack Image)\nm_bCapturePatternLayoutThumbnailWithTrimMark:bool              # if true, capture thumbnail for pattern layout with trim marks (for CLO API and Techpack Image)\nm_bCapturePatternLayoutThumbnailForCloset2DPatternWindow:bool  # capture each colorway's pattern layout image for the CLO-SET 2D pattern window (default true)\nm_bCaptureTurntableThumbnail:bool                              # if true, capture the turntable thumbnail images as image files and describe the paths on the techpack json\nm_bExportTextures:bool                                         # if true, export all the textures as image files and describe the paths on the techpack json (CLO API only)\nm_bUseAverageColor:bool                                        # if true, calculate average color for the image used in materials and show the values in techpack json\nm_bShowModalProgressBar:bool                                   # if true, a Modal progress bar will appear to show progress in CLO Software\nm_bUseCustomImageAsThumbnail:bool                              # if true, thumbnail image will be replaced with a custom image from the MVFile Header\nm_ShowBaseLineFor3DCapturePerColorway:map[ int, bool]          # map(colorway index, show/hide flag) for Base Line while capturing 3D\nm_AuthenticationKeyForAPI:str                                  # For companies to use extended functionality in the CLO API / SDK\nm_ExportType:ExportTechPackType                                # 0: CLO_TECH_PACK, 1: CLO_SET_TECH_PACK, 2: CLO_SET_SREST, 3: CLO_API_TECH_PACK, 4: CLO_DUMMY",
+      "description_raw": "Options for Export Techpack as parameters without dialogs in CLO API",
+      "members": [
+        {
+          "raw": "m_bSaveZpac:bool                                               # if true, save garment as a (project name).zpac file and describe the path on the techpack json (CLO API only)",
+          "documentation_raw": "if true, save garment as a (project name).zpac file and describe the path on the techpack json (CLO API only)",
+          "name": "m_bSaveZpac",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "m_bSaveZprj:bool                                               # if true, save project as a (project name).zprj file and describe the path on the techpack json (CLO API only)",
+          "documentation_raw": "if true, save project as a (project name).zprj file and describe the path on the techpack json (CLO API only)",
+          "name": "m_bSaveZprj",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "m_bCaptureSceneThumbnailWithoutAvatar:bool                     # if true, capture the thumbnail images as image files and describe the paths on the techpack json",
+          "documentation_raw": "if true, capture the thumbnail images as image files and describe the paths on the techpack json",
+          "name": "m_bCaptureSceneThumbnailWithoutAvatar",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "m_bCaptureSceneThumbnailWithMark:bool                          # if true, capture the thumbnail images with markers as image files and describe the paths on the techpack json (CLO API and CLOSET)",
+          "documentation_raw": "if true, capture the thumbnail images with markers as image files and describe the paths on the techpack json (CLO API and CLOSET)",
+          "name": "m_bCaptureSceneThumbnailWithMark",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "m_bCaptureSceneThumbnailWithAvatar:bool                        # if true, capture the thumbnail images with avatars for all the colorways and describe the paths on the techpack json",
+          "documentation_raw": "if true, capture the thumbnail images with avatars for all the colorways and describe the paths on the techpack json",
+          "name": "m_bCaptureSceneThumbnailWithAvatar",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "m_bCaptureItemThumbnail:bool                                   # if true, capture thumbnail for pattern piecese (for CLO API and Techpack Image)",
+          "documentation_raw": "if true, capture thumbnail for pattern piecese (for CLO API and Techpack Image)",
+          "name": "m_bCaptureItemThumbnail",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "m_bCaptureHighResolutionFrontThumbnail:bool                    # if true, capture bigger thumbnail for 2D First Mode (CLOSET)",
+          "documentation_raw": "if true, capture bigger thumbnail for 2D First Mode (CLOSET)",
+          "name": "m_bCaptureHighResolutionFrontThumbnail",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "m_bCapturePatternLayoutThumbnail:bool                          # if true, capture thumbnail for pattern layout (for CLO API and Techpack Image)",
+          "documentation_raw": "if true, capture thumbnail for pattern layout (for CLO API and Techpack Image)",
+          "name": "m_bCapturePatternLayoutThumbnail",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "m_bCapturePatternLayoutThumbnailWithFabricMark:bool            # if true, capture thumbnail for pattern layout with fabric marks (for CLO API and Techpack Image)",
+          "documentation_raw": "if true, capture thumbnail for pattern layout with fabric marks (for CLO API and Techpack Image)",
+          "name": "m_bCapturePatternLayoutThumbnailWithFabricMark",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "m_bCapturePatternLayoutThumbnailWithTrimMark:bool              # if true, capture thumbnail for pattern layout with trim marks (for CLO API and Techpack Image)",
+          "documentation_raw": "if true, capture thumbnail for pattern layout with trim marks (for CLO API and Techpack Image)",
+          "name": "m_bCapturePatternLayoutThumbnailWithTrimMark",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "m_bCapturePatternLayoutThumbnailForCloset2DPatternWindow:bool  # capture each colorway's pattern layout image for the CLO-SET 2D pattern window (default true)",
+          "documentation_raw": "capture each colorway's pattern layout image for the CLO-SET 2D pattern window (default true)",
+          "name": "m_bCapturePatternLayoutThumbnailForCloset2DPatternWindow",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "m_bCaptureTurntableThumbnail:bool                              # if true, capture the turntable thumbnail images as image files and describe the paths on the techpack json",
+          "documentation_raw": "if true, capture the turntable thumbnail images as image files and describe the paths on the techpack json",
+          "name": "m_bCaptureTurntableThumbnail",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "m_bExportTextures:bool                                         # if true, export all the textures as image files and describe the paths on the techpack json (CLO API only)",
+          "documentation_raw": "if true, export all the textures as image files and describe the paths on the techpack json (CLO API only)",
+          "name": "m_bExportTextures",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "m_bUseAverageColor:bool                                        # if true, calculate average color for the image used in materials and show the values in techpack json",
+          "documentation_raw": "if true, calculate average color for the image used in materials and show the values in techpack json",
+          "name": "m_bUseAverageColor",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "m_bShowModalProgressBar:bool                                   # if true, a Modal progress bar will appear to show progress in CLO Software",
+          "documentation_raw": "if true, a Modal progress bar will appear to show progress in CLO Software",
+          "name": "m_bShowModalProgressBar",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "m_bUseCustomImageAsThumbnail:bool                              # if true, thumbnail image will be replaced with a custom image from the MVFile Header",
+          "documentation_raw": "if true, thumbnail image will be replaced with a custom image from the MVFile Header",
+          "name": "m_bUseCustomImageAsThumbnail",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "m_ShowBaseLineFor3DCapturePerColorway:map[ int, bool]          # map(colorway index, show/hide flag) for Base Line while capturing 3D",
+          "documentation_raw": "map(colorway index, show/hide flag) for Base Line while capturing 3D",
+          "name": "m_ShowBaseLineFor3DCapturePerColorway",
+          "kind": "field",
+          "annotation_raw": "map[ int, bool]",
+          "type_references": []
+        },
+        {
+          "raw": "m_AuthenticationKeyForAPI:str                                  # For companies to use extended functionality in the CLO API / SDK",
+          "documentation_raw": "For companies to use extended functionality in the CLO API / SDK",
+          "name": "m_AuthenticationKeyForAPI",
+          "kind": "field",
+          "annotation_raw": "str",
+          "type_references": []
+        },
+        {
+          "raw": "m_ExportType:ExportTechPackType                                # 0: CLO_TECH_PACK, 1: CLO_SET_TECH_PACK, 2: CLO_SET_SREST, 3: CLO_API_TECH_PACK, 4: CLO_DUMMY",
+          "documentation_raw": "0: CLO_TECH_PACK, 1: CLO_SET_TECH_PACK, 2: CLO_SET_SREST, 3: CLO_API_TECH_PACK, 4: CLO_DUMMY",
+          "name": "m_ExportType",
+          "kind": "field",
+          "annotation_raw": "ExportTechPackType",
+          "type_references": [
+            {
+              "name": "ExportTechPackType",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:ExportTechPackType"
+            }
+          ]
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 374,
+              "block": 16
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 515,
+              "block": 16,
+              "anchor": "exporttechpackoption"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:ExportUSDOption",
+      "name": "ExportUSDOption",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nOptions for ExportUSD as parameters without dialogs in CLO API\n\"\"\"\nm_upAxis:int                  # 1: Y Axis as up, 2 : Z Axis as up\nm_metersPerUnit:double        # Set unit value based on 1 m\nm_bAssignAvatar:bool          # If true export geometry and material data of avatar to the USD file\nm_avatarPrimPath:str          # Set prim path of current geometry and material data default path is '/Avatar'\nm_bAssignGarment:bool         # If true export geometry and material of cloth to the USD file\nm_garmentPrimPath:str         # Set prim path of current geometry and material data default path is '/Garment'\nm_bAssignSceneNProp:bool      # If true export geometry and material of scne & prop to the USD file\nm_sceneNPropPrimPath:str      # Set prim path of current geometry data default path is '/SceneAndProp'\nm_bExportSimulationData:bool  # If true export simulation data to the USD file\nm_bExportStrandData:bool      # If true export strand data as BasisCurve to the USD file",
+      "description_raw": "Options for ExportUSD as parameters without dialogs in CLO API",
+      "members": [
+        {
+          "raw": "m_upAxis:int                  # 1: Y Axis as up, 2 : Z Axis as up",
+          "documentation_raw": "1: Y Axis as up, 2 : Z Axis as up",
+          "name": "m_upAxis",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "m_metersPerUnit:double        # Set unit value based on 1 m",
+          "documentation_raw": "Set unit value based on 1 m",
+          "name": "m_metersPerUnit",
+          "kind": "field",
+          "annotation_raw": "double",
+          "type_references": []
+        },
+        {
+          "raw": "m_bAssignAvatar:bool          # If true export geometry and material data of avatar to the USD file",
+          "documentation_raw": "If true export geometry and material data of avatar to the USD file",
+          "name": "m_bAssignAvatar",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "m_avatarPrimPath:str          # Set prim path of current geometry and material data default path is '/Avatar'",
+          "documentation_raw": "Set prim path of current geometry and material data default path is '/Avatar'",
+          "name": "m_avatarPrimPath",
+          "kind": "field",
+          "annotation_raw": "str",
+          "type_references": []
+        },
+        {
+          "raw": "m_bAssignGarment:bool         # If true export geometry and material of cloth to the USD file",
+          "documentation_raw": "If true export geometry and material of cloth to the USD file",
+          "name": "m_bAssignGarment",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "m_garmentPrimPath:str         # Set prim path of current geometry and material data default path is '/Garment'",
+          "documentation_raw": "Set prim path of current geometry and material data default path is '/Garment'",
+          "name": "m_garmentPrimPath",
+          "kind": "field",
+          "annotation_raw": "str",
+          "type_references": []
+        },
+        {
+          "raw": "m_bAssignSceneNProp:bool      # If true export geometry and material of scne & prop to the USD file",
+          "documentation_raw": "If true export geometry and material of scne & prop to the USD file",
+          "name": "m_bAssignSceneNProp",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "m_sceneNPropPrimPath:str      # Set prim path of current geometry data default path is '/SceneAndProp'",
+          "documentation_raw": "Set prim path of current geometry data default path is '/SceneAndProp'",
+          "name": "m_sceneNPropPrimPath",
+          "kind": "field",
+          "annotation_raw": "str",
+          "type_references": []
+        },
+        {
+          "raw": "m_bExportSimulationData:bool  # If true export simulation data to the USD file",
+          "documentation_raw": "If true export simulation data to the USD file",
+          "name": "m_bExportSimulationData",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "m_bExportStrandData:bool      # If true export strand data as BasisCurve to the USD file",
+          "documentation_raw": "If true export strand data as BasisCurve to the USD file",
+          "name": "m_bExportStrandData",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 339,
+              "block": 14
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 484,
+              "block": 14,
+              "anchor": "exportusdoption"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:GraphicRemoveMode",
+      "name": "GraphicRemoveMode",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nSpecifies which targets a RemoveGraphicStyle call should delete from.\n\"\"\"\nGRAPHIC_REMOVE_BROWSER_ONLY = 0         # Delete from Object Browser only. Fails if the graphic is currently applied to a pattern.\nGRAPHIC_REMOVE_PATTERN_ONLY = 1         # Delete from Pattern only (retain in Object Browser).\nGRAPHIC_REMOVE_PATTERN_AND_BROWSER = 2  # Delete from both Pattern and Object Browser.",
+      "description_raw": "Specifies which targets a RemoveGraphicStyle call should delete from.",
+      "members": [
+        {
+          "raw": "GRAPHIC_REMOVE_BROWSER_ONLY = 0         # Delete from Object Browser only. Fails if the graphic is currently applied to a pattern.",
+          "documentation_raw": "Delete from Object Browser only. Fails if the graphic is currently applied to a pattern.",
+          "name": "GRAPHIC_REMOVE_BROWSER_ONLY",
+          "kind": "enum_value",
+          "value_raw": "0",
+          "type_references": []
+        },
+        {
+          "raw": "GRAPHIC_REMOVE_PATTERN_ONLY = 1         # Delete from Pattern only (retain in Object Browser).",
+          "documentation_raw": "Delete from Pattern only (retain in Object Browser).",
+          "name": "GRAPHIC_REMOVE_PATTERN_ONLY",
+          "kind": "enum_value",
+          "value_raw": "1",
+          "type_references": []
+        },
+        {
+          "raw": "GRAPHIC_REMOVE_PATTERN_AND_BROWSER = 2  # Delete from both Pattern and Object Browser.",
+          "documentation_raw": "Delete from both Pattern and Object Browser.",
+          "name": "GRAPHIC_REMOVE_PATTERN_AND_BROWSER",
+          "kind": "enum_value",
+          "value_raw": "2",
+          "type_references": []
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 999,
+              "block": 53
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 1066,
+              "block": 53,
+              "anchor": "graphicremovemode"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:HI_RES_TOLERANCE_TYPE",
+      "name": "HI_RES_TOLERANCE_TYPE",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nProperty row of the Hi-Res Properties window (3D Garment > Hi-Res Garment) that owns a\nTolerance min/max range. Used by PatternAPI::GetHiResTolerance / SetHiResTolerance to select\nwhich of the three Tolerance ranges is read or written.\n\"\"\"\nHI_RES_TOLERANCE_PARTICLE_DISTANCE = 0    # Particle Distance tolerance range\nHI_RES_TOLERANCE_COLLISION_THICKNESS = 1  # Additional Thickness - Collision tolerance range\nHI_RES_TOLERANCE_SKIN_OFFSET = 2          # Skin Offset tolerance range",
+      "description_raw": "Property row of the Hi-Res Properties window (3D Garment > Hi-Res Garment) that owns a\nTolerance min/max range. Used by PatternAPI::GetHiResTolerance / SetHiResTolerance to select\nwhich of the three Tolerance ranges is read or written.",
+      "members": [
+        {
+          "raw": "HI_RES_TOLERANCE_PARTICLE_DISTANCE = 0    # Particle Distance tolerance range",
+          "documentation_raw": "Particle Distance tolerance range",
+          "name": "HI_RES_TOLERANCE_PARTICLE_DISTANCE",
+          "kind": "enum_value",
+          "value_raw": "0",
+          "type_references": []
+        },
+        {
+          "raw": "HI_RES_TOLERANCE_COLLISION_THICKNESS = 1  # Additional Thickness - Collision tolerance range",
+          "documentation_raw": "Additional Thickness - Collision tolerance range",
+          "name": "HI_RES_TOLERANCE_COLLISION_THICKNESS",
+          "kind": "enum_value",
+          "value_raw": "1",
+          "type_references": []
+        },
+        {
+          "raw": "HI_RES_TOLERANCE_SKIN_OFFSET = 2          # Skin Offset tolerance range",
+          "documentation_raw": "Skin Offset tolerance range",
+          "name": "HI_RES_TOLERANCE_SKIN_OFFSET",
+          "kind": "enum_value",
+          "value_raw": "2",
+          "type_references": []
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 1296,
+              "block": 70
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 1329,
+              "block": 70,
+              "anchor": "hi-res-tolerance-type"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:HttpMethodType",
+      "name": "HttpMethodType",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nHttp method Type for Http request\n\"\"\"\nHTTP_GET = 0   # HTTP GET method\nHTTP_POST = 1  # HTTP POST method\nHTTP_PUT = 2   # HTTP PUT method",
+      "description_raw": "Http method Type for Http request",
+      "members": [
+        {
+          "raw": "HTTP_GET = 0   # HTTP GET method",
+          "documentation_raw": "HTTP GET method",
+          "name": "HTTP_GET",
+          "kind": "enum_value",
+          "value_raw": "0",
+          "type_references": []
+        },
+        {
+          "raw": "HTTP_POST = 1  # HTTP POST method",
+          "documentation_raw": "HTTP POST method",
+          "name": "HTTP_POST",
+          "kind": "enum_value",
+          "value_raw": "1",
+          "type_references": []
+        },
+        {
+          "raw": "HTTP_PUT = 2   # HTTP PUT method",
+          "documentation_raw": "HTTP PUT method",
+          "name": "HTTP_PUT",
+          "kind": "enum_value",
+          "value_raw": "2",
+          "type_references": []
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 484,
+              "block": 23
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 611,
+              "block": 23,
+              "anchor": "httpmethodtype"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:ImportAlembicOption",
+      "name": "ImportAlembicOption",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nOptions for ImportAlembic as parameters without dialogs in CLO API\n\"\"\"\naLoadType:bool                       # if false means open, true means add\naUnit:float                          # unit of the .abc file, an AlembicUnit value (default 0.01 = MEASURE_UNIT_MM)\naScale:float                         # 0 ~ 1\nboolAddArrangementPoints:bool        # if true add the arrangement points\nboolAutoCreateFittingSuit:bool       # if true create fitting suit\nmorphingFrameCount:int               # set the morphing frame count ex: 1 to 99\nboolMoveGarmentToStartPosition:bool  # if true, this will select moveGarmentToStartPosition\nboolTrace2DPatternsFromUVMap:bool    # if true, this will select trace2DPatternsFromUVMap\nboolAlignBottonToGround:bool         # @deprecated [DEV-21494] Has never had any effect: nothing reads this field, and\n                                     # the GUI Alembic import dialog has no align-to-ground control to match it against\n                                     # (see c_ImportAlembic / c_SettingsImportAlembic in DialogImportOBJ.cpp). Wiring it\n                                     # would give the API a behaviour the GUI does not have, so it is documented as\n                                     # inert rather than implemented. Kept - with its original spelling - because\n                                     # removing or renaming it would break existing client scripts. To place an avatar\n                                     # on the ground, use ImportPose's _bBottomToGround. Pending a product decision.\n                                     # [inert - see above] if true, set the allignment to bottom\ntranslationValueX:float              # set x-offset value per the position-value in 3D Window for Avatar/Garment (left - right) unit (mm)\ntranslationValueY:float              # set y-offset value per the position-value in 3D Window for Avatar/Garment (up - down) unit (mm)\ntranslationValueZ:float              # set z-offset value per the position-value in 3D Window for Avatar/Garment (monitor - user) unit (mm)",
+      "description_raw": "Options for ImportAlembic as parameters without dialogs in CLO API",
+      "members": [
+        {
+          "raw": "aLoadType:bool                       # if false means open, true means add",
+          "documentation_raw": "if false means open, true means add",
+          "name": "aLoadType",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "aUnit:float                          # unit of the .abc file, an AlembicUnit value (default 0.01 = MEASURE_UNIT_MM)",
+          "documentation_raw": "unit of the .abc file, an AlembicUnit value (default 0.01 = MEASURE_UNIT_MM)",
+          "name": "aUnit",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": [
+            {
+              "name": "AlembicUnit",
+              "basis": "documentation_mention",
+              "status": "resolved",
+              "type_id": "type:AlembicUnit"
+            }
+          ]
+        },
+        {
+          "raw": "aScale:float                         # 0 ~ 1",
+          "documentation_raw": "0 ~ 1",
+          "name": "aScale",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "boolAddArrangementPoints:bool        # if true add the arrangement points",
+          "documentation_raw": "if true add the arrangement points",
+          "name": "boolAddArrangementPoints",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "boolAutoCreateFittingSuit:bool       # if true create fitting suit",
+          "documentation_raw": "if true create fitting suit",
+          "name": "boolAutoCreateFittingSuit",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "morphingFrameCount:int               # set the morphing frame count ex: 1 to 99",
+          "documentation_raw": "set the morphing frame count ex: 1 to 99",
+          "name": "morphingFrameCount",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "boolMoveGarmentToStartPosition:bool  # if true, this will select moveGarmentToStartPosition",
+          "documentation_raw": "if true, this will select moveGarmentToStartPosition",
+          "name": "boolMoveGarmentToStartPosition",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "boolTrace2DPatternsFromUVMap:bool    # if true, this will select trace2DPatternsFromUVMap",
+          "documentation_raw": "if true, this will select trace2DPatternsFromUVMap",
+          "name": "boolTrace2DPatternsFromUVMap",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "boolAlignBottonToGround:bool         # @deprecated [DEV-21494] Has never had any effect: nothing reads this field, and\n                                     # the GUI Alembic import dialog has no align-to-ground control to match it against\n                                     # (see c_ImportAlembic / c_SettingsImportAlembic in DialogImportOBJ.cpp). Wiring it\n                                     # would give the API a behaviour the GUI does not have, so it is documented as\n                                     # inert rather than implemented. Kept - with its original spelling - because\n                                     # removing or renaming it would break existing client scripts. To place an avatar\n                                     # on the ground, use ImportPose's _bBottomToGround. Pending a product decision.\n                                     # [inert - see above] if true, set the allignment to bottom",
+          "documentation_raw": "@deprecated [DEV-21494] Has never had any effect: nothing reads this field, and\nthe GUI Alembic import dialog has no align-to-ground control to match it against\n(see c_ImportAlembic / c_SettingsImportAlembic in DialogImportOBJ.cpp). Wiring it\nwould give the API a behaviour the GUI does not have, so it is documented as\ninert rather than implemented. Kept - with its original spelling - because\nremoving or renaming it would break existing client scripts. To place an avatar\non the ground, use ImportPose's _bBottomToGround. Pending a product decision.\n[inert - see above] if true, set the allignment to bottom",
+          "name": "boolAlignBottonToGround",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "translationValueX:float              # set x-offset value per the position-value in 3D Window for Avatar/Garment (left - right) unit (mm)",
+          "documentation_raw": "set x-offset value per the position-value in 3D Window for Avatar/Garment (left - right) unit (mm)",
+          "name": "translationValueX",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "translationValueY:float              # set y-offset value per the position-value in 3D Window for Avatar/Garment (up - down) unit (mm)",
+          "documentation_raw": "set y-offset value per the position-value in 3D Window for Avatar/Garment (up - down) unit (mm)",
+          "name": "translationValueY",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "translationValueZ:float              # set z-offset value per the position-value in 3D Window for Avatar/Garment (monitor - user) unit (mm)",
+          "documentation_raw": "set z-offset value per the position-value in 3D Window for Avatar/Garment (monitor - user) unit (mm)",
+          "name": "translationValueZ",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 676,
+              "block": 36
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 777,
+              "block": 36,
+              "anchor": "importalembicoption"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:ImportDxfOption",
+      "name": "ImportDxfOption",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nOptions for ImportDxf as parameters without dialogs in CLO API\n\"\"\"\nm_bAppend:bool                       # true = add the patterns to the current garment, false = clear the garment and open the file (default false)\nm_bAutoScale:bool                    # true = use the length unit declared in the file and ignore m_Scale (default true)\nm_Scale:float                        # factor from file units to mm (1 = mm, 10 = cm, 25.4 = inch), 0.01-100; used when m_bAutoScale is false (default 1)\nm_Angle:float                        # rotation in degrees: 0 = none, 90 = counterclockwise, -90 = clockwise; other values fail (default 0)\nm_bImportPatternAnnotation:bool      # import the pattern annotation text (annotation, category, style name) (default true)\nm_bAutoTraceAsInternalLines:bool     # true = create the file's internal lines as internal shapes, false = as baselines (default false)\nm_SwapCuttingLineAndSewingLine:bool  # swap the cutting line and the sewing line (default false)\nm_bIncludeNotchs:bool                # move the notches with the swapped lines; used with m_SwapCuttingLineAndSewingLine (default false)\nm_bAutoDistribute:bool               # spread the imported patterns out in the 2D window (default false)\nm_bOptimizeAllCurvePoints:bool       # optimize the curve points of the imported patterns automatically (default false)\nm_bImportAllDrawCurvePoint:bool      # import the draw-curve points when the curve is not loaded (default false)\nm_bRemoveNonGradingPoints:bool       # remove curve points that have no grading rule (default false)\nm_bConvertToSeamAllowance:bool       # deprecated and ignored: a seam allowance in the file is converted automatically (default false)\nm_bImportNotchTo:bool                # import the file's notches; where they go is m_eNotchImportPlacement (default true)\nm_eNotchImportPlacement:int          # where notches go: 0 = pattern outline, 1 = seam allowance, 2 = both (default; other values become 2)",
+      "description_raw": "Options for ImportDxf as parameters without dialogs in CLO API",
+      "members": [
+        {
+          "raw": "m_bAppend:bool                       # true = add the patterns to the current garment, false = clear the garment and open the file (default false)",
+          "documentation_raw": "true = add the patterns to the current garment, false = clear the garment and open the file (default false)",
+          "name": "m_bAppend",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "m_bAutoScale:bool                    # true = use the length unit declared in the file and ignore m_Scale (default true)",
+          "documentation_raw": "true = use the length unit declared in the file and ignore m_Scale (default true)",
+          "name": "m_bAutoScale",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "m_Scale:float                        # factor from file units to mm (1 = mm, 10 = cm, 25.4 = inch), 0.01-100; used when m_bAutoScale is false (default 1)",
+          "documentation_raw": "factor from file units to mm (1 = mm, 10 = cm, 25.4 = inch), 0.01-100; used when m_bAutoScale is false (default 1)",
+          "name": "m_Scale",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "m_Angle:float                        # rotation in degrees: 0 = none, 90 = counterclockwise, -90 = clockwise; other values fail (default 0)",
+          "documentation_raw": "rotation in degrees: 0 = none, 90 = counterclockwise, -90 = clockwise; other values fail (default 0)",
+          "name": "m_Angle",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "m_bImportPatternAnnotation:bool      # import the pattern annotation text (annotation, category, style name) (default true)",
+          "documentation_raw": "import the pattern annotation text (annotation, category, style name) (default true)",
+          "name": "m_bImportPatternAnnotation",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "m_bAutoTraceAsInternalLines:bool     # true = create the file's internal lines as internal shapes, false = as baselines (default false)",
+          "documentation_raw": "true = create the file's internal lines as internal shapes, false = as baselines (default false)",
+          "name": "m_bAutoTraceAsInternalLines",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "m_SwapCuttingLineAndSewingLine:bool  # swap the cutting line and the sewing line (default false)",
+          "documentation_raw": "swap the cutting line and the sewing line (default false)",
+          "name": "m_SwapCuttingLineAndSewingLine",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "m_bIncludeNotchs:bool                # move the notches with the swapped lines; used with m_SwapCuttingLineAndSewingLine (default false)",
+          "documentation_raw": "move the notches with the swapped lines; used with m_SwapCuttingLineAndSewingLine (default false)",
+          "name": "m_bIncludeNotchs",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "m_bAutoDistribute:bool               # spread the imported patterns out in the 2D window (default false)",
+          "documentation_raw": "spread the imported patterns out in the 2D window (default false)",
+          "name": "m_bAutoDistribute",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "m_bOptimizeAllCurvePoints:bool       # optimize the curve points of the imported patterns automatically (default false)",
+          "documentation_raw": "optimize the curve points of the imported patterns automatically (default false)",
+          "name": "m_bOptimizeAllCurvePoints",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "m_bImportAllDrawCurvePoint:bool      # import the draw-curve points when the curve is not loaded (default false)",
+          "documentation_raw": "import the draw-curve points when the curve is not loaded (default false)",
+          "name": "m_bImportAllDrawCurvePoint",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "m_bRemoveNonGradingPoints:bool       # remove curve points that have no grading rule (default false)",
+          "documentation_raw": "remove curve points that have no grading rule (default false)",
+          "name": "m_bRemoveNonGradingPoints",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "m_bConvertToSeamAllowance:bool       # deprecated and ignored: a seam allowance in the file is converted automatically (default false)",
+          "documentation_raw": "deprecated and ignored: a seam allowance in the file is converted automatically (default false)",
+          "name": "m_bConvertToSeamAllowance",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "m_bImportNotchTo:bool                # import the file's notches; where they go is m_eNotchImportPlacement (default true)",
+          "documentation_raw": "import the file's notches; where they go is m_eNotchImportPlacement (default true)",
+          "name": "m_bImportNotchTo",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "m_eNotchImportPlacement:int          # where notches go: 0 = pattern outline, 1 = seam allowance, 2 = both (default; other values become 2)",
+          "documentation_raw": "where notches go: 0 = pattern outline, 1 = seam allowance, 2 = both (default; other values become 2)",
+          "name": "m_eNotchImportPlacement",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 224,
+              "block": 10
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 377,
+              "block": 10,
+              "anchor": "importdxfoption"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:ImportExportOption",
+      "name": "ImportExportOption",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nOptions for Export OBJ and Export GLTF as parameters without dialogs in CLO API\n\"\"\"\nbExportGarment:bool                    # true : Export Garment (Cloth Meshes)\nbExportAvatar:bool                     # true : Export Avatar (Avatar Meshes)\nbSingleObject:bool                     # true : OBJ single object, false : OBJ multiple object\nweldType:WELD_TYPE                     # FULLY_UNWELDED : unweld, FULLY_WELDED : weld, SELECTED_WELDED : Weld selected patterns in workspace, DEFAULT_WELDED : Do not use!!!\nbThin:bool                             # if true, export the garment as thin mesh. Otherwise, export it as thick mesh.\nbUnifiedUVCoordinates:bool             # [Deprecated] - Please use bClothUnifiedUVCoordinates and bAvatarUnifiedUVCoordinates instead.\nbCreateUnifiedTexture:bool             # [Deprecated]\nunifiedTextureSize:float               # true: (In case bClothUnifiedUVCoordinates or bAvatarUnifiedUVCoordinates are true) The size of unified texture (pixels). Texture will be created in square.\nunifiedTextureFillSeamSize:int         # true: (In case bClothUnifiedUVCoordinates or bAvatarUnifiedUVCoordinates are true) Fill texture seam size in pixels.\nbUseInifinteSeams:bool                 # true: (In case bClothUnifiedUVCoordinates or bAvatarUnifiedUVCoordinates are true) Use infinite fill texture seam size.\nunifiedTextureBakeMargin:float         # true: (In case bClothUnifiedUVCoordinates or bAvatarUnifiedUVCoordinates are true) The margin of the baked texture in the image canvas\nunifiedTextureBakeRelateive:bool       # true: (In case bClothUnifiedUVCoordinates or bAvatarUnifiedUVCoordinates are true)\nbUnifiedDiffuseMap:bool                # false: (In case bClothUnifiedUVCoordinates or bAvatarUnifiedUVCoordinates are true) export diffuse map baked in the unified uv\nbUnifiedNormalMap:bool                 # false: (In case bClothUnifiedUVCoordinates or bAvatarUnifiedUVCoordinates are true) export normal map baked in the unified uv\nbUnifiedMetalnessMap:bool              # false: (In case bClothUnifiedUVCoordinates or bAvatarUnifiedUVCoordinates are true) export metalness map baked in the unified uv\nbUnifiedRoughnessMap:bool              # false: (In case bClothUnifiedUVCoordinates or bAvatarUnifiedUVCoordinates are true) export roughness map baked in the unified uv\nbUnifiedOpacityMap:bool                # false: (In case bClothUnifiedUVCoordinates or bAvatarUnifiedUVCoordinates are true) export opacity map baked in the unified uv\nbUnifiedDisplacementMap:bool           # false: (In case bClothUnifiedUVCoordinates or bAvatarUnifiedUVCoordinates are true) export displacement map baked in the unified uv\nbIncludeHiddenObject:bool              # if true, export all the pattern meshes include 'hidden pattern meshes on 3D' to OBJ\nbIncludeInnerShape:bool                # If true, export geometries of internal lines to ease the picking the internal lines in external modeling tools such as Maya and 3ds Max.\nscale:float                            # how to scale the object created in CLO when exporting. The default unit of CLO is millimeters for obj/fbx(mm) and gltf(m)\n                                       # use 0.001 for gltf in default\naxisX:int                              # the index of the axis which the X axis will be converted to. If you don't want axis conversion, set this value as \"0\"\naxisY:int                              # the index of the axis which the Y axis will be converted to. If you don't want axis conversion, set this value as \"1\"\naxisZ:int                              # the index of the axis which the Z axis will be converted to. If you don't want axis conversion, set this value as \"2\"\nbInvertX:bool                          # invert the axis which the X axis will be converted to\nbInvertY:bool                          # invert the axis which the Y axis will be converted to\nbInvertZ:bool                          # invert the axis which the Z axis will be converted to\nbSaveColorWays:bool                    # if true, export for all the colorways.\nbSaveInZip:bool                        # If true, export as a zipped file with textures. It will output a single zipped file(.zip), not separated files.\nbDiffuseColorCombined:bool             # if true, the texture will be exported after being combined with diffuse color\nbExcludeAmbient:bool                   # if true, exclude ambient map and color in MTL files.\nbOpacityMap:bool                       # if true, generate an opacity map by extracting alpha channel from diffuse map\nbMetaData:bool                         # export meta data\nbSizeAndPoseFromAvatar:bool            # ImportAvatar: true = keep the avatar file's own size and pose, false = apply the size and pose saved with the garment\nbEmbedded:bool                         # for embedded-gltf export option\nbExportLight:bool                      # export light information in gltf\nbExportFabric:bool                     # true : Export Fabric (Fabric information)\nbSaveColorWaysSingleFile:bool          # true : export gltf with KHR_materials_variants extension (affect when bSaveColorWays is true)\nfbxSdkVersion:int                      # 0 : 2020, 1: 2019, 2: 2018, 3: 2016/2017, 4: 2014/2015, 5: 2013, 6: 2012\nbIncludeAvatarShape:bool               # FBX / Alembic export: include the avatar meshes; keep it equal to bExportAvatar\nm_AuthenticationKeyForAPI:str          # For Alvanon to use extended functionality in the CLO API / SDK\nImportObjectType:int                   # import file type. 0 : Avatar, 1: Trim, 2 : Garment\nbAutoTranslate:bool                    # If true, allign bottom to ground\nbCreateCamera:bool                     # If true, create object camera\nbCreateAvatarJointAnimation:bool       # If true, create object avatar joint animation\nbCreateAvatarCacheAnimation:bool       # If true, create object avatar cache animation\nbCreateAvatarBlendShapeAnimation:bool  # If true, create object avatar blendshape (weight) animation\nbCreateClothCacheAnimation:bool        # If true, create cloth cache animation\nbMoveGarment:bool                      # If true, move garment to start position\nbAddArrangementPoints:bool             # If true, auto add arrangement points\nbAutoCreateFittingSuit:bool            # If true, auto create fitting suit\nbAdd:bool                              # If true, set load type as add\ntranslationValueX:float                # set x-offset value per the position-value in 3D Window for Avatar/Garment (left - right) unit (mm)\ntranslationValueY:float                # set y-offset value per the position-value in 3D Window for Avatar/Garment (up - down) unit (mm)\ntranslationValueZ:float                # set z-offset value per the position-value in 3D Window for Avatar/Garment (monitor - user) unit (mm)\nbTrace2DPatternsUVMap:bool             # If true, set load type for trace 2d patterns from uv map\nbCreateMetallicRoughnessMap:bool       # true : (In case bClothUnifiedUVCoordinates or bAvatarUnifiedUVCoordinates are false) export metallic-roughness map baked using diffuse alpha value (only in gltf)\nbClothUnifiedUVCoordinates:bool        # flag for Cloth Unified UV Coordinates\nbAvatarUnifiedUVCoordinates:bool       # flag for Avatar Unified UV Coordinates\npatternList:list[int]                  # pattern indices to export (RealPatternList order, as used by the Pattern API)\nbuttonList:list[ int]                  # uid values of buttons/buttonholes to export, as returned in the \"uid\" field by GetNonFabricComponentsOnPattern / GetAllNonFabricComponents\ngraphicList:list[ int]                 # uid values of graphics/prints to export, from the same \"uid\" field\nzipperList:list[ int]                  # uid values of zippers to export, from the same \"uid\" field; each is expanded to its tapes and slider/puller/stopper hardware",
+      "description_raw": "Options for Export OBJ and Export GLTF as parameters without dialogs in CLO API",
+      "members": [
+        {
+          "raw": "bExportGarment:bool                    # true : Export Garment (Cloth Meshes)",
+          "documentation_raw": "true : Export Garment (Cloth Meshes)",
+          "name": "bExportGarment",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "bExportAvatar:bool                     # true : Export Avatar (Avatar Meshes)",
+          "documentation_raw": "true : Export Avatar (Avatar Meshes)",
+          "name": "bExportAvatar",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "bSingleObject:bool                     # true : OBJ single object, false : OBJ multiple object",
+          "documentation_raw": "true : OBJ single object, false : OBJ multiple object",
+          "name": "bSingleObject",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "weldType:WELD_TYPE                     # FULLY_UNWELDED : unweld, FULLY_WELDED : weld, SELECTED_WELDED : Weld selected patterns in workspace, DEFAULT_WELDED : Do not use!!!",
+          "documentation_raw": "FULLY_UNWELDED : unweld, FULLY_WELDED : weld, SELECTED_WELDED : Weld selected patterns in workspace, DEFAULT_WELDED : Do not use!!!",
+          "name": "weldType",
+          "kind": "field",
+          "annotation_raw": "WELD_TYPE",
+          "type_references": [
+            {
+              "name": "WELD_TYPE",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:WELD_TYPE"
+            }
+          ]
+        },
+        {
+          "raw": "bThin:bool                             # if true, export the garment as thin mesh. Otherwise, export it as thick mesh.",
+          "documentation_raw": "if true, export the garment as thin mesh. Otherwise, export it as thick mesh.",
+          "name": "bThin",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "bUnifiedUVCoordinates:bool             # [Deprecated] - Please use bClothUnifiedUVCoordinates and bAvatarUnifiedUVCoordinates instead.",
+          "documentation_raw": "[Deprecated] - Please use bClothUnifiedUVCoordinates and bAvatarUnifiedUVCoordinates instead.",
+          "name": "bUnifiedUVCoordinates",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "bCreateUnifiedTexture:bool             # [Deprecated]",
+          "documentation_raw": "[Deprecated]",
+          "name": "bCreateUnifiedTexture",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "unifiedTextureSize:float               # true: (In case bClothUnifiedUVCoordinates or bAvatarUnifiedUVCoordinates are true) The size of unified texture (pixels). Texture will be created in square.",
+          "documentation_raw": "true: (In case bClothUnifiedUVCoordinates or bAvatarUnifiedUVCoordinates are true) The size of unified texture (pixels). Texture will be created in square.",
+          "name": "unifiedTextureSize",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "unifiedTextureFillSeamSize:int         # true: (In case bClothUnifiedUVCoordinates or bAvatarUnifiedUVCoordinates are true) Fill texture seam size in pixels.",
+          "documentation_raw": "true: (In case bClothUnifiedUVCoordinates or bAvatarUnifiedUVCoordinates are true) Fill texture seam size in pixels.",
+          "name": "unifiedTextureFillSeamSize",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "bUseInifinteSeams:bool                 # true: (In case bClothUnifiedUVCoordinates or bAvatarUnifiedUVCoordinates are true) Use infinite fill texture seam size.",
+          "documentation_raw": "true: (In case bClothUnifiedUVCoordinates or bAvatarUnifiedUVCoordinates are true) Use infinite fill texture seam size.",
+          "name": "bUseInifinteSeams",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "unifiedTextureBakeMargin:float         # true: (In case bClothUnifiedUVCoordinates or bAvatarUnifiedUVCoordinates are true) The margin of the baked texture in the image canvas",
+          "documentation_raw": "true: (In case bClothUnifiedUVCoordinates or bAvatarUnifiedUVCoordinates are true) The margin of the baked texture in the image canvas",
+          "name": "unifiedTextureBakeMargin",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "unifiedTextureBakeRelateive:bool       # true: (In case bClothUnifiedUVCoordinates or bAvatarUnifiedUVCoordinates are true)",
+          "documentation_raw": "true: (In case bClothUnifiedUVCoordinates or bAvatarUnifiedUVCoordinates are true)",
+          "name": "unifiedTextureBakeRelateive",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "bUnifiedDiffuseMap:bool                # false: (In case bClothUnifiedUVCoordinates or bAvatarUnifiedUVCoordinates are true) export diffuse map baked in the unified uv",
+          "documentation_raw": "false: (In case bClothUnifiedUVCoordinates or bAvatarUnifiedUVCoordinates are true) export diffuse map baked in the unified uv",
+          "name": "bUnifiedDiffuseMap",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "bUnifiedNormalMap:bool                 # false: (In case bClothUnifiedUVCoordinates or bAvatarUnifiedUVCoordinates are true) export normal map baked in the unified uv",
+          "documentation_raw": "false: (In case bClothUnifiedUVCoordinates or bAvatarUnifiedUVCoordinates are true) export normal map baked in the unified uv",
+          "name": "bUnifiedNormalMap",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "bUnifiedMetalnessMap:bool              # false: (In case bClothUnifiedUVCoordinates or bAvatarUnifiedUVCoordinates are true) export metalness map baked in the unified uv",
+          "documentation_raw": "false: (In case bClothUnifiedUVCoordinates or bAvatarUnifiedUVCoordinates are true) export metalness map baked in the unified uv",
+          "name": "bUnifiedMetalnessMap",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "bUnifiedRoughnessMap:bool              # false: (In case bClothUnifiedUVCoordinates or bAvatarUnifiedUVCoordinates are true) export roughness map baked in the unified uv",
+          "documentation_raw": "false: (In case bClothUnifiedUVCoordinates or bAvatarUnifiedUVCoordinates are true) export roughness map baked in the unified uv",
+          "name": "bUnifiedRoughnessMap",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "bUnifiedOpacityMap:bool                # false: (In case bClothUnifiedUVCoordinates or bAvatarUnifiedUVCoordinates are true) export opacity map baked in the unified uv",
+          "documentation_raw": "false: (In case bClothUnifiedUVCoordinates or bAvatarUnifiedUVCoordinates are true) export opacity map baked in the unified uv",
+          "name": "bUnifiedOpacityMap",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "bUnifiedDisplacementMap:bool           # false: (In case bClothUnifiedUVCoordinates or bAvatarUnifiedUVCoordinates are true) export displacement map baked in the unified uv",
+          "documentation_raw": "false: (In case bClothUnifiedUVCoordinates or bAvatarUnifiedUVCoordinates are true) export displacement map baked in the unified uv",
+          "name": "bUnifiedDisplacementMap",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "bIncludeHiddenObject:bool              # if true, export all the pattern meshes include 'hidden pattern meshes on 3D' to OBJ",
+          "documentation_raw": "if true, export all the pattern meshes include 'hidden pattern meshes on 3D' to OBJ",
+          "name": "bIncludeHiddenObject",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "bIncludeInnerShape:bool                # If true, export geometries of internal lines to ease the picking the internal lines in external modeling tools such as Maya and 3ds Max.",
+          "documentation_raw": "If true, export geometries of internal lines to ease the picking the internal lines in external modeling tools such as Maya and 3ds Max.",
+          "name": "bIncludeInnerShape",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "scale:float                            # how to scale the object created in CLO when exporting. The default unit of CLO is millimeters for obj/fbx(mm) and gltf(m)\n                                       # use 0.001 for gltf in default",
+          "documentation_raw": "how to scale the object created in CLO when exporting. The default unit of CLO is millimeters for obj/fbx(mm) and gltf(m)\nuse 0.001 for gltf in default",
+          "name": "scale",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "axisX:int                              # the index of the axis which the X axis will be converted to. If you don't want axis conversion, set this value as \"0\"",
+          "documentation_raw": "the index of the axis which the X axis will be converted to. If you don't want axis conversion, set this value as \"0\"",
+          "name": "axisX",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "axisY:int                              # the index of the axis which the Y axis will be converted to. If you don't want axis conversion, set this value as \"1\"",
+          "documentation_raw": "the index of the axis which the Y axis will be converted to. If you don't want axis conversion, set this value as \"1\"",
+          "name": "axisY",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "axisZ:int                              # the index of the axis which the Z axis will be converted to. If you don't want axis conversion, set this value as \"2\"",
+          "documentation_raw": "the index of the axis which the Z axis will be converted to. If you don't want axis conversion, set this value as \"2\"",
+          "name": "axisZ",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "bInvertX:bool                          # invert the axis which the X axis will be converted to",
+          "documentation_raw": "invert the axis which the X axis will be converted to",
+          "name": "bInvertX",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "bInvertY:bool                          # invert the axis which the Y axis will be converted to",
+          "documentation_raw": "invert the axis which the Y axis will be converted to",
+          "name": "bInvertY",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "bInvertZ:bool                          # invert the axis which the Z axis will be converted to",
+          "documentation_raw": "invert the axis which the Z axis will be converted to",
+          "name": "bInvertZ",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "bSaveColorWays:bool                    # if true, export for all the colorways.",
+          "documentation_raw": "if true, export for all the colorways.",
+          "name": "bSaveColorWays",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "bSaveInZip:bool                        # If true, export as a zipped file with textures. It will output a single zipped file(.zip), not separated files.",
+          "documentation_raw": "If true, export as a zipped file with textures. It will output a single zipped file(.zip), not separated files.",
+          "name": "bSaveInZip",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "bDiffuseColorCombined:bool             # if true, the texture will be exported after being combined with diffuse color",
+          "documentation_raw": "if true, the texture will be exported after being combined with diffuse color",
+          "name": "bDiffuseColorCombined",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "bExcludeAmbient:bool                   # if true, exclude ambient map and color in MTL files.",
+          "documentation_raw": "if true, exclude ambient map and color in MTL files.",
+          "name": "bExcludeAmbient",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "bOpacityMap:bool                       # if true, generate an opacity map by extracting alpha channel from diffuse map",
+          "documentation_raw": "if true, generate an opacity map by extracting alpha channel from diffuse map",
+          "name": "bOpacityMap",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "bMetaData:bool                         # export meta data",
+          "documentation_raw": "export meta data",
+          "name": "bMetaData",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "bSizeAndPoseFromAvatar:bool            # ImportAvatar: true = keep the avatar file's own size and pose, false = apply the size and pose saved with the garment",
+          "documentation_raw": "ImportAvatar: true = keep the avatar file's own size and pose, false = apply the size and pose saved with the garment",
+          "name": "bSizeAndPoseFromAvatar",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "bEmbedded:bool                         # for embedded-gltf export option",
+          "documentation_raw": "for embedded-gltf export option",
+          "name": "bEmbedded",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "bExportLight:bool                      # export light information in gltf",
+          "documentation_raw": "export light information in gltf",
+          "name": "bExportLight",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "bExportFabric:bool                     # true : Export Fabric (Fabric information)",
+          "documentation_raw": "true : Export Fabric (Fabric information)",
+          "name": "bExportFabric",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "bSaveColorWaysSingleFile:bool          # true : export gltf with KHR_materials_variants extension (affect when bSaveColorWays is true)",
+          "documentation_raw": "true : export gltf with KHR_materials_variants extension (affect when bSaveColorWays is true)",
+          "name": "bSaveColorWaysSingleFile",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "fbxSdkVersion:int                      # 0 : 2020, 1: 2019, 2: 2018, 3: 2016/2017, 4: 2014/2015, 5: 2013, 6: 2012",
+          "documentation_raw": "0 : 2020, 1: 2019, 2: 2018, 3: 2016/2017, 4: 2014/2015, 5: 2013, 6: 2012",
+          "name": "fbxSdkVersion",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "bIncludeAvatarShape:bool               # FBX / Alembic export: include the avatar meshes; keep it equal to bExportAvatar",
+          "documentation_raw": "FBX / Alembic export: include the avatar meshes; keep it equal to bExportAvatar",
+          "name": "bIncludeAvatarShape",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "m_AuthenticationKeyForAPI:str          # For Alvanon to use extended functionality in the CLO API / SDK",
+          "documentation_raw": "For Alvanon to use extended functionality in the CLO API / SDK",
+          "name": "m_AuthenticationKeyForAPI",
+          "kind": "field",
+          "annotation_raw": "str",
+          "type_references": []
+        },
+        {
+          "raw": "ImportObjectType:int                   # import file type. 0 : Avatar, 1: Trim, 2 : Garment",
+          "documentation_raw": "import file type. 0 : Avatar, 1: Trim, 2 : Garment",
+          "name": "ImportObjectType",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "bAutoTranslate:bool                    # If true, allign bottom to ground",
+          "documentation_raw": "If true, allign bottom to ground",
+          "name": "bAutoTranslate",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "bCreateCamera:bool                     # If true, create object camera",
+          "documentation_raw": "If true, create object camera",
+          "name": "bCreateCamera",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "bCreateAvatarJointAnimation:bool       # If true, create object avatar joint animation",
+          "documentation_raw": "If true, create object avatar joint animation",
+          "name": "bCreateAvatarJointAnimation",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "bCreateAvatarCacheAnimation:bool       # If true, create object avatar cache animation",
+          "documentation_raw": "If true, create object avatar cache animation",
+          "name": "bCreateAvatarCacheAnimation",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "bCreateAvatarBlendShapeAnimation:bool  # If true, create object avatar blendshape (weight) animation",
+          "documentation_raw": "If true, create object avatar blendshape (weight) animation",
+          "name": "bCreateAvatarBlendShapeAnimation",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "bCreateClothCacheAnimation:bool        # If true, create cloth cache animation",
+          "documentation_raw": "If true, create cloth cache animation",
+          "name": "bCreateClothCacheAnimation",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "bMoveGarment:bool                      # If true, move garment to start position",
+          "documentation_raw": "If true, move garment to start position",
+          "name": "bMoveGarment",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "bAddArrangementPoints:bool             # If true, auto add arrangement points",
+          "documentation_raw": "If true, auto add arrangement points",
+          "name": "bAddArrangementPoints",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "bAutoCreateFittingSuit:bool            # If true, auto create fitting suit",
+          "documentation_raw": "If true, auto create fitting suit",
+          "name": "bAutoCreateFittingSuit",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "bAdd:bool                              # If true, set load type as add",
+          "documentation_raw": "If true, set load type as add",
+          "name": "bAdd",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "translationValueX:float                # set x-offset value per the position-value in 3D Window for Avatar/Garment (left - right) unit (mm)",
+          "documentation_raw": "set x-offset value per the position-value in 3D Window for Avatar/Garment (left - right) unit (mm)",
+          "name": "translationValueX",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "translationValueY:float                # set y-offset value per the position-value in 3D Window for Avatar/Garment (up - down) unit (mm)",
+          "documentation_raw": "set y-offset value per the position-value in 3D Window for Avatar/Garment (up - down) unit (mm)",
+          "name": "translationValueY",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "translationValueZ:float                # set z-offset value per the position-value in 3D Window for Avatar/Garment (monitor - user) unit (mm)",
+          "documentation_raw": "set z-offset value per the position-value in 3D Window for Avatar/Garment (monitor - user) unit (mm)",
+          "name": "translationValueZ",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "bTrace2DPatternsUVMap:bool             # If true, set load type for trace 2d patterns from uv map",
+          "documentation_raw": "If true, set load type for trace 2d patterns from uv map",
+          "name": "bTrace2DPatternsUVMap",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "bCreateMetallicRoughnessMap:bool       # true : (In case bClothUnifiedUVCoordinates or bAvatarUnifiedUVCoordinates are false) export metallic-roughness map baked using diffuse alpha value (only in gltf)",
+          "documentation_raw": "true : (In case bClothUnifiedUVCoordinates or bAvatarUnifiedUVCoordinates are false) export metallic-roughness map baked using diffuse alpha value (only in gltf)",
+          "name": "bCreateMetallicRoughnessMap",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "bClothUnifiedUVCoordinates:bool        # flag for Cloth Unified UV Coordinates",
+          "documentation_raw": "flag for Cloth Unified UV Coordinates",
+          "name": "bClothUnifiedUVCoordinates",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "bAvatarUnifiedUVCoordinates:bool       # flag for Avatar Unified UV Coordinates",
+          "documentation_raw": "flag for Avatar Unified UV Coordinates",
+          "name": "bAvatarUnifiedUVCoordinates",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "patternList:list[int]                  # pattern indices to export (RealPatternList order, as used by the Pattern API)",
+          "documentation_raw": "pattern indices to export (RealPatternList order, as used by the Pattern API)",
+          "name": "patternList",
+          "kind": "field",
+          "annotation_raw": "list[int]",
+          "type_references": []
+        },
+        {
+          "raw": "buttonList:list[ int]                  # uid values of buttons/buttonholes to export, as returned in the \"uid\" field by GetNonFabricComponentsOnPattern / GetAllNonFabricComponents",
+          "documentation_raw": "uid values of buttons/buttonholes to export, as returned in the \"uid\" field by GetNonFabricComponentsOnPattern / GetAllNonFabricComponents",
+          "name": "buttonList",
+          "kind": "field",
+          "annotation_raw": "list[ int]",
+          "type_references": []
+        },
+        {
+          "raw": "graphicList:list[ int]                 # uid values of graphics/prints to export, from the same \"uid\" field",
+          "documentation_raw": "uid values of graphics/prints to export, from the same \"uid\" field",
+          "name": "graphicList",
+          "kind": "field",
+          "annotation_raw": "list[ int]",
+          "type_references": []
+        },
+        {
+          "raw": "zipperList:list[ int]                  # uid values of zippers to export, from the same \"uid\" field; each is expanded to its tapes and slider/puller/stopper hardware",
+          "documentation_raw": "uid values of zippers to export, from the same \"uid\" field; each is expanded to its tapes and slider/puller/stopper hardware",
+          "name": "zipperList",
+          "kind": "field",
+          "annotation_raw": "list[ int]",
+          "type_references": []
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 96,
+              "block": 6
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 257,
+              "block": 6,
+              "anchor": "importexportoption"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:ImportZPRJOption",
+      "name": "ImportZPRJOption",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nOptions for ImportZPRJ as parameters without dialogs in CLO API\n\"\"\"\nbAppend:bool                  # if true, append the project file to the current loaded project\n                              # if false, overwrite/replace the project file in the current loaded project\nbLoadGarment:bool             # if true, open/add Garment inside the zprj file into the current loaded project\nbLoadAvatar:bool              # if true, open/add Avatar inside the zprj file into the current loaded project\ntranslationValueX:float       # set x-offet value per current patterns in 2D Window for Patterns (left - right)\n                              # set x-offset value per the position-value inside the zprj file in 3D Window for Avatar/Garment (left - right)\ntranslationValueY:float       # set y-offet value per current patterns in 2D Window for Patterns (up - down)\n                              # set y-offset value per the position-value inside the zprj file in 3D Window for Avatar/Garment\ntranslationValueZ:float       # set z-offset value per the position-value inside the zprj file in 3D Window for Avatar/Garment (monitor - user)\ntranslationUnit:CLO_API_UNIT  # translationUnit - 0: Milimeter, 1: Centimeter, 2: Inch, 3: Meter, 4: Feet\nbLoadSceneAndProps:bool       # if true, open/add SceneAndProps inside the zprj file into the current loaded project\nbLoadRenderProperties:bool    # if true, open/add RenderProperties(Vray) inside the zprj file into the current loaded project\nbLoadCustomView:bool          # if true, load Custom View (default: false)\nbLoadDisplaySettings:bool     # if true, load Display Settings (default: true)",
+      "description_raw": "Options for ImportZPRJ as parameters without dialogs in CLO API",
+      "members": [
+        {
+          "raw": "bAppend:bool                  # if true, append the project file to the current loaded project\n                              # if false, overwrite/replace the project file in the current loaded project",
+          "documentation_raw": "if true, append the project file to the current loaded project\nif false, overwrite/replace the project file in the current loaded project",
+          "name": "bAppend",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "bLoadGarment:bool             # if true, open/add Garment inside the zprj file into the current loaded project",
+          "documentation_raw": "if true, open/add Garment inside the zprj file into the current loaded project",
+          "name": "bLoadGarment",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "bLoadAvatar:bool              # if true, open/add Avatar inside the zprj file into the current loaded project",
+          "documentation_raw": "if true, open/add Avatar inside the zprj file into the current loaded project",
+          "name": "bLoadAvatar",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "translationValueX:float       # set x-offet value per current patterns in 2D Window for Patterns (left - right)\n                              # set x-offset value per the position-value inside the zprj file in 3D Window for Avatar/Garment (left - right)",
+          "documentation_raw": "set x-offet value per current patterns in 2D Window for Patterns (left - right)\nset x-offset value per the position-value inside the zprj file in 3D Window for Avatar/Garment (left - right)",
+          "name": "translationValueX",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "translationValueY:float       # set y-offet value per current patterns in 2D Window for Patterns (up - down)\n                              # set y-offset value per the position-value inside the zprj file in 3D Window for Avatar/Garment",
+          "documentation_raw": "set y-offet value per current patterns in 2D Window for Patterns (up - down)\nset y-offset value per the position-value inside the zprj file in 3D Window for Avatar/Garment",
+          "name": "translationValueY",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "translationValueZ:float       # set z-offset value per the position-value inside the zprj file in 3D Window for Avatar/Garment (monitor - user)",
+          "documentation_raw": "set z-offset value per the position-value inside the zprj file in 3D Window for Avatar/Garment (monitor - user)",
+          "name": "translationValueZ",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "translationUnit:CLO_API_UNIT  # translationUnit - 0: Milimeter, 1: Centimeter, 2: Inch, 3: Meter, 4: Feet",
+          "documentation_raw": "translationUnit - 0: Milimeter, 1: Centimeter, 2: Inch, 3: Meter, 4: Feet",
+          "name": "translationUnit",
+          "kind": "field",
+          "annotation_raw": "CLO_API_UNIT",
+          "type_references": [
+            {
+              "name": "CLO_API_UNIT",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:CLO_API_UNIT"
+            }
+          ]
+        },
+        {
+          "raw": "bLoadSceneAndProps:bool       # if true, open/add SceneAndProps inside the zprj file into the current loaded project",
+          "documentation_raw": "if true, open/add SceneAndProps inside the zprj file into the current loaded project",
+          "name": "bLoadSceneAndProps",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "bLoadRenderProperties:bool    # if true, open/add RenderProperties(Vray) inside the zprj file into the current loaded project",
+          "documentation_raw": "if true, open/add RenderProperties(Vray) inside the zprj file into the current loaded project",
+          "name": "bLoadRenderProperties",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "bLoadCustomView:bool          # if true, load Custom View (default: false)",
+          "documentation_raw": "if true, load Custom View (default: false)",
+          "name": "bLoadCustomView",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "bLoadDisplaySettings:bool     # if true, load Display Settings (default: true)",
+          "documentation_raw": "if true, load Display Settings (default: true)",
+          "name": "bLoadDisplaySettings",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 200,
+              "block": 9
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 355,
+              "block": 9,
+              "anchor": "importzprjoption"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3293 @@
+{
+  "kind": "methods",
+  "records": [
+    {
+      "id": "import_api.ImportAVAC",
+      "qualified_name": "import_api.ImportAVAC",
+      "module": "import_api",
+      "symbol": "ImportAVAC",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "import_api.ImportAVAC#e606cf461ad5c22e",
+          "signature_normalized": "def ImportAVAC(_filePath : str, _apfFilePath : str) -> bool",
+          "signature_raw": "def ImportAVAC(_filePath : str, _apfFilePath : str) -> bool",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_apfFilePath : str",
+              "name": "_apfFilePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def ImportAVAC(_filePath : str, _apfFilePath : str) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup IMPORT_API\n@brief Import avac avatar file\n@param _filePath: input avatar file path\n@param _apfFilePath: input apf File path\n@return if it succeeds, return true.\n\"\"\"",
+              "section": "IMPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 9790,
+                  "block": 859
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 10318,
+                  "block": 859,
+                  "anchor": "import-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ImportAVAC(const wstring& _filePath, const wstring& _apfFilePath)",
+                "documentation_raw": "/// @ingroup IMPORT_API\n/// @brief Import avac avatar file\n/// @param _filePath: input avatar file path\n/// @param _apfFilePath: input apf File path\n/// @return if it succeeds, return true.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 9801,
+                    "block": 860
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 10329,
+                    "block": 860,
+                    "anchor": "import-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            },
+            {
+              "signature_raw": "def ImportAVAC(_filePath : str, _apfFilePath : str) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup IMPORT_API\n@brief Import avac avatar file\n@param _filePath: input avatar file path\n@param _apfFilePath: input apf File path\n@return if it succeeds, return true.\n\"\"\"",
+              "section": "IMPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 9813,
+                  "block": 861
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 10342,
+                  "block": 861,
+                  "anchor": "import-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ImportAVAC(const string& _filePath, const string& _apfFilePath)",
+                "documentation_raw": "/// @ingroup IMPORT_API\n/// @brief Import avac avatar file\n/// @param _filePath: input avatar file path\n/// @param _apfFilePath: input apf File path\n/// @return if it succeeds, return true.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 9824,
+                    "block": 862
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 10353,
+                    "block": 862,
+                    "anchor": "import-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath: input avatar file path",
+            "@param _apfFilePath: input apf File path",
+            "@param _filePath: input avatar file path",
+            "@param _apfFilePath: input apf File path"
+          ],
+          "return_docs_raw": [
+            "@return if it succeeds, return true.",
+            "@return if it succeeds, return true."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "import_api.ImportAlembic",
+      "qualified_name": "import_api.ImportAlembic",
+      "module": "import_api",
+      "symbol": "ImportAlembic",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "import_api.ImportAlembic#8b7599937e74aac4",
+          "signature_normalized": "def ImportAlembic(filePath : str, option : ImportAlembicOption) -> bool",
+          "signature_raw": "def ImportAlembic(filePath : str, option : ImportAlembicOption) -> bool",
+          "parameters": [
+            {
+              "raw": "filePath : str",
+              "name": "filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "option : ImportAlembicOption",
+              "name": "option",
+              "annotation_raw": "ImportAlembicOption"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def ImportAlembic(filePath : str, option : ImportAlembicOption) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup IMPORT_API\n@brief Import an alembic (.abc) file.\n@param filePath: input file path\n@param option: alembic import options\n\"\"\"",
+              "section": "IMPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 10216,
+                  "block": 899
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 10764,
+                  "block": 899,
+                  "anchor": "import-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ImportAlembic(const std::string& filePath, const Marvelous::ImportAlembicOption& option)",
+                "documentation_raw": "/// @ingroup IMPORT_API\n/// @brief Import an alembic (.abc) file.\n/// @param filePath: input file path\n/// @param option: alembic import options",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 10226,
+                    "block": 900
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 10774,
+                    "block": 900,
+                    "anchor": "import-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "ImportAlembicOption",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:ImportAlembicOption"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param filePath: input file path",
+            "@param option: alembic import options"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "import_api.ImportAsGraphic",
+      "qualified_name": "import_api.ImportAsGraphic",
+      "module": "import_api",
+      "symbol": "ImportAsGraphic",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "import_api.ImportAsGraphic#75263b34d0571d6a",
+          "signature_normalized": "def ImportAsGraphic(_filePath : str) -> None",
+          "signature_raw": "def ImportAsGraphic(_filePath : str) -> None",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def ImportAsGraphic(_filePath : str) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup IMPORT_API\n@brief Import an image file as Graphic.\n@param _filePath: input file path\n\"\"\"",
+              "section": "IMPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 10012,
+                  "block": 879
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 10550,
+                  "block": 879,
+                  "anchor": "import-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ImportAsGraphic(const std::string& _filePath)",
+                "documentation_raw": "/// @ingroup IMPORT_API\n/// @brief Import an image file as Graphic.\n/// @param _filePath: input file path",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 10021,
+                    "block": 880
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 10559,
+                    "block": 880,
+                    "anchor": "import-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath: input file path"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "import_api.ImportAsGraphicW",
+      "qualified_name": "import_api.ImportAsGraphicW",
+      "module": "import_api",
+      "symbol": "ImportAsGraphicW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "import_api.ImportAsGraphicW#d48a2c7219324e4b",
+          "signature_normalized": "def ImportAsGraphicW(_filePath : str) -> None",
+          "signature_raw": "def ImportAsGraphicW(_filePath : str) -> None",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def ImportAsGraphicW(_filePath : str) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup IMPORT_API\n@brief Import an image file as Graphic.\n@param _filePath: input file path\n\"\"\"",
+              "section": "IMPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 10031,
+                  "block": 881
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 10570,
+                  "block": 881,
+                  "anchor": "import-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ImportAsGraphicW(const std::wstring& _filePath)",
+                "documentation_raw": "/// @ingroup IMPORT_API\n/// @brief Import an image file as Graphic.\n/// @param _filePath: input file path",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 10040,
+                    "block": 882
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 10579,
+                    "block": 882,
+                    "anchor": "import-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath: input file path"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "import_api.ImportAvatar",
+      "qualified_name": "import_api.ImportAvatar",
+      "module": "import_api",
+      "symbol": "ImportAvatar",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "import_api.ImportAvatar#7496e001213182a4",
+          "signature_normalized": "def ImportAvatar(_avtPath : str, _opt : ImportExportOption) -> bool",
+          "signature_raw": "def ImportAvatar(_avtPath : str, _opt : ImportExportOption) -> bool",
+          "parameters": [
+            {
+              "raw": "_avtPath : str",
+              "name": "_avtPath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_opt : ImportExportOption",
+              "name": "_opt",
+              "annotation_raw": "ImportExportOption"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def ImportAvatar(_avtPath : str, _opt : ImportExportOption) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup IMPORT_API\n@brief Import Avatar \n@param _avtPath : input Avatar file path, _opt : input load options\n\"\"\"",
+              "section": "IMPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 10094,
+                  "block": 887
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 10636,
+                  "block": 887,
+                  "anchor": "import-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ImportAvatar(std::string _avtPath, ImportExportOption _opt)",
+                "documentation_raw": "/// @ingroup IMPORT_API\n/// @brief Import Avatar \n/// @param _avtPath : input Avatar file path, _opt : input load options",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 10103,
+                    "block": 888
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 10645,
+                    "block": 888,
+                    "anchor": "import-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "ImportExportOption",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:ImportExportOption"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param _avtPath : input Avatar file path, _opt : input load options"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "import_api.ImportAvatarMeasurement",
+      "qualified_name": "import_api.ImportAvatarMeasurement",
+      "module": "import_api",
+      "symbol": "ImportAvatarMeasurement",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "import_api.ImportAvatarMeasurement#7a10dee652398769",
+          "signature_normalized": "def ImportAvatarMeasurement(_csvPath : str, _avtPath : str, _opt : ImportExportOption) -> bool",
+          "signature_raw": "def ImportAvatarMeasurement(_csvPath : str, _avtPath : str, _opt : ImportExportOption) -> bool",
+          "parameters": [
+            {
+              "raw": "_csvPath : str",
+              "name": "_csvPath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_avtPath : str",
+              "name": "_avtPath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_opt : ImportExportOption",
+              "name": "_opt",
+              "annotation_raw": "ImportExportOption"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def ImportAvatarMeasurement(_csvPath : str, _avtPath : str, _opt : ImportExportOption) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup IMPORT_API\n@brief Import Avatar Measurement CSV file\n@param _csvPath: input CSV file path, _avtPath : input Avatar file path, _opt : input load options\n\"\"\"",
+              "section": "IMPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 10075,
+                  "block": 885
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 10616,
+                  "block": 885,
+                  "anchor": "import-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ImportAvatarMeasurement(std::string _csvPath, std::string _avtPath, ImportExportOption _opt)",
+                "documentation_raw": "/// @ingroup IMPORT_API\n/// @brief Import Avatar Measurement CSV file\n/// @param _csvPath: input CSV file path, _avtPath : input Avatar file path, _opt : input load options",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 10084,
+                    "block": 886
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 10625,
+                    "block": 886,
+                    "anchor": "import-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "ImportExportOption",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:ImportExportOption"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param _csvPath: input CSV file path, _avtPath : input Avatar file path, _opt : input load options"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "import_api.ImportCPT",
+      "qualified_name": "import_api.ImportCPT",
+      "module": "import_api",
+      "symbol": "ImportCPT",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "import_api.ImportCPT#7e7745d953d64ee1",
+          "signature_normalized": "def ImportCPT(_filePath : str) -> bool",
+          "signature_raw": "def ImportCPT(_filePath : str) -> bool",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def ImportCPT(_filePath : str) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup IMPORT_API\n@brief Import CPT file\n@param _filePath: input file path\n@return if it succeeds, return true.\n\"\"\"",
+              "section": "IMPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 9576,
+                  "block": 839
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 10094,
+                  "block": 839,
+                  "anchor": "import-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ImportCPT(const string& _filePath)",
+                "documentation_raw": "/// @ingroup IMPORT_API\n/// @brief Import CPT file\n/// @param _filePath: input file path\n/// @return if it succeeds, return true.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 9586,
+                    "block": 840
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 10104,
+                    "block": 840,
+                    "anchor": "import-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath: input file path"
+          ],
+          "return_docs_raw": [
+            "@return if it succeeds, return true."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "import_api.ImportCPTW",
+      "qualified_name": "import_api.ImportCPTW",
+      "module": "import_api",
+      "symbol": "ImportCPTW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "import_api.ImportCPTW#61f89d1840c2c525",
+          "signature_normalized": "def ImportCPTW(_filePath : str) -> bool",
+          "signature_raw": "def ImportCPTW(_filePath : str) -> bool",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def ImportCPTW(_filePath : str) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup IMPORT_API\n@brief Import CPT file\n@param _filePath: input file path\n@return if it succeeds, return true.\n\"\"\"",
+              "section": "IMPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 9597,
+                  "block": 841
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 10116,
+                  "block": 841,
+                  "anchor": "import-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ImportCPTW(const wstring& _filePath)",
+                "documentation_raw": "/// @ingroup IMPORT_API\n/// @brief Import CPT file\n/// @param _filePath: input file path\n/// @return if it succeeds, return true.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 9607,
+                    "block": 842
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 10126,
+                    "block": 842,
+                    "anchor": "import-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath: input file path"
+          ],
+          "return_docs_raw": [
+            "@return if it succeeds, return true."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "import_api.ImportDXF",
+      "qualified_name": "import_api.ImportDXF",
+      "module": "import_api",
+      "symbol": "ImportDXF",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "import_api.ImportDXF#00f0f8e71624e24d",
+          "signature_normalized": "def ImportDXF(_filePath : str, loadOption : ImportDxfOption) -> bool",
+          "signature_raw": "def ImportDXF(_filePath : str, loadOption : ImportDxfOption) -> bool",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "loadOption : ImportDxfOption",
+              "name": "loadOption",
+              "annotation_raw": "ImportDxfOption"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def ImportDXF(_filePath : str, loadOption : ImportDxfOption) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup IMPORT_API\n@brief Import DXF file\n@param _filePath: input file path\n@param loadOption: the options to load the file\n@return if it succeeds, return true.\n\"\"\"",
+              "section": "IMPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 9702,
+                  "block": 851
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 10226,
+                  "block": 851,
+                  "anchor": "import-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ImportDXF(const string& _filePath, const Marvelous::ImportDxfOption& loadOption)",
+                "documentation_raw": "/// @ingroup IMPORT_API\n/// @brief Import DXF file\n/// @param _filePath: input file path\n/// @param loadOption: the options to load the file\n/// @return if it succeeds, return true.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 9713,
+                    "block": 852
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 10237,
+                    "block": 852,
+                    "anchor": "import-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "ImportDxfOption",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:ImportDxfOption"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param _filePath: input file path",
+            "@param loadOption: the options to load the file"
+          ],
+          "return_docs_raw": [
+            "@return if it succeeds, return true."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "import_api.ImportDXFW",
+      "qualified_name": "import_api.ImportDXFW",
+      "module": "import_api",
+      "symbol": "ImportDXFW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "import_api.ImportDXFW#17b3e2547714c834",
+          "signature_normalized": "def ImportDXFW(_filePath : str, loadOption : ImportDxfOption) -> bool",
+          "signature_raw": "def ImportDXFW(_filePath : str, loadOption : ImportDxfOption) -> bool",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "loadOption : ImportDxfOption",
+              "name": "loadOption",
+              "annotation_raw": "ImportDxfOption"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def ImportDXFW(_filePath : str, loadOption : ImportDxfOption) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup IMPORT_API\n@brief Import DXF file\n@param _filePath: input file path\n@param loadOption: the options to load the file\n@return if it succeeds, return true.\n\"\"\"",
+              "section": "IMPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 9725,
+                  "block": 853
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 10250,
+                  "block": 853,
+                  "anchor": "import-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ImportDXFW(const wstring& _filePath, const Marvelous::ImportDxfOption& loadOption)",
+                "documentation_raw": "/// @ingroup IMPORT_API\n/// @brief Import DXF file\n/// @param _filePath: input file path\n/// @param loadOption: the options to load the file\n/// @return if it succeeds, return true.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 9736,
+                    "block": 854
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 10261,
+                    "block": 854,
+                    "anchor": "import-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "ImportDxfOption",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:ImportDxfOption"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param _filePath: input file path",
+            "@param loadOption: the options to load the file"
+          ],
+          "return_docs_raw": [
+            "@return if it succeeds, return true."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "import_api.ImportFBX",
+      "qualified_name": "import_api.ImportFBX",
+      "module": "import_api",
+      "symbol": "ImportFBX",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "import_api.ImportFBX#e95562e31f5fefdf",
+          "signature_normalized": "def ImportFBX(_filePath : str, _options : ImportExportOption) -> bool",
+          "signature_raw": "def ImportFBX(_filePath : str, _options : ImportExportOption) -> bool",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_options : ImportExportOption",
+              "name": "_options",
+              "annotation_raw": "ImportExportOption"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def ImportFBX(_filePath : str, _options : ImportExportOption) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup IMPORT_API\n@brief Import FBX file\n@param _filePath: input file path\n@param options: If \"options\" is given, it imports FBX according to options, not allowing user for selecting options in Import Dialog.\n@return if it succeeds, return true.\n\"\"\"",
+              "section": "IMPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 9878,
+                  "block": 867
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 10410,
+                  "block": 867,
+                  "anchor": "import-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ImportFBX(const string& _filePath, const Marvelous::ImportExportOption& _options)",
+                "documentation_raw": "/// @ingroup IMPORT_API\n/// @brief Import FBX file\n/// @param _filePath: input file path\n/// @param options: If \"options\" is given, it imports FBX according to options, not allowing user for selecting options in Import Dialog.\n/// @return if it succeeds, return true.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 9889,
+                    "block": 868
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 10421,
+                    "block": 868,
+                    "anchor": "import-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "ImportExportOption",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:ImportExportOption"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param _filePath: input file path",
+            "@param options: If \"options\" is given, it imports FBX according to options, not allowing user for selecting options in Import Dialog."
+          ],
+          "return_docs_raw": [
+            "@return if it succeeds, return true."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "import_api.ImportFBXW",
+      "qualified_name": "import_api.ImportFBXW",
+      "module": "import_api",
+      "symbol": "ImportFBXW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "import_api.ImportFBXW#9a8c989bd070eb2e",
+          "signature_normalized": "def ImportFBXW(_filePath : str, _options : ImportExportOption) -> bool",
+          "signature_raw": "def ImportFBXW(_filePath : str, _options : ImportExportOption) -> bool",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_options : ImportExportOption",
+              "name": "_options",
+              "annotation_raw": "ImportExportOption"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def ImportFBXW(_filePath : str, _options : ImportExportOption) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup IMPORT_API\n@brief Import FBX file\n@param _filePath: input file path\n@param options: If \"options\" is given, it imports FBX according to options, not allowing user for selecting options in Import Dialog.\n@return if it succeeds, return true.\n\"\"\"",
+              "section": "IMPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 9901,
+                  "block": 869
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 10434,
+                  "block": 869,
+                  "anchor": "import-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ImportFBXW(const wstring& _filePath, const Marvelous::ImportExportOption& _options)",
+                "documentation_raw": "/// @ingroup IMPORT_API\n/// @brief Import FBX file\n/// @param _filePath: input file path\n/// @param options: If \"options\" is given, it imports FBX according to options, not allowing user for selecting options in Import Dialog.\n/// @return if it succeeds, return true.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 9912,
+                    "block": 870
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 10445,
+                    "block": 870,
+                    "anchor": "import-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "ImportExportOption",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:ImportExportOption"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param _filePath: input file path",
+            "@param options: If \"options\" is given, it imports FBX according to options, not allowing user for selecting options in Import Dialog."
+          ],
+          "return_docs_raw": [
+            "@return if it succeeds, return true."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "import_api.ImportFile",
+      "qualified_name": "import_api.ImportFile",
+      "module": "import_api",
+      "symbol": "ImportFile",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "import_api.ImportFile#968f4d5bda16ccf4",
+          "signature_normalized": "def ImportFile(filePath : str) -> bool",
+          "signature_raw": "def ImportFile(filePath : str) -> bool",
+          "parameters": [
+            {
+              "raw": "filePath : str",
+              "name": "filePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def ImportFile(filePath : str) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup IMPORT_API\n@brief Load File (zprj, zpac, avt, obj, fbx, zcmr). This function will show up the dialog per the file type.\n@param filePath: the input file path to load\n@return if it succeeds, return true.\n\"\"\"",
+              "section": "IMPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 9316,
+                  "block": 815
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 9822,
+                  "block": 815,
+                  "anchor": "import-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ImportFile(const string& filePath)",
+                "documentation_raw": "/// @ingroup IMPORT_API\n/// @brief Load File (zprj, zpac, avt, obj, fbx, zcmr). This function will show up the dialog per the file type.\n/// @param filePath: the input file path to load\n/// @return if it succeeds, return true.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 9326,
+                    "block": 816
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 9832,
+                    "block": 816,
+                    "anchor": "import-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param filePath: the input file path to load"
+          ],
+          "return_docs_raw": [
+            "@return if it succeeds, return true."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "import_api.ImportFile#e061c2c4d94ead2a",
+          "signature_normalized": "def ImportFile(filePath : str, _options : ImportExportOption) -> bool",
+          "signature_raw": "def ImportFile(filePath : str, _options : ImportExportOption) -> bool",
+          "parameters": [
+            {
+              "raw": "filePath : str",
+              "name": "filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_options : ImportExportOption",
+              "name": "_options",
+              "annotation_raw": "ImportExportOption"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def ImportFile(filePath : str, _options : ImportExportOption) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup IMPORT_API\n@brief Load File(obj, fbx, gltf) by obj type . This function will show up the dialog per the file type.\n@param filePath: the input file path to load, ImportExportOption - loadObjectType 0 : avater, 1 : trim\n@return if it succeeds, return true.\n\"\"\"",
+              "section": "IMPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 9836,
+                  "block": 863
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 10366,
+                  "block": 863,
+                  "anchor": "import-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ImportFile(const string& filePath, const Marvelous::ImportExportOption& _options)",
+                "documentation_raw": "/// @ingroup IMPORT_API\n/// @brief Load File(obj, fbx, gltf) by obj type . This function will show up the dialog per the file type.\n/// @param filePath: the input file path to load, ImportExportOption - loadObjectType 0 : avater, 1 : trim\n/// @return if it succeeds, return true.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 9846,
+                    "block": 864
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 10376,
+                    "block": 864,
+                    "anchor": "import-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "ImportExportOption",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:ImportExportOption"
+            },
+            {
+              "name": "ImportExportOption",
+              "basis": "documentation_mention",
+              "status": "resolved",
+              "type_id": "type:ImportExportOption"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param filePath: the input file path to load, ImportExportOption - loadObjectType 0 : avater, 1 : trim"
+          ],
+          "return_docs_raw": [
+            "@return if it succeeds, return true."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "import_api.ImportFileW",
+      "qualified_name": "import_api.ImportFileW",
+      "module": "import_api",
+      "symbol": "ImportFileW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "import_api.ImportFileW#29de141c142b7f88",
+          "signature_normalized": "def ImportFileW(filePath : str) -> bool",
+          "signature_raw": "def ImportFileW(filePath : str) -> bool",
+          "parameters": [
+            {
+              "raw": "filePath : str",
+              "name": "filePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def ImportFileW(filePath : str) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup IMPORT_API\n@brief Load File (zprj, zpac, avt, obj, fbx, zcmr). This function will show up the dialog per the file type.\n@param filePath: the input file path to load\n@return if it succeeds, return true.\n\"\"\"",
+              "section": "IMPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 9337,
+                  "block": 817
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 9844,
+                  "block": 817,
+                  "anchor": "import-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ImportFileW(const wstring& filePath)",
+                "documentation_raw": "/// @ingroup IMPORT_API\n/// @brief Load File (zprj, zpac, avt, obj, fbx, zcmr). This function will show up the dialog per the file type.\n/// @param filePath: the input file path to load\n/// @return if it succeeds, return true.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 9347,
+                    "block": 818
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 9854,
+                    "block": 818,
+                    "anchor": "import-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param filePath: the input file path to load"
+          ],
+          "return_docs_raw": [
+            "@return if it succeeds, return true."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "import_api.ImportFileW#ed96de6288a9cefd",
+          "signature_normalized": "def ImportFileW(filePath : str, _options : ImportExportOption) -> bool",
+          "signature_raw": "def ImportFileW(filePath : str, _options : ImportExportOption) -> bool",
+          "parameters": [
+            {
+              "raw": "filePath : str",
+              "name": "filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_options : ImportExportOption",
+              "name": "_options",
+              "annotation_raw": "ImportExportOption"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def ImportFileW(filePath : str, _options : ImportExportOption) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup IMPORT_API\n@brief Load File(obj, fbx, gltf) by obj type. This function will show up the dialog per the file type.\n@param filePath: the input file path to load, ImportExportOption - loadObjectType 0 : avater, 1 : trim\n@return if it succeeds, return true.\n\"\"\"",
+              "section": "IMPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 9857,
+                  "block": 865
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 10388,
+                  "block": 865,
+                  "anchor": "import-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ImportFileW(const wstring& filePath, const Marvelous::ImportExportOption& _options)",
+                "documentation_raw": "/// @ingroup IMPORT_API\n/// @brief Load File(obj, fbx, gltf) by obj type. This function will show up the dialog per the file type.\n/// @param filePath: the input file path to load, ImportExportOption - loadObjectType 0 : avater, 1 : trim\n/// @return if it succeeds, return true.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 9867,
+                    "block": 866
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 10398,
+                    "block": 866,
+                    "anchor": "import-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "ImportExportOption",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:ImportExportOption"
+            },
+            {
+              "name": "ImportExportOption",
+              "basis": "documentation_mention",
+              "status": "resolved",
+              "type_id": "type:ImportExportOption"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param filePath: the input file path to load, ImportExportOption - loadObjectType 0 : avater, 1 : trim"
+          ],
+          "return_docs_raw": [
+            "@return if it succeeds, return true."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "import_api.ImportGLTF",
+      "qualified_name": "import_api.ImportGLTF",
+      "module": "import_api",
+      "symbol": "ImportGLTF",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "import_api.ImportGLTF#30b62e7937787c7c",
+          "signature_normalized": "def ImportGLTF(_filePath : str, _options : ImportExportOption) -> bool",
+          "signature_raw": "def ImportGLTF(_filePath : str, _options : ImportExportOption) -> bool",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_options : ImportExportOption",
+              "name": "_options",
+              "annotation_raw": "ImportExportOption"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def ImportGLTF(_filePath : str, _options : ImportExportOption) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup IMPORT_API\n@brief Import GLTF file\n@param _filePath: input file path\n@param options: If \"options\" is given, it imports GLTF according to options, not allowing user for selecting options in Import Dialog.\n@return if it succeeds, return true.\n\"\"\"",
+              "section": "IMPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 9924,
+                  "block": 871
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 10458,
+                  "block": 871,
+                  "anchor": "import-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ImportGLTF(const string& _filePath, const Marvelous::ImportExportOption& _options)",
+                "documentation_raw": "/// @ingroup IMPORT_API\n/// @brief Import GLTF file\n/// @param _filePath: input file path\n/// @param options: If \"options\" is given, it imports GLTF according to options, not allowing user for selecting options in Import Dialog.\n/// @return if it succeeds, return true.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 9935,
+                    "block": 872
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 10469,
+                    "block": 872,
+                    "anchor": "import-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "ImportExportOption",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:ImportExportOption"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param _filePath: input file path",
+            "@param options: If \"options\" is given, it imports GLTF according to options, not allowing user for selecting options in Import Dialog."
+          ],
+          "return_docs_raw": [
+            "@return if it succeeds, return true."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "import_api.ImportGLTFW",
+      "qualified_name": "import_api.ImportGLTFW",
+      "module": "import_api",
+      "symbol": "ImportGLTFW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "import_api.ImportGLTFW#843c1c19137b2dd4",
+          "signature_normalized": "def ImportGLTFW(_filePath : str, _options : ImportExportOption) -> bool",
+          "signature_raw": "def ImportGLTFW(_filePath : str, _options : ImportExportOption) -> bool",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_options : ImportExportOption",
+              "name": "_options",
+              "annotation_raw": "ImportExportOption"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def ImportGLTFW(_filePath : str, _options : ImportExportOption) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup IMPORT_API\n@brief Import GLTF file\n@param _filePath: input file path\n@param options: If \"options\" is given, it imports GLTF according to options, not allowing user for selecting options in Import Dialog.\n@return if it succeeds, return true.\n\"\"\"",
+              "section": "IMPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 9947,
+                  "block": 873
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 10482,
+                  "block": 873,
+                  "anchor": "import-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ImportGLTFW(const wstring& _filePath, const Marvelous::ImportExportOption& _options)",
+                "documentation_raw": "/// @ingroup IMPORT_API\n/// @brief Import GLTF file\n/// @param _filePath: input file path\n/// @param options: If \"options\" is given, it imports GLTF according to options, not allowing user for selecting options in Import Dialog.\n/// @return if it succeeds, return true.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 9958,
+                    "block": 874
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 10493,
+                    "block": 874,
+                    "anchor": "import-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "ImportExportOption",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:ImportExportOption"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param _filePath: input file path",
+            "@param options: If \"options\" is given, it imports GLTF according to options, not allowing user for selecting options in Import Dialog."
+          ],
+          "return_docs_raw": [
+            "@return if it succeeds, return true."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "import_api.ImportGarmentInformation",
+      "qualified_name": "import_api.ImportGarmentInformation",
+      "module": "import_api",
+      "symbol": "ImportGarmentInformation",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "import_api.ImportGarmentInformation#9fa76090d45118a9",
+          "signature_normalized": "def ImportGarmentInformation(filePath : str) -> bool",
+          "signature_raw": "def ImportGarmentInformation(filePath : str) -> bool",
+          "parameters": [
+            {
+              "raw": "filePath : str",
+              "name": "filePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def ImportGarmentInformation(filePath : str) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup IMPORT_API\n@brief Load Garment Information (json)\n@param filePath: the input file to load the garment information (.json)\n@return if it succeeds, return true.\n\"\"\"",
+              "section": "IMPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 9404,
+                  "block": 823
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 9914,
+                  "block": 823,
+                  "anchor": "import-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ImportGarmentInformation(const string& filePath)",
+                "documentation_raw": "/// @ingroup IMPORT_API\n/// @brief Load Garment Information (json)\n/// @param filePath: the input file to load the garment information (.json)\n/// @return if it succeeds, return true.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 9414,
+                    "block": 824
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 9924,
+                    "block": 824,
+                    "anchor": "import-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param filePath: the input file to load the garment information (.json)"
+          ],
+          "return_docs_raw": [
+            "@return if it succeeds, return true."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "import_api.ImportGarmentInformationConfigData",
+      "qualified_name": "import_api.ImportGarmentInformationConfigData",
+      "module": "import_api",
+      "symbol": "ImportGarmentInformationConfigData",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "import_api.ImportGarmentInformationConfigData#50004bfd7751715b",
+          "signature_normalized": "def ImportGarmentInformationConfigData(filePath : str) -> bool",
+          "signature_raw": "def ImportGarmentInformationConfigData(filePath : str) -> bool",
+          "parameters": [
+            {
+              "raw": "filePath : str",
+              "name": "filePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def ImportGarmentInformationConfigData(filePath : str) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup IMPORT_API\n@brief Load Garment Information Configuration (json)                            \n@param filePath: the input file to load the garment information configuration data(.json)\n@return if it succeeds, return true.\n\"\"\"",
+              "section": "IMPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 9446,
+                  "block": 827
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 9958,
+                  "block": 827,
+                  "anchor": "import-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ImportGarmentInformationConfigData(const string& filePath)",
+                "documentation_raw": "/// @ingroup IMPORT_API\n/// @brief Load Garment Information Configuration (json)                                \n/// @param filePath: the input file to load the garment information configuration data(.json)\n/// @return if it succeeds, return true.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 9456,
+                    "block": 828
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 9968,
+                    "block": 828,
+                    "anchor": "import-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param filePath: the input file to load the garment information configuration data(.json)"
+          ],
+          "return_docs_raw": [
+            "@return if it succeeds, return true."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "import_api.ImportGarmentInformationConfigDataW",
+      "qualified_name": "import_api.ImportGarmentInformationConfigDataW",
+      "module": "import_api",
+      "symbol": "ImportGarmentInformationConfigDataW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "import_api.ImportGarmentInformationConfigDataW#e07fa41cb846352c",
+          "signature_normalized": "def ImportGarmentInformationConfigDataW(filePath : str) -> bool",
+          "signature_raw": "def ImportGarmentInformationConfigDataW(filePath : str) -> bool",
+          "parameters": [
+            {
+              "raw": "filePath : str",
+              "name": "filePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def ImportGarmentInformationConfigDataW(filePath : str) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup IMPORT_API\n@brief Load Garment Information Configuration (json)                            \n@param filePath: the input file to load the garment information configuration data(.json)\n@return if it succeeds, return true.\n\"\"\"",
+              "section": "IMPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 9467,
+                  "block": 829
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 9980,
+                  "block": 829,
+                  "anchor": "import-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ImportGarmentInformationConfigDataW(const wstring& filePath)",
+                "documentation_raw": "/// @ingroup IMPORT_API\n/// @brief Load Garment Information Configuration (json)                                \n/// @param filePath: the input file to load the garment information configuration data(.json)\n/// @return if it succeeds, return true.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 9477,
+                    "block": 830
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 9990,
+                    "block": 830,
+                    "anchor": "import-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param filePath: the input file to load the garment information configuration data(.json)"
+          ],
+          "return_docs_raw": [
+            "@return if it succeeds, return true."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "import_api.ImportGarmentInformationW",
+      "qualified_name": "import_api.ImportGarmentInformationW",
+      "module": "import_api",
+      "symbol": "ImportGarmentInformationW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "import_api.ImportGarmentInformationW#a50e74d1499ffeab",
+          "signature_normalized": "def ImportGarmentInformationW(filePath : str) -> bool",
+          "signature_raw": "def ImportGarmentInformationW(filePath : str) -> bool",
+          "parameters": [
+            {
+              "raw": "filePath : str",
+              "name": "filePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def ImportGarmentInformationW(filePath : str) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup IMPORT_API\n@brief Load Garment Information (json)\n@param filePath: the input file to load the garment information (.json)\n@return if it succeeds, return true.\n\"\"\"",
+              "section": "IMPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 9425,
+                  "block": 825
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 9936,
+                  "block": 825,
+                  "anchor": "import-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ImportGarmentInformationW(const wstring& filePath)",
+                "documentation_raw": "/// @ingroup IMPORT_API\n/// @brief Load Garment Information (json)\n/// @param filePath: the input file to load the garment information (.json)\n/// @return if it succeeds, return true.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 9435,
+                    "block": 826
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 9946,
+                    "block": 826,
+                    "anchor": "import-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param filePath: the input file to load the garment information (.json)"
+          ],
+          "return_docs_raw": [
+            "@return if it succeeds, return true."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "import_api.ImportGraphicStyleFromImage",
+      "qualified_name": "import_api.ImportGraphicStyleFromImage",
+      "module": "import_api",
+      "symbol": "ImportGraphicStyleFromImage",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "import_api.ImportGraphicStyleFromImage#9a817e0104262676",
+          "signature_normalized": "def ImportGraphicStyleFromImage(_filePath : str) -> bool",
+          "signature_raw": "def ImportGraphicStyleFromImage(_filePath : str) -> bool",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def ImportGraphicStyleFromImage(_filePath : str) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup IMPORT_API\n@brief Import image file as graphic style\n@param _filePath: input file path\n@return if it succeeds, return true.\n\"\"\"",
+              "section": "IMPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 9748,
+                  "block": 855
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 10274,
+                  "block": 855,
+                  "anchor": "import-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ImportGraphicStyleFromImage(const string& _filePath)",
+                "documentation_raw": "/// @ingroup IMPORT_API\n/// @brief Import image file as graphic style\n/// @param _filePath: input file path\n/// @return if it succeeds, return true.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 9758,
+                    "block": 856
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 10284,
+                    "block": 856,
+                    "anchor": "import-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            },
+            {
+              "signature_raw": "def ImportGraphicStyleFromImage(_filePath : str) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup IMPORT_API\n@brief Import image file as graphic style\n@param _filePath: input file path\n@return if it succeeds, return true.\n\"\"\"",
+              "section": "IMPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 9769,
+                  "block": 857
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 10296,
+                  "block": 857,
+                  "anchor": "import-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ImportGraphicStyleFromImage(const wstring& _filePath)",
+                "documentation_raw": "/// @ingroup IMPORT_API\n/// @brief Import image file as graphic style\n/// @param _filePath: input file path\n/// @return if it succeeds, return true.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 9779,
+                    "block": 858
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 10306,
+                    "block": 858,
+                    "anchor": "import-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath: input file path",
+            "@param _filePath: input file path"
+          ],
+          "return_docs_raw": [
+            "@return if it succeeds, return true.",
+            "@return if it succeeds, return true."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "import_api.ImportMeasurement",
+      "qualified_name": "import_api.ImportMeasurement",
+      "module": "import_api",
+      "symbol": "ImportMeasurement",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "import_api.ImportMeasurement#546affd78007b519",
+          "signature_normalized": "def ImportMeasurement(_csvPath : str) -> bool",
+          "signature_raw": "def ImportMeasurement(_csvPath : str) -> bool",
+          "parameters": [
+            {
+              "raw": "_csvPath : str",
+              "name": "_csvPath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def ImportMeasurement(_csvPath : str) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup IMPORT_API\n@brief Import Avatar Measurement CSV file\n@param _csvPath: input CSV file path\n\"\"\"",
+              "section": "IMPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 10113,
+                  "block": 889
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 10656,
+                  "block": 889,
+                  "anchor": "import-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ImportMeasurement(std::string _csvPath)",
+                "documentation_raw": "/// @ingroup IMPORT_API\n/// @brief Import Avatar Measurement CSV file\n/// @param _csvPath: input CSV file path",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 10122,
+                    "block": 890
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 10665,
+                    "block": 890,
+                    "anchor": "import-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _csvPath: input CSV file path"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "import_api.ImportOBJ",
+      "qualified_name": "import_api.ImportOBJ",
+      "module": "import_api",
+      "symbol": "ImportOBJ",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "import_api.ImportOBJ#5660b826d2f09597",
+          "signature_normalized": "def ImportOBJ(_filePath : str, _options : ImportExportOption) -> bool",
+          "signature_raw": "def ImportOBJ(_filePath : str, _options : ImportExportOption) -> bool",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_options : ImportExportOption",
+              "name": "_options",
+              "annotation_raw": "ImportExportOption"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def ImportOBJ(_filePath : str, _options : ImportExportOption) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup IMPORT_API\n@brief Import OBJ file\n@param _filePath: input file path\n@param options: If \"options\" is given, it imports OBJ according to options, not allowing user for selecting options in Import Dialog.\n@return if it succeeds, return true.\n\"\"\"",
+              "section": "IMPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 9488,
+                  "block": 831
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 10002,
+                  "block": 831,
+                  "anchor": "import-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ImportOBJ(const string& _filePath, const Marvelous::ImportExportOption& _options)",
+                "documentation_raw": "/// @ingroup IMPORT_API\n/// @brief Import OBJ file\n/// @param _filePath: input file path\n/// @param options: If \"options\" is given, it imports OBJ according to options, not allowing user for selecting options in Import Dialog.\n/// @return if it succeeds, return true.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 9499,
+                    "block": 832
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 10013,
+                    "block": 832,
+                    "anchor": "import-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "ImportExportOption",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:ImportExportOption"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param _filePath: input file path",
+            "@param options: If \"options\" is given, it imports OBJ according to options, not allowing user for selecting options in Import Dialog."
+          ],
+          "return_docs_raw": [
+            "@return if it succeeds, return true."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "import_api.ImportOBJW",
+      "qualified_name": "import_api.ImportOBJW",
+      "module": "import_api",
+      "symbol": "ImportOBJW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "import_api.ImportOBJW#203b505dfdf489d2",
+          "signature_normalized": "def ImportOBJW(_filePath : str, _options : ImportExportOption) -> bool",
+          "signature_raw": "def ImportOBJW(_filePath : str, _options : ImportExportOption) -> bool",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_options : ImportExportOption",
+              "name": "_options",
+              "annotation_raw": "ImportExportOption"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def ImportOBJW(_filePath : str, _options : ImportExportOption) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup IMPORT_API\n@brief Import OBJ file\n@param _filePath: input file path\n@param options: If \"options\" is given, it imports OBJ according to options, not allowing user for selecting options in Import Dialog.\n@return if it succeeds, return true.\n\"\"\"",
+              "section": "IMPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 9511,
+                  "block": 833
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 10026,
+                  "block": 833,
+                  "anchor": "import-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ImportOBJW(const wstring& _filePath, const Marvelous::ImportExportOption& _options)",
+                "documentation_raw": "/// @ingroup IMPORT_API\n/// @brief Import OBJ file\n/// @param _filePath: input file path\n/// @param options: If \"options\" is given, it imports OBJ according to options, not allowing user for selecting options in Import Dialog.\n/// @return if it succeeds, return true.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 9522,
+                    "block": 834
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 10037,
+                    "block": 834,
+                    "anchor": "import-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "ImportExportOption",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:ImportExportOption"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param _filePath: input file path",
+            "@param options: If \"options\" is given, it imports OBJ according to options, not allowing user for selecting options in Import Dialog."
+          ],
+          "return_docs_raw": [
+            "@return if it succeeds, return true."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "import_api.ImportPose",
+      "qualified_name": "import_api.ImportPose",
+      "module": "import_api",
+      "symbol": "ImportPose",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "import_api.ImportPose#51c3013d705d0493",
+          "signature_normalized": "def ImportPose(_filePath : str) -> bool",
+          "signature_raw": "def ImportPose(_filePath : str) -> bool",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def ImportPose(_filePath : str) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup IMPORT_API\n@brief Import a pose/hand pose file.\n@param _filePath: input file path\n\"\"\"",
+              "section": "IMPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 10132,
+                  "block": 891
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 10676,
+                  "block": 891,
+                  "anchor": "import-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ImportPose(const std::string& _filePath)",
+                "documentation_raw": "/// @ingroup IMPORT_API\n/// @brief Import a pose/hand pose file.\n/// @param _filePath: input file path",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 10141,
+                    "block": 892
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 10685,
+                    "block": 892,
+                    "anchor": "import-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath: input file path"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "import_api.ImportPose#fee9c2c020901129",
+          "signature_normalized": "def ImportPose(_filePath : str, _bPoseAndTranslation : bool, _bBottomToGround : bool) -> bool",
+          "signature_raw": "def ImportPose(_filePath : str, _bPoseAndTranslation : bool, _bBottomToGround : bool) -> bool",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_bPoseAndTranslation : bool",
+              "name": "_bPoseAndTranslation",
+              "annotation_raw": "bool"
+            },
+            {
+              "raw": "_bBottomToGround : bool",
+              "name": "_bBottomToGround",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def ImportPose(_filePath : str, _bPoseAndTranslation : bool, _bBottomToGround : bool) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup IMPORT_API\n@brief Import a pose/hand pose file with options.\n@param _filePath: input file path\n@param _bPoseAndTranslation: if true, import both pose and translation; if false, import only pose\n@param _bBottomToGround: if true, adjust the bottom of the avatar to ground level\n\"\"\"",
+              "section": "IMPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 10170,
+                  "block": 895
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 10716,
+                  "block": 895,
+                  "anchor": "import-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ImportPose(const std::string& _filePath, bool _bPoseAndTranslation, bool _bBottomToGround)",
+                "documentation_raw": "/// @ingroup IMPORT_API\n/// @brief Import a pose/hand pose file with options.\n/// @param _filePath: input file path\n/// @param _bPoseAndTranslation: if true, import both pose and translation; if false, import only pose\n/// @param _bBottomToGround: if true, adjust the bottom of the avatar to ground level",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 10181,
+                    "block": 896
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 10727,
+                    "block": 896,
+                    "anchor": "import-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath: input file path",
+            "@param _bPoseAndTranslation: if true, import both pose and translation; if false, import only pose",
+            "@param _bBottomToGround: if true, adjust the bottom of the avatar to ground level"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "import_api.ImportPoseW",
+      "qualified_name": "import_api.ImportPoseW",
+      "module": "import_api",
+      "symbol": "ImportPoseW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "import_api.ImportPoseW#47a110b59d24b168",
+          "signature_normalized": "def ImportPoseW(_filePath : str) -> bool",
+          "signature_raw": "def ImportPoseW(_filePath : str) -> bool",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def ImportPoseW(_filePath : str) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup IMPORT_API\n@brief Import a pose/hand pose file.\n@param _filePath: input file path\n\"\"\"",
+              "section": "IMPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 10151,
+                  "block": 893
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 10696,
+                  "block": 893,
+                  "anchor": "import-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ImportPoseW(const std::wstring& _filePath)",
+                "documentation_raw": "/// @ingroup IMPORT_API\n/// @brief Import a pose/hand pose file.\n/// @param _filePath: input file path",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 10160,
+                    "block": 894
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 10705,
+                    "block": 894,
+                    "anchor": "import-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath: input file path"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "import_api.ImportPoseW#7b1697cf9524dc7b",
+          "signature_normalized": "def ImportPoseW(_filePath : str, _bPoseAndTranslation : bool, _bBottomToGround : bool) -> bool",
+          "signature_raw": "def ImportPoseW(_filePath : str, _bPoseAndTranslation : bool, _bBottomToGround : bool) -> bool",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_bPoseAndTranslation : bool",
+              "name": "_bPoseAndTranslation",
+              "annotation_raw": "bool"
+            },
+            {
+              "raw": "_bBottomToGround : bool",
+              "name": "_bBottomToGround",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def ImportPoseW(_filePath : str, _bPoseAndTranslation : bool, _bBottomToGround : bool) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup IMPORT_API\n@brief Import a pose/hand pose file with options.\n@param _filePath: input file path\n@param _bPoseAndTranslation: if true, import both pose and translation; if false, import only pose\n@param _bBottomToGround: if true, adjust the bottom of the avatar to ground level\n\"\"\"",
+              "section": "IMPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 10193,
+                  "block": 897
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 10740,
+                  "block": 897,
+                  "anchor": "import-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ImportPoseW(const std::wstring& _filePath, bool _bPoseAndTranslation, bool _bBottomToGround)",
+                "documentation_raw": "/// @ingroup IMPORT_API\n/// @brief Import a pose/hand pose file with options.\n/// @param _filePath: input file path\n/// @param _bPoseAndTranslation: if true, import both pose and translation; if false, import only pose\n/// @param _bBottomToGround: if true, adjust the bottom of the avatar to ground level",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 10204,
+                    "block": 898
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 10751,
+                    "block": 898,
+                    "anchor": "import-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath: input file path",
+            "@param _bPoseAndTranslation: if true, import both pose and translation; if false, import only pose",
+            "@param _bBottomToGround: if true, adjust the bottom of the avatar to ground level"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "import_api.ImportSMP",
+      "qualified_name": "import_api.ImportSMP",
+      "module": "import_api",
+      "symbol": "ImportSMP",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "import_api.ImportSMP#9b2393df6e66a817",
+          "signature_normalized": "def ImportSMP(_filePath : str) -> bool",
+          "signature_raw": "def ImportSMP(_filePath : str) -> bool",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def ImportSMP(_filePath : str) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup IMPORT_API\n@brief Import SMP file\n@param _filePath: input file path\n@return if it succeeds, return true.\n\"\"\"",
+              "section": "IMPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 9970,
+                  "block": 875
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 10506,
+                  "block": 875,
+                  "anchor": "import-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ImportSMP(const string& _filePath)",
+                "documentation_raw": "/// @ingroup IMPORT_API\n/// @brief Import SMP file\n/// @param _filePath: input file path\n/// @return if it succeeds, return true.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 9980,
+                    "block": 876
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 10516,
+                    "block": 876,
+                    "anchor": "import-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath: input file path"
+          ],
+          "return_docs_raw": [
+            "@return if it succeeds, return true."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "import_api.ImportSMPW",
+      "qualified_name": "import_api.ImportSMPW",
+      "module": "import_api",
+      "symbol": "ImportSMPW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "import_api.ImportSMPW#3240912b4b623578",
+          "signature_normalized": "def ImportSMPW(_filePath : str) -> bool",
+          "signature_raw": "def ImportSMPW(_filePath : str) -> bool",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def ImportSMPW(_filePath : str) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup IMPORT_API\n@brief Import SMP file\n@param _filePath: input file path\n@return if it succeeds, return true.\n\"\"\"",
+              "section": "IMPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 9991,
+                  "block": 877
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 10528,
+                  "block": 877,
+                  "anchor": "import-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ImportSMPW(const wstring& _filePath)",
+                "documentation_raw": "/// @ingroup IMPORT_API\n/// @brief Import SMP file\n/// @param _filePath: input file path\n/// @return if it succeeds, return true.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 10001,
+                    "block": 878
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 10538,
+                    "block": 878,
+                    "anchor": "import-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath: input file path"
+          ],
+          "return_docs_raw": [
+            "@return if it succeeds, return true."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "import_api.ImportTrim",
+      "qualified_name": "import_api.ImportTrim",
+      "module": "import_api",
+      "symbol": "ImportTrim",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "import_api.ImportTrim#ddc42c417aea1b9b",
+          "signature_normalized": "def ImportTrim(_filePath : str, _bTranslateToOrigin : bool) -> None",
+          "signature_raw": "def ImportTrim(_filePath : str, _bTranslateToOrigin : bool) -> None",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_bTranslateToOrigin : bool",
+              "name": "_bTranslateToOrigin",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def ImportTrim(_filePath : str, _bTranslateToOrigin : bool) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup IMPORT_API\n@brief Import a trim\n@param _filePath                                                : input file path\n@param _bTranslateToOrigin  : option to translate the position of the imported trim \ntrue: move trim to the pos(0,0)\nfalse: move trim to original pos\n\"\"\"",
+              "section": "IMPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 10050,
+                  "block": 883
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 10590,
+                  "block": 883,
+                  "anchor": "import-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ImportTrim(const std::string& _filePath)",
+                "documentation_raw": "/// @ingroup IMPORT_API\n/// @brief Import a trim\n/// @param _filePath                                            : input file path\n/// @param _bTranslateToOrigin  : option to translate the position of the imported trim \n/// true: move trim to the pos(0,0)\n/// false: move trim to original pos",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 10062,
+                    "block": 884
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 10602,
+                    "block": 884,
+                    "anchor": "import-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath                                                : input file path",
+            "@param _bTranslateToOrigin  : option to translate the position of the imported trim "
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "import_api.ImportVLP",
+      "qualified_name": "import_api.ImportVLP",
+      "module": "import_api",
+      "symbol": "ImportVLP",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "import_api.ImportVLP#a4eedbdf6e050e9e",
+          "signature_normalized": "def ImportVLP(_filePath : str) -> bool",
+          "signature_raw": "def ImportVLP(_filePath : str) -> bool",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def ImportVLP(_filePath : str) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup IMPORT_API\n@brief Import VLP file\n@param _filePath: input file path\n@return if it succeeds, return true.\n\"\"\"",
+              "section": "IMPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 9618,
+                  "block": 843
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 10138,
+                  "block": 843,
+                  "anchor": "import-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ImportVLP(const string& _filePath)",
+                "documentation_raw": "/// @ingroup IMPORT_API\n/// @brief Import VLP file\n/// @param _filePath: input file path\n/// @return if it succeeds, return true.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 9628,
+                    "block": 844
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 10148,
+                    "block": 844,
+                    "anchor": "import-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath: input file path"
+          ],
+          "return_docs_raw": [
+            "@return if it succeeds, return true."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "import_api.ImportVLPW",
+      "qualified_name": "import_api.ImportVLPW",
+      "module": "import_api",
+      "symbol": "ImportVLPW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "import_api.ImportVLPW#1d7cffdbd01ec2ca",
+          "signature_normalized": "def ImportVLPW(_filePath : str) -> bool",
+          "signature_raw": "def ImportVLPW(_filePath : str) -> bool",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def ImportVLPW(_filePath : str) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup IMPORT_API\n@brief Import VLP file\n@param _filePath: input file path\n@return if it succeeds, return true.\n\"\"\"",
+              "section": "IMPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 9639,
+                  "block": 845
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 10160,
+                  "block": 845,
+                  "anchor": "import-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ImportVLPW(const wstring& _filePath)",
+                "documentation_raw": "/// @ingroup IMPORT_API\n/// @brief Import VLP file\n/// @param _filePath: input file path\n/// @return if it succeeds, return true.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 9649,
+                    "block": 846
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 10170,
+                    "block": 846,
+                    "anchor": "import-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath: input file path"
+          ],
+          "return_docs_raw": [
+            "@return if it succeeds, return true."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "import_api.ImportVMP",
+      "qualified_name": "import_api.ImportVMP",
+      "module": "import_api",
+      "symbol": "ImportVMP",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "import_api.ImportVMP#c10810590ccca64d",
+          "signature_normalized": "def ImportVMP(_filePath : str) -> bool",
+          "signature_raw": "def ImportVMP(_filePath : str) -> bool",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def ImportVMP(_filePath : str) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup IMPORT_API\n@brief Import VMP file\n@param _filePath: input file path\n@return if it succeeds, return true.\n\"\"\"",
+              "section": "IMPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 9534,
+                  "block": 835
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 10050,
+                  "block": 835,
+                  "anchor": "import-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ImportVMP(const string& _filePath)",
+                "documentation_raw": "/// @ingroup IMPORT_API\n/// @brief Import VMP file\n/// @param _filePath: input file path\n/// @return if it succeeds, return true.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 9544,
+                    "block": 836
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 10060,
+                    "block": 836,
+                    "anchor": "import-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath: input file path"
+          ],
+          "return_docs_raw": [
+            "@return if it succeeds, return true."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "import_api.ImportVMPW",
+      "qualified_name": "import_api.ImportVMPW",
+      "module": "import_api",
+      "symbol": "ImportVMPW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "import_api.ImportVMPW#9720fea6f5aa92da",
+          "signature_normalized": "def ImportVMPW(_filePath : str) -> bool",
+          "signature_raw": "def ImportVMPW(_filePath : str) -> bool",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def ImportVMPW(_filePath : str) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup IMPORT_API\n@brief Import VMP file\n@param _filePath: input file path\n@return if it succeeds, return true.\n\"\"\"",
+              "section": "IMPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 9555,
+                  "block": 837
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 10072,
+                  "block": 837,
+                  "anchor": "import-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ImportVMPW(const wstring& _filePath)",
+                "documentation_raw": "/// @ingroup IMPORT_API\n/// @brief Import VMP file\n/// @param _filePath: input file path\n/// @return if it succeeds, return true.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 9565,
+                    "block": 838
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 10082,
+                    "block": 838,
+                    "anchor": "import-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath: input file path"
+          ],
+          "return_docs_raw": [
+            "@return if it succeeds, return true."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "import_api.ImportVRP",
+      "qualified_name": "import_api.ImportVRP",
+      "module": "import_api",
+      "symbol": "ImportVRP",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "import_api.ImportVRP#5eeb80a89e1a5e81",
+          "signature_normalized": "def ImportVRP(_filePath : str) -> bool",
+          "signature_raw": "def ImportVRP(_filePath : str) -> bool",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def ImportVRP(_filePath : str) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup IMPORT_API\n@brief Import VRP file\n@param _filePath: input file path\n@return if it succeeds, return true.\n\"\"\"",
+              "section": "IMPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 9660,
+                  "block": 847
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 10182,
+                  "block": 847,
+                  "anchor": "import-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ImportVRP(const string& _filePath)",
+                "documentation_raw": "/// @ingroup IMPORT_API\n/// @brief Import VRP file\n/// @param _filePath: input file path\n/// @return if it succeeds, return true.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 9670,
+                    "block": 848
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 10192,
+                    "block": 848,
+                    "anchor": "import-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath: input file path"
+          ],
+          "return_docs_raw": [
+            "@return if it succeeds, return true."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "import_api.ImportVRPW",
+      "qualified_name": "import_api.ImportVRPW",
+      "module": "import_api",
+      "symbol": "ImportVRPW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "import_api.ImportVRPW#8f0cc9a5937fb30d",
+          "signature_normalized": "def ImportVRPW(_filePath : str) -> bool",
+          "signature_raw": "def ImportVRPW(_filePath : str) -> bool",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def ImportVRPW(_filePath : str) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup IMPORT_API\n@brief Import VRP file\n@param _filePath: input file path\n@return if it succeeds, return true.\n\"\"\"",
+              "section": "IMPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 9681,
+                  "block": 849
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 10204,
+                  "block": 849,
+                  "anchor": "import-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ImportVRPW(const wstring& _filePath)",
+                "documentation_raw": "/// @ingroup IMPORT_API\n/// @brief Import VRP file\n/// @param _filePath: input file path\n/// @return if it succeeds, return true.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 9691,
+                    "block": 850
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 10214,
+                    "block": 850,
+                    "anchor": "import-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath: input file path"
+          ],
+          "return_docs_raw": [
+            "@return if it succeeds, return true."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "import_api.ImportZpac",
+      "qualified_name": "import_api.ImportZpac",
+      "module": "import_api",
+      "symbol": "ImportZpac",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "import_api.ImportZpac#84788b33f217c66a",
+          "signature_normalized": "def ImportZpac(filePath : str, loadOption : ImportExportOption) -> bool",
+          "signature_raw": "def ImportZpac(filePath : str, loadOption : ImportExportOption) -> bool",
+          "parameters": [
+            {
+              "raw": "filePath : str",
+              "name": "filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "loadOption : ImportExportOption",
+              "name": "loadOption",
+              "annotation_raw": "ImportExportOption"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def ImportZpac(filePath : str, loadOption : ImportExportOption) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup IMPORT_API\n@brief Import Zpac file\n@param filePath: input file path\n@param loadOption: If \"loadOption\" is given, it imports zpac according to options, not allowing user for selecting options in Import Dialog.\n@return if it succeeds, return true.\n\"\"\"",
+              "section": "IMPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 10237,
+                  "block": 901
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 10786,
+                  "block": 901,
+                  "anchor": "import-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ImportZpac(const string& filePath, const Marvelous::ImportExportOption& loadOption)",
+                "documentation_raw": "/// @ingroup IMPORT_API\n/// @brief Import Zpac file\n/// @param filePath: input file path\n/// @param loadOption: If \"loadOption\" is given, it imports zpac according to options, not allowing user for selecting options in Import Dialog.\n/// @return if it succeeds, return true.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 10248,
+                    "block": 902
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 10797,
+                    "block": 902,
+                    "anchor": "import-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "ImportExportOption",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:ImportExportOption"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param filePath: input file path",
+            "@param loadOption: If \"loadOption\" is given, it imports zpac according to options, not allowing user for selecting options in Import Dialog."
+          ],
+          "return_docs_raw": [
+            "@return if it succeeds, return true."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "import_api.ImportZprj",
+      "qualified_name": "import_api.ImportZprj",
+      "module": "import_api",
+      "symbol": "ImportZprj",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "import_api.ImportZprj#0c0d454b0712ed3b",
+          "signature_normalized": "def ImportZprj(filePath : str, loadOption : ImportZPRJOption) -> bool",
+          "signature_raw": "def ImportZprj(filePath : str, loadOption : ImportZPRJOption) -> bool",
+          "parameters": [
+            {
+              "raw": "filePath : str",
+              "name": "filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "loadOption : ImportZPRJOption",
+              "name": "loadOption",
+              "annotation_raw": "ImportZPRJOption"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def ImportZprj(filePath : str, loadOption : ImportZPRJOption) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup IMPORT_API\n@brief Load zprj File without the dialog but the loadOption\n@param filePath: the input file path to load\n@param loadOption: the options to load the file\n@return if it succeeds, return true.\n\"\"\"",
+              "section": "IMPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 9358,
+                  "block": 819
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 9866,
+                  "block": 819,
+                  "anchor": "import-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ImportZprj(const string& filePath, const Marvelous::ImportZPRJOption& loadOption)",
+                "documentation_raw": "/// @ingroup IMPORT_API\n/// @brief Load zprj File without the dialog but the loadOption\n/// @param filePath: the input file path to load\n/// @param loadOption: the options to load the file\n/// @return if it succeeds, return true.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 9369,
+                    "block": 820
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 9877,
+                    "block": 820,
+                    "anchor": "import-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "ImportZPRJOption",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:ImportZPRJOption"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param filePath: the input file path to load",
+            "@param loadOption: the options to load the file"
+          ],
+          "return_docs_raw": [
+            "@return if it succeeds, return true."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "import_api.ImportZprjW",
+      "qualified_name": "import_api.ImportZprjW",
+      "module": "import_api",
+      "symbol": "ImportZprjW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "import_api.ImportZprjW#fd269da04b66e1a0",
+          "signature_normalized": "def ImportZprjW(filePath : str, loadOption : ImportZPRJOption) -> bool",
+          "signature_raw": "def ImportZprjW(filePath : str, loadOption : ImportZPRJOption) -> bool",
+          "parameters": [
+            {
+              "raw": "filePath : str",
+              "name": "filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "loadOption : ImportZPRJOption",
+              "name": "loadOption",
+              "annotation_raw": "ImportZPRJOption"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def ImportZprjW(filePath : str, loadOption : ImportZPRJOption) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup IMPORT_API\n@brief Load zprj File without the dialog but the loadOption\n@param filePath: the input file path to load\n@param loadOption: the options to load the file\n@return if it succeeds, return true.\n\"\"\"",
+              "section": "IMPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 9381,
+                  "block": 821
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 9890,
+                  "block": 821,
+                  "anchor": "import-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ImportZprjW(const wstring& filePath, const Marvelous::ImportZPRJOption& loadOption)",
+                "documentation_raw": "/// @ingroup IMPORT_API\n/// @brief Load zprj File without the dialog but the loadOption\n/// @param filePath: the input file path to load\n/// @param loadOption: the options to load the file\n/// @return if it succeeds, return true.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 9392,
+                    "block": 822
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 9901,
+                    "block": 822,
+                    "anchor": "import-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "ImportZPRJOption",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:ImportZPRJOption"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param filePath: the input file path to load",
+            "@param loadOption: the options to load the file"
+          ],
+          "return_docs_raw": [
+            "@return if it succeeds, return true."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    }
+  ]
+}

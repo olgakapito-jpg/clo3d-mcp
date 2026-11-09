@@ -1,0 +1,3352 @@
+{
+  "kind": "methods",
+  "records": [
+    {
+      "id": "fabric_api.SetOpacityIntensity",
+      "qualified_name": "fabric_api.SetOpacityIntensity",
+      "module": "fabric_api",
+      "symbol": "SetOpacityIntensity",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "fabric_api.SetOpacityIntensity#5ac41b2b56d829db",
+          "signature_normalized": "def SetOpacityIntensity(_fabricIndex : int, _materialFace : int, _opacityIntensity : float) -> None",
+          "signature_raw": "def SetOpacityIntensity(_fabricIndex : int, _materialFace : int, _opacityIntensity : float) -> None",
+          "parameters": [
+            {
+              "raw": "_fabricIndex : int",
+              "name": "_fabricIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_materialFace : int",
+              "name": "_materialFace",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_opacityIntensity : float",
+              "name": "_opacityIntensity",
+              "annotation_raw": "float"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetOpacityIntensity(_fabricIndex : int, _materialFace : int, _opacityIntensity : float) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Set opacity intensity in percent\n@param _fabricIndex: the target fabric index in the object browser\n@param _materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\"\n@param _opacityIntensity: opacity intensity value\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 6605,
+                  "block": 579
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 6995,
+                  "block": 579,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetOpacityIntensity(int _fabricIndex, int _materialFace, float _opacityIntensity)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Set opacity intensity in percent\n/// @param _fabricIndex: the target fabric index in the object browser\n/// @param _materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\"\n/// @param _opacityIntensity: opacity intensity value",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 6616,
+                    "block": 580
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 7006,
+                    "block": 580,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _fabricIndex: the target fabric index in the object browser",
+            "@param _materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\"",
+            "@param _opacityIntensity: opacity intensity value"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "fabric_api.SetOpacityIntensity#bb5d985bae56f6e8",
+          "signature_normalized": "def SetOpacityIntensity(_colorwayIndex : int, _fabricIndex : int, _materialFace : int, _opacityIntensity : float) -> None",
+          "signature_raw": "def SetOpacityIntensity(_colorwayIndex : int, _fabricIndex : int, _materialFace : int, _opacityIntensity : float) -> None",
+          "parameters": [
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_fabricIndex : int",
+              "name": "_fabricIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_materialFace : int",
+              "name": "_materialFace",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_opacityIntensity : float",
+              "name": "_opacityIntensity",
+              "annotation_raw": "float"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetOpacityIntensity(_colorwayIndex : int, _fabricIndex : int, _materialFace : int, _opacityIntensity : float) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Set opacity intensity in percent\n@param _colorwayIndex: index of colorway\n@param _fabricIndex: the target fabric index in the Colorway Editor\n@param _materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\"\n@param _opacityIntensity: opacity intensity value\n@return void\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 6628,
+                  "block": 581
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 7019,
+                  "block": 581,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetOpacityIntensity(int _colorwayIndex, int _fabricIndex, int _materialFace, float _opacityIntensity)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Set opacity intensity in percent\n/// @param _colorwayIndex: index of colorway\n/// @param _fabricIndex: the target fabric index in the Colorway Editor\n/// @param _materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\"\n/// @param _opacityIntensity: opacity intensity value\n/// @return void",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 6641,
+                    "block": 582
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 7032,
+                    "block": 582,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _colorwayIndex: index of colorway",
+            "@param _fabricIndex: the target fabric index in the Colorway Editor",
+            "@param _materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\"",
+            "@param _opacityIntensity: opacity intensity value"
+          ],
+          "return_docs_raw": [
+            "@return void"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "fabric_api.SetOpacityMapImageGivenFilePath",
+      "qualified_name": "fabric_api.SetOpacityMapImageGivenFilePath",
+      "module": "fabric_api",
+      "symbol": "SetOpacityMapImageGivenFilePath",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "fabric_api.SetOpacityMapImageGivenFilePath#5d1f6b347dcf7588",
+          "signature_normalized": "def SetOpacityMapImageGivenFilePath(_imageFilePath : str) -> None",
+          "signature_raw": "def SetOpacityMapImageGivenFilePath(_imageFilePath : str) -> None",
+          "parameters": [
+            {
+              "raw": "_imageFilePath : str",
+              "name": "_imageFilePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetOpacityMapImageGivenFilePath(_imageFilePath : str) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Set opacity map image for current selected fabric\n@param _imageFilePath: image file path to set\n@return void\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 7474,
+                  "block": 661
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 7905,
+                  "block": 661,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetOpacityMapImageGivenFilePath(const std::string _imageFilePath)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Set opacity map image for current selected fabric\n/// @param _imageFilePath: image file path to set\n/// @return void",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 7484,
+                    "block": 662
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 7915,
+                    "block": 662,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _imageFilePath: image file path to set"
+          ],
+          "return_docs_raw": [
+            "@return void"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "fabric_api.SetOpacityMapImageGivenFilePath#9c159ad07e955d35",
+          "signature_normalized": "def SetOpacityMapImageGivenFilePath(_imageFilePath : str, _fabricIndex : int) -> None",
+          "signature_raw": "def SetOpacityMapImageGivenFilePath(_imageFilePath : str, _fabricIndex : int) -> None",
+          "parameters": [
+            {
+              "raw": "_imageFilePath : str",
+              "name": "_imageFilePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_fabricIndex : int",
+              "name": "_fabricIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetOpacityMapImageGivenFilePath(_imageFilePath : str, _fabricIndex : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Set opacity map image for specified fabric\n@param _imageFilePath: image file path to set\n@param _fabricIndex: the target fabric index in the object browser\n@return void\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 7807,
+                  "block": 691
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 8253,
+                  "block": 691,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetOpacityMapImageGivenFilePath(const std::string _imageFilePath, int _fabricIndex)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Set opacity map image for specified fabric\n/// @param _imageFilePath: image file path to set\n/// @param _fabricIndex: the target fabric index in the object browser\n/// @return void",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 7818,
+                    "block": 692
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 8264,
+                    "block": 692,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _imageFilePath: image file path to set",
+            "@param _fabricIndex: the target fabric index in the object browser"
+          ],
+          "return_docs_raw": [
+            "@return void"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "fabric_api.SetOpacityMapImageGivenFilePath#70da12c00930fca7",
+          "signature_normalized": "def SetOpacityMapImageGivenFilePath(_imageFilePath : str, _colorwayIndex : int, _fabricIndex : int) -> None",
+          "signature_raw": "def SetOpacityMapImageGivenFilePath(_imageFilePath : str, _colorwayIndex : int, _fabricIndex : int) -> None",
+          "parameters": [
+            {
+              "raw": "_imageFilePath : str",
+              "name": "_imageFilePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_fabricIndex : int",
+              "name": "_fabricIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetOpacityMapImageGivenFilePath(_imageFilePath : str, _colorwayIndex : int, _fabricIndex : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Set opacity map image for specified fabric in colorway\n@param _imageFilePath: image file path to set\n@param _colorwayIndex: target colorway index in the Colorway Editor\n@param _fabricIndex: the target fabric index in the Colorway Editor\n@return void\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 7830,
+                  "block": 693
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 8277,
+                  "block": 693,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetOpacityMapImageGivenFilePath(const std::string _imageFilePath, int _colorwayIndex, int _fabricIndex)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Set opacity map image for specified fabric in colorway\n/// @param _imageFilePath: image file path to set\n/// @param _colorwayIndex: target colorway index in the Colorway Editor\n/// @param _fabricIndex: the target fabric index in the Colorway Editor\n/// @return void",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 7842,
+                    "block": 694
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 8289,
+                    "block": 694,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _imageFilePath: image file path to set",
+            "@param _colorwayIndex: target colorway index in the Colorway Editor",
+            "@param _fabricIndex: the target fabric index in the Colorway Editor"
+          ],
+          "return_docs_raw": [
+            "@return void"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "fabric_api.SetOpacityMapImageGivenFilePath#922b7b4cff63fc24",
+          "signature_normalized": "def SetOpacityMapImageGivenFilePath(_imageFilePath : str, _colorwayIndex : int, _fabricIndex : int, _styleChipIndex : int, _materialFace : int) -> str",
+          "signature_raw": "def SetOpacityMapImageGivenFilePath(_imageFilePath : str, _colorwayIndex : int, _fabricIndex : int, _styleChipIndex : int, _materialFace : int) -> str",
+          "parameters": [
+            {
+              "raw": "_imageFilePath : str",
+              "name": "_imageFilePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_fabricIndex : int",
+              "name": "_fabricIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_styleChipIndex : int",
+              "name": "_styleChipIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_materialFace : int",
+              "name": "_materialFace",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def SetOpacityMapImageGivenFilePath(_imageFilePath : str, _colorwayIndex : int, _fabricIndex : int, _styleChipIndex : int, _materialFace : int) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Set opacity map image for specified fabric and material face in colorway. If an empty string is passed, the existing texture will be removed.\n@param _imageFilePath: image file path to set. If empty, the applied texture map will be removed from the material face.\n@param _colorwayIndex: target colorway index in the Colorway Editor\n@param _fabricIndex: the target fabric index in the Colorway Editor\n@param _styleChipIndex: the target style chip index in the Colorway Editor applicable if _colorwayIndex = -1, otherwise can be ignored\n@param _materialFace: target material face (0: Front, 1: Back, 2: Side)\n@return Names of other colorways that share this fabric, comma-separated. Empty string if none.\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 8488,
+                  "block": 745
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 8961,
+                  "block": 745,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetOpacityMapImageGivenFilePath(const std::string& _imageFilePath, int _colorwayIndex, int _fabricIndex, int _styleChipIndex, int _materialFace)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Set opacity map image for specified fabric and material face in colorway. If an empty string is passed, the existing texture will be removed.\n/// @param _imageFilePath: image file path to set. If empty, the applied texture map will be removed from the material face.\n/// @param _colorwayIndex: target colorway index in the Colorway Editor\n/// @param _fabricIndex: the target fabric index in the Colorway Editor\n/// @param _styleChipIndex: the target style chip index in the Colorway Editor applicable if _colorwayIndex = -1, otherwise can be ignored\n/// @param _materialFace: target material face (0: Front, 1: Back, 2: Side)\n/// @return Names of other colorways that share this fabric, comma-separated. Empty string if none.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 8502,
+                    "block": 746
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 8975,
+                    "block": 746,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _imageFilePath: image file path to set. If empty, the applied texture map will be removed from the material face.",
+            "@param _colorwayIndex: target colorway index in the Colorway Editor",
+            "@param _fabricIndex: the target fabric index in the Colorway Editor",
+            "@param _styleChipIndex: the target style chip index in the Colorway Editor applicable if _colorwayIndex = -1, otherwise can be ignored",
+            "@param _materialFace: target material face (0: Front, 1: Back, 2: Side)"
+          ],
+          "return_docs_raw": [
+            "@return Names of other colorways that share this fabric, comma-separated. Empty string if none."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "fabric_api.SetOpacityMapImageGivenFilePathW",
+      "qualified_name": "fabric_api.SetOpacityMapImageGivenFilePathW",
+      "module": "fabric_api",
+      "symbol": "SetOpacityMapImageGivenFilePathW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "fabric_api.SetOpacityMapImageGivenFilePathW#e7673f71cbd97de0",
+          "signature_normalized": "def SetOpacityMapImageGivenFilePathW(_imageFilePath : str) -> None",
+          "signature_raw": "def SetOpacityMapImageGivenFilePathW(_imageFilePath : str) -> None",
+          "parameters": [
+            {
+              "raw": "_imageFilePath : str",
+              "name": "_imageFilePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetOpacityMapImageGivenFilePathW(_imageFilePath : str) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Set opacity map image for current selected fabric\n@param _imageFilePath: image file path to set\n@return void\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 7600,
+                  "block": 673
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 8037,
+                  "block": 673,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetOpacityMapImageGivenFilePathW(const std::wstring _imageFilePath)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Set opacity map image for current selected fabric\n/// @param _imageFilePath: image file path to set\n/// @return void",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 7610,
+                    "block": 674
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 8047,
+                    "block": 674,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _imageFilePath: image file path to set"
+          ],
+          "return_docs_raw": [
+            "@return void"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "fabric_api.SetOpacityMapImageGivenFilePathW#11fd8facfb246b80",
+          "signature_normalized": "def SetOpacityMapImageGivenFilePathW(_imageFilePath : str, _fabricIndex : int) -> None",
+          "signature_raw": "def SetOpacityMapImageGivenFilePathW(_imageFilePath : str, _fabricIndex : int) -> None",
+          "parameters": [
+            {
+              "raw": "_imageFilePath : str",
+              "name": "_imageFilePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_fabricIndex : int",
+              "name": "_fabricIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetOpacityMapImageGivenFilePathW(_imageFilePath : str, _fabricIndex : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Set opacity map image for specified fabric\n@param _imageFilePath: image file path to set\n@param _fabricIndex: the target fabric index in the object browser\n@return void\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 8095,
+                  "block": 715
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 8553,
+                  "block": 715,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetOpacityMapImageGivenFilePathW(const std::wstring _imageFilePath, int _fabricIndex)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Set opacity map image for specified fabric\n/// @param _imageFilePath: image file path to set\n/// @param _fabricIndex: the target fabric index in the object browser\n/// @return void",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 8106,
+                    "block": 716
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 8564,
+                    "block": 716,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _imageFilePath: image file path to set",
+            "@param _fabricIndex: the target fabric index in the object browser"
+          ],
+          "return_docs_raw": [
+            "@return void"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "fabric_api.SetOpacityMapImageGivenFilePathW#13d6457e3a4429df",
+          "signature_normalized": "def SetOpacityMapImageGivenFilePathW(_imageFilePath : str, _colorwayIndex : int, _fabricIndex : int) -> None",
+          "signature_raw": "def SetOpacityMapImageGivenFilePathW(_imageFilePath : str, _colorwayIndex : int, _fabricIndex : int) -> None",
+          "parameters": [
+            {
+              "raw": "_imageFilePath : str",
+              "name": "_imageFilePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_fabricIndex : int",
+              "name": "_fabricIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetOpacityMapImageGivenFilePathW(_imageFilePath : str, _colorwayIndex : int, _fabricIndex : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Set opacity map image for specified fabric in colorway\n@param _imageFilePath: image file path to set\n@param _colorwayIndex: target colorway index in the Colorway Editor\n@param _fabricIndex: the target fabric index in the Colorway Editor\n@return void\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 8118,
+                  "block": 717
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 8577,
+                  "block": 717,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetOpacityMapImageGivenFilePathW(const std::wstring _imageFilePath, int _colorwayIndex, int _fabricIndex)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Set opacity map image for specified fabric in colorway\n/// @param _imageFilePath: image file path to set\n/// @param _colorwayIndex: target colorway index in the Colorway Editor\n/// @param _fabricIndex: the target fabric index in the Colorway Editor\n/// @return void",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 8130,
+                    "block": 718
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 8589,
+                    "block": 718,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _imageFilePath: image file path to set",
+            "@param _colorwayIndex: target colorway index in the Colorway Editor",
+            "@param _fabricIndex: the target fabric index in the Colorway Editor"
+          ],
+          "return_docs_raw": [
+            "@return void"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "fabric_api.SetPBRMaterialDisplacementMap",
+      "qualified_name": "fabric_api.SetPBRMaterialDisplacementMap",
+      "module": "fabric_api",
+      "symbol": "SetPBRMaterialDisplacementMap",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "fabric_api.SetPBRMaterialDisplacementMap#dc9473d538f414fc",
+          "signature_normalized": "def SetPBRMaterialDisplacementMap(_fabricIndex : int, _path : str) -> bool",
+          "signature_raw": "def SetPBRMaterialDisplacementMap(_fabricIndex : int, _path : str) -> bool",
+          "parameters": [
+            {
+              "raw": "_fabricIndex : int",
+              "name": "_fabricIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_path : str",
+              "name": "_path",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def SetPBRMaterialDisplacementMap(_fabricIndex : int, _path : str) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Set fabric's displacement map using given image path.\n@param _fabricIndex: index of fabric\n@param _path: path of the image file\n@Return true if succeed, false othrewise.\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 5905,
+                  "block": 523
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 6267,
+                  "block": 523,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "bool SetFabricDisplacementMap(unsigned int _fabricIndex, const std::string &path)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Set fabric's displacement map using given image path.\n/// @param _fabricIndex: index of fabric\n/// @param _path: path of the image file\n/// @Return true if succeed, false othrewise.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 5916,
+                    "block": 524
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 6278,
+                    "block": 524,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _fabricIndex: index of fabric",
+            "@param _path: path of the image file"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "fabric_api.SetPBRMaterialDisplacementMap#f0ee571ad06b3e7d",
+          "signature_normalized": "def SetPBRMaterialDisplacementMap(_colorwayIndex : int, _fabricIndex : int, _path : str) -> bool",
+          "signature_raw": "def SetPBRMaterialDisplacementMap(_colorwayIndex : int, _fabricIndex : int, _path : str) -> bool",
+          "parameters": [
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_fabricIndex : int",
+              "name": "_fabricIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_path : str",
+              "name": "_path",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def SetPBRMaterialDisplacementMap(_colorwayIndex : int, _fabricIndex : int, _path : str) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Set fabric's displacement map using given image path.\n@param _colorwayIndex: index of colorway\n@param _fabricIndex: index of fabric\n@param _path: path of the image file\n@Return true if succeed, false othrewise.\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 5928,
+                  "block": 525
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 6291,
+                  "block": 525,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "bool SetFabricDisplacementMap(unsigned int _colorwayIndex, unsigned int _fabricIndex, const std::string& _path)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Set fabric's displacement map using given image path.\n/// @param _colorwayIndex: index of colorway\n/// @param _fabricIndex: index of fabric\n/// @param _path: path of the image file\n/// @Return true if succeed, false othrewise.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 5940,
+                    "block": 526
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 6303,
+                    "block": 526,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _colorwayIndex: index of colorway",
+            "@param _fabricIndex: index of fabric",
+            "@param _path: path of the image file"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "fabric_api.SetPBRMaterialDisplacementMapValue",
+      "qualified_name": "fabric_api.SetPBRMaterialDisplacementMapValue",
+      "module": "fabric_api",
+      "symbol": "SetPBRMaterialDisplacementMapValue",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "fabric_api.SetPBRMaterialDisplacementMapValue#fc8dcde304eed11b",
+          "signature_normalized": "def SetPBRMaterialDisplacementMapValue(_fabricIndex : int, _amount : float, _shift : float, _clipping : float, _particleDist : float, _keep : bool) -> bool",
+          "signature_raw": "def SetPBRMaterialDisplacementMapValue(_fabricIndex : int, _amount : float, _shift : float, _clipping : float, _particleDist : float, _keep : bool) -> bool",
+          "parameters": [
+            {
+              "raw": "_fabricIndex : int",
+              "name": "_fabricIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_amount : float",
+              "name": "_amount",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_shift : float",
+              "name": "_shift",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_clipping : float",
+              "name": "_clipping",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_particleDist : float",
+              "name": "_particleDist",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_keep : bool",
+              "name": "_keep",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def SetPBRMaterialDisplacementMapValue(_fabricIndex : int, _amount : float, _shift : float, _clipping : float, _particleDist : float, _keep : bool) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Set fabric's displacement map values.\n@param _fabricIndex: index of fabric\n@param _amount: Amount value to be set (mm)\n@param _shift: Shift value to be set (mm)\n@param _clipping: Clipping value to be set (mm)\n@param _particleDist: Particle distance value to be set (mm)\n@param _keep: Keep Continuity value to be set\n@Return true if succeed, false othrewise.\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 5997,
+                  "block": 531
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 6363,
+                  "block": 531,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "bool SetPBRMaterialDisplacementMapValue(unsigned int _fabricIndex, float _amount, float _shift, float _clipping, float _particleDist, bool _keep)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Set fabric's displacement map values.\n/// @param _fabricIndex: index of fabric\n/// @param _amount: Amount value to be set (mm)\n/// @param _shift: Shift value to be set (mm)\n/// @param _clipping: Clipping value to be set (mm)\n/// @param _particleDist: Particle distance value to be set (mm)\n/// @param _keep: Keep Continuity value to be set\n/// @Return true if succeed, false othrewise.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 6012,
+                    "block": 532
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 6378,
+                    "block": 532,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _fabricIndex: index of fabric",
+            "@param _amount: Amount value to be set (mm)",
+            "@param _shift: Shift value to be set (mm)",
+            "@param _clipping: Clipping value to be set (mm)",
+            "@param _particleDist: Particle distance value to be set (mm)",
+            "@param _keep: Keep Continuity value to be set"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "fabric_api.SetPBRMaterialDisplacementMapValue#1cd2f26c97bf65ec",
+          "signature_normalized": "def SetPBRMaterialDisplacementMapValue(_colorwayIndex : int, _fabricIndex : int, _amount : float, _shift : float, _clipping : float, _particleDist : float, _keep : bool) -> bool",
+          "signature_raw": "def SetPBRMaterialDisplacementMapValue(_colorwayIndex : int, _fabricIndex : int, _amount : float, _shift : float, _clipping : float, _particleDist : float, _keep : bool) -> bool",
+          "parameters": [
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_fabricIndex : int",
+              "name": "_fabricIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_amount : float",
+              "name": "_amount",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_shift : float",
+              "name": "_shift",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_clipping : float",
+              "name": "_clipping",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_particleDist : float",
+              "name": "_particleDist",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_keep : bool",
+              "name": "_keep",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def SetPBRMaterialDisplacementMapValue(_colorwayIndex : int, _fabricIndex : int, _amount : float, _shift : float, _clipping : float, _particleDist : float, _keep : bool) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Set fabric's displacement map values.\n@param _colorwayIndex: index of colorway\n@param _fabricIndex: index of fabric\n@param _amount: Amount value to be set (mm)\n@param _shift: Shift value to be set (mm)\n@param _clipping: Clipping value to be set (mm)\n@param _particleDist: Particle distance value to be set (mm)\n@param _keep: Keep Continuity value to be set\n@Return true if succeed, false othrewise.\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 6028,
+                  "block": 533
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 6395,
+                  "block": 533,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "bool SetPBRMaterialDisplacementMapValue(unsigned int _colorwayIndex, unsigned int _fabricIndex, float _amount, float _shift, float _clipping, float _particleDist, bool _keep)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Set fabric's displacement map values.\n/// @param _colorwayIndex: index of colorway\n/// @param _fabricIndex: index of fabric\n/// @param _amount: Amount value to be set (mm)\n/// @param _shift: Shift value to be set (mm)\n/// @param _clipping: Clipping value to be set (mm)\n/// @param _particleDist: Particle distance value to be set (mm)\n/// @param _keep: Keep Continuity value to be set\n/// @Return true if succeed, false othrewise.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 6044,
+                    "block": 534
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 6411,
+                    "block": 534,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _colorwayIndex: index of colorway",
+            "@param _fabricIndex: index of fabric",
+            "@param _amount: Amount value to be set (mm)",
+            "@param _shift: Shift value to be set (mm)",
+            "@param _clipping: Clipping value to be set (mm)",
+            "@param _particleDist: Particle distance value to be set (mm)",
+            "@param _keep: Keep Continuity value to be set"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "fabric_api.SetReflectionIntensity",
+      "qualified_name": "fabric_api.SetReflectionIntensity",
+      "module": "fabric_api",
+      "symbol": "SetReflectionIntensity",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "fabric_api.SetReflectionIntensity#2fdf568c454339b7",
+          "signature_normalized": "def SetReflectionIntensity(_fabricIndex : int, _materialFace : int, _reflectionIntensity : float) -> None",
+          "signature_raw": "def SetReflectionIntensity(_fabricIndex : int, _materialFace : int, _reflectionIntensity : float) -> None",
+          "parameters": [
+            {
+              "raw": "_fabricIndex : int",
+              "name": "_fabricIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_materialFace : int",
+              "name": "_materialFace",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_reflectionIntensity : float",
+              "name": "_reflectionIntensity",
+              "annotation_raw": "float"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetReflectionIntensity(_fabricIndex : int, _materialFace : int, _reflectionIntensity : float) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Set reflection intensity\n@param _fabricIndex: the target fabric index in the object browser\n@param _materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\"\n@param _reflectionIntensity: reflection intensity value\n@return void\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 6209,
+                  "block": 547
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 6583,
+                  "block": 547,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetReflectionIntensity(int _fabricIndex, int _materialFace, float _reflectionIntensity)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Set reflection intensity\n/// @param _fabricIndex: the target fabric index in the object browser\n/// @param _materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\"\n/// @param _reflectionIntensity: reflection intensity value\n/// @return void",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 6221,
+                    "block": 548
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 6595,
+                    "block": 548,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _fabricIndex: the target fabric index in the object browser",
+            "@param _materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\"",
+            "@param _reflectionIntensity: reflection intensity value"
+          ],
+          "return_docs_raw": [
+            "@return void"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "fabric_api.SetReflectionIntensity#8376688e490ab21d",
+          "signature_normalized": "def SetReflectionIntensity(_colorwayIndex : int, fabricIndex : int, _materialFace : int, _reflectionIntensity : float) -> None",
+          "signature_raw": "def SetReflectionIntensity(_colorwayIndex : int, fabricIndex : int, _materialFace : int, _reflectionIntensity : float) -> None",
+          "parameters": [
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "fabricIndex : int",
+              "name": "fabricIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_materialFace : int",
+              "name": "_materialFace",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_reflectionIntensity : float",
+              "name": "_reflectionIntensity",
+              "annotation_raw": "float"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetReflectionIntensity(_colorwayIndex : int, fabricIndex : int, _materialFace : int, _reflectionIntensity : float) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Set reflection intensity\n@param _colorwayIndex: index of colorway\n@param _fabricIndex: the target fabric index in the object browser\n@param _materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\"\n@param _reflectionIntensity: reflection intensity value\n@return void\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 6234,
+                  "block": 549
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 6609,
+                  "block": 549,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetReflectionIntensity(unsigned int _colorwayIndex, int fabricIndex, int _materialFace, float _reflectionIntensity)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Set reflection intensity\n/// @param _colorwayIndex: index of colorway\n/// @param _fabricIndex: the target fabric index in the object browser\n/// @param _materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\"\n/// @param _reflectionIntensity: reflection intensity value\n/// @return void",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 6247,
+                    "block": 550
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 6622,
+                    "block": 550,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _colorwayIndex: index of colorway",
+            "@param _fabricIndex: the target fabric index in the object browser",
+            "@param _materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\"",
+            "@param _reflectionIntensity: reflection intensity value"
+          ],
+          "return_docs_raw": [
+            "@return void"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "fabric_api.SetReflectionRoughness",
+      "qualified_name": "fabric_api.SetReflectionRoughness",
+      "module": "fabric_api",
+      "symbol": "SetReflectionRoughness",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "fabric_api.SetReflectionRoughness#941e1dab38173c1e",
+          "signature_normalized": "def SetReflectionRoughness(_fabricIndex : int, _materialFace : int, _reflectionRoughness : float) -> None",
+          "signature_raw": "def SetReflectionRoughness(_fabricIndex : int, _materialFace : int, _reflectionRoughness : float) -> None",
+          "parameters": [
+            {
+              "raw": "_fabricIndex : int",
+              "name": "_fabricIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_materialFace : int",
+              "name": "_materialFace",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_reflectionRoughness : float",
+              "name": "_reflectionRoughness",
+              "annotation_raw": "float"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetReflectionRoughness(_fabricIndex : int, _materialFace : int, _reflectionRoughness : float) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Set reflection roughness value\n@param _fabricIndex: the target fabric index in the object browser\n@param _materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\"\n@param _reflectionRoughness roughness value\n@return void\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 6109,
+                  "block": 539
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 6479,
+                  "block": 539,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetReflectionRoughness(int _fabricIndex, int _materialFace, float _reflectionRoughness)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Set reflection roughness value\n/// @param _fabricIndex: the target fabric index in the object browser\n/// @param _materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\"\n/// @param _reflectionRoughness roughness value\n/// @return void",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 6121,
+                    "block": 540
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 6491,
+                    "block": 540,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _fabricIndex: the target fabric index in the object browser",
+            "@param _materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\"",
+            "@param _reflectionRoughness roughness value"
+          ],
+          "return_docs_raw": [
+            "@return void"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "fabric_api.SetReflectionRoughness#478e2e10ea92e14f",
+          "signature_normalized": "def SetReflectionRoughness(_colorwayIndex : int, fabricIndex : int, _materialFace : int, _reflectionRoughness : float) -> None",
+          "signature_raw": "def SetReflectionRoughness(_colorwayIndex : int, fabricIndex : int, _materialFace : int, _reflectionRoughness : float) -> None",
+          "parameters": [
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "fabricIndex : int",
+              "name": "fabricIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_materialFace : int",
+              "name": "_materialFace",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_reflectionRoughness : float",
+              "name": "_reflectionRoughness",
+              "annotation_raw": "float"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetReflectionRoughness(_colorwayIndex : int, fabricIndex : int, _materialFace : int, _reflectionRoughness : float) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Set reflection roughness value\n@param _colorwayIndex: index of colorway\n@param _fabricIndex: the target fabric index in the object browser\n@param _materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\"\n@param _reflectionRoughness roughness value\n@return void\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 6134,
+                  "block": 541
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 6505,
+                  "block": 541,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetReflectionRoughness(unsigned int _colorwayIndex, int fabricIndex, int _materialFace, float _reflectionRoughness)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Set reflection roughness value\n/// @param _colorwayIndex: index of colorway\n/// @param _fabricIndex: the target fabric index in the object browser\n/// @param _materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\"\n/// @param _reflectionRoughness roughness value\n/// @return void",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 6147,
+                    "block": 542
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 6518,
+                    "block": 542,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _colorwayIndex: index of colorway",
+            "@param _fabricIndex: the target fabric index in the object browser",
+            "@param _materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\"",
+            "@param _reflectionRoughness roughness value"
+          ],
+          "return_docs_raw": [
+            "@return void"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "fabric_api.SetRoughnessMapImageGivenFilePath",
+      "qualified_name": "fabric_api.SetRoughnessMapImageGivenFilePath",
+      "module": "fabric_api",
+      "symbol": "SetRoughnessMapImageGivenFilePath",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "fabric_api.SetRoughnessMapImageGivenFilePath#e3f8018453b226b3",
+          "signature_normalized": "def SetRoughnessMapImageGivenFilePath(_imageFilePath : str) -> None",
+          "signature_raw": "def SetRoughnessMapImageGivenFilePath(_imageFilePath : str) -> None",
+          "parameters": [
+            {
+              "raw": "_imageFilePath : str",
+              "name": "_imageFilePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetRoughnessMapImageGivenFilePath(_imageFilePath : str) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Set roughness map image for current selected fabric\n@param _imageFilePath: image file path to set\n@return void\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 7495,
+                  "block": 663
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 7927,
+                  "block": 663,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetRoughnessMapImageGivenFilePath(const std::string _imageFilePath)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Set roughness map image for current selected fabric\n/// @param _imageFilePath: image file path to set\n/// @return void",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 7505,
+                    "block": 664
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 7937,
+                    "block": 664,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _imageFilePath: image file path to set"
+          ],
+          "return_docs_raw": [
+            "@return void"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "fabric_api.SetRoughnessMapImageGivenFilePath#6617f93679bbbaed",
+          "signature_normalized": "def SetRoughnessMapImageGivenFilePath(_imageFilePath : str, _fabricIndex : int) -> None",
+          "signature_raw": "def SetRoughnessMapImageGivenFilePath(_imageFilePath : str, _fabricIndex : int) -> None",
+          "parameters": [
+            {
+              "raw": "_imageFilePath : str",
+              "name": "_imageFilePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_fabricIndex : int",
+              "name": "_fabricIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetRoughnessMapImageGivenFilePath(_imageFilePath : str, _fabricIndex : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Set roughness map image for specified fabric\n@param _imageFilePath: image file path to set\n@param _fabricIndex: the target fabric index in the object browser\n@return void\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 7855,
+                  "block": 695
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 8303,
+                  "block": 695,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetRoughnessMapImageGivenFilePath(const std::string _imageFilePath, int _fabricIndex)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Set roughness map image for specified fabric\n/// @param _imageFilePath: image file path to set\n/// @param _fabricIndex: the target fabric index in the object browser\n/// @return void",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 7866,
+                    "block": 696
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 8314,
+                    "block": 696,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _imageFilePath: image file path to set",
+            "@param _fabricIndex: the target fabric index in the object browser"
+          ],
+          "return_docs_raw": [
+            "@return void"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "fabric_api.SetRoughnessMapImageGivenFilePath#f2a2b282cc041cbb",
+          "signature_normalized": "def SetRoughnessMapImageGivenFilePath(_imageFilePath : str, _colorwayIndex : int, _fabricIndex : int) -> None",
+          "signature_raw": "def SetRoughnessMapImageGivenFilePath(_imageFilePath : str, _colorwayIndex : int, _fabricIndex : int) -> None",
+          "parameters": [
+            {
+              "raw": "_imageFilePath : str",
+              "name": "_imageFilePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_fabricIndex : int",
+              "name": "_fabricIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetRoughnessMapImageGivenFilePath(_imageFilePath : str, _colorwayIndex : int, _fabricIndex : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Set roughness map image for specified fabric in colorway\n@param _imageFilePath: image file path to set\n@param _colorwayIndex: target colorway index in the Colorway Editor\n@param _fabricIndex: the target fabric index in the Colorway Editor\n@return void\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 7878,
+                  "block": 697
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 8327,
+                  "block": 697,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetRoughnessMapImageGivenFilePath(const std::string _imageFilePath, int _colorwayIndex, int _fabricIndex)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Set roughness map image for specified fabric in colorway\n/// @param _imageFilePath: image file path to set\n/// @param _colorwayIndex: target colorway index in the Colorway Editor\n/// @param _fabricIndex: the target fabric index in the Colorway Editor\n/// @return void",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 7890,
+                    "block": 698
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 8339,
+                    "block": 698,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _imageFilePath: image file path to set",
+            "@param _colorwayIndex: target colorway index in the Colorway Editor",
+            "@param _fabricIndex: the target fabric index in the Colorway Editor"
+          ],
+          "return_docs_raw": [
+            "@return void"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "fabric_api.SetRoughnessMapImageGivenFilePath#4a6fe104e5a8343b",
+          "signature_normalized": "def SetRoughnessMapImageGivenFilePath(_imageFilePath : str, _colorwayIndex : int, _fabricIndex : int, _styleChipIndex : int, _materialFace : int) -> str",
+          "signature_raw": "def SetRoughnessMapImageGivenFilePath(_imageFilePath : str, _colorwayIndex : int, _fabricIndex : int, _styleChipIndex : int, _materialFace : int) -> str",
+          "parameters": [
+            {
+              "raw": "_imageFilePath : str",
+              "name": "_imageFilePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_fabricIndex : int",
+              "name": "_fabricIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_styleChipIndex : int",
+              "name": "_styleChipIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_materialFace : int",
+              "name": "_materialFace",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def SetRoughnessMapImageGivenFilePath(_imageFilePath : str, _colorwayIndex : int, _fabricIndex : int, _styleChipIndex : int, _materialFace : int) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Set roughness map image for specified fabric and material face in colorway. If an empty string is passed, the existing texture will be removed.\n@param _imageFilePath: image file path to set. If empty, the applied texture map will be removed from the material face.\n@param _colorwayIndex: target colorway index in the Colorway Editor\n@param _fabricIndex: the target fabric index in the Colorway Editor\n@param _styleChipIndex: the target style chip index in the Colorway Editor applicable if _colorwayIndex = -1, otherwise can be ignored\n@param _materialFace: target material face (0: Front, 1: Back, 2: Side)\n@return Names of other colorways that share this fabric, comma-separated. Empty string if none.\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 8517,
+                  "block": 747
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 8991,
+                  "block": 747,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetRoughnessMapImageGivenFilePath(const std::string& _imageFilePath, int _colorwayIndex, int _fabricIndex, int _styleChipIndex, int _materialFace)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Set roughness map image for specified fabric and material face in colorway. If an empty string is passed, the existing texture will be removed.\n/// @param _imageFilePath: image file path to set. If empty, the applied texture map will be removed from the material face.\n/// @param _colorwayIndex: target colorway index in the Colorway Editor\n/// @param _fabricIndex: the target fabric index in the Colorway Editor\n/// @param _styleChipIndex: the target style chip index in the Colorway Editor applicable if _colorwayIndex = -1, otherwise can be ignored\n/// @param _materialFace: target material face (0: Front, 1: Back, 2: Side)\n/// @return Names of other colorways that share this fabric, comma-separated. Empty string if none.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 8531,
+                    "block": 748
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 9005,
+                    "block": 748,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _imageFilePath: image file path to set. If empty, the applied texture map will be removed from the material face.",
+            "@param _colorwayIndex: target colorway index in the Colorway Editor",
+            "@param _fabricIndex: the target fabric index in the Colorway Editor",
+            "@param _styleChipIndex: the target style chip index in the Colorway Editor applicable if _colorwayIndex = -1, otherwise can be ignored",
+            "@param _materialFace: target material face (0: Front, 1: Back, 2: Side)"
+          ],
+          "return_docs_raw": [
+            "@return Names of other colorways that share this fabric, comma-separated. Empty string if none."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "fabric_api.SetRoughnessMapImageGivenFilePathW",
+      "qualified_name": "fabric_api.SetRoughnessMapImageGivenFilePathW",
+      "module": "fabric_api",
+      "symbol": "SetRoughnessMapImageGivenFilePathW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "fabric_api.SetRoughnessMapImageGivenFilePathW#5e4adec14589d9d9",
+          "signature_normalized": "def SetRoughnessMapImageGivenFilePathW(_imageFilePath : str) -> None",
+          "signature_raw": "def SetRoughnessMapImageGivenFilePathW(_imageFilePath : str) -> None",
+          "parameters": [
+            {
+              "raw": "_imageFilePath : str",
+              "name": "_imageFilePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetRoughnessMapImageGivenFilePathW(_imageFilePath : str) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Set roughness map image for current selected fabric\n@param _imageFilePath: image file path to set\n@return void\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 7621,
+                  "block": 675
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 8059,
+                  "block": 675,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetRoughnessMapImageGivenFilePathW(const std::wstring _imageFilePath)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Set roughness map image for current selected fabric\n/// @param _imageFilePath: image file path to set\n/// @return void",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 7631,
+                    "block": 676
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 8069,
+                    "block": 676,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _imageFilePath: image file path to set"
+          ],
+          "return_docs_raw": [
+            "@return void"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "fabric_api.SetRoughnessMapImageGivenFilePathW#c4d04ab42e6ad1ca",
+          "signature_normalized": "def SetRoughnessMapImageGivenFilePathW(_imageFilePath : str, _fabricIndex : int) -> None",
+          "signature_raw": "def SetRoughnessMapImageGivenFilePathW(_imageFilePath : str, _fabricIndex : int) -> None",
+          "parameters": [
+            {
+              "raw": "_imageFilePath : str",
+              "name": "_imageFilePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_fabricIndex : int",
+              "name": "_fabricIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetRoughnessMapImageGivenFilePathW(_imageFilePath : str, _fabricIndex : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Set roughness map image for specified fabric\n@param _imageFilePath: image file path to set\n@param _fabricIndex: the target fabric index in the object browser\n@return void\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 8143,
+                  "block": 719
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 8603,
+                  "block": 719,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetRoughnessMapImageGivenFilePathW(const std::wstring _imageFilePath, int _fabricIndex)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Set roughness map image for specified fabric\n/// @param _imageFilePath: image file path to set\n/// @param _fabricIndex: the target fabric index in the object browser\n/// @return void",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 8154,
+                    "block": 720
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 8614,
+                    "block": 720,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _imageFilePath: image file path to set",
+            "@param _fabricIndex: the target fabric index in the object browser"
+          ],
+          "return_docs_raw": [
+            "@return void"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "fabric_api.SetRoughnessMapImageGivenFilePathW#76ed3da8e04738be",
+          "signature_normalized": "def SetRoughnessMapImageGivenFilePathW(_imageFilePath : str, _colorwayIndex : int, _fabricIndex : int) -> None",
+          "signature_raw": "def SetRoughnessMapImageGivenFilePathW(_imageFilePath : str, _colorwayIndex : int, _fabricIndex : int) -> None",
+          "parameters": [
+            {
+              "raw": "_imageFilePath : str",
+              "name": "_imageFilePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_fabricIndex : int",
+              "name": "_fabricIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetRoughnessMapImageGivenFilePathW(_imageFilePath : str, _colorwayIndex : int, _fabricIndex : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Set roughness map image for specified fabric in colorway\n@param _imageFilePath: image file path to set\n@param _colorwayIndex: target colorway index in the Colorway Editor\n@param _fabricIndex: the target fabric index in the Colorway Editor\n@return void\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 8166,
+                  "block": 721
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 8627,
+                  "block": 721,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetRoughnessMapImageGivenFilePathW(const std::wstring _imageFilePath, int _colorwayIndex, int _fabricIndex)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Set roughness map image for specified fabric in colorway\n/// @param _imageFilePath: image file path to set\n/// @param _colorwayIndex: target colorway index in the Colorway Editor\n/// @param _fabricIndex: the target fabric index in the Colorway Editor\n/// @return void",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 8178,
+                    "block": 722
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 8639,
+                    "block": 722,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _imageFilePath: image file path to set",
+            "@param _colorwayIndex: target colorway index in the Colorway Editor",
+            "@param _fabricIndex: the target fabric index in the Colorway Editor"
+          ],
+          "return_docs_raw": [
+            "@return void"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "fabric_api.SetRoughnessType",
+      "qualified_name": "fabric_api.SetRoughnessType",
+      "module": "fabric_api",
+      "symbol": "SetRoughnessType",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "fabric_api.SetRoughnessType#761d9b936ecc30dc",
+          "signature_normalized": "def SetRoughnessType(_index : int, _materialFace : int, _roughnessType : int) -> None",
+          "signature_raw": "def SetRoughnessType(_index : int, _materialFace : int, _roughnessType : int) -> None",
+          "parameters": [
+            {
+              "raw": "_index : int",
+              "name": "_index",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_materialFace : int",
+              "name": "_materialFace",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_roughnessType : int",
+              "name": "_roughnessType",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetRoughnessType(_index : int, _materialFace : int, _roughnessType : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Set Current Fabric's material roughnessType\n@param _index: Fabric Index, _materialFace : target material Face Type (0 : Front , 1 : BACK , 2 : SIDE), _roughnessType : roughnessType to be set ( 0 : Intensity, 1 : Map )\n@return Fabric setting success or failure return\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 5595,
+                  "block": 495
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 5943,
+                  "block": 495,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetRoughnessType(int _index, int _materialFace, int _roughnessType)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Set Current Fabric's material roughnessType\n/// @param _index: Fabric Index, _materialFace : target material Face Type (0 : Front , 1 : BACK , 2 : SIDE), _roughnessType : roughnessType to be set ( 0 : Intensity, 1 : Map )\n/// @return Fabric setting success or failure return",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 5605,
+                    "block": 496
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 5953,
+                    "block": 496,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _index: Fabric Index, _materialFace : target material Face Type (0 : Front , 1 : BACK , 2 : SIDE), _roughnessType : roughnessType to be set ( 0 : Intensity, 1 : Map )"
+          ],
+          "return_docs_raw": [
+            "@return Fabric setting success or failure return"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "fabric_api.SetRoughnessType#2a75a18144092be0",
+          "signature_normalized": "def SetRoughnessType(_colorwayIndex : int, _index : int, _materialFace : int, _roughnessType : int) -> None",
+          "signature_raw": "def SetRoughnessType(_colorwayIndex : int, _index : int, _materialFace : int, _roughnessType : int) -> None",
+          "parameters": [
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_index : int",
+              "name": "_index",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_materialFace : int",
+              "name": "_materialFace",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_roughnessType : int",
+              "name": "_roughnessType",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetRoughnessType(_colorwayIndex : int, _index : int, _materialFace : int, _roughnessType : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Set Current Fabric's material roughnessType\n@param _colorwayIndex: target colorway index in the Colorway Editor\n@param _index: Fabric Index, _materialFace : target material Face Type (0 : Front , 1 : BACK , 2 : SIDE), _roughnessType : roughnessType to be set ( 0 : Intensity, 1 : Map )\n@return Fabric setting success or failure return\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 5616,
+                  "block": 497
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 5965,
+                  "block": 497,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetRoughnessType(unsigned int _colorwayIndex, int _index, int _materialFace, int _roughnessType)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Set Current Fabric's material roughnessType\n/// @param _colorwayIndex: target colorway index in the Colorway Editor\n/// @param _index: Fabric Index, _materialFace : target material Face Type (0 : Front , 1 : BACK , 2 : SIDE), _roughnessType : roughnessType to be set ( 0 : Intensity, 1 : Map )\n/// @return Fabric setting success or failure return",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 5627,
+                    "block": 498
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 5976,
+                    "block": 498,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _colorwayIndex: target colorway index in the Colorway Editor",
+            "@param _index: Fabric Index, _materialFace : target material Face Type (0 : Front , 1 : BACK , 2 : SIDE), _roughnessType : roughnessType to be set ( 0 : Intensity, 1 : Map )"
+          ],
+          "return_docs_raw": [
+            "@return Fabric setting success or failure return"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "fabric_api.SetRoughnessValueIntensity",
+      "qualified_name": "fabric_api.SetRoughnessValueIntensity",
+      "module": "fabric_api",
+      "symbol": "SetRoughnessValueIntensity",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "fabric_api.SetRoughnessValueIntensity#5aa6fed8c74ebe9b",
+          "signature_normalized": "def SetRoughnessValueIntensity(_fabricIndex : int, _face : int, _value : int) -> None",
+          "signature_raw": "def SetRoughnessValueIntensity(_fabricIndex : int, _face : int, _value : int) -> None",
+          "parameters": [
+            {
+              "raw": "_fabricIndex : int",
+              "name": "_fabricIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_face : int",
+              "name": "_face",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_value : int",
+              "name": "_value",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetRoughnessValueIntensity(_fabricIndex : int, _face : int, _value : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Set fabric material's Roughness Intensity values.\n@param          _fabricIndex: Fabric Index\n_face : target material Face Type (0 : Front , 1 : BACK , 2 : SIDE)\n_value : roughness value\n@return Fabric material's Roughness Intensity values.\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 5683,
+                  "block": 503
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 6035,
+                  "block": 503,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "void SetRoughnessValueIntensity(int _fabricIndex, int _face, int _value)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Set fabric material's Roughness Intensity values.\n/// @param              _fabricIndex: Fabric Index\n/// _face : target material Face Type (0 : Front , 1 : BACK , 2 : SIDE)\n/// _value : roughness value\n/// @return Fabric material's Roughness Intensity values.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 5695,
+                    "block": 504
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 6047,
+                    "block": 504,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          _fabricIndex: Fabric Index"
+          ],
+          "return_docs_raw": [
+            "@return Fabric material's Roughness Intensity values."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "fabric_api.SetRoughnessValueIntensity#a8233636f5f049d9",
+          "signature_normalized": "def SetRoughnessValueIntensity(_colorwayIndex : int, _fabricIndex : int, _face : int, _value : int) -> None",
+          "signature_raw": "def SetRoughnessValueIntensity(_colorwayIndex : int, _fabricIndex : int, _face : int, _value : int) -> None",
+          "parameters": [
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_fabricIndex : int",
+              "name": "_fabricIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_face : int",
+              "name": "_face",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_value : int",
+              "name": "_value",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetRoughnessValueIntensity(_colorwayIndex : int, _fabricIndex : int, _face : int, _value : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Set fabric material's Roughness Intensity values.\n@param          _colorwayIndex: target colorway index in the Colorway Editor\n_fabricIndex: the fabricIndex in the Colorway Editor for the fabric to set the fabric info\n_face : target material Face Type (0 : Front , 1 : BACK , 2 : SIDE)\n_value : roughness value\n@return Fabric material's Rough\n@return Fabric material's Roughness Intensity values.\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 5708,
+                  "block": 505
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 6061,
+                  "block": 505,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "void SetRoughnessValueIntensity(unsigned int _colorwayIndex, int _fabricIndex, int _face, int _value)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Set fabric material's Roughness Intensity values.\n/// @param              _colorwayIndex: target colorway index in the Colorway Editor\n/// _fabricIndex: the fabricIndex in the Colorway Editor for the fabric to set the fabric info\n/// _face : target material Face Type (0 : Front , 1 : BACK , 2 : SIDE)\n/// _value : roughness value\n/// @return Fabric material's Rough\n/// @return Fabric material's Roughness Intensity values.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 5722,
+                    "block": 506
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 6075,
+                    "block": 506,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          _colorwayIndex: target colorway index in the Colorway Editor"
+          ],
+          "return_docs_raw": [
+            "@return Fabric material's Rough",
+            "@return Fabric material's Roughness Intensity values."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "fabric_api.SetRoughnessValueMapIntensity",
+      "qualified_name": "fabric_api.SetRoughnessValueMapIntensity",
+      "module": "fabric_api",
+      "symbol": "SetRoughnessValueMapIntensity",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "fabric_api.SetRoughnessValueMapIntensity#2e923735f9fa82df",
+          "signature_normalized": "def SetRoughnessValueMapIntensity(_index : int, _face : int, _value : int) -> None",
+          "signature_raw": "def SetRoughnessValueMapIntensity(_index : int, _face : int, _value : int) -> None",
+          "parameters": [
+            {
+              "raw": "_index : int",
+              "name": "_index",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_face : int",
+              "name": "_face",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_value : int",
+              "name": "_value",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetRoughnessValueMapIntensity(_index : int, _face : int, _value : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Set fabric material's map type roughness intensity values.\n@param _index: Fabric Index, _face : target material Face Type (0 : Front , 1 : BACK , 2 : SIDE), _value : intensity value to be set.\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 5781,
+                  "block": 511
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 6137,
+                  "block": 511,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetRoughnessValueMapIntensity(int _index, int _face, int _value)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Set fabric material's map type roughness intensity values.\n/// @param _index: Fabric Index, _face : target material Face Type (0 : Front , 1 : BACK , 2 : SIDE), _value : intensity value to be set.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 5790,
+                    "block": 512
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 6146,
+                    "block": 512,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _index: Fabric Index, _face : target material Face Type (0 : Front , 1 : BACK , 2 : SIDE), _value : intensity value to be set."
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "fabric_api.SetRoughnessValueMapIntensity#3922cf4b09a2dc0b",
+          "signature_normalized": "def SetRoughnessValueMapIntensity(_colorwayIndex : int, _index : int, _face : int, _value : int) -> None",
+          "signature_raw": "def SetRoughnessValueMapIntensity(_colorwayIndex : int, _index : int, _face : int, _value : int) -> None",
+          "parameters": [
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_index : int",
+              "name": "_index",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_face : int",
+              "name": "_face",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_value : int",
+              "name": "_value",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetRoughnessValueMapIntensity(_colorwayIndex : int, _index : int, _face : int, _value : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Set fabric material's map type roughness intensity values.\n@param _colorwayIndex: target colorway index in the Colorway Editor\n@param _index: Fabric Index, _face : target material Face Type (0 : Front , 1 : BACK , 2 : SIDE), _value : intensity value to be set.\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 5800,
+                  "block": 513
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 6157,
+                  "block": 513,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetRoughnessValueMapIntensity(unsigned int _colorwayIndex, int _index, int _face, int _value)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Set fabric material's map type roughness intensity values.\n/// @param _colorwayIndex: target colorway index in the Colorway Editor\n/// @param _index: Fabric Index, _face : target material Face Type (0 : Front , 1 : BACK , 2 : SIDE), _value : intensity value to be set.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 5810,
+                    "block": 514
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 6167,
+                    "block": 514,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _colorwayIndex: target colorway index in the Colorway Editor",
+            "@param _index: Fabric Index, _face : target material Face Type (0 : Front , 1 : BACK , 2 : SIDE), _value : intensity value to be set."
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "fabric_api.SetRoughnessValueMapInvert",
+      "qualified_name": "fabric_api.SetRoughnessValueMapInvert",
+      "module": "fabric_api",
+      "symbol": "SetRoughnessValueMapInvert",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "fabric_api.SetRoughnessValueMapInvert#8e6307cf90e15c78",
+          "signature_normalized": "def SetRoughnessValueMapInvert(_index : int, _face : int, _bInvert : bool) -> None",
+          "signature_raw": "def SetRoughnessValueMapInvert(_index : int, _face : int, _bInvert : bool) -> None",
+          "parameters": [
+            {
+              "raw": "_index : int",
+              "name": "_index",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_face : int",
+              "name": "_face",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_bInvert : bool",
+              "name": "_bInvert",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetRoughnessValueMapInvert(_index : int, _face : int, _bInvert : bool) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Set whether roughness map is inverted\n@param _index: Fabric Index, _face : target material Face Type (0 : Front , 1 : BACK , 2 : SIDE), bInvert : Whether roughness map is inverted.\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 5865,
+                  "block": 519
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 6225,
+                  "block": 519,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "bool SetRoughnessValueMapInvert(int _index, int _face, bool _bInvert)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Set whether roughness map is inverted\n/// @param _index: Fabric Index, _face : target material Face Type (0 : Front , 1 : BACK , 2 : SIDE), bInvert : Whether roughness map is inverted.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 5874,
+                    "block": 520
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 6234,
+                    "block": 520,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _index: Fabric Index, _face : target material Face Type (0 : Front , 1 : BACK , 2 : SIDE), bInvert : Whether roughness map is inverted."
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "fabric_api.SetRoughnessValueMapInvert#60468b493e05a16e",
+          "signature_normalized": "def SetRoughnessValueMapInvert(_colorwayIndex : int, _index : int, _face : int, _bInvert : bool) -> None",
+          "signature_raw": "def SetRoughnessValueMapInvert(_colorwayIndex : int, _index : int, _face : int, _bInvert : bool) -> None",
+          "parameters": [
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_index : int",
+              "name": "_index",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_face : int",
+              "name": "_face",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_bInvert : bool",
+              "name": "_bInvert",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetRoughnessValueMapInvert(_colorwayIndex : int, _index : int, _face : int, _bInvert : bool) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Set whether roughness map is inverted\n@param _colorwayIndex: target colorway index in the Colorway Editor\n@param _index: Fabric Index, _face : target material Face Type (0 : Front , 1 : BACK , 2 : SIDE), bInvert : Whether roughness map is inverted.\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 5884,
+                  "block": 521
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 6245,
+                  "block": 521,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "bool SetRoughnessValueMapInvert(unsigned int _colorwayIndex, int _index, int _face, bool _bInvert)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Set whether roughness map is inverted\n/// @param _colorwayIndex: target colorway index in the Colorway Editor\n/// @param _index: Fabric Index, _face : target material Face Type (0 : Front , 1 : BACK , 2 : SIDE), bInvert : Whether roughness map is inverted.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 5894,
+                    "block": 522
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 6255,
+                    "block": 522,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _colorwayIndex: target colorway index in the Colorway Editor",
+            "@param _index: Fabric Index, _face : target material Face Type (0 : Front , 1 : BACK , 2 : SIDE), bInvert : Whether roughness map is inverted."
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "fabric_api.SetSubstancePreset",
+      "qualified_name": "fabric_api.SetSubstancePreset",
+      "module": "fabric_api",
+      "symbol": "SetSubstancePreset",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "fabric_api.SetSubstancePreset#c94bd646b590e25e",
+          "signature_normalized": "def SetSubstancePreset(fabricIndex : int, materialFace : int, presetIndex : int) -> None",
+          "signature_raw": "def SetSubstancePreset(fabricIndex : int, materialFace : int, presetIndex : int) -> None",
+          "parameters": [
+            {
+              "raw": "fabricIndex : int",
+              "name": "fabricIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "materialFace : int",
+              "name": "materialFace",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "presetIndex : int",
+              "name": "presetIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetSubstancePreset(fabricIndex : int, materialFace : int, presetIndex : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Set Substance Preset\n@param fabricIndex: the target fabric index in the object browser\n@param materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\"\n@param presetIndex: the preset index to set\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 4891,
+                  "block": 439
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 5211,
+                  "block": 439,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetSubstancePreset(unsigned int fabricIndex, int materialFace, int presetIndex)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Set Substance Preset\n/// @param fabricIndex: the target fabric index in the object browser\n/// @param materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\"\n/// @param presetIndex: the preset index to set",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 4902,
+                    "block": 440
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 5222,
+                    "block": 440,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param fabricIndex: the target fabric index in the object browser",
+            "@param materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\"",
+            "@param presetIndex: the preset index to set"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "fabric_api.SetSubstancePreset#094f663eb2b3368a",
+          "signature_normalized": "def SetSubstancePreset(colorwayIndex : int, fabricIndex : int, materialFace : int, presetIndex : int) -> None",
+          "signature_raw": "def SetSubstancePreset(colorwayIndex : int, fabricIndex : int, materialFace : int, presetIndex : int) -> None",
+          "parameters": [
+            {
+              "raw": "colorwayIndex : int",
+              "name": "colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "fabricIndex : int",
+              "name": "fabricIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "materialFace : int",
+              "name": "materialFace",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "presetIndex : int",
+              "name": "presetIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetSubstancePreset(colorwayIndex : int, fabricIndex : int, materialFace : int, presetIndex : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Set Substance Preset\n@param colorwayIndex: target colorway index in the Colorway Editor\n@param fabricIndex: the target fabric index in the object browser\n@param materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\"\n@param presetIndex: the preset index to set\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 4914,
+                  "block": 441
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 5235,
+                  "block": 441,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetSubstancePreset(unsigned int colorwayIndex, unsigned int fabricIndex, int materialFace, int presetIndex)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Set Substance Preset\n/// @param colorwayIndex: target colorway index in the Colorway Editor\n/// @param fabricIndex: the target fabric index in the object browser\n/// @param materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\"\n/// @param presetIndex: the preset index to set",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 4926,
+                    "block": 442
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 5247,
+                    "block": 442,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param colorwayIndex: target colorway index in the Colorway Editor",
+            "@param fabricIndex: the target fabric index in the object browser",
+            "@param materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\"",
+            "@param presetIndex: the preset index to set"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "fabric_api.SetSubstanceResolution",
+      "qualified_name": "fabric_api.SetSubstanceResolution",
+      "module": "fabric_api",
+      "symbol": "SetSubstanceResolution",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "fabric_api.SetSubstanceResolution#a1f882ea89d7f613",
+          "signature_normalized": "def SetSubstanceResolution(fabricIndex : int, materialFace : int, resolutionIndex : int) -> None",
+          "signature_raw": "def SetSubstanceResolution(fabricIndex : int, materialFace : int, resolutionIndex : int) -> None",
+          "parameters": [
+            {
+              "raw": "fabricIndex : int",
+              "name": "fabricIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "materialFace : int",
+              "name": "materialFace",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "resolutionIndex : int",
+              "name": "resolutionIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetSubstanceResolution(fabricIndex : int, materialFace : int, resolutionIndex : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Set Substance Resolution\n@param fabricIndex: the target fabric index in the object browser\n@param materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\"\n@param resolutionIndex: the resolution index to set\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 4939,
+                  "block": 443
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 5261,
+                  "block": 443,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetSubstanceResolution(unsigned int fabricIndex, int materialFace, int resolutionIndex)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Set Substance Resolution\n/// @param fabricIndex: the target fabric index in the object browser\n/// @param materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\"\n/// @param resolutionIndex: the resolution index to set",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 4950,
+                    "block": 444
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 5272,
+                    "block": 444,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param fabricIndex: the target fabric index in the object browser",
+            "@param materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\"",
+            "@param resolutionIndex: the resolution index to set"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "fabric_api.SetSubstanceResolution#52b2544c333ae13d",
+          "signature_normalized": "def SetSubstanceResolution(colorwayIndex : int, fabricIndex : int, materialFace : int, resolutionIndex : int) -> None",
+          "signature_raw": "def SetSubstanceResolution(colorwayIndex : int, fabricIndex : int, materialFace : int, resolutionIndex : int) -> None",
+          "parameters": [
+            {
+              "raw": "colorwayIndex : int",
+              "name": "colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "fabricIndex : int",
+              "name": "fabricIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "materialFace : int",
+              "name": "materialFace",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "resolutionIndex : int",
+              "name": "resolutionIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetSubstanceResolution(colorwayIndex : int, fabricIndex : int, materialFace : int, resolutionIndex : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Set Substance Resolution\n@param colorwayIndex: target colorway index in the Colorway Editor\n@param fabricIndex: the target fabric index in the object browser\n@param materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\"\n@param resolutionIndex: the resolution index to set\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 4962,
+                  "block": 445
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 5285,
+                  "block": 445,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetSubstanceResolution(unsigned int colorwayIndex, unsigned int fabricIndex, int materialFace, int resolutionIndex)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Set Substance Resolution\n/// @param colorwayIndex: target colorway index in the Colorway Editor\n/// @param fabricIndex: the target fabric index in the object browser\n/// @param materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\"\n/// @param resolutionIndex: the resolution index to set",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 4974,
+                    "block": 446
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 5297,
+                    "block": 446,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param colorwayIndex: target colorway index in the Colorway Editor",
+            "@param fabricIndex: the target fabric index in the object browser",
+            "@param materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\"",
+            "@param resolutionIndex: the resolution index to set"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "fabric_api.SetTextureMapping",
+      "qualified_name": "fabric_api.SetTextureMapping",
+      "module": "fabric_api",
+      "symbol": "SetTextureMapping",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "fabric_api.SetTextureMapping#44c1b00dad54d342",
+          "signature_normalized": "def SetTextureMapping(fabricIndex : int, mappingType : int) -> None",
+          "signature_raw": "def SetTextureMapping(fabricIndex : int, mappingType : int) -> None",
+          "parameters": [
+            {
+              "raw": "fabricIndex : int",
+              "name": "fabricIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "mappingType : int",
+              "name": "mappingType",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetTextureMapping(fabricIndex : int, mappingType : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Set Texture Mapping Type (Repeat or Unified)\n@param fabricIndex: the target fabric index in the object browser\n@param mappingType: the target mapping type to set. 0: \"Repeat\", 1: \"Unified\"\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 4847,
+                  "block": 435
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 5165,
+                  "block": 435,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetTextureMapping(unsigned int fabricIndex, int mappingType)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Set Texture Mapping Type (Repeat or Unified)\n/// @param fabricIndex: the target fabric index in the object browser\n/// @param mappingType: the target mapping type to set. 0: \"Repeat\", 1: \"Unified\"",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 4857,
+                    "block": 436
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 5175,
+                    "block": 436,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param fabricIndex: the target fabric index in the object browser",
+            "@param mappingType: the target mapping type to set. 0: \"Repeat\", 1: \"Unified\""
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "fabric_api.SetTextureMapping#7dae0f81857e65fa",
+          "signature_normalized": "def SetTextureMapping(_colorwayIndex : int, _fabricIndex : int, _mappingType : int) -> None",
+          "signature_raw": "def SetTextureMapping(_colorwayIndex : int, _fabricIndex : int, _mappingType : int) -> None",
+          "parameters": [
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_fabricIndex : int",
+              "name": "_fabricIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_mappingType : int",
+              "name": "_mappingType",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetTextureMapping(_colorwayIndex : int, _fabricIndex : int, _mappingType : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Set Texture Mapping Type (Repeat or Unified)\n@param _colorwayIndex: target colorway index in the Colorway Editor\n@param _fabricIndex: the target fabric index in the ColorwayEditor\n@param _mappingType: the target mapping type to set. 0: \"Repeat\", 1: \"Unified\"\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 4868,
+                  "block": 437
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 5187,
+                  "block": 437,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetTextureMapping(unsigned int _colorwayIndex, unsigned int _fabricIndex, int _mappingType)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Set Texture Mapping Type (Repeat or Unified)\n/// @param _colorwayIndex: target colorway index in the Colorway Editor\n/// @param _fabricIndex: the target fabric index in the ColorwayEditor\n/// @param _mappingType: the target mapping type to set. 0: \"Repeat\", 1: \"Unified\"",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 4879,
+                    "block": 438
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 5198,
+                    "block": 438,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _colorwayIndex: target colorway index in the Colorway Editor",
+            "@param _fabricIndex: the target fabric index in the ColorwayEditor",
+            "@param _mappingType: the target mapping type to set. 0: \"Repeat\", 1: \"Unified\""
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "fabric_api.SetUseSameColorAsFront",
+      "qualified_name": "fabric_api.SetUseSameColorAsFront",
+      "module": "fabric_api",
+      "symbol": "SetUseSameColorAsFront",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "fabric_api.SetUseSameColorAsFront#99a67200d986647e",
+          "signature_normalized": "def SetUseSameColorAsFront(fabricIndex : int, materialFace : int, _useSameColor : bool) -> None",
+          "signature_raw": "def SetUseSameColorAsFront(fabricIndex : int, materialFace : int, _useSameColor : bool) -> None",
+          "parameters": [
+            {
+              "raw": "fabricIndex : int",
+              "name": "fabricIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "materialFace : int",
+              "name": "materialFace",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_useSameColor : bool",
+              "name": "_useSameColor",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetUseSameColorAsFront(fabricIndex : int, materialFace : int, _useSameColor : bool) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Set use same color as front.\n@param fabricIndex: the target fabric index in the object browser\n@param materialFace: the target material index in the property editor. 1: \"Back\", 2: \"Side\"\n@param _useSameColor: use same color as front\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 5191,
+                  "block": 463
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 5523,
+                  "block": 463,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetUseSameColorAsFront(unsigned int fabricIndex, int materialFace, bool _useSameColor)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Set use same color as front.\n/// @param fabricIndex: the target fabric index in the object browser\n/// @param materialFace: the target material index in the property editor. 1: \"Back\", 2: \"Side\"\n/// @param _useSameColor: use same color as front",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 5202,
+                    "block": 464
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 5534,
+                    "block": 464,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param fabricIndex: the target fabric index in the object browser",
+            "@param materialFace: the target material index in the property editor. 1: \"Back\", 2: \"Side\"",
+            "@param _useSameColor: use same color as front"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "fabric_api.SetUseSameColorAsFront#4a392855448ba467",
+          "signature_normalized": "def SetUseSameColorAsFront(colorwayIndex : int, fabricIndex : int, materialFace : int, _useSameColor : bool) -> None",
+          "signature_raw": "def SetUseSameColorAsFront(colorwayIndex : int, fabricIndex : int, materialFace : int, _useSameColor : bool) -> None",
+          "parameters": [
+            {
+              "raw": "colorwayIndex : int",
+              "name": "colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "fabricIndex : int",
+              "name": "fabricIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "materialFace : int",
+              "name": "materialFace",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_useSameColor : bool",
+              "name": "_useSameColor",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetUseSameColorAsFront(colorwayIndex : int, fabricIndex : int, materialFace : int, _useSameColor : bool) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Set use same color as front.\n@param colorwayIndex: target colorway index in the Colorway Editor\n@param fabricIndex: the target fabric index in the object browser\n@param materialFace: the target material index in the property editor. 1: \"Back\", 2: \"Side\"\n@param _useSameColor: use same color as front\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 5214,
+                  "block": 465
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 5547,
+                  "block": 465,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetUseSameColorAsFront(unsigned int colorwayIndex, unsigned int fabricIndex, int materialFace, bool _useSameColor)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Set use same color as front.\n/// @param colorwayIndex: target colorway index in the Colorway Editor\n/// @param fabricIndex: the target fabric index in the object browser\n/// @param materialFace: the target material index in the property editor. 1: \"Back\", 2: \"Side\"\n/// @param _useSameColor: use same color as front",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 5226,
+                    "block": 466
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 5559,
+                    "block": 466,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param colorwayIndex: target colorway index in the Colorway Editor",
+            "@param fabricIndex: the target fabric index in the object browser",
+            "@param materialFace: the target material index in the property editor. 1: \"Back\", 2: \"Side\"",
+            "@param _useSameColor: use same color as front"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "fabric_api.SetUseSameMaterialAsFront",
+      "qualified_name": "fabric_api.SetUseSameMaterialAsFront",
+      "module": "fabric_api",
+      "symbol": "SetUseSameMaterialAsFront",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "fabric_api.SetUseSameMaterialAsFront#fd91499f76ca1ef0",
+          "signature_normalized": "def SetUseSameMaterialAsFront(fabricIndex : int, materialFace : int, _useSameMaterial : bool) -> None",
+          "signature_raw": "def SetUseSameMaterialAsFront(fabricIndex : int, materialFace : int, _useSameMaterial : bool) -> None",
+          "parameters": [
+            {
+              "raw": "fabricIndex : int",
+              "name": "fabricIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "materialFace : int",
+              "name": "materialFace",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_useSameMaterial : bool",
+              "name": "_useSameMaterial",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetUseSameMaterialAsFront(fabricIndex : int, materialFace : int, _useSameMaterial : bool) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Set use same material as front. \n@param fabricIndex: the target fabric index in the object browser\n@param materialFace: the target material index in the property editor. 1: \"Back\", 2: \"Side\"\n@param _useSameMaterial: use same material as front\n@return void\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 5091,
+                  "block": 455
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 5419,
+                  "block": 455,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetUseSameMaterialAsFront(unsigned int fabricIndex, int materialFace, bool _useSameMaterial)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Set use same material as front. \n/// @param fabricIndex: the target fabric index in the object browser\n/// @param materialFace: the target material index in the property editor. 1: \"Back\", 2: \"Side\"\n/// @param _useSameMaterial: use same material as front\n/// @return void",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 5103,
+                    "block": 456
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 5431,
+                    "block": 456,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param fabricIndex: the target fabric index in the object browser",
+            "@param materialFace: the target material index in the property editor. 1: \"Back\", 2: \"Side\"",
+            "@param _useSameMaterial: use same material as front"
+          ],
+          "return_docs_raw": [
+            "@return void"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "fabric_api.SetUseSameMaterialAsFront#bfaada4a3f65ada6",
+          "signature_normalized": "def SetUseSameMaterialAsFront(colorwayIndex : int, fabricIndex : int, materialFace : int, _useSameMaterial : bool) -> None",
+          "signature_raw": "def SetUseSameMaterialAsFront(colorwayIndex : int, fabricIndex : int, materialFace : int, _useSameMaterial : bool) -> None",
+          "parameters": [
+            {
+              "raw": "colorwayIndex : int",
+              "name": "colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "fabricIndex : int",
+              "name": "fabricIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "materialFace : int",
+              "name": "materialFace",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_useSameMaterial : bool",
+              "name": "_useSameMaterial",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetUseSameMaterialAsFront(colorwayIndex : int, fabricIndex : int, materialFace : int, _useSameMaterial : bool) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Set use same material as front. \n@param colorwayIndex: target colorway index in the Colorway Editor\n@param fabricIndex: the target fabric index in the object browser\n@param materialFace: the target material index in the property editor. 1: \"Back\", 2: \"Side\"\n@param _useSameMaterial: use same material as front\n@return void\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 5116,
+                  "block": 457
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 5445,
+                  "block": 457,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetUseSameMaterialAsFront(unsigned int colorwayIndex, unsigned int fabricIndex, int materialFace, bool _useSameMaterial)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Set use same material as front. \n/// @param colorwayIndex: target colorway index in the Colorway Editor\n/// @param fabricIndex: the target fabric index in the object browser\n/// @param materialFace: the target material index in the property editor. 1: \"Back\", 2: \"Side\"\n/// @param _useSameMaterial: use same material as front\n/// @return void",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 5129,
+                    "block": 458
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 5458,
+                    "block": 458,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param colorwayIndex: target colorway index in the Colorway Editor",
+            "@param fabricIndex: the target fabric index in the object browser",
+            "@param materialFace: the target material index in the property editor. 1: \"Back\", 2: \"Side\"",
+            "@param _useSameMaterial: use same material as front"
+          ],
+          "return_docs_raw": [
+            "@return void"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "fabric_api.TransformAOPOnFabric",
+      "qualified_name": "fabric_api.TransformAOPOnFabric",
+      "module": "fabric_api",
+      "symbol": "TransformAOPOnFabric",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "fabric_api.TransformAOPOnFabric#29ab4f210f2642e1",
+          "signature_normalized": "def TransformAOPOnFabric(_aopMode : int, _colorwayIndex : int, _fabricIndex : int, _styleChipIndex : int, _transformOptions : TransformOptions, _materialSide : int) -> str",
+          "signature_raw": "def TransformAOPOnFabric(_aopMode : int, _colorwayIndex : int, _fabricIndex : int, _styleChipIndex : int, _transformOptions : TransformOptions, _materialSide : int) -> str",
+          "parameters": [
+            {
+              "raw": "_aopMode : int",
+              "name": "_aopMode",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_fabricIndex : int",
+              "name": "_fabricIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_styleChipIndex : int",
+              "name": "_styleChipIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_transformOptions : TransformOptions",
+              "name": "_transformOptions",
+              "annotation_raw": "TransformOptions"
+            },
+            {
+              "raw": "_materialSide : int",
+              "name": "_materialSide",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def TransformAOPOnFabric(_aopMode : int, _colorwayIndex : int, _fabricIndex : int, _styleChipIndex : int, _transformOptions : TransformOptions, _materialSide : int) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Transform (rotate, scale, translate) an AOP texture on a fabric. Works for both Print and BaseColorMap modes.\n@param _aopMode: texture application mode: 0=Print, 1=BaseColorMap\n@param _colorwayIndex: target colorway index (0 to n-1 for specific colorway, -1 to apply to all colorways when \"Show all Colorways\" is on)\n@param _fabricIndex: target fabric index in the object browser\n@param _styleChipIndex: target AOP style chip index (>= 0 for specific style chip, -1 for all applicable style chips). Only used in Print mode (_aopMode=0)\n@param _transformOptions: transformation options containing angle, width/height (mm/percent), position, and aspect ratio settings\n@param _materialSide: which material face: 0=Front (default), 1=Back, 2=Side\n@return JSON string with \"status\" (success/failure) and \"description\" (details about the operation)\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 9251,
+                  "block": 811
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 9757,
+                  "block": 811,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "TransformAOPOnFabric(int _aopMode, int _colorwayIndex, int _fabricIndex, int _styleChipIndex, const TransformOptions& _transformOptions, int _materialSide)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Transform (rotate, scale, translate) an AOP texture on a fabric. Works for both Print and BaseColorMap modes.\n/// @param _aopMode: texture application mode: 0=Print, 1=BaseColorMap\n/// @param _colorwayIndex: target colorway index (0 to n-1 for specific colorway, -1 to apply to all colorways when \"Show all Colorways\" is on)\n/// @param _fabricIndex: target fabric index in the object browser\n/// @param _styleChipIndex: target AOP style chip index (>= 0 for specific style chip, -1 for all applicable style chips). Only used in Print mode (_aopMode=0)\n/// @param _transformOptions: transformation options containing angle, width/height (mm/percent), position, and aspect ratio settings\n/// @param _materialSide: which material face: 0=Front (default), 1=Back, 2=Side\n/// @return JSON string with \"status\" (success/failure) and \"description\" (details about the operation)",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 9266,
+                    "block": 812
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 9772,
+                    "block": 812,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "TransformOptions",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:TransformOptions"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param _aopMode: texture application mode: 0=Print, 1=BaseColorMap",
+            "@param _colorwayIndex: target colorway index (0 to n-1 for specific colorway, -1 to apply to all colorways when \"Show all Colorways\" is on)",
+            "@param _fabricIndex: target fabric index in the object browser",
+            "@param _styleChipIndex: target AOP style chip index (>= 0 for specific style chip, -1 for all applicable style chips). Only used in Print mode (_aopMode=0)",
+            "@param _transformOptions: transformation options containing angle, width/height (mm/percent), position, and aspect ratio settings",
+            "@param _materialSide: which material face: 0=Front (default), 1=Back, 2=Side"
+          ],
+          "return_docs_raw": [
+            "@return JSON string with \"status\" (success/failure) and \"description\" (details about the operation)"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    }
+  ]
+}

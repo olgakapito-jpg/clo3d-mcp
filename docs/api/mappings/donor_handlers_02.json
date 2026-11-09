@@ -1,0 +1,3805 @@
+[
+  {
+    "command": "set_camera_view",
+    "function": "handle_set_camera_view",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1655,
+        1655
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        624,
+        629
+      ]
+    },
+    "native_ids": [
+      "utility_api.Refresh3DWindow",
+      "utility_api.SetCamViewPoint",
+      "utility_api.SetZoomView"
+    ],
+    "references": [
+      {
+        "id": "utility_api.SetCamViewPoint",
+        "kind": "direct_call",
+        "expression": "utility_api.SetCamViewPoint(int(params['view_index']))",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          625,
+          625
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "utility_api.SetZoomView",
+        "kind": "direct_call",
+        "expression": "utility_api.SetZoomView()",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          627,
+          627
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "utility_api.Refresh3DWindow",
+        "kind": "direct_call",
+        "expression": "utility_api.Refresh3DWindow()",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          628,
+          628
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_set_camera_view"
+    ]
+  },
+  {
+    "command": "set_collision_thickness",
+    "function": "handle_set_collision_thickness",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1737,
+        1737
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1292,
+        1295
+      ]
+    },
+    "native_ids": [
+      "pattern_api.GetAddlThicknessCollisionValue",
+      "pattern_api.SetAddlThicknessCollision"
+    ],
+    "references": [
+      {
+        "id": "pattern_api.SetAddlThicknessCollision",
+        "kind": "direct_call",
+        "expression": "pattern_api.SetAddlThicknessCollision(index, float(params['thickness']))",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1294,
+          1294
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "pattern_api.GetAddlThicknessCollisionValue",
+        "kind": "direct_call",
+        "expression": "pattern_api.GetAddlThicknessCollisionValue(index)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1295,
+          1295
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_set_collision_thickness"
+    ]
+  },
+  {
+    "command": "set_colorway_name",
+    "function": "handle_set_colorway_name",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1807,
+        1807
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        360,
+        364
+      ]
+    },
+    "native_ids": [
+      "utility_api.SetColorwayName"
+    ],
+    "references": [
+      {
+        "id": "utility_api.SetColorwayName",
+        "kind": "direct_call",
+        "expression": "utility_api.SetColorwayName(index, name)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          363,
+          363
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_set_colorway_name"
+    ]
+  },
+  {
+    "command": "set_current_colorway",
+    "function": "handle_set_current_colorway",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1806,
+        1806
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        354,
+        357
+      ]
+    },
+    "native_ids": [
+      "utility_api.SetCurrentColorwayIndex"
+    ],
+    "references": [
+      {
+        "id": "utility_api.SetCurrentColorwayIndex",
+        "kind": "direct_call",
+        "expression": "utility_api.SetCurrentColorwayIndex(index)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          356,
+          356
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_set_current_colorway"
+    ]
+  },
+  {
+    "command": "set_current_fabric",
+    "function": "handle_set_current_fabric",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1755,
+        1755
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1466,
+        1472
+      ]
+    },
+    "native_ids": [
+      "fabric_api.GetCurrentFabricIndex",
+      "fabric_api.SetCurrentFabricIndex"
+    ],
+    "references": [
+      {
+        "id": "fabric_api.SetCurrentFabricIndex",
+        "kind": "direct_call",
+        "expression": "fabric_api.SetCurrentFabricIndex(int(params['colorway_index']), index)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1469,
+          1469
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "fabric_api.SetCurrentFabricIndex",
+        "kind": "direct_call",
+        "expression": "fabric_api.SetCurrentFabricIndex(index)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1471,
+          1471
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "fabric_api.GetCurrentFabricIndex",
+        "kind": "direct_call",
+        "expression": "fabric_api.GetCurrentFabricIndex()",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1472,
+          1472
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_set_current_fabric"
+    ]
+  },
+  {
+    "command": "set_elastic",
+    "function": "handle_set_elastic",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1650,
+        1650
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        590,
+        601
+      ]
+    },
+    "native_ids": [
+      "pattern_api.SetPatternPieceElastic",
+      "pattern_api.SetPatternPieceElasticSegmentLength",
+      "pattern_api.SetPatternPieceElasticStrength",
+      "pattern_api.SetPatternPieceElasticStrengthRatio",
+      "pattern_api.SetPatternPieceElasticTotalLength"
+    ],
+    "references": [
+      {
+        "id": "pattern_api.SetPatternPieceElastic",
+        "kind": "direct_call",
+        "expression": "pattern_api.SetPatternPieceElastic(index, line, bool(params.get('enabled', True)))",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          592,
+          592
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "pattern_api.SetPatternPieceElasticStrength",
+        "kind": "direct_call",
+        "expression": "pattern_api.SetPatternPieceElasticStrength(index, line, float(params['strength']))",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          594,
+          594
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "pattern_api.SetPatternPieceElasticStrengthRatio",
+        "kind": "direct_call",
+        "expression": "pattern_api.SetPatternPieceElasticStrengthRatio(index, line, int(params['strength_ratio']))",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          596,
+          596
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "pattern_api.SetPatternPieceElasticTotalLength",
+        "kind": "direct_call",
+        "expression": "pattern_api.SetPatternPieceElasticTotalLength(index, line, float(params['total_length']))",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          598,
+          598
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "pattern_api.SetPatternPieceElasticSegmentLength",
+        "kind": "direct_call",
+        "expression": "pattern_api.SetPatternPieceElasticSegmentLength(index, line, float(params['segment_length']))",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          600,
+          600
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_set_elastic"
+    ]
+  },
+  {
+    "command": "set_fabric",
+    "function": "handle_set_fabric",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1702,
+        1702
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1019,
+        1041
+      ]
+    },
+    "native_ids": [
+      "fabric_api.SetFabricInformation",
+      "fabric_api.SetFabricName",
+      "fabric_api.SetFabricWidth"
+    ],
+    "references": [
+      {
+        "id": "fabric_api.SetFabricName",
+        "kind": "direct_call",
+        "expression": "fabric_api.SetFabricName(int(colorway), index, str(params['name']))",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1024,
+          1024
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "fabric_api.SetFabricName",
+        "kind": "direct_call",
+        "expression": "fabric_api.SetFabricName(index, str(params['name']))",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1026,
+          1026
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "fabric_api.SetFabricWidth",
+        "kind": "direct_call",
+        "expression": "fabric_api.SetFabricWidth(int(colorway), index, float(params['width_mm']))",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1030,
+          1030
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "fabric_api.SetFabricWidth",
+        "kind": "direct_call",
+        "expression": "fabric_api.SetFabricWidth(index, float(params['width_mm']))",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1032,
+          1032
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "fabric_api.SetFabricInformation",
+        "kind": "direct_call",
+        "expression": "fabric_api.SetFabricInformation(int(colorway), index, info)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1037,
+          1037
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "fabric_api.SetFabricInformation",
+        "kind": "direct_call",
+        "expression": "fabric_api.SetFabricInformation(index, info)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1039,
+          1039
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_set_fabric"
+    ]
+  },
+  {
+    "command": "set_fabric_color",
+    "function": "handle_set_fabric_color",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1789,
+        1789
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        189,
+        202
+      ]
+    },
+    "native_ids": [
+      "fabric_api.SetFabricPBRMaterialBaseColor"
+    ],
+    "references": [
+      {
+        "id": "fabric_api.SetFabricPBRMaterialBaseColor",
+        "kind": "direct_call",
+        "expression": "fabric_api.SetFabricPBRMaterialBaseColor(fabric_index, material_face, r_f, g_f, b_f, a_f)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          201,
+          201
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_set_fabric_color"
+    ]
+  },
+  {
+    "command": "set_fabric_custom_image",
+    "function": "handle_set_fabric_custom_image",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1763,
+        1763
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1565,
+        1567
+      ]
+    },
+    "native_ids": [
+      "fabric_api.SetCustomImage"
+    ],
+    "references": [
+      {
+        "id": "fabric_api.SetCustomImage",
+        "kind": "callable_reference",
+        "expression": "fabric_api.SetCustomImage",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1566,
+          1566
+        ],
+        "invoked_via": {
+          "helper": "_fabric_call",
+          "parameter": "function",
+          "call_sites": [
+            {
+              "path": "plugin/clo3d_mcp_plugin.py",
+              "lines": [
+                1462,
+                1462
+              ]
+            },
+            {
+              "path": "plugin/clo3d_mcp_plugin.py",
+              "lines": [
+                1463,
+                1463
+              ]
+            }
+          ]
+        },
+        "via": [],
+        "confidence": "syntactic_indirect"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "_fabric_call",
+      "handle_set_fabric_custom_image"
+    ]
+  },
+  {
+    "command": "set_fabric_displacement",
+    "function": "handle_set_fabric_displacement",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1759,
+        1759
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1528,
+        1537
+      ]
+    },
+    "native_ids": [
+      "fabric_api.SetPBRMaterialDisplacementMap",
+      "fabric_api.SetPBRMaterialDisplacementMapValue"
+    ],
+    "references": [
+      {
+        "id": "fabric_api.SetPBRMaterialDisplacementMap",
+        "kind": "callable_reference",
+        "expression": "fabric_api.SetPBRMaterialDisplacementMap",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1531,
+          1531
+        ],
+        "invoked_via": {
+          "helper": "_fabric_call",
+          "parameter": "function",
+          "call_sites": [
+            {
+              "path": "plugin/clo3d_mcp_plugin.py",
+              "lines": [
+                1462,
+                1462
+              ]
+            },
+            {
+              "path": "plugin/clo3d_mcp_plugin.py",
+              "lines": [
+                1463,
+                1463
+              ]
+            }
+          ]
+        },
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "fabric_api.SetPBRMaterialDisplacementMapValue",
+        "kind": "callable_reference",
+        "expression": "fabric_api.SetPBRMaterialDisplacementMapValue",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1533,
+          1533
+        ],
+        "invoked_via": {
+          "helper": "_fabric_call",
+          "parameter": "function",
+          "call_sites": [
+            {
+              "path": "plugin/clo3d_mcp_plugin.py",
+              "lines": [
+                1462,
+                1462
+              ]
+            },
+            {
+              "path": "plugin/clo3d_mcp_plugin.py",
+              "lines": [
+                1463,
+                1463
+              ]
+            }
+          ]
+        },
+        "via": [],
+        "confidence": "syntactic_indirect"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "_fabric_call",
+      "handle_set_fabric_displacement"
+    ]
+  },
+  {
+    "command": "set_fabric_maps",
+    "function": "handle_set_fabric_maps",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1756,
+        1756
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1475,
+        1490
+      ]
+    },
+    "native_ids": [
+      "fabric_api.SetBaseTextureMapImageGivenFilePath",
+      "fabric_api.SetDisplacementMapImageGivenFilePath",
+      "fabric_api.SetMetalnessMapImageGivenFilePath",
+      "fabric_api.SetNormalMapImageGivenFilePath",
+      "fabric_api.SetOpacityMapImageGivenFilePath",
+      "fabric_api.SetRoughnessMapImageGivenFilePath"
+    ],
+    "references": [
+      {
+        "id": "fabric_api.SetBaseTextureMapImageGivenFilePath",
+        "kind": "callable_reference",
+        "expression": "fabric_api.SetBaseTextureMapImageGivenFilePath",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1477,
+          1477
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "fabric_api.SetNormalMapImageGivenFilePath",
+        "kind": "callable_reference",
+        "expression": "fabric_api.SetNormalMapImageGivenFilePath",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1478,
+          1478
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "fabric_api.SetDisplacementMapImageGivenFilePath",
+        "kind": "callable_reference",
+        "expression": "fabric_api.SetDisplacementMapImageGivenFilePath",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1479,
+          1479
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "fabric_api.SetOpacityMapImageGivenFilePath",
+        "kind": "callable_reference",
+        "expression": "fabric_api.SetOpacityMapImageGivenFilePath",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1480,
+          1480
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "fabric_api.SetRoughnessMapImageGivenFilePath",
+        "kind": "callable_reference",
+        "expression": "fabric_api.SetRoughnessMapImageGivenFilePath",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1481,
+          1481
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "fabric_api.SetMetalnessMapImageGivenFilePath",
+        "kind": "callable_reference",
+        "expression": "fabric_api.SetMetalnessMapImageGivenFilePath",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1482,
+          1482
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_set_fabric_maps"
+    ]
+  },
+  {
+    "command": "set_fabric_material",
+    "function": "handle_set_fabric_material",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1758,
+        1758
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1505,
+        1525
+      ]
+    },
+    "native_ids": [
+      "fabric_api.GetMaterialType",
+      "fabric_api.GetMetalness",
+      "fabric_api.SetMaterialType",
+      "fabric_api.SetMetalness",
+      "fabric_api.SetNormalMapIntensity",
+      "fabric_api.SetOpacityIntensity",
+      "fabric_api.SetReflectionIntensity",
+      "fabric_api.SetReflectionRoughness",
+      "fabric_api.SetRoughnessType",
+      "fabric_api.SetRoughnessValueIntensity",
+      "fabric_api.SetRoughnessValueMapIntensity",
+      "fabric_api.SetRoughnessValueMapInvert",
+      "fabric_api.SetUseSameColorAsFront",
+      "fabric_api.SetUseSameMaterialAsFront"
+    ],
+    "references": [
+      {
+        "id": "fabric_api.SetMaterialType",
+        "kind": "callable_reference",
+        "expression": "fabric_api.SetMaterialType",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1507,
+          1507
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "fabric_api.SetMetalness",
+        "kind": "callable_reference",
+        "expression": "fabric_api.SetMetalness",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1508,
+          1508
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "fabric_api.SetRoughnessType",
+        "kind": "callable_reference",
+        "expression": "fabric_api.SetRoughnessType",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1509,
+          1509
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "fabric_api.SetRoughnessValueIntensity",
+        "kind": "callable_reference",
+        "expression": "fabric_api.SetRoughnessValueIntensity",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1510,
+          1510
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "fabric_api.SetRoughnessValueMapIntensity",
+        "kind": "callable_reference",
+        "expression": "fabric_api.SetRoughnessValueMapIntensity",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1511,
+          1511
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "fabric_api.SetRoughnessValueMapInvert",
+        "kind": "callable_reference",
+        "expression": "fabric_api.SetRoughnessValueMapInvert",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1512,
+          1512
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "fabric_api.SetReflectionIntensity",
+        "kind": "callable_reference",
+        "expression": "fabric_api.SetReflectionIntensity",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1513,
+          1513
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "fabric_api.SetReflectionRoughness",
+        "kind": "callable_reference",
+        "expression": "fabric_api.SetReflectionRoughness",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1514,
+          1514
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "fabric_api.SetNormalMapIntensity",
+        "kind": "callable_reference",
+        "expression": "fabric_api.SetNormalMapIntensity",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1515,
+          1515
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "fabric_api.SetOpacityIntensity",
+        "kind": "callable_reference",
+        "expression": "fabric_api.SetOpacityIntensity",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1516,
+          1516
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "fabric_api.SetUseSameColorAsFront",
+        "kind": "callable_reference",
+        "expression": "fabric_api.SetUseSameColorAsFront",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1517,
+          1517
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "fabric_api.SetUseSameMaterialAsFront",
+        "kind": "callable_reference",
+        "expression": "fabric_api.SetUseSameMaterialAsFront",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1518,
+          1518
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "fabric_api.GetMetalness",
+        "kind": "callable_reference",
+        "expression": "fabric_api.GetMetalness",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1524,
+          1524
+        ],
+        "invoked_via": {
+          "helper": "_safe",
+          "parameter": "function",
+          "call_sites": [
+            {
+              "path": "plugin/clo3d_mcp_plugin.py",
+              "lines": [
+                522,
+                522
+              ]
+            }
+          ]
+        },
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "fabric_api.GetMaterialType",
+        "kind": "callable_reference",
+        "expression": "fabric_api.GetMaterialType",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1525,
+          1525
+        ],
+        "invoked_via": {
+          "helper": "_safe",
+          "parameter": "function",
+          "call_sites": [
+            {
+              "path": "plugin/clo3d_mcp_plugin.py",
+              "lines": [
+                522,
+                522
+              ]
+            }
+          ]
+        },
+        "via": [],
+        "confidence": "syntactic_indirect"
+      }
+    ],
+    "dynamic_expressions": [
+      {
+        "expression": "getattr(obj, name, None)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          676,
+          676
+        ],
+        "via": [
+          {
+            "function": "_safe",
+            "path": "plugin/clo3d_mcp_plugin.py",
+            "lines": [
+              1524,
+              1524
+            ]
+          },
+          {
+            "function": "_fields",
+            "path": "plugin/clo3d_mcp_plugin.py",
+            "lines": [
+              526,
+              526
+            ]
+          }
+        ]
+      }
+    ],
+    "reachable_functions": [
+      "_fabric_call",
+      "_fields",
+      "_safe",
+      "handle_set_fabric_material"
+    ]
+  },
+  {
+    "command": "set_fit_maps",
+    "function": "handle_set_fit_maps",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1659,
+        1659
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        658,
+        664
+      ]
+    },
+    "native_ids": [
+      "utility_api.GetStrainMapStatus",
+      "utility_api.GetStressMapStatus",
+      "utility_api.Refresh3DWindow",
+      "utility_api.SetStrainMapStatus",
+      "utility_api.SetStressMapStatus"
+    ],
+    "references": [
+      {
+        "id": "utility_api.SetStressMapStatus",
+        "kind": "direct_call",
+        "expression": "utility_api.SetStressMapStatus(bool(params['stress']))",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          660,
+          660
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "utility_api.SetStrainMapStatus",
+        "kind": "direct_call",
+        "expression": "utility_api.SetStrainMapStatus(bool(params['strain']))",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          662,
+          662
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "utility_api.Refresh3DWindow",
+        "kind": "direct_call",
+        "expression": "utility_api.Refresh3DWindow()",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          663,
+          663
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "utility_api.GetStressMapStatus",
+        "kind": "direct_call",
+        "expression": "utility_api.GetStressMapStatus()",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          664,
+          664
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "utility_api.GetStrainMapStatus",
+        "kind": "direct_call",
+        "expression": "utility_api.GetStrainMapStatus()",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          664,
+          664
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_set_fit_maps"
+    ]
+  },
+  {
+    "command": "set_grain_direction",
+    "function": "handle_set_grain_direction",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1646,
+        1646
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        562,
+        564
+      ]
+    },
+    "native_ids": [
+      "pattern_api.SetPatternPieceGrainDirection"
+    ],
+    "references": [
+      {
+        "id": "pattern_api.SetPatternPieceGrainDirection",
+        "kind": "direct_call",
+        "expression": "pattern_api.SetPatternPieceGrainDirection(int(params['pattern_index']), float(params['degrees']))",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          563,
+          563
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_set_grain_direction"
+    ]
+  },
+  {
+    "command": "set_graphic_style",
+    "function": "handle_set_graphic_style",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1666,
+        1666
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        699,
+        721
+      ]
+    },
+    "native_ids": [
+      "utility_api.SetGraphicStyleColor",
+      "utility_api.SetGraphicStyleDimensions",
+      "utility_api.SetGraphicStyleHeight",
+      "utility_api.SetGraphicStyleName",
+      "utility_api.SetGraphicStyleWidth"
+    ],
+    "references": [
+      {
+        "id": "utility_api.SetGraphicStyleName",
+        "kind": "direct_call",
+        "expression": "utility_api.SetGraphicStyleName(index, str(params['name']))",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          702,
+          702
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "utility_api.SetGraphicStyleDimensions",
+        "kind": "direct_call",
+        "expression": "utility_api.SetGraphicStyleDimensions(index, float(width), float(height))",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          706,
+          706
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "utility_api.SetGraphicStyleWidth",
+        "kind": "direct_call",
+        "expression": "utility_api.SetGraphicStyleWidth(index, float(width), bool(params.get('only_this_side', False)))",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          709,
+          709
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "utility_api.SetGraphicStyleHeight",
+        "kind": "direct_call",
+        "expression": "utility_api.SetGraphicStyleHeight(index, float(height), bool(params.get('only_this_side', False)))",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          712,
+          712
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "utility_api.SetGraphicStyleColor",
+        "kind": "direct_call",
+        "expression": "utility_api.SetGraphicStyleColor(index, int(params['colorway_index']), r, g, b, a)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          717,
+          717
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "utility_api.SetGraphicStyleColor",
+        "kind": "direct_call",
+        "expression": "utility_api.SetGraphicStyleColor(index, r, g, b, a)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          719,
+          719
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_set_graphic_style"
+    ]
+  },
+  {
+    "command": "set_graphic_style_maps",
+    "function": "handle_set_graphic_style_maps",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1668,
+        1668
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        730,
+        747
+      ]
+    },
+    "native_ids": [
+      "utility_api.SetGraphicBaseColorMapTexture",
+      "utility_api.SetGraphicDisplacementMapTexture",
+      "utility_api.SetGraphicMetalnessMapTexture",
+      "utility_api.SetGraphicNormalMapTexture",
+      "utility_api.SetGraphicOpacityMapTexture",
+      "utility_api.SetGraphicRoughnessMapTexture"
+    ],
+    "references": [
+      {
+        "id": "utility_api.SetGraphicBaseColorMapTexture",
+        "kind": "direct_call",
+        "expression": "utility_api.SetGraphicBaseColorMapTexture(str(params['base_color']), index, int(params['colorway_index']))",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          734,
+          734
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "utility_api.SetGraphicBaseColorMapTexture",
+        "kind": "direct_call",
+        "expression": "utility_api.SetGraphicBaseColorMapTexture(str(params['base_color']), index)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          736,
+          736
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "utility_api.SetGraphicNormalMapTexture",
+        "kind": "callable_reference",
+        "expression": "utility_api.SetGraphicNormalMapTexture",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          738,
+          738
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "utility_api.SetGraphicDisplacementMapTexture",
+        "kind": "callable_reference",
+        "expression": "utility_api.SetGraphicDisplacementMapTexture",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          739,
+          739
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "utility_api.SetGraphicOpacityMapTexture",
+        "kind": "callable_reference",
+        "expression": "utility_api.SetGraphicOpacityMapTexture",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          740,
+          740
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "utility_api.SetGraphicRoughnessMapTexture",
+        "kind": "callable_reference",
+        "expression": "utility_api.SetGraphicRoughnessMapTexture",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          741,
+          741
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "utility_api.SetGraphicMetalnessMapTexture",
+        "kind": "callable_reference",
+        "expression": "utility_api.SetGraphicMetalnessMapTexture",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          742,
+          742
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_set_graphic_style_maps"
+    ]
+  },
+  {
+    "command": "set_mesh_type",
+    "function": "handle_set_mesh_type",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1696,
+        1696
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        970,
+        972
+      ]
+    },
+    "native_ids": [
+      "pattern_api.GetMeshCountByType",
+      "pattern_api.SetMeshType"
+    ],
+    "references": [
+      {
+        "id": "pattern_api.SetMeshType",
+        "kind": "direct_call",
+        "expression": "pattern_api.SetMeshType(int(params['pattern_index']), str(params['mesh_type']))",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          971,
+          971
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "pattern_api.GetMeshCountByType",
+        "kind": "callable_reference",
+        "expression": "pattern_api.GetMeshCountByType",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          972,
+          972
+        ],
+        "invoked_via": {
+          "helper": "_safe",
+          "parameter": "function",
+          "call_sites": [
+            {
+              "path": "plugin/clo3d_mcp_plugin.py",
+              "lines": [
+                522,
+                522
+              ]
+            }
+          ]
+        },
+        "via": [],
+        "confidence": "syntactic_indirect"
+      }
+    ],
+    "dynamic_expressions": [
+      {
+        "expression": "getattr(obj, name, None)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          676,
+          676
+        ],
+        "via": [
+          {
+            "function": "_safe",
+            "path": "plugin/clo3d_mcp_plugin.py",
+            "lines": [
+              972,
+              972
+            ]
+          },
+          {
+            "function": "_fields",
+            "path": "plugin/clo3d_mcp_plugin.py",
+            "lines": [
+              526,
+              526
+            ]
+          }
+        ]
+      }
+    ],
+    "reachable_functions": [
+      "_fields",
+      "_safe",
+      "handle_set_mesh_type"
+    ]
+  },
+  {
+    "command": "set_nesting_pattern",
+    "function": "handle_set_nesting_pattern",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1726,
+        1726
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1213,
+        1221
+      ]
+    },
+    "native_ids": [
+      "pattern_api.SetNestingFixedPatternPiecePos",
+      "pattern_api.SetNestingPatternPieceGrainDirection"
+    ],
+    "references": [
+      {
+        "id": "pattern_api.SetNestingFixedPatternPiecePos",
+        "kind": "direct_call",
+        "expression": "pattern_api.SetNestingFixedPatternPiecePos(index, int(params['x']), int(params['y']))",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1216,
+          1216
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "pattern_api.SetNestingPatternPieceGrainDirection",
+        "kind": "direct_call",
+        "expression": "pattern_api.SetNestingPatternPieceGrainDirection(index, int(params['grain_mode']))",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1219,
+          1219
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_set_nesting_pattern"
+    ]
+  },
+  {
+    "command": "set_particle_distance",
+    "function": "handle_set_particle_distance",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1647,
+        1647
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        567,
+        569
+      ]
+    },
+    "native_ids": [
+      "pattern_api.SetParticleDistanceOfPattern"
+    ],
+    "references": [
+      {
+        "id": "pattern_api.SetParticleDistanceOfPattern",
+        "kind": "direct_call",
+        "expression": "pattern_api.SetParticleDistanceOfPattern(int(params['pattern_index']), float(params['distance']))",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          568,
+          568
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_set_particle_distance"
+    ]
+  },
+  {
+    "command": "set_particle_distance_all",
+    "function": "handle_set_particle_distance_all",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1692,
+        1692
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        928,
+        930
+      ]
+    },
+    "native_ids": [
+      "pattern_api.SetParticleDistanceOfPatterns"
+    ],
+    "references": [
+      {
+        "id": "pattern_api.SetParticleDistanceOfPatterns",
+        "kind": "direct_call",
+        "expression": "pattern_api.SetParticleDistanceOfPatterns(float(params['distance']))",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          929,
+          929
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_set_particle_distance_all"
+    ]
+  },
+  {
+    "command": "set_pattern_category",
+    "function": "handle_set_pattern_category",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1676,
+        1676
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        797,
+        805
+      ]
+    },
+    "native_ids": [
+      "pattern_api.SetPatternPieceCategory",
+      "pattern_api.SetPatternPieceClassification"
+    ],
+    "references": [
+      {
+        "id": "pattern_api.SetPatternPieceCategory",
+        "kind": "direct_call",
+        "expression": "pattern_api.SetPatternPieceCategory(index, int(params['category']))",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          800,
+          800
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "pattern_api.SetPatternPieceClassification",
+        "kind": "direct_call",
+        "expression": "pattern_api.SetPatternPieceClassification(index, str(params['classification']))",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          803,
+          803
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_set_pattern_category"
+    ]
+  },
+  {
+    "command": "set_pattern_fabric",
+    "function": "handle_set_pattern_fabric",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1704,
+        1704
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1050,
+        1052
+      ]
+    },
+    "native_ids": [
+      "pattern_api.SetPatternPieceFabricIndex"
+    ],
+    "references": [
+      {
+        "id": "pattern_api.SetPatternPieceFabricIndex",
+        "kind": "direct_call",
+        "expression": "pattern_api.SetPatternPieceFabricIndex(int(params['pattern_index']), int(params['fabric_index']))",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1051,
+          1051
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_set_pattern_fabric"
+    ]
+  },
+  {
+    "command": "set_pattern_name",
+    "function": "handle_set_pattern_name",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1779,
+        1779
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        115,
+        119
+      ]
+    },
+    "native_ids": [
+      "pattern_api.SetPatternPieceName"
+    ],
+    "references": [
+      {
+        "id": "pattern_api.SetPatternPieceName",
+        "kind": "direct_call",
+        "expression": "pattern_api.SetPatternPieceName(index, name)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          118,
+          118
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_set_pattern_name"
+    ]
+  },
+  {
+    "command": "set_pattern_position",
+    "function": "handle_set_pattern_position",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1645,
+        1645
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        557,
+        559
+      ]
+    },
+    "native_ids": [
+      "pattern_api.SetPatternPiecePos"
+    ],
+    "references": [
+      {
+        "id": "pattern_api.SetPatternPiecePos",
+        "kind": "direct_call",
+        "expression": "pattern_api.SetPatternPiecePos(int(params['pattern_index']), float(params['x']), float(params['y']))",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          558,
+          558
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_set_pattern_position"
+    ]
+  },
+  {
+    "command": "set_pattern_state",
+    "function": "handle_set_pattern_state",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1691,
+        1691
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        911,
+        925
+      ]
+    },
+    "native_ids": [
+      "pattern_api.SetPatternFreeze",
+      "pattern_api.SetPatternHide3D",
+      "pattern_api.SetPatternLayer",
+      "pattern_api.SetPatternLock",
+      "pattern_api.SetPatternPieceGrainLinkAllColorways",
+      "pattern_api.SetPatternPieceSolidify",
+      "pattern_api.SetPatternPieceSolidifyStrengthen",
+      "pattern_api.SetPatternStrengthen"
+    ],
+    "references": [
+      {
+        "id": "pattern_api.SetPatternLayer",
+        "kind": "callable_reference",
+        "expression": "pattern_api.SetPatternLayer",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          913,
+          913
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "pattern_api.SetPatternFreeze",
+        "kind": "callable_reference",
+        "expression": "pattern_api.SetPatternFreeze",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          914,
+          914
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "pattern_api.SetPatternLock",
+        "kind": "callable_reference",
+        "expression": "pattern_api.SetPatternLock",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          915,
+          915
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "pattern_api.SetPatternHide3D",
+        "kind": "callable_reference",
+        "expression": "pattern_api.SetPatternHide3D",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          916,
+          916
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "pattern_api.SetPatternPieceSolidify",
+        "kind": "callable_reference",
+        "expression": "pattern_api.SetPatternPieceSolidify",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          917,
+          917
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "pattern_api.SetPatternPieceSolidifyStrengthen",
+        "kind": "callable_reference",
+        "expression": "pattern_api.SetPatternPieceSolidifyStrengthen",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          918,
+          918
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "pattern_api.SetPatternStrengthen",
+        "kind": "callable_reference",
+        "expression": "pattern_api.SetPatternStrengthen",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          919,
+          919
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "pattern_api.SetPatternPieceGrainLinkAllColorways",
+        "kind": "callable_reference",
+        "expression": "pattern_api.SetPatternPieceGrainLinkAllColorways",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          920,
+          920
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_set_pattern_state"
+    ]
+  },
+  {
+    "command": "set_schematic",
+    "function": "handle_set_schematic",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1721,
+        1721
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1168,
+        1184
+      ]
+    },
+    "native_ids": [
+      "utility_api.GetSchematicRender",
+      "utility_api.Refresh3DWindow",
+      "utility_api.SetSchematicInternalLineWidth",
+      "utility_api.SetSchematicRender",
+      "utility_api.SetSchematicSeamLineWidth",
+      "utility_api.SetSchematicSilhouetteLineWidth",
+      "utility_api.SetSchematicTopstitchLineScalePercent",
+      "utility_api.SetShowSchematicInternalLine",
+      "utility_api.SetShowSchematicSeamLine",
+      "utility_api.SetShowSchematicSilhouetteLine",
+      "utility_api.SetShowSchematicTopstitchLine"
+    ],
+    "references": [
+      {
+        "id": "utility_api.SetSchematicRender",
+        "kind": "callable_reference",
+        "expression": "utility_api.SetSchematicRender",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1169,
+          1169
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "utility_api.SetShowSchematicSeamLine",
+        "kind": "callable_reference",
+        "expression": "utility_api.SetShowSchematicSeamLine",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1170,
+          1170
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "utility_api.SetShowSchematicInternalLine",
+        "kind": "callable_reference",
+        "expression": "utility_api.SetShowSchematicInternalLine",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1171,
+          1171
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "utility_api.SetShowSchematicTopstitchLine",
+        "kind": "callable_reference",
+        "expression": "utility_api.SetShowSchematicTopstitchLine",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1172,
+          1172
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "utility_api.SetShowSchematicSilhouetteLine",
+        "kind": "callable_reference",
+        "expression": "utility_api.SetShowSchematicSilhouetteLine",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1173,
+          1173
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "utility_api.SetSchematicSeamLineWidth",
+        "kind": "callable_reference",
+        "expression": "utility_api.SetSchematicSeamLineWidth",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1174,
+          1174
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "utility_api.SetSchematicInternalLineWidth",
+        "kind": "callable_reference",
+        "expression": "utility_api.SetSchematicInternalLineWidth",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1175,
+          1175
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "utility_api.SetSchematicSilhouetteLineWidth",
+        "kind": "callable_reference",
+        "expression": "utility_api.SetSchematicSilhouetteLineWidth",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1176,
+          1176
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "utility_api.SetSchematicTopstitchLineScalePercent",
+        "kind": "callable_reference",
+        "expression": "utility_api.SetSchematicTopstitchLineScalePercent",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1177,
+          1177
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "utility_api.Refresh3DWindow",
+        "kind": "direct_call",
+        "expression": "utility_api.Refresh3DWindow()",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1183,
+          1183
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "utility_api.GetSchematicRender",
+        "kind": "direct_call",
+        "expression": "utility_api.GetSchematicRender()",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1184,
+          1184
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_set_schematic"
+    ]
+  },
+  {
+    "command": "set_seam_taping",
+    "function": "handle_set_seam_taping",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1689,
+        1689
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        899,
+        904
+      ]
+    },
+    "native_ids": [
+      "pattern_api.SetPatternPieceSametapingWidth",
+      "pattern_api.SetPatternPieceSeamtaping"
+    ],
+    "references": [
+      {
+        "id": "pattern_api.SetPatternPieceSeamtaping",
+        "kind": "direct_call",
+        "expression": "pattern_api.SetPatternPieceSeamtaping(index, line, bool(params.get('enabled', True)))",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          901,
+          901
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "pattern_api.SetPatternPieceSametapingWidth",
+        "kind": "direct_call",
+        "expression": "pattern_api.SetPatternPieceSametapingWidth(index, line, float(params['width']))",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          903,
+          903
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_set_seam_taping"
+    ]
+  },
+  {
+    "command": "set_shirring",
+    "function": "handle_set_shirring",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1649,
+        1649
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        578,
+        587
+      ]
+    },
+    "native_ids": [
+      "pattern_api.SetPatternPieceShirring",
+      "pattern_api.SetPatternPieceShirringExtend",
+      "pattern_api.SetPatternPieceShirringHeight",
+      "pattern_api.SetPatternPieceShirringInterval"
+    ],
+    "references": [
+      {
+        "id": "pattern_api.SetPatternPieceShirring",
+        "kind": "direct_call",
+        "expression": "pattern_api.SetPatternPieceShirring(index, line, bool(params.get('enabled', True)))",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          580,
+          580
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "pattern_api.SetPatternPieceShirringHeight",
+        "kind": "direct_call",
+        "expression": "pattern_api.SetPatternPieceShirringHeight(index, line, float(params['height']))",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          582,
+          582
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "pattern_api.SetPatternPieceShirringInterval",
+        "kind": "direct_call",
+        "expression": "pattern_api.SetPatternPieceShirringInterval(index, line, float(params['interval']))",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          584,
+          584
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "pattern_api.SetPatternPieceShirringExtend",
+        "kind": "direct_call",
+        "expression": "pattern_api.SetPatternPieceShirringExtend(index, line, bool(params['extend']))",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          586,
+          586
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_set_shirring"
+    ]
+  },
+  {
+    "command": "set_shrinkage",
+    "function": "handle_set_shrinkage",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1693,
+        1693
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        933,
+        939
+      ]
+    },
+    "native_ids": [
+      "pattern_api.GetShrinkagePercentage",
+      "pattern_api.SetHeightShrinkagePercentage",
+      "pattern_api.SetWidthShrinkagePercentage"
+    ],
+    "references": [
+      {
+        "id": "pattern_api.SetWidthShrinkagePercentage",
+        "kind": "direct_call",
+        "expression": "pattern_api.SetWidthShrinkagePercentage(index, float(params['width_percent']))",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          936,
+          936
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "pattern_api.SetHeightShrinkagePercentage",
+        "kind": "direct_call",
+        "expression": "pattern_api.SetHeightShrinkagePercentage(index, float(params['height_percent']))",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          938,
+          938
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "pattern_api.GetShrinkagePercentage",
+        "kind": "callable_reference",
+        "expression": "pattern_api.GetShrinkagePercentage",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          939,
+          939
+        ],
+        "invoked_via": {
+          "helper": "_safe",
+          "parameter": "function",
+          "call_sites": [
+            {
+              "path": "plugin/clo3d_mcp_plugin.py",
+              "lines": [
+                522,
+                522
+              ]
+            }
+          ]
+        },
+        "via": [],
+        "confidence": "syntactic_indirect"
+      }
+    ],
+    "dynamic_expressions": [
+      {
+        "expression": "getattr(obj, name, None)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          676,
+          676
+        ],
+        "via": [
+          {
+            "function": "_safe",
+            "path": "plugin/clo3d_mcp_plugin.py",
+            "lines": [
+              939,
+              939
+            ]
+          },
+          {
+            "function": "_fields",
+            "path": "plugin/clo3d_mcp_plugin.py",
+            "lines": [
+              526,
+              526
+            ]
+          }
+        ]
+      }
+    ],
+    "reachable_functions": [
+      "_fields",
+      "_safe",
+      "handle_set_shrinkage"
+    ]
+  },
+  {
+    "command": "set_simulation_quality",
+    "function": "handle_set_simulation_quality",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1804,
+        1804
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        331,
+        335
+      ]
+    },
+    "native_ids": [
+      "utility_api.SetSimulationQuality"
+    ],
+    "references": [
+      {
+        "id": "utility_api.SetSimulationQuality",
+        "kind": "direct_call",
+        "expression": "utility_api.SetSimulationQuality(quality, mode)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          334,
+          334
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_set_simulation_quality"
+    ]
+  },
+  {
+    "command": "set_simulation_settings",
+    "function": "handle_set_simulation_settings",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1695,
+        1695
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        947,
+        967
+      ]
+    },
+    "native_ids": [
+      "utility_api.SetSimulationAirDamping",
+      "utility_api.SetSimulationCGFinishCondition",
+      "utility_api.SetSimulationCGIterationCount",
+      "utility_api.SetSimulationCGResidual",
+      "utility_api.SetSimulationGravity",
+      "utility_api.SetSimulationGroundCollision",
+      "utility_api.SetSimulationGroundHeight",
+      "utility_api.SetSimulationLayerBasedCollisionDetection",
+      "utility_api.SetSimulationNonlinearSimulation",
+      "utility_api.SetSimulationNumberOfCPUInUse",
+      "utility_api.SetSimulationNumberOfSimulation",
+      "utility_api.SetSimulationSelfCollisionAvoidanceStiffness",
+      "utility_api.SetSimulationSelfCollisionIterationCount",
+      "utility_api.SetSimulationTimeStep"
+    ],
+    "references": [
+      {
+        "id": "utility_api.SetSimulationTimeStep",
+        "kind": "callable_reference",
+        "expression": "utility_api.SetSimulationTimeStep",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          948,
+          948
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "utility_api.SetSimulationNumberOfSimulation",
+        "kind": "callable_reference",
+        "expression": "utility_api.SetSimulationNumberOfSimulation",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          949,
+          949
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "utility_api.SetSimulationCGIterationCount",
+        "kind": "callable_reference",
+        "expression": "utility_api.SetSimulationCGIterationCount",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          950,
+          950
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "utility_api.SetSimulationCGResidual",
+        "kind": "callable_reference",
+        "expression": "utility_api.SetSimulationCGResidual",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          951,
+          951
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "utility_api.SetSimulationCGFinishCondition",
+        "kind": "callable_reference",
+        "expression": "utility_api.SetSimulationCGFinishCondition",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          952,
+          952
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "utility_api.SetSimulationSelfCollisionIterationCount",
+        "kind": "callable_reference",
+        "expression": "utility_api.SetSimulationSelfCollisionIterationCount",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          953,
+          953
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "utility_api.SetSimulationSelfCollisionAvoidanceStiffness",
+        "kind": "callable_reference",
+        "expression": "utility_api.SetSimulationSelfCollisionAvoidanceStiffness",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          954,
+          954
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "utility_api.SetSimulationLayerBasedCollisionDetection",
+        "kind": "callable_reference",
+        "expression": "utility_api.SetSimulationLayerBasedCollisionDetection",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          955,
+          955
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "utility_api.SetSimulationNonlinearSimulation",
+        "kind": "callable_reference",
+        "expression": "utility_api.SetSimulationNonlinearSimulation",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          956,
+          956
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "utility_api.SetSimulationAirDamping",
+        "kind": "callable_reference",
+        "expression": "utility_api.SetSimulationAirDamping",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          957,
+          957
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "utility_api.SetSimulationGravity",
+        "kind": "callable_reference",
+        "expression": "utility_api.SetSimulationGravity",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          958,
+          958
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "utility_api.SetSimulationGroundCollision",
+        "kind": "callable_reference",
+        "expression": "utility_api.SetSimulationGroundCollision",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          959,
+          959
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "utility_api.SetSimulationGroundHeight",
+        "kind": "callable_reference",
+        "expression": "utility_api.SetSimulationGroundHeight",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          960,
+          960
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "utility_api.SetSimulationNumberOfCPUInUse",
+        "kind": "callable_reference",
+        "expression": "utility_api.SetSimulationNumberOfCPUInUse",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          961,
+          961
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_set_simulation_settings"
+    ]
+  },
+  {
+    "command": "set_substance",
+    "function": "handle_set_substance",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1762,
+        1762
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1554,
+        1562
+      ]
+    },
+    "native_ids": [
+      "fabric_api.SetSubstancePreset",
+      "fabric_api.SetSubstanceResolution"
+    ],
+    "references": [
+      {
+        "id": "fabric_api.SetSubstancePreset",
+        "kind": "callable_reference",
+        "expression": "fabric_api.SetSubstancePreset",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1557,
+          1557
+        ],
+        "invoked_via": {
+          "helper": "_fabric_call",
+          "parameter": "function",
+          "call_sites": [
+            {
+              "path": "plugin/clo3d_mcp_plugin.py",
+              "lines": [
+                1462,
+                1462
+              ]
+            },
+            {
+              "path": "plugin/clo3d_mcp_plugin.py",
+              "lines": [
+                1463,
+                1463
+              ]
+            }
+          ]
+        },
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "fabric_api.SetSubstanceResolution",
+        "kind": "callable_reference",
+        "expression": "fabric_api.SetSubstanceResolution",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1560,
+          1560
+        ],
+        "invoked_via": {
+          "helper": "_fabric_call",
+          "parameter": "function",
+          "call_sites": [
+            {
+              "path": "plugin/clo3d_mcp_plugin.py",
+              "lines": [
+                1462,
+                1462
+              ]
+            },
+            {
+              "path": "plugin/clo3d_mcp_plugin.py",
+              "lines": [
+                1463,
+                1463
+              ]
+            }
+          ]
+        },
+        "via": [],
+        "confidence": "syntactic_indirect"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "_fabric_call",
+      "handle_set_substance"
+    ]
+  },
+  {
+    "command": "set_texture_mapping",
+    "function": "handle_set_texture_mapping",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1760,
+        1760
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1540,
+        1542
+      ]
+    },
+    "native_ids": [
+      "fabric_api.SetTextureMapping"
+    ],
+    "references": [
+      {
+        "id": "fabric_api.SetTextureMapping",
+        "kind": "callable_reference",
+        "expression": "fabric_api.SetTextureMapping",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1541,
+          1541
+        ],
+        "invoked_via": {
+          "helper": "_fabric_call",
+          "parameter": "function",
+          "call_sites": [
+            {
+              "path": "plugin/clo3d_mcp_plugin.py",
+              "lines": [
+                1462,
+                1462
+              ]
+            },
+            {
+              "path": "plugin/clo3d_mcp_plugin.py",
+              "lines": [
+                1463,
+                1463
+              ]
+            }
+          ]
+        },
+        "via": [],
+        "confidence": "syntactic_indirect"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "_fabric_call",
+      "handle_set_texture_mapping"
+    ]
+  },
+  {
+    "command": "set_topstitch",
+    "function": "handle_set_topstitch",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1686,
+        1686
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        862,
+        875
+      ]
+    },
+    "native_ids": [
+      "pattern_api.SetPatternAssignedTopstitchCurved",
+      "pattern_api.SetPatternAssignedTopstitchCurvedLength",
+      "pattern_api.SetPatternAssignedTopstitchCurvedRightAngled",
+      "pattern_api.SetPatternAssignedTopstitchExtendEnd",
+      "pattern_api.SetPatternAssignedTopstitchExtendStart",
+      "pattern_api.SetPatternAssignedTopstitchStyle",
+      "pattern_api.SetPatternAssignedTopstitchZOffset"
+    ],
+    "references": [
+      {
+        "id": "pattern_api.SetPatternAssignedTopstitchStyle",
+        "kind": "callable_reference",
+        "expression": "pattern_api.SetPatternAssignedTopstitchStyle",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          864,
+          864
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "pattern_api.SetPatternAssignedTopstitchCurved",
+        "kind": "callable_reference",
+        "expression": "pattern_api.SetPatternAssignedTopstitchCurved",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          865,
+          865
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "pattern_api.SetPatternAssignedTopstitchCurvedLength",
+        "kind": "callable_reference",
+        "expression": "pattern_api.SetPatternAssignedTopstitchCurvedLength",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          866,
+          866
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "pattern_api.SetPatternAssignedTopstitchCurvedRightAngled",
+        "kind": "callable_reference",
+        "expression": "pattern_api.SetPatternAssignedTopstitchCurvedRightAngled",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          867,
+          867
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "pattern_api.SetPatternAssignedTopstitchExtendStart",
+        "kind": "callable_reference",
+        "expression": "pattern_api.SetPatternAssignedTopstitchExtendStart",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          868,
+          868
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "pattern_api.SetPatternAssignedTopstitchExtendEnd",
+        "kind": "callable_reference",
+        "expression": "pattern_api.SetPatternAssignedTopstitchExtendEnd",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          869,
+          869
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "pattern_api.SetPatternAssignedTopstitchZOffset",
+        "kind": "callable_reference",
+        "expression": "pattern_api.SetPatternAssignedTopstitchZOffset",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          870,
+          870
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_set_topstitch"
+    ]
+  },
+  {
+    "command": "set_topstitch_style",
+    "function": "handle_set_topstitch_style",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1747,
+        1747
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1363,
+        1380
+      ]
+    },
+    "native_ids": [
+      "utility_api.SetTopStitchDistanceValue",
+      "utility_api.SetTopStitchName",
+      "utility_api.SetTopStitchNumberOfLines",
+      "utility_api.SetTopStitchOffsetIndex",
+      "utility_api.SetTopStitchWidthValue"
+    ],
+    "references": [
+      {
+        "id": "utility_api.SetTopStitchName",
+        "kind": "direct_call",
+        "expression": "utility_api.SetTopStitchName(style, str(params['name']))",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1366,
+          1366
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "utility_api.SetTopStitchNumberOfLines",
+        "kind": "direct_call",
+        "expression": "utility_api.SetTopStitchNumberOfLines(style, sub, int(params['number_of_lines']))",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1369,
+          1369
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "utility_api.SetTopStitchDistanceValue",
+        "kind": "direct_call",
+        "expression": "utility_api.SetTopStitchDistanceValue(style, sub, float(params['distance']))",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1372,
+          1372
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "utility_api.SetTopStitchWidthValue",
+        "kind": "direct_call",
+        "expression": "utility_api.SetTopStitchWidthValue(style, sub, float(params['width']))",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1375,
+          1375
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "utility_api.SetTopStitchOffsetIndex",
+        "kind": "direct_call",
+        "expression": "utility_api.SetTopStitchOffsetIndex(style, int(params['offset_index']))",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1378,
+          1378
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_set_topstitch_style"
+    ]
+  },
+  {
+    "command": "set_topstitch_style_color",
+    "function": "handle_set_topstitch_style_color",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1687,
+        1687
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        878,
+        892
+      ]
+    },
+    "native_ids": [
+      "utility_api.SetTopStitchColor",
+      "utility_api.SetTopStitchOpacity"
+    ],
+    "references": [
+      {
+        "id": "utility_api.SetTopStitchColor",
+        "kind": "direct_call",
+        "expression": "utility_api.SetTopStitchColor(style, int(colorway), line, r, g, b, a)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          884,
+          884
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "utility_api.SetTopStitchColor",
+        "kind": "direct_call",
+        "expression": "utility_api.SetTopStitchColor(style, line, r, g, b, a)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          886,
+          886
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "utility_api.SetTopStitchOpacity",
+        "kind": "direct_call",
+        "expression": "utility_api.SetTopStitchOpacity(style, int(colorway), line, int(params['opacity']))",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          889,
+          889
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "utility_api.SetTopStitchOpacity",
+        "kind": "direct_call",
+        "expression": "utility_api.SetTopStitchOpacity(style, line, int(params['opacity']))",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          891,
+          891
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_set_topstitch_style_color"
+    ]
+  },
+  {
+    "command": "set_trim_material",
+    "function": "handle_set_trim_material",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1751,
+        1751
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1398,
+        1401
+      ]
+    },
+    "native_ids": [
+      "utility_api.GetTrimMaterialProperties",
+      "utility_api.SetTrimMaterialProperties"
+    ],
+    "references": [
+      {
+        "id": "utility_api.SetTrimMaterialProperties",
+        "kind": "direct_call",
+        "expression": "utility_api.SetTrimMaterialProperties(style, mesh, {str(k): str(v) for k, v in params['properties'].items()})",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1400,
+          1400
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "utility_api.GetTrimMaterialProperties",
+        "kind": "direct_call",
+        "expression": "utility_api.GetTrimMaterialProperties(style, mesh)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1401,
+          1401
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_set_trim_material"
+    ]
+  },
+  {
+    "command": "set_trim_style",
+    "function": "handle_set_trim_style",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1709,
+        1709
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1072,
+        1085
+      ]
+    },
+    "native_ids": [
+      "utility_api.SetTrimStyleColor",
+      "utility_api.SetTrimWeight"
+    ],
+    "references": [
+      {
+        "id": "utility_api.SetTrimStyleColor",
+        "kind": "direct_call",
+        "expression": "utility_api.SetTrimStyleColor(style, int(params['colorway_index']), mesh, r, g, b, a)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1078,
+          1078
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "utility_api.SetTrimStyleColor",
+        "kind": "direct_call",
+        "expression": "utility_api.SetTrimStyleColor(style, mesh, r, g, b, a)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1080,
+          1080
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "utility_api.SetTrimWeight",
+        "kind": "direct_call",
+        "expression": "utility_api.SetTrimWeight(style, float(params['weight']))",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1083,
+          1083
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_set_trim_style"
+    ]
+  },
+  {
+    "command": "set_zipper_style",
+    "function": "handle_set_zipper_style",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1752,
+        1752
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1404,
+        1419
+      ]
+    },
+    "native_ids": [
+      "utility_api.GetZipperStyleName",
+      "utility_api.SetZipperBottomStopperStyle",
+      "utility_api.SetZipperPullerStyle",
+      "utility_api.SetZipperSliderStyle",
+      "utility_api.SetZipperStyleName",
+      "utility_api.SetZipperStyleTapeThickness",
+      "utility_api.SetZipperStyleTeethType",
+      "utility_api.SetZipperStyleTeethWidth",
+      "utility_api.SetZipperStyleWeight",
+      "utility_api.SetZipperTopStopperStyle"
+    ],
+    "references": [
+      {
+        "id": "utility_api.SetZipperStyleName",
+        "kind": "callable_reference",
+        "expression": "utility_api.SetZipperStyleName",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1406,
+          1406
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "utility_api.SetZipperStyleTeethType",
+        "kind": "callable_reference",
+        "expression": "utility_api.SetZipperStyleTeethType",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1407,
+          1407
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "utility_api.SetZipperStyleTeethWidth",
+        "kind": "callable_reference",
+        "expression": "utility_api.SetZipperStyleTeethWidth",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1408,
+          1408
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "utility_api.SetZipperStyleTapeThickness",
+        "kind": "callable_reference",
+        "expression": "utility_api.SetZipperStyleTapeThickness",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1409,
+          1409
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "utility_api.SetZipperStyleWeight",
+        "kind": "callable_reference",
+        "expression": "utility_api.SetZipperStyleWeight",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1410,
+          1410
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "utility_api.SetZipperSliderStyle",
+        "kind": "callable_reference",
+        "expression": "utility_api.SetZipperSliderStyle",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1411,
+          1411
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "utility_api.SetZipperPullerStyle",
+        "kind": "callable_reference",
+        "expression": "utility_api.SetZipperPullerStyle",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1412,
+          1412
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "utility_api.SetZipperTopStopperStyle",
+        "kind": "callable_reference",
+        "expression": "utility_api.SetZipperTopStopperStyle",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1413,
+          1413
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "utility_api.SetZipperBottomStopperStyle",
+        "kind": "callable_reference",
+        "expression": "utility_api.SetZipperBottomStopperStyle",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1414,
+          1414
+        ],
+        "via": [],
+        "confidence": "syntactic_indirect"
+      },
+      {
+        "id": "utility_api.GetZipperStyleName",
+        "kind": "callable_reference",
+        "expression": "utility_api.GetZipperStyleName",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1419,
+          1419
+        ],
+        "invoked_via": {
+          "helper": "_safe",
+          "parameter": "function",
+          "call_sites": [
+            {
+              "path": "plugin/clo3d_mcp_plugin.py",
+              "lines": [
+                522,
+                522
+              ]
+            }
+          ]
+        },
+        "via": [],
+        "confidence": "syntactic_indirect"
+      }
+    ],
+    "dynamic_expressions": [
+      {
+        "expression": "getattr(obj, name, None)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          676,
+          676
+        ],
+        "via": [
+          {
+            "function": "_safe",
+            "path": "plugin/clo3d_mcp_plugin.py",
+            "lines": [
+              1419,
+              1419
+            ]
+          },
+          {
+            "function": "_fields",
+            "path": "plugin/clo3d_mcp_plugin.py",
+            "lines": [
+              526,
+              526
+            ]
+          }
+        ]
+      }
+    ],
+    "reachable_functions": [
+      "_fields",
+      "_safe",
+      "handle_set_zipper_style"
+    ]
+  },
+  {
+    "command": "sew",
+    "function": "handle_sew",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1634,
+        1634
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        426,
+        437
+      ]
+    },
+    "native_ids": [
+      "pattern_api.AddSeamlinePairGroup"
+    ],
+    "references": [
+      {
+        "id": "pattern_api.AddSeamlinePairGroup",
+        "kind": "direct_call",
+        "expression": "pattern_api.AddSeamlinePairGroup(pa, int(child_a), la, pb, int(child_b), lb, da, db)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          432,
+          432
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "pattern_api.AddSeamlinePairGroup",
+        "kind": "direct_call",
+        "expression": "pattern_api.AddSeamlinePairGroup(pa, la, pb, int(child_b), lb, da, db)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          434,
+          434
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "pattern_api.AddSeamlinePairGroup",
+        "kind": "direct_call",
+        "expression": "pattern_api.AddSeamlinePairGroup(pa, la, pb, lb, da, db)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          436,
+          436
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_sew"
+    ]
+  },
+  {
+    "command": "show_hide_avatar",
+    "function": "handle_show_hide_avatar",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1811,
+        1811
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        400,
+        403
+      ]
+    },
+    "native_ids": [
+      "utility_api.SetShowHideAvatar"
+    ],
+    "references": [
+      {
+        "id": "utility_api.SetShowHideAvatar",
+        "kind": "direct_call",
+        "expression": "utility_api.SetShowHideAvatar(show)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          402,
+          402
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_show_hide_avatar"
+    ]
+  },
+  {
+    "command": "simulate",
+    "function": "handle_simulate",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1803,
+        1803
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        325,
+        328
+      ]
+    },
+    "native_ids": [
+      "utility_api.Simulate"
+    ],
+    "references": [
+      {
+        "id": "utility_api.Simulate",
+        "kind": "direct_call",
+        "expression": "utility_api.Simulate(steps)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          327,
+          327
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_simulate"
+    ]
+  },
+  {
+    "command": "start_nesting",
+    "function": "handle_start_nesting",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1723,
+        1723
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1194,
+        1200
+      ]
+    },
+    "native_ids": [
+      "utility_api.SetNestingBufferSpacing",
+      "utility_api.SetNestingTargetColorway",
+      "utility_api.StartNesting"
+    ],
+    "references": [
+      {
+        "id": "utility_api.SetNestingBufferSpacing",
+        "kind": "direct_call",
+        "expression": "utility_api.SetNestingBufferSpacing(float(params['buffer_spacing']))",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1196,
+          1196
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "utility_api.SetNestingTargetColorway",
+        "kind": "direct_call",
+        "expression": "utility_api.SetNestingTargetColorway([int(i) for i in params['target_colorways']])",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1198,
+          1198
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "utility_api.StartNesting",
+        "kind": "direct_call",
+        "expression": "utility_api.StartNesting()",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1199,
+          1199
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_start_nesting"
+    ]
+  },
+  {
+    "command": "stop",
+    "function": "handle_stop",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1632,
+        1632
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1623,
+        1627
+      ]
+    },
+    "native_ids": [],
+    "references": [],
+    "dynamic_expressions": [
+      {
+        "expression": "getattr(builtins, '_clo3d_mcp', None)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1624,
+          1624
+        ],
+        "via": []
+      }
+    ],
+    "reachable_functions": [
+      "handle_stop"
+    ]
+  },
+  {
+    "command": "stop_nesting",
+    "function": "handle_stop_nesting",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1724,
+        1724
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1203,
+        1205
+      ]
+    },
+    "native_ids": [
+      "utility_api.GetNestingTime",
+      "utility_api.StopNesting"
+    ],
+    "references": [
+      {
+        "id": "utility_api.StopNesting",
+        "kind": "direct_call",
+        "expression": "utility_api.StopNesting()",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1204,
+          1204
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "utility_api.GetNestingTime",
+        "kind": "callable_reference",
+        "expression": "utility_api.GetNestingTime",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1205,
+          1205
+        ],
+        "invoked_via": {
+          "helper": "_safe",
+          "parameter": "function",
+          "call_sites": [
+            {
+              "path": "plugin/clo3d_mcp_plugin.py",
+              "lines": [
+                522,
+                522
+              ]
+            }
+          ]
+        },
+        "via": [],
+        "confidence": "syntactic_indirect"
+      }
+    ],
+    "dynamic_expressions": [
+      {
+        "expression": "getattr(obj, name, None)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          676,
+          676
+        ],
+        "via": [
+          {
+            "function": "_safe",
+            "path": "plugin/clo3d_mcp_plugin.py",
+            "lines": [
+              1205,
+              1205
+            ]
+          },
+          {
+            "function": "_fields",
+            "path": "plugin/clo3d_mcp_plugin.py",
+            "lines": [
+              526,
+              526
+            ]
+          }
+        ]
+      }
+    ],
+    "reachable_functions": [
+      "_fields",
+      "_safe",
+      "handle_stop_nesting"
+    ]
+  },
+  {
+    "command": "symmetry_pattern",
+    "function": "handle_symmetry_pattern",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1731,
+        1731
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1253,
+        1259
+      ]
+    },
+    "native_ids": [
+      "pattern_api.GetPatternCount",
+      "pattern_api.SymmetryPatternPiece",
+      "pattern_api.SymmetryPatternPieceWithPatternName"
+    ],
+    "references": [
+      {
+        "id": "pattern_api.SymmetryPatternPieceWithPatternName",
+        "kind": "direct_call",
+        "expression": "pattern_api.SymmetryPatternPieceWithPatternName(str(params['name']), flag)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1256,
+          1256
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "pattern_api.SymmetryPatternPiece",
+        "kind": "direct_call",
+        "expression": "pattern_api.SymmetryPatternPiece(int(params['pattern_index']), flag)",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1258,
+          1258
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      },
+      {
+        "id": "pattern_api.GetPatternCount",
+        "kind": "direct_call",
+        "expression": "pattern_api.GetPatternCount()",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1259,
+          1259
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_symmetry_pattern"
+    ]
+  },
+  {
+    "command": "unfold_pattern",
+    "function": "handle_unfold_pattern",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1648,
+        1648
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        572,
+        575
+      ]
+    },
+    "native_ids": [
+      "pattern_api.UnfoldPatternPiece"
+    ],
+    "references": [
+      {
+        "id": "pattern_api.UnfoldPatternPiece",
+        "kind": "direct_call",
+        "expression": "pattern_api.UnfoldPatternPiece(int(params['pattern_index']), int(params['line_index']), bool(params.get('half_symmetry', False)))",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          573,
+          573
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_unfold_pattern"
+    ]
+  },
+  {
+    "command": "unfold_pattern_by_name",
+    "function": "handle_unfold_pattern_by_name",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1732,
+        1732
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1262,
+        1265
+      ]
+    },
+    "native_ids": [
+      "pattern_api.UnfoldPatternPieceWithPatternName"
+    ],
+    "references": [
+      {
+        "id": "pattern_api.UnfoldPatternPieceWithPatternName",
+        "kind": "direct_call",
+        "expression": "pattern_api.UnfoldPatternPieceWithPatternName(str(params['name']), int(params['line_index']), bool(params.get('half_symmetry', False)))",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1263,
+          1263
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_unfold_pattern_by_name"
+    ]
+  },
+  {
+    "command": "update_colorways",
+    "function": "handle_update_colorways",
+    "registry_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1728,
+        1728
+      ]
+    },
+    "handler_evidence": {
+      "path": "plugin/clo3d_mcp_plugin.py",
+      "lines": [
+        1236,
+        1238
+      ]
+    },
+    "native_ids": [
+      "utility_api.UpdateColorways"
+    ],
+    "references": [
+      {
+        "id": "utility_api.UpdateColorways",
+        "kind": "direct_call",
+        "expression": "utility_api.UpdateColorways(bool(params.get('update_snapshot', True)))",
+        "path": "plugin/clo3d_mcp_plugin.py",
+        "lines": [
+          1237,
+          1237
+        ],
+        "via": [],
+        "confidence": "syntactic_direct"
+      }
+    ],
+    "dynamic_expressions": [],
+    "reachable_functions": [
+      "handle_update_colorways"
+    ]
+  }
+]

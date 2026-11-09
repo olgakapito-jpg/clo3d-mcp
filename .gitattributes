@@ -1,0 +1,2 @@
+# Reproducible source/shard SHA-256 must survive Windows checkout unchanged.
+* text=auto eol=lf

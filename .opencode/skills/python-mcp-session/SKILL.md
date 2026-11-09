@@ -21,9 +21,12 @@ Read `AGENTS.md` and P2/P3 of `docs/PYTHON_TRANSPORT_PLAN.md` from repository ro
 
 ## Tool interface
 
-- MVP tools only: ping, get_session_info, get_pattern_count, transport_status
-  and an explicit diagnostic scene mutation. Do not advertise legacy tools
+- Publish only explicitly integrated, negotiated tools. Diagnostic MVP and the
+  accepted first pattern package are documented in ../../../docs/CLO_MCP_TOOLS.md; the
+  full-API roadmap does not enable future domains. Do not advertise legacy tools
   that the new executor cannot handle or load extension files automatically.
+- Load clo-mcp-tool-design for descriptions/contracts and clo-tool-workflows
+  for composition. Keep metadata, schemas, validators and examples consistent.
 - Use async handlers. Await job results without blocking the HTTP event loop;
   no time.sleep or blocking pipe calls in async handlers.
 - Describe parameters, units and structured results. Set supported read-only,

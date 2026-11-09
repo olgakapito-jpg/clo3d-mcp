@@ -1,0 +1,3512 @@
+{
+  "kind": "methods",
+  "records": [
+    {
+      "id": "utility_api.SetGraphicStyleColor",
+      "qualified_name": "utility_api.SetGraphicStyleColor",
+      "module": "utility_api",
+      "symbol": "SetGraphicStyleColor",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetGraphicStyleColor#a3029948cb29c084",
+          "signature_normalized": "def SetGraphicStyleColor(_styleIndex : int, r : float, g : float, b : float, a : float) -> bool",
+          "signature_raw": "def SetGraphicStyleColor(_styleIndex : int, r : float, g : float, b : float, a : float) -> bool",
+          "parameters": [
+            {
+              "raw": "_styleIndex : int",
+              "name": "_styleIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "r : float",
+              "name": "r",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "g : float",
+              "name": "g",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "b : float",
+              "name": "b",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "a : float",
+              "name": "a",
+              "annotation_raw": "float"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def SetGraphicStyleColor(_styleIndex : int, r : float, g : float, b : float, a : float) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Set a base color of PBR material in a Graphic using given RGBA values. (default index = 0)\n@param _styleIndex: Graphic style index\n@parm r : To be set as red value\n@parm g : To be set as green value\n@parm b : To be set as blue value\n@parm a : To be set as alpha value\n@return if it succeeds, return true.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 21612,
+                  "block": 1887
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 22645,
+                  "block": 1887,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetGraphicStyleColor(float r, float g, float b, float a)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Set a base color of PBR material in a Graphic using given RGBA values. (default index = 0)\n/// @param _styleIndex: Graphic style index\n/// @parm r : To be set as red value\n/// @parm g : To be set as green value\n/// @parm b : To be set as blue value\n/// @parm a : To be set as alpha value\n/// @return if it succeeds, return true.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 21626,
+                    "block": 1888
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 22659,
+                    "block": 1888,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _styleIndex: Graphic style index"
+          ],
+          "return_docs_raw": [
+            "@return if it succeeds, return true."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "utility_api.SetGraphicStyleColor#01c4de5ababb09f6",
+          "signature_normalized": "def SetGraphicStyleColor(r : float, g : float, b : float, a : float) -> bool",
+          "signature_raw": "def SetGraphicStyleColor(r : float, g : float, b : float, a : float) -> bool",
+          "parameters": [
+            {
+              "raw": "r : float",
+              "name": "r",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "g : float",
+              "name": "g",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "b : float",
+              "name": "b",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "a : float",
+              "name": "a",
+              "annotation_raw": "float"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def SetGraphicStyleColor(r : float, g : float, b : float, a : float) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Set a base color of PBR material in a Graphic using given RGBA values. (default index = 0)\n@parm r : To be set as red value\n@parm g : To be set as green value\n@parm b : To be set as blue value\n@parm a : To be set as alpha value\n@return if it succeeds, return true.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 21641,
+                  "block": 1889
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 22675,
+                  "block": 1889,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetGraphicStyleColor(float r, float g, float b, float a)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Set a base color of PBR material in a Graphic using given RGBA values. (default index = 0)\n/// @parm r : To be set as red value\n/// @parm g : To be set as green value\n/// @parm b : To be set as blue value\n/// @parm a : To be set as alpha value\n/// @return if it succeeds, return true.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 21654,
+                    "block": 1890
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 22688,
+                    "block": 1890,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return if it succeeds, return true."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "utility_api.SetGraphicStyleColor#c7a6640815d2351b",
+          "signature_normalized": "def SetGraphicStyleColor(_styleIndex : int, _colorName : str) -> bool",
+          "signature_raw": "def SetGraphicStyleColor(_styleIndex : int, _colorName : str) -> bool",
+          "parameters": [
+            {
+              "raw": "_styleIndex : int",
+              "name": "_styleIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_colorName : str",
+              "name": "_colorName",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def SetGraphicStyleColor(_styleIndex : int, _colorName : str) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Set a base color of PBR material in a Graphic using given color name values. (default index = 0)\n@param _styleIndex: Graphic style index\n@param _colorName: name of color\n@return if it succeeds, return true.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 21668,
+                  "block": 1891
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 22703,
+                  "block": 1891,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetGraphicStyleColor(int _styleIndex, std::string _colorName)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Set a base color of PBR material in a Graphic using given color name values. (default index = 0)\n/// @param _styleIndex: Graphic style index\n/// @param _colorName: name of color\n/// @return if it succeeds, return true.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 21679,
+                    "block": 1892
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 22714,
+                    "block": 1892,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _styleIndex: Graphic style index",
+            "@param _colorName: name of color"
+          ],
+          "return_docs_raw": [
+            "@return if it succeeds, return true."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "utility_api.SetGraphicStyleColor#dab7eb3c17316237",
+          "signature_normalized": "def SetGraphicStyleColor(_styleIndex : int, _r : int, _g : int, _b : int, _a : int) -> None",
+          "signature_raw": "def SetGraphicStyleColor(_styleIndex : int, _r : int, _g : int, _b : int, _a : int) -> None",
+          "parameters": [
+            {
+              "raw": "_styleIndex : int",
+              "name": "_styleIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_r : int",
+              "name": "_r",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_g : int",
+              "name": "_g",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_b : int",
+              "name": "_b",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_a : int",
+              "name": "_a",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetGraphicStyleColor(_styleIndex : int, _r : int, _g : int, _b : int, _a : int) -> None",
+              "documentation_raw": "\"\"\"\n@brief          Set base color of PBR material in a Graphic Style using given RGBA values\n@param          _styleIndex: Graphic Style index on Object Browser to set Color\n@param          _r: Red channel \n@param          _g: Green channel\n@param          _b: Blue channel\n@param          _a: Alpha channel\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 21857,
+                  "block": 1909
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 22901,
+                  "block": 1909,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetGraphicStyleColor(int _styleIndex, int _r, int _g, int _b, int _a)",
+                "documentation_raw": "/// @brief              Set base color of PBR material in a Graphic Style using given RGBA values\n/// @param              _styleIndex: Graphic Style index on Object Browser to set Color\n/// @param              _r: Red channel \n/// @param              _g: Green channel\n/// @param              _b: Blue channel\n/// @param              _a: Alpha channel",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 21869,
+                    "block": 1910
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 22913,
+                    "block": 1910,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          _styleIndex: Graphic Style index on Object Browser to set Color",
+            "@param          _r: Red channel ",
+            "@param          _g: Green channel",
+            "@param          _b: Blue channel",
+            "@param          _a: Alpha channel"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "utility_api.SetGraphicStyleColor#a5054d51455a47b2",
+          "signature_normalized": "def SetGraphicStyleColor(_styleIndex : int, _colorwayIndex : int, _r : int, _g : int, _b : int, _a : int) -> None",
+          "signature_raw": "def SetGraphicStyleColor(_styleIndex : int, _colorwayIndex : int, _r : int, _g : int, _b : int, _a : int) -> None",
+          "parameters": [
+            {
+              "raw": "_styleIndex : int",
+              "name": "_styleIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_r : int",
+              "name": "_r",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_g : int",
+              "name": "_g",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_b : int",
+              "name": "_b",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_a : int",
+              "name": "_a",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetGraphicStyleColor(_styleIndex : int, _colorwayIndex : int, _r : int, _g : int, _b : int, _a : int) -> None",
+              "documentation_raw": "\"\"\"\n@brief          Set base color of PBR material in a Graphic Style using given RGBA values\n@param          _styleIndex: Graphic Style index on [_colorwayIndex]th Colorway to set Color\n@param          _colorwayIndex: Colorway Index to get Style\n@param          _r: Red channel \n@param          _g: Green channel\n@param          _b: Blue channel\n@param          _a: Alpha channel\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 21882,
+                  "block": 1911
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 22927,
+                  "block": 1911,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetGraphicStyleColor(int _styleIndex, int _colorwayIndex, int _r, int _g, int _b, int _a)",
+                "documentation_raw": "/// @brief              Set base color of PBR material in a Graphic Style using given RGBA values\n/// @param              _styleIndex: Graphic Style index on [_colorwayIndex]th Colorway to set Color\n/// @param              _colorwayIndex: Colorway Index to get Style\n/// @param              _r: Red channel \n/// @param              _g: Green channel\n/// @param              _b: Blue channel\n/// @param              _a: Alpha channel",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 21895,
+                    "block": 1912
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 22940,
+                    "block": 1912,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          _styleIndex: Graphic Style index on [_colorwayIndex]th Colorway to set Color",
+            "@param          _colorwayIndex: Colorway Index to get Style",
+            "@param          _r: Red channel ",
+            "@param          _g: Green channel",
+            "@param          _b: Blue channel",
+            "@param          _a: Alpha channel"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "utility_api.SetGraphicStyleColor#d88dec1b536673b1",
+          "signature_normalized": "def SetGraphicStyleColor(_styleIndex : int, _colorwayIndex : int, _colorName : str) -> bool",
+          "signature_raw": "def SetGraphicStyleColor(_styleIndex : int, _colorwayIndex : int, _colorName : str) -> bool",
+          "parameters": [
+            {
+              "raw": "_styleIndex : int",
+              "name": "_styleIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_colorName : str",
+              "name": "_colorName",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def SetGraphicStyleColor(_styleIndex : int, _colorwayIndex : int, _colorName : str) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief          Set base color of PBR material in a Graphic Style using given color name\n@param          _styleIndex: Graphic Style index on [_colorwayIndex]th Colorway to set Color\n@param          _colorwayIndex: Colorway Index to get Style\n@param          _colorName: Name of color from the color palette\n@return         true if successful, false otherwise\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 21909,
+                  "block": 1913
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 22955,
+                  "block": 1913,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetGraphicStyleColor(int _styleIndex, int _colorwayIndex, const std::string& _colorName)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief              Set base color of PBR material in a Graphic Style using given color name\n/// @param              _styleIndex: Graphic Style index on [_colorwayIndex]th Colorway to set Color\n/// @param              _colorwayIndex: Colorway Index to get Style\n/// @param              _colorName: Name of color from the color palette\n/// @return             true if successful, false otherwise",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 21921,
+                    "block": 1914
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 22967,
+                    "block": 1914,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          _styleIndex: Graphic Style index on [_colorwayIndex]th Colorway to set Color",
+            "@param          _colorwayIndex: Colorway Index to get Style",
+            "@param          _colorName: Name of color from the color palette"
+          ],
+          "return_docs_raw": [
+            "@return         true if successful, false otherwise"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetGraphicStyleDimensions",
+      "qualified_name": "utility_api.SetGraphicStyleDimensions",
+      "module": "utility_api",
+      "symbol": "SetGraphicStyleDimensions",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetGraphicStyleDimensions#1a448317ddfc2ff3",
+          "signature_normalized": "def SetGraphicStyleDimensions(_index : int, _width : float, _height : float) -> None",
+          "signature_raw": "def SetGraphicStyleDimensions(_index : int, _width : float, _height : float) -> None",
+          "parameters": [
+            {
+              "raw": "_index : int",
+              "name": "_index",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_width : float",
+              "name": "_width",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_height : float",
+              "name": "_height",
+              "annotation_raw": "float"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetGraphicStyleDimensions(_index : int, _width : float, _height : float) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Sets the dimensions of the graphic style\n@param _index: Graphic style index to use the plugin\n@param _width: The width to be set for the graphic style\n@param _height: The height to be set for the graphic style\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 20070,
+                  "block": 1747
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 21033,
+                  "block": 1747,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetGraphicStyleDimensions(int _index, float _width, float _height)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Sets the dimensions of the graphic style\n/// @param _index: Graphic style index to use the plugin\n/// @param _width: The width to be set for the graphic style\n/// @param _height: The height to be set for the graphic style",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 20081,
+                    "block": 1748
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 21044,
+                    "block": 1748,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _index: Graphic style index to use the plugin",
+            "@param _width: The width to be set for the graphic style",
+            "@param _height: The height to be set for the graphic style"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "utility_api.SetGraphicStyleDimensions#45ecb6b0d0707456",
+          "signature_normalized": "def SetGraphicStyleDimensions(_colorwayIndex : int, _index : int, _width : float, _height : float) -> None",
+          "signature_raw": "def SetGraphicStyleDimensions(_colorwayIndex : int, _index : int, _width : float, _height : float) -> None",
+          "parameters": [
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_index : int",
+              "name": "_index",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_width : float",
+              "name": "_width",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_height : float",
+              "name": "_height",
+              "annotation_raw": "float"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetGraphicStyleDimensions(_colorwayIndex : int, _index : int, _width : float, _height : float) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Sets the dimensions of the graphic style for a specific colorway\n@param _colorwayIndex: Target colorway index\n@param _index: Graphic style index\n@param _width: The width to be set for the graphic style\n@param _height: The height to be set for the graphic style\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 20093,
+                  "block": 1749
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 21057,
+                  "block": 1749,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetGraphicStyleDimensions(int _colorwayIndex, int _index, float _width, float _height)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Sets the dimensions of the graphic style for a specific colorway\n/// @param _colorwayIndex: Target colorway index\n/// @param _index: Graphic style index\n/// @param _width: The width to be set for the graphic style\n/// @param _height: The height to be set for the graphic style",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 20105,
+                    "block": 1750
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 21069,
+                    "block": 1750,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _colorwayIndex: Target colorway index",
+            "@param _index: Graphic style index",
+            "@param _width: The width to be set for the graphic style",
+            "@param _height: The height to be set for the graphic style"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetGraphicStyleDimensionsOnPattern",
+      "qualified_name": "utility_api.SetGraphicStyleDimensionsOnPattern",
+      "module": "utility_api",
+      "symbol": "SetGraphicStyleDimensionsOnPattern",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetGraphicStyleDimensionsOnPattern#d9cf1410b4ec54e8",
+          "signature_normalized": "def SetGraphicStyleDimensionsOnPattern(_colorwayIndex : int, _graphicIndex : int, _patternIndex : int, _width : float, _height : float) -> bool",
+          "signature_raw": "def SetGraphicStyleDimensionsOnPattern(_colorwayIndex : int, _graphicIndex : int, _patternIndex : int, _width : float, _height : float) -> bool",
+          "parameters": [
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_graphicIndex : int",
+              "name": "_graphicIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_patternIndex : int",
+              "name": "_patternIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_width : float",
+              "name": "_width",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_height : float",
+              "name": "_height",
+              "annotation_raw": "float"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def SetGraphicStyleDimensionsOnPattern(_colorwayIndex : int, _graphicIndex : int, _patternIndex : int, _width : float, _height : float) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Sets the dimensions of a graphic on a specific pattern piece for a specific colorway\n@param _colorwayIndex: Target colorway index\n@param _graphicIndex: The index corresponding to the graphic style list.\n@param _patternIndex: The index of the pattern piece.\n@param _width: The width to be set for the graphic. Must be > 0 to take effect.\n@param _height: The height to be set for the graphic. Must be > 0 to take effect.\n@return true if the dimensions were set successfully, false otherwise.\n@note Resizes the graphic outward from its center. No aspect ratio lock is applied (width and height are set independently).\n@note Only affects this pattern piece placement for the given colorway. To resize all placements at once, use SetGraphicStyleDimensions instead.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 20270,
+                  "block": 1763
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 21241,
+                  "block": 1763,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetGraphicStyleDimensionsOnPattern(int _colorwayIndex, int _graphicIndex, int _patternIndex, float _width, float _height)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Sets the dimensions of a graphic on a specific pattern piece for a specific colorway\n/// @param _colorwayIndex: Target colorway index\n/// @param _graphicIndex: The index corresponding to the graphic style list.\n/// @param _patternIndex: The index of the pattern piece.\n/// @param _width: The width to be set for the graphic. Must be > 0 to take effect.\n/// @param _height: The height to be set for the graphic. Must be > 0 to take effect.\n/// @return true if the dimensions were set successfully, false otherwise.\n/// @note Resizes the graphic outward from its center. No aspect ratio lock is applied (width and height are set independently).\n/// @note Only affects this pattern piece placement for the given colorway. To resize all placements at once, use SetGraphicStyleDimensions instead.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 20286,
+                    "block": 1764
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 21257,
+                    "block": 1764,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _colorwayIndex: Target colorway index",
+            "@param _graphicIndex: The index corresponding to the graphic style list.",
+            "@param _patternIndex: The index of the pattern piece.",
+            "@param _width: The width to be set for the graphic. Must be > 0 to take effect.",
+            "@param _height: The height to be set for the graphic. Must be > 0 to take effect."
+          ],
+          "return_docs_raw": [
+            "@return true if the dimensions were set successfully, false otherwise."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetGraphicStyleHeight",
+      "qualified_name": "utility_api.SetGraphicStyleHeight",
+      "module": "utility_api",
+      "symbol": "SetGraphicStyleHeight",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetGraphicStyleHeight#2768280f44d64e76",
+          "signature_normalized": "def SetGraphicStyleHeight(_index : int, _height : float, _bOnly : bool) -> None",
+          "signature_raw": "def SetGraphicStyleHeight(_index : int, _height : float, _bOnly : bool) -> None",
+          "parameters": [
+            {
+              "raw": "_index : int",
+              "name": "_index",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_height : float",
+              "name": "_height",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_bOnly : bool",
+              "name": "_bOnly",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetGraphicStyleHeight(_index : int, _height : float, _bOnly : bool) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Sets the height of the graphic style\n@param _index: Graphic style index to use the plugin\n@param _height: The height to be set for the graphic style\n@param _bOnly: If true, the ratio is ignored, if false, the height is set according to the ratio.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 20141,
+                  "block": 1753
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 21107,
+                  "block": 1753,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetGraphicStyleHeight(int _index, float _height, bool _bOnly)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Sets the height of the graphic style\n/// @param _index: Graphic style index to use the plugin\n/// @param _height: The height to be set for the graphic style\n/// @param _bOnly: If true, the ratio is ignored, if false, the height is set according to the ratio.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 20152,
+                    "block": 1754
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 21118,
+                    "block": 1754,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _index: Graphic style index to use the plugin",
+            "@param _height: The height to be set for the graphic style",
+            "@param _bOnly: If true, the ratio is ignored, if false, the height is set according to the ratio."
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetGraphicStyleLocked",
+      "qualified_name": "utility_api.SetGraphicStyleLocked",
+      "module": "utility_api",
+      "symbol": "SetGraphicStyleLocked",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetGraphicStyleLocked#cae607eb329c0de5",
+          "signature_normalized": "def SetGraphicStyleLocked(_graphicIndex : int, _bLocked : bool) -> None",
+          "signature_raw": "def SetGraphicStyleLocked(_graphicIndex : int, _bLocked : bool) -> None",
+          "parameters": [
+            {
+              "raw": "_graphicIndex : int",
+              "name": "_graphicIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_bLocked : bool",
+              "name": "_bLocked",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetGraphicStyleLocked(_graphicIndex : int, _bLocked : bool) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Sets the lock state of the graphic style (style-level: affects size, map size/scale)\n@param _graphicIndex: Graphic style index in the current colorway's style list\n@param _bLocked: If true, locks the style; if false, unlocks it\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 19940,
+                  "block": 1735
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 20897,
+                  "block": 1735,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetGraphicStyleLocked(int _graphicIndex, bool _bLocked)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Sets the lock state of the graphic style (style-level: affects size, map size/scale)\n/// @param _graphicIndex: Graphic style index in the current colorway's style list\n/// @param _bLocked: If true, locks the style; if false, unlocks it",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 19950,
+                    "block": 1736
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 20907,
+                    "block": 1736,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _graphicIndex: Graphic style index in the current colorway's style list",
+            "@param _bLocked: If true, locks the style; if false, unlocks it"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetGraphicStyleName",
+      "qualified_name": "utility_api.SetGraphicStyleName",
+      "module": "utility_api",
+      "symbol": "SetGraphicStyleName",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetGraphicStyleName#0874b146c4b52ea6",
+          "signature_normalized": "def SetGraphicStyleName(_index : int, _name : str) -> None",
+          "signature_raw": "def SetGraphicStyleName(_index : int, _name : str) -> None",
+          "parameters": [
+            {
+              "raw": "_index : int",
+              "name": "_index",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_name : str",
+              "name": "_name",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetGraphicStyleName(_index : int, _name : str) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Sets the name of the graphic style\n@param _index: Graphic style index to use the plugin\n@param _name: The name to be set for the graphic style\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 20049,
+                  "block": 1745
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 21011,
+                  "block": 1745,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetGraphicStyleName(int _index, std::string _name)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Sets the name of the graphic style\n/// @param _index: Graphic style index to use the plugin\n/// @param _name: The name to be set for the graphic style",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 20059,
+                    "block": 1746
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 21021,
+                    "block": 1746,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _index: Graphic style index to use the plugin",
+            "@param _name: The name to be set for the graphic style"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetGraphicStylePositionOnPattern",
+      "qualified_name": "utility_api.SetGraphicStylePositionOnPattern",
+      "module": "utility_api",
+      "symbol": "SetGraphicStylePositionOnPattern",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetGraphicStylePositionOnPattern#adc93eacdb9c54d9",
+          "signature_normalized": "def SetGraphicStylePositionOnPattern(_colorwayIndex : int, _graphicIndex : int, _patternIndex : int, _x : float, _y : float) -> bool",
+          "signature_raw": "def SetGraphicStylePositionOnPattern(_colorwayIndex : int, _graphicIndex : int, _patternIndex : int, _x : float, _y : float) -> bool",
+          "parameters": [
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_graphicIndex : int",
+              "name": "_graphicIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_patternIndex : int",
+              "name": "_patternIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_x : float",
+              "name": "_x",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_y : float",
+              "name": "_y",
+              "annotation_raw": "float"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def SetGraphicStylePositionOnPattern(_colorwayIndex : int, _graphicIndex : int, _patternIndex : int, _x : float, _y : float) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Sets the 2D position of a graphic on a specific pattern piece for a specific colorway\n@param _colorwayIndex: Target colorway index\n@param _graphicIndex: The index corresponding to the graphic style list.\n@param _patternIndex: The index of the pattern piece.\n@param _x: The X coordinate of the graphic's center in 2D pattern-local space.\n@param _y: The Y coordinate of the graphic's center in 2D pattern-local space.\n@return true if the position was set successfully, false otherwise.\n@note (_x, _y) targets the graphic's center point, not its corner.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 20239,
+                  "block": 1761
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 21209,
+                  "block": 1761,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetGraphicStylePositionOnPattern(int _colorwayIndex, int _graphicIndex, int _patternIndex, float _x, float _y)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Sets the 2D position of a graphic on a specific pattern piece for a specific colorway\n/// @param _colorwayIndex: Target colorway index\n/// @param _graphicIndex: The index corresponding to the graphic style list.\n/// @param _patternIndex: The index of the pattern piece.\n/// @param _x: The X coordinate of the graphic's center in 2D pattern-local space.\n/// @param _y: The Y coordinate of the graphic's center in 2D pattern-local space.\n/// @return true if the position was set successfully, false otherwise.\n/// @note (_x, _y) targets the graphic's center point, not its corner.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 20254,
+                    "block": 1762
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 21224,
+                    "block": 1762,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _colorwayIndex: Target colorway index",
+            "@param _graphicIndex: The index corresponding to the graphic style list.",
+            "@param _patternIndex: The index of the pattern piece.",
+            "@param _x: The X coordinate of the graphic's center in 2D pattern-local space.",
+            "@param _y: The Y coordinate of the graphic's center in 2D pattern-local space."
+          ],
+          "return_docs_raw": [
+            "@return true if the position was set successfully, false otherwise."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetGraphicStyleToGraphic",
+      "qualified_name": "utility_api.SetGraphicStyleToGraphic",
+      "module": "utility_api",
+      "symbol": "SetGraphicStyleToGraphic",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetGraphicStyleToGraphic#cb771483c0c48216",
+          "signature_normalized": "def SetGraphicStyleToGraphic(_styleIndex : int, _graphicIndex : int, _assignOption : int) -> None",
+          "signature_raw": "def SetGraphicStyleToGraphic(_styleIndex : int, _graphicIndex : int, _assignOption : int) -> None",
+          "parameters": [
+            {
+              "raw": "_styleIndex : int",
+              "name": "_styleIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_graphicIndex : int",
+              "name": "_graphicIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_assignOption : int",
+              "name": "_assignOption",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetGraphicStyleToGraphic(_styleIndex : int, _graphicIndex : int, _assignOption : int) -> None",
+              "documentation_raw": "\"\"\"\n@brief          Set GraphicStyle of Graphic\n@param          _styleIndex: Graphic Style index on the Object Browser\n@param          _graphicIndex: Graphic index to change style\n@param _assignOption:\n_assignOption = 1 (Current Colorway): An item is only applied to the current colorway, while the other colorways retain the existing items.\n_assignOption = 2 (All Colorways unlinked Materials): Each colorway is applied its own materials, such as textures and colors.\n_assignOption = 3 (All Colorways linked): All colorways share the same item with linked properties, allowing any changes to be applied across all colorways simultaneously\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 22570,
+                  "block": 1963
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 23641,
+                  "block": 1963,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetGraphicStyleToGraphic(int _styleIndex, int _colorwayIndex, int _graphicIndex, int _assignOption)",
+                "documentation_raw": "/// @brief              Set GraphicStyle of Graphic\n/// @param              _styleIndex: Graphic Style index on the Object Browser\n/// @param              _graphicIndex: Graphic index to change style\n/// @param _assignOption:\n/// _assignOption = 1 (Current Colorway): An item is only applied to the current colorway, while the other colorways retain the existing items.\n/// _assignOption = 2 (All Colorways unlinked Materials): Each colorway is applied its own materials, such as textures and colors.\n/// _assignOption = 3 (All Colorways linked): All colorways share the same item with linked properties, allowing any changes to be applied across all colorways simultaneously",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 22583,
+                    "block": 1964
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 23654,
+                    "block": 1964,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          _styleIndex: Graphic Style index on the Object Browser",
+            "@param          _graphicIndex: Graphic index to change style",
+            "@param _assignOption:"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "utility_api.SetGraphicStyleToGraphic#bc5d5610ff4f0bc3",
+          "signature_normalized": "def SetGraphicStyleToGraphic(_styleIndex : int, _colorwayIndex : int, _graphicIndex : int, _assignOption : int) -> None",
+          "signature_raw": "def SetGraphicStyleToGraphic(_styleIndex : int, _colorwayIndex : int, _graphicIndex : int, _assignOption : int) -> None",
+          "parameters": [
+            {
+              "raw": "_styleIndex : int",
+              "name": "_styleIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_graphicIndex : int",
+              "name": "_graphicIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_assignOption : int",
+              "name": "_assignOption",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetGraphicStyleToGraphic(_styleIndex : int, _colorwayIndex : int, _graphicIndex : int, _assignOption : int) -> None",
+              "documentation_raw": "\"\"\"\n@brief          Set GraphicStyle of Graphic\n@param          _styleIndex: Graphic Style index on the [_colorwayIndex]th Colorway\n@param          _colorwayIndex: Colorway index to get Graphic Style\n@param          _graphicIndex: Graphic index to change Graphic Style\n@param _assignOption:\n_assignOption = 1 (Current Colorway): An item is only applied to the current colorway, while the other colorways retain the existing items.\n_assignOption = 2 (All Colorways unlinked Materials): Each colorway is applied its own materials, such as textures and colors.\n_assignOption = 3 (All Colorways linked): All colorways share the same item with linked properties, allowing any changes to be applied across all colorways simultaneously\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 22597,
+                  "block": 1965
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 23669,
+                  "block": 1965,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetGraphicStyleToGraphic(int _styleIndex, int _colorwayIndex, int _graphicIndex, int _assignOption)",
+                "documentation_raw": "/// @brief              Set GraphicStyle of Graphic\n/// @param              _styleIndex: Graphic Style index on the [_colorwayIndex]th Colorway\n/// @param              _colorwayIndex: Colorway index to get Graphic Style\n/// @param              _graphicIndex: Graphic index to change Graphic Style\n/// @param _assignOption:\n/// _assignOption = 1 (Current Colorway): An item is only applied to the current colorway, while the other colorways retain the existing items.\n/// _assignOption = 2 (All Colorways unlinked Materials): Each colorway is applied its own materials, such as textures and colors.\n/// _assignOption = 3 (All Colorways linked): All colorways share the same item with linked properties, allowing any changes to be applied across all colorways simultaneously",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 22611,
+                    "block": 1966
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 23683,
+                    "block": 1966,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          _styleIndex: Graphic Style index on the [_colorwayIndex]th Colorway",
+            "@param          _colorwayIndex: Colorway index to get Graphic Style",
+            "@param          _graphicIndex: Graphic index to change Graphic Style",
+            "@param _assignOption:"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetGraphicStyleWidth",
+      "qualified_name": "utility_api.SetGraphicStyleWidth",
+      "module": "utility_api",
+      "symbol": "SetGraphicStyleWidth",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetGraphicStyleWidth#ca3edaf221ed01c2",
+          "signature_normalized": "def SetGraphicStyleWidth(_index : int, _width : float, _bOnly : bool) -> None",
+          "signature_raw": "def SetGraphicStyleWidth(_index : int, _width : float, _bOnly : bool) -> None",
+          "parameters": [
+            {
+              "raw": "_index : int",
+              "name": "_index",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_width : float",
+              "name": "_width",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_bOnly : bool",
+              "name": "_bOnly",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetGraphicStyleWidth(_index : int, _width : float, _bOnly : bool) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Sets the width of the graphic style\n@param _index: Graphic style index to use the plugin\n@param _width: The width to be set for the graphic style\n@param _bOnly: If true, the ratio is ignored, if false, the height is set according to the ratio.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 20118,
+                  "block": 1751
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 21083,
+                  "block": 1751,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetGraphicStyleWidth(int _index, float _width, bool _bOnly)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Sets the width of the graphic style\n/// @param _index: Graphic style index to use the plugin\n/// @param _width: The width to be set for the graphic style\n/// @param _bOnly: If true, the ratio is ignored, if false, the height is set according to the ratio.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 20129,
+                    "block": 1752
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 21094,
+                    "block": 1752,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _index: Graphic style index to use the plugin",
+            "@param _width: The width to be set for the graphic style",
+            "@param _bOnly: If true, the ratio is ignored, if false, the height is set according to the ratio."
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetLightPresetForExportRenderingImage",
+      "qualified_name": "utility_api.SetLightPresetForExportRenderingImage",
+      "module": "utility_api",
+      "symbol": "SetLightPresetForExportRenderingImage",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetLightPresetForExportRenderingImage#aed4ccfaa7e31f5e",
+          "signature_normalized": "def SetLightPresetForExportRenderingImage(_index : int) -> None",
+          "signature_raw": "def SetLightPresetForExportRenderingImage(_index : int) -> None",
+          "parameters": [
+            {
+              "raw": "_index : int",
+              "name": "_index",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetLightPresetForExportRenderingImage(_index : int) -> None",
+              "documentation_raw": "\"\"\"\n@brief Set a light preset to be used when exporting rendering images with the V-Ray renderer.\nLight presets define preconfigured lighting environments (e.g., studio lights,\ndaylight, HDRI setups) that affect the overall appearance of the rendered output.\n@param _index Index of the desired light preset, as retrieved from GetLightPresetForExportRenderingImage().\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 20566,
+                  "block": 1783
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 21547,
+                  "block": 1783,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetLightPresetForExportRenderingImage(_index)",
+                "documentation_raw": "/// @brief Set a light preset to be used when exporting rendering images with the V-Ray renderer.\n/// Light presets define preconfigured lighting environments (e.g., studio lights,\n/// daylight, HDRI setups) that affect the overall appearance of the rendered output.\n/// @param _index Index of the desired light preset, as retrieved from GetLightPresetForExportRenderingImage().",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 20576,
+                    "block": 1784
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 21557,
+                    "block": 1784,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _index Index of the desired light preset, as retrieved from GetLightPresetForExportRenderingImage()."
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetMaterialProperties",
+      "qualified_name": "utility_api.SetMaterialProperties",
+      "module": "utility_api",
+      "symbol": "SetMaterialProperties",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetMaterialProperties#4c22849c3dd6b2b7",
+          "signature_normalized": "def SetMaterialProperties(colorwayIndex : int, objectIndex : int, browserContextOptions : ObjectBrowserContextOptions, materialContextProperties : MaterialPropertyOptions, newValues : MaterialPropertyOptions) -> str",
+          "signature_raw": "def SetMaterialProperties(colorwayIndex : int, objectIndex : int, browserContextOptions : ObjectBrowserContextOptions, materialContextProperties : MaterialPropertyOptions, newValues : MaterialPropertyOptions) -> str",
+          "parameters": [
+            {
+              "raw": "colorwayIndex : int",
+              "name": "colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "objectIndex : int",
+              "name": "objectIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "browserContextOptions : ObjectBrowserContextOptions",
+              "name": "browserContextOptions",
+              "annotation_raw": "ObjectBrowserContextOptions"
+            },
+            {
+              "raw": "materialContextProperties : MaterialPropertyOptions",
+              "name": "materialContextProperties",
+              "annotation_raw": "MaterialPropertyOptions"
+            },
+            {
+              "raw": "newValues : MaterialPropertyOptions",
+              "name": "newValues",
+              "annotation_raw": "MaterialPropertyOptions"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def SetMaterialProperties(colorwayIndex : int, objectIndex : int, browserContextOptions : ObjectBrowserContextOptions, materialContextProperties : MaterialPropertyOptions, newValues : MaterialPropertyOptions) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Applies newValues to the material of the target object. The object is located via colorwayIndex,\nobjectIndex and browserContextOptions; the active component tab / mapping / type is taken from\nmaterialContextProperties.contextOptions.\n@param colorwayIndex: target colorway index (0 to n-1; -1 uses the current colorway).\n@param objectIndex: index of the targeted object within its Object Browser category.\n@param browserContextOptions: Object Browser context locating the object (type, sub-item, style-chip...).\n@param materialContextProperties: carries contextOptions (targetComponent / textureMappingType / printType\n/ materialType) that selects which component tab the write applies to.\n@param newValues: the material property values to write.\n@return JSON string: {\"status\": \"success\"|\"error\", \"message\": \"...\"}. Context mismatches and invalid\nstates are reported in the message rather than thrown across the binding boundary.\n@note Supported object types: Fabric (targetComponent Front/Back/Side) and Button (Button/Thread). All other\nsupported types are single-faced with no component tabs (targetComponent = COMPONENT_NONE) and map\nonto the 'front' face stack: Graphic, Buttonhole and Puckering (subItemIndex unused); Trim\n(subItemIndex = trim mesh index); Top-stitch (subItemIndex = stitch line index); Zipper\n(subItemIndex = zipper mesh index).\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 24951,
+                  "block": 2165
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 26123,
+                  "block": 2165,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetMaterialProperties(int colorwayIndex, int objectIndex, const ObjectBrowserContextOptions& browserContextOptions, const MaterialPropertyOptions& materialContextProperties, const MaterialPropertyOptions& newValues)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Applies newValues to the material of the target object. The object is located via colorwayIndex,\n/// objectIndex and browserContextOptions; the active component tab / mapping / type is taken from\n/// materialContextProperties.contextOptions.\n/// @param colorwayIndex: target colorway index (0 to n-1; -1 uses the current colorway).\n/// @param objectIndex: index of the targeted object within its Object Browser category.\n/// @param browserContextOptions: Object Browser context locating the object (type, sub-item, style-chip...).\n/// @param materialContextProperties: carries contextOptions (targetComponent / textureMappingType / printType\n/// / materialType) that selects which component tab the write applies to.\n/// @param newValues: the material property values to write.\n/// @return JSON string: {\"status\": \"success\"|\"error\", \"message\": \"...\"}. Context mismatches and invalid\n/// states are reported in the message rather than thrown across the binding boundary.\n/// @note Supported object types: Fabric (targetComponent Front/Back/Side) and Button (Button/Thread). All other\n/// supported types are single-faced with no component tabs (targetComponent = COMPONENT_NONE) and map\n/// onto the 'front' face stack: Graphic, Buttonhole and Puckering (subItemIndex unused); Trim\n/// (subItemIndex = trim mesh index); Top-stitch (subItemIndex = stitch line index); Zipper\n/// (subItemIndex = zipper mesh index).",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 24974,
+                    "block": 2166
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 26146,
+                    "block": 2166,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "MaterialPropertyOptions",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:MaterialPropertyOptions"
+            },
+            {
+              "name": "ObjectBrowserContextOptions",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:ObjectBrowserContextOptions"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param colorwayIndex: target colorway index (0 to n-1; -1 uses the current colorway).",
+            "@param objectIndex: index of the targeted object within its Object Browser category.",
+            "@param browserContextOptions: Object Browser context locating the object (type, sub-item, style-chip...).",
+            "@param materialContextProperties: carries contextOptions (targetComponent / textureMappingType / printType",
+            "@param newValues: the material property values to write."
+          ],
+          "return_docs_raw": [
+            "@return JSON string: {\"status\": \"success\"|\"error\", \"message\": \"...\"}. Context mismatches and invalid"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetMaterialTextureTransformations",
+      "qualified_name": "utility_api.SetMaterialTextureTransformations",
+      "module": "utility_api",
+      "symbol": "SetMaterialTextureTransformations",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetMaterialTextureTransformations#79532c13f2703d78",
+          "signature_normalized": "def SetMaterialTextureTransformations(colorwayIndex : int, objectIndex : int, browserContextOptions : ObjectBrowserContextOptions, propertyEditorContextOptions : PropertyEditorContextOptions, transformOptions : TransformOptions) -> None",
+          "signature_raw": "def SetMaterialTextureTransformations(colorwayIndex : int, objectIndex : int, browserContextOptions : ObjectBrowserContextOptions, propertyEditorContextOptions : PropertyEditorContextOptions, transformOptions : TransformOptions) -> None",
+          "parameters": [
+            {
+              "raw": "colorwayIndex : int",
+              "name": "colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "objectIndex : int",
+              "name": "objectIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "browserContextOptions : ObjectBrowserContextOptions",
+              "name": "browserContextOptions",
+              "annotation_raw": "ObjectBrowserContextOptions"
+            },
+            {
+              "raw": "propertyEditorContextOptions : PropertyEditorContextOptions",
+              "name": "propertyEditorContextOptions",
+              "annotation_raw": "PropertyEditorContextOptions"
+            },
+            {
+              "raw": "transformOptions : TransformOptions",
+              "name": "transformOptions",
+              "annotation_raw": "TransformOptions"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetMaterialTextureTransformations(colorwayIndex : int, objectIndex : int, browserContextOptions : ObjectBrowserContextOptions, propertyEditorContextOptions : PropertyEditorContextOptions, transformOptions : TransformOptions) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Sets the texture transformation of the targeted object's material map. Routes to the matching\nper-type implementation based on browserContextOptions.type. Currently backs OB_TYPE_FABRIC and\nOB_TYPE_GRAPHIC; other types are accepted but no-op until their per-type backend exists.\n@param colorwayIndex: target colorway index (0 to n-1; -1 uses the current colorway).\n@param objectIndex: index of the targeted object within its Object Browser category.\n@param browserContextOptions: Object Browser context (type, print vs base color, style-chip / sub-item, folder).\n@param propertyEditorContextOptions: Property Editor context (material side, target texture map).\n@param transformOptions: the texture transformation to apply.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 24901,
+                  "block": 2161
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 26071,
+                  "block": 2161,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetMaterialTextureTransformations(int colorwayIndex, int objectIndex, const ObjectBrowserContextOptions& browserContextOptions, const PropertyEditorContextOptions& propertyEditorContextOptions, const TransformOptions& transformOptions)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Sets the texture transformation of the targeted object's material map. Routes to the matching\n/// per-type implementation based on browserContextOptions.type. Currently backs OB_TYPE_FABRIC and\n/// OB_TYPE_GRAPHIC; other types are accepted but no-op until their per-type backend exists.\n/// @param colorwayIndex: target colorway index (0 to n-1; -1 uses the current colorway).\n/// @param objectIndex: index of the targeted object within its Object Browser category.\n/// @param browserContextOptions: Object Browser context (type, print vs base color, style-chip / sub-item, folder).\n/// @param propertyEditorContextOptions: Property Editor context (material side, target texture map).\n/// @param transformOptions: the texture transformation to apply.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 24916,
+                    "block": 2162
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 26086,
+                    "block": 2162,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "ObjectBrowserContextOptions",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:ObjectBrowserContextOptions"
+            },
+            {
+              "name": "PropertyEditorContextOptions",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:PropertyEditorContextOptions"
+            },
+            {
+              "name": "TransformOptions",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:TransformOptions"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param colorwayIndex: target colorway index (0 to n-1; -1 uses the current colorway).",
+            "@param objectIndex: index of the targeted object within its Object Browser category.",
+            "@param browserContextOptions: Object Browser context (type, print vs base color, style-chip / sub-item, folder).",
+            "@param propertyEditorContextOptions: Property Editor context (material side, target texture map).",
+            "@param transformOptions: the texture transformation to apply."
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetMetaDataForCurrentGarment",
+      "qualified_name": "utility_api.SetMetaDataForCurrentGarment",
+      "module": "utility_api",
+      "symbol": "SetMetaDataForCurrentGarment",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetMetaDataForCurrentGarment#abb78616263e39d5",
+          "signature_normalized": "def SetMetaDataForCurrentGarment(metaDataStr : str) -> None",
+          "signature_raw": "def SetMetaDataForCurrentGarment(metaDataStr : str) -> None",
+          "parameters": [
+            {
+              "raw": "metaDataStr : str",
+              "name": "metaDataStr",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetMetaDataForCurrentGarment(metaDataStr : str) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Overwrite Meta data for the current Garment\n@param metaDataStr: the new meata data to set to the current garment\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 16852,
+                  "block": 1451
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 17669,
+                  "block": 1451,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetMetaDataForCurrentGarment(const string& metaDataStr)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Overwrite Meta data for the current Garment\n/// @param metaDataStr: the new meata data to set to the current garment",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 16861,
+                    "block": 1452
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 17678,
+                    "block": 1452,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param metaDataStr: the new meata data to set to the current garment"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetNestingBufferSpacing",
+      "qualified_name": "utility_api.SetNestingBufferSpacing",
+      "module": "utility_api",
+      "symbol": "SetNestingBufferSpacing",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetNestingBufferSpacing#0d39de64bb14cf6a",
+          "signature_normalized": "def SetNestingBufferSpacing(_mm : float) -> None",
+          "signature_raw": "def SetNestingBufferSpacing(_mm : float) -> None",
+          "parameters": [
+            {
+              "raw": "_mm : float",
+              "name": "_mm",
+              "annotation_raw": "float"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetNestingBufferSpacing(_mm : float) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Set all nesting buffer spacings (fabric and pattern) to the same value\n@param _mm : Buffer spacing in mm applied uniformly to all axes\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 18423,
+                  "block": 1589
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 19307,
+                  "block": 1589,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetNestingBufferSpacing(float _mm)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Set all nesting buffer spacings (fabric and pattern) to the same value\n/// @param _mm : Buffer spacing in mm applied uniformly to all axes",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 18432,
+                    "block": 1590
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 19316,
+                    "block": 1590,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _mm : Buffer spacing in mm applied uniformly to all axes"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetNestingFabricBufferSpacing",
+      "qualified_name": "utility_api.SetNestingFabricBufferSpacing",
+      "module": "utility_api",
+      "symbol": "SetNestingFabricBufferSpacing",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetNestingFabricBufferSpacing#c6f4ad350d1ecb27",
+          "signature_normalized": "def SetNestingFabricBufferSpacing(_mmLeft : float, _mmRight : float, _mmTop : float, _mmBottom : float) -> None",
+          "signature_raw": "def SetNestingFabricBufferSpacing(_mmLeft : float, _mmRight : float, _mmTop : float, _mmBottom : float) -> None",
+          "parameters": [
+            {
+              "raw": "_mmLeft : float",
+              "name": "_mmLeft",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_mmRight : float",
+              "name": "_mmRight",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_mmTop : float",
+              "name": "_mmTop",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_mmBottom : float",
+              "name": "_mmBottom",
+              "annotation_raw": "float"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetNestingFabricBufferSpacing(_mmLeft : float, _mmRight : float, _mmTop : float, _mmBottom : float) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Set fabric buffer spacing per side in mm\n@param _mmLeft   : Left margin (Selvedge Side A)\n@param _mmRight  : Right margin (Selvedge Side B)\n@param _mmTop    : Top margin (Cut-Line Start)\n@param _mmBottom : Bottom margin (Cut-Line End)\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 18459,
+                  "block": 1593
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 19345,
+                  "block": 1593,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetNestingFabricBufferSpacing(float, float, float, float)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Set fabric buffer spacing per side in mm\n/// @param _mmLeft   : Left margin (Selvedge Side A)\n/// @param _mmRight  : Right margin (Selvedge Side B)\n/// @param _mmTop    : Top margin (Cut-Line Start)\n/// @param _mmBottom : Bottom margin (Cut-Line End)",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 18471,
+                    "block": 1594
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 19357,
+                    "block": 1594,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _mmLeft   : Left margin (Selvedge Side A)",
+            "@param _mmRight  : Right margin (Selvedge Side B)",
+            "@param _mmTop    : Top margin (Cut-Line Start)",
+            "@param _mmBottom : Bottom margin (Cut-Line End)"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetNestingPatternBufferSpacing",
+      "qualified_name": "utility_api.SetNestingPatternBufferSpacing",
+      "module": "utility_api",
+      "symbol": "SetNestingPatternBufferSpacing",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetNestingPatternBufferSpacing#560c2fe06ca89afe",
+          "signature_normalized": "def SetNestingPatternBufferSpacing(_mmLeft : float, _mmRight : float, _mmTop : float, _mmBottom : float) -> None",
+          "signature_raw": "def SetNestingPatternBufferSpacing(_mmLeft : float, _mmRight : float, _mmTop : float, _mmBottom : float) -> None",
+          "parameters": [
+            {
+              "raw": "_mmLeft : float",
+              "name": "_mmLeft",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_mmRight : float",
+              "name": "_mmRight",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_mmTop : float",
+              "name": "_mmTop",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_mmBottom : float",
+              "name": "_mmBottom",
+              "annotation_raw": "float"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetNestingPatternBufferSpacing(_mmLeft : float, _mmRight : float, _mmTop : float, _mmBottom : float) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Set pattern buffer spacing per side in mm\n@param _mmLeft   : Left buffer\n@param _mmRight  : Right buffer\n@param _mmTop    : Top buffer\n@param _mmBottom : Bottom buffer\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 18501,
+                  "block": 1597
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 19389,
+                  "block": 1597,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetNestingPatternBufferSpacing(float, float, float, float)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Set pattern buffer spacing per side in mm\n/// @param _mmLeft   : Left buffer\n/// @param _mmRight  : Right buffer\n/// @param _mmTop    : Top buffer\n/// @param _mmBottom : Bottom buffer",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 18513,
+                    "block": 1598
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 19401,
+                    "block": 1598,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _mmLeft   : Left buffer",
+            "@param _mmRight  : Right buffer",
+            "@param _mmTop    : Top buffer",
+            "@param _mmBottom : Bottom buffer"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetNestingTargetColorway",
+      "qualified_name": "utility_api.SetNestingTargetColorway",
+      "module": "utility_api",
+      "symbol": "SetNestingTargetColorway",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetNestingTargetColorway#5229d034b270fabe",
+          "signature_normalized": "def SetNestingTargetColorway(_colorwayList : list[int]) -> None",
+          "signature_raw": "def SetNestingTargetColorway(_colorwayList : list[int]) -> None",
+          "parameters": [
+            {
+              "raw": "_colorwayList : list[int]",
+              "name": "_colorwayList",
+              "annotation_raw": "list[int]"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetNestingTargetColorway(_colorwayList : list[int]) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Colorway index to apply nesting result\n@param _colorwayList : Colorway index to apply nesting result\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 18526,
+                  "block": 1599
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 19415,
+                  "block": 1599,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetNestingTargetColorway(std::vector<int> _colorwayList)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Colorway index to apply nesting result\n/// @param _colorwayList : Colorway index to apply nesting result",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 18535,
+                    "block": 1600
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 19424,
+                    "block": 1600,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _colorwayList : Colorway index to apply nesting result"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetNormalBlendingMethod",
+      "qualified_name": "utility_api.SetNormalBlendingMethod",
+      "module": "utility_api",
+      "symbol": "SetNormalBlendingMethod",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetNormalBlendingMethod#00fdd9c0d3d4d819",
+          "signature_normalized": "def SetNormalBlendingMethod(_index : int) -> None",
+          "signature_raw": "def SetNormalBlendingMethod(_index : int) -> None",
+          "parameters": [
+            {
+              "raw": "_index : int",
+              "name": "_index",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetNormalBlendingMethod(_index : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Sets the normal blending method for given index.\n@param _index: The index of the normal blending method to set.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 24298,
+                  "block": 2111
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 25443,
+                  "block": 2111,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetNormalBlendingMethod(int _index)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Sets the normal blending method for given index.\n/// @param _index: The index of the normal blending method to set.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 24307,
+                    "block": 2112
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 25452,
+                    "block": 2112,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _index: The index of the normal blending method to set."
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetObjectBrowserContext",
+      "qualified_name": "utility_api.SetObjectBrowserContext",
+      "module": "utility_api",
+      "symbol": "SetObjectBrowserContext",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetObjectBrowserContext#4e2ce218b3430b46",
+          "signature_normalized": "def SetObjectBrowserContext(options : ObjectBrowserContextOptions) -> None",
+          "signature_raw": "def SetObjectBrowserContext(options : ObjectBrowserContextOptions) -> None",
+          "parameters": [
+            {
+              "raw": "options : ObjectBrowserContextOptions",
+              "name": "options",
+              "annotation_raw": "ObjectBrowserContextOptions"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetObjectBrowserContext(options : ObjectBrowserContextOptions) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Applies an Object Browser context. The state is always persisted per-tab (keyed by\noptions.type) so subsequent getter calls return it; updating one tab never affects the\nother tabs' cached context. In UI mode the Object Browser additionally switches to the\ntargeted tab. In headless mode no UI is touched (all UI access is guarded), preventing\nnull-pointer crashes while still persisting the state internally.\n@param options: the Object Browser context to apply (type selects the target tab).\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 25101,
+                  "block": 2173
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 26277,
+                  "block": 2173,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetObjectBrowserContext(const ObjectBrowserContextOptions& options)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Applies an Object Browser context. The state is always persisted per-tab (keyed by\n/// options.type) so subsequent getter calls return it; updating one tab never affects the\n/// other tabs' cached context. In UI mode the Object Browser additionally switches to the\n/// targeted tab. In headless mode no UI is touched (all UI access is guarded), preventing\n/// null-pointer crashes while still persisting the state internally.\n/// @param options: the Object Browser context to apply (type selects the target tab).",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 25114,
+                    "block": 2174
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 26290,
+                    "block": 2174,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "ObjectBrowserContextOptions",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:ObjectBrowserContextOptions"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param options: the Object Browser context to apply (type selects the target tab)."
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetPatternSnapShotColorwayOption",
+      "qualified_name": "utility_api.SetPatternSnapShotColorwayOption",
+      "module": "utility_api",
+      "symbol": "SetPatternSnapShotColorwayOption",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetPatternSnapShotColorwayOption#94d739e85bd84130",
+          "signature_normalized": "def SetPatternSnapShotColorwayOption(_op : PatternSnapShotColorwayOption, _mode : int) -> None",
+          "signature_raw": "def SetPatternSnapShotColorwayOption(_op : PatternSnapShotColorwayOption, _mode : int) -> None",
+          "parameters": [
+            {
+              "raw": "_op : PatternSnapShotColorwayOption",
+              "name": "_op",
+              "annotation_raw": "PatternSnapShotColorwayOption"
+            },
+            {
+              "raw": "_mode : int",
+              "name": "_mode",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetPatternSnapShotColorwayOption(_op : PatternSnapShotColorwayOption, _mode : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Sets the Colorway option for the PatternSnapshot.\n@param PatternSnapShotColorwayOption _op : Defines which colorway(s) to apply, including custom selections.\n@param int _mode : 0 = capture from PatternWindow, 1 = capture from PrintLayoutWindow.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 24168,
+                  "block": 2099
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 25307,
+                  "block": 2099,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetPatternSnapShotColorwayOption(Marvelous::PatternSnapShotColorwayOption _op, int _mode)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Sets the Colorway option for the PatternSnapshot.\n/// @param PatternSnapShotColorwayOption _op : Defines which colorway(s) to apply, including custom selections.\n/// @param int _mode : 0 = capture from PatternWindow, 1 = capture from PrintLayoutWindow.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 24178,
+                    "block": 2100
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 25317,
+                    "block": 2100,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "PatternSnapShotColorwayOption",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:PatternSnapShotColorwayOption"
+            },
+            {
+              "name": "PatternSnapShotColorwayOption",
+              "basis": "documentation_mention",
+              "status": "resolved",
+              "type_id": "type:PatternSnapShotColorwayOption"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param PatternSnapShotColorwayOption _op : Defines which colorway(s) to apply, including custom selections.",
+            "@param int _mode : 0 = capture from PatternWindow, 1 = capture from PrintLayoutWindow."
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetPatternSnapShotImageOption",
+      "qualified_name": "utility_api.SetPatternSnapShotImageOption",
+      "module": "utility_api",
+      "symbol": "SetPatternSnapShotImageOption",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetPatternSnapShotImageOption#a9fd68e01db0c789",
+          "signature_normalized": "def SetPatternSnapShotImageOption(_op : PatternSnapShotImageOption, _mode : int) -> None",
+          "signature_raw": "def SetPatternSnapShotImageOption(_op : PatternSnapShotImageOption, _mode : int) -> None",
+          "parameters": [
+            {
+              "raw": "_op : PatternSnapShotImageOption",
+              "name": "_op",
+              "annotation_raw": "PatternSnapShotImageOption"
+            },
+            {
+              "raw": "_mode : int",
+              "name": "_mode",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetPatternSnapShotImageOption(_op : PatternSnapShotImageOption, _mode : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Sets the Image option for the PatternSnapshot.\n@param PatternSnapShotImageOption _op : Controls display of fabric, pattern, and graphic textures, and fabric texture opacity.\n@param int _mode : 0 = capture from PatternWindow, 1 = capture from PrintLayoutWindow.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 23928,
+                  "block": 2087
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 25061,
+                  "block": 2087,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetPatternSnapShotImageOption(Marvelous::PatternSnapShotImageOption _op, int _mode)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Sets the Image option for the PatternSnapshot.\n/// @param PatternSnapShotImageOption _op : Controls display of fabric, pattern, and graphic textures, and fabric texture opacity.\n/// @param int _mode : 0 = capture from PatternWindow, 1 = capture from PrintLayoutWindow.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 23938,
+                    "block": 2088
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 25071,
+                    "block": 2088,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "PatternSnapShotImageOption",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:PatternSnapShotImageOption"
+            },
+            {
+              "name": "PatternSnapShotImageOption",
+              "basis": "documentation_mention",
+              "status": "resolved",
+              "type_id": "type:PatternSnapShotImageOption"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param PatternSnapShotImageOption _op : Controls display of fabric, pattern, and graphic textures, and fabric texture opacity.",
+            "@param int _mode : 0 = capture from PatternWindow, 1 = capture from PrintLayoutWindow."
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetPatternSnapShotInformationOption",
+      "qualified_name": "utility_api.SetPatternSnapShotInformationOption",
+      "module": "utility_api",
+      "symbol": "SetPatternSnapShotInformationOption",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetPatternSnapShotInformationOption#0d9eff3b4967ee4f",
+          "signature_normalized": "def SetPatternSnapShotInformationOption(_op : PatternSnapShotInformationOption, _mode : int) -> None",
+          "signature_raw": "def SetPatternSnapShotInformationOption(_op : PatternSnapShotInformationOption, _mode : int) -> None",
+          "parameters": [
+            {
+              "raw": "_op : PatternSnapShotInformationOption",
+              "name": "_op",
+              "annotation_raw": "PatternSnapShotInformationOption"
+            },
+            {
+              "raw": "_mode : int",
+              "name": "_mode",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetPatternSnapShotInformationOption(_op : PatternSnapShotInformationOption, _mode : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Sets the Information option for the PatternSnapshot.\n@param PatternSnapShotInformationOption _op : Controls visibility and type of metadata, including pattern name, annotations, line length, grain line, buttonholes, seam taping, 2D measurements, grading size name, and nest information.\n@param int _mode : 0 = capture from PatternWindow, 1 = capture from PrintLayoutWindow.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 24210,
+                  "block": 2103
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 25351,
+                  "block": 2103,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetPatternSnapShotInformationOption(Marvelous::PatternSnapShotInformationOption _op, int _mode)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Sets the Information option for the PatternSnapshot.\n/// @param PatternSnapShotInformationOption _op : Controls visibility and type of metadata, including pattern name, annotations, line length, grain line, buttonholes, seam taping, 2D measurements, grading size name, and nest information.\n/// @param int _mode : 0 = capture from PatternWindow, 1 = capture from PrintLayoutWindow.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 24220,
+                    "block": 2104
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 25361,
+                    "block": 2104,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "PatternSnapShotInformationOption",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:PatternSnapShotInformationOption"
+            },
+            {
+              "name": "PatternSnapShotInformationOption",
+              "basis": "documentation_mention",
+              "status": "resolved",
+              "type_id": "type:PatternSnapShotInformationOption"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param PatternSnapShotInformationOption _op : Controls visibility and type of metadata, including pattern name, annotations, line length, grain line, buttonholes, seam taping, 2D measurements, grading size name, and nest information.",
+            "@param int _mode : 0 = capture from PatternWindow, 1 = capture from PrintLayoutWindow."
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetPatternSnapShotLineOption",
+      "qualified_name": "utility_api.SetPatternSnapShotLineOption",
+      "module": "utility_api",
+      "symbol": "SetPatternSnapShotLineOption",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetPatternSnapShotLineOption#1d2fda5a4c0e7f33",
+          "signature_normalized": "def SetPatternSnapShotLineOption(_op : PatternSnapShotLineOption, _mode : int) -> None",
+          "signature_raw": "def SetPatternSnapShotLineOption(_op : PatternSnapShotLineOption, _mode : int) -> None",
+          "parameters": [
+            {
+              "raw": "_op : PatternSnapShotLineOption",
+              "name": "_op",
+              "annotation_raw": "PatternSnapShotLineOption"
+            },
+            {
+              "raw": "_mode : int",
+              "name": "_mode",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetPatternSnapShotLineOption(_op : PatternSnapShotLineOption, _mode : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Sets the Line option for the PatternSnapshot.\n@param PatternSnapShotLineOption _op : Controls visibility, color, and line type of outlines, internal lines, graphics, baseline, notches, seam allowance, symmetry lines, and reference lines.\n@param int _mode : 0 = capture from PatternWindow, 1 = capture from PrintLayoutWindow.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 24126,
+                  "block": 2095
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 25263,
+                  "block": 2095,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetPatternSnapShotLineOption(Marvelous::PatternSnapShotLineOption _op, int _mode)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Sets the Line option for the PatternSnapshot.\n/// @param PatternSnapShotLineOption _op : Controls visibility, color, and line type of outlines, internal lines, graphics, baseline, notches, seam allowance, symmetry lines, and reference lines.\n/// @param int _mode : 0 = capture from PatternWindow, 1 = capture from PrintLayoutWindow.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 24136,
+                    "block": 2096
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 25273,
+                    "block": 2096,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "PatternSnapShotLineOption",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:PatternSnapShotLineOption"
+            },
+            {
+              "name": "PatternSnapShotLineOption",
+              "basis": "documentation_mention",
+              "status": "resolved",
+              "type_id": "type:PatternSnapShotLineOption"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param PatternSnapShotLineOption _op : Controls visibility, color, and line type of outlines, internal lines, graphics, baseline, notches, seam allowance, symmetry lines, and reference lines.",
+            "@param int _mode : 0 = capture from PatternWindow, 1 = capture from PrintLayoutWindow."
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetPatternSnapShotSizeOption",
+      "qualified_name": "utility_api.SetPatternSnapShotSizeOption",
+      "module": "utility_api",
+      "symbol": "SetPatternSnapShotSizeOption",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetPatternSnapShotSizeOption#b6d75ffde37d4c23",
+          "signature_normalized": "def SetPatternSnapShotSizeOption(_op : PatternSnapShotSizeOption, _mode : int) -> None",
+          "signature_raw": "def SetPatternSnapShotSizeOption(_op : PatternSnapShotSizeOption, _mode : int) -> None",
+          "parameters": [
+            {
+              "raw": "_op : PatternSnapShotSizeOption",
+              "name": "_op",
+              "annotation_raw": "PatternSnapShotSizeOption"
+            },
+            {
+              "raw": "_mode : int",
+              "name": "_mode",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetPatternSnapShotSizeOption(_op : PatternSnapShotSizeOption, _mode : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Sets the Size option for the PatternSnapshot.\n@param PatternSnapShotSizeOption _op : Defines paper preset, orientation, unit, width/height (always in mm), and resolution.\n\nPreset\n\nA4            = 0\nA3            = 1\nB5            = 2\nB4            = 3\nLetter        = 4\nLegal         = 5\nTabloid       = 6\nWideFormat_24 = 7\nWideFormat_36 = 8\nWideFormat_44 = 9\noneToOne      = 10\nCustom        = 11\n\nOrientation\n\nPortrait  = 0\nLandscape = 1\n\nUnit\n\nPixels      = 0\nInches      = 1\nMilimeters  = 2\nCentimeters = 3\n\n\n@param int _mode : 0 = capture from PatternWindow, 1 = capture from PrintLayoutWindow.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 24026,
+                  "block": 2091
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 25161,
+                  "block": 2091,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetPatternSnapShotSizeOption(Marvelous::PatternSnapShotSizeOption _op, int _mode)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Sets the Size option for the PatternSnapshot.\n/// @param PatternSnapShotSizeOption _op : Defines paper preset, orientation, unit, width/height (always in mm), and resolution.\n\n/// Preset\n\n/// A4            = 0\n/// A3            = 1\n/// B5            = 2\n/// B4            = 3\n/// Letter        = 4\n/// Legal         = 5\n/// Tabloid       = 6\n/// WideFormat_24 = 7\n/// WideFormat_36 = 8\n/// WideFormat_44 = 9\n/// oneToOne      = 10\n/// Custom        = 11\n\n/// Orientation\n\n/// Portrait  = 0\n/// Landscape = 1\n\n/// Unit\n\n/// Pixels      = 0\n/// Inches      = 1\n/// Milimeters  = 2\n/// Centimeters = 3\n\n\n/// @param int _mode : 0 = capture from PatternWindow, 1 = capture from PrintLayoutWindow.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 24065,
+                    "block": 2092
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 25200,
+                    "block": 2092,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "PatternSnapShotSizeOption",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:PatternSnapShotSizeOption"
+            },
+            {
+              "name": "PatternSnapShotSizeOption",
+              "basis": "documentation_mention",
+              "status": "resolved",
+              "type_id": "type:PatternSnapShotSizeOption"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param PatternSnapShotSizeOption _op : Defines paper preset, orientation, unit, width/height (always in mm), and resolution.",
+            "\n\n@param int _mode : 0 = capture from PatternWindow, 1 = capture from PrintLayoutWindow."
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetProgress",
+      "qualified_name": "utility_api.SetProgress",
+      "module": "utility_api",
+      "symbol": "SetProgress",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetProgress#d7fc84a731d6bb9b",
+          "signature_normalized": "def SetProgress(title : str, progress : int) -> None",
+          "signature_raw": "def SetProgress(title : str, progress : int) -> None",
+          "parameters": [
+            {
+              "raw": "title : str",
+              "name": "title",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "progress : int",
+              "name": "progress",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetProgress(title : str, progress : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Set progress on the Progress Bar\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 16909,
+                  "block": 1457
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 17729,
+                  "block": 1457,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetProgress(const string& title, int progress)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Set progress on the Progress Bar",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 16917,
+                    "block": 1458
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 17737,
+                    "block": 1458,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetProgressW",
+      "qualified_name": "utility_api.SetProgressW",
+      "module": "utility_api",
+      "symbol": "SetProgressW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetProgressW#c974f2f307a4cd0d",
+          "signature_normalized": "def SetProgressW(title : str, progress : int) -> None",
+          "signature_raw": "def SetProgressW(title : str, progress : int) -> None",
+          "parameters": [
+            {
+              "raw": "title : str",
+              "name": "title",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "progress : int",
+              "name": "progress",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetProgressW(title : str, progress : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Set progress on the Progress Bar\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 16926,
+                  "block": 1459
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 17747,
+                  "block": 1459,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetProgressW(const wstring& title, int progress)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Set progress on the Progress Bar",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 16934,
+                    "block": 1460
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 17755,
+                    "block": 1460,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetQualityRender",
+      "qualified_name": "utility_api.SetQualityRender",
+      "module": "utility_api",
+      "symbol": "SetQualityRender",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetQualityRender#c7cb12a1de9ab83c",
+          "signature_normalized": "def SetQualityRender(_bSet : bool) -> None",
+          "signature_raw": "def SetQualityRender(_bSet : bool) -> None",
+          "parameters": [
+            {
+              "raw": "_bSet : bool",
+              "name": "_bSet",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetQualityRender(_bSet : bool) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Set Quality Render status\n@param _bSet: true for enable, false for disable \n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 19447,
+                  "block": 1689
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 20381,
+                  "block": 1689,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetQualityRender(bool _bSet)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Set Quality Render status\n/// @param _bSet: true for enable, false for disable",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 19456,
+                    "block": 1690
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 20390,
+                    "block": 1690,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _bSet: true for enable, false for disable "
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetRenderImageVideoProperties",
+      "qualified_name": "utility_api.SetRenderImageVideoProperties",
+      "module": "utility_api",
+      "symbol": "SetRenderImageVideoProperties",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetRenderImageVideoProperties#88bfa15d2defc611",
+          "signature_normalized": "def SetRenderImageVideoProperties(_renderImageVideoOption : RenderImageVideoOptions) -> None",
+          "signature_raw": "def SetRenderImageVideoProperties(_renderImageVideoOption : RenderImageVideoOptions) -> None",
+          "parameters": [
+            {
+              "raw": "_renderImageVideoOption : RenderImageVideoOptions",
+              "name": "_renderImageVideoOption",
+              "annotation_raw": "RenderImageVideoOptions"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetRenderImageVideoProperties(_renderImageVideoOption : RenderImageVideoOptions) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Sets render image/video property values.\n@param _renderImageVideoOption: render option values\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 20768,
+                  "block": 1803
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 21759,
+                  "block": 1803,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetRenderImageVideoProperties()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Sets render image/video property values.\n/// @param _renderImageVideoOption: render option values",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 20777,
+                    "block": 1804
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 21768,
+                    "block": 1804,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "RenderImageVideoOptions",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:RenderImageVideoOptions"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param _renderImageVideoOption: render option values"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetRenderingProperties",
+      "qualified_name": "utility_api.SetRenderingProperties",
+      "module": "utility_api",
+      "symbol": "SetRenderingProperties",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetRenderingProperties#e74f383d219f08a9",
+          "signature_normalized": "def SetRenderingProperties(_renderPropertyOptions : RenderPropertyOptions) -> None",
+          "signature_raw": "def SetRenderingProperties(_renderPropertyOptions : RenderPropertyOptions) -> None",
+          "parameters": [
+            {
+              "raw": "_renderPropertyOptions : RenderPropertyOptions",
+              "name": "_renderPropertyOptions",
+              "annotation_raw": "RenderPropertyOptions"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetRenderingProperties(_renderPropertyOptions : RenderPropertyOptions) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Sets rendering property values.\n@param _renderPropertyOptions: render property option values\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 20804,
+                  "block": 1807
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 21797,
+                  "block": 1807,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetRenderingProperties(Marvelous::RenderPropertyOptions& _renderPropertyOptions)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Sets rendering property values.\n/// @param _renderPropertyOptions: render property option values",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 20813,
+                    "block": 1808
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 21806,
+                    "block": 1808,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "RenderPropertyOptions",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:RenderPropertyOptions"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param _renderPropertyOptions: render property option values"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetSchematicBrightness",
+      "qualified_name": "utility_api.SetSchematicBrightness",
+      "module": "utility_api",
+      "symbol": "SetSchematicBrightness",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetSchematicBrightness#9e9c60ccc0e264c0",
+          "signature_normalized": "def SetSchematicBrightness(_value : int) -> None",
+          "signature_raw": "def SetSchematicBrightness(_value : int) -> None",
+          "parameters": [
+            {
+              "raw": "_value : int",
+              "name": "_value",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetSchematicBrightness(_value : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief set schematic brightness\n@param _value: Value for setting schematic brightness\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 19283,
+                  "block": 1673
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 20209,
+                  "block": 1673,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetSchematicBrightness(int _value)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief set schematic brightness\n/// @param _value: Value for setting schematic brightness",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 19292,
+                    "block": 1674
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 20218,
+                    "block": 1674,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _value: Value for setting schematic brightness"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetSchematicClothColor",
+      "qualified_name": "utility_api.SetSchematicClothColor",
+      "module": "utility_api",
+      "symbol": "SetSchematicClothColor",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetSchematicClothColor#19dba777587c1248",
+          "signature_normalized": "def SetSchematicClothColor(_r : int, _g : int, _b : int) -> None",
+          "signature_raw": "def SetSchematicClothColor(_r : int, _g : int, _b : int) -> None",
+          "parameters": [
+            {
+              "raw": "_r : int",
+              "name": "_r",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_g : int",
+              "name": "_g",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_b : int",
+              "name": "_b",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetSchematicClothColor(_r : int, _g : int, _b : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief set schematic cloth color\n@param int _r, int _g, int _b: Value for setting schematic cloth color\nRed: 0 ~ 255\nGreen: 0 ~ 255\nBlue: 0 ~ 255\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 19422,
+                  "block": 1687
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 20355,
+                  "block": 1687,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetSchematicClothColor(int _r, int _g, int _b)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief set schematic cloth color\n/// @param int _r, int _g, int _b: Value for setting schematic cloth color\n/// Red: 0 ~ 255\n/// Green: 0 ~ 255\n/// Blue: 0 ~ 255",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 19434,
+                    "block": 1688
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 20367,
+                    "block": 1688,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param int _r, int _g, int _b: Value for setting schematic cloth color"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetSchematicClothRenderType",
+      "qualified_name": "utility_api.SetSchematicClothRenderType",
+      "module": "utility_api",
+      "symbol": "SetSchematicClothRenderType",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetSchematicClothRenderType#12c78e3081298aed",
+          "signature_normalized": "def SetSchematicClothRenderType(_bTexture : bool) -> None",
+          "signature_raw": "def SetSchematicClothRenderType(_bTexture : bool) -> None",
+          "parameters": [
+            {
+              "raw": "_bTexture : bool",
+              "name": "_bTexture",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetSchematicClothRenderType(_bTexture : bool) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief set schematic cloth render type\n@param _bTexture: Value for setting schematic cloth render type\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 19378,
+                  "block": 1683
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 20309,
+                  "block": 1683,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetSchematicClothRenderType(bool _bTexture)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief set schematic cloth render type\n/// @param _bTexture: Value for setting schematic cloth render type",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 19387,
+                    "block": 1684
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 20318,
+                    "block": 1684,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _bTexture: Value for setting schematic cloth render type"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetSchematicInternalLineWidth",
+      "qualified_name": "utility_api.SetSchematicInternalLineWidth",
+      "module": "utility_api",
+      "symbol": "SetSchematicInternalLineWidth",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetSchematicInternalLineWidth#2909ce7f3ed6e13e",
+          "signature_normalized": "def SetSchematicInternalLineWidth(_value : int) -> None",
+          "signature_raw": "def SetSchematicInternalLineWidth(_value : int) -> None",
+          "parameters": [
+            {
+              "raw": "_value : int",
+              "name": "_value",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetSchematicInternalLineWidth(_value : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief set schematic internal line width\n@param _value: Value for setting schematic internal line width\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 19245,
+                  "block": 1669
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 20169,
+                  "block": 1669,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetSchematicInternalLineWidth(int _value)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief set schematic internal line width\n/// @param _value: Value for setting schematic internal line width",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 19254,
+                    "block": 1670
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 20178,
+                    "block": 1670,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _value: Value for setting schematic internal line width"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetSchematicRender",
+      "qualified_name": "utility_api.SetSchematicRender",
+      "module": "utility_api",
+      "symbol": "SetSchematicRender",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetSchematicRender#148ba43fd06d0f80",
+          "signature_normalized": "def SetSchematicRender(_bSet : bool) -> None",
+          "signature_raw": "def SetSchematicRender(_bSet : bool) -> None",
+          "parameters": [
+            {
+              "raw": "_bSet : bool",
+              "name": "_bSet",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetSchematicRender(_bSet : bool) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Set Schematic Render status\n@param _bSet: true for enable, false for disable\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 17809,
+                  "block": 1541
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 18671,
+                  "block": 1541,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetSchematicRender(bool _bSet)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Set Schematic Render status\n/// @param _bSet: true for enable, false for disable",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 17818,
+                    "block": 1542
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 18680,
+                    "block": 1542,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _bSet: true for enable, false for disable"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetSchematicSeamLineWidth",
+      "qualified_name": "utility_api.SetSchematicSeamLineWidth",
+      "module": "utility_api",
+      "symbol": "SetSchematicSeamLineWidth",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetSchematicSeamLineWidth#dc36cc62fc493f08",
+          "signature_normalized": "def SetSchematicSeamLineWidth(_value : int) -> None",
+          "signature_raw": "def SetSchematicSeamLineWidth(_value : int) -> None",
+          "parameters": [
+            {
+              "raw": "_value : int",
+              "name": "_value",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetSchematicSeamLineWidth(_value : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief set schematic seamline width\n@param _value: Value for setting schematic seamline width\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 19226,
+                  "block": 1667
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 20149,
+                  "block": 1667,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetSchematicSeamLineWidth(int _value)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief set schematic seamline width\n/// @param _value: Value for setting schematic seamline width",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 19235,
+                    "block": 1668
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 20158,
+                    "block": 1668,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _value: Value for setting schematic seamline width"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetSchematicSilhouetteLineWidth",
+      "qualified_name": "utility_api.SetSchematicSilhouetteLineWidth",
+      "module": "utility_api",
+      "symbol": "SetSchematicSilhouetteLineWidth",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetSchematicSilhouetteLineWidth#154c835345d50c39",
+          "signature_normalized": "def SetSchematicSilhouetteLineWidth(_value : int) -> None",
+          "signature_raw": "def SetSchematicSilhouetteLineWidth(_value : int) -> None",
+          "parameters": [
+            {
+              "raw": "_value : int",
+              "name": "_value",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetSchematicSilhouetteLineWidth(_value : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief set schematic silhouette line width\n@param _value: Value for setting schematic silhouette line width\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 19207,
+                  "block": 1665
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 20129,
+                  "block": 1665,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetSchematicSilhouetteLineWidth(int _value)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief set schematic silhouette line width\n/// @param _value: Value for setting schematic silhouette line width",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 19216,
+                    "block": 1666
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 20138,
+                    "block": 1666,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _value: Value for setting schematic silhouette line width"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetSchematicTopstitchLineScalePercent",
+      "qualified_name": "utility_api.SetSchematicTopstitchLineScalePercent",
+      "module": "utility_api",
+      "symbol": "SetSchematicTopstitchLineScalePercent",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetSchematicTopstitchLineScalePercent#a1eb40962cb7e13b",
+          "signature_normalized": "def SetSchematicTopstitchLineScalePercent(_value : int) -> None",
+          "signature_raw": "def SetSchematicTopstitchLineScalePercent(_value : int) -> None",
+          "parameters": [
+            {
+              "raw": "_value : int",
+              "name": "_value",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetSchematicTopstitchLineScalePercent(_value : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief set schematic topstitch line scale percent\n@param _value: Value for setting schematic topstitch line scale percent\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 19264,
+                  "block": 1671
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 20189,
+                  "block": 1671,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetSchematicTopstitchLineScalePercent(int _value)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief set schematic topstitch line scale percent\n/// @param _value: Value for setting schematic topstitch line scale percent",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 19273,
+                    "block": 1672
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 20198,
+                    "block": 1672,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _value: Value for setting schematic topstitch line scale percent"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    }
+  ]
+}

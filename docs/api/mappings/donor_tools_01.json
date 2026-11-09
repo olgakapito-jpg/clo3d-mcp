@@ -1,0 +1,6397 @@
+[
+  {
+    "name": "add_annotation",
+    "function": "add_annotation",
+    "path": "src/clo3d_mcp/extended/geometry.py",
+    "lines": [
+      166,
+      168
+    ],
+    "signature": "add_annotation(pattern_index: int, x: float, y: float, text: str) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "pattern_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "x",
+        "kind": "positional_or_keyword",
+        "annotation": "float",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "y",
+        "kind": "positional_or_keyword",
+        "annotation": "float",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "text",
+        "kind": "positional_or_keyword",
+        "annotation": "str",
+        "required": true,
+        "default": null
+      }
+    ],
+    "description": "Write a text annotation on a pattern piece at (x, y) mm.",
+    "routes": [
+      {
+        "command": "add_annotation",
+        "path": "src/clo3d_mcp/extended/geometry.py",
+        "lines": [
+          168,
+          168
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "add_annotation"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "pattern_api.AddPatternAnnotation"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "add_fabric",
+    "function": "add_fabric",
+    "path": "src/clo3d_mcp/server.py",
+    "lines": [
+      172,
+      178
+    ],
+    "signature": "add_fabric(file_path: str) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "file_path",
+        "kind": "positional_or_keyword",
+        "annotation": "str",
+        "required": true,
+        "default": null
+      }
+    ],
+    "description": "Add a new fabric to the project from a .zfab or .jfab file.\n\nArgs:\n    file_path: Absolute path to the fabric file (.zfab or .jfab).",
+    "routes": [
+      {
+        "command": "add_fabric",
+        "path": "src/clo3d_mcp/server.py",
+        "lines": [
+          178,
+          178
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "add_fabric"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "fabric_api.AddFabric"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "add_graphic_to_pattern",
+    "function": "add_graphic_to_pattern",
+    "path": "src/clo3d_mcp/extended/materials.py",
+    "lines": [
+      235,
+      257
+    ],
+    "signature": "add_graphic_to_pattern(pattern_index: int, style_index: int, x: float, y: float, width: float, height: float, face: int=0, z_offset: float=0.0, angle: float=0.0) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "pattern_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "style_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "x",
+        "kind": "positional_or_keyword",
+        "annotation": "float",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "y",
+        "kind": "positional_or_keyword",
+        "annotation": "float",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "width",
+        "kind": "positional_or_keyword",
+        "annotation": "float",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "height",
+        "kind": "positional_or_keyword",
+        "annotation": "float",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "face",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": false,
+        "default": "0"
+      },
+      {
+        "name": "z_offset",
+        "kind": "positional_or_keyword",
+        "annotation": "float",
+        "required": false,
+        "default": "0.0"
+      },
+      {
+        "name": "angle",
+        "kind": "positional_or_keyword",
+        "annotation": "float",
+        "required": false,
+        "default": "0.0"
+      }
+    ],
+    "description": "Place a graphic style (logo) on a pattern piece. Returns the positions of that logo on the piece.\n\nKnown limits with CLO 2025.2 (verified live): works on pieces drawn in CLO, was refused on pieces created\nby script; the position is approximate and placed logos cannot be moved or deleted through the API.\nBefore placing, read the piece position and size (get_pattern_details, get_bounding_box) and capture the\n2D view (export_snapshot_2d); capture it again after placing to check where the logo landed.\n\nArgs:\n    pattern_index: Pattern piece receiving the logo.\n    style_index: Graphic style index, from get_graphic_styles.\n    x: Position of the logo center, from the left of the piece bounding box, in mm.\n    y: Position of the logo center, from the top of the piece bounding box, downward, in mm.\n    width: Logo width in mm.\n    height: Logo height in mm.\n    face: 0 front, 1 back, 2 both.\n    z_offset: Depth offset.\n    angle: Rotation in degrees.",
+    "routes": [
+      {
+        "command": "add_graphic_to_pattern",
+        "path": "src/clo3d_mcp/extended/materials.py",
+        "lines": [
+          255,
+          257
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "add_graphic_to_pattern"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "utility_api.AddGraphicStyleToPattern",
+      "utility_api.GetGraphicStylePosition"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "add_seam_topstitch",
+    "function": "add_seam_topstitch",
+    "path": "src/clo3d_mcp/extended/sewing.py",
+    "lines": [
+      85,
+      96
+    ],
+    "signature": "add_seam_topstitch(seam_group_index: int, start_ratio: float=0.0, end_ratio: float=1.0, style_index: int=0) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "seam_group_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "start_ratio",
+        "kind": "positional_or_keyword",
+        "annotation": "float",
+        "required": false,
+        "default": "0.0"
+      },
+      {
+        "name": "end_ratio",
+        "kind": "positional_or_keyword",
+        "annotation": "float",
+        "required": false,
+        "default": "1.0"
+      },
+      {
+        "name": "style_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": false,
+        "default": "0"
+      }
+    ],
+    "description": "Add a topstitch along a seam, over all or part of its length.\n\nArgs:\n    seam_group_index: Seam group, from get_seam_groups.\n    start_ratio: Start along the seam, 0 to 1.\n    end_ratio: End along the seam, 0 to 1.\n    style_index: Topstitch style, from get_topstitches.",
+    "routes": [
+      {
+        "command": "add_seam_topstitch",
+        "path": "src/clo3d_mcp/extended/sewing.py",
+        "lines": [
+          95,
+          96
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "add_seam_topstitch"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "pattern_api.AddSeamlineTopstitch"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "align_avatar_and_garment",
+    "function": "align_avatar_and_garment",
+    "path": "src/clo3d_mcp/extended/avatar.py",
+    "lines": [
+      67,
+      69
+    ],
+    "signature": "align_avatar_and_garment() -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [],
+    "description": "Move the avatars and the garment back to the center of the scene.",
+    "routes": [
+      {
+        "command": "align_avatar_and_garment",
+        "path": "src/clo3d_mcp/extended/avatar.py",
+        "lines": [
+          69,
+          69
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "align_avatar_and_garment"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "export_api.GetAvatarCount",
+      "utility_api.AlignAvatarsAndGarmentToCenter"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "arrange_pattern",
+    "function": "arrange_pattern",
+    "path": "src/clo3d_mcp/extended/simulation.py",
+    "lines": [
+      19,
+      35
+    ],
+    "signature": "arrange_pattern(pattern_index: int, arrangement_index: int | None=None, x: int | None=None, y: int | None=None, offset: int=0, orientation: int | None=None, shape_style: str | None=None) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "pattern_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "arrangement_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int | None",
+        "required": false,
+        "default": "None"
+      },
+      {
+        "name": "x",
+        "kind": "positional_or_keyword",
+        "annotation": "int | None",
+        "required": false,
+        "default": "None"
+      },
+      {
+        "name": "y",
+        "kind": "positional_or_keyword",
+        "annotation": "int | None",
+        "required": false,
+        "default": "None"
+      },
+      {
+        "name": "offset",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": false,
+        "default": "0"
+      },
+      {
+        "name": "orientation",
+        "kind": "positional_or_keyword",
+        "annotation": "int | None",
+        "required": false,
+        "default": "None"
+      },
+      {
+        "name": "shape_style",
+        "kind": "positional_or_keyword",
+        "annotation": "str | None",
+        "required": false,
+        "default": "None"
+      }
+    ],
+    "description": "Place a pattern piece around the avatar before simulating.\n\nArgs:\n    pattern_index: Zero-based pattern index.\n    arrangement_index: Arrangement point, from get_arrangement_list.\n    x: Optional position on the arrangement, with y and offset.\n    y: Optional position on the arrangement.\n    offset: Distance from the avatar, with x and y.\n    orientation: Optional orientation code.\n    shape_style: Optional arrangement shape style.",
+    "routes": [
+      {
+        "command": "arrange_pattern",
+        "path": "src/clo3d_mcp/extended/simulation.py",
+        "lines": [
+          33,
+          35
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "arrange_pattern"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "export_api.GetAvatarCount",
+      "pattern_api.SetArrangement",
+      "pattern_api.SetArrangementOrientation",
+      "pattern_api.SetArrangementPosition",
+      "pattern_api.SetArrangementShapeStyle"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "assign_fabric_to_pattern",
+    "function": "assign_fabric_to_pattern",
+    "path": "src/clo3d_mcp/server.py",
+    "lines": [
+      193,
+      210
+    ],
+    "signature": "assign_fabric_to_pattern(fabric_index: int, pattern_index: int, assign_option: int=1) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "fabric_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "pattern_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "assign_option",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": false,
+        "default": "1"
+      }
+    ],
+    "description": "Assign a fabric to a pattern piece.\n\nArgs:\n    fabric_index: Zero-based index of the fabric.\n    pattern_index: Zero-based index of the pattern piece.\n    assign_option: 1=current colorway only, 2=all colorways (unlinked), 3=all colorways (linked).",
+    "routes": [
+      {
+        "command": "assign_fabric",
+        "path": "src/clo3d_mcp/server.py",
+        "lines": [
+          203,
+          210
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "assign_fabric"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "fabric_api.AssignFabricToPattern"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": [
+      {
+        "tool_name": "assign_fabric_to_pattern",
+        "wire_command": "assign_fabric",
+        "handler_function": "handle_assign_fabric",
+        "equivalence": "routing_only_not_contract"
+      }
+    ]
+  },
+  {
+    "name": "assign_graphic_style",
+    "function": "assign_graphic_style",
+    "path": "src/clo3d_mcp/extended/materials.py",
+    "lines": [
+      108,
+      112
+    ],
+    "signature": "assign_graphic_style(style_index: int, graphic_index: int, assign_option: int=0, colorway_index: int | None=None) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "style_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "graphic_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "assign_option",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": false,
+        "default": "0"
+      },
+      {
+        "name": "colorway_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int | None",
+        "required": false,
+        "default": "None"
+      }
+    ],
+    "description": "Give an existing graphic a different graphic style, for example another version of a logo.",
+    "routes": [
+      {
+        "command": "assign_graphic_style",
+        "path": "src/clo3d_mcp/extended/materials.py",
+        "lines": [
+          111,
+          112
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "assign_graphic_style"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "utility_api.SetGraphicStyleToGraphic"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "change_fabric_with_json",
+    "function": "change_fabric_with_json",
+    "path": "src/clo3d_mcp/extended/materials.py",
+    "lines": [
+      119,
+      122
+    ],
+    "signature": "change_fabric_with_json(fabric_index: int, jfab_path: str, colorway_index: int | None=None) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "fabric_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "jfab_path",
+        "kind": "positional_or_keyword",
+        "annotation": "str",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "colorway_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int | None",
+        "required": false,
+        "default": "None"
+      }
+    ],
+    "description": "Overwrite all the properties of a fabric, physics included, from a .jfab file (absolute path).",
+    "routes": [
+      {
+        "command": "change_fabric_with_json",
+        "path": "src/clo3d_mcp/extended/materials.py",
+        "lines": [
+          121,
+          122
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "change_fabric_with_json"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "fabric_api.ChangeFabricWithJson"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "change_grading_size",
+    "function": "change_grading_size",
+    "path": "src/clo3d_mcp/extended/avatar.py",
+    "lines": [
+      43,
+      45
+    ],
+    "signature": "change_grading_size(group: int | str, size: int | str) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "group",
+        "kind": "positional_or_keyword",
+        "annotation": "int | str",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "size",
+        "kind": "positional_or_keyword",
+        "annotation": "int | str",
+        "required": true,
+        "default": null
+      }
+    ],
+    "description": "Switch the garment to another size of CLO3D's grading. Give indices, or names, for both.",
+    "routes": [
+      {
+        "command": "change_grading_size",
+        "path": "src/clo3d_mcp/extended/avatar.py",
+        "lines": [
+          45,
+          45
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "change_grading_size"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "pattern_api.ChangeGradingSizeInformation"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "convert_shape",
+    "function": "convert_shape",
+    "path": "src/clo3d_mcp/extended/geometry.py",
+    "lines": [
+      36,
+      44
+    ],
+    "signature": "convert_shape(pattern_index: int, child_index: int, to: str='internal') -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "pattern_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "child_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "to",
+        "kind": "positional_or_keyword",
+        "annotation": "str",
+        "required": false,
+        "default": "'internal'"
+      }
+    ],
+    "description": "Convert a shape of a pattern piece to an internal line or a base line.\n\nArgs:\n    pattern_index: Zero-based pattern index.\n    child_index: Index of the shape inside the piece.\n    to: \"internal\" or \"base\".",
+    "routes": [
+      {
+        "command": "convert_shape",
+        "path": "src/clo3d_mcp/extended/geometry.py",
+        "lines": [
+          44,
+          44
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "convert_shape"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "pattern_api.ConvertToBaseLine",
+      "pattern_api.ConvertToInternalLine"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "copy_colorway",
+    "function": "copy_colorway",
+    "path": "src/clo3d_mcp/extended/visuals.py",
+    "lines": [
+      66,
+      68
+    ],
+    "signature": "copy_colorway(colorway_index: int, copy_option: int=0) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "colorway_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "copy_option",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": false,
+        "default": "0"
+      }
+    ],
+    "description": "Duplicate a colorway. Returns the index of the new colorway.",
+    "routes": [
+      {
+        "command": "copy_colorway",
+        "path": "src/clo3d_mcp/extended/visuals.py",
+        "lines": [
+          68,
+          68
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "copy_colorway"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "utility_api.CopyColorway"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "copy_pattern",
+    "function": "copy_pattern",
+    "path": "src/clo3d_mcp/server.py",
+    "lines": [
+      112,
+      120
+    ],
+    "signature": "copy_pattern(pattern_index: int, x: float=0, y: float=0) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "pattern_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "x",
+        "kind": "positional_or_keyword",
+        "annotation": "float",
+        "required": false,
+        "default": "0"
+      },
+      {
+        "name": "y",
+        "kind": "positional_or_keyword",
+        "annotation": "float",
+        "required": false,
+        "default": "0"
+      }
+    ],
+    "description": "Duplicate a pattern piece at a given position.\n\nArgs:\n    pattern_index: Zero-based index of the pattern piece to copy.\n    x: X position offset for the copy (mm).\n    y: Y position offset for the copy (mm).",
+    "routes": [
+      {
+        "command": "copy_pattern",
+        "path": "src/clo3d_mcp/server.py",
+        "lines": [
+          120,
+          120
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "copy_pattern"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "pattern_api.CopyPatternPiecePos"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "copy_pattern_with_offset",
+    "function": "copy_pattern_with_offset",
+    "path": "src/clo3d_mcp/extended/geometry.py",
+    "lines": [
+      109,
+      111
+    ],
+    "signature": "copy_pattern_with_offset(pattern_index: int, dx: float, dy: float) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "pattern_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "dx",
+        "kind": "positional_or_keyword",
+        "annotation": "float",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "dy",
+        "kind": "positional_or_keyword",
+        "annotation": "float",
+        "required": true,
+        "default": null
+      }
+    ],
+    "description": "Copy a pattern piece, shifted by (dx, dy) mm in the 2D window. Returns the new pattern index.",
+    "routes": [
+      {
+        "command": "copy_pattern_with_offset",
+        "path": "src/clo3d_mcp/extended/geometry.py",
+        "lines": [
+          111,
+          111
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "copy_pattern_with_offset"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "pattern_api.CopyPatternPieceMove"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "create_internal_shape",
+    "function": "create_internal_shape",
+    "path": "src/clo3d_mcp/extended/geometry.py",
+    "lines": [
+      20,
+      32
+    ],
+    "signature": "create_internal_shape(pattern_index: int, points: list[list[float]], closed: bool=False, base: bool=False) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "pattern_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "points",
+        "kind": "positional_or_keyword",
+        "annotation": "list[list[float]]",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "closed",
+        "kind": "positional_or_keyword",
+        "annotation": "bool",
+        "required": false,
+        "default": "False"
+      },
+      {
+        "name": "base",
+        "kind": "positional_or_keyword",
+        "annotation": "bool",
+        "required": false,
+        "default": "False"
+      }
+    ],
+    "description": "Draw a shape inside a pattern piece: dart lines, placement marks, topstitch guides.\n\nArgs:\n    pattern_index: Zero-based index of the parent pattern piece.\n    points: [x, y] or [x, y, type] in mm, in the piece's coordinates.\n            Type: 0 = straight point, 2 = spline point, 3 = Bézier control point.\n    closed: True for a closed shape.\n    base: True to create a base line instead of an internal line.",
+    "routes": [
+      {
+        "command": "create_internal_shape",
+        "path": "src/clo3d_mcp/extended/geometry.py",
+        "lines": [
+          31,
+          32
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "create_internal_shape"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "pattern_api.CreateBaseShapeWithPoints",
+      "pattern_api.CreateInternalShapeWithPoints"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "create_pattern",
+    "function": "create_pattern",
+    "path": "src/clo3d_mcp/server.py",
+    "lines": [
+      145,
+      153
+    ],
+    "signature": "create_pattern(points: list[list[float]]) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "points",
+        "kind": "positional_or_keyword",
+        "annotation": "list[list[float]]",
+        "required": true,
+        "default": null
+      }
+    ],
+    "description": "Create a new pattern piece from vertex points.\n\nArgs:\n    points: List of [x, y] or [x, y, type] coordinates in mm.\n            Type: 0=straight (default), 2=spline, 3=bezier.\n            Example: [[0,0], [100,0], [100,200], [0,200]]",
+    "routes": [
+      {
+        "command": "create_pattern",
+        "path": "src/clo3d_mcp/server.py",
+        "lines": [
+          153,
+          153
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "create_pattern"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "pattern_api.CreatePatternWithPoints"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "delete_avatars",
+    "function": "delete_avatars",
+    "path": "src/clo3d_mcp/extended/avatar.py",
+    "lines": [
+      85,
+      87
+    ],
+    "signature": "delete_avatars(avatar_indices: list[int]) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "avatar_indices",
+        "kind": "positional_or_keyword",
+        "annotation": "list[int]",
+        "required": true,
+        "default": null
+      }
+    ],
+    "description": "Delete avatars from the scene.",
+    "routes": [
+      {
+        "command": "delete_avatars",
+        "path": "src/clo3d_mcp/extended/avatar.py",
+        "lines": [
+          87,
+          87
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "delete_avatars"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "utility_api.DeleteAvatar"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "delete_colorway",
+    "function": "delete_colorway",
+    "path": "src/clo3d_mcp/extended/visuals.py",
+    "lines": [
+      72,
+      74
+    ],
+    "signature": "delete_colorway(colorway_index: int) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "colorway_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      }
+    ],
+    "description": "Delete a colorway.",
+    "routes": [
+      {
+        "command": "delete_colorway",
+        "path": "src/clo3d_mcp/extended/visuals.py",
+        "lines": [
+          74,
+          74
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "delete_colorway"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "utility_api.DeleteColorwayItem"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "delete_fabric",
+    "function": "delete_fabric",
+    "path": "src/clo3d_mcp/extended/materials.py",
+    "lines": [
+      19,
+      21
+    ],
+    "signature": "delete_fabric(fabric_index: int) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "fabric_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      }
+    ],
+    "description": "Delete a fabric from the project.",
+    "routes": [
+      {
+        "command": "delete_fabric",
+        "path": "src/clo3d_mcp/extended/materials.py",
+        "lines": [
+          21,
+          21
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "delete_fabric"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "fabric_api.DeleteFabric"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "delete_line",
+    "function": "delete_line",
+    "path": "src/clo3d_mcp/extended/geometry.py",
+    "lines": [
+      66,
+      68
+    ],
+    "signature": "delete_line(pattern_index: int, line_index: int) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "pattern_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "line_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      }
+    ],
+    "description": "Delete a line of a pattern piece.",
+    "routes": [
+      {
+        "command": "delete_line",
+        "path": "src/clo3d_mcp/extended/geometry.py",
+        "lines": [
+          68,
+          68
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "delete_line"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "pattern_api.DeleteLine"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "delete_pattern",
+    "function": "delete_pattern",
+    "path": "src/clo3d_mcp/server.py",
+    "lines": [
+      124,
+      130
+    ],
+    "signature": "delete_pattern(pattern_index: int) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "pattern_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      }
+    ],
+    "description": "Delete a pattern piece from the project.\n\nArgs:\n    pattern_index: Zero-based index of the pattern piece to delete.",
+    "routes": [
+      {
+        "command": "delete_pattern",
+        "path": "src/clo3d_mcp/server.py",
+        "lines": [
+          130,
+          130
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "delete_pattern"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "pattern_api.DeletePatternPiece"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "delete_point",
+    "function": "delete_point",
+    "path": "src/clo3d_mcp/extended/geometry.py",
+    "lines": [
+      72,
+      74
+    ],
+    "signature": "delete_point(pattern_index: int, point_index: int) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "pattern_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "point_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      }
+    ],
+    "description": "Delete a point of a pattern piece.",
+    "routes": [
+      {
+        "command": "delete_point",
+        "path": "src/clo3d_mcp/extended/geometry.py",
+        "lines": [
+          74,
+          74
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "delete_point"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "pattern_api.DeletePoint"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "describe_clo_api",
+    "function": "describe_clo_api",
+    "path": "src/clo3d_mcp/extended/docs.py",
+    "lines": [
+      13,
+      20
+    ],
+    "signature": "describe_clo_api(module: str, functions: list[str]) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "module",
+        "kind": "positional_or_keyword",
+        "annotation": "str",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "functions",
+        "kind": "positional_or_keyword",
+        "annotation": "list[str]",
+        "required": true,
+        "default": null
+      }
+    ],
+    "description": "Read the Python signatures of CLO API functions, without calling them.\n\nArgs:\n    module: For example \"pattern_api\", \"export_api\", \"utility_api\".\n    functions: Function names to describe.",
+    "routes": [
+      {
+        "command": "api_doc",
+        "path": "src/clo3d_mcp/extended/docs.py",
+        "lines": [
+          20,
+          20
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "api_doc"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [],
+    "route_status": "literal_handler_route",
+    "name_aliases": [
+      {
+        "tool_name": "describe_clo_api",
+        "wire_command": "api_doc",
+        "handler_function": "handle_api_doc",
+        "equivalence": "routing_only_not_contract"
+      }
+    ]
+  },
+  {
+    "name": "distribute_internal_lines",
+    "function": "distribute_internal_lines",
+    "path": "src/clo3d_mcp/extended/geometry.py",
+    "lines": [
+      148,
+      162
+    ],
+    "signature": "distribute_internal_lines(pattern_index: int, line_indices: list[int], number: int, straight: bool=True, perpendicular: bool=False, graduate: bool=False) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "pattern_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "line_indices",
+        "kind": "positional_or_keyword",
+        "annotation": "list[int]",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "number",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "straight",
+        "kind": "positional_or_keyword",
+        "annotation": "bool",
+        "required": false,
+        "default": "True"
+      },
+      {
+        "name": "perpendicular",
+        "kind": "positional_or_keyword",
+        "annotation": "bool",
+        "required": false,
+        "default": "False"
+      },
+      {
+        "name": "graduate",
+        "kind": "positional_or_keyword",
+        "annotation": "bool",
+        "required": false,
+        "default": "False"
+      }
+    ],
+    "description": "Distribute internal lines between segments, for pleats, tucks or slash lines.\n\nArgs:\n    pattern_index: Zero-based pattern index.\n    line_indices: Segments between which the lines are spread.\n    number: Number of lines.\n    straight: Straight lines instead of curves.\n    perpendicular: Perpendicular to the segments.\n    graduate: Graduate along the segment lengths.",
+    "routes": [
+      {
+        "command": "distribute_internal_lines",
+        "path": "src/clo3d_mcp/extended/geometry.py",
+        "lines": [
+          160,
+          162
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "distribute_internal_lines"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "pattern_api.DistribueInternalLinesbetweenSegments"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "duplicate_fabric",
+    "function": "duplicate_fabric",
+    "path": "src/clo3d_mcp/extended/materials.py",
+    "lines": [
+      370,
+      372
+    ],
+    "signature": "duplicate_fabric(fabric_index: int, name: str, folder: str | None=None) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "fabric_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "name",
+        "kind": "positional_or_keyword",
+        "annotation": "str",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "folder",
+        "kind": "positional_or_keyword",
+        "annotation": "str | None",
+        "required": false,
+        "default": "None"
+      }
+    ],
+    "description": "Copy a fabric under a new name and return the new fabric index, for example to make a patch fabric.",
+    "routes": [
+      {
+        "command": "duplicate_fabric",
+        "path": "src/clo3d_mcp/extended/materials.py",
+        "lines": [
+          372,
+          372
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "duplicate_fabric"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "fabric_api.AddFabric",
+      "fabric_api.ExportFabric",
+      "fabric_api.GetFabricCount",
+      "fabric_api.SetFabricName",
+      "utility_api.GetCLOTemporaryFolderPath"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "edit_annotation",
+    "function": "edit_annotation",
+    "path": "src/clo3d_mcp/extended/geometry.py",
+    "lines": [
+      172,
+      175
+    ],
+    "signature": "edit_annotation(pattern_index: int, annotation_index: int, x: float, y: float, text: str) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "pattern_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "annotation_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "x",
+        "kind": "positional_or_keyword",
+        "annotation": "float",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "y",
+        "kind": "positional_or_keyword",
+        "annotation": "float",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "text",
+        "kind": "positional_or_keyword",
+        "annotation": "str",
+        "required": true,
+        "default": null
+      }
+    ],
+    "description": "Change the text or position of an annotation of a pattern piece.",
+    "routes": [
+      {
+        "command": "edit_annotation",
+        "path": "src/clo3d_mcp/extended/geometry.py",
+        "lines": [
+          174,
+          175
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "edit_annotation"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "pattern_api.EditPatternAnnotation"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "export_bom",
+    "function": "export_bom",
+    "path": "src/clo3d_mcp/extended/files.py",
+    "lines": [
+      43,
+      45
+    ],
+    "signature": "export_bom(file_path: str) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "file_path",
+        "kind": "positional_or_keyword",
+        "annotation": "str",
+        "required": true,
+        "default": null
+      }
+    ],
+    "description": "Save the bill of materials: fabrics, trims and quantities (absolute path).",
+    "routes": [
+      {
+        "command": "export_bom",
+        "path": "src/clo3d_mcp/extended/files.py",
+        "lines": [
+          45,
+          45
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "export_bom"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "export_api.ExportBOM"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "export_custom_view_snapshot",
+    "function": "export_custom_view_snapshot",
+    "path": "src/clo3d_mcp/extended/visuals.py",
+    "lines": [
+      35,
+      39
+    ],
+    "signature": "export_custom_view_snapshot(output_folder: str, width: int=1024, height: int=1024, prefix: str='') -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "output_folder",
+        "kind": "positional_or_keyword",
+        "annotation": "str",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "width",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": false,
+        "default": "1024"
+      },
+      {
+        "name": "height",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": false,
+        "default": "1024"
+      },
+      {
+        "name": "prefix",
+        "kind": "positional_or_keyword",
+        "annotation": "str",
+        "required": false,
+        "default": "''"
+      }
+    ],
+    "description": "Save snapshots of the custom views of the 3D window.",
+    "routes": [
+      {
+        "command": "export_custom_view_snapshot",
+        "path": "src/clo3d_mcp/extended/visuals.py",
+        "lines": [
+          38,
+          39
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "export_custom_view_snapshot"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "export_api.ExportCustomViewSnapshot"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "export_fabric",
+    "function": "export_fabric",
+    "path": "src/clo3d_mcp/extended/materials.py",
+    "lines": [
+      126,
+      129
+    ],
+    "signature": "export_fabric(file_path: str, fabric_index: int | None=None, colorway_index: int | None=None) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "file_path",
+        "kind": "positional_or_keyword",
+        "annotation": "str",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "fabric_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int | None",
+        "required": false,
+        "default": "None"
+      },
+      {
+        "name": "colorway_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int | None",
+        "required": false,
+        "default": "None"
+      }
+    ],
+    "description": "Save a fabric to a .jfab or .zfab file. Without an index, the selected fabric is saved.",
+    "routes": [
+      {
+        "command": "export_fabric",
+        "path": "src/clo3d_mcp/extended/materials.py",
+        "lines": [
+          128,
+          129
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "export_fabric"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "fabric_api.ExportFabric"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "export_fbx",
+    "function": "export_fbx",
+    "path": "src/clo3d_mcp/server.py",
+    "lines": [
+      254,
+      260
+    ],
+    "signature": "export_fbx(file_path: str) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "file_path",
+        "kind": "positional_or_keyword",
+        "annotation": "str",
+        "required": true,
+        "default": null
+      }
+    ],
+    "description": "Export the garment as an FBX file.\n\nArgs:\n    file_path: Absolute path for the exported .fbx file.",
+    "routes": [
+      {
+        "command": "export_fbx",
+        "path": "src/clo3d_mcp/server.py",
+        "lines": [
+          260,
+          260
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "export_fbx"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "export_api.ExportFBX",
+      "export_api.ImportExportOption"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "export_garment_information",
+    "function": "export_garment_information",
+    "path": "src/clo3d_mcp/extended/files.py",
+    "lines": [
+      31,
+      33
+    ],
+    "signature": "export_garment_information(file_path: str | None=None) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "file_path",
+        "kind": "positional_or_keyword",
+        "annotation": "str | None",
+        "required": false,
+        "default": "None"
+      }
+    ],
+    "description": "Save the garment information sheet to JSON. Without a path, it goes to CLO's temporary folder.",
+    "routes": [
+      {
+        "command": "export_garment_information",
+        "path": "src/clo3d_mcp/extended/files.py",
+        "lines": [
+          33,
+          33
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "export_garment_information"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "export_api.ExportGarmentInformation"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "export_glb",
+    "function": "export_glb",
+    "path": "src/clo3d_mcp/server.py",
+    "lines": [
+      264,
+      274
+    ],
+    "signature": "export_glb(file_path: str, options: dict | None=None) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "file_path",
+        "kind": "positional_or_keyword",
+        "annotation": "str",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "options",
+        "kind": "positional_or_keyword",
+        "annotation": "dict | None",
+        "required": false,
+        "default": "None"
+      }
+    ],
+    "description": "Export the garment as a GLB (binary glTF) file.\n\nArgs:\n    file_path: Absolute path for the exported .glb file.\n    options: Optional export options.",
+    "routes": [
+      {
+        "command": "export_glb",
+        "path": "src/clo3d_mcp/server.py",
+        "lines": [
+          274,
+          274
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "export_glb"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "export_api.ExportGLB",
+      "export_api.ImportExportOption"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "export_gltf",
+    "function": "export_gltf",
+    "path": "src/clo3d_mcp/server.py",
+    "lines": [
+      278,
+      288
+    ],
+    "signature": "export_gltf(file_path: str, options: dict | None=None) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "file_path",
+        "kind": "positional_or_keyword",
+        "annotation": "str",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "options",
+        "kind": "positional_or_keyword",
+        "annotation": "dict | None",
+        "required": false,
+        "default": "None"
+      }
+    ],
+    "description": "Export the garment as a glTF file.\n\nArgs:\n    file_path: Absolute path for the exported .gltf file.\n    options: Optional export options.",
+    "routes": [
+      {
+        "command": "export_gltf",
+        "path": "src/clo3d_mcp/server.py",
+        "lines": [
+          288,
+          288
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "export_gltf"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "export_api.ExportGLTF",
+      "export_api.ImportExportOption"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "export_obj",
+    "function": "export_obj",
+    "path": "src/clo3d_mcp/server.py",
+    "lines": [
+      240,
+      250
+    ],
+    "signature": "export_obj(file_path: str, options: dict | None=None) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "file_path",
+        "kind": "positional_or_keyword",
+        "annotation": "str",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "options",
+        "kind": "positional_or_keyword",
+        "annotation": "dict | None",
+        "required": false,
+        "default": "None"
+      }
+    ],
+    "description": "Export the garment as an OBJ file.\n\nArgs:\n    file_path: Absolute path for the exported .obj file.\n    options: Optional export options (bExportGarment, bExportAvatar, bThin, scale, etc.).",
+    "routes": [
+      {
+        "command": "export_obj",
+        "path": "src/clo3d_mcp/server.py",
+        "lines": [
+          250,
+          250
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "export_obj"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "export_api.ExportOBJ",
+      "export_api.NewImportExportOption"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "export_pattern_json",
+    "function": "export_pattern_json",
+    "path": "src/clo3d_mcp/extended/files.py",
+    "lines": [
+      7,
+      9
+    ],
+    "signature": "export_pattern_json(file_path: str) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "file_path",
+        "kind": "positional_or_keyword",
+        "annotation": "str",
+        "required": true,
+        "default": null
+      }
+    ],
+    "description": "Export the pattern pieces of the project to a JSON file (absolute path).",
+    "routes": [
+      {
+        "command": "export_pattern_json",
+        "path": "src/clo3d_mcp/extended/files.py",
+        "lines": [
+          9,
+          9
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "export_pattern_json"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "pattern_api.ExportPatternJSON"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "export_pom",
+    "function": "export_pom",
+    "path": "src/clo3d_mcp/extended/files.py",
+    "lines": [
+      25,
+      27
+    ],
+    "signature": "export_pom() -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [],
+    "description": "Export the points of measure of the garment. Returns the file path in CLO's temporary folder.",
+    "routes": [
+      {
+        "command": "export_pom",
+        "path": "src/clo3d_mcp/extended/files.py",
+        "lines": [
+          27,
+          27
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "export_pom"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "export_api.ExportPOM"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "export_pose",
+    "function": "export_pose",
+    "path": "src/clo3d_mcp/extended/avatar.py",
+    "lines": [
+      61,
+      63
+    ],
+    "signature": "export_pose(file_path: str | None=None) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "file_path",
+        "kind": "positional_or_keyword",
+        "annotation": "str | None",
+        "required": false,
+        "default": "None"
+      }
+    ],
+    "description": "Save the avatar pose. Without a path, it goes to CLO's temporary folder.",
+    "routes": [
+      {
+        "command": "export_pose",
+        "path": "src/clo3d_mcp/extended/avatar.py",
+        "lines": [
+          63,
+          63
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "export_pose"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "export_api.ExportPose"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "export_rendering_image",
+    "function": "export_rendering_image",
+    "path": "src/clo3d_mcp/extended/visuals.py",
+    "lines": [
+      43,
+      45
+    ],
+    "signature": "export_rendering_image(file_path: str) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "file_path",
+        "kind": "positional_or_keyword",
+        "annotation": "str",
+        "required": true,
+        "default": null
+      }
+    ],
+    "description": "Render the garment with the rendering settings of the project and save the images.",
+    "routes": [
+      {
+        "command": "export_rendering_image",
+        "path": "src/clo3d_mcp/extended/visuals.py",
+        "lines": [
+          45,
+          45
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "export_rendering_image"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "export_api.ExportRenderingImage"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "export_snapshot",
+    "function": "export_snapshot",
+    "path": "src/clo3d_mcp/server.py",
+    "lines": [
+      304,
+      310
+    ],
+    "signature": "export_snapshot(file_path: str) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "file_path",
+        "kind": "positional_or_keyword",
+        "annotation": "str",
+        "required": true,
+        "default": null
+      }
+    ],
+    "description": "Export multi-view snapshot images of the 3D garment.\n\nArgs:\n    file_path: Absolute path (directory or base name) for snapshot images.",
+    "routes": [
+      {
+        "command": "export_snapshot",
+        "path": "src/clo3d_mcp/server.py",
+        "lines": [
+          310,
+          310
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "export_snapshot"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "export_api.ExportSnapshot3D"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "export_snapshot_2d",
+    "function": "export_snapshot_2d",
+    "path": "src/clo3d_mcp/extended/visuals.py",
+    "lines": [
+      111,
+      118
+    ],
+    "signature": "export_snapshot_2d(output_path: str, option: int=0) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "output_path",
+        "kind": "positional_or_keyword",
+        "annotation": "str",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "option",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": false,
+        "default": "0"
+      }
+    ],
+    "description": "Save an image of the 2D pattern window, to look at the pieces (absolute .png path or folder).\n\nArgs:\n    output_path: Image path, or a folder that gets patterns_2d.png.\n    option: Integer option of CLO's 2D snapshot, undocumented.",
+    "routes": [
+      {
+        "command": "export_snapshot_2d",
+        "path": "src/clo3d_mcp/extended/visuals.py",
+        "lines": [
+          118,
+          118
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "export_snapshot_2d"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "export_api.ExportSnapshot2D"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "export_tech_pack",
+    "function": "export_tech_pack",
+    "path": "src/clo3d_mcp/server.py",
+    "lines": [
+      324,
+      330
+    ],
+    "signature": "export_tech_pack(file_path: str) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "file_path",
+        "kind": "positional_or_keyword",
+        "annotation": "str",
+        "required": true,
+        "default": null
+      }
+    ],
+    "description": "Export a tech pack with JSON metadata and images.\n\nArgs:\n    file_path: Absolute path for the tech pack output.",
+    "routes": [
+      {
+        "command": "export_tech_pack",
+        "path": "src/clo3d_mcp/server.py",
+        "lines": [
+          330,
+          330
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "export_tech_pack"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "export_api.ExportTechPack",
+      "export_api.ExportTechpackOption"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "export_thumbnail",
+    "function": "export_thumbnail",
+    "path": "src/clo3d_mcp/server.py",
+    "lines": [
+      292,
+      300
+    ],
+    "signature": "export_thumbnail(file_path: str, width: int=512, height: int=512) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "file_path",
+        "kind": "positional_or_keyword",
+        "annotation": "str",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "width",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": false,
+        "default": "512"
+      },
+      {
+        "name": "height",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": false,
+        "default": "512"
+      }
+    ],
+    "description": "Export a 3D viewport screenshot/thumbnail.\n\nArgs:\n    file_path: Absolute path for the exported image file.\n    width: Image width in pixels (default 512).\n    height: Image height in pixels (default 512).",
+    "routes": [
+      {
+        "command": "export_thumbnail",
+        "path": "src/clo3d_mcp/server.py",
+        "lines": [
+          300,
+          300
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "export_thumbnail"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "export_api.ExportThumbnail3D"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "export_trim",
+    "function": "export_trim",
+    "path": "src/clo3d_mcp/extended/materials.py",
+    "lines": [
+      174,
+      176
+    ],
+    "signature": "export_trim(file_path: str, trim_style_index: int) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "file_path",
+        "kind": "positional_or_keyword",
+        "annotation": "str",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "trim_style_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      }
+    ],
+    "description": "Save a trim style to a file.",
+    "routes": [
+      {
+        "command": "export_trim",
+        "path": "src/clo3d_mcp/extended/materials.py",
+        "lines": [
+          176,
+          176
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "export_trim"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "export_api.ExportTrim"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "export_turntable",
+    "function": "export_turntable",
+    "path": "src/clo3d_mcp/server.py",
+    "lines": [
+      314,
+      320
+    ],
+    "signature": "export_turntable(file_path: str) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "file_path",
+        "kind": "positional_or_keyword",
+        "annotation": "str",
+        "required": true,
+        "default": null
+      }
+    ],
+    "description": "Export a 360-degree turntable image sequence.\n\nArgs:\n    file_path: Absolute path (directory or base name) for turntable images.",
+    "routes": [
+      {
+        "command": "export_turntable",
+        "path": "src/clo3d_mcp/server.py",
+        "lines": [
+          320,
+          320
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "export_turntable"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "export_api.ExportTurntableImages"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "export_view_image",
+    "function": "export_view_image",
+    "path": "src/clo3d_mcp/extended/visuals.py",
+    "lines": [
+      19,
+      31
+    ],
+    "signature": "export_view_image(view_index: int, output_path: str, colorway_index: int=0, width: int=1024, height: int=1024) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "view_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "output_path",
+        "kind": "positional_or_keyword",
+        "annotation": "str",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "colorway_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": false,
+        "default": "0"
+      },
+      {
+        "name": "width",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": false,
+        "default": "1024"
+      },
+      {
+        "name": "height",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": false,
+        "default": "1024"
+      }
+    ],
+    "description": "Save an image of the garment from a standard view, to look at the fit.\n\nArgs:\n    view_index: Standard view index.\n    output_path: Absolute image path (.png). A folder gets a file named view_<index>.png.\n    colorway_index: Colorway to render.\n    width: Image width in pixels.\n    height: Image height in pixels.",
+    "routes": [
+      {
+        "command": "export_view_image",
+        "path": "src/clo3d_mcp/extended/visuals.py",
+        "lines": [
+          30,
+          31
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "export_view_image"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "export_api.ExportStdViewImage"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "export_view_images_all_colorways",
+    "function": "export_view_images_all_colorways",
+    "path": "src/clo3d_mcp/extended/visuals.py",
+    "lines": [
+      91,
+      95
+    ],
+    "signature": "export_view_images_all_colorways(view_index: int, output_path: str, width: int=1024, height: int=1024) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "view_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "output_path",
+        "kind": "positional_or_keyword",
+        "annotation": "str",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "width",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": false,
+        "default": "1024"
+      },
+      {
+        "name": "height",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": false,
+        "default": "1024"
+      }
+    ],
+    "description": "Save an image of a standard view for every colorway (absolute image path, or a folder).",
+    "routes": [
+      {
+        "command": "export_view_images_all_colorways",
+        "path": "src/clo3d_mcp/extended/visuals.py",
+        "lines": [
+          94,
+          95
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "export_view_images_all_colorways"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "export_api.ExportStdViewImageForAllColorways"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "export_zpac",
+    "function": "export_zpac",
+    "path": "src/clo3d_mcp/extended/files.py",
+    "lines": [
+      49,
+      51
+    ],
+    "signature": "export_zpac(file_path: str) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "file_path",
+        "kind": "positional_or_keyword",
+        "annotation": "str",
+        "required": true,
+        "default": null
+      }
+    ],
+    "description": "Save the garment as a .zpac package (absolute path).",
+    "routes": [
+      {
+        "command": "export_zpac",
+        "path": "src/clo3d_mcp/extended/files.py",
+        "lines": [
+          51,
+          51
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "export_zpac"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "export_api.ExportZPacW"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "find_api_types",
+    "function": "find_api_types",
+    "path": "src/clo3d_mcp/extended/docs.py",
+    "lines": [
+      24,
+      27
+    ],
+    "signature": "find_api_types(text: str) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "text",
+        "kind": "positional_or_keyword",
+        "annotation": "str",
+        "required": true,
+        "default": null
+      }
+    ],
+    "description": "Find names containing a text in every module loaded in CLO's Python, without calling them.\nUsed to locate CLO's option classes, such as ImportExportOption.",
+    "routes": [
+      {
+        "command": "find_api_types",
+        "path": "src/clo3d_mcp/extended/docs.py",
+        "lines": [
+          27,
+          27
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "find_api_types"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "find_assets",
+    "function": "find_assets",
+    "path": "src/clo3d_mcp/extended/files.py",
+    "lines": [
+      61,
+      63
+    ],
+    "signature": "find_assets(extensions: list[str], root: str | None=None, limit: int=100) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "extensions",
+        "kind": "positional_or_keyword",
+        "annotation": "list[str]",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "root",
+        "kind": "positional_or_keyword",
+        "annotation": "str | None",
+        "required": false,
+        "default": "None"
+      },
+      {
+        "name": "limit",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": false,
+        "default": "100"
+      }
+    ],
+    "description": "List files of CLO's asset library by extension, for example [\"avt\"] for avatars, [\"zfab\"] for fabrics.",
+    "routes": [
+      {
+        "command": "find_assets",
+        "path": "src/clo3d_mcp/extended/files.py",
+        "lines": [
+          63,
+          63
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "find_assets"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "utility_api.GetCLOAssetFolderPath"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "find_fabric",
+    "function": "find_fabric",
+    "path": "src/clo3d_mcp/extended/materials.py",
+    "lines": [
+      147,
+      149
+    ],
+    "signature": "find_fabric(name: str, colorway_index: int | None=None) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "name",
+        "kind": "positional_or_keyword",
+        "annotation": "str",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "colorway_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int | None",
+        "required": false,
+        "default": "None"
+      }
+    ],
+    "description": "Find a fabric index by its name.",
+    "routes": [
+      {
+        "command": "find_fabric",
+        "path": "src/clo3d_mcp/extended/materials.py",
+        "lines": [
+          149,
+          149
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "find_fabric"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "fabric_api.GetFabricIndex"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "find_pattern",
+    "function": "find_pattern",
+    "path": "src/clo3d_mcp/extended/geometry.py",
+    "lines": [
+      121,
+      131
+    ],
+    "signature": "find_pattern(name: str | None=None, x: float | None=None, y: float | None=None, view: str='2d') -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "name",
+        "kind": "positional_or_keyword",
+        "annotation": "str | None",
+        "required": false,
+        "default": "None"
+      },
+      {
+        "name": "x",
+        "kind": "positional_or_keyword",
+        "annotation": "float | None",
+        "required": false,
+        "default": "None"
+      },
+      {
+        "name": "y",
+        "kind": "positional_or_keyword",
+        "annotation": "float | None",
+        "required": false,
+        "default": "None"
+      },
+      {
+        "name": "view",
+        "kind": "positional_or_keyword",
+        "annotation": "str",
+        "required": false,
+        "default": "'2d'"
+      }
+    ],
+    "description": "Find a pattern index by its name, or by a scene position in the 2D or 3D window.\n\nArgs:\n    name: Pattern name. If given, x and y are ignored.\n    x: Scene position x.\n    y: Scene position y.\n    view: \"2d\" or \"3d\", for the scene position.",
+    "routes": [
+      {
+        "command": "find_pattern",
+        "path": "src/clo3d_mcp/extended/geometry.py",
+        "lines": [
+          131,
+          131
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "find_pattern"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "pattern_api.GetPatternIndex",
+      "pattern_api.GetPatternIndexFrom2DView",
+      "pattern_api.GetPatternIndexFrom3DView"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "find_seam_group",
+    "function": "find_seam_group",
+    "path": "src/clo3d_mcp/extended/sewing.py",
+    "lines": [
+      79,
+      81
+    ],
+    "signature": "find_seam_group(name: str) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "name",
+        "kind": "positional_or_keyword",
+        "annotation": "str",
+        "required": true,
+        "default": null
+      }
+    ],
+    "description": "Find a seam group index by its name.",
+    "routes": [
+      {
+        "command": "find_seam_group",
+        "path": "src/clo3d_mcp/extended/sewing.py",
+        "lines": [
+          81,
+          81
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "find_seam_group"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "pattern_api.GetSeamlinePairGroupIndexFromName"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "find_trim_style",
+    "function": "find_trim_style",
+    "path": "src/clo3d_mcp/extended/materials.py",
+    "lines": [
+      204,
+      206
+    ],
+    "signature": "find_trim_style(name: str) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "name",
+        "kind": "positional_or_keyword",
+        "annotation": "str",
+        "required": true,
+        "default": null
+      }
+    ],
+    "description": "Find a trim style index by its name.",
+    "routes": [
+      {
+        "command": "find_trim_style",
+        "path": "src/clo3d_mcp/extended/materials.py",
+        "lines": [
+          206,
+          206
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "find_trim_style"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "utility_api.GetTrimStyleIndex"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "flip_pattern",
+    "function": "flip_pattern",
+    "path": "src/clo3d_mcp/server.py",
+    "lines": [
+      134,
+      141
+    ],
+    "signature": "flip_pattern(pattern_index: int, horizontal: bool=True) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "pattern_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "horizontal",
+        "kind": "positional_or_keyword",
+        "annotation": "bool",
+        "required": false,
+        "default": "True"
+      }
+    ],
+    "description": "Flip a pattern piece horizontally or vertically.\n\nArgs:\n    pattern_index: Zero-based index of the pattern piece to flip.\n    horizontal: True for horizontal flip, False for vertical flip.",
+    "routes": [
+      {
+        "command": "flip_pattern",
+        "path": "src/clo3d_mcp/server.py",
+        "lines": [
+          141,
+          141
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "flip_pattern"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "pattern_api.FlipPatternPiece"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "get_all_stitches",
+    "function": "get_all_stitches",
+    "path": "src/clo3d_mcp/extended/sewing.py",
+    "lines": [
+      140,
+      142
+    ],
+    "signature": "get_all_stitches() -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [],
+    "description": "Get the properties of every stitch of the scene.",
+    "routes": [
+      {
+        "command": "get_all_stitches",
+        "path": "src/clo3d_mcp/extended/sewing.py",
+        "lines": [
+          142,
+          142
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "get_all_stitches"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "pattern_api.GetAllStitchProperty"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "get_annotations",
+    "function": "get_annotations",
+    "path": "src/clo3d_mcp/extended/geometry.py",
+    "lines": [
+      179,
+      181
+    ],
+    "signature": "get_annotations(pattern_index: int) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "pattern_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      }
+    ],
+    "description": "List the annotations of a pattern piece with their positions.",
+    "routes": [
+      {
+        "command": "get_annotations",
+        "path": "src/clo3d_mcp/extended/geometry.py",
+        "lines": [
+          181,
+          181
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "get_annotations"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "pattern_api.GetPatternAnnotation"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "get_arrangement_list",
+    "function": "get_arrangement_list",
+    "path": "src/clo3d_mcp/server.py",
+    "lines": [
+      157,
+      159
+    ],
+    "signature": "get_arrangement_list() -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [],
+    "description": "Get the list of arrangement points on the avatar.",
+    "routes": [
+      {
+        "command": "get_arrangement_list",
+        "path": "src/clo3d_mcp/server.py",
+        "lines": [
+          159,
+          159
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "get_arrangement_list"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "pattern_api.GetArrangementList"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "get_avatar_genders",
+    "function": "get_avatar_genders",
+    "path": "src/clo3d_mcp/extended/avatar.py",
+    "lines": [
+      13,
+      15
+    ],
+    "signature": "get_avatar_genders() -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [],
+    "description": "List the gender of each avatar of the scene.",
+    "routes": [
+      {
+        "command": "get_avatar_genders",
+        "path": "src/clo3d_mcp/extended/avatar.py",
+        "lines": [
+          15,
+          15
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "get_avatar_genders"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "export_api.GetAvatarGenderList"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "get_avatar_properties",
+    "function": "get_avatar_properties",
+    "path": "src/clo3d_mcp/extended/avatar.py",
+    "lines": [
+      73,
+      75
+    ],
+    "signature": "get_avatar_properties(avatar_index: int=0) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "avatar_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": false,
+        "default": "0"
+      }
+    ],
+    "description": "Get the properties of an avatar as key-value pairs.",
+    "routes": [
+      {
+        "command": "get_avatar_properties",
+        "path": "src/clo3d_mcp/extended/avatar.py",
+        "lines": [
+          75,
+          75
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "get_avatar_properties"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "export_api.GetAvatarCount",
+      "utility_api.GetAvatarProperties"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "get_avatars",
+    "function": "get_avatars",
+    "path": "src/clo3d_mcp/extended/avatar.py",
+    "lines": [
+      7,
+      9
+    ],
+    "signature": "get_avatars() -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [],
+    "description": "List the avatars of the scene with their names and genders.",
+    "routes": [
+      {
+        "command": "get_avatars",
+        "path": "src/clo3d_mcp/extended/avatar.py",
+        "lines": [
+          9,
+          9
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "get_avatars"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "export_api.GetAvatarCount",
+      "export_api.GetAvatarGenderList",
+      "export_api.GetAvatarNameList"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "get_clo_folders",
+    "function": "get_clo_folders",
+    "path": "src/clo3d_mcp/extended/files.py",
+    "lines": [
+      55,
+      57
+    ],
+    "signature": "get_clo_folders() -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [],
+    "description": "Get CLO's asset library, temporary and executable folders.",
+    "routes": [
+      {
+        "command": "get_clo_folders",
+        "path": "src/clo3d_mcp/extended/files.py",
+        "lines": [
+          57,
+          57
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "get_clo_folders"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "utility_api.GetCLOAssetFolderPath",
+      "utility_api.GetCLOExecutableFolderPath",
+      "utility_api.GetCLOTemporaryFolderPath"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "get_colorway_colors",
+    "function": "get_colorway_colors",
+    "path": "src/clo3d_mcp/extended/visuals.py",
+    "lines": [
+      99,
+      101
+    ],
+    "signature": "get_colorway_colors(colorway_index: int) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "colorway_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      }
+    ],
+    "description": "List the color items of a colorway with their names and RGB values.",
+    "routes": [
+      {
+        "command": "get_colorway_colors",
+        "path": "src/clo3d_mcp/extended/visuals.py",
+        "lines": [
+          101,
+          101
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "get_colorway_colors"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "utility_api.GetColorwayColorItemName",
+      "utility_api.GetColorwayColorItemRGB",
+      "utility_api.GetColorwayName"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "get_colorways",
+    "function": "get_colorways",
+    "path": "src/clo3d_mcp/server.py",
+    "lines": [
+      363,
+      365
+    ],
+    "signature": "get_colorways() -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [],
+    "description": "Get a list of all colorways in the current project with names and which is active.",
+    "routes": [
+      {
+        "command": "get_colorways",
+        "path": "src/clo3d_mcp/server.py",
+        "lines": [
+          365,
+          365
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "get_colorways"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "export_api.GetColorwayNameList",
+      "utility_api.GetColorwayCount",
+      "utility_api.GetCurrentColorwayIndex"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "get_fabric_count",
+    "function": "get_fabric_count",
+    "path": "src/clo3d_mcp/extended/materials.py",
+    "lines": [
+      7,
+      9
+    ],
+    "signature": "get_fabric_count() -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [],
+    "description": "Get the number of fabrics in the project.",
+    "routes": [
+      {
+        "command": "get_fabric_count",
+        "path": "src/clo3d_mcp/extended/materials.py",
+        "lines": [
+          9,
+          9
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "get_fabric_count"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "fabric_api.GetFabricCount"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "get_fabric_details",
+    "function": "get_fabric_details",
+    "path": "src/clo3d_mcp/extended/materials.py",
+    "lines": [
+      133,
+      135
+    ],
+    "signature": "get_fabric_details(fabric_index: int, colorway_index: int | None=None) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "fabric_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "colorway_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int | None",
+        "required": false,
+        "default": "None"
+      }
+    ],
+    "description": "Get the name, information, width and length in mm of a fabric.",
+    "routes": [
+      {
+        "command": "get_fabric_details",
+        "path": "src/clo3d_mcp/extended/materials.py",
+        "lines": [
+          135,
+          135
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "get_fabric_details"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "fabric_api.GetFabricInfo",
+      "fabric_api.GetFabricInformation",
+      "fabric_api.GetFabricLength",
+      "fabric_api.GetFabricName",
+      "fabric_api.GetFabricWidth"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "get_fabric_for_pattern",
+    "function": "get_fabric_for_pattern",
+    "path": "src/clo3d_mcp/server.py",
+    "lines": [
+      227,
+      233
+    ],
+    "signature": "get_fabric_for_pattern(pattern_index: int) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "pattern_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      }
+    ],
+    "description": "Get which fabric is assigned to a pattern piece.\n\nArgs:\n    pattern_index: Zero-based index of the pattern piece.",
+    "routes": [
+      {
+        "command": "get_fabric_for_pattern",
+        "path": "src/clo3d_mcp/server.py",
+        "lines": [
+          233,
+          233
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "get_fabric_for_pattern"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "fabric_api.GetFabricIndexForPattern"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "get_fabric_list",
+    "function": "get_fabric_list",
+    "path": "src/clo3d_mcp/server.py",
+    "lines": [
+      166,
+      168
+    ],
+    "signature": "get_fabric_list() -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [],
+    "description": "Get a list of all fabrics in the current project with their indices.",
+    "routes": [
+      {
+        "command": "get_fabric_list",
+        "path": "src/clo3d_mcp/server.py",
+        "lines": [
+          168,
+          168
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "get_fabric_list"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "fabric_api.GetFabricCount"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "get_fabric_maps",
+    "function": "get_fabric_maps",
+    "path": "src/clo3d_mcp/extended/materials.py",
+    "lines": [
+      286,
+      288
+    ],
+    "signature": "get_fabric_maps(fabric_index: int, colorway_index: int | None=None) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "fabric_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "colorway_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int | None",
+        "required": false,
+        "default": "None"
+      }
+    ],
+    "description": "Get the color, normal and opacity image paths of a fabric.",
+    "routes": [
+      {
+        "command": "get_fabric_maps",
+        "path": "src/clo3d_mcp/extended/materials.py",
+        "lines": [
+          288,
+          288
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "get_fabric_maps"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "fabric_api.GetBaseTextureMapImageFilePath",
+      "fabric_api.GetNormalMapImageFilePath",
+      "fabric_api.GetOpacityMapImageFilePath"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "get_garment_info",
+    "function": "get_garment_info",
+    "path": "src/clo3d_mcp/server.py",
+    "lines": [
+      60,
+      62
+    ],
+    "signature": "get_garment_info() -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [],
+    "description": "Export and retrieve garment metadata as JSON, including pattern details, fabric assignments, and measurements.",
+    "routes": [
+      {
+        "command": "get_garment_info",
+        "path": "src/clo3d_mcp/server.py",
+        "lines": [
+          62,
+          62
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "get_garment_info"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "export_api.ExportGarmentInformationToStream"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "get_grading_paired_avatar",
+    "function": "get_grading_paired_avatar",
+    "path": "src/clo3d_mcp/extended/avatar.py",
+    "lines": [
+      49,
+      51
+    ],
+    "signature": "get_grading_paired_avatar(grading_index: int) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "grading_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      }
+    ],
+    "description": "Get the name of the avatar paired with a grading size.",
+    "routes": [
+      {
+        "command": "get_grading_paired_avatar",
+        "path": "src/clo3d_mcp/extended/avatar.py",
+        "lines": [
+          51,
+          51
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "get_grading_paired_avatar"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "pattern_api.GetGradingPairedAvatar"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "get_grading_sizes",
+    "function": "get_grading_sizes",
+    "path": "src/clo3d_mcp/extended/avatar.py",
+    "lines": [
+      37,
+      39
+    ],
+    "signature": "get_grading_sizes() -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [],
+    "description": "Get the sizes of CLO3D's own grading: groups, size names per group and the current size.",
+    "routes": [
+      {
+        "command": "get_grading_sizes",
+        "path": "src/clo3d_mcp/extended/avatar.py",
+        "lines": [
+          39,
+          39
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "get_grading_sizes"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "pattern_api.GetCurrentGradingSizeIndex",
+      "pattern_api.GetGradingSizeGroupInformation",
+      "pattern_api.GetGradingSizeListFromRuleTable",
+      "pattern_api.GetGradingSizeNameList",
+      "pattern_api.GetGradingSizeTotalCount",
+      "pattern_api.GetValidGradingSizeGroupInformation"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "get_graphic_positions",
+    "function": "get_graphic_positions",
+    "path": "src/clo3d_mcp/extended/materials.py",
+    "lines": [
+      261,
+      263
+    ],
+    "signature": "get_graphic_positions(style_index: int, flag: bool=True) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "style_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "flag",
+        "kind": "positional_or_keyword",
+        "annotation": "bool",
+        "required": false,
+        "default": "True"
+      }
+    ],
+    "description": "Get where a graphic style is placed: pattern index and point coordinates of each placement.",
+    "routes": [
+      {
+        "command": "get_graphic_positions",
+        "path": "src/clo3d_mcp/extended/materials.py",
+        "lines": [
+          263,
+          263
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "get_graphic_positions"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "utility_api.GetGraphicStylePosition"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "get_graphic_style_maps",
+    "function": "get_graphic_style_maps",
+    "path": "src/clo3d_mcp/extended/materials.py",
+    "lines": [
+      102,
+      104
+    ],
+    "signature": "get_graphic_style_maps(style_index: int) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "style_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      }
+    ],
+    "description": "Get the texture map paths of a graphic style.",
+    "routes": [
+      {
+        "command": "get_graphic_style_maps",
+        "path": "src/clo3d_mcp/extended/materials.py",
+        "lines": [
+          104,
+          104
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "get_graphic_style_maps"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "utility_api.GetGraphicDisplacementMapTexture",
+      "utility_api.GetGraphicMetalnessMapTexture",
+      "utility_api.GetGraphicNormalMapTexture",
+      "utility_api.GetGraphicOpacityMapTexture",
+      "utility_api.GetGraphicRoughnessMapTexture"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "get_graphic_styles",
+    "function": "get_graphic_styles",
+    "path": "src/clo3d_mcp/extended/materials.py",
+    "lines": [
+      40,
+      42
+    ],
+    "signature": "get_graphic_styles() -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [],
+    "description": "List the graphic styles of the current colorway with their names and dimensions, and the number of graphics.",
+    "routes": [
+      {
+        "command": "get_graphic_styles",
+        "path": "src/clo3d_mcp/extended/materials.py",
+        "lines": [
+          42,
+          42
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "get_graphic_styles"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "utility_api.GetGraphicStyleCount",
+      "utility_api.GetGraphicStyleDimensions",
+      "utility_api.GetGraphicStyleName",
+      "utility_api.GetTotalGraphicItemQuantity"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "get_line_lengths",
+    "function": "get_line_lengths",
+    "path": "src/clo3d_mcp/extended/geometry.py",
+    "lines": [
+      7,
+      16
+    ],
+    "signature": "get_line_lengths(pattern_index: int, count: int) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "pattern_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "count",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      }
+    ],
+    "description": "Get the length in mm of the first `count` outline lines of a pattern piece.\n\nUse it to check which line index matches which edge before sewing.\n\nArgs:\n    pattern_index: Zero-based index of the pattern piece.\n    count: Number of lines to measure, usually the number of edges of the piece.",
+    "routes": [
+      {
+        "command": "get_line_lengths",
+        "path": "src/clo3d_mcp/extended/geometry.py",
+        "lines": [
+          16,
+          16
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "get_line_lengths"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "pattern_api.GetLineLength"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "get_mesh_counts",
+    "function": "get_mesh_counts",
+    "path": "src/clo3d_mcp/extended/simulation.py",
+    "lines": [
+      139,
+      141
+    ],
+    "signature": "get_mesh_counts(pattern_index: int) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "pattern_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      }
+    ],
+    "description": "Get the face and vertex counts of a pattern piece by mesh type.",
+    "routes": [
+      {
+        "command": "get_mesh_counts",
+        "path": "src/clo3d_mcp/extended/simulation.py",
+        "lines": [
+          141,
+          141
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "get_mesh_counts"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "pattern_api.GetMeshCountByType"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "get_nesting_status",
+    "function": "get_nesting_status",
+    "path": "src/clo3d_mcp/extended/nesting.py",
+    "lines": [
+      24,
+      26
+    ],
+    "signature": "get_nesting_status() -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [],
+    "description": "Get the layout duration, the gap between pieces and the target colorway.",
+    "routes": [
+      {
+        "command": "get_nesting_status",
+        "path": "src/clo3d_mcp/extended/nesting.py",
+        "lines": [
+          26,
+          26
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "get_nesting_status"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "utility_api.GetNestingBufferSpacing",
+      "utility_api.GetNestingTargetColorway",
+      "utility_api.GetNestingTime"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "get_pattern_arrangements",
+    "function": "get_pattern_arrangements",
+    "path": "src/clo3d_mcp/extended/simulation.py",
+    "lines": [
+      13,
+      15
+    ],
+    "signature": "get_pattern_arrangements() -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [],
+    "description": "Get the arrangement point currently used by each pattern piece.",
+    "routes": [
+      {
+        "command": "get_pattern_arrangements",
+        "path": "src/clo3d_mcp/extended/simulation.py",
+        "lines": [
+          15,
+          15
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "get_pattern_arrangements"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "pattern_api.GetArrangementOfPattern"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "get_pattern_bounding_box",
+    "function": "get_pattern_bounding_box",
+    "path": "src/clo3d_mcp/server.py",
+    "lines": [
+      91,
+      97
+    ],
+    "signature": "get_pattern_bounding_box(pattern_index: int) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "pattern_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      }
+    ],
+    "description": "Get the bounding box (width/height) of a pattern piece.\n\nArgs:\n    pattern_index: Zero-based index of the pattern piece.",
+    "routes": [
+      {
+        "command": "get_bounding_box",
+        "path": "src/clo3d_mcp/server.py",
+        "lines": [
+          97,
+          97
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "get_bounding_box"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "pattern_api.GetBoundingBoxOfPattern"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": [
+      {
+        "tool_name": "get_pattern_bounding_box",
+        "wire_command": "get_bounding_box",
+        "handler_function": "handle_get_bounding_box",
+        "equivalence": "routing_only_not_contract"
+      }
+    ]
+  },
+  {
+    "name": "get_pattern_count",
+    "function": "get_pattern_count",
+    "path": "src/clo3d_mcp/server.py",
+    "lines": [
+      69,
+      71
+    ],
+    "signature": "get_pattern_count() -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [],
+    "description": "Get the total number of pattern pieces in the current project.",
+    "routes": [
+      {
+        "command": "get_pattern_count",
+        "path": "src/clo3d_mcp/server.py",
+        "lines": [
+          71,
+          71
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "get_pattern_count"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "pattern_api.GetPatternCount"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "get_pattern_details",
+    "function": "get_pattern_details",
+    "path": "src/clo3d_mcp/extended/geometry.py",
+    "lines": [
+      78,
+      80
+    ],
+    "signature": "get_pattern_details(pattern_index: int) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "pattern_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      }
+    ],
+    "description": "Get the 2D position, area and grain direction of a pattern piece.",
+    "routes": [
+      {
+        "command": "get_pattern_details",
+        "path": "src/clo3d_mcp/extended/geometry.py",
+        "lines": [
+          80,
+          80
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "get_pattern_details"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "pattern_api.GetLinkedPatternIndex",
+      "pattern_api.GetParticleDistanceOfPattern",
+      "pattern_api.GetPatternLayer",
+      "pattern_api.GetPatternPieceArea",
+      "pattern_api.GetPatternPieceCategory",
+      "pattern_api.GetPatternPieceClassification",
+      "pattern_api.GetPatternPieceFabricIndex",
+      "pattern_api.GetPatternPieceGrainDirection",
+      "pattern_api.GetPatternPiecePos",
+      "pattern_api.GetPatternPieceSolidifyStrengthen",
+      "pattern_api.GetShrinkagePercentage",
+      "pattern_api.IsPatternPieceGrainLinkAllColorways",
+      "pattern_api.IsPatternPieceSolidify"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "get_pattern_info",
+    "function": "get_pattern_info",
+    "path": "src/clo3d_mcp/server.py",
+    "lines": [
+      81,
+      87
+    ],
+    "signature": "get_pattern_info(pattern_index: int) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "pattern_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      }
+    ],
+    "description": "Get detailed information about a specific pattern piece.\n\nArgs:\n    pattern_index: Zero-based index of the pattern piece.",
+    "routes": [
+      {
+        "command": "get_pattern_info",
+        "path": "src/clo3d_mcp/server.py",
+        "lines": [
+          87,
+          87
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "get_pattern_info"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "pattern_api.GetPatternInformation",
+      "pattern_api.GetPatternPieceName"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "get_pattern_input_information",
+    "function": "get_pattern_input_information",
+    "path": "src/clo3d_mcp/extended/geometry.py",
+    "lines": [
+      135,
+      137
+    ],
+    "signature": "get_pattern_input_information(pattern_index: int | None=None) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "pattern_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int | None",
+        "required": false,
+        "default": "None"
+      }
+    ],
+    "description": "Get the input data CLO3D keeps for a pattern piece, or for all pieces if no index is given.",
+    "routes": [
+      {
+        "command": "get_pattern_input_information",
+        "path": "src/clo3d_mcp/extended/geometry.py",
+        "lines": [
+          137,
+          137
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "get_pattern_input_information"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "pattern_api.GetPatternInputInformation"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "get_pattern_list",
+    "function": "get_pattern_list",
+    "path": "src/clo3d_mcp/server.py",
+    "lines": [
+      75,
+      77
+    ],
+    "signature": "get_pattern_list() -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [],
+    "description": "Get a list of all pattern pieces with their indices and names.",
+    "routes": [
+      {
+        "command": "get_pattern_list",
+        "path": "src/clo3d_mcp/server.py",
+        "lines": [
+          77,
+          77
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "get_pattern_list"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "pattern_api.GetPatternCount",
+      "pattern_api.GetPatternPieceName"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "get_pin_count",
+    "function": "get_pin_count",
+    "path": "src/clo3d_mcp/extended/simulation.py",
+    "lines": [
+      145,
+      147
+    ],
+    "signature": "get_pin_count() -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [],
+    "description": "Get the number of pins in the scene.",
+    "routes": [
+      {
+        "command": "get_pin_count",
+        "path": "src/clo3d_mcp/extended/simulation.py",
+        "lines": [
+          147,
+          147
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "get_pin_count"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "pattern_api.GetPinListSize"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "get_primary_fabric",
+    "function": "get_primary_fabric",
+    "path": "src/clo3d_mcp/extended/materials.py",
+    "lines": [
+      159,
+      161
+    ],
+    "signature": "get_primary_fabric() -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [],
+    "description": "Get the fabric used by most pattern pieces.",
+    "routes": [
+      {
+        "command": "get_primary_fabric",
+        "path": "src/clo3d_mcp/extended/materials.py",
+        "lines": [
+          161,
+          161
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "get_primary_fabric"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "fabric_api.GetPrimaryFabric"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "get_project_info",
+    "function": "get_project_info",
+    "path": "src/clo3d_mcp/server.py",
+    "lines": [
+      28,
+      30
+    ],
+    "signature": "get_project_info() -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [],
+    "description": "Get information about the current CLO3D project including name, path, version, and counts for patterns, fabrics, and colorways.",
+    "routes": [
+      {
+        "command": "get_project_info",
+        "path": "src/clo3d_mcp/server.py",
+        "lines": [
+          30,
+          30
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "get_project_info"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "fabric_api.GetFabricCount",
+      "pattern_api.GetPatternCount",
+      "utility_api.GetColorwayCount",
+      "utility_api.GetMajorVersion",
+      "utility_api.GetMinorVersion",
+      "utility_api.GetPatchVersion",
+      "utility_api.GetProjectFilePath",
+      "utility_api.GetProjectName"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "get_seam_groups",
+    "function": "get_seam_groups",
+    "path": "src/clo3d_mcp/extended/sewing.py",
+    "lines": [
+      32,
+      38
+    ],
+    "signature": "get_seam_groups(pattern_index: int | None=None) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "pattern_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int | None",
+        "required": false,
+        "default": "None"
+      }
+    ],
+    "description": "List the seam groups of the scene, and those attached to one pattern piece if given.\n\nArgs:\n    pattern_index: Optional zero-based pattern index.",
+    "routes": [
+      {
+        "command": "get_seam_groups",
+        "path": "src/clo3d_mcp/extended/sewing.py",
+        "lines": [
+          38,
+          38
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "get_seam_groups"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "pattern_api.GetSeamlinePairGroupCount",
+      "pattern_api.GetSeamlinePairGroupListInPattern",
+      "pattern_api.GetSeamlinePairGroupName"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "get_selected_patterns",
+    "function": "get_selected_patterns",
+    "path": "src/clo3d_mcp/extended/geometry.py",
+    "lines": [
+      209,
+      211
+    ],
+    "signature": "get_selected_patterns() -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [],
+    "description": "Get the pattern pieces the user has selected in CLO3D, by name and index.",
+    "routes": [
+      {
+        "command": "get_selected_patterns",
+        "path": "src/clo3d_mcp/extended/geometry.py",
+        "lines": [
+          211,
+          211
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "get_selected_patterns"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "pattern_api.GetPatternCount",
+      "pattern_api.GetSelectedPattern",
+      "pattern_api.GetSelectedPatternViaIndex"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "get_simulation_quality",
+    "function": "get_simulation_quality",
+    "path": "src/clo3d_mcp/extended/simulation.py",
+    "lines": [
+      93,
+      95
+    ],
+    "signature": "get_simulation_quality() -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [],
+    "description": "Get the simulation preset and mode.",
+    "routes": [
+      {
+        "command": "get_simulation_quality",
+        "path": "src/clo3d_mcp/extended/simulation.py",
+        "lines": [
+          95,
+          95
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "get_simulation_quality"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "utility_api.GetSimulationQuality"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "get_topstitch_style_details",
+    "function": "get_topstitch_style_details",
+    "path": "src/clo3d_mcp/extended/sewing.py",
+    "lines": [
+      154,
+      161
+    ],
+    "signature": "get_topstitch_style_details(line_index: int=1, flag: bool=False) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "line_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": false,
+        "default": "1"
+      },
+      {
+        "name": "flag",
+        "kind": "positional_or_keyword",
+        "annotation": "bool",
+        "required": false,
+        "default": "False"
+      }
+    ],
+    "description": "List the topstitch styles with name, number of rows, distance, width and offset.\n\nArgs:\n    line_index: Stitch row of the style, starting at 1.\n    flag: False lists every style (verified); True returned none in tests.",
+    "routes": [
+      {
+        "command": "get_topstitch_style_details",
+        "path": "src/clo3d_mcp/extended/sewing.py",
+        "lines": [
+          161,
+          161
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "get_topstitch_style_details"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "utility_api.GetTopStitchCount",
+      "utility_api.GetTopStitchDistanceValue",
+      "utility_api.GetTopStitchName",
+      "utility_api.GetTopStitchNumberOfLines",
+      "utility_api.GetTopStitchOffsetIndex",
+      "utility_api.GetTopStitchOffsetValue",
+      "utility_api.GetTopStitchWidthValue"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "get_topstitches",
+    "function": "get_topstitches",
+    "path": "src/clo3d_mcp/extended/sewing.py",
+    "lines": [
+      106,
+      108
+    ],
+    "signature": "get_topstitches(pattern_index: int | None=None) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "pattern_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int | None",
+        "required": false,
+        "default": "None"
+      }
+    ],
+    "description": "List the topstitch styles, and the topstitches assigned to a pattern piece if an index is given.",
+    "routes": [
+      {
+        "command": "get_topstitches",
+        "path": "src/clo3d_mcp/extended/sewing.py",
+        "lines": [
+          108,
+          108
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "get_topstitches"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "pattern_api.GetPatternAssignedTopstitch",
+      "pattern_api.GetPatternAssignedTopstitchCount",
+      "pattern_api.GetPatternAssignedTopstitchStyle",
+      "pattern_api.GetTopstitchStyleList"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "get_trim_material",
+    "function": "get_trim_material",
+    "path": "src/clo3d_mcp/extended/materials.py",
+    "lines": [
+      210,
+      212
+    ],
+    "signature": "get_trim_material(style_index: int, mesh_index: int=0) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "style_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "mesh_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": false,
+        "default": "0"
+      }
+    ],
+    "description": "Get the material properties of a trim style mesh.",
+    "routes": [
+      {
+        "command": "get_trim_material",
+        "path": "src/clo3d_mcp/extended/materials.py",
+        "lines": [
+          212,
+          212
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "get_trim_material"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "utility_api.GetTrimMaterialProperties"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "get_trim_styles",
+    "function": "get_trim_styles",
+    "path": "src/clo3d_mcp/extended/materials.py",
+    "lines": [
+      198,
+      200
+    ],
+    "signature": "get_trim_styles(flag: bool=True) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "flag",
+        "kind": "positional_or_keyword",
+        "annotation": "bool",
+        "required": false,
+        "default": "True"
+      }
+    ],
+    "description": "List the trim styles of the project.",
+    "routes": [
+      {
+        "command": "get_trim_styles",
+        "path": "src/clo3d_mcp/extended/materials.py",
+        "lines": [
+          200,
+          200
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "get_trim_styles"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "utility_api.GetTrimStyleCount",
+      "utility_api.GetTrimStyleName"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "import_as_graphic",
+    "function": "import_as_graphic",
+    "path": "src/clo3d_mcp/extended/materials.py",
+    "lines": [
+      34,
+      36
+    ],
+    "signature": "import_as_graphic(image_path: str) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "image_path",
+        "kind": "positional_or_keyword",
+        "annotation": "str",
+        "required": true,
+        "default": null
+      }
+    ],
+    "description": "Import an image as a graphic item in the scene (absolute path).",
+    "routes": [
+      {
+        "command": "import_as_graphic",
+        "path": "src/clo3d_mcp/extended/materials.py",
+        "lines": [
+          36,
+          36
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "import_as_graphic"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "import_api.ImportAsGraphic",
+      "utility_api.GetTotalGraphicItemQuantity"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "import_avatar",
+    "function": "import_avatar",
+    "path": "src/clo3d_mcp/extended/avatar.py",
+    "lines": [
+      19,
+      21
+    ],
+    "signature": "import_avatar(file_path: str, apf_path: str='') -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "file_path",
+        "kind": "positional_or_keyword",
+        "annotation": "str",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "apf_path",
+        "kind": "positional_or_keyword",
+        "annotation": "str",
+        "required": false,
+        "default": "''"
+      }
+    ],
+    "description": "Load an avatar file (absolute path), with an optional arrangement point file (.apf).",
+    "routes": [
+      {
+        "command": "import_avatar",
+        "path": "src/clo3d_mcp/extended/avatar.py",
+        "lines": [
+          21,
+          21
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "import_avatar"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "import_api.ImportAVAC"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "import_avatar_measurements",
+    "function": "import_avatar_measurements",
+    "path": "src/clo3d_mcp/extended/avatar.py",
+    "lines": [
+      31,
+      33
+    ],
+    "signature": "import_avatar_measurements(csv_path: str) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "csv_path",
+        "kind": "positional_or_keyword",
+        "annotation": "str",
+        "required": true,
+        "default": null
+      }
+    ],
+    "description": "Apply a measurement CSV file to the current avatar (absolute path).",
+    "routes": [
+      {
+        "command": "import_avatar_measurements",
+        "path": "src/clo3d_mcp/extended/avatar.py",
+        "lines": [
+          33,
+          33
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "import_avatar_measurements"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "import_api.ImportMeasurement"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "import_fabric",
+    "function": "import_fabric",
+    "path": "src/clo3d_mcp/extended/materials.py",
+    "lines": [
+      13,
+      15
+    ],
+    "signature": "import_fabric(file_path: str) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "file_path",
+        "kind": "positional_or_keyword",
+        "annotation": "str",
+        "required": true,
+        "default": null
+      }
+    ],
+    "description": "Add a fabric to the project from a file (.zfab, absolute path). Returns its fabric index.",
+    "routes": [
+      {
+        "command": "import_fabric",
+        "path": "src/clo3d_mcp/extended/materials.py",
+        "lines": [
+          15,
+          15
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "import_fabric"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "fabric_api.AddFabric"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "import_file",
+    "function": "import_file",
+    "path": "src/clo3d_mcp/server.py",
+    "lines": [
+      337,
+      343
+    ],
+    "signature": "import_file(file_path: str) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "file_path",
+        "kind": "positional_or_keyword",
+        "annotation": "str",
+        "required": true,
+        "default": null
+      }
+    ],
+    "description": "Import a file into CLO3D. Auto-detects type from extension (.zprj, .zpac, .obj, .fbx, .avt, etc.).\n\nArgs:\n    file_path: Absolute path to the file to import.",
+    "routes": [
+      {
+        "command": "import_file",
+        "path": "src/clo3d_mcp/server.py",
+        "lines": [
+          343,
+          343
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "import_file"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "import_api.ImportFile"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "import_garment_information",
+    "function": "import_garment_information",
+    "path": "src/clo3d_mcp/extended/files.py",
+    "lines": [
+      37,
+      39
+    ],
+    "signature": "import_garment_information(file_path: str) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "file_path",
+        "kind": "positional_or_keyword",
+        "annotation": "str",
+        "required": true,
+        "default": null
+      }
+    ],
+    "description": "Load a garment information sheet from JSON (absolute path).",
+    "routes": [
+      {
+        "command": "import_garment_information",
+        "path": "src/clo3d_mcp/extended/files.py",
+        "lines": [
+          39,
+          39
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "import_garment_information"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "import_api.ImportGarmentInformation"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "import_graphic_style",
+    "function": "import_graphic_style",
+    "path": "src/clo3d_mcp/extended/materials.py",
+    "lines": [
+      28,
+      30
+    ],
+    "signature": "import_graphic_style(image_path: str) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "image_path",
+        "kind": "positional_or_keyword",
+        "annotation": "str",
+        "required": true,
+        "default": null
+      }
+    ],
+    "description": "Import an image (logo, badge, print) as a graphic style of the project (absolute path, PNG or JPG).",
+    "routes": [
+      {
+        "command": "import_graphic_style",
+        "path": "src/clo3d_mcp/extended/materials.py",
+        "lines": [
+          30,
+          30
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "import_graphic_style"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "import_api.ImportGraphicStyleFromImage",
+      "utility_api.GetGraphicStyleCount"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "import_pattern_json",
+    "function": "import_pattern_json",
+    "path": "src/clo3d_mcp/extended/files.py",
+    "lines": [
+      13,
+      21
+    ],
+    "signature": "import_pattern_json(file_path: str) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "file_path",
+        "kind": "positional_or_keyword",
+        "annotation": "str",
+        "required": true,
+        "default": null
+      }
+    ],
+    "description": "Load pattern pieces from a CLO3D pattern JSON file (absolute path).\n\nWARNING: this REPLACES the whole scene with the pieces of the file. Save the project first.\nGraphics (logos) are not stored in this JSON and are lost. Use it to build a new garment in one go:\npieces, seams (SeamLinePairGroupList), notches (NotchList), buttons (ButtonHeadList) and buttonholes\n(ButtonHoleList), in the coordinates of the 2D window, as written by export_pattern_json.",
+    "routes": [
+      {
+        "command": "import_pattern_json",
+        "path": "src/clo3d_mcp/extended/files.py",
+        "lines": [
+          21,
+          21
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "import_pattern_json"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "pattern_api.ImportPatternJSON"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "import_pose",
+    "function": "import_pose",
+    "path": "src/clo3d_mcp/extended/avatar.py",
+    "lines": [
+      55,
+      57
+    ],
+    "signature": "import_pose(file_path: str) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "file_path",
+        "kind": "positional_or_keyword",
+        "annotation": "str",
+        "required": true,
+        "default": null
+      }
+    ],
+    "description": "Load a body or hand pose file on the avatar (absolute path).",
+    "routes": [
+      {
+        "command": "import_pose",
+        "path": "src/clo3d_mcp/extended/avatar.py",
+        "lines": [
+          57,
+          57
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "import_pose"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "import_api.ImportPose"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "import_substance",
+    "function": "import_substance",
+    "path": "src/clo3d_mcp/extended/materials.py",
+    "lines": [
+      347,
+      351
+    ],
+    "signature": "import_substance(fabric_index: int, file_path: str, face_type: str | None=None, colorway_index: int | None=None) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "fabric_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "file_path",
+        "kind": "positional_or_keyword",
+        "annotation": "str",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "face_type",
+        "kind": "positional_or_keyword",
+        "annotation": "str | None",
+        "required": false,
+        "default": "None"
+      },
+      {
+        "name": "colorway_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int | None",
+        "required": false,
+        "default": "None"
+      }
+    ],
+    "description": "Load a Substance material (.sbsar, absolute path) onto a fabric, optionally on one face type.",
+    "routes": [
+      {
+        "command": "import_substance",
+        "path": "src/clo3d_mcp/extended/materials.py",
+        "lines": [
+          350,
+          351
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "import_substance"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "fabric_api.ImportSubstanceFile",
+      "fabric_api.ImportSubstanceFileAsFaceType"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "import_topstitch_style",
+    "function": "import_topstitch_style",
+    "path": "src/clo3d_mcp/extended/sewing.py",
+    "lines": [
+      100,
+      102
+    ],
+    "signature": "import_topstitch_style(file_path: str) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "file_path",
+        "kind": "positional_or_keyword",
+        "annotation": "str",
+        "required": true,
+        "default": null
+      }
+    ],
+    "description": "Import a topstitch style file (absolute path).",
+    "routes": [
+      {
+        "command": "import_topstitch_style",
+        "path": "src/clo3d_mcp/extended/sewing.py",
+        "lines": [
+          102,
+          102
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "import_topstitch_style"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "pattern_api.ImportTopStitchStyle"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "import_trim",
+    "function": "import_trim",
+    "path": "src/clo3d_mcp/extended/materials.py",
+    "lines": [
+      168,
+      170
+    ],
+    "signature": "import_trim(file_path: str, translate_to_origin: bool=True) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "file_path",
+        "kind": "positional_or_keyword",
+        "annotation": "str",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "translate_to_origin",
+        "kind": "positional_or_keyword",
+        "annotation": "bool",
+        "required": false,
+        "default": "True"
+      }
+    ],
+    "description": "Import a trim: button, rivet, badge or other 3D accessory (absolute path).",
+    "routes": [
+      {
+        "command": "import_trim",
+        "path": "src/clo3d_mcp/extended/materials.py",
+        "lines": [
+          170,
+          170
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "import_trim"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "import_api.ImportTrim"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "instance_pattern",
+    "function": "instance_pattern",
+    "path": "src/clo3d_mcp/extended/geometry.py",
+    "lines": [
+      185,
+      187
+    ],
+    "signature": "instance_pattern(pattern_index: int | None=None, name: str | None=None) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "pattern_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int | None",
+        "required": false,
+        "default": "None"
+      },
+      {
+        "name": "name",
+        "kind": "positional_or_keyword",
+        "annotation": "str | None",
+        "required": false,
+        "default": "None"
+      }
+    ],
+    "description": "Create a linked copy (instance) of a pattern piece: edits on one apply to the other.",
+    "routes": [
+      {
+        "command": "instance_pattern",
+        "path": "src/clo3d_mcp/extended/geometry.py",
+        "lines": [
+          187,
+          187
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "instance_pattern"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "pattern_api.GetPatternCount",
+      "pattern_api.InstancePatternPiece",
+      "pattern_api.InstancePatternPieceWithPatternName"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "list_clo_api",
+    "function": "list_clo_api",
+    "path": "src/clo3d_mcp/extended/docs.py",
+    "lines": [
+      7,
+      9
+    ],
+    "signature": "list_clo_api() -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [],
+    "description": "List the public functions of every CLO Python API module available in this CLO3D build.",
+    "routes": [
+      {
+        "command": "list_api",
+        "path": "src/clo3d_mcp/extended/docs.py",
+        "lines": [
+          9,
+          9
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "list_api"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [],
+    "route_status": "literal_handler_route",
+    "name_aliases": [
+      {
+        "tool_name": "list_clo_api",
+        "wire_command": "list_api",
+        "handler_function": "handle_list_api",
+        "equivalence": "routing_only_not_contract"
+      }
+    ]
+  },
+  {
+    "name": "move_pattern_relative",
+    "function": "move_pattern_relative",
+    "path": "src/clo3d_mcp/extended/geometry.py",
+    "lines": [
+      115,
+      117
+    ],
+    "signature": "move_pattern_relative(pattern_index: int, dx: float, dy: float) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "pattern_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "dx",
+        "kind": "positional_or_keyword",
+        "annotation": "float",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "dy",
+        "kind": "positional_or_keyword",
+        "annotation": "float",
+        "required": true,
+        "default": null
+      }
+    ],
+    "description": "Move a pattern piece by (dx, dy) mm from its current position in the 2D window.",
+    "routes": [
+      {
+        "command": "move_pattern_relative",
+        "path": "src/clo3d_mcp/extended/geometry.py",
+        "lines": [
+          117,
+          117
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "move_pattern_relative"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "pattern_api.SetPatternPieceMove"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "new_project",
+    "function": "new_project",
+    "path": "src/clo3d_mcp/server.py",
+    "lines": [
+      34,
+      36
+    ],
+    "signature": "new_project() -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [],
+    "description": "Create a new empty CLO3D project, clearing the current scene.",
+    "routes": [
+      {
+        "command": "new_project",
+        "path": "src/clo3d_mcp/server.py",
+        "lines": [
+          36,
+          36
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "new_project"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "utility_api.NewProject"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "offset_as_internal_line",
+    "function": "offset_as_internal_line",
+    "path": "src/clo3d_mcp/extended/geometry.py",
+    "lines": [
+      48,
+      62
+    ],
+    "signature": "offset_as_internal_line(pattern_index: int, line_index: int, distance: float, number: int=1, reverse: bool=False, extend: bool=False) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "pattern_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "line_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "distance",
+        "kind": "positional_or_keyword",
+        "annotation": "float",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "number",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": false,
+        "default": "1"
+      },
+      {
+        "name": "reverse",
+        "kind": "positional_or_keyword",
+        "annotation": "bool",
+        "required": false,
+        "default": "False"
+      },
+      {
+        "name": "extend",
+        "kind": "positional_or_keyword",
+        "annotation": "bool",
+        "required": false,
+        "default": "False"
+      }
+    ],
+    "description": "Create internal lines parallel to an outline line, for topstitching or facings.\n\nArgs:\n    pattern_index: Zero-based pattern index.\n    line_index: Zero-based outline line index.\n    distance: Offset distance in mm.\n    number: Number of parallel lines.\n    reverse: Offset to the other side.\n    extend: Extend the lines to the neighbouring edges.",
+    "routes": [
+      {
+        "command": "offset_as_internal_line",
+        "path": "src/clo3d_mcp/extended/geometry.py",
+        "lines": [
+          60,
+          62
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "offset_as_internal_line"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "pattern_api.OffsetAsInternalLine"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "open_file",
+    "function": "open_file",
+    "path": "src/clo3d_mcp/server.py",
+    "lines": [
+      40,
+      46
+    ],
+    "signature": "open_file(file_path: str) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "file_path",
+        "kind": "positional_or_keyword",
+        "annotation": "str",
+        "required": true,
+        "default": null
+      }
+    ],
+    "description": "Open a file in CLO3D. Supports .zprj, .zpac, .avt, .obj, .fbx formats.\n\nArgs:\n    file_path: Absolute path to the file to open.",
+    "routes": [
+      {
+        "command": "open_file",
+        "path": "src/clo3d_mcp/server.py",
+        "lines": [
+          46,
+          46
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "open_file"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "import_api.ImportFile"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "remove_pins",
+    "function": "remove_pins",
+    "path": "src/clo3d_mcp/extended/simulation.py",
+    "lines": [
+      151,
+      153
+    ],
+    "signature": "remove_pins(all: bool=True) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "all",
+        "kind": "positional_or_keyword",
+        "annotation": "bool",
+        "required": false,
+        "default": "True"
+      }
+    ],
+    "description": "Remove all pins, or only the selected pin when all is False.",
+    "routes": [
+      {
+        "command": "remove_pins",
+        "path": "src/clo3d_mcp/extended/simulation.py",
+        "lines": [
+          153,
+          153
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "remove_pins"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "pattern_api.GetPinListSize",
+      "pattern_api.RemoveAllPins",
+      "pattern_api.RemovePin"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "replace_fabric",
+    "function": "replace_fabric",
+    "path": "src/clo3d_mcp/server.py",
+    "lines": [
+      182,
+      189
+    ],
+    "signature": "replace_fabric(fabric_index: int, file_path: str) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "fabric_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "file_path",
+        "kind": "positional_or_keyword",
+        "annotation": "str",
+        "required": true,
+        "default": null
+      }
+    ],
+    "description": "Replace an existing fabric with a new one from file.\n\nArgs:\n    fabric_index: Zero-based index of the fabric to replace.\n    file_path: Absolute path to the replacement fabric file (.zfab).",
+    "routes": [
+      {
+        "command": "replace_fabric",
+        "path": "src/clo3d_mcp/server.py",
+        "lines": [
+          189,
+          189
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "replace_fabric"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "fabric_api.ReplaceFabric"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "replace_graphic_style_image",
+    "function": "replace_graphic_style_image",
+    "path": "src/clo3d_mcp/extended/materials.py",
+    "lines": [
+      66,
+      75
+    ],
+    "signature": "replace_graphic_style_image(style_index: int, image_path: str, anchor: int=0) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "style_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "image_path",
+        "kind": "positional_or_keyword",
+        "annotation": "str",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "anchor",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": false,
+        "default": "0"
+      }
+    ],
+    "description": "Replace the image of a graphic style, which updates every placement of that logo at once.\n\nArgs:\n    style_index: Zero-based graphic style index.\n    image_path: Absolute path of the new image.\n    anchor: Point kept fixed when the size changes.",
+    "routes": [
+      {
+        "command": "replace_graphic_style_image",
+        "path": "src/clo3d_mcp/extended/materials.py",
+        "lines": [
+          74,
+          75
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "replace_graphic_style_image"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "utility_api.ReplaceGraphicStyleFromImage"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "reset_cloth_arrangement",
+    "function": "reset_cloth_arrangement",
+    "path": "src/clo3d_mcp/extended/simulation.py",
+    "lines": [
+      39,
+      41
+    ],
+    "signature": "reset_cloth_arrangement() -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [],
+    "description": "Restore the cloth shape to its state when it was loaded.",
+    "routes": [
+      {
+        "command": "reset_cloth_arrangement",
+        "path": "src/clo3d_mcp/extended/simulation.py",
+        "lines": [
+          41,
+          41
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "reset_cloth_arrangement"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "utility_api.ResetClothArrangement"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "save_project",
+    "function": "save_project",
+    "path": "src/clo3d_mcp/server.py",
+    "lines": [
+      50,
+      56
+    ],
+    "signature": "save_project(file_path: str) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "file_path",
+        "kind": "positional_or_keyword",
+        "annotation": "str",
+        "required": true,
+        "default": null
+      }
+    ],
+    "description": "Save the current CLO3D project as a .zprj file.\n\nArgs:\n    file_path: Absolute path for the saved .zprj file.",
+    "routes": [
+      {
+        "command": "save_file",
+        "path": "src/clo3d_mcp/server.py",
+        "lines": [
+          56,
+          56
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "save_file"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "export_api.ExportZPrj"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": [
+      {
+        "tool_name": "save_project",
+        "wire_command": "save_file",
+        "handler_function": "handle_save_file",
+        "equivalence": "routing_only_not_contract"
+      }
+    ]
+  },
+  {
+    "name": "select_pattern",
+    "function": "select_pattern",
+    "path": "src/clo3d_mcp/extended/geometry.py",
+    "lines": [
+      215,
+      217
+    ],
+    "signature": "select_pattern(pattern_index: int | None=None, name: str | None=None, selected: bool=True) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "pattern_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int | None",
+        "required": false,
+        "default": "None"
+      },
+      {
+        "name": "name",
+        "kind": "positional_or_keyword",
+        "annotation": "str | None",
+        "required": false,
+        "default": "None"
+      },
+      {
+        "name": "selected",
+        "kind": "positional_or_keyword",
+        "annotation": "bool",
+        "required": false,
+        "default": "True"
+      }
+    ],
+    "description": "Select or deselect a pattern piece in CLO3D, by index or by name.",
+    "routes": [
+      {
+        "command": "select_pattern",
+        "path": "src/clo3d_mcp/extended/geometry.py",
+        "lines": [
+          217,
+          217
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "select_pattern"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "pattern_api.SelectPatternViaIndex",
+      "pattern_api.SelectPatternViaName"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "set_avatar_activation",
+    "function": "set_avatar_activation",
+    "path": "src/clo3d_mcp/extended/avatar.py",
+    "lines": [
+      91,
+      93
+    ],
+    "signature": "set_avatar_activation(name: str, active: bool=True) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "name",
+        "kind": "positional_or_keyword",
+        "annotation": "str",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "active",
+        "kind": "positional_or_keyword",
+        "annotation": "bool",
+        "required": false,
+        "default": "True"
+      }
+    ],
+    "description": "Activate or deactivate an avatar by name.",
+    "routes": [
+      {
+        "command": "set_avatar_activation",
+        "path": "src/clo3d_mcp/extended/avatar.py",
+        "lines": [
+          93,
+          93
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "set_avatar_activation"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "utility_api.SetAvatarActivation"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "set_avatar_properties",
+    "function": "set_avatar_properties",
+    "path": "src/clo3d_mcp/extended/avatar.py",
+    "lines": [
+      79,
+      81
+    ],
+    "signature": "set_avatar_properties(avatar_index: int, properties: dict[str, str]) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "avatar_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "properties",
+        "kind": "positional_or_keyword",
+        "annotation": "dict[str, str]",
+        "required": true,
+        "default": null
+      }
+    ],
+    "description": "Change properties of an avatar. Read get_avatar_properties first to know the keys.",
+    "routes": [
+      {
+        "command": "set_avatar_properties",
+        "path": "src/clo3d_mcp/extended/avatar.py",
+        "lines": [
+          81,
+          81
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "set_avatar_properties"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "export_api.GetAvatarCount",
+      "utility_api.GetAvatarProperties",
+      "utility_api.SetAvatarProperties"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "set_avatar_softness",
+    "function": "set_avatar_softness",
+    "path": "src/clo3d_mcp/extended/avatar.py",
+    "lines": [
+      97,
+      99
+    ],
+    "signature": "set_avatar_softness(avatar_index: int=0, stiffness: float | None=None) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "avatar_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": false,
+        "default": "0"
+      },
+      {
+        "name": "stiffness",
+        "kind": "positional_or_keyword",
+        "annotation": "float | None",
+        "required": false,
+        "default": "None"
+      }
+    ],
+    "description": "Read, or set, the soft body stiffness of an avatar (how the body gives under tight garments).",
+    "routes": [
+      {
+        "command": "set_avatar_softness",
+        "path": "src/clo3d_mcp/extended/avatar.py",
+        "lines": [
+          99,
+          99
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "set_avatar_softness"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "export_api.GetAvatarCount",
+      "utility_api.GetAvatarSoftBodyStiffness",
+      "utility_api.SetAvatarSoftBodyStiffness"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "set_button_colors",
+    "function": "set_button_colors",
+    "path": "src/clo3d_mcp/extended/materials.py",
+    "lines": [
+      188,
+      194
+    ],
+    "signature": "set_button_colors(head_style_index: int | None=None, head_rgba: list[int] | None=None, hole_style_index: int | None=None, hole_rgba: list[int] | None=None, mesh_index: int=-1, colorway_index: int | None=None) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "head_style_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int | None",
+        "required": false,
+        "default": "None"
+      },
+      {
+        "name": "head_rgba",
+        "kind": "positional_or_keyword",
+        "annotation": "list[int] | None",
+        "required": false,
+        "default": "None"
+      },
+      {
+        "name": "hole_style_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int | None",
+        "required": false,
+        "default": "None"
+      },
+      {
+        "name": "hole_rgba",
+        "kind": "positional_or_keyword",
+        "annotation": "list[int] | None",
+        "required": false,
+        "default": "None"
+      },
+      {
+        "name": "mesh_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": false,
+        "default": "-1"
+      },
+      {
+        "name": "colorway_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int | None",
+        "required": false,
+        "default": "None"
+      }
+    ],
+    "description": "Set the color of a button style and of a buttonhole style, four integers 0-255 each.",
+    "routes": [
+      {
+        "command": "set_button_colors",
+        "path": "src/clo3d_mcp/extended/materials.py",
+        "lines": [
+          192,
+          194
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "set_button_colors"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "utility_api.SetButtonHeadStyleColor",
+      "utility_api.SetButtonHoleStyleColor"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "set_camera_view",
+    "function": "set_camera_view",
+    "path": "src/clo3d_mcp/extended/visuals.py",
+    "lines": [
+      7,
+      15
+    ],
+    "signature": "set_camera_view(view_index: int, zoom_to_garment: bool=False) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "view_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "zoom_to_garment",
+        "kind": "positional_or_keyword",
+        "annotation": "bool",
+        "required": false,
+        "default": "False"
+      }
+    ],
+    "description": "Move the 3D camera.\n\nArgs:\n    view_index: 0 bottom, 1 three-quarter right, 2 front, 3 three-quarter left, 4 right,\n                5 top, 6 left, 7 focus zoom, 8 back, 9 zoom extents.\n    zoom_to_garment: Also zoom on the garment.",
+    "routes": [
+      {
+        "command": "set_camera_view",
+        "path": "src/clo3d_mcp/extended/visuals.py",
+        "lines": [
+          15,
+          15
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "set_camera_view"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "utility_api.Refresh3DWindow",
+      "utility_api.SetCamViewPoint",
+      "utility_api.SetZoomView"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "set_collision_thickness",
+    "function": "set_collision_thickness",
+    "path": "src/clo3d_mcp/extended/simulation.py",
+    "lines": [
+      157,
+      159
+    ],
+    "signature": "set_collision_thickness(pattern_index: int, thickness: float) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "pattern_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "thickness",
+        "kind": "positional_or_keyword",
+        "annotation": "float",
+        "required": true,
+        "default": null
+      }
+    ],
+    "description": "Set the additional collision thickness of a pattern piece in mm, for thick fabrics or layers.",
+    "routes": [
+      {
+        "command": "set_collision_thickness",
+        "path": "src/clo3d_mcp/extended/simulation.py",
+        "lines": [
+          159,
+          159
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "set_collision_thickness"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "pattern_api.GetAddlThicknessCollisionValue",
+      "pattern_api.SetAddlThicknessCollision"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "set_colorway_name",
+    "function": "set_colorway_name",
+    "path": "src/clo3d_mcp/extended/visuals.py",
+    "lines": [
+      60,
+      62
+    ],
+    "signature": "set_colorway_name(colorway_index: int, name: str) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "colorway_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "name",
+        "kind": "positional_or_keyword",
+        "annotation": "str",
+        "required": true,
+        "default": null
+      }
+    ],
+    "description": "Rename a colorway.",
+    "routes": [
+      {
+        "command": "set_colorway_name",
+        "path": "src/clo3d_mcp/extended/visuals.py",
+        "lines": [
+          62,
+          62
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "set_colorway_name"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "utility_api.SetColorwayName"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "set_current_colorway",
+    "function": "set_current_colorway",
+    "path": "src/clo3d_mcp/server.py",
+    "lines": [
+      369,
+      375
+    ],
+    "signature": "set_current_colorway(colorway_index: int) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "colorway_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      }
+    ],
+    "description": "Switch to a different colorway.\n\nArgs:\n    colorway_index: Zero-based index of the colorway to activate.",
+    "routes": [
+      {
+        "command": "set_current_colorway",
+        "path": "src/clo3d_mcp/server.py",
+        "lines": [
+          375,
+          375
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "set_current_colorway"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "utility_api.SetCurrentColorwayIndex"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "set_current_fabric",
+    "function": "set_current_fabric",
+    "path": "src/clo3d_mcp/extended/materials.py",
+    "lines": [
+      270,
+      272
+    ],
+    "signature": "set_current_fabric(fabric_index: int, colorway_index: int | None=None) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "fabric_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "colorway_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int | None",
+        "required": false,
+        "default": "None"
+      }
+    ],
+    "description": "Select a fabric in the Object Browser.",
+    "routes": [
+      {
+        "command": "set_current_fabric",
+        "path": "src/clo3d_mcp/extended/materials.py",
+        "lines": [
+          272,
+          272
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "set_current_fabric"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "fabric_api.GetCurrentFabricIndex",
+      "fabric_api.SetCurrentFabricIndex"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "set_elastic",
+    "function": "set_elastic",
+    "path": "src/clo3d_mcp/extended/sewing.py",
+    "lines": [
+      59,
+      75
+    ],
+    "signature": "set_elastic(pattern_index: int, line_index: int=-1, enabled: bool=True, strength: float | None=None, strength_ratio: int | None=None, total_length: float | None=None, segment_length: float | None=None) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "pattern_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "line_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": false,
+        "default": "-1"
+      },
+      {
+        "name": "enabled",
+        "kind": "positional_or_keyword",
+        "annotation": "bool",
+        "required": false,
+        "default": "True"
+      },
+      {
+        "name": "strength",
+        "kind": "positional_or_keyword",
+        "annotation": "float | None",
+        "required": false,
+        "default": "None"
+      },
+      {
+        "name": "strength_ratio",
+        "kind": "positional_or_keyword",
+        "annotation": "int | None",
+        "required": false,
+        "default": "None"
+      },
+      {
+        "name": "total_length",
+        "kind": "positional_or_keyword",
+        "annotation": "float | None",
+        "required": false,
+        "default": "None"
+      },
+      {
+        "name": "segment_length",
+        "kind": "positional_or_keyword",
+        "annotation": "float | None",
+        "required": false,
+        "default": "None"
+      }
+    ],
+    "description": "Put an elastic along a line of a pattern piece.\n\nArgs:\n    pattern_index: Zero-based pattern index.\n    line_index: Zero-based line index, -1 for all lines.\n    enabled: True to add the elastic.\n    strength: Optional elastic strength.\n    strength_ratio: Optional strength ratio in percent.\n    total_length: Optional finished elastic length in mm.\n    segment_length: Optional elastic segment length in mm.",
+    "routes": [
+      {
+        "command": "set_elastic",
+        "path": "src/clo3d_mcp/extended/sewing.py",
+        "lines": [
+          73,
+          75
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "set_elastic"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "pattern_api.SetPatternPieceElastic",
+      "pattern_api.SetPatternPieceElasticSegmentLength",
+      "pattern_api.SetPatternPieceElasticStrength",
+      "pattern_api.SetPatternPieceElasticStrengthRatio",
+      "pattern_api.SetPatternPieceElasticTotalLength"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "set_fabric",
+    "function": "set_fabric",
+    "path": "src/clo3d_mcp/extended/materials.py",
+    "lines": [
+      139,
+      143
+    ],
+    "signature": "set_fabric(fabric_index: int, name: str | None=None, width_mm: float | None=None, information: dict[str, str] | None=None, colorway_index: int | None=None) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "fabric_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "name",
+        "kind": "positional_or_keyword",
+        "annotation": "str | None",
+        "required": false,
+        "default": "None"
+      },
+      {
+        "name": "width_mm",
+        "kind": "positional_or_keyword",
+        "annotation": "float | None",
+        "required": false,
+        "default": "None"
+      },
+      {
+        "name": "information",
+        "kind": "positional_or_keyword",
+        "annotation": "dict[str, str] | None",
+        "required": false,
+        "default": "None"
+      },
+      {
+        "name": "colorway_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int | None",
+        "required": false,
+        "default": "None"
+      }
+    ],
+    "description": "Rename a fabric, set its width in mm, or its information fields (classification, content, supplier...).",
+    "routes": [
+      {
+        "command": "set_fabric",
+        "path": "src/clo3d_mcp/extended/materials.py",
+        "lines": [
+          142,
+          143
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "set_fabric"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "fabric_api.SetFabricInformation",
+      "fabric_api.SetFabricName",
+      "fabric_api.SetFabricWidth"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "set_fabric_color",
+    "function": "set_fabric_color",
+    "path": "src/clo3d_mcp/server.py",
+    "lines": [
+      214,
+      223
+    ],
+    "signature": "set_fabric_color(fabric_index: int, r: int=255, g: int=255, b: int=255) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "fabric_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "r",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": false,
+        "default": "255"
+      },
+      {
+        "name": "g",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": false,
+        "default": "255"
+      },
+      {
+        "name": "b",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": false,
+        "default": "255"
+      }
+    ],
+    "description": "Set the PBR base color of a fabric.\n\nArgs:\n    fabric_index: Zero-based index of the fabric.\n    r: Red channel (0-255).\n    g: Green channel (0-255).\n    b: Blue channel (0-255).",
+    "routes": [
+      {
+        "command": "set_fabric_color",
+        "path": "src/clo3d_mcp/server.py",
+        "lines": [
+          223,
+          223
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "set_fabric_color"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "fabric_api.SetFabricPBRMaterialBaseColor"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "set_fabric_custom_image",
+    "function": "set_fabric_custom_image",
+    "path": "src/clo3d_mcp/extended/materials.py",
+    "lines": [
+      363,
+      366
+    ],
+    "signature": "set_fabric_custom_image(fabric_index: int, image_path: str, colorway_index: int | None=None) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "fabric_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "image_path",
+        "kind": "positional_or_keyword",
+        "annotation": "str",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "colorway_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int | None",
+        "required": false,
+        "default": "None"
+      }
+    ],
+    "description": "Set the custom thumbnail image of a fabric (.png or .jpg).",
+    "routes": [
+      {
+        "command": "set_fabric_custom_image",
+        "path": "src/clo3d_mcp/extended/materials.py",
+        "lines": [
+          365,
+          366
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "set_fabric_custom_image"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "fabric_api.SetCustomImage"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "set_fabric_displacement",
+    "function": "set_fabric_displacement",
+    "path": "src/clo3d_mcp/extended/materials.py",
+    "lines": [
+      329,
+      336
+    ],
+    "signature": "set_fabric_displacement(fabric_index: int, image_path: str | None=None, amount: float | None=None, shift: float=0.0, clipping: float=0.0, particle_distance: float=5.0, keep: bool=True, colorway_index: int | None=None) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "fabric_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "image_path",
+        "kind": "positional_or_keyword",
+        "annotation": "str | None",
+        "required": false,
+        "default": "None"
+      },
+      {
+        "name": "amount",
+        "kind": "positional_or_keyword",
+        "annotation": "float | None",
+        "required": false,
+        "default": "None"
+      },
+      {
+        "name": "shift",
+        "kind": "positional_or_keyword",
+        "annotation": "float",
+        "required": false,
+        "default": "0.0"
+      },
+      {
+        "name": "clipping",
+        "kind": "positional_or_keyword",
+        "annotation": "float",
+        "required": false,
+        "default": "0.0"
+      },
+      {
+        "name": "particle_distance",
+        "kind": "positional_or_keyword",
+        "annotation": "float",
+        "required": false,
+        "default": "5.0"
+      },
+      {
+        "name": "keep",
+        "kind": "positional_or_keyword",
+        "annotation": "bool",
+        "required": false,
+        "default": "True"
+      },
+      {
+        "name": "colorway_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int | None",
+        "required": false,
+        "default": "None"
+      }
+    ],
+    "description": "Set the displacement map of a fabric, and its amount in mm, shift, clipping and particle distance.",
+    "routes": [
+      {
+        "command": "set_fabric_displacement",
+        "path": "src/clo3d_mcp/extended/materials.py",
+        "lines": [
+          333,
+          336
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "set_fabric_displacement"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "fabric_api.SetPBRMaterialDisplacementMap",
+      "fabric_api.SetPBRMaterialDisplacementMapValue"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  },
+  {
+    "name": "set_fabric_maps",
+    "function": "set_fabric_maps",
+    "path": "src/clo3d_mcp/extended/materials.py",
+    "lines": [
+      276,
+      282
+    ],
+    "signature": "set_fabric_maps(fabric_index: int, base_color: str | None=None, normal: str | None=None, displacement: str | None=None, opacity: str | None=None, roughness: str | None=None, metalness: str | None=None, colorway_index: int | None=None) -> dict",
+    "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
+    "parameters": [
+      {
+        "name": "fabric_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int",
+        "required": true,
+        "default": null
+      },
+      {
+        "name": "base_color",
+        "kind": "positional_or_keyword",
+        "annotation": "str | None",
+        "required": false,
+        "default": "None"
+      },
+      {
+        "name": "normal",
+        "kind": "positional_or_keyword",
+        "annotation": "str | None",
+        "required": false,
+        "default": "None"
+      },
+      {
+        "name": "displacement",
+        "kind": "positional_or_keyword",
+        "annotation": "str | None",
+        "required": false,
+        "default": "None"
+      },
+      {
+        "name": "opacity",
+        "kind": "positional_or_keyword",
+        "annotation": "str | None",
+        "required": false,
+        "default": "None"
+      },
+      {
+        "name": "roughness",
+        "kind": "positional_or_keyword",
+        "annotation": "str | None",
+        "required": false,
+        "default": "None"
+      },
+      {
+        "name": "metalness",
+        "kind": "positional_or_keyword",
+        "annotation": "str | None",
+        "required": false,
+        "default": "None"
+      },
+      {
+        "name": "colorway_index",
+        "kind": "positional_or_keyword",
+        "annotation": "int | None",
+        "required": false,
+        "default": "None"
+      }
+    ],
+    "description": "Set texture images of a fabric (absolute paths). A logo as base_color makes a patch fabric.",
+    "routes": [
+      {
+        "command": "set_fabric_maps",
+        "path": "src/clo3d_mcp/extended/materials.py",
+        "lines": [
+          280,
+          282
+        ]
+      }
+    ],
+    "contract_acceptance": "not_established_by_static_mapping",
+    "handler_commands": [
+      "set_fabric_maps"
+    ],
+    "unresolved_commands": [],
+    "native_ids": [
+      "fabric_api.SetBaseTextureMapImageGivenFilePath",
+      "fabric_api.SetDisplacementMapImageGivenFilePath",
+      "fabric_api.SetMetalnessMapImageGivenFilePath",
+      "fabric_api.SetNormalMapImageGivenFilePath",
+      "fabric_api.SetOpacityMapImageGivenFilePath",
+      "fabric_api.SetRoughnessMapImageGivenFilePath"
+    ],
+    "route_status": "literal_handler_route",
+    "name_aliases": []
+  }
+]

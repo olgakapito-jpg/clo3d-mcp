@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "target_clo": "2026.1.336",
+  "target_source": "user_reported",
+  "note": "Current native operation scope is narrower than full overload coverage. Entries record actual adapter calls, not semantic equivalence of all overloads. Infrastructure tools have no standalone native API coverage.",
+  "evidence": {
+    "contract": "src/clo3d_mcp/pattern_contract.py",
+    "adapter": "src/clo3d_mcp/pattern_api.py",
+    "registrar": "src/clo3d_mcp/transport_server.py",
+    "launcher": "plugin/clo3d_mcp_start.py",
+    "tests": ["tests/test_pattern_api.py", "tests/test_verify_patterns.py"],
+    "real_acceptance": "docs/PATTERN_API_CHECK.md"
+  },
+  "operations": [
+    {"symbol": "pattern_api.GetPatternCount", "tools": ["get_pattern_count", "get_pattern_list"], "call_arity": 0, "scope": "Count getter; pattern adapter rejects count above 256; diagnostic count is separate.", "role": "read"},
+    {"symbol": "pattern_api.GetPatternPieceName", "tools": ["get_pattern_list", "get_pattern_geometry"], "call_arity": 1, "scope": "Current zero-based index; output name validation is bounded, not durable identity.", "role": "read"},
+    {"symbol": "pattern_api.GetPatternPiecePos", "tools": ["get_pattern_geometry"], "call_arity": 1, "scope": "Numeric 2D reference position; observed center in accepted fixture, not all shapes/builds.", "role": "read"},
+    {"symbol": "pattern_api.GetPatternPieceArea", "tools": ["get_pattern_geometry"], "call_arity": 1, "scope": "Nonnegative finite area in mm2, bounded by result contract.", "role": "read"},
+    {"symbol": "pattern_api.GetBoundingBoxOfPattern", "tools": ["get_pattern_geometry"], "call_arity": 1, "scope": "Bounded native record conversion; accepted Height/Width string layout, not outline vertices.", "role": "read"},
+    {"symbol": "pattern_api.CreatePatternWithPoints", "tools": ["create_pattern", "create_test_rectangle"], "call_arity": 1, "scope": "Simple straight polygon of 3-64 pairs converted to (float,float,0), no curves/holes. Diagnostic square has weaker count-only readback.", "role": "mutation"},
+    {"symbol": "pattern_api.SetPatternPieceName", "tools": ["set_pattern_name", "create_pattern", "copy_pattern_with_offset"], "call_arity": 2, "scope": "Unique name and fresh index/expected-name guard; create/copy plus naming is not atomic.", "role": "mutation"},
+    {"symbol": "pattern_api.CopyPatternPieceMove", "tools": ["copy_pattern_with_offset"], "call_arity": 3, "scope": "Relative 2D mm displacement; count/name/area/position readback; no complete topology/sewing guarantee.", "role": "mutation"},
+    {"symbol": "pattern_api.SetPatternPieceMove", "tools": ["move_pattern_relative"], "call_arity": 3, "scope": "Whole-piece relative 2D movement, not individual points or 3D placement.", "role": "mutation"},
+    {"symbol": "pattern_api.DeletePatternPiece", "tools": ["delete_pattern"], "call_arity": 1, "scope": "One uniquely named piece, verified remaining name order; indices invalidate; no relationship restoration guarantee.", "role": "mutation"}
+  ],
+  "infrastructure_tools": ["get_session_info", "transport_status", "ping", "list_clo_api", "describe_clo_api"],
+  "overload_policy": "Arity matching is a candidate mapping only. Full official overload coverage remains not_established until argument semantics, types and acceptance scope are explicitly reviewed."
+}

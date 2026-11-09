@@ -1,0 +1,2848 @@
+{
+  "kind": "methods",
+  "records": [
+    {
+      "id": "pattern_api.ActivateAllPatterns",
+      "qualified_name": "pattern_api.ActivateAllPatterns",
+      "module": "pattern_api",
+      "symbol": "ActivateAllPatterns",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "pattern_api.ActivateAllPatterns#b86a2dea1b4cdff6",
+          "signature_normalized": "def ActivateAllPatterns(_bActivate : bool, _bIncludeSewing : bool) -> bool",
+          "signature_raw": "def ActivateAllPatterns(_bActivate : bool, _bIncludeSewing : bool) -> bool",
+          "parameters": [
+            {
+              "raw": "_bActivate : bool",
+              "name": "_bActivate",
+              "annotation_raw": "bool"
+            },
+            {
+              "raw": "_bIncludeSewing : bool",
+              "name": "_bIncludeSewing",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def ActivateAllPatterns(_bActivate : bool, _bIncludeSewing : bool) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup PATTERN_API\n@brief Activate or deactivate every pattern piece for simulation — the API equivalent of selecting all patterns and using the GUI 3D context menu 'Deactivate (Pattern & Sewing)' (_bActivate=false, _bIncludeSewing=true) or 'Activate' back. Deactivated patterns are excluded from simulation; with _bIncludeSewing the sewing (seam line pair groups) connected to the patterns is toggled together, like the GUI menu of the same name.\n@param _bActivate: true = activate, false = deactivate\n@param _bIncludeSewing: true = also toggle the connected sewing (GUI 'Pattern & Sewing'); false = patterns only\n@note In a GUI session the 2D/3D views and related widgets are not refreshed automatically by this API.\n@return true when at least one pattern or sewing group changed state; false when nothing changed (already in the requested state) or no garment is loaded\n\"\"\"",
+              "section": "PATTERN_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 15361,
+                  "block": 1337
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 16125,
+                  "block": 1337,
+                  "anchor": "pattern-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ActivateAllPatterns(bool _bActivate, bool _bIncludeSewing)",
+                "documentation_raw": "/// @ingroup PATTERN_API\n/// @brief Activate or deactivate every pattern piece for simulation — the API equivalent of selecting all patterns and using the GUI 3D context menu 'Deactivate (Pattern & Sewing)' (_bActivate=false, _bIncludeSewing=true) or 'Activate' back. Deactivated patterns are excluded from simulation; with _bIncludeSewing the sewing (seam line pair groups) connected to the patterns is toggled together, like the GUI menu of the same name.\n/// @param _bActivate: true = activate, false = deactivate\n/// @param _bIncludeSewing: true = also toggle the connected sewing (GUI 'Pattern & Sewing'); false = patterns only\n/// @note In a GUI session the 2D/3D views and related widgets are not refreshed automatically by this API.\n/// @return true when at least one pattern or sewing group changed state; false when nothing changed (already in the requested state) or no garment is loaded",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 15373,
+                    "block": 1338
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 16137,
+                    "block": 1338,
+                    "anchor": "pattern-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _bActivate: true = activate, false = deactivate",
+            "@param _bIncludeSewing: true = also toggle the connected sewing (GUI 'Pattern & Sewing'); false = patterns only"
+          ],
+          "return_docs_raw": [
+            "@return true when at least one pattern or sewing group changed state; false when nothing changed (already in the requested state) or no garment is loaded"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "pattern_api.AddButtonHoleToPattern",
+      "qualified_name": "pattern_api.AddButtonHoleToPattern",
+      "module": "pattern_api",
+      "symbol": "AddButtonHoleToPattern",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "pattern_api.AddButtonHoleToPattern#259e74ce71e69d0c",
+          "signature_normalized": "def AddButtonHoleToPattern(_patternIndex : int, _x : float, _y : float, _angleDegree : float) -> bool",
+          "signature_raw": "def AddButtonHoleToPattern(_patternIndex : int, _x : float, _y : float, _angleDegree : float) -> bool",
+          "parameters": [
+            {
+              "raw": "_patternIndex : int",
+              "name": "_patternIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_x : float",
+              "name": "_x",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_y : float",
+              "name": "_y",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_angleDegree : float",
+              "name": "_angleDegree",
+              "annotation_raw": "float"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def AddButtonHoleToPattern(_patternIndex : int, _x : float, _y : float, _angleDegree : float) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup PATTERN_API\n@brief Create a buttonhole on a pattern at the given position — the API equivalent of the GUI 2D 'Buttonhole' creation tool. The buttonhole uses the current default buttonhole style and, when the pattern is graded, inherits per-size grading positions from the adjacent pattern geometry (same as GUI creation). Not allowed on curved patterns.\n@param _patternIndex: pattern index (0-based, real pattern list order)\n@param _x: X position in mm in the pattern's pseudo-bounding-box frame (see GetPatternInternalShapePoints — shared with the point getters and AddGraphicStyleToPattern)\n@param _y: Y position in mm in the same frame (downward)\n@param _angleDegree: buttonhole rotation angle in degrees (0 = default orientation)\n@note In a GUI session the 2D/3D views and related widgets are not refreshed automatically by this API.\n@return true when the buttonhole was created; false when the pattern is not found/curved, no default buttonhole style exists, or the position does not land on the pattern\n\"\"\"",
+              "section": "PATTERN_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 15211,
+                  "block": 1325
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 15969,
+                  "block": 1325,
+                  "anchor": "pattern-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "AddButtonHoleToPattern(int _patternIndex, float _x, float _y, float _angleDegree)",
+                "documentation_raw": "/// @ingroup PATTERN_API\n/// @brief Create a buttonhole on a pattern at the given position — the API equivalent of the GUI 2D 'Buttonhole' creation tool. The buttonhole uses the current default buttonhole style and, when the pattern is graded, inherits per-size grading positions from the adjacent pattern geometry (same as GUI creation). Not allowed on curved patterns.\n/// @param _patternIndex: pattern index (0-based, real pattern list order)\n/// @param _x: X position in mm in the pattern's pseudo-bounding-box frame (see GetPatternInternalShapePoints — shared with the point getters and AddGraphicStyleToPattern)\n/// @param _y: Y position in mm in the same frame (downward)\n/// @param _angleDegree: buttonhole rotation angle in degrees (0 = default orientation)\n/// @note In a GUI session the 2D/3D views and related widgets are not refreshed automatically by this API.\n/// @return true when the buttonhole was created; false when the pattern is not found/curved, no default buttonhole style exists, or the position does not land on the pattern",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 15225,
+                    "block": 1326
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 15983,
+                    "block": 1326,
+                    "anchor": "pattern-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _patternIndex: pattern index (0-based, real pattern list order)",
+            "@param _x: X position in mm in the pattern's pseudo-bounding-box frame (see GetPatternInternalShapePoints — shared with the point getters and AddGraphicStyleToPattern)",
+            "@param _y: Y position in mm in the same frame (downward)",
+            "@param _angleDegree: buttonhole rotation angle in degrees (0 = default orientation)"
+          ],
+          "return_docs_raw": [
+            "@return true when the buttonhole was created; false when the pattern is not found/curved, no default buttonhole style exists, or the position does not land on the pattern"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "pattern_api.AddButtonToPattern",
+      "qualified_name": "pattern_api.AddButtonToPattern",
+      "module": "pattern_api",
+      "symbol": "AddButtonToPattern",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "pattern_api.AddButtonToPattern#bb16b6d25eb2ad44",
+          "signature_normalized": "def AddButtonToPattern(_patternIndex : int, _x : float, _y : float, _angleDegree : float) -> bool",
+          "signature_raw": "def AddButtonToPattern(_patternIndex : int, _x : float, _y : float, _angleDegree : float) -> bool",
+          "parameters": [
+            {
+              "raw": "_patternIndex : int",
+              "name": "_patternIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_x : float",
+              "name": "_x",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_y : float",
+              "name": "_y",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_angleDegree : float",
+              "name": "_angleDegree",
+              "annotation_raw": "float"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def AddButtonToPattern(_patternIndex : int, _x : float, _y : float, _angleDegree : float) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup PATTERN_API\n@brief Create a button (button head) on a pattern at the given position — the API equivalent of the GUI 2D 'Button' creation tool. The button uses the current default button head style and, when the pattern is graded, inherits per-size grading positions from the adjacent pattern geometry (same as GUI creation). Not allowed on curved patterns.\n@param _patternIndex: pattern index (0-based, real pattern list order)\n@param _x: X position in mm in the pattern's pseudo-bounding-box frame (see GetPatternInternalShapePoints — shared with the point getters and AddGraphicStyleToPattern)\n@param _y: Y position in mm in the same frame (downward)\n@param _angleDegree: button rotation angle in degrees (0 = default orientation)\n@note In a GUI session the 2D/3D views and related widgets are not refreshed automatically by this API.\n@return true when the button was created; false when the pattern is not found/curved, no default button head style exists, or the position does not land on the pattern\n\"\"\"",
+              "section": "PATTERN_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 15182,
+                  "block": 1323
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 15939,
+                  "block": 1323,
+                  "anchor": "pattern-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "AddButtonToPattern(int _patternIndex, float _x, float _y, float _angleDegree)",
+                "documentation_raw": "/// @ingroup PATTERN_API\n/// @brief Create a button (button head) on a pattern at the given position — the API equivalent of the GUI 2D 'Button' creation tool. The button uses the current default button head style and, when the pattern is graded, inherits per-size grading positions from the adjacent pattern geometry (same as GUI creation). Not allowed on curved patterns.\n/// @param _patternIndex: pattern index (0-based, real pattern list order)\n/// @param _x: X position in mm in the pattern's pseudo-bounding-box frame (see GetPatternInternalShapePoints — shared with the point getters and AddGraphicStyleToPattern)\n/// @param _y: Y position in mm in the same frame (downward)\n/// @param _angleDegree: button rotation angle in degrees (0 = default orientation)\n/// @note In a GUI session the 2D/3D views and related widgets are not refreshed automatically by this API.\n/// @return true when the button was created; false when the pattern is not found/curved, no default button head style exists, or the position does not land on the pattern",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 15196,
+                    "block": 1324
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 15953,
+                    "block": 1324,
+                    "anchor": "pattern-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _patternIndex: pattern index (0-based, real pattern list order)",
+            "@param _x: X position in mm in the pattern's pseudo-bounding-box frame (see GetPatternInternalShapePoints — shared with the point getters and AddGraphicStyleToPattern)",
+            "@param _y: Y position in mm in the same frame (downward)",
+            "@param _angleDegree: button rotation angle in degrees (0 = default orientation)"
+          ],
+          "return_docs_raw": [
+            "@return true when the button was created; false when the pattern is not found/curved, no default button head style exists, or the position does not land on the pattern"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "pattern_api.AddGradingSize",
+      "qualified_name": "pattern_api.AddGradingSize",
+      "module": "pattern_api",
+      "symbol": "AddGradingSize",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "pattern_api.AddGradingSize#6acf02c700d1e0fe",
+          "signature_normalized": "def AddGradingSize(_gradingSizeGroupIndex : int, _newSizeName : str) -> bool",
+          "signature_raw": "def AddGradingSize(_gradingSizeGroupIndex : int, _newSizeName : str) -> bool",
+          "parameters": [
+            {
+              "raw": "_gradingSizeGroupIndex : int",
+              "name": "_gradingSizeGroupIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_newSizeName : str",
+              "name": "_newSizeName",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def AddGradingSize(_gradingSizeGroupIndex : int, _newSizeName : str) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup PATTERN_API\n@brief Append a new grading size to a grading rule group — the API equivalent of the GUI 'Add Size' button in Object Browser - Grading. The size is propagated through the whole grading pipeline: rule table, every graded pattern's per-point size positions (extrapolated from the last sizes), attached trims, and the pair-avatar size-combination table.\n@param _gradingSizeGroupIndex: grading rule group index (0-based, see GetGradingSizeGroupCount)\n@param _newSizeName: name of the new size; must not be empty or duplicate an existing size in the group\n@note In a GUI session the grading-related widgets (Object Browser - Grading, property panels) are not refreshed automatically by this API.\n@return true if the size was added; false when no grading table exists, the group index is out of range, or the name is empty/duplicated\n\"\"\"",
+              "section": "PATTERN_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 14957,
+                  "block": 1305
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 15705,
+                  "block": 1305,
+                  "anchor": "pattern-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "AddGradingSize(unsigned int _gradingSizeGroupIndex, const std::string& _newSizeName)",
+                "documentation_raw": "/// @ingroup PATTERN_API\n/// @brief Append a new grading size to a grading rule group — the API equivalent of the GUI 'Add Size' button in Object Browser - Grading. The size is propagated through the whole grading pipeline: rule table, every graded pattern's per-point size positions (extrapolated from the last sizes), attached trims, and the pair-avatar size-combination table.\n/// @param _gradingSizeGroupIndex: grading rule group index (0-based, see GetGradingSizeGroupCount)\n/// @param _newSizeName: name of the new size; must not be empty or duplicate an existing size in the group\n/// @note In a GUI session the grading-related widgets (Object Browser - Grading, property panels) are not refreshed automatically by this API.\n/// @return true if the size was added; false when no grading table exists, the group index is out of range, or the name is empty/duplicated",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 14969,
+                    "block": 1306
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 15717,
+                    "block": 1306,
+                    "anchor": "pattern-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _gradingSizeGroupIndex: grading rule group index (0-based, see GetGradingSizeGroupCount)",
+            "@param _newSizeName: name of the new size; must not be empty or duplicate an existing size in the group"
+          ],
+          "return_docs_raw": [
+            "@return true if the size was added; false when no grading table exists, the group index is out of range, or the name is empty/duplicated"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "pattern_api.AddGradingSizeGroup",
+      "qualified_name": "pattern_api.AddGradingSizeGroup",
+      "module": "pattern_api",
+      "symbol": "AddGradingSizeGroup",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "pattern_api.AddGradingSizeGroup#042ebf04b8ce06d7",
+          "signature_normalized": "def AddGradingSizeGroup(_bAssignToAllPatterns : bool) -> int",
+          "signature_raw": "def AddGradingSizeGroup(_bAssignToAllPatterns : bool) -> int",
+          "parameters": [
+            {
+              "raw": "_bAssignToAllPatterns : bool",
+              "name": "_bAssignToAllPatterns",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "def AddGradingSizeGroup(_bAssignToAllPatterns : bool) -> int",
+              "documentation_raw": "\"\"\"\n@ingroup PATTERN_API\n@brief Create a new grading rule group (rule table) holding a single default size — the API equivalent of the GUI 'Add (And Assign) Grading Rule Table' button in Object Browser - Grading. Use it to start grading on a garment that has none, then append sizes with AddGradingSize or load a .rul file with ImportGradeRuleToSizeGroup.\n@param _bAssignToAllPatterns: when true, assign every pattern piece to the new group (the headless equivalent of selecting all patterns before the GUI 'Add And Assign'); when false, only create the table\n@note In a GUI session the grading-related widgets (Object Browser - Grading, property panels) are not refreshed automatically by this API.\n@note Unlike the GUI, which auto-pairs the first visible scene avatar into the empty avatar slots of a new rule table, the table created here starts with all avatar slots empty (intentional — pair explicitly via SetGradingPairedAvatar / SetGradingPairedAvatarFromFile).\n@return the new grading size group index (0-based); -1 on failure (no pattern editor)\n\"\"\"",
+              "section": "PATTERN_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 14982,
+                  "block": 1307
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 15731,
+                  "block": 1307,
+                  "anchor": "pattern-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "AddGradingSizeGroup(bool _bAssignToAllPatterns)",
+                "documentation_raw": "/// @ingroup PATTERN_API\n/// @brief Create a new grading rule group (rule table) holding a single default size — the API equivalent of the GUI 'Add (And Assign) Grading Rule Table' button in Object Browser - Grading. Use it to start grading on a garment that has none, then append sizes with AddGradingSize or load a .rul file with ImportGradeRuleToSizeGroup.\n/// @param _bAssignToAllPatterns: when true, assign every pattern piece to the new group (the headless equivalent of selecting all patterns before the GUI 'Add And Assign'); when false, only create the table\n/// @note In a GUI session the grading-related widgets (Object Browser - Grading, property panels) are not refreshed automatically by this API.\n/// @note Unlike the GUI, which auto-pairs the first visible scene avatar into the empty avatar slots of a new rule table, the table created here starts with all avatar slots empty (intentional — pair explicitly via SetGradingPairedAvatar / SetGradingPairedAvatarFromFile).\n/// @return the new grading size group index (0-based); -1 on failure (no pattern editor)",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 14994,
+                    "block": 1308
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 15743,
+                    "block": 1308,
+                    "anchor": "pattern-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _bAssignToAllPatterns: when true, assign every pattern piece to the new group (the headless equivalent of selecting all patterns before the GUI 'Add And Assign'); when false, only create the table"
+          ],
+          "return_docs_raw": [
+            "@return the new grading size group index (0-based); -1 on failure (no pattern editor)"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "pattern_api.AddGraphicStyleToPattern",
+      "qualified_name": "pattern_api.AddGraphicStyleToPattern",
+      "module": "pattern_api",
+      "symbol": "AddGraphicStyleToPattern",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "pattern_api.AddGraphicStyleToPattern#bace5c32420024e5",
+          "signature_normalized": "def AddGraphicStyleToPattern(_patternIndex : int, _graphicStyleIndex : int, _positionRefFromBoundingBox : list[float], _positionRefTypeCenter : bool, _face : int, _zOffset : float, _fAngle : float) -> bool",
+          "signature_raw": "def AddGraphicStyleToPattern(_patternIndex : int, _graphicStyleIndex : int, _positionRefFromBoundingBox : list[float], _positionRefTypeCenter : bool, _face : int, _zOffset : float, _fAngle : float) -> bool",
+          "parameters": [
+            {
+              "raw": "_patternIndex : int",
+              "name": "_patternIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_graphicStyleIndex : int",
+              "name": "_graphicStyleIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_positionRefFromBoundingBox : list[float]",
+              "name": "_positionRefFromBoundingBox",
+              "annotation_raw": "list[float]"
+            },
+            {
+              "raw": "_positionRefTypeCenter : bool",
+              "name": "_positionRefTypeCenter",
+              "annotation_raw": "bool"
+            },
+            {
+              "raw": "_face : int",
+              "name": "_face",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_zOffset : float",
+              "name": "_zOffset",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_fAngle : float",
+              "name": "_fAngle",
+              "annotation_raw": "float"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def AddGraphicStyleToPattern(_patternIndex : int, _graphicStyleIndex : int, _positionRefFromBoundingBox : list[float], _positionRefTypeCenter : bool, _face : int, _zOffset : float, _fAngle : float) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup PATTERN_API\n@brief Places a graphic style onto a specific pattern piece using bounding-box-relative coordinates for current colorway.\n@param _patternIndex: Index of the pattern piece where the graphic will be placed.\n@param _graphicStyleIndex: Index of the graphic style to place.\n@param _positionRefFromBoundingBox: Vector of 4 floats [left, right, top, bottom] relative to the pattern bounding box.\nWhen _positionRefTypeCenter is true, only [0] (left) and [2] (top) are used as the (X, Y) offset to the graphic center.\nWhen _positionRefTypeCenter is false, width = right - left, height = bottom - top, and the graphic is sized and centered accordingly.\n@param _positionRefTypeCenter: If true, position values refer to the center of the graphic bounding box. If false, values refer to the outline.\n@param _face: Face side: 0 = front, 1 = back, 2 = both.\n@param _zOffset: Z offset value for the graphic placement.\n@param _fAngle: Rotation angle of the graphic in degrees.\n@return true if the graphic was successfully placed; otherwise false.\n\"\"\"",
+              "section": "PATTERN_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 14214,
+                  "block": 1267
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 14943,
+                  "block": 1267,
+                  "anchor": "pattern-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "AddGraphicStyleToPattern(int _patternIndex, int _graphicStyleIndex, const std::vector<float>& _positionRefFromBoundingBox, bool _positionRefTypeCenter, int _face, float _zOffset, float _fAngle)",
+                "documentation_raw": "/// @ingroup PATTERN_API\n/// @brief Places a graphic style onto a specific pattern piece using bounding-box-relative coordinates for current colorway.\n/// @param _patternIndex: Index of the pattern piece where the graphic will be placed.\n/// @param _graphicStyleIndex: Index of the graphic style to place.\n/// @param _positionRefFromBoundingBox: Vector of 4 floats [left, right, top, bottom] relative to the pattern bounding box.\n/// When _positionRefTypeCenter is true, only [0] (left) and [2] (top) are used as the (X, Y) offset to the graphic center.\n/// When _positionRefTypeCenter is false, width = right - left, height = bottom - top, and the graphic is sized and centered accordingly.\n/// @param _positionRefTypeCenter: If true, position values refer to the center of the graphic bounding box. If false, values refer to the outline.\n/// @param _face: Face side: 0 = front, 1 = back, 2 = both.\n/// @param _zOffset: Z offset value for the graphic placement.\n/// @param _fAngle: Rotation angle of the graphic in degrees.\n/// @return true if the graphic was successfully placed; otherwise false.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 14232,
+                    "block": 1268
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 14961,
+                    "block": 1268,
+                    "anchor": "pattern-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _patternIndex: Index of the pattern piece where the graphic will be placed.",
+            "@param _graphicStyleIndex: Index of the graphic style to place.",
+            "@param _positionRefFromBoundingBox: Vector of 4 floats [left, right, top, bottom] relative to the pattern bounding box.",
+            "@param _positionRefTypeCenter: If true, position values refer to the center of the graphic bounding box. If false, values refer to the outline.",
+            "@param _face: Face side: 0 = front, 1 = back, 2 = both.",
+            "@param _zOffset: Z offset value for the graphic placement.",
+            "@param _fAngle: Rotation angle of the graphic in degrees."
+          ],
+          "return_docs_raw": [
+            "@return true if the graphic was successfully placed; otherwise false."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "pattern_api.AddPatternAnnotation",
+      "qualified_name": "pattern_api.AddPatternAnnotation",
+      "module": "pattern_api",
+      "symbol": "AddPatternAnnotation",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "pattern_api.AddPatternAnnotation#7a0f7f2b5ba99db5",
+          "signature_normalized": "def AddPatternAnnotation(patternIndex : int, posX : float, posY : float, annotation : str) -> None",
+          "signature_raw": "def AddPatternAnnotation(patternIndex : int, posX : float, posY : float, annotation : str) -> None",
+          "parameters": [
+            {
+              "raw": "patternIndex : int",
+              "name": "patternIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "posX : float",
+              "name": "posX",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "posY : float",
+              "name": "posY",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "annotation : str",
+              "name": "annotation",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def AddPatternAnnotation(patternIndex : int, posX : float, posY : float, annotation : str) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup PATTERN_API\n@brief Add Annotation in pattern\n@param          patternPieceIndex: PatternIndex\n@param          posX: annotation position x\n@param          posY: annotation position y\n\"\"\"",
+              "section": "PATTERN_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 12939,
+                  "block": 1155
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 13613,
+                  "block": 1155,
+                  "anchor": "pattern-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "AddPatternAnnotation(int patternIndex, float posX, float posY, std::string annotation)",
+                "documentation_raw": "/// @ingroup PATTERN_API\n/// @brief Add Annotation in pattern\n/// @param              patternPieceIndex: PatternIndex\n/// @param              posX: annotation position x\n/// @param              posY: annotation position y",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 12950,
+                    "block": 1156
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 13624,
+                    "block": 1156,
+                    "anchor": "pattern-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          patternPieceIndex: PatternIndex",
+            "@param          posX: annotation position x",
+            "@param          posY: annotation position y"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "pattern_api.AddSeamlinePairGroup",
+      "qualified_name": "pattern_api.AddSeamlinePairGroup",
+      "module": "pattern_api",
+      "symbol": "AddSeamlinePairGroup",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "pattern_api.AddSeamlinePairGroup#bbd984e2c0152617",
+          "signature_normalized": "def AddSeamlinePairGroup(_patternAIndex : int, _lineAIndex : int, _patternBIndex : int, _lineBIndex : int, _directionA : bool, _directionB : bool) -> bool",
+          "signature_raw": "def AddSeamlinePairGroup(_patternAIndex : int, _lineAIndex : int, _patternBIndex : int, _lineBIndex : int, _directionA : bool, _directionB : bool) -> bool",
+          "parameters": [
+            {
+              "raw": "_patternAIndex : int",
+              "name": "_patternAIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_lineAIndex : int",
+              "name": "_lineAIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_patternBIndex : int",
+              "name": "_patternBIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_lineBIndex : int",
+              "name": "_lineBIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_directionA : bool",
+              "name": "_directionA",
+              "annotation_raw": "bool"
+            },
+            {
+              "raw": "_directionB : bool",
+              "name": "_directionB",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def AddSeamlinePairGroup(_patternAIndex : int, _lineAIndex : int, _patternBIndex : int, _lineBIndex : int, _directionA : bool, _directionB : bool) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup PATTERN_API\n@brief Add Pattern and Sewing between Pattern\n@return name of sewing group(wide string)\n@param _patternAIndex : A pattern index\n@param _lineAIndex : The index of the line that belongs to the A pattern.\n@param _patternBIndex : B pattern index\n@param _lineBIndex : The index of the line that belongs to the B pattern.\n@param _directionA : The direction of the stitching, true : forward, false : backward\n@param _directionB : The direction of the stitching, true : forward, false : backward\n\"\"\"",
+              "section": "PATTERN_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 13639,
+                  "block": 1225
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 14347,
+                  "block": 1225,
+                  "anchor": "pattern-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "AddSeamlinePairGroup(int _patternAIndex, int _lineAIndex, int _patternBIndex, int _lineBIndex, bool _bReverse)",
+                "documentation_raw": "/// @ingroup PATTERN_API\n/// @brief Add Pattern and Sewing between Pattern\n/// @return name of sewing group(wide string)\n/// @param _patternAIndex : A pattern index\n/// @param _lineAIndex : The index of the line that belongs to the A pattern.\n/// @param _patternBIndex : B pattern index\n/// @param _lineBIndex : The index of the line that belongs to the B pattern.\n/// @param _directionA : The direction of the stitching, true : forward, false : backward\n/// @param _directionB : The direction of the stitching, true : forward, false : backward",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 13654,
+                    "block": 1226
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 14362,
+                    "block": 1226,
+                    "anchor": "pattern-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _patternAIndex : A pattern index",
+            "@param _lineAIndex : The index of the line that belongs to the A pattern.",
+            "@param _patternBIndex : B pattern index",
+            "@param _lineBIndex : The index of the line that belongs to the B pattern.",
+            "@param _directionA : The direction of the stitching, true : forward, false : backward",
+            "@param _directionB : The direction of the stitching, true : forward, false : backward"
+          ],
+          "return_docs_raw": [
+            "@return name of sewing group(wide string)"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "pattern_api.AddSeamlinePairGroup#3258ef7ec499523d",
+          "signature_normalized": "def AddSeamlinePairGroup(_patternAIndex : int, _lineAIndex : int, _patternBIndex : int, _childIndex : int, _lineBIndex : int, _directionA : bool, _directionB : bool) -> bool",
+          "signature_raw": "def AddSeamlinePairGroup(_patternAIndex : int, _lineAIndex : int, _patternBIndex : int, _childIndex : int, _lineBIndex : int, _directionA : bool, _directionB : bool) -> bool",
+          "parameters": [
+            {
+              "raw": "_patternAIndex : int",
+              "name": "_patternAIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_lineAIndex : int",
+              "name": "_lineAIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_patternBIndex : int",
+              "name": "_patternBIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_childIndex : int",
+              "name": "_childIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_lineBIndex : int",
+              "name": "_lineBIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_directionA : bool",
+              "name": "_directionA",
+              "annotation_raw": "bool"
+            },
+            {
+              "raw": "_directionB : bool",
+              "name": "_directionB",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def AddSeamlinePairGroup(_patternAIndex : int, _lineAIndex : int, _patternBIndex : int, _childIndex : int, _lineBIndex : int, _directionA : bool, _directionB : bool) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup PATTERN_API\n@brief Add Patterns and Sewing between InnerShape\n@return name of sewing group(wide string)\n@param _patternAIndex : A pattern index\n@param _lineAIndex : The index of the line that belongs to the A pattern.\n@param _patternBIndex : B pattern index\n@param _childIndex : The index of the innershape that belongs to the B pattern.\n@param _lineBIndex : The index of the line that belongs to the innerShape.\n@param _directionA : The direction of the stitching, true : forward, false : backward\n@param _directionB : The direction of the stitching, true : forward, false : backward\n\"\"\"",
+              "section": "PATTERN_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 13670,
+                  "block": 1227
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 14379,
+                  "block": 1227,
+                  "anchor": "pattern-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "AddSeamlinePairGroup(int _patternAIndex, int _lineAIndex, int _patternBIndex, int _lineBIndex, bool _directionA, bool _directionB)",
+                "documentation_raw": "/// @ingroup PATTERN_API\n/// @brief Add Patterns and Sewing between InnerShape\n/// @return name of sewing group(wide string)\n/// @param _patternAIndex : A pattern index\n/// @param _lineAIndex : The index of the line that belongs to the A pattern.\n/// @param _patternBIndex : B pattern index\n/// @param _childIndex : The index of the innershape that belongs to the B pattern.\n/// @param _lineBIndex : The index of the line that belongs to the innerShape.\n/// @param _directionA : The direction of the stitching, true : forward, false : backward\n/// @param _directionB : The direction of the stitching, true : forward, false : backward",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 13686,
+                    "block": 1228
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 14395,
+                    "block": 1228,
+                    "anchor": "pattern-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _patternAIndex : A pattern index",
+            "@param _lineAIndex : The index of the line that belongs to the A pattern.",
+            "@param _patternBIndex : B pattern index",
+            "@param _childIndex : The index of the innershape that belongs to the B pattern.",
+            "@param _lineBIndex : The index of the line that belongs to the innerShape.",
+            "@param _directionA : The direction of the stitching, true : forward, false : backward",
+            "@param _directionB : The direction of the stitching, true : forward, false : backward"
+          ],
+          "return_docs_raw": [
+            "@return name of sewing group(wide string)"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "pattern_api.AddSeamlinePairGroup#a270c5e609c256bb",
+          "signature_normalized": "def AddSeamlinePairGroup(_patternAIndex : int, _childAIndex : int, _lineAIndex : int, _patternBIndex : int, _childBIndex : int, _lineBIndex : int, _directionA : bool, _directionB : bool) -> bool",
+          "signature_raw": "def AddSeamlinePairGroup(_patternAIndex : int, _childAIndex : int, _lineAIndex : int, _patternBIndex : int, _childBIndex : int, _lineBIndex : int, _directionA : bool, _directionB : bool) -> bool",
+          "parameters": [
+            {
+              "raw": "_patternAIndex : int",
+              "name": "_patternAIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_childAIndex : int",
+              "name": "_childAIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_lineAIndex : int",
+              "name": "_lineAIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_patternBIndex : int",
+              "name": "_patternBIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_childBIndex : int",
+              "name": "_childBIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_lineBIndex : int",
+              "name": "_lineBIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_directionA : bool",
+              "name": "_directionA",
+              "annotation_raw": "bool"
+            },
+            {
+              "raw": "_directionB : bool",
+              "name": "_directionB",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def AddSeamlinePairGroup(_patternAIndex : int, _childAIndex : int, _lineAIndex : int, _patternBIndex : int, _childBIndex : int, _lineBIndex : int, _directionA : bool, _directionB : bool) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup PATTERN_API\n@brief Add InnerShape and Sewing between InnerShape\n@return name of sewing group(wide string)\n@param _patternAIndex : A pattern index\n@param _childAIndex : The index of the innershape that belongs to the A pattern.\n@param _lineAIndex : The index of the line that belongs to the innerShape.\n@param _patternBIndex : B pattern index\n@param _childBIndex : The index of the innershape that belongs to the B pattern.\n@param _lineBIndex : The index of the line that belongs to the innerShape.\n@param _directionA : The direction of the stitching, true : forward, false : backward\n@param _directionB : The direction of the stitching, true : forward, false : backward\n\"\"\"",
+              "section": "PATTERN_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 13703,
+                  "block": 1229
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 14413,
+                  "block": 1229,
+                  "anchor": "pattern-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "AddSeamlinePairGroup(int _patternAIndex, int _lineAIndex, int _patternBIndex, int _lineBIndex, bool _directionA, bool _directionB)",
+                "documentation_raw": "/// @ingroup PATTERN_API\n/// @brief Add InnerShape and Sewing between InnerShape\n/// @return name of sewing group(wide string)\n/// @param _patternAIndex : A pattern index\n/// @param _childAIndex : The index of the innershape that belongs to the A pattern.\n/// @param _lineAIndex : The index of the line that belongs to the innerShape.\n/// @param _patternBIndex : B pattern index\n/// @param _childBIndex : The index of the innershape that belongs to the B pattern.\n/// @param _lineBIndex : The index of the line that belongs to the innerShape.\n/// @param _directionA : The direction of the stitching, true : forward, false : backward\n/// @param _directionB : The direction of the stitching, true : forward, false : backward",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 13720,
+                    "block": 1230
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 14430,
+                    "block": 1230,
+                    "anchor": "pattern-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _patternAIndex : A pattern index",
+            "@param _childAIndex : The index of the innershape that belongs to the A pattern.",
+            "@param _lineAIndex : The index of the line that belongs to the innerShape.",
+            "@param _patternBIndex : B pattern index",
+            "@param _childBIndex : The index of the innershape that belongs to the B pattern.",
+            "@param _lineBIndex : The index of the line that belongs to the innerShape.",
+            "@param _directionA : The direction of the stitching, true : forward, false : backward",
+            "@param _directionB : The direction of the stitching, true : forward, false : backward"
+          ],
+          "return_docs_raw": [
+            "@return name of sewing group(wide string)"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "pattern_api.AddSeamlinePairGroupPartial",
+      "qualified_name": "pattern_api.AddSeamlinePairGroupPartial",
+      "module": "pattern_api",
+      "symbol": "AddSeamlinePairGroupPartial",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "pattern_api.AddSeamlinePairGroupPartial#4246766321a7e045",
+          "signature_normalized": "def AddSeamlinePairGroupPartial(_patternAIndex : int, _lineAIndex : int, _startRatioA : float, _endRatioA : float, _directionA : bool, _patternBIndex : int, _lineBIndex : int, _startRatioB : float, _endRatioB : float, _directionB : bool) -> int",
+          "signature_raw": "def AddSeamlinePairGroupPartial(_patternAIndex : int, _lineAIndex : int, _startRatioA : float, _endRatioA : float, _directionA : bool, _patternBIndex : int, _lineBIndex : int, _startRatioB : float, _endRatioB : float, _directionB : bool) -> int",
+          "parameters": [
+            {
+              "raw": "_patternAIndex : int",
+              "name": "_patternAIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_lineAIndex : int",
+              "name": "_lineAIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_startRatioA : float",
+              "name": "_startRatioA",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_endRatioA : float",
+              "name": "_endRatioA",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_directionA : bool",
+              "name": "_directionA",
+              "annotation_raw": "bool"
+            },
+            {
+              "raw": "_patternBIndex : int",
+              "name": "_patternBIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_lineBIndex : int",
+              "name": "_lineBIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_startRatioB : float",
+              "name": "_startRatioB",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_endRatioB : float",
+              "name": "_endRatioB",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_directionB : bool",
+              "name": "_directionB",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "def AddSeamlinePairGroupPartial(_patternAIndex : int, _lineAIndex : int, _startRatioA : float, _endRatioA : float, _directionA : bool, _patternBIndex : int, _lineBIndex : int, _startRatioB : float, _endRatioB : float, _directionB : bool) -> int",
+              "documentation_raw": "\"\"\"\n@ingroup PATTERN_API\n@brief Add sewing between sub-segments of two pattern outline lines (pattern A line <-> pattern B line).\nUnlike AddSeamlinePairGroup, which always sews the whole line, each side here sews only the\nportion of its line between the given ratios, so a seam can cover part of an edge.\nThe resulting stitch is identical to a manually created one and simulates the same way.\n@return Marvelous::SeamlinePairGroupResult - SEAMLINE_PAIR_SUCCESS (0) on success, a negative code on failure.\nTest against SEAMLINE_PAIR_SUCCESS rather than for truthiness, because 0 is falsy in Python.\n@param _patternAIndex : A pattern index\n@param _lineAIndex : The index of the line that belongs to the A pattern.\n@param _startRatioA : Where the seam starts along the A line, normalized to the line length. 0.0 is the line start, 1.0 the line end.\n@param _endRatioA : Where the seam ends along the A line. Must be strictly greater than _startRatioA.\n@param _directionA : The direction of the stitching, true : forward, false : backward\n@param _patternBIndex : B pattern index\n@param _lineBIndex : The index of the line that belongs to the B pattern.\n@param _startRatioB : Where the seam starts along the B line, normalized to the line length.\n@param _endRatioB : Where the seam ends along the B line. Must be strictly greater than _startRatioB.\n@param _directionB : The direction of the stitching, true : forward, false : backward\n@remark Ratios are used verbatim; notch snapping is not applied. Call from the thread that owns the\nscene, as with the other pattern-editing APIs.\n@remark This call reports only a status code. To act on the new seam afterwards, diff\nGetSeamlinePairGroupListInPattern(_patternAIndex) across the call to get its index.\n\"\"\"",
+              "section": "PATTERN_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 13738,
+                  "block": 1231
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 14449,
+                  "block": 1231,
+                  "anchor": "pattern-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "AddSeamlinePairGroupPartial(int _patternAIndex, int _lineAIndex, float _startRatioA, float _endRatioA, bool _directionA, int _patternBIndex, int _lineBIndex, float _startRatioB, float _endRatioB, bool _directionB)",
+                "documentation_raw": "/// @ingroup PATTERN_API\n/// @brief Add sewing between sub-segments of two pattern outline lines (pattern A line <-> pattern B line).\n/// Unlike AddSeamlinePairGroup, which always sews the whole line, each side here sews only the\n/// portion of its line between the given ratios, so a seam can cover part of an edge.\n/// The resulting stitch is identical to a manually created one and simulates the same way.\n/// @return Marvelous::SeamlinePairGroupResult - SEAMLINE_PAIR_SUCCESS (0) on success, a negative code on failure.\n/// Test against SEAMLINE_PAIR_SUCCESS rather than for truthiness, because 0 is falsy in Python.\n/// @param _patternAIndex : A pattern index\n/// @param _lineAIndex : The index of the line that belongs to the A pattern.\n/// @param _startRatioA : Where the seam starts along the A line, normalized to the line length. 0.0 is the line start, 1.0 the line end.\n/// @param _endRatioA : Where the seam ends along the A line. Must be strictly greater than _startRatioA.\n/// @param _directionA : The direction of the stitching, true : forward, false : backward\n/// @param _patternBIndex : B pattern index\n/// @param _lineBIndex : The index of the line that belongs to the B pattern.\n/// @param _startRatioB : Where the seam starts along the B line, normalized to the line length.\n/// @param _endRatioB : Where the seam ends along the B line. Must be strictly greater than _startRatioB.\n/// @param _directionB : The direction of the stitching, true : forward, false : backward\n/// @remark Ratios are used verbatim; notch snapping is not applied. Call from the thread that owns the\n/// scene, as with the other pattern-editing APIs.\n/// @remark This call reports only a status code. To act on the new seam afterwards, diff\n/// GetSeamlinePairGroupListInPattern(_patternAIndex) across the call to get its index.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 13765,
+                    "block": 1232
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 14476,
+                    "block": 1232,
+                    "anchor": "pattern-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "SeamlinePairGroupResult",
+              "basis": "documentation_mention",
+              "status": "resolved",
+              "type_id": "type:SeamlinePairGroupResult"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param _patternAIndex : A pattern index",
+            "@param _lineAIndex : The index of the line that belongs to the A pattern.",
+            "@param _startRatioA : Where the seam starts along the A line, normalized to the line length. 0.0 is the line start, 1.0 the line end.",
+            "@param _endRatioA : Where the seam ends along the A line. Must be strictly greater than _startRatioA.",
+            "@param _directionA : The direction of the stitching, true : forward, false : backward",
+            "@param _patternBIndex : B pattern index",
+            "@param _lineBIndex : The index of the line that belongs to the B pattern.",
+            "@param _startRatioB : Where the seam starts along the B line, normalized to the line length.",
+            "@param _endRatioB : Where the seam ends along the B line. Must be strictly greater than _startRatioB.",
+            "@param _directionB : The direction of the stitching, true : forward, false : backward"
+          ],
+          "return_docs_raw": [
+            "@return Marvelous::SeamlinePairGroupResult - SEAMLINE_PAIR_SUCCESS (0) on success, a negative code on failure."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "pattern_api.AddSeamlinePairGroupPartial#623b224e5977123a",
+          "signature_normalized": "def AddSeamlinePairGroupPartial(_patternAIndex : int, _lineAIndex : int, _startRatioA : float, _endRatioA : float, _directionA : bool, _patternBIndex : int, _childBIndex : int, _lineBIndex : int, _startRatioB : float, _endRatioB : float, _directionB : bool) -> int",
+          "signature_raw": "def AddSeamlinePairGroupPartial(_patternAIndex : int, _lineAIndex : int, _startRatioA : float, _endRatioA : float, _directionA : bool, _patternBIndex : int, _childBIndex : int, _lineBIndex : int, _startRatioB : float, _endRatioB : float, _directionB : bool) -> int",
+          "parameters": [
+            {
+              "raw": "_patternAIndex : int",
+              "name": "_patternAIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_lineAIndex : int",
+              "name": "_lineAIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_startRatioA : float",
+              "name": "_startRatioA",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_endRatioA : float",
+              "name": "_endRatioA",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_directionA : bool",
+              "name": "_directionA",
+              "annotation_raw": "bool"
+            },
+            {
+              "raw": "_patternBIndex : int",
+              "name": "_patternBIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_childBIndex : int",
+              "name": "_childBIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_lineBIndex : int",
+              "name": "_lineBIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_startRatioB : float",
+              "name": "_startRatioB",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_endRatioB : float",
+              "name": "_endRatioB",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_directionB : bool",
+              "name": "_directionB",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "def AddSeamlinePairGroupPartial(_patternAIndex : int, _lineAIndex : int, _startRatioA : float, _endRatioA : float, _directionA : bool, _patternBIndex : int, _childBIndex : int, _lineBIndex : int, _startRatioB : float, _endRatioB : float, _directionB : bool) -> int",
+              "documentation_raw": "\"\"\"\n@ingroup PATTERN_API\n@brief Add sewing between a sub-segment of a pattern outline line and a sub-segment of an inner shape line\n(pattern A outline <-> pattern B inner shape).\n@return Marvelous::SeamlinePairGroupResult - SEAMLINE_PAIR_SUCCESS (0) on success, a negative code on failure.\n@param _patternAIndex : A pattern index\n@param _lineAIndex : The index of the line that belongs to the A pattern.\n@param _startRatioA : Where the seam starts along the A line, normalized to the line length.\n@param _endRatioA : Where the seam ends along the A line. Must be strictly greater than _startRatioA.\n@param _directionA : The direction of the stitching, true : forward, false : backward\n@param _patternBIndex : B pattern index\n@param _childBIndex : The index of the innershape that belongs to the B pattern.\n@param _lineBIndex : The index of the line that belongs to the innerShape.\n@param _startRatioB : Where the seam starts along the B line, normalized to the line length.\n@param _endRatioB : Where the seam ends along the B line. Must be strictly greater than _startRatioB.\n@param _directionB : The direction of the stitching, true : forward, false : backward\n@remark This call reports only a status code. To act on the new seam afterwards, diff\nGetSeamlinePairGroupListInPattern(_patternAIndex) across the call to get its index.\n\"\"\"",
+              "section": "PATTERN_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 13793,
+                  "block": 1233
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 14505,
+                  "block": 1233,
+                  "anchor": "pattern-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "AddSeamlinePairGroupPartial(int _patternAIndex, int _lineAIndex, float _startRatioA, float _endRatioA, bool _directionA, int _patternBIndex, int _childBIndex, int _lineBIndex, float _startRatioB, float _endRatioB, bool _directionB)",
+                "documentation_raw": "/// @ingroup PATTERN_API\n/// @brief Add sewing between a sub-segment of a pattern outline line and a sub-segment of an inner shape line\n/// (pattern A outline <-> pattern B inner shape).\n/// @return Marvelous::SeamlinePairGroupResult - SEAMLINE_PAIR_SUCCESS (0) on success, a negative code on failure.\n/// @param _patternAIndex : A pattern index\n/// @param _lineAIndex : The index of the line that belongs to the A pattern.\n/// @param _startRatioA : Where the seam starts along the A line, normalized to the line length.\n/// @param _endRatioA : Where the seam ends along the A line. Must be strictly greater than _startRatioA.\n/// @param _directionA : The direction of the stitching, true : forward, false : backward\n/// @param _patternBIndex : B pattern index\n/// @param _childBIndex : The index of the innershape that belongs to the B pattern.\n/// @param _lineBIndex : The index of the line that belongs to the innerShape.\n/// @param _startRatioB : Where the seam starts along the B line, normalized to the line length.\n/// @param _endRatioB : Where the seam ends along the B line. Must be strictly greater than _startRatioB.\n/// @param _directionB : The direction of the stitching, true : forward, false : backward\n/// @remark This call reports only a status code. To act on the new seam afterwards, diff\n/// GetSeamlinePairGroupListInPattern(_patternAIndex) across the call to get its index.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 13816,
+                    "block": 1234
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 14528,
+                    "block": 1234,
+                    "anchor": "pattern-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "SeamlinePairGroupResult",
+              "basis": "documentation_mention",
+              "status": "resolved",
+              "type_id": "type:SeamlinePairGroupResult"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param _patternAIndex : A pattern index",
+            "@param _lineAIndex : The index of the line that belongs to the A pattern.",
+            "@param _startRatioA : Where the seam starts along the A line, normalized to the line length.",
+            "@param _endRatioA : Where the seam ends along the A line. Must be strictly greater than _startRatioA.",
+            "@param _directionA : The direction of the stitching, true : forward, false : backward",
+            "@param _patternBIndex : B pattern index",
+            "@param _childBIndex : The index of the innershape that belongs to the B pattern.",
+            "@param _lineBIndex : The index of the line that belongs to the innerShape.",
+            "@param _startRatioB : Where the seam starts along the B line, normalized to the line length.",
+            "@param _endRatioB : Where the seam ends along the B line. Must be strictly greater than _startRatioB.",
+            "@param _directionB : The direction of the stitching, true : forward, false : backward"
+          ],
+          "return_docs_raw": [
+            "@return Marvelous::SeamlinePairGroupResult - SEAMLINE_PAIR_SUCCESS (0) on success, a negative code on failure."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "pattern_api.AddSeamlinePairGroupPartial#97a3bc5bc264e465",
+          "signature_normalized": "def AddSeamlinePairGroupPartial(_patternAIndex : int, _childAIndex : int, _lineAIndex : int, _startRatioA : float, _endRatioA : float, _directionA : bool, _patternBIndex : int, _childBIndex : int, _lineBIndex : int, _startRatioB : float, _endRatioB : float, _directionB : bool) -> int",
+          "signature_raw": "def AddSeamlinePairGroupPartial(_patternAIndex : int, _childAIndex : int, _lineAIndex : int, _startRatioA : float, _endRatioA : float, _directionA : bool, _patternBIndex : int, _childBIndex : int, _lineBIndex : int, _startRatioB : float, _endRatioB : float, _directionB : bool) -> int",
+          "parameters": [
+            {
+              "raw": "_patternAIndex : int",
+              "name": "_patternAIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_childAIndex : int",
+              "name": "_childAIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_lineAIndex : int",
+              "name": "_lineAIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_startRatioA : float",
+              "name": "_startRatioA",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_endRatioA : float",
+              "name": "_endRatioA",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_directionA : bool",
+              "name": "_directionA",
+              "annotation_raw": "bool"
+            },
+            {
+              "raw": "_patternBIndex : int",
+              "name": "_patternBIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_childBIndex : int",
+              "name": "_childBIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_lineBIndex : int",
+              "name": "_lineBIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_startRatioB : float",
+              "name": "_startRatioB",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_endRatioB : float",
+              "name": "_endRatioB",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_directionB : bool",
+              "name": "_directionB",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "def AddSeamlinePairGroupPartial(_patternAIndex : int, _childAIndex : int, _lineAIndex : int, _startRatioA : float, _endRatioA : float, _directionA : bool, _patternBIndex : int, _childBIndex : int, _lineBIndex : int, _startRatioB : float, _endRatioB : float, _directionB : bool) -> int",
+              "documentation_raw": "\"\"\"\n@ingroup PATTERN_API\n@brief Add sewing between sub-segments of two inner shape lines (pattern A inner shape <-> pattern B inner shape).\n@return Marvelous::SeamlinePairGroupResult - SEAMLINE_PAIR_SUCCESS (0) on success, a negative code on failure.\n@param _patternAIndex : A pattern index\n@param _childAIndex : The index of the innershape that belongs to the A pattern.\n@param _lineAIndex : The index of the line that belongs to the innerShape.\n@param _startRatioA : Where the seam starts along the A line, normalized to the line length.\n@param _endRatioA : Where the seam ends along the A line. Must be strictly greater than _startRatioA.\n@param _directionA : The direction of the stitching, true : forward, false : backward\n@param _patternBIndex : B pattern index\n@param _childBIndex : The index of the innershape that belongs to the B pattern.\n@param _lineBIndex : The index of the line that belongs to the innerShape.\n@param _startRatioB : Where the seam starts along the B line, normalized to the line length.\n@param _endRatioB : Where the seam ends along the B line. Must be strictly greater than _startRatioB.\n@param _directionB : The direction of the stitching, true : forward, false : backward\n@remark This call reports only a status code. To act on the new seam afterwards, diff\nGetSeamlinePairGroupListInPattern(_patternAIndex) across the call to get its index.\n\"\"\"",
+              "section": "PATTERN_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 13840,
+                  "block": 1235
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 14553,
+                  "block": 1235,
+                  "anchor": "pattern-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "AddSeamlinePairGroupPartial(int _patternAIndex, int _childAIndex, int _lineAIndex, float _startRatioA, float _endRatioA, bool _directionA, int _patternBIndex, int _childBIndex, int _lineBIndex, float _startRatioB, float _endRatioB, bool _directionB)",
+                "documentation_raw": "/// @ingroup PATTERN_API\n/// @brief Add sewing between sub-segments of two inner shape lines (pattern A inner shape <-> pattern B inner shape).\n/// @return Marvelous::SeamlinePairGroupResult - SEAMLINE_PAIR_SUCCESS (0) on success, a negative code on failure.\n/// @param _patternAIndex : A pattern index\n/// @param _childAIndex : The index of the innershape that belongs to the A pattern.\n/// @param _lineAIndex : The index of the line that belongs to the innerShape.\n/// @param _startRatioA : Where the seam starts along the A line, normalized to the line length.\n/// @param _endRatioA : Where the seam ends along the A line. Must be strictly greater than _startRatioA.\n/// @param _directionA : The direction of the stitching, true : forward, false : backward\n/// @param _patternBIndex : B pattern index\n/// @param _childBIndex : The index of the innershape that belongs to the B pattern.\n/// @param _lineBIndex : The index of the line that belongs to the innerShape.\n/// @param _startRatioB : Where the seam starts along the B line, normalized to the line length.\n/// @param _endRatioB : Where the seam ends along the B line. Must be strictly greater than _startRatioB.\n/// @param _directionB : The direction of the stitching, true : forward, false : backward\n/// @remark This call reports only a status code. To act on the new seam afterwards, diff\n/// GetSeamlinePairGroupListInPattern(_patternAIndex) across the call to get its index.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 13863,
+                    "block": 1236
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 14576,
+                    "block": 1236,
+                    "anchor": "pattern-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "SeamlinePairGroupResult",
+              "basis": "documentation_mention",
+              "status": "resolved",
+              "type_id": "type:SeamlinePairGroupResult"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param _patternAIndex : A pattern index",
+            "@param _childAIndex : The index of the innershape that belongs to the A pattern.",
+            "@param _lineAIndex : The index of the line that belongs to the innerShape.",
+            "@param _startRatioA : Where the seam starts along the A line, normalized to the line length.",
+            "@param _endRatioA : Where the seam ends along the A line. Must be strictly greater than _startRatioA.",
+            "@param _directionA : The direction of the stitching, true : forward, false : backward",
+            "@param _patternBIndex : B pattern index",
+            "@param _childBIndex : The index of the innershape that belongs to the B pattern.",
+            "@param _lineBIndex : The index of the line that belongs to the innerShape.",
+            "@param _startRatioB : Where the seam starts along the B line, normalized to the line length.",
+            "@param _endRatioB : Where the seam ends along the B line. Must be strictly greater than _startRatioB.",
+            "@param _directionB : The direction of the stitching, true : forward, false : backward"
+          ],
+          "return_docs_raw": [
+            "@return Marvelous::SeamlinePairGroupResult - SEAMLINE_PAIR_SUCCESS (0) on success, a negative code on failure."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "pattern_api.AddSeamlineTopstitch",
+      "qualified_name": "pattern_api.AddSeamlineTopstitch",
+      "module": "pattern_api",
+      "symbol": "AddSeamlineTopstitch",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "pattern_api.AddSeamlineTopstitch#eb1c5098b24b6790",
+          "signature_normalized": "def AddSeamlineTopstitch(_seamlinePairGroupIndex : int, _startRatio : float, _endRatio : float, _topStichStyleIndex : int) -> bool",
+          "signature_raw": "def AddSeamlineTopstitch(_seamlinePairGroupIndex : int, _startRatio : float, _endRatio : float, _topStichStyleIndex : int) -> bool",
+          "parameters": [
+            {
+              "raw": "_seamlinePairGroupIndex : int",
+              "name": "_seamlinePairGroupIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_startRatio : float",
+              "name": "_startRatio",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_endRatio : float",
+              "name": "_endRatio",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_topStichStyleIndex : int",
+              "name": "_topStichStyleIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def AddSeamlineTopstitch(_seamlinePairGroupIndex : int, _startRatio : float, _endRatio : float, _topStichStyleIndex : int) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup PATTERN_API\n@brief Add Seamline Topstitch to  Seamline using the seamline pair group index, startRatio, endRatio, topStitchStyleIndex\n@param          _seamlinePairGroupIndex: the seamline pair groupindex for Add Seamilne Topstitch to pattern\n@param          _startRatio: This is where the topstitch starts. You need to enter what percentage of the total seamline pair group length you want to start at.\n@param          _endRatio: This is where the topstitch ends. You need to enter what percentage of the total seamline pair group length you want to end at.\n@param  _topStichStyleIndex : the topstitch style index for topstitch\n\"\"\"",
+              "section": "PATTERN_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 12437,
+                  "block": 1107
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 13087,
+                  "block": 1107,
+                  "anchor": "pattern-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "AddSeamlineTopstitch(unsigned int _seamlinePairGroupIndex, float _startRatio, float _endRatio, int _topStichStyleIndex)",
+                "documentation_raw": "/// @ingroup PATTERN_API\n/// @brief Add Seamline Topstitch to  Seamline using the seamline pair group index, startRatio, endRatio, topStitchStyleIndex\n/// @param              _seamlinePairGroupIndex: the seamline pair groupindex for Add Seamilne Topstitch to pattern\n/// @param              _startRatio: This is where the topstitch starts. You need to enter what percentage of the total seamline pair group length you want to start at.\n/// @param              _endRatio: This is where the topstitch ends. You need to enter what percentage of the total seamline pair group length you want to end at.\n/// @param  _topStichStyleIndex : the topstitch style index for topstitch",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 12449,
+                    "block": 1108
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 13099,
+                    "block": 1108,
+                    "anchor": "pattern-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          _seamlinePairGroupIndex: the seamline pair groupindex for Add Seamilne Topstitch to pattern",
+            "@param          _startRatio: This is where the topstitch starts. You need to enter what percentage of the total seamline pair group length you want to start at.",
+            "@param          _endRatio: This is where the topstitch ends. You need to enter what percentage of the total seamline pair group length you want to end at.",
+            "@param  _topStichStyleIndex : the topstitch style index for topstitch"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "pattern_api.AddSegmentTopstitch",
+      "qualified_name": "pattern_api.AddSegmentTopstitch",
+      "module": "pattern_api",
+      "symbol": "AddSegmentTopstitch",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "pattern_api.AddSegmentTopstitch#f777174aad6fd63f",
+          "signature_normalized": "def AddSegmentTopstitch(_patternIndex : int, _lineIndex : int, _topStitchStyleIndex : int) -> bool",
+          "signature_raw": "def AddSegmentTopstitch(_patternIndex : int, _lineIndex : int, _topStitchStyleIndex : int) -> bool",
+          "parameters": [
+            {
+              "raw": "_patternIndex : int",
+              "name": "_patternIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_lineIndex : int",
+              "name": "_lineIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_topStitchStyleIndex : int",
+              "name": "_topStitchStyleIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def AddSegmentTopstitch(_patternIndex : int, _lineIndex : int, _topStitchStyleIndex : int) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup PATTERN_API\n@brief Add Segment Topstitch to  Pattern using the pattern index, lineindex , topStitchStyleIndex\n@param          patternIndex: the pattern index for Add Segment Topstitch to pattern\n@param          lineIndex: the line index for topstitch added line\n@param          topStitchStyleIndex: the topstitch style index for topstitch\n\"\"\"",
+              "section": "PATTERN_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 12414,
+                  "block": 1105
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 13063,
+                  "block": 1105,
+                  "anchor": "pattern-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "AddSegmentTopstitch(int _patternIndex, int _lineIndex)",
+                "documentation_raw": "/// @ingroup PATTERN_API\n/// @brief Add Segment Topstitch to  Pattern using the pattern index, lineindex , topStitchStyleIndex\n/// @param              patternIndex: the pattern index for Add Segment Topstitch to pattern\n/// @param              lineIndex: the line index for topstitch added line\n/// @param              topStitchStyleIndex: the topstitch style index for topstitch",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 12425,
+                    "block": 1106
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 13074,
+                    "block": 1106,
+                    "anchor": "pattern-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          patternIndex: the pattern index for Add Segment Topstitch to pattern",
+            "@param          lineIndex: the line index for topstitch added line",
+            "@param          topStitchStyleIndex: the topstitch style index for topstitch"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "pattern_api.AttachPatternToAvatarMeasure",
+      "qualified_name": "pattern_api.AttachPatternToAvatarMeasure",
+      "module": "pattern_api",
+      "symbol": "AttachPatternToAvatarMeasure",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "pattern_api.AttachPatternToAvatarMeasure#69d721258f0bced1",
+          "signature_normalized": "def AttachPatternToAvatarMeasure(_patternIndex : int, _lineIndex : int, _avatarMeasureName : str) -> str",
+          "signature_raw": "def AttachPatternToAvatarMeasure(_patternIndex : int, _lineIndex : int, _avatarMeasureName : str) -> str",
+          "parameters": [
+            {
+              "raw": "_patternIndex : int",
+              "name": "_patternIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_lineIndex : int",
+              "name": "_lineIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_avatarMeasureName : str",
+              "name": "_avatarMeasureName",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def AttachPatternToAvatarMeasure(_patternIndex : int, _lineIndex : int, _avatarMeasureName : str) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup PATTERN_API\n@brief Attach a pattern line to an avatar measure (Line Pin) - the programmatic equivalent of the manual\n\"Attach to Measure (Avatar)\" workflow. Runs the cloth solver afterwards so the result is visible\nwithout a separate Simulate() call. Registered as one undo step.\n@param _patternIndex: target pattern index (RealPatternList order)\n@param _lineIndex: outline line index to pin (see GetPatternLineInfo)\n@param _avatarMeasureName: avatar measure name (height/linear measures are rejected)\n@return JSON: {\"status\",\"message\",\"patternIndex\",\"patternName\",\"lineIndex\",\"lineLength\",\n\"avatarMeasureIndex\",\"avatarMeasureName\",\"measureBasicLength\",\"measureSurfaceLength\"}\n(lengths in mm). On failure: {\"status\":\"failed\",\"message\"}.\n\"\"\"",
+              "section": "PATTERN_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 14799,
+                  "block": 1293
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 15541,
+                  "block": 1293,
+                  "anchor": "pattern-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "AttachPatternToAvatarMeasure(int _patternIndex, int _lineIndex, const std::string& _avatarMeasureName)",
+                "documentation_raw": "/// @ingroup PATTERN_API\n/// @brief Attach a pattern line to an avatar measure (Line Pin) - the programmatic equivalent of the manual\n/// \"Attach to Measure (Avatar)\" workflow. Runs the cloth solver afterwards so the result is visible\n/// without a separate Simulate() call. Registered as one undo step.\n/// @param _patternIndex: target pattern index (RealPatternList order)\n/// @param _lineIndex: outline line index to pin (see GetPatternLineInfo)\n/// @param _avatarMeasureName: avatar measure name (height/linear measures are rejected)\n/// @return JSON: {\"status\",\"message\",\"patternIndex\",\"patternName\",\"lineIndex\",\"lineLength\",\n/// \"avatarMeasureIndex\",\"avatarMeasureName\",\"measureBasicLength\",\"measureSurfaceLength\"}\n/// (lengths in mm). On failure: {\"status\":\"failed\",\"message\"}.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 14815,
+                    "block": 1294
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 15557,
+                    "block": 1294,
+                    "anchor": "pattern-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _patternIndex: target pattern index (RealPatternList order)",
+            "@param _lineIndex: outline line index to pin (see GetPatternLineInfo)",
+            "@param _avatarMeasureName: avatar measure name (height/linear measures are rejected)"
+          ],
+          "return_docs_raw": [
+            "@return JSON: {\"status\",\"message\",\"patternIndex\",\"patternName\",\"lineIndex\",\"lineLength\","
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "pattern_api.ChangeGradingSizeInformation",
+      "qualified_name": "pattern_api.ChangeGradingSizeInformation",
+      "module": "pattern_api",
+      "symbol": "ChangeGradingSizeInformation",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "pattern_api.ChangeGradingSizeInformation#9b6e18e93e16ad19",
+          "signature_normalized": "def ChangeGradingSizeInformation(_gradingSizeGroupName : str, _gradingSizeName : str) -> bool",
+          "signature_raw": "def ChangeGradingSizeInformation(_gradingSizeGroupName : str, _gradingSizeName : str) -> bool",
+          "parameters": [
+            {
+              "raw": "_gradingSizeGroupName : str",
+              "name": "_gradingSizeGroupName",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_gradingSizeName : str",
+              "name": "_gradingSizeName",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def ChangeGradingSizeInformation(_gradingSizeGroupName : str, _gradingSizeName : str) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup PATTERN_API\n@brief Change Grading Size information\n@param _gradingSizeGroupName: sizegroup name\n@param _gradingSizeName: grading size name\n@return Successful grading size change\n\"\"\"",
+              "section": "PATTERN_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 13322,
+                  "block": 1195
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 14015,
+                  "block": 1195,
+                  "anchor": "pattern-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ChangeGradingSizeInformation(const std::wstring& _gradingSizeGroupName, const std::wstring& _gradingSizeName)",
+                "documentation_raw": "/// @ingroup PATTERN_API\n/// @brief Change Grading Size information\n/// @param _gradingSizeGroupName: sizegroup name\n/// @param _gradingSizeName: grading size name\n/// @return Successful grading size change",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 13333,
+                    "block": 1196
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 14026,
+                    "block": 1196,
+                    "anchor": "pattern-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _gradingSizeGroupName: sizegroup name",
+            "@param _gradingSizeName: grading size name"
+          ],
+          "return_docs_raw": [
+            "@return Successful grading size change"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "pattern_api.ChangeGradingSizeInformation#1f5f789a4c3293f6",
+          "signature_normalized": "def ChangeGradingSizeInformation(_gradingSizeGroupIndex : int, _gradingSizeIndex : int) -> bool",
+          "signature_raw": "def ChangeGradingSizeInformation(_gradingSizeGroupIndex : int, _gradingSizeIndex : int) -> bool",
+          "parameters": [
+            {
+              "raw": "_gradingSizeGroupIndex : int",
+              "name": "_gradingSizeGroupIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_gradingSizeIndex : int",
+              "name": "_gradingSizeIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def ChangeGradingSizeInformation(_gradingSizeGroupIndex : int, _gradingSizeIndex : int) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup PATTERN_API\n@brief Change Grading Size information\n@param _gradingSizeGroupIndex: sizegroup index\n@param _gradingSizeIndex: grading size index\n@return Successful grading size change\n\"\"\"",
+              "section": "PATTERN_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 13345,
+                  "block": 1197
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 14039,
+                  "block": 1197,
+                  "anchor": "pattern-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ChangeGradingSizeInformation(unsigned int _gradingSizeGroupIndex, unsigned int _gradingSizeIndex)",
+                "documentation_raw": "/// @ingroup PATTERN_API\n/// @brief Change Grading Size information\n/// @param _gradingSizeGroupIndex: sizegroup index\n/// @param _gradingSizeIndex: grading size index\n/// @return Successful grading size change",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 13356,
+                    "block": 1198
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 14050,
+                    "block": 1198,
+                    "anchor": "pattern-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _gradingSizeGroupIndex: sizegroup index",
+            "@param _gradingSizeIndex: grading size index"
+          ],
+          "return_docs_raw": [
+            "@return Successful grading size change"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "pattern_api.ConvertPatternJSONToCPX",
+      "qualified_name": "pattern_api.ConvertPatternJSONToCPX",
+      "module": "pattern_api",
+      "symbol": "ConvertPatternJSONToCPX",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "pattern_api.ConvertPatternJSONToCPX#ea78e748fcc89e28",
+          "signature_normalized": "def ConvertPatternJSONToCPX(_jsonPath : str, _cpxPath : str) -> bool",
+          "signature_raw": "def ConvertPatternJSONToCPX(_jsonPath : str, _cpxPath : str) -> bool",
+          "parameters": [
+            {
+              "raw": "_jsonPath : str",
+              "name": "_jsonPath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_cpxPath : str",
+              "name": "_cpxPath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def ConvertPatternJSONToCPX(_jsonPath : str, _cpxPath : str) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup PATTERN_API\n@brief Convert a .json pattern file to a .cpx binary without\npermanently altering the current scene's user-visible state.\nUseful for batch conversion / vendor pipelines.\nReturns false on hosts without CLO_HAS_PATTERN_API_CPX support.\n@return boolean result of conversion\n\"\"\"",
+              "section": "PATTERN_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 13595,
+                  "block": 1221
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 14301,
+                  "block": 1221,
+                  "anchor": "pattern-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ConvertPatternJSONToCPX(std::string _jsonPath, std::string _cpxPath)",
+                "documentation_raw": "/// @ingroup PATTERN_API\n/// @brief Convert a .json pattern file to a .cpx binary without\n/// permanently altering the current scene's user-visible state.\n/// Useful for batch conversion / vendor pipelines.\n/// Returns false on hosts without CLO_HAS_PATTERN_API_CPX support.\n/// @return boolean result of conversion",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 13607,
+                    "block": 1222
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 14313,
+                    "block": 1222,
+                    "anchor": "pattern-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return boolean result of conversion"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "pattern_api.ConvertToBaseLine",
+      "qualified_name": "pattern_api.ConvertToBaseLine",
+      "module": "pattern_api",
+      "symbol": "ConvertToBaseLine",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "pattern_api.ConvertToBaseLine#4854cc72bd9fc27e",
+          "signature_normalized": "def ConvertToBaseLine(_patternIndex : int, _childrenIndex : int) -> None",
+          "signature_raw": "def ConvertToBaseLine(_patternIndex : int, _childrenIndex : int) -> None",
+          "parameters": [
+            {
+              "raw": "_patternIndex : int",
+              "name": "_patternIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_childrenIndex : int",
+              "name": "_childrenIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def ConvertToBaseLine(_patternIndex : int, _childrenIndex : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup PATTERN_API\n@brief Convert To BaseLine using the pattern index and children index\n@param          patternIndex: the pattern index for convert pattern\nchildren Index: the children index for convert children\n\"\"\"",
+              "section": "PATTERN_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 11834,
+                  "block": 1053
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 12457,
+                  "block": 1053,
+                  "anchor": "pattern-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ConvertToBaseLine(int _patternIndex, int _childrenIndex)",
+                "documentation_raw": "/// @ingroup PATTERN_API\n/// @brief Convert To BaseLine using the pattern index and children index\n/// @param              patternIndex: the pattern index for convert pattern\n/// children Index: the children index for convert children",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 11844,
+                    "block": 1054
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 12467,
+                    "block": 1054,
+                    "anchor": "pattern-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          patternIndex: the pattern index for convert pattern"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "pattern_api.ConvertToInternalLine",
+      "qualified_name": "pattern_api.ConvertToInternalLine",
+      "module": "pattern_api",
+      "symbol": "ConvertToInternalLine",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "pattern_api.ConvertToInternalLine#875068f81da8caa0",
+          "signature_normalized": "def ConvertToInternalLine(_patternIndex : int, _childrenIndex : int) -> None",
+          "signature_raw": "def ConvertToInternalLine(_patternIndex : int, _childrenIndex : int) -> None",
+          "parameters": [
+            {
+              "raw": "_patternIndex : int",
+              "name": "_patternIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_childrenIndex : int",
+              "name": "_childrenIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def ConvertToInternalLine(_patternIndex : int, _childrenIndex : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup PATTERN_API\n@brief Convert To InternalLine using the pattern index and children index\n@param          _patternIndex: the pattern index for convert pattern\n_childrenIndex: the children index for convert children\n\"\"\"",
+              "section": "PATTERN_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 11855,
+                  "block": 1055
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 12479,
+                  "block": 1055,
+                  "anchor": "pattern-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ConvertToInternalLine(int _patternIndex, int _childrenIndex)",
+                "documentation_raw": "/// @ingroup PATTERN_API\n/// @brief Convert To InternalLine using the pattern index and children index\n/// @param              _patternIndex: the pattern index for convert pattern\n/// _childrenIndex: the children index for convert children",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 11865,
+                    "block": 1056
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 12489,
+                    "block": 1056,
+                    "anchor": "pattern-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          _patternIndex: the pattern index for convert pattern"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "pattern_api.CopyPatternPieceMove",
+      "qualified_name": "pattern_api.CopyPatternPieceMove",
+      "module": "pattern_api",
+      "symbol": "CopyPatternPieceMove",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "pattern_api.CopyPatternPieceMove#6e9f610b5b9716d4",
+          "signature_normalized": "def CopyPatternPieceMove(_patternPieceIndex : int, _offsetX : float, _offsetY : float) -> int",
+          "signature_raw": "def CopyPatternPieceMove(_patternPieceIndex : int, _offsetX : float, _offsetY : float) -> int",
+          "parameters": [
+            {
+              "raw": "_patternPieceIndex : int",
+              "name": "_patternPieceIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_offsetX : float",
+              "name": "_offsetX",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_offsetY : float",
+              "name": "_offsetY",
+              "annotation_raw": "float"
+            }
+          ],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "def CopyPatternPieceMove(_patternPieceIndex : int, _offsetX : float, _offsetY : float) -> int",
+              "documentation_raw": "\"\"\"\n@ingroup PATTERN_API\n@brief Copy Pattern using the pattern index and x,y offset distance\n@param          _patternPieceIndex: the pattern index for copying pattern\n_offsetX, _offsetY : the value to determine pattern copy offset distance,\n@return return copy pattern index\n\"\"\"",
+              "section": "PATTERN_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 11202,
+                  "block": 993
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 11795,
+                  "block": 993,
+                  "anchor": "pattern-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "CopyPatternPieceMove(int _patternPieceIndex, float _offsetX, float _offsetY)",
+                "documentation_raw": "/// @ingroup PATTERN_API\n/// @brief Copy Pattern using the pattern index and x,y offset distance\n/// @param              _patternPieceIndex: the pattern index for copying pattern\n/// _offsetX, _offsetY : the value to determine pattern copy offset distance,\n/// @return return copy pattern index",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 11213,
+                    "block": 994
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 11806,
+                    "block": 994,
+                    "anchor": "pattern-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          _patternPieceIndex: the pattern index for copying pattern"
+          ],
+          "return_docs_raw": [
+            "@return return copy pattern index"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "pattern_api.CopyPatternPiecePos",
+      "qualified_name": "pattern_api.CopyPatternPiecePos",
+      "module": "pattern_api",
+      "symbol": "CopyPatternPiecePos",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "pattern_api.CopyPatternPiecePos#82a4d72f1d01b0cd",
+          "signature_normalized": "def CopyPatternPiecePos(_patternPieceIndex : int, _x : float, _y : float) -> int",
+          "signature_raw": "def CopyPatternPiecePos(_patternPieceIndex : int, _x : float, _y : float) -> int",
+          "parameters": [
+            {
+              "raw": "_patternPieceIndex : int",
+              "name": "_patternPieceIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_x : float",
+              "name": "_x",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_y : float",
+              "name": "_y",
+              "annotation_raw": "float"
+            }
+          ],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "def CopyPatternPiecePos(_patternPieceIndex : int, _x : float, _y : float) -> int",
+              "documentation_raw": "\"\"\"\n@ingroup PATTERN_API\n@brief Copy Pattern using the pattern index and x,y position\n@param          patternIndex: the pattern index for copying pattern\npositionX, positionY : the value to determine pattern copy position\n\"\"\"",
+              "section": "PATTERN_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 11181,
+                  "block": 991
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 11773,
+                  "block": 991,
+                  "anchor": "pattern-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "CopyPatternPiecePos(int _patternPieceIndex, float _x, float _y)",
+                "documentation_raw": "/// @ingroup PATTERN_API\n/// @brief Copy Pattern using the pattern index and x,y position\n/// @param              patternIndex: the pattern index for copying pattern\n/// positionX, positionY : the value to determine pattern copy position",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 11191,
+                    "block": 992
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 11783,
+                    "block": 992,
+                    "anchor": "pattern-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          patternIndex: the pattern index for copying pattern"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "pattern_api.CreateBaseShapeWithPoints",
+      "qualified_name": "pattern_api.CreateBaseShapeWithPoints",
+      "module": "pattern_api",
+      "symbol": "CreateBaseShapeWithPoints",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "pattern_api.CreateBaseShapeWithPoints#9e05740cb1d73e80",
+          "signature_normalized": "def CreateBaseShapeWithPoints(_patternIndex : int, _points : list[tuple[float, float, int]], _isClosed : bool) -> int",
+          "signature_raw": "def CreateBaseShapeWithPoints(_patternIndex : int, _points : list[tuple[float, float, int]], _isClosed : bool) -> int",
+          "parameters": [
+            {
+              "raw": "_patternIndex : int",
+              "name": "_patternIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_points : list[tuple[float, float, int]]",
+              "name": "_points",
+              "annotation_raw": "list[tuple[float, float, int]]"
+            },
+            {
+              "raw": "_isClosed : bool",
+              "name": "_isClosed",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "def CreateBaseShapeWithPoints(_patternIndex : int, _points : list[tuple[float, float, int]], _isClosed : bool) -> int",
+              "documentation_raw": "\"\"\"\n@brief          Create a pattern's base shape using a set of vertices.\n@param          _patternIndex: Parent Pattern Index\n_points: set of vertices.\ntuple --> postion X, postion Y, VertexType  \nVertexType : 0, 2, 3 \n0 : Straight Point\n2 : Spline Curve Point\n3 : Bezier Curve Point\n_isClosed: If true, connect the last vertex to the first vertex.\n@return         InternalShapeIndex\n\"\"\"",
+              "section": "PATTERN_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 12255,
+                  "block": 1091
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 12897,
+                  "block": 1091,
+                  "anchor": "pattern-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "CreateBaseShapeWithPoints",
+                "documentation_raw": "/// @brief              Create a pattern's base shape using a set of vertices.\n/// @param              _patternIndex: Parent Pattern Index\n/// _points: set of vertices.\n/// tuple --> postion X, postion Y, VertexType  \n/// VertexType : 0, 2, 3 \n/// 0 : Straight Point\n/// 2 : Spline Curve Point\n/// 3 : Bezier Curve Point\n/// _isClosed: If true, connect the last vertex to the first vertex.\n/// @return             InternalShapeIndex",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 12271,
+                    "block": 1092
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 12913,
+                    "block": 1092,
+                    "anchor": "pattern-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          _patternIndex: Parent Pattern Index"
+          ],
+          "return_docs_raw": [
+            "@return         InternalShapeIndex"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "pattern_api.CreateInternalShapeWithPoints",
+      "qualified_name": "pattern_api.CreateInternalShapeWithPoints",
+      "module": "pattern_api",
+      "symbol": "CreateInternalShapeWithPoints",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "pattern_api.CreateInternalShapeWithPoints#1fefc4f7006af352",
+          "signature_normalized": "def CreateInternalShapeWithPoints(_patternIndex : int, _points : list[tuple[float, float, int]], _isClosed : bool) -> int",
+          "signature_raw": "def CreateInternalShapeWithPoints(_patternIndex : int, _points : list[tuple[float, float, int]], _isClosed : bool) -> int",
+          "parameters": [
+            {
+              "raw": "_patternIndex : int",
+              "name": "_patternIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_points : list[tuple[float, float, int]]",
+              "name": "_points",
+              "annotation_raw": "list[tuple[float, float, int]]"
+            },
+            {
+              "raw": "_isClosed : bool",
+              "name": "_isClosed",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "def CreateInternalShapeWithPoints(_patternIndex : int, _points : list[tuple[float, float, int]], _isClosed : bool) -> int",
+              "documentation_raw": "\"\"\"\n@brief          Create a pattern's internal shape using a set of vertices.\n@param          _patternIndex: Parent Pattern Index\ntuple --> postion X, postion Y, VertexType  \nVertexType : 0, 2, 3 \n0 : Straight Point\n2 : Spline Curve Point\n3 : Bezier Curve Point\n_isClosed: If true, connect the last vertex to the first vertex.\n@return         PatternIndex\n\"\"\"",
+              "section": "PATTERN_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 12224,
+                  "block": 1089
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 12865,
+                  "block": 1089,
+                  "anchor": "pattern-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "CreateInternalShapeWithPoints",
+                "documentation_raw": "/// @brief              Create a pattern's internal shape using a set of vertices.\n/// @param              _patternIndex: Parent Pattern Index\n/// tuple --> postion X, postion Y, VertexType  \n/// VertexType : 0, 2, 3 \n/// 0 : Straight Point\n/// 2 : Spline Curve Point\n/// 3 : Bezier Curve Point\n/// _isClosed: If true, connect the last vertex to the first vertex.\n/// @return             PatternIndex",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 12239,
+                    "block": 1090
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 12880,
+                    "block": 1090,
+                    "anchor": "pattern-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          _patternIndex: Parent Pattern Index"
+          ],
+          "return_docs_raw": [
+            "@return         PatternIndex"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "pattern_api.CreatePatternWithPoints",
+      "qualified_name": "pattern_api.CreatePatternWithPoints",
+      "module": "pattern_api",
+      "symbol": "CreatePatternWithPoints",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "pattern_api.CreatePatternWithPoints#5b938350dee26c40",
+          "signature_normalized": "def CreatePatternWithPoints(_points : list[tuple[float, float, int]]) -> int",
+          "signature_raw": "def CreatePatternWithPoints(_points : list[tuple[float, float, int]]) -> int",
+          "parameters": [
+            {
+              "raw": "_points : list[tuple[float, float, int]]",
+              "name": "_points",
+              "annotation_raw": "list[tuple[float, float, int]]"
+            }
+          ],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "def CreatePatternWithPoints(_points : list[tuple[float, float, int]]) -> int",
+              "documentation_raw": "\"\"\"\n@brief          Create a pattern using a set of vertices.\n@param          _points: set of vertices.\ntuple --> postion X, postion Y, VertexType  \nVertexType : 0, 2, 3 \n0 : Straight Point\n2 : Spline Curve Point\n3 : Bezier Curve Point\n\"\"\"",
+              "section": "PATTERN_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 12197,
+                  "block": 1087
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 12837,
+                  "block": 1087,
+                  "anchor": "pattern-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "CreatePatternWithPoints",
+                "documentation_raw": "/// @brief              Create a pattern using a set of vertices.\n/// @param              _points: set of vertices.\n/// tuple --> postion X, postion Y, VertexType  \n/// VertexType : 0, 2, 3 \n/// 0 : Straight Point\n/// 2 : Spline Curve Point\n/// 3 : Bezier Curve Point",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 12210,
+                    "block": 1088
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 12850,
+                    "block": 1088,
+                    "anchor": "pattern-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          _points: set of vertices."
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "pattern_api.CutPatternAlongInternalShapes",
+      "qualified_name": "pattern_api.CutPatternAlongInternalShapes",
+      "module": "pattern_api",
+      "symbol": "CutPatternAlongInternalShapes",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "pattern_api.CutPatternAlongInternalShapes#e0d955103c283c29",
+          "signature_normalized": "def CutPatternAlongInternalShapes(_patternIndex : int, _internalShapeIndex : int, _bCutAndSew : bool) -> bool",
+          "signature_raw": "def CutPatternAlongInternalShapes(_patternIndex : int, _internalShapeIndex : int, _bCutAndSew : bool) -> bool",
+          "parameters": [
+            {
+              "raw": "_patternIndex : int",
+              "name": "_patternIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_internalShapeIndex : int",
+              "name": "_internalShapeIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_bCutAndSew : bool",
+              "name": "_bCutAndSew",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def CutPatternAlongInternalShapes(_patternIndex : int, _internalShapeIndex : int, _bCutAndSew : bool) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup PATTERN_API\n@brief Cut a pattern piece along its internal shape lines — the API equivalent of selecting internal line(s) in the 2D window and using the GUI 'Cut' / 'Cut & Sew' context menu. Grading, sewing, and trims are propagated to the cut pieces the same way the GUI cut does. The internal lines must form a valid cutting path (reaching the pattern outline or forming a closed shape), or the cut is rejected like in the GUI.\n@param _patternIndex: pattern index (0-based, real pattern list order)\n@param _internalShapeIndex: internal shape index on the pattern (0-based, order of the pattern's internal shape list — the same index space as GetPatternInternalShapePoints). NOT the child-shape index returned by CreateInternalShapeWithPoints / CreateBaseShapeWithPoints (that is m_children order); passing those return values here can cut a different shape. Pass -1 to cut along every internal shape of the pattern; -1 is the only accepted negative value — any other negative index fails. Note that -1 includes hole/binding shapes, so on a pattern with holes the whole-pattern cut fails (holes cannot be cut) — cut specific indices instead\n@param _bCutAndSew: true = 'Cut & Sew' (the cut pieces stay sewn together along the cut line); false = plain 'Cut'\n@note In a GUI session the 2D/3D views and related widgets are not refreshed automatically by this API.\n@note Some confirmation dialogs inside the cut core are NOT suppressed by this API: the modular-template deletion question, the cut-line endpoint extension question, and the overlapping-seamline/overlapping-line notifications can appear. In a plain CLO build a headless script can block on them; in DLL builds they auto-answer YES. Avoid cutting patterns that trigger these cases from automation.\n@return true when the cut succeeded; false when the pattern/internal shape is not found, the index is negative (other than -1), the pattern has no internal shapes, no line of the target shape is selectable (e.g. protected after remeshing), or the cutting path is invalid\n\"\"\"",
+              "section": "PATTERN_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 15082,
+                  "block": 1315
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 15835,
+                  "block": 1315,
+                  "anchor": "pattern-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "CutPatternAlongInternalShapes(int _patternIndex, int _internalShapeIndex, bool _bCutAndSew)",
+                "documentation_raw": "/// @ingroup PATTERN_API\n/// @brief Cut a pattern piece along its internal shape lines — the API equivalent of selecting internal line(s) in the 2D window and using the GUI 'Cut' / 'Cut & Sew' context menu. Grading, sewing, and trims are propagated to the cut pieces the same way the GUI cut does. The internal lines must form a valid cutting path (reaching the pattern outline or forming a closed shape), or the cut is rejected like in the GUI.\n/// @param _patternIndex: pattern index (0-based, real pattern list order)\n/// @param _internalShapeIndex: internal shape index on the pattern (0-based, order of the pattern's internal shape list — the same index space as GetPatternInternalShapePoints). NOT the child-shape index returned by CreateInternalShapeWithPoints / CreateBaseShapeWithPoints (that is m_children order); passing those return values here can cut a different shape. Pass -1 to cut along every internal shape of the pattern; -1 is the only accepted negative value — any other negative index fails. Note that -1 includes hole/binding shapes, so on a pattern with holes the whole-pattern cut fails (holes cannot be cut) — cut specific indices instead\n/// @param _bCutAndSew: true = 'Cut & Sew' (the cut pieces stay sewn together along the cut line); false = plain 'Cut'\n/// @note In a GUI session the 2D/3D views and related widgets are not refreshed automatically by this API.\n/// @note Some confirmation dialogs inside the cut core are NOT suppressed by this API: the modular-template deletion question, the cut-line endpoint extension question, and the overlapping-seamline/overlapping-line notifications can appear. In a plain CLO build a headless script can block on them; in DLL builds they auto-answer YES. Avoid cutting patterns that trigger these cases from automation.\n/// @return true when the cut succeeded; false when the pattern/internal shape is not found, the index is negative (other than -1), the pattern has no internal shapes, no line of the target shape is selectable (e.g. protected after remeshing), or the cutting path is invalid",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 15096,
+                    "block": 1316
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 15849,
+                    "block": 1316,
+                    "anchor": "pattern-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _patternIndex: pattern index (0-based, real pattern list order)",
+            "@param _internalShapeIndex: internal shape index on the pattern (0-based, order of the pattern's internal shape list — the same index space as GetPatternInternalShapePoints). NOT the child-shape index returned by CreateInternalShapeWithPoints / CreateBaseShapeWithPoints (that is m_children order); passing those return values here can cut a different shape. Pass -1 to cut along every internal shape of the pattern; -1 is the only accepted negative value — any other negative index fails. Note that -1 includes hole/binding shapes, so on a pattern with holes the whole-pattern cut fails (holes cannot be cut) — cut specific indices instead",
+            "@param _bCutAndSew: true = 'Cut & Sew' (the cut pieces stay sewn together along the cut line); false = plain 'Cut'"
+          ],
+          "return_docs_raw": [
+            "@return true when the cut succeeded; false when the pattern/internal shape is not found, the index is negative (other than -1), the pattern has no internal shapes, no line of the target shape is selectable (e.g. protected after remeshing), or the cutting path is invalid"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "pattern_api.DeleteLine",
+      "qualified_name": "pattern_api.DeleteLine",
+      "module": "pattern_api",
+      "symbol": "DeleteLine",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "pattern_api.DeleteLine#674bdbc0cb757a8f",
+          "signature_normalized": "def DeleteLine(_patternIndex : int, _lineIndex : int) -> None",
+          "signature_raw": "def DeleteLine(_patternIndex : int, _lineIndex : int) -> None",
+          "parameters": [
+            {
+              "raw": "_patternIndex : int",
+              "name": "_patternIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_lineIndex : int",
+              "name": "_lineIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def DeleteLine(_patternIndex : int, _lineIndex : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup PATTERN_API\n@brief Delete a line from a pattern\n@param          _patternIndex: the pattern index for delete pattern\n@param          _lineIndex: the line index for delete line\n\"\"\"",
+              "section": "PATTERN_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 11244,
+                  "block": 997
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 11839,
+                  "block": 997,
+                  "anchor": "pattern-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "DeleteLine(int _patternIndex, int _lineIndex)",
+                "documentation_raw": "/// @ingroup PATTERN_API\n/// @brief Delete a line from a pattern\n/// @param              _patternIndex: the pattern index for delete pattern\n/// @param              _lineIndex: the line index for delete line",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 11254,
+                    "block": 998
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 11849,
+                    "block": 998,
+                    "anchor": "pattern-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          _patternIndex: the pattern index for delete pattern",
+            "@param          _lineIndex: the line index for delete line"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "pattern_api.DeletePatternPiece",
+      "qualified_name": "pattern_api.DeletePatternPiece",
+      "module": "pattern_api",
+      "symbol": "DeletePatternPiece",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "pattern_api.DeletePatternPiece#284f488153b64d81",
+          "signature_normalized": "def DeletePatternPiece(_patternIndex : int) -> None",
+          "signature_raw": "def DeletePatternPiece(_patternIndex : int) -> None",
+          "parameters": [
+            {
+              "raw": "_patternIndex : int",
+              "name": "_patternIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def DeletePatternPiece(_patternIndex : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup PATTERN_API\n@brief Delete Pattern using the pattern index\n@param          _patternIndex: the pattern index for delete pattern\n\"\"\"",
+              "section": "PATTERN_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 11225,
+                  "block": 995
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 11819,
+                  "block": 995,
+                  "anchor": "pattern-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "DeletePatternPiece(int _patternIndex)",
+                "documentation_raw": "/// @ingroup PATTERN_API\n/// @brief Delete Pattern using the pattern index\n/// @param              _patternIndex: the pattern index for delete pattern",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 11234,
+                    "block": 996
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 11828,
+                    "block": 996,
+                    "anchor": "pattern-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          _patternIndex: the pattern index for delete pattern"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "pattern_api.DeletePoint",
+      "qualified_name": "pattern_api.DeletePoint",
+      "module": "pattern_api",
+      "symbol": "DeletePoint",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "pattern_api.DeletePoint#081d1b2d419b0280",
+          "signature_normalized": "def DeletePoint(_patternIndex : int, _pointIndex : int) -> None",
+          "signature_raw": "def DeletePoint(_patternIndex : int, _pointIndex : int) -> None",
+          "parameters": [
+            {
+              "raw": "_patternIndex : int",
+              "name": "_patternIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_pointIndex : int",
+              "name": "_pointIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def DeletePoint(_patternIndex : int, _pointIndex : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup PATTERN_API\n@brief Delete a point from a pattern\n@param          _patternIndex: the pattern index for delete pattern\n@param          _pointIndex: the point index for delete point\n\"\"\"",
+              "section": "PATTERN_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 11265,
+                  "block": 999
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 11861,
+                  "block": 999,
+                  "anchor": "pattern-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "DeletePoint(int _patternIndex, int _pointIndex)",
+                "documentation_raw": "/// @ingroup PATTERN_API\n/// @brief Delete a point from a pattern\n/// @param              _patternIndex: the pattern index for delete pattern\n/// @param              _pointIndex: the point index for delete point",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 11275,
+                    "block": 1000
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 11871,
+                    "block": 1000,
+                    "anchor": "pattern-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          _patternIndex: the pattern index for delete pattern",
+            "@param          _pointIndex: the point index for delete point"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "pattern_api.DistribueInternalLinesbetweenSegments",
+      "qualified_name": "pattern_api.DistribueInternalLinesbetweenSegments",
+      "module": "pattern_api",
+      "symbol": "DistribueInternalLinesbetweenSegments",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "pattern_api.DistribueInternalLinesbetweenSegments#a7804dfba7fe874f",
+          "signature_normalized": "def DistribueInternalLinesbetweenSegments(_patternIndex : int, _lineIndexs : list[int], _number : int, _bStraightLine : bool, _bPerpendicularDirection : bool, _bGraduateSegmentLengths : bool) -> None",
+          "signature_raw": "def DistribueInternalLinesbetweenSegments(_patternIndex : int, _lineIndexs : list[int], _number : int, _bStraightLine : bool, _bPerpendicularDirection : bool, _bGraduateSegmentLengths : bool) -> None",
+          "parameters": [
+            {
+              "raw": "_patternIndex : int",
+              "name": "_patternIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_lineIndexs : list[int]",
+              "name": "_lineIndexs",
+              "annotation_raw": "list[int]"
+            },
+            {
+              "raw": "_number : int",
+              "name": "_number",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_bStraightLine : bool",
+              "name": "_bStraightLine",
+              "annotation_raw": "bool"
+            },
+            {
+              "raw": "_bPerpendicularDirection : bool",
+              "name": "_bPerpendicularDirection",
+              "annotation_raw": "bool"
+            },
+            {
+              "raw": "_bGraduateSegmentLengths : bool",
+              "name": "_bGraduateSegmentLengths",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def DistribueInternalLinesbetweenSegments(_patternIndex : int, _lineIndexs : list[int], _number : int, _bStraightLine : bool, _bPerpendicularDirection : bool, _bGraduateSegmentLengths : bool) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup PATTERN_API\n@brief Distribue Internal Lines betweenSegments using the pattern index and line indexs and option\n@param          patternIndex: the pattern index for taget pattern\nlineIndexs: the line indexs for taget lines\nnumber: the number of internal shapes to be created\nstraightLine: create an internal figure with straight lines\nperpendicularDirection: target line reversal\nGraduateSegmentLengths: extend to the outline of the pattern\n\"\"\"",
+              "section": "PATTERN_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 11876,
+                  "block": 1057
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 12501,
+                  "block": 1057,
+                  "anchor": "pattern-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "DistribueInternalLinesbetweenSegments(int _patternIndex, vector<int> _indexs, int _number, bool _bStraightLine, bool _bPerpendicularDirection, bool _bGraduateSegmentLengths)",
+                "documentation_raw": "/// @ingroup PATTERN_API\n/// @brief Distribue Internal Lines betweenSegments using the pattern index and line indexs and option\n/// @param              patternIndex: the pattern index for taget pattern\n/// lineIndexs: the line indexs for taget lines\n/// number: the number of internal shapes to be created\n/// straightLine: create an internal figure with straight lines\n/// perpendicularDirection: target line reversal\n/// GraduateSegmentLengths: extend to the outline of the pattern",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 11890,
+                    "block": 1058
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 12515,
+                    "block": 1058,
+                    "anchor": "pattern-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          patternIndex: the pattern index for taget pattern"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "pattern_api.DistributeButtonPairsOnEdge",
+      "qualified_name": "pattern_api.DistributeButtonPairsOnEdge",
+      "module": "pattern_api",
+      "symbol": "DistributeButtonPairsOnEdge",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "pattern_api.DistributeButtonPairsOnEdge#b24d187655ab6061",
+          "signature_normalized": "def DistributeButtonPairsOnEdge(_buttonPatternIndex : int, _buttonLineIndex : int, _buttonholePatternIndex : int, _buttonholeLineIndex : int, _edgeOffset : float, _buttonCount : int, _startMargin : float, _endMargin : float, _option : ButtonPairPlacementOption) -> str",
+          "signature_raw": "def DistributeButtonPairsOnEdge(_buttonPatternIndex : int, _buttonLineIndex : int, _buttonholePatternIndex : int, _buttonholeLineIndex : int, _edgeOffset : float, _buttonCount : int, _startMargin : float, _endMargin : float, _option : ButtonPairPlacementOption) -> str",
+          "parameters": [
+            {
+              "raw": "_buttonPatternIndex : int",
+              "name": "_buttonPatternIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_buttonLineIndex : int",
+              "name": "_buttonLineIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_buttonholePatternIndex : int",
+              "name": "_buttonholePatternIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_buttonholeLineIndex : int",
+              "name": "_buttonholeLineIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_edgeOffset : float",
+              "name": "_edgeOffset",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_buttonCount : int",
+              "name": "_buttonCount",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_startMargin : float",
+              "name": "_startMargin",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_endMargin : float",
+              "name": "_endMargin",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_option : ButtonPairPlacementOption",
+              "name": "_option",
+              "annotation_raw": "ButtonPairPlacementOption"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def DistributeButtonPairsOnEdge(_buttonPatternIndex : int, _buttonLineIndex : int, _buttonholePatternIndex : int, _buttonholeLineIndex : int, _edgeOffset : float, _buttonCount : int, _startMargin : float, _endMargin : float, _option : ButtonPairPlacementOption) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup PATTERN_API\n@brief Distribute _buttonCount button / buttonhole pairs evenly along the edges of two seam-paired patterns -\nthe auto-spacing counterpart of PlaceButtonPairsOnEdge with the same placement rules, validation, duplicate\nskipping, undo behaviour and return payload. The positions are computed on the button pattern edge as\nspacing = (edgeLength - _startMargin - _endMargin) / (_buttonCount - 1), starting _startMargin from the origin\ncorner; a single pair is placed at the midpoint of that span. The same distances are applied on the\nbuttonhole edge, so both edges must be long enough for them.\n@param _buttonPatternIndex: pattern that receives the button heads (0-based, real pattern list order)\n@param _buttonLineIndex: outline line of that pattern to measure from (0-based, order of GetPatternLineInfo / GetLineLength)\n@param _buttonholePatternIndex: pattern that receives the buttonholes (0-based, real pattern list order). Must differ from _buttonPatternIndex\n@param _buttonholeLineIndex: outline line of the buttonhole pattern to measure from (0-based)\n@param _edgeOffset: perpendicular distance in mm from each edge into its pattern. Must be greater than 0 and smaller than the pattern extent behind the edge\n@param _buttonCount: number of pairs to create. Must be 1 or more\n@param _startMargin: padding in mm from the origin corner (see _option.edgeOrigin) before the first pair. 0 or more\n@param _endMargin: padding in mm from the opposite corner after the last pair. 0 or more. _startMargin + _endMargin must be smaller than both edge lengths\n@param _option: styles, buttonhole size, rotation and the edge origin corner. Default-constructed = current styles, style size, no rotation, TOP origin\n@note In a GUI session the 2D/3D views and related widgets are not refreshed automatically by this API.\n@return Same JSON payload as PlaceButtonPairsOnEdge; placements[].distanceAlongEdge reports the computed positions.\nAdditional failure reasons: INVALID_BUTTON_COUNT (_buttonCount below 1) and MARGINS_EXCEED_EDGE (negative margin or\n_startMargin + _endMargin not smaller than an edge length).\n\"\"\"",
+              "section": "PATTERN_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 15812,
+                  "block": 1367
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 16591,
+                  "block": 1367,
+                  "anchor": "pattern-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "DistributeButtonPairsOnEdge(int _buttonPatternIndex, int _buttonLineIndex, int _buttonholePatternIndex, int _buttonholeLineIndex, float _edgeOffset, int _buttonCount, float _startMargin, float _endMargin, const Marvelous::ButtonPairPlacementOption& _option)",
+                "documentation_raw": "/// @ingroup PATTERN_API\n/// @brief Distribute _buttonCount button / buttonhole pairs evenly along the edges of two seam-paired patterns -\n/// the auto-spacing counterpart of PlaceButtonPairsOnEdge with the same placement rules, validation, duplicate\n/// skipping, undo behaviour and return payload. The positions are computed on the button pattern edge as\n/// spacing = (edgeLength - _startMargin - _endMargin) / (_buttonCount - 1), starting _startMargin from the origin\n/// corner; a single pair is placed at the midpoint of that span. The same distances are applied on the\n/// buttonhole edge, so both edges must be long enough for them.\n/// @param _buttonPatternIndex: pattern that receives the button heads (0-based, real pattern list order)\n/// @param _buttonLineIndex: outline line of that pattern to measure from (0-based, order of GetPatternLineInfo / GetLineLength)\n/// @param _buttonholePatternIndex: pattern that receives the buttonholes (0-based, real pattern list order). Must differ from _buttonPatternIndex\n/// @param _buttonholeLineIndex: outline line of the buttonhole pattern to measure from (0-based)\n/// @param _edgeOffset: perpendicular distance in mm from each edge into its pattern. Must be greater than 0 and smaller than the pattern extent behind the edge\n/// @param _buttonCount: number of pairs to create. Must be 1 or more\n/// @param _startMargin: padding in mm from the origin corner (see _option.edgeOrigin) before the first pair. 0 or more\n/// @param _endMargin: padding in mm from the opposite corner after the last pair. 0 or more. _startMargin + _endMargin must be smaller than both edge lengths\n/// @param _option: styles, buttonhole size, rotation and the edge origin corner. Default-constructed = current styles, style size, no rotation, TOP origin\n/// @note In a GUI session the 2D/3D views and related widgets are not refreshed automatically by this API.\n/// @return Same JSON payload as PlaceButtonPairsOnEdge; placements[].distanceAlongEdge reports the computed positions.\n/// Additional failure reasons: INVALID_BUTTON_COUNT (_buttonCount below 1) and MARGINS_EXCEED_EDGE (negative margin or\n/// _startMargin + _endMargin not smaller than an edge length).",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 15838,
+                    "block": 1368
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 16617,
+                    "block": 1368,
+                    "anchor": "pattern-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "ButtonPairPlacementOption",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:ButtonPairPlacementOption"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param _buttonPatternIndex: pattern that receives the button heads (0-based, real pattern list order)",
+            "@param _buttonLineIndex: outline line of that pattern to measure from (0-based, order of GetPatternLineInfo / GetLineLength)",
+            "@param _buttonholePatternIndex: pattern that receives the buttonholes (0-based, real pattern list order). Must differ from _buttonPatternIndex",
+            "@param _buttonholeLineIndex: outline line of the buttonhole pattern to measure from (0-based)",
+            "@param _edgeOffset: perpendicular distance in mm from each edge into its pattern. Must be greater than 0 and smaller than the pattern extent behind the edge",
+            "@param _buttonCount: number of pairs to create. Must be 1 or more",
+            "@param _startMargin: padding in mm from the origin corner (see _option.edgeOrigin) before the first pair. 0 or more",
+            "@param _endMargin: padding in mm from the opposite corner after the last pair. 0 or more. _startMargin + _endMargin must be smaller than both edge lengths",
+            "@param _option: styles, buttonhole size, rotation and the edge origin corner. Default-constructed = current styles, style size, no rotation, TOP origin"
+          ],
+          "return_docs_raw": [
+            "@return Same JSON payload as PlaceButtonPairsOnEdge; placements[].distanceAlongEdge reports the computed positions."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    }
+  ]
+}

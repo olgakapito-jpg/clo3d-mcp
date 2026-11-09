@@ -1,0 +1,14 @@
+Thing
+-----
+
+.. code-block:: python
+
+   """
+   An option record, not runtime evidence.
+   """
+   length:float  # distance in mm
+                 # more detail with units preserved
+   mode:Unknown  # not documented elsewhere
+   OFF = 0       # disabled
+   ON = 2        # enabled
+   GetMap() -> Thing  # read-only

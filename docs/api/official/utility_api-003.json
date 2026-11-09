@@ -1,0 +1,3493 @@
+{
+  "kind": "methods",
+  "records": [
+    {
+      "id": "utility_api.GetCustomViewInformationW",
+      "qualified_name": "utility_api.GetCustomViewInformationW",
+      "module": "utility_api",
+      "symbol": "GetCustomViewInformationW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetCustomViewInformationW#4b18ee9cbfa6dd7c",
+          "signature_normalized": "def GetCustomViewInformationW() -> str",
+          "signature_raw": "def GetCustomViewInformationW() -> str",
+          "parameters": [],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetCustomViewInformationW() -> str",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Get the custom view information                          \n{\n\"customViewList\": [\n{\n\"cameraMatrix\": [ // row vector 0, 1, 2 of \"local to world camera matrix\"\n1.0,\n0.000166,\n-0.001024,\n0.352125,\n0.0,\n0.987069,\n0.160306,\n2592.8,\n0.001039,\n-0.160306,\n0.987068,\n7973.05\n],\n\"fov\": 40.0\n}\n]\n}                               \n@return Json stream including the data of Custom View such as Camera Matrix, FOV, and so on.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 16619,
+                  "block": 1433
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 17427,
+                  "block": 1433,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetCustomViewInformationW()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Get the custom view information                              \n/// {\n/// \"customViewList\": [\n/// {\n/// \"cameraMatrix\": [ // row vector 0, 1, 2 of \"local to world camera matrix\"\n/// 1.0,\n/// 0.000166,\n/// -0.001024,\n/// 0.352125,\n/// 0.0,\n/// 0.987069,\n/// 0.160306,\n/// 2592.8,\n/// 0.001039,\n/// -0.160306,\n/// 0.987068,\n/// 7973.05\n/// ],\n/// \"fov\": 40.0\n/// }\n/// ]\n/// }                           \n/// @return Json stream including the data of Custom View such as Camera Matrix, FOV, and so on.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 16649,
+                    "block": 1434
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 17457,
+                    "block": 1434,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return Json stream including the data of Custom View such as Camera Matrix, FOV, and so on."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetEndAnimationFrame",
+      "qualified_name": "utility_api.GetEndAnimationFrame",
+      "module": "utility_api",
+      "symbol": "GetEndAnimationFrame",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetEndAnimationFrame#a841c936b5c55e60",
+          "signature_normalized": "def GetEndAnimationFrame() -> double",
+          "signature_raw": "def GetEndAnimationFrame() -> double",
+          "parameters": [],
+          "return_raw": "double",
+          "occurrences": [
+            {
+              "signature_raw": "def GetEndAnimationFrame() -> double",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief get end animation frame\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 18697,
+                  "block": 1617
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 19595,
+                  "block": 1617,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetEndAnimationFrame()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief get end animation frame",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 18705,
+                    "block": 1618
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 19603,
+                    "block": 1618,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetGraphicDisplacementMapTexture",
+      "qualified_name": "utility_api.GetGraphicDisplacementMapTexture",
+      "module": "utility_api",
+      "symbol": "GetGraphicDisplacementMapTexture",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetGraphicDisplacementMapTexture#8ff060158b71d444",
+          "signature_normalized": "def GetGraphicDisplacementMapTexture() -> str",
+          "signature_raw": "def GetGraphicDisplacementMapTexture() -> str",
+          "parameters": [],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetGraphicDisplacementMapTexture() -> str",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Gets the texture map for the graphic style\n@return _imageFilePath: The file path of the graphic style\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 21412,
+                  "block": 1867
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 22435,
+                  "block": 1867,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetGraphicDisplacementMapTexture()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Gets the texture map for the graphic style\n/// @return _imageFilePath: The file path of the graphic style",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 21421,
+                    "block": 1868
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 22444,
+                    "block": 1868,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return _imageFilePath: The file path of the graphic style"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "utility_api.GetGraphicDisplacementMapTexture#3bbbbabb9127d8f5",
+          "signature_normalized": "def GetGraphicDisplacementMapTexture(_GraphicIndex : int) -> str",
+          "signature_raw": "def GetGraphicDisplacementMapTexture(_GraphicIndex : int) -> str",
+          "parameters": [
+            {
+              "raw": "_GraphicIndex : int",
+              "name": "_GraphicIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetGraphicDisplacementMapTexture(_GraphicIndex : int) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Gets the texture map for the graphic style\n@param _GraphicIndex: Graphic style index to use the plugin\n@return imageFilePath: The file path to be set for the graphic style\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 21509,
+                  "block": 1877
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 22537,
+                  "block": 1877,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetGraphicDisplacementMapTexture(unsigned int GraphicIndex)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Gets the texture map for the graphic style\n/// @param _GraphicIndex: Graphic style index to use the plugin\n/// @return imageFilePath: The file path to be set for the graphic style",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 21519,
+                    "block": 1878
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 22547,
+                    "block": 1878,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _GraphicIndex: Graphic style index to use the plugin"
+          ],
+          "return_docs_raw": [
+            "@return imageFilePath: The file path to be set for the graphic style"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetGraphicMetalnessMapTexture",
+      "qualified_name": "utility_api.GetGraphicMetalnessMapTexture",
+      "module": "utility_api",
+      "symbol": "GetGraphicMetalnessMapTexture",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetGraphicMetalnessMapTexture#709679b35954e92e",
+          "signature_normalized": "def GetGraphicMetalnessMapTexture() -> str",
+          "signature_raw": "def GetGraphicMetalnessMapTexture() -> str",
+          "parameters": [],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetGraphicMetalnessMapTexture() -> str",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Gets the texture map for the graphic style\n@return _imageFilePath: The file path of the graphic style\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 21469,
+                  "block": 1873
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 22495,
+                  "block": 1873,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetGraphicMetalnessMapTexture()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Gets the texture map for the graphic style\n/// @return _imageFilePath: The file path of the graphic style",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 21478,
+                    "block": 1874
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 22504,
+                    "block": 1874,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return _imageFilePath: The file path of the graphic style"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "utility_api.GetGraphicMetalnessMapTexture#bb3f15a979ca9830",
+          "signature_normalized": "def GetGraphicMetalnessMapTexture(_GraphicIndex : int) -> str",
+          "signature_raw": "def GetGraphicMetalnessMapTexture(_GraphicIndex : int) -> str",
+          "parameters": [
+            {
+              "raw": "_GraphicIndex : int",
+              "name": "_GraphicIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetGraphicMetalnessMapTexture(_GraphicIndex : int) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Gets the texture map for the graphic style\n@param _GraphicIndex: Graphic style index to use the plugin\n@return imageFilePath: The file path to be set for the graphic style\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 21572,
+                  "block": 1883
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 22603,
+                  "block": 1883,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetGraphicMetalnessMapTexture(unsigned int GraphicIndex)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Gets the texture map for the graphic style\n/// @param _GraphicIndex: Graphic style index to use the plugin\n/// @return imageFilePath: The file path to be set for the graphic style",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 21582,
+                    "block": 1884
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 22613,
+                    "block": 1884,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _GraphicIndex: Graphic style index to use the plugin"
+          ],
+          "return_docs_raw": [
+            "@return imageFilePath: The file path to be set for the graphic style"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetGraphicNormalMapTexture",
+      "qualified_name": "utility_api.GetGraphicNormalMapTexture",
+      "module": "utility_api",
+      "symbol": "GetGraphicNormalMapTexture",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetGraphicNormalMapTexture#910540eac9e0e0bb",
+          "signature_normalized": "def GetGraphicNormalMapTexture() -> str",
+          "signature_raw": "def GetGraphicNormalMapTexture() -> str",
+          "parameters": [],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetGraphicNormalMapTexture() -> str",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Gets the texture map for the graphic style\n@return The file path of the graphic style\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 21393,
+                  "block": 1865
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 22415,
+                  "block": 1865,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetGraphicNormalMapTexture()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Gets the texture map for the graphic style\n/// @return The file path of the graphic style",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 21402,
+                    "block": 1866
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 22424,
+                    "block": 1866,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return The file path of the graphic style"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "utility_api.GetGraphicNormalMapTexture#89d3c9b3390af332",
+          "signature_normalized": "def GetGraphicNormalMapTexture(_GraphicIndex : int) -> str",
+          "signature_raw": "def GetGraphicNormalMapTexture(_GraphicIndex : int) -> str",
+          "parameters": [
+            {
+              "raw": "_GraphicIndex : int",
+              "name": "_GraphicIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetGraphicNormalMapTexture(_GraphicIndex : int) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Gets the texture map for the graphic style\n@param _GraphicIndex: Graphic style index to use the plugin\n@return The file path to be set for the graphic style\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 21488,
+                  "block": 1875
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 22515,
+                  "block": 1875,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetGraphicNormalMapTexture(unsigned int _GraphicIndex)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Gets the texture map for the graphic style\n/// @param _GraphicIndex: Graphic style index to use the plugin\n/// @return The file path to be set for the graphic style",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 21498,
+                    "block": 1876
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 22525,
+                    "block": 1876,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _GraphicIndex: Graphic style index to use the plugin"
+          ],
+          "return_docs_raw": [
+            "@return The file path to be set for the graphic style"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetGraphicOpacityMapTexture",
+      "qualified_name": "utility_api.GetGraphicOpacityMapTexture",
+      "module": "utility_api",
+      "symbol": "GetGraphicOpacityMapTexture",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetGraphicOpacityMapTexture#4a119dda35575dd8",
+          "signature_normalized": "def GetGraphicOpacityMapTexture() -> str",
+          "signature_raw": "def GetGraphicOpacityMapTexture() -> str",
+          "parameters": [],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetGraphicOpacityMapTexture() -> str",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Gets the texture map for the graphic style\n@return _imageFilePath: The file path of the graphic style\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 21431,
+                  "block": 1869
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 22455,
+                  "block": 1869,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetGraphicOpacityMapTexture()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Gets the texture map for the graphic style\n/// @return _imageFilePath: The file path of the graphic style",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 21440,
+                    "block": 1870
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 22464,
+                    "block": 1870,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return _imageFilePath: The file path of the graphic style"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "utility_api.GetGraphicOpacityMapTexture#2ae4f051d5c55395",
+          "signature_normalized": "def GetGraphicOpacityMapTexture(_GraphicIndex : int) -> str",
+          "signature_raw": "def GetGraphicOpacityMapTexture(_GraphicIndex : int) -> str",
+          "parameters": [
+            {
+              "raw": "_GraphicIndex : int",
+              "name": "_GraphicIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetGraphicOpacityMapTexture(_GraphicIndex : int) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Gets the texture map for the graphic style\n@param _GraphicIndex: Graphic style index to use the plugin\n@return imageFilePath: The file path to be set for the graphic style\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 21530,
+                  "block": 1879
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 22559,
+                  "block": 1879,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetGraphicOpacityMapTexture(unsigned int GraphicIndex)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Gets the texture map for the graphic style\n/// @param _GraphicIndex: Graphic style index to use the plugin\n/// @return imageFilePath: The file path to be set for the graphic style",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 21540,
+                    "block": 1880
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 22569,
+                    "block": 1880,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _GraphicIndex: Graphic style index to use the plugin"
+          ],
+          "return_docs_raw": [
+            "@return imageFilePath: The file path to be set for the graphic style"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetGraphicRoughnessMapTexture",
+      "qualified_name": "utility_api.GetGraphicRoughnessMapTexture",
+      "module": "utility_api",
+      "symbol": "GetGraphicRoughnessMapTexture",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetGraphicRoughnessMapTexture#6bbcd9dda9d0ba35",
+          "signature_normalized": "def GetGraphicRoughnessMapTexture() -> str",
+          "signature_raw": "def GetGraphicRoughnessMapTexture() -> str",
+          "parameters": [],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetGraphicRoughnessMapTexture() -> str",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Gets the texture map for the graphic style\n@return _imageFilePath: The file path of the graphic style\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 21450,
+                  "block": 1871
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 22475,
+                  "block": 1871,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetGraphicRoughnessMapTexture()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Gets the texture map for the graphic style\n/// @return _imageFilePath: The file path of the graphic style",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 21459,
+                    "block": 1872
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 22484,
+                    "block": 1872,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return _imageFilePath: The file path of the graphic style"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "utility_api.GetGraphicRoughnessMapTexture#67b57b5041e40fb7",
+          "signature_normalized": "def GetGraphicRoughnessMapTexture(_GraphicIndex : int) -> str",
+          "signature_raw": "def GetGraphicRoughnessMapTexture(_GraphicIndex : int) -> str",
+          "parameters": [
+            {
+              "raw": "_GraphicIndex : int",
+              "name": "_GraphicIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetGraphicRoughnessMapTexture(_GraphicIndex : int) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Gets the texture map for the graphic style\n@param _GraphicIndex: Graphic style index to use the plugin\n@return imageFilePath: The file path to be set for the graphic style\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 21551,
+                  "block": 1881
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 22581,
+                  "block": 1881,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetGraphicRoughnessMapTexture(unsigned int GraphicIndex)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Gets the texture map for the graphic style\n/// @param _GraphicIndex: Graphic style index to use the plugin\n/// @return imageFilePath: The file path to be set for the graphic style",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 21561,
+                    "block": 1882
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 22591,
+                    "block": 1882,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _GraphicIndex: Graphic style index to use the plugin"
+          ],
+          "return_docs_raw": [
+            "@return imageFilePath: The file path to be set for the graphic style"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetGraphicStyleColor",
+      "qualified_name": "utility_api.GetGraphicStyleColor",
+      "module": "utility_api",
+      "symbol": "GetGraphicStyleColor",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetGraphicStyleColor#bb29cedfef7980f7",
+          "signature_normalized": "def GetGraphicStyleColor() -> tuple[float, float, float, float]",
+          "signature_raw": "def GetGraphicStyleColor() -> tuple[float, float, float, float]",
+          "parameters": [],
+          "return_raw": "tuple[float, float, float, float]",
+          "occurrences": [
+            {
+              "signature_raw": "def GetGraphicStyleColor() -> tuple[float, float, float, float]",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Get a base color of PBR material in a Graphic.  (default index = 0)\n@return RGBA float tuple\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 21593,
+                  "block": 1885
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 22625,
+                  "block": 1885,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetGraphicStyleColor()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Get a base color of PBR material in a Graphic.  (default index = 0)\n/// @return RGBA float tuple",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 21602,
+                    "block": 1886
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 22634,
+                    "block": 1886,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return RGBA float tuple"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "utility_api.GetGraphicStyleColor#12d84ec153f5161c",
+          "signature_normalized": "def GetGraphicStyleColor(_styleIndex : int) -> CloApiRgba",
+          "signature_raw": "def GetGraphicStyleColor(_styleIndex : int) -> CloApiRgba",
+          "parameters": [
+            {
+              "raw": "_styleIndex : int",
+              "name": "_styleIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "CloApiRgba",
+          "occurrences": [
+            {
+              "signature_raw": "def GetGraphicStyleColor(_styleIndex : int) -> CloApiRgba",
+              "documentation_raw": "\"\"\"\n@brief          Get base color of PBR material from Graphic Style\n@param          _styleIndex: Graphic Style index on Object Browser to get Color\n@return The color value in CloAgiRgba.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 21817,
+                  "block": 1905
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 22859,
+                  "block": 1905,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetGraphicStyleColor(int _styleIndex)",
+                "documentation_raw": "/// @brief              Get base color of PBR material from Graphic Style\n/// @param              _styleIndex: Graphic Style index on Object Browser to get Color\n/// @return The color value in CloAgiRgba.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 21826,
+                    "block": 1906
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 22868,
+                    "block": 1906,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "CloApiRgba",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:CloApiRgba"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param          _styleIndex: Graphic Style index on Object Browser to get Color"
+          ],
+          "return_docs_raw": [
+            "@return The color value in CloAgiRgba."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "utility_api.GetGraphicStyleColor#69210db6f3d66327",
+          "signature_normalized": "def GetGraphicStyleColor(_styleIndex : int, _colorwayIndex : int) -> CloApiRgba",
+          "signature_raw": "def GetGraphicStyleColor(_styleIndex : int, _colorwayIndex : int) -> CloApiRgba",
+          "parameters": [
+            {
+              "raw": "_styleIndex : int",
+              "name": "_styleIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "CloApiRgba",
+          "occurrences": [
+            {
+              "signature_raw": "def GetGraphicStyleColor(_styleIndex : int, _colorwayIndex : int) -> CloApiRgba",
+              "documentation_raw": "\"\"\"\n@brief          Get base color of PBR material from Graphic Style\n@param          _styleIndex: Graphic Style index on [_colorwayIndex]th Colorway to get Color\n_colorwayIndex: Colorway Index to get Style\n@return The color value in CloAgiRgba.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 21836,
+                  "block": 1907
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 22879,
+                  "block": 1907,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetGraphicStyleColor(int _styleIndex, int _colorwayIndex)",
+                "documentation_raw": "/// @brief              Get base color of PBR material from Graphic Style\n/// @param              _styleIndex: Graphic Style index on [_colorwayIndex]th Colorway to get Color\n/// _colorwayIndex: Colorway Index to get Style\n/// @return The color value in CloAgiRgba.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 21846,
+                    "block": 1908
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 22889,
+                    "block": 1908,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "CloApiRgba",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:CloApiRgba"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param          _styleIndex: Graphic Style index on [_colorwayIndex]th Colorway to get Color"
+          ],
+          "return_docs_raw": [
+            "@return The color value in CloAgiRgba."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetGraphicStyleCount",
+      "qualified_name": "utility_api.GetGraphicStyleCount",
+      "module": "utility_api",
+      "symbol": "GetGraphicStyleCount",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetGraphicStyleCount#287ba07885bb639f",
+          "signature_normalized": "def GetGraphicStyleCount() -> int",
+          "signature_raw": "def GetGraphicStyleCount() -> int",
+          "parameters": [],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "def GetGraphicStyleCount() -> int",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Returns the number of graphic styles in the current colorway\n@return If valid, returns the number of graphic styles; otherwise, -1.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 19852,
+                  "block": 1727
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 20805,
+                  "block": 1727,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetGraphicStyleCount()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Returns the number of graphic styles in the current colorway\n/// @return If valid, returns the number of graphic styles; otherwise, -1.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 19861,
+                    "block": 1728
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 20814,
+                    "block": 1728,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return If valid, returns the number of graphic styles; otherwise, -1."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetGraphicStyleDimensions",
+      "qualified_name": "utility_api.GetGraphicStyleDimensions",
+      "module": "utility_api",
+      "symbol": "GetGraphicStyleDimensions",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetGraphicStyleDimensions#8865066b4270e564",
+          "signature_normalized": "def GetGraphicStyleDimensions(_index : int) -> CloApiGraphicDimensions",
+          "signature_raw": "def GetGraphicStyleDimensions(_index : int) -> CloApiGraphicDimensions",
+          "parameters": [
+            {
+              "raw": "_index : int",
+              "name": "_index",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "CloApiGraphicDimensions",
+          "occurrences": [
+            {
+              "signature_raw": "def GetGraphicStyleDimensions(_index : int) -> CloApiGraphicDimensions",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Returns the dimensions of the graphic style\n@param _index: Graphic style index to use the plugin\n@return If valid, returns a Dimension object filled with the graphic's dimension information.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 20028,
+                  "block": 1743
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 20989,
+                  "block": 1743,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetGraphicStyleDimensions(int _index)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Returns the dimensions of the graphic style\n/// @param _index: Graphic style index to use the plugin\n/// @return If valid, returns a Dimension object filled with the graphic's dimension information.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 20038,
+                    "block": 1744
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 20999,
+                    "block": 1744,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "CloApiGraphicDimensions",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:CloApiGraphicDimensions"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param _index: Graphic style index to use the plugin"
+          ],
+          "return_docs_raw": [
+            "@return If valid, returns a Dimension object filled with the graphic's dimension information."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetGraphicStyleDimensionsOnPattern",
+      "qualified_name": "utility_api.GetGraphicStyleDimensionsOnPattern",
+      "module": "utility_api",
+      "symbol": "GetGraphicStyleDimensionsOnPattern",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetGraphicStyleDimensionsOnPattern#9799b9ccb4a4a4c9",
+          "signature_normalized": "def GetGraphicStyleDimensionsOnPattern(_colorwayIndex : int, _graphicIndex : int, _patternIndex : int) -> CloApiGraphicDimensions",
+          "signature_raw": "def GetGraphicStyleDimensionsOnPattern(_colorwayIndex : int, _graphicIndex : int, _patternIndex : int) -> CloApiGraphicDimensions",
+          "parameters": [
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_graphicIndex : int",
+              "name": "_graphicIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_patternIndex : int",
+              "name": "_patternIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "CloApiGraphicDimensions",
+          "occurrences": [
+            {
+              "signature_raw": "def GetGraphicStyleDimensionsOnPattern(_colorwayIndex : int, _graphicIndex : int, _patternIndex : int) -> CloApiGraphicDimensions",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Returns the dimensions of a graphic placement on a specific pattern piece for a specific colorway\n@param _colorwayIndex: Target colorway index\n@param _graphicIndex: The index corresponding to the graphic style list.\n@param _patternIndex: The index of the pattern piece.\n@return If valid, returns a Dimension object filled with the graphic's dimension information.\n@note Width and height are measured from the graphic's center outward. Each pattern piece placement stores its own independent size.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 20212,
+                  "block": 1759
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 21181,
+                  "block": 1759,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetGraphicStyleDimensionsOnPattern(int _colorwayIndex, int _graphicIndex, int _patternIndex)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Returns the dimensions of a graphic placement on a specific pattern piece for a specific colorway\n/// @param _colorwayIndex: Target colorway index\n/// @param _graphicIndex: The index corresponding to the graphic style list.\n/// @param _patternIndex: The index of the pattern piece.\n/// @return If valid, returns a Dimension object filled with the graphic's dimension information.\n/// @note Width and height are measured from the graphic's center outward. Each pattern piece placement stores its own independent size.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 20225,
+                    "block": 1760
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 21194,
+                    "block": 1760,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "CloApiGraphicDimensions",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:CloApiGraphicDimensions"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param _colorwayIndex: Target colorway index",
+            "@param _graphicIndex: The index corresponding to the graphic style list.",
+            "@param _patternIndex: The index of the pattern piece."
+          ],
+          "return_docs_raw": [
+            "@return If valid, returns a Dimension object filled with the graphic's dimension information."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetGraphicStyleListWithIndex",
+      "qualified_name": "utility_api.GetGraphicStyleListWithIndex",
+      "module": "utility_api",
+      "symbol": "GetGraphicStyleListWithIndex",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetGraphicStyleListWithIndex#9d1d232522967135",
+          "signature_normalized": "def GetGraphicStyleListWithIndex() -> str",
+          "signature_raw": "def GetGraphicStyleListWithIndex() -> str",
+          "parameters": [],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetGraphicStyleListWithIndex() -> str",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Gets the list of graphic files available in the current project's object browser.\n@return Returns a JSON-formatted string containing the list of graphic styles with their corresponding indices and names.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 20669,
+                  "block": 1793
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 21655,
+                  "block": 1793,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetGraphicStyleListWithIndex()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Gets the list of graphic files available in the current project's object browser.\n/// @return Returns a JSON-formatted string containing the list of graphic styles with their corresponding indices and names.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 20678,
+                    "block": 1794
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 21664,
+                    "block": 1794,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return Returns a JSON-formatted string containing the list of graphic styles with their corresponding indices and names."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetGraphicStyleName",
+      "qualified_name": "utility_api.GetGraphicStyleName",
+      "module": "utility_api",
+      "symbol": "GetGraphicStyleName",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetGraphicStyleName#77131c0a9bb1abc3",
+          "signature_normalized": "def GetGraphicStyleName(_index : int) -> str",
+          "signature_raw": "def GetGraphicStyleName(_index : int) -> str",
+          "parameters": [
+            {
+              "raw": "_index : int",
+              "name": "_index",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetGraphicStyleName(_index : int) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Returns the name of the graphic style\n@param _index: Graphic style index to use the plugin\n@return If valid, returns the name; otherwise, an empty string.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 19919,
+                  "block": 1733
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 20875,
+                  "block": 1733,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetGraphicStyleName(int _index)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Returns the name of the graphic style\n/// @param _index: Graphic style index to use the plugin\n/// @return If valid, returns the name; otherwise, an empty string.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 19929,
+                    "block": 1734
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 20885,
+                    "block": 1734,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _index: Graphic style index to use the plugin"
+          ],
+          "return_docs_raw": [
+            "@return If valid, returns the name; otherwise, an empty string."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetGraphicStylePatternPieceIndices",
+      "qualified_name": "utility_api.GetGraphicStylePatternPieceIndices",
+      "module": "utility_api",
+      "symbol": "GetGraphicStylePatternPieceIndices",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetGraphicStylePatternPieceIndices#d95eb4f356a9f215",
+          "signature_normalized": "def GetGraphicStylePatternPieceIndices(_graphicIndex : int) -> list[int]",
+          "signature_raw": "def GetGraphicStylePatternPieceIndices(_graphicIndex : int) -> list[int]",
+          "parameters": [
+            {
+              "raw": "_graphicIndex : int",
+              "name": "_graphicIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "list[int]",
+          "occurrences": [
+            {
+              "signature_raw": "def GetGraphicStylePatternPieceIndices(_graphicIndex : int) -> list[int]",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Returns the list of pattern piece indices that a graphic style is placed on\n@param _graphicIndex: The index corresponding to the graphic style list.\n@return A deduplicated vector of pattern piece indices.\n@note Use the returned indices as _patternIndex in the other OnPattern APIs (GetGraphicStyleDimensionsOnPattern, SetGraphicStylePositionOnPattern, etc.).\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 20164,
+                  "block": 1755
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 21131,
+                  "block": 1755,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetGraphicStylePatternPieceIndices(int _graphicIndex)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Returns the list of pattern piece indices that a graphic style is placed on\n/// @param _graphicIndex: The index corresponding to the graphic style list.\n/// @return A deduplicated vector of pattern piece indices.\n/// @note Use the returned indices as _patternIndex in the other OnPattern APIs (GetGraphicStyleDimensionsOnPattern, SetGraphicStylePositionOnPattern, etc.).",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 20175,
+                    "block": 1756
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 21142,
+                    "block": 1756,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _graphicIndex: The index corresponding to the graphic style list."
+          ],
+          "return_docs_raw": [
+            "@return A deduplicated vector of pattern piece indices."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "utility_api.GetGraphicStylePatternPieceIndices#cc3ed781d1d53ea3",
+          "signature_normalized": "def GetGraphicStylePatternPieceIndices(_colorwayIndex : int, _graphicIndex : int) -> list[int]",
+          "signature_raw": "def GetGraphicStylePatternPieceIndices(_colorwayIndex : int, _graphicIndex : int) -> list[int]",
+          "parameters": [
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_graphicIndex : int",
+              "name": "_graphicIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "list[int]",
+          "occurrences": [
+            {
+              "signature_raw": "def GetGraphicStylePatternPieceIndices(_colorwayIndex : int, _graphicIndex : int) -> list[int]",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Returns the list of pattern piece indices that a graphic style is placed on for a specific colorway\n@param _colorwayIndex: Target colorway index\n@param _graphicIndex: The index corresponding to the graphic style list.\n@return A deduplicated vector of pattern piece indices.\n@note Use the returned indices as _patternIndex in the other OnPattern APIs (GetGraphicStyleDimensionsOnPattern, SetGraphicStylePositionOnPattern, etc.).\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 20187,
+                  "block": 1757
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 21155,
+                  "block": 1757,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetGraphicStylePatternPieceIndices(int _colorwayIndex, int _graphicIndex)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Returns the list of pattern piece indices that a graphic style is placed on for a specific colorway\n/// @param _colorwayIndex: Target colorway index\n/// @param _graphicIndex: The index corresponding to the graphic style list.\n/// @return A deduplicated vector of pattern piece indices.\n/// @note Use the returned indices as _patternIndex in the other OnPattern APIs (GetGraphicStyleDimensionsOnPattern, SetGraphicStylePositionOnPattern, etc.).",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 20199,
+                    "block": 1758
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 21167,
+                    "block": 1758,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _colorwayIndex: Target colorway index",
+            "@param _graphicIndex: The index corresponding to the graphic style list."
+          ],
+          "return_docs_raw": [
+            "@return A deduplicated vector of pattern piece indices."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetGraphicStylePlacementPoints",
+      "qualified_name": "utility_api.GetGraphicStylePlacementPoints",
+      "module": "utility_api",
+      "symbol": "GetGraphicStylePlacementPoints",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetGraphicStylePlacementPoints#a3c60af7e9aef630",
+          "signature_normalized": "def GetGraphicStylePlacementPoints(_colorwayIndex : int, _graphicIndex : int, _patternIndex : int, _is2D : bool) -> CloApiGraphicPlacementPoints",
+          "signature_raw": "def GetGraphicStylePlacementPoints(_colorwayIndex : int, _graphicIndex : int, _patternIndex : int, _is2D : bool) -> CloApiGraphicPlacementPoints",
+          "parameters": [
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_graphicIndex : int",
+              "name": "_graphicIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_patternIndex : int",
+              "name": "_patternIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_is2D : bool",
+              "name": "_is2D",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "CloApiGraphicPlacementPoints",
+          "occurrences": [
+            {
+              "signature_raw": "def GetGraphicStylePlacementPoints(_colorwayIndex : int, _graphicIndex : int, _patternIndex : int, _is2D : bool) -> CloApiGraphicPlacementPoints",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Returns the center, corner, and edge center points of a graphic placement on a pattern piece for a specific colorway\n@param _colorwayIndex: Target colorway index\n@param _graphicIndex: The index corresponding to the graphic style list.\n@param _patternIndex: The index of the pattern piece.\n@param _is2D: If true, returns 2D pattern-local coordinates; if false, returns 3D world coordinates.\n@return A CloApiGraphicPlacementPoints struct containing center, corners, and edge center points.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 20303,
+                  "block": 1765
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 21275,
+                  "block": 1765,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetGraphicStylePlacementPoints(int _colorwayIndex, int _graphicIndex, int _patternIndex, bool _is2D)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Returns the center, corner, and edge center points of a graphic placement on a pattern piece for a specific colorway\n/// @param _colorwayIndex: Target colorway index\n/// @param _graphicIndex: The index corresponding to the graphic style list.\n/// @param _patternIndex: The index of the pattern piece.\n/// @param _is2D: If true, returns 2D pattern-local coordinates; if false, returns 3D world coordinates.\n/// @return A CloApiGraphicPlacementPoints struct containing center, corners, and edge center points.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 20316,
+                    "block": 1766
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 21288,
+                    "block": 1766,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "CloApiGraphicPlacementPoints",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:CloApiGraphicPlacementPoints"
+            },
+            {
+              "name": "CloApiGraphicPlacementPoints",
+              "basis": "documentation_mention",
+              "status": "resolved",
+              "type_id": "type:CloApiGraphicPlacementPoints"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param _colorwayIndex: Target colorway index",
+            "@param _graphicIndex: The index corresponding to the graphic style list.",
+            "@param _patternIndex: The index of the pattern piece.",
+            "@param _is2D: If true, returns 2D pattern-local coordinates; if false, returns 3D world coordinates."
+          ],
+          "return_docs_raw": [
+            "@return A CloApiGraphicPlacementPoints struct containing center, corners, and edge center points."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetGraphicStylePosition",
+      "qualified_name": "utility_api.GetGraphicStylePosition",
+      "module": "utility_api",
+      "symbol": "GetGraphicStylePosition",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetGraphicStylePosition#60877c4cf5c57f9f",
+          "signature_normalized": "def GetGraphicStylePosition(_graphicIndex : int, _is2D : bool) -> map[int, list[list[float]]]",
+          "signature_raw": "def GetGraphicStylePosition(_graphicIndex : int, _is2D : bool) -> map[int, list[list[float]]]",
+          "parameters": [
+            {
+              "raw": "_graphicIndex : int",
+              "name": "_graphicIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_is2D : bool",
+              "name": "_is2D",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "map[int, list[list[float]]]",
+          "occurrences": [
+            {
+              "signature_raw": "def GetGraphicStylePosition(_graphicIndex : int, _is2D : bool) -> map[int, list[list[float]]]",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Returns the position information of each graphic object.\n@param _graphicIndex: The index corresponding to the graphic style list.\n@param _is2D: If True, returns the value based on the 2D window; if False, returns the value based on the 3D window.\n@return The map’s key is the pattern index, and the value is a list of position information for the graphics assigned to that pattern.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 19871,
+                  "block": 1729
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 20825,
+                  "block": 1729,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetGraphicStylePosition()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Returns the position information of each graphic object.\n/// @param _graphicIndex: The index corresponding to the graphic style list.\n/// @param _is2D: If True, returns the value based on the 2D window; if False, returns the value based on the 3D window.\n/// @return The map’s key is the pattern index, and the value is a list of position information for the graphics assigned to that pattern.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 19882,
+                    "block": 1730
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 20836,
+                    "block": 1730,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _graphicIndex: The index corresponding to the graphic style list.",
+            "@param _is2D: If True, returns the value based on the 2D window; if False, returns the value based on the 3D window."
+          ],
+          "return_docs_raw": [
+            "@return The map’s key is the pattern index, and the value is a list of position information for the graphics assigned to that pattern."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "utility_api.GetGraphicStylePosition#798fa47545d2dd58",
+          "signature_normalized": "def GetGraphicStylePosition(_graphicIndex : int, _colorwayIndex : int, _is2D : bool) -> map[int, list[list[float]]]",
+          "signature_raw": "def GetGraphicStylePosition(_graphicIndex : int, _colorwayIndex : int, _is2D : bool) -> map[int, list[list[float]]]",
+          "parameters": [
+            {
+              "raw": "_graphicIndex : int",
+              "name": "_graphicIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_is2D : bool",
+              "name": "_is2D",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "map[int, list[list[float]]]",
+          "occurrences": [
+            {
+              "signature_raw": "def GetGraphicStylePosition(_graphicIndex : int, _colorwayIndex : int, _is2D : bool) -> map[int, list[list[float]]]",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Returns the position information of each graphic object for the specified colorway.\n@param _graphicIndex: The index corresponding to the graphic style list of the target colorway.\n@param _colorwayIndex: The target colorway index. If out of range, the current colorway is used.\n@param _is2D: If True, returns the value based on the 2D window; if False, returns the value based on the 3D window.\n@return The map's key is the pattern index, and the value is a list of position information for the graphics assigned to that pattern.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 19894,
+                  "block": 1731
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 20849,
+                  "block": 1731,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetGraphicStylePosition(int _graphicIndex, int _colorwayIndex, bool _is2D)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Returns the position information of each graphic object for the specified colorway.\n/// @param _graphicIndex: The index corresponding to the graphic style list of the target colorway.\n/// @param _colorwayIndex: The target colorway index. If out of range, the current colorway is used.\n/// @param _is2D: If True, returns the value based on the 2D window; if False, returns the value based on the 3D window.\n/// @return The map's key is the pattern index, and the value is a list of position information for the graphics assigned to that pattern.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 19906,
+                    "block": 1732
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 20861,
+                    "block": 1732,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _graphicIndex: The index corresponding to the graphic style list of the target colorway.",
+            "@param _colorwayIndex: The target colorway index. If out of range, the current colorway is used.",
+            "@param _is2D: If True, returns the value based on the 2D window; if False, returns the value based on the 3D window."
+          ],
+          "return_docs_raw": [
+            "@return The map's key is the pattern index, and the value is a list of position information for the graphics assigned to that pattern."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetInternalShapeInformation",
+      "qualified_name": "utility_api.GetInternalShapeInformation",
+      "module": "utility_api",
+      "symbol": "GetInternalShapeInformation",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetInternalShapeInformation#9f614763e8d2bf32",
+          "signature_normalized": "def GetInternalShapeInformation(_patternIndex : int) -> list[CloApiInternalShape]",
+          "signature_raw": "def GetInternalShapeInformation(_patternIndex : int) -> list[CloApiInternalShape]",
+          "parameters": [
+            {
+              "raw": "_patternIndex : int",
+              "name": "_patternIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "list[CloApiInternalShape]",
+          "occurrences": [
+            {
+              "signature_raw": "def GetInternalShapeInformation(_patternIndex : int) -> list[CloApiInternalShape]",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Groups a pattern's internal lines into disjoint shapes by connectivity: lines that intersect or\ntouch within a small tolerance belong to the same shape.\n@param _patternIndex: The index of the pattern piece to analyze.\n@return Shapes named \"InternalShape_0\", \"InternalShape_1\", ... ordered by smallest contained line number,\nline endpoints in pattern-local 2D coordinates. Empty if the pattern is invalid or has no internal lines.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 25379,
+                  "block": 2193
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 26565,
+                  "block": 2193,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetInternalShapeInformation(int _patternIndex)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Groups a pattern's internal lines into disjoint shapes by connectivity: lines that intersect or\n/// touch within a small tolerance belong to the same shape.\n/// @param _patternIndex: The index of the pattern piece to analyze.\n/// @return Shapes named \"InternalShape_0\", \"InternalShape_1\", ... ordered by smallest contained line number,\n/// line endpoints in pattern-local 2D coordinates. Empty if the pattern is invalid or has no internal lines.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 25391,
+                    "block": 2194
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 26577,
+                    "block": 2194,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "CloApiInternalShape",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:CloApiInternalShape"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param _patternIndex: The index of the pattern piece to analyze."
+          ],
+          "return_docs_raw": [
+            "@return Shapes named \"InternalShape_0\", \"InternalShape_1\", ... ordered by smallest contained line number,"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetIntersectionPoints",
+      "qualified_name": "utility_api.GetIntersectionPoints",
+      "module": "utility_api",
+      "symbol": "GetIntersectionPoints",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetIntersectionPoints#c2544c0b655f88f5",
+          "signature_normalized": "def GetIntersectionPoints(_lines : list[CloApiLine]) -> CloApiInternalShape",
+          "signature_raw": "def GetIntersectionPoints(_lines : list[CloApiLine]) -> CloApiInternalShape",
+          "parameters": [
+            {
+              "raw": "_lines : list[CloApiLine]",
+              "name": "_lines",
+              "annotation_raw": "list[CloApiLine]"
+            }
+          ],
+          "return_raw": "CloApiInternalShape",
+          "occurrences": [
+            {
+              "signature_raw": "def GetIntersectionPoints(_lines : list[CloApiLine]) -> CloApiInternalShape",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Finds the intersection point of every pair of the given lines. Parallel, collinear, and\nzero-length segments produce no intersection; touching endpoints count as one. Pure geometry\ncomputation; no scene data is read or modified.\n@param _lines: The line segments to evaluate. Renumbered from 0 if any lineNumber is negative or duplicated.\n@return A CloApiInternalShape with the (possibly renumbered) input lines and their intersection points.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 25354,
+                  "block": 2191
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 26539,
+                  "block": 2191,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetIntersectionPoints(const std::vector<Marvelous::CloApiLine>& _lines)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Finds the intersection point of every pair of the given lines. Parallel, collinear, and\n/// zero-length segments produce no intersection; touching endpoints count as one. Pure geometry\n/// computation; no scene data is read or modified.\n/// @param _lines: The line segments to evaluate. Renumbered from 0 if any lineNumber is negative or duplicated.\n/// @return A CloApiInternalShape with the (possibly renumbered) input lines and their intersection points.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 25366,
+                    "block": 2192
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 26551,
+                    "block": 2192,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "CloApiInternalShape",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:CloApiInternalShape"
+            },
+            {
+              "name": "CloApiInternalShape",
+              "basis": "documentation_mention",
+              "status": "resolved",
+              "type_id": "type:CloApiInternalShape"
+            },
+            {
+              "name": "CloApiLine",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:CloApiLine"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param _lines: The line segments to evaluate. Renumbered from 0 if any lineNumber is negative or duplicated."
+          ],
+          "return_docs_raw": [
+            "@return A CloApiInternalShape with the (possibly renumbered) input lines and their intersection points."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetItemsCountsinColorway",
+      "qualified_name": "utility_api.GetItemsCountsinColorway",
+      "module": "utility_api",
+      "symbol": "GetItemsCountsinColorway",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetItemsCountsinColorway#4707ce3d1c159aa5",
+          "signature_normalized": "def GetItemsCountsinColorway(_colorwayIndex : int) -> int",
+          "signature_raw": "def GetItemsCountsinColorway(_colorwayIndex : int) -> int",
+          "parameters": [
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "def GetItemsCountsinColorway(_colorwayIndex : int) -> int",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Get the color count in a target colorway.\n@parm  colorwayIndex: the target colorway index\n@return if it succeeds, return the color count in a colorway.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 21691,
+                  "block": 1893
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 22727,
+                  "block": 1893,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetItemsCountsinColorway(unsigned int _colorwayIndex)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Get the color count in a target colorway.\n/// @parm  colorwayIndex: the target colorway index\n/// @return if it succeeds, return the color count in a colorway.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 21701,
+                    "block": 1894
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 22737,
+                    "block": 1894,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return if it succeeds, return the color count in a colorway."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetLightPresetForExportRenderingImage",
+      "qualified_name": "utility_api.GetLightPresetForExportRenderingImage",
+      "module": "utility_api",
+      "symbol": "GetLightPresetForExportRenderingImage",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetLightPresetForExportRenderingImage#437398f054858281",
+          "signature_normalized": "def GetLightPresetForExportRenderingImage() -> map[str, int]",
+          "signature_raw": "def GetLightPresetForExportRenderingImage() -> map[str, int]",
+          "parameters": [],
+          "return_raw": "map[str, int]",
+          "occurrences": [
+            {
+              "signature_raw": "def GetLightPresetForExportRenderingImage() -> map[str, int]",
+              "documentation_raw": "\"\"\"\n@brief Retrieve the list of available light presets for the V-Ray renderer.\nEach preset provides a predefined lighting setup that can be applied to the rendering scene.\nThe returned map allows you to display preset options in a UI and use the corresponding index\nto apply a preset with SetLightPresetForExportRenderingImage().\n@return A map containing pairs of preset name (key: std::string) and preset index (value: int).\nExample: { {\"Studio Light\", 0}, {\"Daylight\", 1}, {\"HDRI Sky\", 2} }\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 20587,
+                  "block": 1785
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 21569,
+                  "block": 1785,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetLightPresetForExportRenderingImage()",
+                "documentation_raw": "/// @brief Retrieve the list of available light presets for the V-Ray renderer.\n/// Each preset provides a predefined lighting setup that can be applied to the rendering scene.\n/// The returned map allows you to display preset options in a UI and use the corresponding index\n/// to apply a preset with SetLightPresetForExportRenderingImage().\n/// @return A map containing pairs of preset name (key: std::string) and preset index (value: int).\n/// Example: { {\"Studio Light\", 0}, {\"Daylight\", 1}, {\"HDRI Sky\", 2} }",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 20599,
+                    "block": 1786
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 21581,
+                    "block": 1786,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return A map containing pairs of preset name (key: std::string) and preset index (value: int)."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetMajorVersion",
+      "qualified_name": "utility_api.GetMajorVersion",
+      "module": "utility_api",
+      "symbol": "GetMajorVersion",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetMajorVersion#cd3eff3f3a8ad255",
+          "signature_normalized": "def GetMajorVersion() -> int",
+          "signature_raw": "def GetMajorVersion() -> int",
+          "parameters": [],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "def GetMajorVersion() -> int",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Get the major version of the CLO software\n@return Major version of SW. ex) 5 of 5.0.72\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 16269,
+                  "block": 1405
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 17063,
+                  "block": 1405,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetMajorVersion()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Get the major version of the CLO software\n/// @return Major version of SW. ex) 5 of 5.0.72",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 16278,
+                    "block": 1406
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 17072,
+                    "block": 1406,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return Major version of SW. ex) 5 of 5.0.72"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetMaterialProperties",
+      "qualified_name": "utility_api.GetMaterialProperties",
+      "module": "utility_api",
+      "symbol": "GetMaterialProperties",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetMaterialProperties#5e429d2c73097370",
+          "signature_normalized": "def GetMaterialProperties(colorwayIndex : int, objectIndex : int, browserContextOptions : ObjectBrowserContextOptions, materialContextProperties : MaterialPropertyOptions) -> MaterialPropertyOptions",
+          "signature_raw": "def GetMaterialProperties(colorwayIndex : int, objectIndex : int, browserContextOptions : ObjectBrowserContextOptions, materialContextProperties : MaterialPropertyOptions) -> MaterialPropertyOptions",
+          "parameters": [
+            {
+              "raw": "colorwayIndex : int",
+              "name": "colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "objectIndex : int",
+              "name": "objectIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "browserContextOptions : ObjectBrowserContextOptions",
+              "name": "browserContextOptions",
+              "annotation_raw": "ObjectBrowserContextOptions"
+            },
+            {
+              "raw": "materialContextProperties : MaterialPropertyOptions",
+              "name": "materialContextProperties",
+              "annotation_raw": "MaterialPropertyOptions"
+            }
+          ],
+          "return_raw": "MaterialPropertyOptions",
+          "occurrences": [
+            {
+              "signature_raw": "def GetMaterialProperties(colorwayIndex : int, objectIndex : int, browserContextOptions : ObjectBrowserContextOptions, materialContextProperties : MaterialPropertyOptions) -> MaterialPropertyOptions",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Returns the current material properties for the active context (e.g. a Button's \"Thread\" tab vs its\n\"Button\" tab). Only materialContextProperties.contextOptions is read from the input.\n@param colorwayIndex: target colorway index (0 to n-1; -1 uses the current colorway).\n@param objectIndex: index of the targeted object within its Object Browser category.\n@param browserContextOptions: Object Browser context locating the object.\n@param materialContextProperties: only its contextOptions is used, to select the component tab to read.\n@return MaterialPropertyOptions for the active context. On an unresolved or mismatched context a default\nMaterialPropertyOptions (echoing the requested contextOptions) is returned.\n@note Supported object types: Fabric (targetComponent Front/Back/Side) and Button (Button/Thread). All other\nsupported types are single-faced with no component tabs (targetComponent = COMPONENT_NONE) and report\non the 'front' face stack: Graphic, Buttonhole and Puckering (subItemIndex unused); Trim\n(subItemIndex = trim mesh index); Top-stitch (subItemIndex = stitch line index).\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 24998,
+                  "block": 2167
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 26171,
+                  "block": 2167,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetMaterialProperties(int colorwayIndex, int objectIndex, const ObjectBrowserContextOptions& browserContextOptions, const MaterialPropertyOptions& materialContextProperties)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Returns the current material properties for the active context (e.g. a Button's \"Thread\" tab vs its\n/// \"Button\" tab). Only materialContextProperties.contextOptions is read from the input.\n/// @param colorwayIndex: target colorway index (0 to n-1; -1 uses the current colorway).\n/// @param objectIndex: index of the targeted object within its Object Browser category.\n/// @param browserContextOptions: Object Browser context locating the object.\n/// @param materialContextProperties: only its contextOptions is used, to select the component tab to read.\n/// @return MaterialPropertyOptions for the active context. On an unresolved or mismatched context a default\n/// MaterialPropertyOptions (echoing the requested contextOptions) is returned.\n/// @note Supported object types: Fabric (targetComponent Front/Back/Side) and Button (Button/Thread). All other\n/// supported types are single-faced with no component tabs (targetComponent = COMPONENT_NONE) and report\n/// on the 'front' face stack: Graphic, Buttonhole and Puckering (subItemIndex unused); Trim\n/// (subItemIndex = trim mesh index); Top-stitch (subItemIndex = stitch line index).",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 25017,
+                    "block": 2168
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 26190,
+                    "block": 2168,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "MaterialPropertyOptions",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:MaterialPropertyOptions"
+            },
+            {
+              "name": "MaterialPropertyOptions",
+              "basis": "documentation_mention",
+              "status": "resolved",
+              "type_id": "type:MaterialPropertyOptions"
+            },
+            {
+              "name": "ObjectBrowserContextOptions",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:ObjectBrowserContextOptions"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param colorwayIndex: target colorway index (0 to n-1; -1 uses the current colorway).",
+            "@param objectIndex: index of the targeted object within its Object Browser category.",
+            "@param browserContextOptions: Object Browser context locating the object.",
+            "@param materialContextProperties: only its contextOptions is used, to select the component tab to read."
+          ],
+          "return_docs_raw": [
+            "@return MaterialPropertyOptions for the active context. On an unresolved or mismatched context a default"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetMaterialPropertiesAsJson",
+      "qualified_name": "utility_api.GetMaterialPropertiesAsJson",
+      "module": "utility_api",
+      "symbol": "GetMaterialPropertiesAsJson",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetMaterialPropertiesAsJson#67648f2675d69bb1",
+          "signature_normalized": "def GetMaterialPropertiesAsJson(colorwayIndex : int, objectIndex : int, browserContextOptions : ObjectBrowserContextOptions, materialContextProperties : MaterialPropertyOptions) -> str",
+          "signature_raw": "def GetMaterialPropertiesAsJson(colorwayIndex : int, objectIndex : int, browserContextOptions : ObjectBrowserContextOptions, materialContextProperties : MaterialPropertyOptions) -> str",
+          "parameters": [
+            {
+              "raw": "colorwayIndex : int",
+              "name": "colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "objectIndex : int",
+              "name": "objectIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "browserContextOptions : ObjectBrowserContextOptions",
+              "name": "browserContextOptions",
+              "annotation_raw": "ObjectBrowserContextOptions"
+            },
+            {
+              "raw": "materialContextProperties : MaterialPropertyOptions",
+              "name": "materialContextProperties",
+              "annotation_raw": "MaterialPropertyOptions"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetMaterialPropertiesAsJson(colorwayIndex : int, objectIndex : int, browserContextOptions : ObjectBrowserContextOptions, materialContextProperties : MaterialPropertyOptions) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief JSON-returning duplicate of GetMaterialProperties. Resolves and reads the same material stack but\nreturns it as a JSON string, so scripting clients can consume the full fabric material payload\n(base color, normal, displacement, opacity and reflection maps, each with their transformation)\nwithout binding the nested option structs.\n@param colorwayIndex: target colorway index (0 to n-1; -1 uses the current colorway).\n@param objectIndex: index of the targeted object within its Object Browser category.\n@param browserContextOptions: Object Browser context locating the object.\n@param materialContextProperties: only its contextOptions is used, to select the component tab to read.\n@return JSON string. On success: {\"status\":\"success\",\"properties\":{...}} where \"properties\" mirrors the\nMaterialPropertyOptions struct (contextOptions, material_type, front/back/side stacks, physical_*).\nOn an unresolved or mismatched context: {\"status\":\"error\",\"message\":\"...\"}.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 25037,
+                  "block": 2169
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 26211,
+                  "block": 2169,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetMaterialPropertiesAsJson(int colorwayIndex, int objectIndex, const ObjectBrowserContextOptions& browserContextOptions, const MaterialPropertyOptions& materialContextProperties)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief JSON-returning duplicate of GetMaterialProperties. Resolves and reads the same material stack but\n/// returns it as a JSON string, so scripting clients can consume the full fabric material payload\n/// (base color, normal, displacement, opacity and reflection maps, each with their transformation)\n/// without binding the nested option structs.\n/// @param colorwayIndex: target colorway index (0 to n-1; -1 uses the current colorway).\n/// @param objectIndex: index of the targeted object within its Object Browser category.\n/// @param browserContextOptions: Object Browser context locating the object.\n/// @param materialContextProperties: only its contextOptions is used, to select the component tab to read.\n/// @return JSON string. On success: {\"status\":\"success\",\"properties\":{...}} where \"properties\" mirrors the\n/// MaterialPropertyOptions struct (contextOptions, material_type, front/back/side stacks, physical_*).\n/// On an unresolved or mismatched context: {\"status\":\"error\",\"message\":\"...\"}.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 25055,
+                    "block": 2170
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 26229,
+                    "block": 2170,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "MaterialPropertyOptions",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:MaterialPropertyOptions"
+            },
+            {
+              "name": "MaterialPropertyOptions",
+              "basis": "documentation_mention",
+              "status": "resolved",
+              "type_id": "type:MaterialPropertyOptions"
+            },
+            {
+              "name": "ObjectBrowserContextOptions",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:ObjectBrowserContextOptions"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param colorwayIndex: target colorway index (0 to n-1; -1 uses the current colorway).",
+            "@param objectIndex: index of the targeted object within its Object Browser category.",
+            "@param browserContextOptions: Object Browser context locating the object.",
+            "@param materialContextProperties: only its contextOptions is used, to select the component tab to read."
+          ],
+          "return_docs_raw": [
+            "@return JSON string. On success: {\"status\":\"success\",\"properties\":{...}} where \"properties\" mirrors the"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetMaterialTextureTransformations",
+      "qualified_name": "utility_api.GetMaterialTextureTransformations",
+      "module": "utility_api",
+      "symbol": "GetMaterialTextureTransformations",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetMaterialTextureTransformations#277806771f9b7b9d",
+          "signature_normalized": "def GetMaterialTextureTransformations(colorwayIndex : int, objectIndex : int, browserContextOptions : ObjectBrowserContextOptions, propertyEditorContextOptions : PropertyEditorContextOptions) -> TransformOptions",
+          "signature_raw": "def GetMaterialTextureTransformations(colorwayIndex : int, objectIndex : int, browserContextOptions : ObjectBrowserContextOptions, propertyEditorContextOptions : PropertyEditorContextOptions) -> TransformOptions",
+          "parameters": [
+            {
+              "raw": "colorwayIndex : int",
+              "name": "colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "objectIndex : int",
+              "name": "objectIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "browserContextOptions : ObjectBrowserContextOptions",
+              "name": "browserContextOptions",
+              "annotation_raw": "ObjectBrowserContextOptions"
+            },
+            {
+              "raw": "propertyEditorContextOptions : PropertyEditorContextOptions",
+              "name": "propertyEditorContextOptions",
+              "annotation_raw": "PropertyEditorContextOptions"
+            }
+          ],
+          "return_raw": "TransformOptions",
+          "occurrences": [
+            {
+              "signature_raw": "def GetMaterialTextureTransformations(colorwayIndex : int, objectIndex : int, browserContextOptions : ObjectBrowserContextOptions, propertyEditorContextOptions : PropertyEditorContextOptions) -> TransformOptions",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Gets the current texture transformation of the targeted object's material map.\n@return TransformOptions for the targeted texture. Returns an identity transform if it cannot be resolved.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 24932,
+                  "block": 2163
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 26103,
+                  "block": 2163,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetMaterialTextureTransformations(int colorwayIndex, int objectIndex, const ObjectBrowserContextOptions& browserContextOptions, const PropertyEditorContextOptions& propertyEditorContextOptions)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Gets the current texture transformation of the targeted object's material map.\n/// @return TransformOptions for the targeted texture. Returns an identity transform if it cannot be resolved.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 24941,
+                    "block": 2164
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 26112,
+                    "block": 2164,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "ObjectBrowserContextOptions",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:ObjectBrowserContextOptions"
+            },
+            {
+              "name": "PropertyEditorContextOptions",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:PropertyEditorContextOptions"
+            },
+            {
+              "name": "TransformOptions",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:TransformOptions"
+            },
+            {
+              "name": "TransformOptions",
+              "basis": "documentation_mention",
+              "status": "resolved",
+              "type_id": "type:TransformOptions"
+            }
+          ],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return TransformOptions for the targeted texture. Returns an identity transform if it cannot be resolved."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetMetaDataForCurrentGarment",
+      "qualified_name": "utility_api.GetMetaDataForCurrentGarment",
+      "module": "utility_api",
+      "symbol": "GetMetaDataForCurrentGarment",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetMetaDataForCurrentGarment#0a1fa39d32425db8",
+          "signature_normalized": "def GetMetaDataForCurrentGarment() -> str",
+          "signature_raw": "def GetMetaDataForCurrentGarment() -> str",
+          "parameters": [],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetMetaDataForCurrentGarment() -> str",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Get Meta data for the current Garment\n@return the meta data for the current garment\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 16814,
+                  "block": 1447
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 17629,
+                  "block": 1447,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetMetaDataForCurrentGarment()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Get Meta data for the current Garment\n/// @return the meta data for the current garment",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 16823,
+                    "block": 1448
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 17638,
+                    "block": 1448,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return the meta data for the current garment"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetMetaDataForCurrentGarmentW",
+      "qualified_name": "utility_api.GetMetaDataForCurrentGarmentW",
+      "module": "utility_api",
+      "symbol": "GetMetaDataForCurrentGarmentW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetMetaDataForCurrentGarmentW#4a203b046c298c69",
+          "signature_normalized": "def GetMetaDataForCurrentGarmentW() -> str",
+          "signature_raw": "def GetMetaDataForCurrentGarmentW() -> str",
+          "parameters": [],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetMetaDataForCurrentGarmentW() -> str",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Get Meta data for the current Garment\n@return the meta data for the current garment\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 16833,
+                  "block": 1449
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 17649,
+                  "block": 1449,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetMetaDataForCurrentGarmentW()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Get Meta data for the current Garment\n/// @return the meta data for the current garment",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 16842,
+                    "block": 1450
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 17658,
+                    "block": 1450,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return the meta data for the current garment"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetMinorVersion",
+      "qualified_name": "utility_api.GetMinorVersion",
+      "module": "utility_api",
+      "symbol": "GetMinorVersion",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetMinorVersion#689723ecbdeefba2",
+          "signature_normalized": "def GetMinorVersion() -> int",
+          "signature_raw": "def GetMinorVersion() -> int",
+          "parameters": [],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "def GetMinorVersion() -> int",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Get the minor version of the CLO software\n@return Minor version of SW. ex) 0 of 5.0.72\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 16288,
+                  "block": 1407
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 17083,
+                  "block": 1407,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetMinorVersion()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Get the minor version of the CLO software\n/// @return Minor version of SW. ex) 0 of 5.0.72",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 16297,
+                    "block": 1408
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 17092,
+                    "block": 1408,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return Minor version of SW. ex) 0 of 5.0.72"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetNestingFabricBufferSpacing",
+      "qualified_name": "utility_api.GetNestingFabricBufferSpacing",
+      "module": "utility_api",
+      "symbol": "GetNestingFabricBufferSpacing",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetNestingFabricBufferSpacing#3d57e0511b5fba24",
+          "signature_normalized": "def GetNestingFabricBufferSpacing() -> std::array[float, 4]",
+          "signature_raw": "def GetNestingFabricBufferSpacing() -> std::array[float, 4]",
+          "parameters": [],
+          "return_raw": "std::array[float, 4]",
+          "occurrences": [
+            {
+              "signature_raw": "def GetNestingFabricBufferSpacing() -> std::array[float, 4]",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Get fabric buffer spacing as {left, right, top, bottom} in mm.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 18442,
+                  "block": 1591
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 19327,
+                  "block": 1591,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetNestingFabricBufferSpacing()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Get fabric buffer spacing as {left, right, top, bottom} in mm.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 18450,
+                    "block": 1592
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 19335,
+                    "block": 1592,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "std::array",
+              "basis": "annotation",
+              "status": "unresolved",
+              "type_id": null
+            }
+          ],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [],
+          "documentation_issues": [
+            "unresolved_annotation_type",
+            "cpp_spelling_in_python_declaration"
+          ],
+          "contract_status": "ambiguous"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetNestingPatternBufferSpacing",
+      "qualified_name": "utility_api.GetNestingPatternBufferSpacing",
+      "module": "utility_api",
+      "symbol": "GetNestingPatternBufferSpacing",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetNestingPatternBufferSpacing#012104f04221f8b5",
+          "signature_normalized": "def GetNestingPatternBufferSpacing() -> std::array[float, 4]",
+          "signature_raw": "def GetNestingPatternBufferSpacing() -> std::array[float, 4]",
+          "parameters": [],
+          "return_raw": "std::array[float, 4]",
+          "occurrences": [
+            {
+              "signature_raw": "def GetNestingPatternBufferSpacing() -> std::array[float, 4]",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Get pattern buffer spacing as {left, right, top, bottom} in mm.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 18484,
+                  "block": 1595
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 19371,
+                  "block": 1595,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetNestingPatternBufferSpacing()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Get pattern buffer spacing as {left, right, top, bottom} in mm.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 18492,
+                    "block": 1596
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 19379,
+                    "block": 1596,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "std::array",
+              "basis": "annotation",
+              "status": "unresolved",
+              "type_id": null
+            }
+          ],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [],
+          "documentation_issues": [
+            "unresolved_annotation_type",
+            "cpp_spelling_in_python_declaration"
+          ],
+          "contract_status": "ambiguous"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetNestingTargetColorway",
+      "qualified_name": "utility_api.GetNestingTargetColorway",
+      "module": "utility_api",
+      "symbol": "GetNestingTargetColorway",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetNestingTargetColorway#636abdb8cb77fdf0",
+          "signature_normalized": "def GetNestingTargetColorway() -> list[int]",
+          "signature_raw": "def GetNestingTargetColorway() -> list[int]",
+          "parameters": [],
+          "return_raw": "list[int]",
+          "occurrences": [
+            {
+              "signature_raw": "def GetNestingTargetColorway() -> list[int]",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Gets the colorway index to apply nesting to.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 18545,
+                  "block": 1601
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 19435,
+                  "block": 1601,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetNestingTargetColorway()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Gets the colorway index to apply nesting to.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 18553,
+                    "block": 1602
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 19443,
+                    "block": 1602,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetNestingTime",
+      "qualified_name": "utility_api.GetNestingTime",
+      "module": "utility_api",
+      "symbol": "GetNestingTime",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetNestingTime#b52b89365a3cc1d2",
+          "signature_normalized": "def GetNestingTime() -> int",
+          "signature_raw": "def GetNestingTime() -> int",
+          "parameters": [],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "def GetNestingTime() -> int",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Get Nesting duration Time (milliseconds)\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 19190,
+                  "block": 1663
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 20111,
+                  "block": 1663,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetNestingTime()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Get Nesting duration Time (milliseconds)",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 19198,
+                    "block": 1664
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 20119,
+                    "block": 1664,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetNormalBlendingMethod",
+      "qualified_name": "utility_api.GetNormalBlendingMethod",
+      "module": "utility_api",
+      "symbol": "GetNormalBlendingMethod",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetNormalBlendingMethod#208aabfaf5d23b6a",
+          "signature_normalized": "def GetNormalBlendingMethod() -> int",
+          "signature_raw": "def GetNormalBlendingMethod() -> int",
+          "parameters": [],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "def GetNormalBlendingMethod() -> int",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Gets the current normal blending method.\n@return The index of the current normal blending method.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 24317,
+                  "block": 2113
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 25463,
+                  "block": 2113,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetNormalBlendingMethod()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Gets the current normal blending method.\n/// @return The index of the current normal blending method.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 24326,
+                    "block": 2114
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 25472,
+                    "block": 2114,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return The index of the current normal blending method."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetObjectBrowserContext",
+      "qualified_name": "utility_api.GetObjectBrowserContext",
+      "module": "utility_api",
+      "symbol": "GetObjectBrowserContext",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetObjectBrowserContext#18d4eee37c3026bb",
+          "signature_normalized": "def GetObjectBrowserContext() -> ObjectBrowserContextOptions",
+          "signature_raw": "def GetObjectBrowserContext() -> ObjectBrowserContextOptions",
+          "parameters": [],
+          "return_raw": "ObjectBrowserContextOptions",
+          "occurrences": [
+            {
+              "signature_raw": "def GetObjectBrowserContext() -> ObjectBrowserContextOptions",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Reads the current Object Browser state into an ObjectBrowserContextOptions object.\nAggregates the active tab (type), its scope (folderName), and the booleans\n(bIncludeUnusedObjects, bShowAllColorways) from the per-tab context store. In UI mode the\nactive tab is resolved live; in headless mode it is the last tab applied via the setter.\nA never-set tab yields safe defaults. Callers should call this before mutating + re-applying.\n@return The aggregated ObjectBrowserContextOptions for the active tab (safe defaults if unset).\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 25074,
+                  "block": 2171
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 26249,
+                  "block": 2171,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetObjectBrowserContext()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Reads the current Object Browser state into an ObjectBrowserContextOptions object.\n/// Aggregates the active tab (type), its scope (folderName), and the booleans\n/// (bIncludeUnusedObjects, bShowAllColorways) from the per-tab context store. In UI mode the\n/// active tab is resolved live; in headless mode it is the last tab applied via the setter.\n/// A never-set tab yields safe defaults. Callers should call this before mutating + re-applying.\n/// @return The aggregated ObjectBrowserContextOptions for the active tab (safe defaults if unset).",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 25087,
+                    "block": 2172
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 26262,
+                    "block": 2172,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "ObjectBrowserContextOptions",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:ObjectBrowserContextOptions"
+            },
+            {
+              "name": "ObjectBrowserContextOptions",
+              "basis": "documentation_mention",
+              "status": "resolved",
+              "type_id": "type:ObjectBrowserContextOptions"
+            }
+          ],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return The aggregated ObjectBrowserContextOptions for the active tab (safe defaults if unset)."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetObjectBrowserItems",
+      "qualified_name": "utility_api.GetObjectBrowserItems",
+      "module": "utility_api",
+      "symbol": "GetObjectBrowserItems",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetObjectBrowserItems#d96f2a2a8043e606",
+          "signature_normalized": "def GetObjectBrowserItems(objectBrowserContextOptions : ObjectBrowserContextOptions) -> str",
+          "signature_raw": "def GetObjectBrowserItems(objectBrowserContextOptions : ObjectBrowserContextOptions) -> str",
+          "parameters": [
+            {
+              "raw": "objectBrowserContextOptions : ObjectBrowserContextOptions",
+              "name": "objectBrowserContextOptions",
+              "annotation_raw": "ObjectBrowserContextOptions"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetObjectBrowserItems(objectBrowserContextOptions : ObjectBrowserContextOptions) -> str",
+              "documentation_raw": "\"\"\"\n@brief Returns the Object Browser item list for a single asset type (one type per call), as a JSON string.\nThe asset type is given by objectBrowserContextOptions.type; supported values are OB_TYPE_FABRIC,\nOB_TYPE_GRAPHIC, OB_TYPE_BUTTON, OB_TYPE_BUTTON_HOLE, OB_TYPE_TRIM, OB_TYPE_PUCKERING, OB_TYPE_ZIPPER, OB_TYPE_TOPSTITCH. The two filters are\nindependent: showAllColorways (tri-state) scopes the \"used\" check - -1 (default) follows the app's UI\n\"Show All Colorways\" toggle, 0 forces the single colorway (colorwayIndex), 1 forces all colorways - and\nbIncludeUnusedObjects additionally keeps free/unused objects (not used by any colorway) when true.\nfolderName is FABRIC-only: it scopes the result to one Object Browser folder. Empty = the primary/root\nfolder; a non-empty name = that folder (an unknown name yields an empty list). It composes with the\ncolorway filters and with bIncludePrints.\nbIncludePrints is FABRIC-only: when true the fabric response carries print info per fabric (see @return).\n@return JSON object string: { \"ObjectType\": \"<type>\", \"ObjectNameList\": [\"name\", ...] }. An unsupported\ntargetObjectType yields { \"ObjectType\": \"\", \"ObjectNameList\": [] }; an empty list is returned as [].\nFABRIC with bIncludePrints == true keeps the SAME top-level \"ObjectNameList\" key, but its entries are\nobjects instead of plain names: { \"ObjectType\": \"Fabric Prints\", \"ObjectNameList\": [ { \"Name\": \"<fabric>\" [, \"PrintName\": \"<print>\"] }, ... ] };\nthe \"PrintName\" key is present only for fabrics that actually have a print.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 25404,
+                  "block": 2195
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 26591,
+                  "block": 2195,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetObjectBrowserItems(const ObjectBrowserContextOptions& objectBrowserContextOptions)",
+                "documentation_raw": "/// @brief Returns the Object Browser item list for a single asset type (one type per call), as a JSON string.\n/// The asset type is given by objectBrowserContextOptions.type; supported values are OB_TYPE_FABRIC,\n/// OB_TYPE_GRAPHIC, OB_TYPE_BUTTON, OB_TYPE_BUTTON_HOLE, OB_TYPE_TRIM, OB_TYPE_PUCKERING, OB_TYPE_ZIPPER, OB_TYPE_TOPSTITCH. The two filters are\n/// independent: showAllColorways (tri-state) scopes the \"used\" check - -1 (default) follows the app's UI\n/// \"Show All Colorways\" toggle, 0 forces the single colorway (colorwayIndex), 1 forces all colorways - and\n/// bIncludeUnusedObjects additionally keeps free/unused objects (not used by any colorway) when true.\n/// folderName is FABRIC-only: it scopes the result to one Object Browser folder. Empty = the primary/root\n/// folder; a non-empty name = that folder (an unknown name yields an empty list). It composes with the\n/// colorway filters and with bIncludePrints.\n/// bIncludePrints is FABRIC-only: when true the fabric response carries print info per fabric (see @return).\n/// @return JSON object string: { \"ObjectType\": \"<type>\", \"ObjectNameList\": [\"name\", ...] }. An unsupported\n/// targetObjectType yields { \"ObjectType\": \"\", \"ObjectNameList\": [] }; an empty list is returned as [].\n/// FABRIC with bIncludePrints == true keeps the SAME top-level \"ObjectNameList\" key, but its entries are\n/// objects instead of plain names: { \"ObjectType\": \"Fabric Prints\", \"ObjectNameList\": [ { \"Name\": \"<fabric>\" [, \"PrintName\": \"<print>\"] }, ... ] };\n/// the \"PrintName\" key is present only for fabrics that actually have a print.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 25425,
+                    "block": 2196
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 26612,
+                    "block": 2196,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "ObjectBrowserContextOptions",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:ObjectBrowserContextOptions"
+            }
+          ],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return JSON object string: { \"ObjectType\": \"<type>\", \"ObjectNameList\": [\"name\", ...] }. An unsupported"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetPatchVersion",
+      "qualified_name": "utility_api.GetPatchVersion",
+      "module": "utility_api",
+      "symbol": "GetPatchVersion",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetPatchVersion#4ac320fbade2faac",
+          "signature_normalized": "def GetPatchVersion() -> int",
+          "signature_raw": "def GetPatchVersion() -> int",
+          "parameters": [],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "def GetPatchVersion() -> int",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Get the patch version of the CLO software\n@return Patch version of SW. ex) 72 of 5.0.72\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 16307,
+                  "block": 1409
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 17103,
+                  "block": 1409,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetPatchVersion()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Get the patch version of the CLO software\n/// @return Patch version of SW. ex) 72 of 5.0.72",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 16316,
+                    "block": 1410
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 17112,
+                    "block": 1410,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return Patch version of SW. ex) 72 of 5.0.72"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetPatternSnapShotColorwayOption",
+      "qualified_name": "utility_api.GetPatternSnapShotColorwayOption",
+      "module": "utility_api",
+      "symbol": "GetPatternSnapShotColorwayOption",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetPatternSnapShotColorwayOption#c4ac1038791f1973",
+          "signature_normalized": "def GetPatternSnapShotColorwayOption(_mode : int) -> PatternSnapShotColorwayOption",
+          "signature_raw": "def GetPatternSnapShotColorwayOption(_mode : int) -> PatternSnapShotColorwayOption",
+          "parameters": [
+            {
+              "raw": "_mode : int",
+              "name": "_mode",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "PatternSnapShotColorwayOption",
+          "occurrences": [
+            {
+              "signature_raw": "def GetPatternSnapShotColorwayOption(_mode : int) -> PatternSnapShotColorwayOption",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Retrieves the currently set PatternSnapShotColorwayOption.\n@param int _mode : 0 = capture from PatternWindow, 1 = capture from PrintLayoutWindow.\n@return The currently set PatternSnapShotColorwayOption value.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 24189,
+                  "block": 2101
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 25329,
+                  "block": 2101,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetPatternSnapShotColorwayOption(int _mode)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Retrieves the currently set PatternSnapShotColorwayOption.\n/// @param int _mode : 0 = capture from PatternWindow, 1 = capture from PrintLayoutWindow.\n/// @return The currently set PatternSnapShotColorwayOption value.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 24199,
+                    "block": 2102
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 25339,
+                    "block": 2102,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "PatternSnapShotColorwayOption",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:PatternSnapShotColorwayOption"
+            },
+            {
+              "name": "PatternSnapShotColorwayOption",
+              "basis": "documentation_mention",
+              "status": "resolved",
+              "type_id": "type:PatternSnapShotColorwayOption"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param int _mode : 0 = capture from PatternWindow, 1 = capture from PrintLayoutWindow."
+          ],
+          "return_docs_raw": [
+            "@return The currently set PatternSnapShotColorwayOption value."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetPatternSnapShotImageOption",
+      "qualified_name": "utility_api.GetPatternSnapShotImageOption",
+      "module": "utility_api",
+      "symbol": "GetPatternSnapShotImageOption",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetPatternSnapShotImageOption#eeef1cf4ad339549",
+          "signature_normalized": "def GetPatternSnapShotImageOption(_mode : int) -> PatternSnapShotImageOption",
+          "signature_raw": "def GetPatternSnapShotImageOption(_mode : int) -> PatternSnapShotImageOption",
+          "parameters": [
+            {
+              "raw": "_mode : int",
+              "name": "_mode",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "PatternSnapShotImageOption",
+          "occurrences": [
+            {
+              "signature_raw": "def GetPatternSnapShotImageOption(_mode : int) -> PatternSnapShotImageOption",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Retrieves the currently set PatternSnapShotImageOption.\n@param int _mode : 0 = capture from PatternWindow, 1 = capture from PrintLayoutWindow.\n\nPreset\n\nA4            = 0\nA3            = 1\nB5            = 2\nB4            = 3\nLetter        = 4\nLegal         = 5\nTabloid       = 6\nWideFormat_24 = 7\nWideFormat_36 = 8\nWideFormat_44 = 9\noneToOne      = 10\nCustom        = 11\n\nOrientation\n\nPortrait  = 0\nLandscape = 1\n\nUnit\n\nPixels      = 0\nInches      = 1\nMilimeters  = 2\nCentimeters = 3\n\n@return The currently set PatternSnapShotImageOption value.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 23949,
+                  "block": 2089
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 25083,
+                  "block": 2089,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetPatternSnapShotImageOption(int _mode)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Retrieves the currently set PatternSnapShotImageOption.\n/// @param int _mode : 0 = capture from PatternWindow, 1 = capture from PrintLayoutWindow.\n\n/// Preset\n\n/// A4            = 0\n/// A3            = 1\n/// B5            = 2\n/// B4            = 3\n/// Letter        = 4\n/// Legal         = 5\n/// Tabloid       = 6\n/// WideFormat_24 = 7\n/// WideFormat_36 = 8\n/// WideFormat_44 = 9\n/// oneToOne      = 10\n/// Custom        = 11\n\n/// Orientation\n\n/// Portrait  = 0\n/// Landscape = 1\n\n/// Unit\n\n/// Pixels      = 0\n/// Inches      = 1\n/// Milimeters  = 2\n/// Centimeters = 3\n\n/// @return The currently set PatternSnapShotImageOption value.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 23987,
+                    "block": 2090
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 25121,
+                    "block": 2090,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "PatternSnapShotImageOption",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:PatternSnapShotImageOption"
+            },
+            {
+              "name": "PatternSnapShotImageOption",
+              "basis": "documentation_mention",
+              "status": "resolved",
+              "type_id": "type:PatternSnapShotImageOption"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param int _mode : 0 = capture from PatternWindow, 1 = capture from PrintLayoutWindow."
+          ],
+          "return_docs_raw": [
+            "\n@return The currently set PatternSnapShotImageOption value."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetPatternSnapShotInformationOption",
+      "qualified_name": "utility_api.GetPatternSnapShotInformationOption",
+      "module": "utility_api",
+      "symbol": "GetPatternSnapShotInformationOption",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetPatternSnapShotInformationOption#ecdfa296f01a185b",
+          "signature_normalized": "def GetPatternSnapShotInformationOption(_mode : int) -> PatternSnapShotInformationOption",
+          "signature_raw": "def GetPatternSnapShotInformationOption(_mode : int) -> PatternSnapShotInformationOption",
+          "parameters": [
+            {
+              "raw": "_mode : int",
+              "name": "_mode",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "PatternSnapShotInformationOption",
+          "occurrences": [
+            {
+              "signature_raw": "def GetPatternSnapShotInformationOption(_mode : int) -> PatternSnapShotInformationOption",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Retrieves the currently set PatternSnapShotInformationOption.\n@param int _mode : 0 = capture from PatternWindow, 1 = capture from PrintLayoutWindow.\n@return The currently set PatternSnapShotInformationOption value.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 24231,
+                  "block": 2105
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 25373,
+                  "block": 2105,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetPatternSnapShotInformationOption(int _mode)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Retrieves the currently set PatternSnapShotInformationOption.\n/// @param int _mode : 0 = capture from PatternWindow, 1 = capture from PrintLayoutWindow.\n/// @return The currently set PatternSnapShotInformationOption value.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 24241,
+                    "block": 2106
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 25383,
+                    "block": 2106,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "PatternSnapShotInformationOption",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:PatternSnapShotInformationOption"
+            },
+            {
+              "name": "PatternSnapShotInformationOption",
+              "basis": "documentation_mention",
+              "status": "resolved",
+              "type_id": "type:PatternSnapShotInformationOption"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param int _mode : 0 = capture from PatternWindow, 1 = capture from PrintLayoutWindow."
+          ],
+          "return_docs_raw": [
+            "@return The currently set PatternSnapShotInformationOption value."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetPatternSnapShotLineOption",
+      "qualified_name": "utility_api.GetPatternSnapShotLineOption",
+      "module": "utility_api",
+      "symbol": "GetPatternSnapShotLineOption",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetPatternSnapShotLineOption#94ca8b7196903a38",
+          "signature_normalized": "def GetPatternSnapShotLineOption(_mode : int) -> PatternSnapShotLineOption",
+          "signature_raw": "def GetPatternSnapShotLineOption(_mode : int) -> PatternSnapShotLineOption",
+          "parameters": [
+            {
+              "raw": "_mode : int",
+              "name": "_mode",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "PatternSnapShotLineOption",
+          "occurrences": [
+            {
+              "signature_raw": "def GetPatternSnapShotLineOption(_mode : int) -> PatternSnapShotLineOption",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Retrieves the currently set PatternSnapShotLineOption.\n@param int _mode : 0 = capture from PatternWindow, 1 = capture from PrintLayoutWindow.\n@return The currently set PatternSnapShotLineOption value.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 24147,
+                  "block": 2097
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 25285,
+                  "block": 2097,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetPatternSnapShotLineOption(int _mode)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Retrieves the currently set PatternSnapShotLineOption.\n/// @param int _mode : 0 = capture from PatternWindow, 1 = capture from PrintLayoutWindow.\n/// @return The currently set PatternSnapShotLineOption value.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 24157,
+                    "block": 2098
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 25295,
+                    "block": 2098,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "PatternSnapShotLineOption",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:PatternSnapShotLineOption"
+            },
+            {
+              "name": "PatternSnapShotLineOption",
+              "basis": "documentation_mention",
+              "status": "resolved",
+              "type_id": "type:PatternSnapShotLineOption"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param int _mode : 0 = capture from PatternWindow, 1 = capture from PrintLayoutWindow."
+          ],
+          "return_docs_raw": [
+            "@return The currently set PatternSnapShotLineOption value."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3627 @@
+{
+  "kind": "methods",
+  "records": [
+    {
+      "id": "export_api.ConvertZblcToZmod",
+      "qualified_name": "export_api.ConvertZblcToZmod",
+      "module": "export_api",
+      "symbol": "ConvertZblcToZmod",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ConvertZblcToZmod#24adda3c41395a3b",
+          "signature_normalized": "def ConvertZblcToZmod(_zblcFilePathList : list[str], _saveDirPath : str, _categoryName : str, _styleName : str, _lineName : str) -> list[str]",
+          "signature_raw": "def ConvertZblcToZmod(_zblcFilePathList : list[str], _saveDirPath : str, _categoryName : str, _styleName : str, _lineName : str) -> list[str]",
+          "parameters": [
+            {
+              "raw": "_zblcFilePathList : list[str]",
+              "name": "_zblcFilePathList",
+              "annotation_raw": "list[str]"
+            },
+            {
+              "raw": "_saveDirPath : str",
+              "name": "_saveDirPath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_categoryName : str",
+              "name": "_categoryName",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_styleName : str",
+              "name": "_styleName",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_lineName : str",
+              "name": "_lineName",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "list[str]",
+          "occurrences": [
+            {
+              "signature_raw": "def ConvertZblcToZmod(_zblcFilePathList : list[str], _saveDirPath : str, _categoryName : str, _styleName : str, _lineName : str) -> list[str]",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Convert .zblc file to .zmod file\n@param _zblcFilePathList: The path of the ZBLC files you want to convert\n@param _saveDirPath: Where to save the converted file\n@param _categoryName : Category name\n@param _styleName : Style name\n@param _lineName : Line Name (This is not mandatory data. By default, an empty string is set.)\n@return Returns the path list of failed files. Returns an empty list if all files are successful.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 2392,
+                  "block": 223
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 2606,
+                  "block": 223,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ConvertZblcToZmod(const std::vector<std::wstring>& _zblcFilePathList, const std::wstring& _saveDirPath, const std::wstring& _categoryName, const std::wstring& _styleName, const std::wstring& _lineName = L\"\")",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Convert .zblc file to .zmod file\n/// @param _zblcFilePathList: The path of the ZBLC files you want to convert\n/// @param _saveDirPath: Where to save the converted file\n/// @param _categoryName : Category name\n/// @param _styleName : Style name\n/// @param _lineName : Line Name (This is not mandatory data. By default, an empty string is set.)\n/// @return Returns the path list of failed files. Returns an empty list if all files are successful.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 2406,
+                    "block": 224
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 2620,
+                    "block": 224,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _zblcFilePathList: The path of the ZBLC files you want to convert",
+            "@param _saveDirPath: Where to save the converted file",
+            "@param _categoryName : Category name",
+            "@param _styleName : Style name",
+            "@param _lineName : Line Name (This is not mandatory data. By default, an empty string is set.)"
+          ],
+          "return_docs_raw": [
+            "@return Returns the path list of failed files. Returns an empty list if all files are successful."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportAVT",
+      "qualified_name": "export_api.ExportAVT",
+      "module": "export_api",
+      "symbol": "ExportAVT",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportAVT#aabdf2b06ce0bd9e",
+          "signature_normalized": "def ExportAVT(_filePath : str) -> str",
+          "signature_raw": "def ExportAVT(_filePath : str) -> str",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportAVT(_filePath : str) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export AVT\n@param _filePath: output file path\n@return Output file path. If an error occurs, return empty string. \n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 2170,
+                  "block": 203
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 2374,
+                  "block": 203,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportAVT(const string& _filePath)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export AVT\n/// @param _filePath: output file path\n/// @return Output file path. If an error occurs, return empty string.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 2180,
+                    "block": 204
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 2384,
+                    "block": 204,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath: output file path"
+          ],
+          "return_docs_raw": [
+            "@return Output file path. If an error occurs, return empty string. "
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportAVTW",
+      "qualified_name": "export_api.ExportAVTW",
+      "module": "export_api",
+      "symbol": "ExportAVTW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportAVTW#8dabe08673447354",
+          "signature_normalized": "def ExportAVTW(_filePath : str) -> str",
+          "signature_raw": "def ExportAVTW(_filePath : str) -> str",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportAVTW(_filePath : str) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export AVT\n@param _filePath: output file path              \n@return Output file path. If an error occurs, return empty string. \n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 2191,
+                  "block": 205
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 2396,
+                  "block": 205,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportAVTW(const wstring& _filePath)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export AVT\n/// @param _filePath: output file path          \n/// @return Output file path. If an error occurs, return empty string.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 2201,
+                    "block": 206
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 2406,
+                    "block": 206,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath: output file path              "
+          ],
+          "return_docs_raw": [
+            "@return Output file path. If an error occurs, return empty string. "
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportAlembic",
+      "qualified_name": "export_api.ExportAlembic",
+      "module": "export_api",
+      "symbol": "ExportAlembic",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportAlembic#fa4752eaf559d339",
+          "signature_normalized": "def ExportAlembic(_filePath : str, _options : ImportExportOption) -> list[str]",
+          "signature_raw": "def ExportAlembic(_filePath : str, _options : ImportExportOption) -> list[str]",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_options : ImportExportOption",
+              "name": "_options",
+              "annotation_raw": "ImportExportOption"
+            }
+          ],
+          "return_raw": "list[str]",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportAlembic(_filePath : str, _options : ImportExportOption) -> list[str]",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export Alembic\n@param options: If \"options\" is given, it exports Alembic according to options, not allowing user for selecting options in Export Dialog.\n@return Output file paths.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 317,
+                  "block": 29
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 434,
+                  "block": 29,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportAlembic(const string& _filePath, const Marvelous::ImportExportOption& _options)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export Alembic\n/// @param options: If \"options\" is given, it exports Alembic according to options, not allowing user for selecting options in Export Dialog.\n/// @return Output file paths.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 327,
+                    "block": 30
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 444,
+                    "block": 30,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "ImportExportOption",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:ImportExportOption"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param options: If \"options\" is given, it exports Alembic according to options, not allowing user for selecting options in Export Dialog."
+          ],
+          "return_docs_raw": [
+            "@return Output file paths."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportAlembicW",
+      "qualified_name": "export_api.ExportAlembicW",
+      "module": "export_api",
+      "symbol": "ExportAlembicW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportAlembicW#01985d2d12ac9863",
+          "signature_normalized": "def ExportAlembicW(_filePath : str, _options : ImportExportOption) -> list[str]",
+          "signature_raw": "def ExportAlembicW(_filePath : str, _options : ImportExportOption) -> list[str]",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_options : ImportExportOption",
+              "name": "_options",
+              "annotation_raw": "ImportExportOption"
+            }
+          ],
+          "return_raw": "list[str]",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportAlembicW(_filePath : str, _options : ImportExportOption) -> list[str]",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export Alembic W\n@param options: If \"options\" is given, it exports Alembic according to options, not allowing user for selecting options in Export Dialog.\n@return Output file paths.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 338,
+                  "block": 31
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 456,
+                  "block": 31,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportAlembicW(const wstring& _filePath, const Marvelous::ImportExportOption& _options)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export Alembic W\n/// @param options: If \"options\" is given, it exports Alembic according to options, not allowing user for selecting options in Export Dialog.\n/// @return Output file paths.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 348,
+                    "block": 32
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 466,
+                    "block": 32,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "ImportExportOption",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:ImportExportOption"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param options: If \"options\" is given, it exports Alembic according to options, not allowing user for selecting options in Export Dialog."
+          ],
+          "return_docs_raw": [
+            "@return Output file paths."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportAnimationVideo",
+      "qualified_name": "export_api.ExportAnimationVideo",
+      "module": "export_api",
+      "symbol": "ExportAnimationVideo",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportAnimationVideo#09f40671e40174b8",
+          "signature_normalized": "def ExportAnimationVideo() -> str",
+          "signature_raw": "def ExportAnimationVideo() -> str",
+          "parameters": [],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportAnimationVideo() -> str",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export animation video. This function requires XVid Mpeg-4 codec installed on user's computer.\n@return Output file path. If an error occurs, return empty string. If filePath parameter is not given, output files will be created in CLO temporary folder.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 1283,
+                  "block": 121
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 1446,
+                  "block": 121,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportAnimationVideo()",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export animation video. This function requires XVid Mpeg-4 codec installed on user's computer.\n/// @return Output file path. If an error occurs, return empty string. If filePath parameter is not given, output files will be created in CLO temporary folder.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 1292,
+                    "block": 122
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 1455,
+                    "block": 122,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return Output file path. If an error occurs, return empty string. If filePath parameter is not given, output files will be created in CLO temporary folder."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "export_api.ExportAnimationVideo#9c2e81de6a5a15ae",
+          "signature_normalized": "def ExportAnimationVideo(_filePath : str) -> str",
+          "signature_raw": "def ExportAnimationVideo(_filePath : str) -> str",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportAnimationVideo(_filePath : str) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export animation video. This function requires XVid Mpeg-4 codec installed on user's computer.\n@param _filePath: output file path\n@return Output file path. If an error occurs, return empty string.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 1302,
+                  "block": 123
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 1466,
+                  "block": 123,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportAnimationVideo(const string& _filePath)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export animation video. This function requires XVid Mpeg-4 codec installed on user's computer.\n/// @param _filePath: output file path\n/// @return Output file path. If an error occurs, return empty string.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 1312,
+                    "block": 124
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 1476,
+                    "block": 124,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath: output file path"
+          ],
+          "return_docs_raw": [
+            "@return Output file path. If an error occurs, return empty string."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "export_api.ExportAnimationVideo#4bb1e42b48364e8a",
+          "signature_normalized": "def ExportAnimationVideo(_options : VideoExportOption) -> str",
+          "signature_raw": "def ExportAnimationVideo(_options : VideoExportOption) -> str",
+          "parameters": [
+            {
+              "raw": "_options : VideoExportOption",
+              "name": "_options",
+              "annotation_raw": "VideoExportOption"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportAnimationVideo(_options : VideoExportOption) -> str",
+              "documentation_raw": "\"\"\"\n@brief Export animation video without showing any UI dialog.\n@param _options: Export options controlling video dimensions, frame range, and FPS.\n@return Output file path. If an error occurs, return empty string. Output files will be created in CLO temporary folder.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 1344,
+                  "block": 127
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 1510,
+                  "block": 127,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportAnimationVideo(const Marvelous::VideoExportOption& _options)",
+                "documentation_raw": "/// @brief Export animation video without showing any UI dialog.\n/// @param _options: Export options controlling video dimensions, frame range, and FPS.\n/// @return Output file path. If an error occurs, return empty string. Output files will be created in CLO temporary folder.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 1353,
+                    "block": 128
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 1519,
+                    "block": 128,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "VideoExportOption",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:VideoExportOption"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param _options: Export options controlling video dimensions, frame range, and FPS."
+          ],
+          "return_docs_raw": [
+            "@return Output file path. If an error occurs, return empty string. Output files will be created in CLO temporary folder."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "export_api.ExportAnimationVideo#d5642094cf526a70",
+          "signature_normalized": "def ExportAnimationVideo(_filePath : str, _options : VideoExportOption) -> str",
+          "signature_raw": "def ExportAnimationVideo(_filePath : str, _options : VideoExportOption) -> str",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_options : VideoExportOption",
+              "name": "_options",
+              "annotation_raw": "VideoExportOption"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportAnimationVideo(_filePath : str, _options : VideoExportOption) -> str",
+              "documentation_raw": "\"\"\"\n@brief Export animation video without showing any UI dialog.\n@param _filePath: output file path\n@param _options: Export options controlling video dimensions, frame range, and FPS.\n@return Output file path. If an error occurs, return empty string.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 1363,
+                  "block": 129
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 1530,
+                  "block": 129,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportAnimationVideo(const string& _filePath, const Marvelous::VideoExportOption& _options)",
+                "documentation_raw": "/// @brief Export animation video without showing any UI dialog.\n/// @param _filePath: output file path\n/// @param _options: Export options controlling video dimensions, frame range, and FPS.\n/// @return Output file path. If an error occurs, return empty string.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 1373,
+                    "block": 130
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 1540,
+                    "block": 130,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "VideoExportOption",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:VideoExportOption"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param _filePath: output file path",
+            "@param _options: Export options controlling video dimensions, frame range, and FPS."
+          ],
+          "return_docs_raw": [
+            "@return Output file path. If an error occurs, return empty string."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportAnimationVideoW",
+      "qualified_name": "export_api.ExportAnimationVideoW",
+      "module": "export_api",
+      "symbol": "ExportAnimationVideoW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportAnimationVideoW#24d485c32be79033",
+          "signature_normalized": "def ExportAnimationVideoW(_filePath : str) -> str",
+          "signature_raw": "def ExportAnimationVideoW(_filePath : str) -> str",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportAnimationVideoW(_filePath : str) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export animation video. This function requires XVid Mpeg-4 codec installed on user's computer.\n@param _filePath: output file path\n@return Output file path. If an error occurs, return empty wstring.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 1323,
+                  "block": 125
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 1488,
+                  "block": 125,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportAnimationVideoW(const wstring& _filePath)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export animation video. This function requires XVid Mpeg-4 codec installed on user's computer.\n/// @param _filePath: output file path\n/// @return Output file path. If an error occurs, return empty wstring.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 1333,
+                    "block": 126
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 1498,
+                    "block": 126,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath: output file path"
+          ],
+          "return_docs_raw": [
+            "@return Output file path. If an error occurs, return empty wstring."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "export_api.ExportAnimationVideoW#aaabb3cabdad62b7",
+          "signature_normalized": "def ExportAnimationVideoW(_filePath : str, _options : VideoExportOption) -> str",
+          "signature_raw": "def ExportAnimationVideoW(_filePath : str, _options : VideoExportOption) -> str",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_options : VideoExportOption",
+              "name": "_options",
+              "annotation_raw": "VideoExportOption"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportAnimationVideoW(_filePath : str, _options : VideoExportOption) -> str",
+              "documentation_raw": "\"\"\"\n@brief Export animation video without showing any UI dialog.\n@param _filePath: output file path\n@param _options: Export options controlling video dimensions, frame range, and FPS.\n@return Output file path. If an error occurs, return empty wstring.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 1384,
+                  "block": 131
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 1552,
+                  "block": 131,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportAnimationVideoW(const wstring& _filePath, const Marvelous::VideoExportOption& _options)",
+                "documentation_raw": "/// @brief Export animation video without showing any UI dialog.\n/// @param _filePath: output file path\n/// @param _options: Export options controlling video dimensions, frame range, and FPS.\n/// @return Output file path. If an error occurs, return empty wstring.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 1394,
+                    "block": 132
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 1562,
+                    "block": 132,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "VideoExportOption",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:VideoExportOption"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param _filePath: output file path",
+            "@param _options: Export options controlling video dimensions, frame range, and FPS."
+          ],
+          "return_docs_raw": [
+            "@return Output file path. If an error occurs, return empty wstring."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportBOM",
+      "qualified_name": "export_api.ExportBOM",
+      "module": "export_api",
+      "symbol": "ExportBOM",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportBOM#b639745de8aa6f83",
+          "signature_normalized": "def ExportBOM(_filePath : str) -> bool",
+          "signature_raw": "def ExportBOM(_filePath : str) -> bool",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportBOM(_filePath : str) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export BOM\n@param _filePath: output file path\n@return If an error occurs, return false. \n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 1810,
+                  "block": 171
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 1998,
+                  "block": 171,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportBOM(const string& _filePath)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export BOM\n/// @param _filePath: output file path\n/// @return If an error occurs, return false.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 1820,
+                    "block": 172
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 2008,
+                    "block": 172,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath: output file path"
+          ],
+          "return_docs_raw": [
+            "@return If an error occurs, return false. "
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportBOMW",
+      "qualified_name": "export_api.ExportBOMW",
+      "module": "export_api",
+      "symbol": "ExportBOMW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportBOMW#e1b6bb1ab13fcbd1",
+          "signature_normalized": "def ExportBOMW(_filePath : str) -> bool",
+          "signature_raw": "def ExportBOMW(_filePath : str) -> bool",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportBOMW(_filePath : str) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export BOM\n@param _filePath: output file path\n@return If an error occurs, return false.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 1831,
+                  "block": 173
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 2020,
+                  "block": 173,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportBOM(const wstring& _filePath)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export BOM\n/// @param _filePath: output file path\n/// @return If an error occurs, return false.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 1841,
+                    "block": 174
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 2030,
+                    "block": 174,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath: output file path"
+          ],
+          "return_docs_raw": [
+            "@return If an error occurs, return false."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportCustomViewImage",
+      "qualified_name": "export_api.ExportCustomViewImage",
+      "module": "export_api",
+      "symbol": "ExportCustomViewImage",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportCustomViewImage#fe3450af55f62a0a",
+          "signature_normalized": "def ExportCustomViewImage(_zcmrFileUrl : str, _outputFolderPath : str, _colorwayIndex : int, _width : int, _height : int) -> str",
+          "signature_raw": "def ExportCustomViewImage(_zcmrFileUrl : str, _outputFolderPath : str, _colorwayIndex : int, _width : int, _height : int) -> str",
+          "parameters": [
+            {
+              "raw": "_zcmrFileUrl : str",
+              "name": "_zcmrFileUrl",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_outputFolderPath : str",
+              "name": "_outputFolderPath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_width : int",
+              "name": "_width",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_height : int",
+              "name": "_height",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportCustomViewImage(_zcmrFileUrl : str, _outputFolderPath : str, _colorwayIndex : int, _width : int, _height : int) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief ExportCustomViewImage : Exports The Custom image based on the given custom angles in ZCMR file for selected Colorway.\n@param : \n@return Output file path along with the selected colorway name. If an error occurs, return error message string. \n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 2308,
+                  "block": 215
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 2518,
+                  "block": 215,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportCustomViewImage((const std::string& _zcmrFileUrl, const std::string& _outputFolderPath, int _colorwayIndex, int _width, int _height)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief ExportCustomViewImage : Exports The Custom image based on the given custom angles in ZCMR file for selected Colorway.\n/// @param : \n/// @return Output file path along with the selected colorway name. If an error occurs, return error message string.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 2318,
+                    "block": 216
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 2528,
+                    "block": 216,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param : "
+          ],
+          "return_docs_raw": [
+            "@return Output file path along with the selected colorway name. If an error occurs, return error message string. "
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportCustomViewImageForAllColorways",
+      "qualified_name": "export_api.ExportCustomViewImageForAllColorways",
+      "module": "export_api",
+      "symbol": "ExportCustomViewImageForAllColorways",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportCustomViewImageForAllColorways#73d43a23411b6705",
+          "signature_normalized": "def ExportCustomViewImageForAllColorways(_zcmrFileUrl : str, _outputFolderPath : str, _width : int, _height : int) -> str",
+          "signature_raw": "def ExportCustomViewImageForAllColorways(_zcmrFileUrl : str, _outputFolderPath : str, _width : int, _height : int) -> str",
+          "parameters": [
+            {
+              "raw": "_zcmrFileUrl : str",
+              "name": "_zcmrFileUrl",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_outputFolderPath : str",
+              "name": "_outputFolderPath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_width : int",
+              "name": "_width",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_height : int",
+              "name": "_height",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportCustomViewImageForAllColorways(_zcmrFileUrl : str, _outputFolderPath : str, _width : int, _height : int) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief ExportCustomViewImageForAllColorways : Exports The Custom image based on the given custom angles in ZCMR file for all Colorways.\n@param : \n@return Output file path along with the colorway names. If an error occurs, return error message string. \n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 2329,
+                  "block": 217
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 2540,
+                  "block": 217,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportCustomViewImageForAllColorways((const std::string& _zcmrFileUrl, const std::string& _outputFolderPath, int _width, int _height)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief ExportCustomViewImageForAllColorways : Exports The Custom image based on the given custom angles in ZCMR file for all Colorways.\n/// @param : \n/// @return Output file path along with the colorway names. If an error occurs, return error message string.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 2339,
+                    "block": 218
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 2550,
+                    "block": 218,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param : "
+          ],
+          "return_docs_raw": [
+            "@return Output file path along with the colorway names. If an error occurs, return error message string. "
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportCustomViewSnapshot",
+      "qualified_name": "export_api.ExportCustomViewSnapshot",
+      "module": "export_api",
+      "symbol": "ExportCustomViewSnapshot",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportCustomViewSnapshot#5bba2fa2ae4075ad",
+          "signature_normalized": "def ExportCustomViewSnapshot(_targetFolderPath : str, _width : int, _height : int, _outputPrefix : str) -> list [ str ]",
+          "signature_raw": "def ExportCustomViewSnapshot(_targetFolderPath : str, _width : int, _height : int, _outputPrefix : str) -> list [ str ]",
+          "parameters": [
+            {
+              "raw": "_targetFolderPath : str",
+              "name": "_targetFolderPath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_width : int",
+              "name": "_width",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_height : int",
+              "name": "_height",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_outputPrefix : str",
+              "name": "_outputPrefix",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "list [ str ]",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportCustomViewSnapshot(_targetFolderPath : str, _width : int, _height : int, _outputPrefix : str) -> list [ str ]",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export snapshot images of Custom View.\n@param _targetFolderPath: output folder path\n@param _width: image width for the snapshots\n@param _height: image height for the snapshots\n@param _outputPrefix: If you set the 'outputPrefix' as empty value - \"\", then the saved file names will start with the index in the custom view; or if you set the 'outputPrefix' as some letters, the saved file names will have it as the first letters.\n@return Return the list of the path of output files\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 693,
+                  "block": 65
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 828,
+                  "block": 65,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportCustomViewSnapshot(const string& _targetFolderPath, unsigned int _width, unsigned int _height, string _outputPrefix = \"\")",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export snapshot images of Custom View.\n/// @param _targetFolderPath: output folder path\n/// @param _width: image width for the snapshots\n/// @param _height: image height for the snapshots\n/// @param _outputPrefix: If you set the 'outputPrefix' as empty value - \"\", then the saved file names will start with the index in the custom view; or if you set the 'outputPrefix' as some letters, the saved file names will have it as the first letters.\n/// @return Return the list of the path of output files",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 706,
+                    "block": 66
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 841,
+                    "block": 66,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _targetFolderPath: output folder path",
+            "@param _width: image width for the snapshots",
+            "@param _height: image height for the snapshots",
+            "@param _outputPrefix: If you set the 'outputPrefix' as empty value - \"\", then the saved file names will start with the index in the custom view; or if you set the 'outputPrefix' as some letters, the saved file names will have it as the first letters."
+          ],
+          "return_docs_raw": [
+            "@return Return the list of the path of output files"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportCustomViewSnapshotW",
+      "qualified_name": "export_api.ExportCustomViewSnapshotW",
+      "module": "export_api",
+      "symbol": "ExportCustomViewSnapshotW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportCustomViewSnapshotW#83481548f5f641c7",
+          "signature_normalized": "def ExportCustomViewSnapshotW(_targetFolderPath : str, _width : int, _height : int, _outputPrefix : str) -> list [ str ]",
+          "signature_raw": "def ExportCustomViewSnapshotW(_targetFolderPath : str, _width : int, _height : int, _outputPrefix : str) -> list [ str ]",
+          "parameters": [
+            {
+              "raw": "_targetFolderPath : str",
+              "name": "_targetFolderPath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_width : int",
+              "name": "_width",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_height : int",
+              "name": "_height",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_outputPrefix : str",
+              "name": "_outputPrefix",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "list [ str ]",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportCustomViewSnapshotW(_targetFolderPath : str, _width : int, _height : int, _outputPrefix : str) -> list [ str ]",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export snapshot images of Custom View.\n@param _targetFolderPath: output folder path\n@param _width: image width for the snapshots\n@param _height: image height for the snapshots\n@param _outputPrefix: If you set the 'outputPrefix' as empty value - \"\", then the saved file names will start with the index in the custom view; or if you set the 'outputPrefix' as some letters, the saved file names will have it as the first letters.\n@return Return the list of the path of output files\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 720,
+                  "block": 67
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 856,
+                  "block": 67,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportCustomViewSnapshotW(const wstring& _targetFolderPath, unsigned int _width, unsigned int _height, wstring _outputPrefix = L\"\")",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export snapshot images of Custom View.\n/// @param _targetFolderPath: output folder path\n/// @param _width: image width for the snapshots\n/// @param _height: image height for the snapshots\n/// @param _outputPrefix: If you set the 'outputPrefix' as empty value - \"\", then the saved file names will start with the index in the custom view; or if you set the 'outputPrefix' as some letters, the saved file names will have it as the first letters.\n/// @return Return the list of the path of output files",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 733,
+                    "block": 68
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 869,
+                    "block": 68,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _targetFolderPath: output folder path",
+            "@param _width: image width for the snapshots",
+            "@param _height: image height for the snapshots",
+            "@param _outputPrefix: If you set the 'outputPrefix' as empty value - \"\", then the saved file names will start with the index in the custom view; or if you set the 'outputPrefix' as some letters, the saved file names will have it as the first letters."
+          ],
+          "return_docs_raw": [
+            "@return Return the list of the path of output files"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportDXF",
+      "qualified_name": "export_api.ExportDXF",
+      "module": "export_api",
+      "symbol": "ExportDXF",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportDXF#2ff28a14a66555bf",
+          "signature_normalized": "def ExportDXF() -> str",
+          "signature_raw": "def ExportDXF() -> str",
+          "parameters": [],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportDXF() -> str",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export DXF file. This api call will display the dialog to set options\n@return Output file path. If an error occurs, return empty string. Output files will be created in CLO temporary folder.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 359,
+                  "block": 33
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 478,
+                  "block": 33,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportDXF()",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export DXF file. This api call will display the dialog to set options\n/// @return Output file path. If an error occurs, return empty string. Output files will be created in CLO temporary folder.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 368,
+                    "block": 34
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 487,
+                    "block": 34,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return Output file path. If an error occurs, return empty string. Output files will be created in CLO temporary folder."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "export_api.ExportDXF#af87d9d4b37e1dbf",
+          "signature_normalized": "def ExportDXF(_filePath : str) -> str",
+          "signature_raw": "def ExportDXF(_filePath : str) -> str",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportDXF(_filePath : str) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export DXF file. This api call will display the dialog to set options\n@param _filePath: output file path to export dxf\n@return Output file path. If an error occurs, return empty string. \n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 378,
+                  "block": 35
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 498,
+                  "block": 35,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportDXF(const string& _filePath)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export DXF file. This api call will display the dialog to set options\n/// @param _filePath: output file path to export dxf\n/// @return Output file path. If an error occurs, return empty string.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 388,
+                    "block": 36
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 508,
+                    "block": 36,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath: output file path to export dxf"
+          ],
+          "return_docs_raw": [
+            "@return Output file path. If an error occurs, return empty string. "
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "export_api.ExportDXF#079a3fc5e49c3cf3",
+          "signature_normalized": "def ExportDXF(_filePath : str, _exportOption : ExportDxfOption) -> str",
+          "signature_raw": "def ExportDXF(_filePath : str, _exportOption : ExportDxfOption) -> str",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_exportOption : ExportDxfOption",
+              "name": "_exportOption",
+              "annotation_raw": "ExportDxfOption"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportDXF(_filePath : str, _exportOption : ExportDxfOption) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export DXF file without the option dialog. Param ExportDxfOption is applicable for the options.\n@param _filePath: output file path to export dxf\n@param _exportOption: options to export dxf file\n@return Output file path. If an error occurs, return empty string. \n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 399,
+                  "block": 37
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 520,
+                  "block": 37,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportDXF(const string& _filePath, const Marvelous::ExportDxfOption& _exportOption)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export DXF file without the option dialog. Param ExportDxfOption is applicable for the options.\n/// @param _filePath: output file path to export dxf\n/// @param _exportOption: options to export dxf file\n/// @return Output file path. If an error occurs, return empty string.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 410,
+                    "block": 38
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 531,
+                    "block": 38,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "ExportDxfOption",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:ExportDxfOption"
+            },
+            {
+              "name": "ExportDxfOption",
+              "basis": "documentation_mention",
+              "status": "resolved",
+              "type_id": "type:ExportDxfOption"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param _filePath: output file path to export dxf",
+            "@param _exportOption: options to export dxf file"
+          ],
+          "return_docs_raw": [
+            "@return Output file path. If an error occurs, return empty string. "
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportDXFW",
+      "qualified_name": "export_api.ExportDXFW",
+      "module": "export_api",
+      "symbol": "ExportDXFW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportDXFW#04a0a8ce98980550",
+          "signature_normalized": "def ExportDXFW(_filePath : str, _exportOption : ExportDxfOption) -> str",
+          "signature_raw": "def ExportDXFW(_filePath : str, _exportOption : ExportDxfOption) -> str",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_exportOption : ExportDxfOption",
+              "name": "_exportOption",
+              "annotation_raw": "ExportDxfOption"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportDXFW(_filePath : str, _exportOption : ExportDxfOption) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export DXF file without the option dialog. Param ExportDxfOption is applicable for the options.\n@param _filePath: output file path\n@param _exportOption: options to export dxf file\n@return Output file path. If an error occurs, return empty wstring.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 422,
+                  "block": 39
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 544,
+                  "block": 39,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportDXFW(const wstring& _filePath, const Marvelous::ExportDxfOption& _exportOption)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export DXF file without the option dialog. Param ExportDxfOption is applicable for the options.\n/// @param _filePath: output file path\n/// @param _exportOption: options to export dxf file\n/// @return Output file path. If an error occurs, return empty wstring.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 433,
+                    "block": 40
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 555,
+                    "block": 40,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "ExportDxfOption",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:ExportDxfOption"
+            },
+            {
+              "name": "ExportDxfOption",
+              "basis": "documentation_mention",
+              "status": "resolved",
+              "type_id": "type:ExportDxfOption"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param _filePath: output file path",
+            "@param _exportOption: options to export dxf file"
+          ],
+          "return_docs_raw": [
+            "@return Output file path. If an error occurs, return empty wstring."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportFBX",
+      "qualified_name": "export_api.ExportFBX",
+      "module": "export_api",
+      "symbol": "ExportFBX",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportFBX#78d02c7ebadab4f9",
+          "signature_normalized": "def ExportFBX(_options : ImportExportOption) -> list[str]",
+          "signature_raw": "def ExportFBX(_options : ImportExportOption) -> list[str]",
+          "parameters": [
+            {
+              "raw": "_options : ImportExportOption",
+              "name": "_options",
+              "annotation_raw": "ImportExportOption"
+            }
+          ],
+          "return_raw": "list[str]",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportFBX(_options : ImportExportOption) -> list[str]",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export FBX file\n@param _options: It exports FBX according to options, not allowing user for selecting options in Export Dialog.\n@return Output file paths. Output files will be created in CLO temporary folder.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 2103,
+                  "block": 197
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 2304,
+                  "block": 197,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportFBX(const Marvelous::ImportExportOption& _options)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export FBX file\n/// @param _options: It exports FBX according to options, not allowing user for selecting options in Export Dialog.\n/// @return Output file paths. Output files will be created in CLO temporary folder.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 2113,
+                    "block": 198
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 2314,
+                    "block": 198,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "ImportExportOption",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:ImportExportOption"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param _options: It exports FBX according to options, not allowing user for selecting options in Export Dialog."
+          ],
+          "return_docs_raw": [
+            "@return Output file paths. Output files will be created in CLO temporary folder."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "export_api.ExportFBX#afa10b0e94adb38c",
+          "signature_normalized": "def ExportFBX(_filePath : str, _options : ImportExportOption) -> list[str]",
+          "signature_raw": "def ExportFBX(_filePath : str, _options : ImportExportOption) -> list[str]",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_options : ImportExportOption",
+              "name": "_options",
+              "annotation_raw": "ImportExportOption"
+            }
+          ],
+          "return_raw": "list[str]",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportFBX(_filePath : str, _options : ImportExportOption) -> list[str]",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export FBX file\n@param _filePath: target file path in ASCII\n@param _options: It exports FBX according to options, not allowing user for selecting options in Export Dialog.\n@return Output file paths.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 2124,
+                  "block": 199
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 2326,
+                  "block": 199,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportFBX(const string& _filePath, const Marvelous::ImportExportOption& _options)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export FBX file\n/// @param _filePath: target file path in ASCII\n/// @param _options: It exports FBX according to options, not allowing user for selecting options in Export Dialog.\n/// @return Output file paths.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 2135,
+                    "block": 200
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 2337,
+                    "block": 200,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "ImportExportOption",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:ImportExportOption"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param _filePath: target file path in ASCII",
+            "@param _options: It exports FBX according to options, not allowing user for selecting options in Export Dialog."
+          ],
+          "return_docs_raw": [
+            "@return Output file paths."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportFBXW",
+      "qualified_name": "export_api.ExportFBXW",
+      "module": "export_api",
+      "symbol": "ExportFBXW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportFBXW#cb54f58ce66015f9",
+          "signature_normalized": "def ExportFBXW(_filePath : str, _options : ImportExportOption) -> list[str]",
+          "signature_raw": "def ExportFBXW(_filePath : str, _options : ImportExportOption) -> list[str]",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_options : ImportExportOption",
+              "name": "_options",
+              "annotation_raw": "ImportExportOption"
+            }
+          ],
+          "return_raw": "list[str]",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportFBXW(_filePath : str, _options : ImportExportOption) -> list[str]",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export FBX file\n@param _filePath: target file path in UNICODE\n@param _options: It exports FBX according to options, not allowing user for selecting options in Export Dialog.\n@return Output file paths.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 2147,
+                  "block": 201
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 2350,
+                  "block": 201,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportFBXW(const wstring& _filePath, const Marvelous::ImportExportOption& _options)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export FBX file\n/// @param _filePath: target file path in UNICODE\n/// @param _options: It exports FBX according to options, not allowing user for selecting options in Export Dialog.\n/// @return Output file paths.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 2158,
+                    "block": 202
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 2361,
+                    "block": 202,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "ImportExportOption",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:ImportExportOption"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param _filePath: target file path in UNICODE",
+            "@param _options: It exports FBX according to options, not allowing user for selecting options in Export Dialog."
+          ],
+          "return_docs_raw": [
+            "@return Output file paths."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportGLB",
+      "qualified_name": "export_api.ExportGLB",
+      "module": "export_api",
+      "symbol": "ExportGLB",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportGLB#2ca5e58824bbf2cd",
+          "signature_normalized": "def ExportGLB(_filePath : str, _options : ImportExportOption) -> list[str]",
+          "signature_raw": "def ExportGLB(_filePath : str, _options : ImportExportOption) -> list[str]",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_options : ImportExportOption",
+              "name": "_options",
+              "annotation_raw": "ImportExportOption"
+            }
+          ],
+          "return_raw": "list[str]",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportGLB(_filePath : str, _options : ImportExportOption) -> list[str]",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export GLB\n@param options: If \"options\" is given, it exports GLB according to options, not allowing user for selecting options in Export Dialog.\n@return Output file paths. \n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 1640,
+                  "block": 155
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 1820,
+                  "block": 155,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportGLB(const string& _filePath, const Marvelous::ImportExportOption& _options)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export GLB\n/// @param options: If \"options\" is given, it exports GLB according to options, not allowing user for selecting options in Export Dialog.\n/// @return Output file paths.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 1650,
+                    "block": 156
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 1830,
+                    "block": 156,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "ImportExportOption",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:ImportExportOption"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param options: If \"options\" is given, it exports GLB according to options, not allowing user for selecting options in Export Dialog."
+          ],
+          "return_docs_raw": [
+            "@return Output file paths. "
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportGLBW",
+      "qualified_name": "export_api.ExportGLBW",
+      "module": "export_api",
+      "symbol": "ExportGLBW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportGLBW#bd04a42125d5e8c1",
+          "signature_normalized": "def ExportGLBW(_filePath : str, _options : ImportExportOption) -> list[str]",
+          "signature_raw": "def ExportGLBW(_filePath : str, _options : ImportExportOption) -> list[str]",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_options : ImportExportOption",
+              "name": "_options",
+              "annotation_raw": "ImportExportOption"
+            }
+          ],
+          "return_raw": "list[str]",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportGLBW(_filePath : str, _options : ImportExportOption) -> list[str]",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export GLBW\n@param options: If \"options\" is given, it exports GLB according to options, not allowing user for selecting options in Export Dialog.\n@return Output file paths. \n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 1661,
+                  "block": 157
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 1842,
+                  "block": 157,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportGLBW(const wstring& _filePath, const Marvelous::ImportExportOption& _options)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export GLBW\n/// @param options: If \"options\" is given, it exports GLB according to options, not allowing user for selecting options in Export Dialog.\n/// @return Output file paths.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 1671,
+                    "block": 158
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 1852,
+                    "block": 158,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "ImportExportOption",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:ImportExportOption"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param options: If \"options\" is given, it exports GLB according to options, not allowing user for selecting options in Export Dialog."
+          ],
+          "return_docs_raw": [
+            "@return Output file paths. "
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportGLBWithDialog",
+      "qualified_name": "export_api.ExportGLBWithDialog",
+      "module": "export_api",
+      "symbol": "ExportGLBWithDialog",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportGLBWithDialog#6ab24f31171f63da",
+          "signature_normalized": "def ExportGLBWithDialog(_filePath : str) -> list[str]",
+          "signature_raw": "def ExportGLBWithDialog(_filePath : str) -> list[str]",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "list[str]",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportGLBWithDialog(_filePath : str) -> list[str]",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export GLB with Dialog\n@param _filePath: output file path\n@return Output file paths. \n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 1873,
+                  "block": 177
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 2064,
+                  "block": 177,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportGLBWithDialog(const string& _filePath)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export GLB with Dialog\n/// @param _filePath: output file path\n/// @return Output file paths.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 1883,
+                    "block": 178
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 2074,
+                    "block": 178,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath: output file path"
+          ],
+          "return_docs_raw": [
+            "@return Output file paths. "
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportGLTF",
+      "qualified_name": "export_api.ExportGLTF",
+      "module": "export_api",
+      "symbol": "ExportGLTF",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportGLTF#b486fd17d2228fe5",
+          "signature_normalized": "def ExportGLTF(_filePath : str, _options : ImportExportOption, _bGLBinary : bool) -> list[str]",
+          "signature_raw": "def ExportGLTF(_filePath : str, _options : ImportExportOption, _bGLBinary : bool) -> list[str]",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_options : ImportExportOption",
+              "name": "_options",
+              "annotation_raw": "ImportExportOption"
+            },
+            {
+              "raw": "_bGLBinary : bool",
+              "name": "_bGLBinary",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "list[str]",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportGLTF(_filePath : str, _options : ImportExportOption, _bGLBinary : bool) -> list[str]",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export GLTF. The export can be restricted to specific components through the component selection lists\non _options (patternList / buttonList / graphicList / zipperList): when at least one of them is set,\nONLY the listed components are written, so a project holding several garments can be exported one file\nper garment. With every list empty (the default) the whole scene is exported, as before.\n@param options: If \"options\" is given, it exports GLTF according to options, not allowing user for selecting options in Export Dialog.\n@param _bGLBinary: if true, export binary glTF (.glb); otherwise text glTF.\n@return Output file paths.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 265,
+                  "block": 25
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 380,
+                  "block": 25,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportGLTF(const string& _filePath, const Marvelous::ImportExportOption& _options, bool _bGLBinary)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export GLTF. The export can be restricted to specific components through the component selection lists\n/// on _options (patternList / buttonList / graphicList / zipperList): when at least one of them is set,\n/// ONLY the listed components are written, so a project holding several garments can be exported one file\n/// per garment. With every list empty (the default) the whole scene is exported, as before.\n/// @param options: If \"options\" is given, it exports GLTF according to options, not allowing user for selecting options in Export Dialog.\n/// @param _bGLBinary: if true, export binary glTF (.glb); otherwise text glTF.\n/// @return Output file paths.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 279,
+                    "block": 26
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 394,
+                    "block": 26,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "ImportExportOption",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:ImportExportOption"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param options: If \"options\" is given, it exports GLTF according to options, not allowing user for selecting options in Export Dialog.",
+            "@param _bGLBinary: if true, export binary glTF (.glb); otherwise text glTF."
+          ],
+          "return_docs_raw": [
+            "@return Output file paths."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportGLTFW",
+      "qualified_name": "export_api.ExportGLTFW",
+      "module": "export_api",
+      "symbol": "ExportGLTFW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportGLTFW#6025e16013e1e0bd",
+          "signature_normalized": "def ExportGLTFW(_filePath : str, _options : ImportExportOption, _bGLBinary : bool) -> list[str]",
+          "signature_raw": "def ExportGLTFW(_filePath : str, _options : ImportExportOption, _bGLBinary : bool) -> list[str]",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_options : ImportExportOption",
+              "name": "_options",
+              "annotation_raw": "ImportExportOption"
+            },
+            {
+              "raw": "_bGLBinary : bool",
+              "name": "_bGLBinary",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "list[str]",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportGLTFW(_filePath : str, _options : ImportExportOption, _bGLBinary : bool) -> list[str]",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Wide-char variant of ExportGLTF. Honours the same component selection lists on _options (all empty = whole scene).\n@param options: If \"options\" is given, it exports GLTF according to options, not allowing user for selecting options in Export Dialog.\n@param _bGLBinary: if true, export binary glTF (.glb); otherwise text glTF.\n@return Output file paths.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 294,
+                  "block": 27
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 410,
+                  "block": 27,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportGLTFW(const wstring& _filePath, const Marvelous::ImportExportOption& _options, bool _bGLBinary)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Wide-char variant of ExportGLTF. Honours the same component selection lists on _options (all empty = whole scene).\n/// @param options: If \"options\" is given, it exports GLTF according to options, not allowing user for selecting options in Export Dialog.\n/// @param _bGLBinary: if true, export binary glTF (.glb); otherwise text glTF.\n/// @return Output file paths.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 305,
+                    "block": 28
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 421,
+                    "block": 28,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "ImportExportOption",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:ImportExportOption"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param options: If \"options\" is given, it exports GLTF according to options, not allowing user for selecting options in Export Dialog.",
+            "@param _bGLBinary: if true, export binary glTF (.glb); otherwise text glTF."
+          ],
+          "return_docs_raw": [
+            "@return Output file paths."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportGLTFWithDialog",
+      "qualified_name": "export_api.ExportGLTFWithDialog",
+      "module": "export_api",
+      "symbol": "ExportGLTFWithDialog",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportGLTFWithDialog#bf41fb4e2b4ef821",
+          "signature_normalized": "def ExportGLTFWithDialog(_filePath : str, _bGLBinary : bool) -> list[str]",
+          "signature_raw": "def ExportGLTFWithDialog(_filePath : str, _bGLBinary : bool) -> list[str]",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_bGLBinary : bool",
+              "name": "_bGLBinary",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "list[str]",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportGLTFWithDialog(_filePath : str, _bGLBinary : bool) -> list[str]",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export GLTF with Dialog\n@param _filePath: output file path\n@return Output file paths. \n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 1852,
+                  "block": 175
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 2042,
+                  "block": 175,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportGLTFWithDialog(const string& _filePath)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export GLTF with Dialog\n/// @param _filePath: output file path\n/// @return Output file paths.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 1862,
+                    "block": 176
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 2052,
+                    "block": 176,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath: output file path"
+          ],
+          "return_docs_raw": [
+            "@return Output file paths. "
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportGarmentInformation",
+      "qualified_name": "export_api.ExportGarmentInformation",
+      "module": "export_api",
+      "symbol": "ExportGarmentInformation",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportGarmentInformation#8c24487da2f7c201",
+          "signature_normalized": "def ExportGarmentInformation() -> str",
+          "signature_raw": "def ExportGarmentInformation() -> str",
+          "parameters": [],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportGarmentInformation() -> str",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export garment information in json file. The information is the same as given in Garment Information Dialog in CLO (you can see this dialog by clicking File > Information > Garment menu in CLO)\n@return Output file path. If an error occurs, return empty string; output files will be created in CLO temporary folder.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 1026,
+                  "block": 95
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 1176,
+                  "block": 95,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportGarmentInformation()",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export garment information in json file. The information is the same as given in Garment Information Dialog in CLO (you can see this dialog by clicking File > Information > Garment menu in CLO)\n/// @return Output file path. If an error occurs, return empty string; output files will be created in CLO temporary folder.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 1035,
+                    "block": 96
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 1185,
+                    "block": 96,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return Output file path. If an error occurs, return empty string; output files will be created in CLO temporary folder."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "export_api.ExportGarmentInformation#82cb0fd7989a65f4",
+          "signature_normalized": "def ExportGarmentInformation(_filePath : str) -> str",
+          "signature_raw": "def ExportGarmentInformation(_filePath : str) -> str",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportGarmentInformation(_filePath : str) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export garment information in json file. The information is the same as given in Garment Information Dialog in CLO (you can see this dialog by clicking File > Information > Garment menu in CLO)\n@param _filePath output file path to export the garment information\n@return Output file path. If an error occurs, return empty string.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 1045,
+                  "block": 97
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 1196,
+                  "block": 97,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportGarmentInformation(const string& _filePath)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export garment information in json file. The information is the same as given in Garment Information Dialog in CLO (you can see this dialog by clicking File > Information > Garment menu in CLO)\n/// @param _filePath output file path to export the garment information\n/// @return Output file path. If an error occurs, return empty string.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 1055,
+                    "block": 98
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 1206,
+                    "block": 98,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath output file path to export the garment information"
+          ],
+          "return_docs_raw": [
+            "@return Output file path. If an error occurs, return empty string."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportGarmentInformationConfigData",
+      "qualified_name": "export_api.ExportGarmentInformationConfigData",
+      "module": "export_api",
+      "symbol": "ExportGarmentInformationConfigData",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportGarmentInformationConfigData#dd2a2a50a5ec01ab",
+          "signature_normalized": "def ExportGarmentInformationConfigData() -> str",
+          "signature_raw": "def ExportGarmentInformationConfigData() -> str",
+          "parameters": [],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportGarmentInformationConfigData() -> str",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export garment information config data in json file. The information is the same as given in \"Conf_Garment_Information.json\" file via Preference\n@return Output file path; the output files will be created in CLO temporary folder. If an error occurs, return empty string.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 1125,
+                  "block": 105
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 1280,
+                  "block": 105,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportGarmentInformationConfigData()",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export garment information config data in json file. The information is the same as given in \"Conf_Garment_Information.json\" file via Preference\n/// @return Output file path; the output files will be created in CLO temporary folder. If an error occurs, return empty string.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 1134,
+                    "block": 106
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 1289,
+                    "block": 106,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return Output file path; the output files will be created in CLO temporary folder. If an error occurs, return empty string."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "export_api.ExportGarmentInformationConfigData#92ef14c1c9537c8b",
+          "signature_normalized": "def ExportGarmentInformationConfigData(_filePath : str) -> str",
+          "signature_raw": "def ExportGarmentInformationConfigData(_filePath : str) -> str",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportGarmentInformationConfigData(_filePath : str) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export garment information config data in json file. The information is the same as given in \"Conf_Garment_Information.json\" file via Preference\n@param _filePath output file path to export the garment information configuration data\n@return Output file path. If an error occurs, return empty string.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 1144,
+                  "block": 107
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 1300,
+                  "block": 107,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportGarmentInformationConfigData(const string& _filePath)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export garment information config data in json file. The information is the same as given in \"Conf_Garment_Information.json\" file via Preference\n/// @param _filePath output file path to export the garment information configuration data\n/// @return Output file path. If an error occurs, return empty string.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 1154,
+                    "block": 108
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 1310,
+                    "block": 108,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath output file path to export the garment information configuration data"
+          ],
+          "return_docs_raw": [
+            "@return Output file path. If an error occurs, return empty string."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportGarmentInformationConfigDataToStream",
+      "qualified_name": "export_api.ExportGarmentInformationConfigDataToStream",
+      "module": "export_api",
+      "symbol": "ExportGarmentInformationConfigDataToStream",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportGarmentInformationConfigDataToStream#c63f33fef371f84d",
+          "signature_normalized": "def ExportGarmentInformationConfigDataToStream() -> str",
+          "signature_raw": "def ExportGarmentInformationConfigDataToStream() -> str",
+          "parameters": [],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportGarmentInformationConfigDataToStream() -> str",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\nExport garment information configuration data in string\n@return Output stream for JSON data. If an error occurs, return empty string.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 1186,
+                  "block": 111
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 1344,
+                  "block": 111,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportGarmentInformationConfigDataToStream()",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// Export garment information configuration data in string\n/// @return Output stream for JSON data. If an error occurs, return empty string.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 1195,
+                    "block": 112
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 1353,
+                    "block": 112,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return Output stream for JSON data. If an error occurs, return empty string."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportGarmentInformationConfigDataToStreamW",
+      "qualified_name": "export_api.ExportGarmentInformationConfigDataToStreamW",
+      "module": "export_api",
+      "symbol": "ExportGarmentInformationConfigDataToStreamW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportGarmentInformationConfigDataToStreamW#d0bf1de718a477cf",
+          "signature_normalized": "def ExportGarmentInformationConfigDataToStreamW() -> str",
+          "signature_raw": "def ExportGarmentInformationConfigDataToStreamW() -> str",
+          "parameters": [],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportGarmentInformationConfigDataToStreamW() -> str",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\nExport garment information configuration data in string\n@return Output stream for JSON data. If an error occurs, return empty string.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 1205,
+                  "block": 113
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 1364,
+                  "block": 113,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportGarmentInformationConfigDataToStreamW()",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// Export garment information configuration data in string\n/// @return Output stream for JSON data. If an error occurs, return empty string.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 1214,
+                    "block": 114
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 1373,
+                    "block": 114,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return Output stream for JSON data. If an error occurs, return empty string."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportGarmentInformationConfigDataW",
+      "qualified_name": "export_api.ExportGarmentInformationConfigDataW",
+      "module": "export_api",
+      "symbol": "ExportGarmentInformationConfigDataW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportGarmentInformationConfigDataW#99d29f30fa28dabe",
+          "signature_normalized": "def ExportGarmentInformationConfigDataW(_filePath : str) -> str",
+          "signature_raw": "def ExportGarmentInformationConfigDataW(_filePath : str) -> str",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportGarmentInformationConfigDataW(_filePath : str) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export garment information config data in json file. The information is the same as given in \"Conf_Garment_Information.json\" file via Preference\n@param _filePath output file path to export the garment information configuration data\n@return Output file path. If an error occurs, return empty string.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 1165,
+                  "block": 109
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 1322,
+                  "block": 109,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportGarmentInformationConfigDataW(const wstring& _filePath)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export garment information config data in json file. The information is the same as given in \"Conf_Garment_Information.json\" file via Preference\n/// @param _filePath output file path to export the garment information configuration data\n/// @return Output file path. If an error occurs, return empty string.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 1175,
+                    "block": 110
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 1332,
+                    "block": 110,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath output file path to export the garment information configuration data"
+          ],
+          "return_docs_raw": [
+            "@return Output file path. If an error occurs, return empty string."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportGarmentInformationToStream",
+      "qualified_name": "export_api.ExportGarmentInformationToStream",
+      "module": "export_api",
+      "symbol": "ExportGarmentInformationToStream",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportGarmentInformationToStream#cb1ffd96278fb270",
+          "signature_normalized": "def ExportGarmentInformationToStream() -> str",
+          "signature_raw": "def ExportGarmentInformationToStream() -> str",
+          "parameters": [],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportGarmentInformationToStream() -> str",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export garment information in string\n@return Garment Information stream in sstring\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 1087,
+                  "block": 101
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 1240,
+                  "block": 101,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportGarmentInformationToStream()",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export garment information in string\n/// @return Garment Information stream in sstring",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 1096,
+                    "block": 102
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 1249,
+                    "block": 102,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return Garment Information stream in sstring"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportGarmentInformationToStreamW",
+      "qualified_name": "export_api.ExportGarmentInformationToStreamW",
+      "module": "export_api",
+      "symbol": "ExportGarmentInformationToStreamW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportGarmentInformationToStreamW#8d08e5715f94feed",
+          "signature_normalized": "def ExportGarmentInformationToStreamW() -> str",
+          "signature_raw": "def ExportGarmentInformationToStreamW() -> str",
+          "parameters": [],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportGarmentInformationToStreamW() -> str",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export garment information in string as well as json file\n@return Garment Information stream in wstring\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 1106,
+                  "block": 103
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 1260,
+                  "block": 103,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportGarmentInformationToStreamW()",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export garment information in string as well as json file\n/// @return Garment Information stream in wstring",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 1115,
+                    "block": 104
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 1269,
+                    "block": 104,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return Garment Information stream in wstring"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportGarmentInformationW",
+      "qualified_name": "export_api.ExportGarmentInformationW",
+      "module": "export_api",
+      "symbol": "ExportGarmentInformationW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportGarmentInformationW#2fe50013961a554d",
+          "signature_normalized": "def ExportGarmentInformationW(_filePath : str) -> str",
+          "signature_raw": "def ExportGarmentInformationW(_filePath : str) -> str",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportGarmentInformationW(_filePath : str) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export garment information in json file. The information is the same as given in Garment Information Dialog in CLO (you can see this dialog by clicking File > Information > Garment menu in CLO)\n@param _filePath output file path to export the garment information\n@return Output file path. If an error occurs, return empty wstring.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 1066,
+                  "block": 99
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 1218,
+                  "block": 99,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportGarmentInformationW(const wstring& _filePath)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export garment information in json file. The information is the same as given in Garment Information Dialog in CLO (you can see this dialog by clicking File > Information > Garment menu in CLO)\n/// @param _filePath output file path to export the garment information\n/// @return Output file path. If an error occurs, return empty wstring.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 1076,
+                    "block": 100
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 1228,
+                    "block": 100,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath output file path to export the garment information"
+          ],
+          "return_docs_raw": [
+            "@return Output file path. If an error occurs, return empty wstring."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportMVSData",
+      "qualified_name": "export_api.ExportMVSData",
+      "module": "export_api",
+      "symbol": "ExportMVSData",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportMVSData#2ac24b37e82d34b8",
+          "signature_normalized": "def ExportMVSData(_mvsFilePath : str) -> str",
+          "signature_raw": "def ExportMVSData(_mvsFilePath : str) -> str",
+          "parameters": [
+            {
+              "raw": "_mvsFilePath : str",
+              "name": "_mvsFilePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportMVSData(_mvsFilePath : str) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief ExportMVSData : Exports The MVS File data without creating any Images.\n@param : \n@return MVS file data and with custom angles. If an error occurs, return error message string. \n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 2421,
+                  "block": 225
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 2636,
+                  "block": 225,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportMVSData(const std::string& _mvsFilePath)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief ExportMVSData : Exports The MVS File data without creating any Images.\n/// @param : \n/// @return MVS file data and with custom angles. If an error occurs, return error message string.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 2431,
+                    "block": 226
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 2646,
+                    "block": 226,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param : "
+          ],
+          "return_docs_raw": [
+            "@return MVS file data and with custom angles. If an error occurs, return error message string. "
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportMaskSnapshot3D",
+      "qualified_name": "export_api.ExportMaskSnapshot3D",
+      "module": "export_api",
+      "symbol": "ExportMaskSnapshot3D",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportMaskSnapshot3D#ae58ab5cd84db05c",
+          "signature_normalized": "def ExportMaskSnapshot3D(_filePath : str, _exportOption : ExportTechpackOption) -> list[ list [ str] ]",
+          "signature_raw": "def ExportMaskSnapshot3D(_filePath : str, _exportOption : ExportTechpackOption) -> list[ list [ str] ]",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_exportOption : ExportTechpackOption",
+              "name": "_exportOption",
+              "annotation_raw": "ExportTechpackOption"
+            }
+          ],
+          "return_raw": "list[ list [ str] ]",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportMaskSnapshot3D(_filePath : str, _exportOption : ExportTechpackOption) -> list[ list [ str] ]",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export mask snapshot of the current scene in the 3D windows. only for H&M.\n@param _filePath: output file path to save the screenshot.\n@param _exportOption: export option include autentication key.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 611,
+                  "block": 57
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 742,
+                  "block": 57,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportMaskSnapshot3D(const std::string& _filePath, const Marvelous::ExportTechpackOption& _exportOption)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export mask snapshot of the current scene in the 3D windows. only for H&M.\n/// @param _filePath: output file path to save the screenshot.\n/// @param _exportOption: export option include autentication key.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 621,
+                    "block": 58
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 752,
+                    "block": 58,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "ExportTechpackOption",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:ExportTechpackOption"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param _filePath: output file path to save the screenshot.",
+            "@param _exportOption: export option include autentication key."
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportMultiViewImages",
+      "qualified_name": "export_api.ExportMultiViewImages",
+      "module": "export_api",
+      "symbol": "ExportMultiViewImages",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportMultiViewImages#7388cca8b5bdda78",
+          "signature_normalized": "def ExportMultiViewImages(_mvsFilePath : str, _outputFilePath : str, _colorwayIndex : int, _width : int, _height : int) -> str",
+          "signature_raw": "def ExportMultiViewImages(_mvsFilePath : str, _outputFilePath : str, _colorwayIndex : int, _width : int, _height : int) -> str",
+          "parameters": [
+            {
+              "raw": "_mvsFilePath : str",
+              "name": "_mvsFilePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_outputFilePath : str",
+              "name": "_outputFilePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_width : int",
+              "name": "_width",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_height : int",
+              "name": "_height",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportMultiViewImages(_mvsFilePath : str, _outputFilePath : str, _colorwayIndex : int, _width : int, _height : int) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief ExportMultiViewImages : Exports The Multi View Images based on the given MVS File for selected Colorway.\n@param : \n@return Output file path along with the selected colorway name. If an error occurs, return error message string. \n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 2350,
+                  "block": 219
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 2562,
+                  "block": 219,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportMultiViewImages(const std::string& _mvsFilePath, const std::string& _outputFilePath, int _colorwayIndex, int _width, int _height)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief ExportMultiViewImages : Exports The Multi View Images based on the given MVS File for selected Colorway.\n/// @param : \n/// @return Output file path along with the selected colorway name. If an error occurs, return error message string.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 2360,
+                    "block": 220
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 2572,
+                    "block": 220,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param : "
+          ],
+          "return_docs_raw": [
+            "@return Output file path along with the selected colorway name. If an error occurs, return error message string. "
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportMultiViewImagesForAllColorways",
+      "qualified_name": "export_api.ExportMultiViewImagesForAllColorways",
+      "module": "export_api",
+      "symbol": "ExportMultiViewImagesForAllColorways",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportMultiViewImagesForAllColorways#161ae7d7232773e5",
+          "signature_normalized": "def ExportMultiViewImagesForAllColorways(_mvsFilePath : str, _outputFilePath : str, _width : int, _height : int) -> str",
+          "signature_raw": "def ExportMultiViewImagesForAllColorways(_mvsFilePath : str, _outputFilePath : str, _width : int, _height : int) -> str",
+          "parameters": [
+            {
+              "raw": "_mvsFilePath : str",
+              "name": "_mvsFilePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_outputFilePath : str",
+              "name": "_outputFilePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_width : int",
+              "name": "_width",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_height : int",
+              "name": "_height",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportMultiViewImagesForAllColorways(_mvsFilePath : str, _outputFilePath : str, _width : int, _height : int) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief ExportMultiViewImagesForAllColorways : Exports The Multi View Images based on the given MVS File for all Colorways.\n@param : \n@return Output file path along with the colorway names. If an error occurs, return error message string. \n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 2371,
+                  "block": 221
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 2584,
+                  "block": 221,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportMultiViewImagesForAllColorways(const std::string& _mvsFilePath, const std::string& _outputFilePath, int _width, int _height)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief ExportMultiViewImagesForAllColorways : Exports The Multi View Images based on the given MVS File for all Colorways.\n/// @param : \n/// @return Output file path along with the colorway names. If an error occurs, return error message string.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 2381,
+                    "block": 222
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 2594,
+                    "block": 222,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param : "
+          ],
+          "return_docs_raw": [
+            "@return Output file path along with the colorway names. If an error occurs, return error message string. "
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportOBJ",
+      "qualified_name": "export_api.ExportOBJ",
+      "module": "export_api",
+      "symbol": "ExportOBJ",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportOBJ#9d0f9534dd13bf1d",
+          "signature_normalized": "def ExportOBJ() -> list[str]",
+          "signature_raw": "def ExportOBJ() -> list[str]",
+          "parameters": [],
+          "return_raw": "list[str]",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportOBJ() -> list[str]",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export OBJ file\n@param options If \"options\" is given, it exports OBJ according to options, not allowing user for selecting options in Export Dialog.\n@return Output file paths. It outputs the file paths of an OBJ file and multiple MTL files for colorways. If the value \"bSaveInZip\" in ImportExportOption is true, it outputs a file path of a zipped file. If an error occurs, return empty string. If filePath parameter is not given, output files will be created in CLO temporary folder.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 156,
+                  "block": 15
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 266,
+                  "block": 15,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportOBJ()",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export OBJ file\n/// @param options If \"options\" is given, it exports OBJ according to options, not allowing user for selecting options in Export Dialog.\n/// @return Output file paths. It outputs the file paths of an OBJ file and multiple MTL files for colorways. If the value \"bSaveInZip\" in ImportExportOption is true, it outputs a file path of a zipped file. If an error occurs, return empty string. If filePath parameter is not given, output files will be created in CLO temporary folder.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 166,
+                    "block": 16
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 276,
+                    "block": 16,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "ImportExportOption",
+              "basis": "documentation_mention",
+              "status": "resolved",
+              "type_id": "type:ImportExportOption"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param options If \"options\" is given, it exports OBJ according to options, not allowing user for selecting options in Export Dialog."
+          ],
+          "return_docs_raw": [
+            "@return Output file paths. It outputs the file paths of an OBJ file and multiple MTL files for colorways. If the value \"bSaveInZip\" in ImportExportOption is true, it outputs a file path of a zipped file. If an error occurs, return empty string. If filePath parameter is not given, output files will be created in CLO temporary folder."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "export_api.ExportOBJ#d6b8a6f36bf8a9c6",
+          "signature_normalized": "def ExportOBJ(_filePath : str) -> list[str]",
+          "signature_raw": "def ExportOBJ(_filePath : str) -> list[str]",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "list[str]",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportOBJ(_filePath : str) -> list[str]",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export OBJ file\n@param _filePath: output file path\n@return Output file paths. It outputs the file paths of an OBJ file and multiple MTL files for colorways. If the value \"bSaveInZip\" in ImportExportOption is true, it outputs a file path of a zipped file. If an error occurs, return empty string. If filePath parameter is not given, output files will be created in CLO temporary folder.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 177,
+                  "block": 17
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 288,
+                  "block": 17,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportOBJ()",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export OBJ file\n/// @param _filePath: output file path\n/// @return Output file paths. It outputs the file paths of an OBJ file and multiple MTL files for colorways. If the value \"bSaveInZip\" in ImportExportOption is true, it outputs a file path of a zipped file. If an error occurs, return empty string. If filePath parameter is not given, output files will be created in CLO temporary folder.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 187,
+                    "block": 18
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 298,
+                    "block": 18,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "ImportExportOption",
+              "basis": "documentation_mention",
+              "status": "resolved",
+              "type_id": "type:ImportExportOption"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param _filePath: output file path"
+          ],
+          "return_docs_raw": [
+            "@return Output file paths. It outputs the file paths of an OBJ file and multiple MTL files for colorways. If the value \"bSaveInZip\" in ImportExportOption is true, it outputs a file path of a zipped file. If an error occurs, return empty string. If filePath parameter is not given, output files will be created in CLO temporary folder."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "export_api.ExportOBJ#8dc6594f0f98e142",
+          "signature_normalized": "def ExportOBJ(_options : ImportExportOption) -> list[str]",
+          "signature_raw": "def ExportOBJ(_options : ImportExportOption) -> list[str]",
+          "parameters": [
+            {
+              "raw": "_options : ImportExportOption",
+              "name": "_options",
+              "annotation_raw": "ImportExportOption"
+            }
+          ],
+          "return_raw": "list[str]",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportOBJ(_options : ImportExportOption) -> list[str]",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export OBJ file\n@param options: If \"options\" is given, it exports OBJ according to options, not allowing user for selecting options in Export Dialog.\n@return Output file paths. It outputs the file paths of an OBJ file and multiple MTL files for colorways. If the value \"bSaveInZip\" in ImportExportOption is true, it outputs a file path of a zipped file. If an error occurs, return empty string. If filePath parameter is not given, output files will be created in CLO temporary folder.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 198,
+                  "block": 19
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 310,
+                  "block": 19,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportOBJ(const Marvelous::ImportExportOption& _options)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export OBJ file\n/// @param options: If \"options\" is given, it exports OBJ according to options, not allowing user for selecting options in Export Dialog.\n/// @return Output file paths. It outputs the file paths of an OBJ file and multiple MTL files for colorways. If the value \"bSaveInZip\" in ImportExportOption is true, it outputs a file path of a zipped file. If an error occurs, return empty string. If filePath parameter is not given, output files will be created in CLO temporary folder.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 208,
+                    "block": 20
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 320,
+                    "block": 20,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "ImportExportOption",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:ImportExportOption"
+            },
+            {
+              "name": "ImportExportOption",
+              "basis": "documentation_mention",
+              "status": "resolved",
+              "type_id": "type:ImportExportOption"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param options: If \"options\" is given, it exports OBJ according to options, not allowing user for selecting options in Export Dialog."
+          ],
+          "return_docs_raw": [
+            "@return Output file paths. It outputs the file paths of an OBJ file and multiple MTL files for colorways. If the value \"bSaveInZip\" in ImportExportOption is true, it outputs a file path of a zipped file. If an error occurs, return empty string. If filePath parameter is not given, output files will be created in CLO temporary folder."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "export_api.ExportOBJ#027be050a6fd8bad",
+          "signature_normalized": "def ExportOBJ(_filePath : str, _options : ImportExportOption) -> list[str]",
+          "signature_raw": "def ExportOBJ(_filePath : str, _options : ImportExportOption) -> list[str]",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_options : ImportExportOption",
+              "name": "_options",
+              "annotation_raw": "ImportExportOption"
+            }
+          ],
+          "return_raw": "list[str]",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportOBJ(_filePath : str, _options : ImportExportOption) -> list[str]",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export OBJ file\n@param _filePath: output file path\n@param options: If \"options\" is given, it exports OBJ according to options, not allowing user for selecting options in Export Dialog.\n@return Output file paths. It outputs the file paths of an OBJ file and multiple MTL files for colorways. If the value \"bSaveInZip\" in ImportExportOption is true, it outputs a file path of a zipped file. If an error occurs, return empty string. If filePath parameter is not given, output files will be created in CLO temporary folder.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 219,
+                  "block": 21
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 332,
+                  "block": 21,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportOBJ(const string& _filePath, const Marvelous::ImportExportOption& _options)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export OBJ file\n/// @param _filePath: output file path\n/// @param options: If \"options\" is given, it exports OBJ according to options, not allowing user for selecting options in Export Dialog.\n/// @return Output file paths. It outputs the file paths of an OBJ file and multiple MTL files for colorways. If the value \"bSaveInZip\" in ImportExportOption is true, it outputs a file path of a zipped file. If an error occurs, return empty string. If filePath parameter is not given, output files will be created in CLO temporary folder.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 230,
+                    "block": 22
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 343,
+                    "block": 22,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "ImportExportOption",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:ImportExportOption"
+            },
+            {
+              "name": "ImportExportOption",
+              "basis": "documentation_mention",
+              "status": "resolved",
+              "type_id": "type:ImportExportOption"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param _filePath: output file path",
+            "@param options: If \"options\" is given, it exports OBJ according to options, not allowing user for selecting options in Export Dialog."
+          ],
+          "return_docs_raw": [
+            "@return Output file paths. It outputs the file paths of an OBJ file and multiple MTL files for colorways. If the value \"bSaveInZip\" in ImportExportOption is true, it outputs a file path of a zipped file. If an error occurs, return empty string. If filePath parameter is not given, output files will be created in CLO temporary folder."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3250 @@
+{
+  "kind": "types",
+  "records": [
+    {
+      "id": "type:MaterialBaseColorMapOptions",
+      "name": "MaterialBaseColorMapOptions",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nBase color (albedo) map configuration and its transformation.\n\"\"\"\nhas_map:bool                                     # A base color map texture is assigned. Default false.\nimage_path:str                                   # Source image file path of the assigned map. Read-only, empty when no map is assigned.\nrecolor_enabled:bool                             # Recolor toggle. Default false.\ndesaturate_enabled:bool                          # Desaturate toggle. Default false.\nswitch_enabled:bool                              # Switch (invert channels) toggle. Default false.\nshadow_intensity:int                             # Desaturate 'Shadow Intensity' (0-100). Applies when desaturate is on. Default 0.\nshadow_brightness:int                            # Desaturate 'Shadow Brightness' (a.k.a. shadow gray, 0-100). Applies when desaturate is on. Default 0.\ntransformation:MaterialMapTransformationOptions  # texture transform of the base color map; read by GetMaterialProperties, ignored by SetMaterialProperties",
+      "description_raw": "Base color (albedo) map configuration and its transformation.",
+      "members": [
+        {
+          "raw": "has_map:bool                                     # A base color map texture is assigned. Default false.",
+          "documentation_raw": "A base color map texture is assigned. Default false.",
+          "name": "has_map",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "image_path:str                                   # Source image file path of the assigned map. Read-only, empty when no map is assigned.",
+          "documentation_raw": "Source image file path of the assigned map. Read-only, empty when no map is assigned.",
+          "name": "image_path",
+          "kind": "field",
+          "annotation_raw": "str",
+          "type_references": []
+        },
+        {
+          "raw": "recolor_enabled:bool                             # Recolor toggle. Default false.",
+          "documentation_raw": "Recolor toggle. Default false.",
+          "name": "recolor_enabled",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "desaturate_enabled:bool                          # Desaturate toggle. Default false.",
+          "documentation_raw": "Desaturate toggle. Default false.",
+          "name": "desaturate_enabled",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "switch_enabled:bool                              # Switch (invert channels) toggle. Default false.",
+          "documentation_raw": "Switch (invert channels) toggle. Default false.",
+          "name": "switch_enabled",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "shadow_intensity:int                             # Desaturate 'Shadow Intensity' (0-100). Applies when desaturate is on. Default 0.",
+          "documentation_raw": "Desaturate 'Shadow Intensity' (0-100). Applies when desaturate is on. Default 0.",
+          "name": "shadow_intensity",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "shadow_brightness:int                            # Desaturate 'Shadow Brightness' (a.k.a. shadow gray, 0-100). Applies when desaturate is on. Default 0.",
+          "documentation_raw": "Desaturate 'Shadow Brightness' (a.k.a. shadow gray, 0-100). Applies when desaturate is on. Default 0.",
+          "name": "shadow_brightness",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "transformation:MaterialMapTransformationOptions  # texture transform of the base color map; read by GetMaterialProperties, ignored by SetMaterialProperties",
+          "documentation_raw": "texture transform of the base color map; read by GetMaterialProperties, ignored by SetMaterialProperties",
+          "name": "transformation",
+          "kind": "field",
+          "annotation_raw": "MaterialMapTransformationOptions",
+          "type_references": [
+            {
+              "name": "MaterialMapTransformationOptions",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:MaterialMapTransformationOptions"
+            }
+          ]
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 1060,
+              "block": 56
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 1121,
+              "block": 56,
+              "anchor": "materialbasecolormapoptions"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:MaterialBaseColorOptions",
+      "name": "MaterialBaseColorOptions",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nBase color value (hex/named color) plus its optional map.\n\"\"\"\ncolor_hex_or_name:str            # Base color as hex (#RRGGBB) or a named color. Default \"(None)\".\nmap:MaterialBaseColorMapOptions  # base color texture map: file, color options and transform",
+      "description_raw": "Base color value (hex/named color) plus its optional map.",
+      "members": [
+        {
+          "raw": "color_hex_or_name:str            # Base color as hex (#RRGGBB) or a named color. Default \"(None)\".",
+          "documentation_raw": "Base color as hex (#RRGGBB) or a named color. Default \"(None)\".",
+          "name": "color_hex_or_name",
+          "kind": "field",
+          "annotation_raw": "str",
+          "type_references": []
+        },
+        {
+          "raw": "map:MaterialBaseColorMapOptions  # base color texture map: file, color options and transform",
+          "documentation_raw": "base color texture map: file, color options and transform",
+          "name": "map",
+          "kind": "field",
+          "annotation_raw": "MaterialBaseColorMapOptions",
+          "type_references": [
+            {
+              "name": "MaterialBaseColorMapOptions",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:MaterialBaseColorMapOptions"
+            }
+          ]
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 1078,
+              "block": 57
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 1137,
+              "block": 57,
+              "anchor": "materialbasecoloroptions"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:MaterialContextOptions",
+      "name": "MaterialContextOptions",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nProperty-Editor context for a material get/set. Which fields are meaningful depends on the object type:\n- Fabric:  targetComponent (Front/Back/Side), textureMappingType, materialType\n- Graphic: printType, materialType (targetComponent = COMPONENT_NONE)\n- Button:  targetComponent (Button/Thread), materialType\n\"\"\"\ntargetComponent:MaterialTargetComponent  # Front/Back/Side or Button/Thread tab (COMPONENT_NONE for Graphics).\ntextureMappingType:int                   # 'Texture Mapping' dropdown (0: Repeat, 1: Unified).\nprintType:int                            # 'Print Type' dropdown for Graphics.\nmaterialType:str                         # 'Type' dropdown (e.g. \"Fabric_Matte\", \"PBR\").",
+      "description_raw": "Property-Editor context for a material get/set. Which fields are meaningful depends on the object type:\n- Fabric:  targetComponent (Front/Back/Side), textureMappingType, materialType\n- Graphic: printType, materialType (targetComponent = COMPONENT_NONE)\n- Button:  targetComponent (Button/Thread), materialType",
+      "members": [
+        {
+          "raw": "targetComponent:MaterialTargetComponent  # Front/Back/Side or Button/Thread tab (COMPONENT_NONE for Graphics).",
+          "documentation_raw": "Front/Back/Side or Button/Thread tab (COMPONENT_NONE for Graphics).",
+          "name": "targetComponent",
+          "kind": "field",
+          "annotation_raw": "MaterialTargetComponent",
+          "type_references": [
+            {
+              "name": "MaterialTargetComponent",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:MaterialTargetComponent"
+            }
+          ]
+        },
+        {
+          "raw": "textureMappingType:int                   # 'Texture Mapping' dropdown (0: Repeat, 1: Unified).",
+          "documentation_raw": "'Texture Mapping' dropdown (0: Repeat, 1: Unified).",
+          "name": "textureMappingType",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "printType:int                            # 'Print Type' dropdown for Graphics.",
+          "documentation_raw": "'Print Type' dropdown for Graphics.",
+          "name": "printType",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "materialType:str                         # 'Type' dropdown (e.g. \"Fabric_Matte\", \"PBR\").",
+          "documentation_raw": "'Type' dropdown (e.g. \"Fabric_Matte\", \"PBR\").",
+          "name": "materialType",
+          "kind": "field",
+          "annotation_raw": "str",
+          "type_references": []
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 1234,
+              "block": 67
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 1273,
+              "block": 67,
+              "anchor": "materialcontextoptions"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:MaterialDisplacementMapOptions",
+      "name": "MaterialDisplacementMapOptions",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nDisplacement map configuration.\n\"\"\"\nhas_displacement_map:bool   # A displacement map texture is assigned. Default false.\nimage_path:str              # Source image file path of the assigned map. Read-only, empty when no map is assigned.\namount_mm:float             # Displacement amount in millimeters. Default 0.\nshift_mm:float              # Displacement shift in millimeters. Default 0.\nclipping_mm:float           # Displacement clipping in millimeters. Default 0.\nparticle_distance_mm:float  # Particle distance in millimeters. Default 4.\nkeep_continuity:bool        # Keep continuity across seams. Default false.",
+      "description_raw": "Displacement map configuration.",
+      "members": [
+        {
+          "raw": "has_displacement_map:bool   # A displacement map texture is assigned. Default false.",
+          "documentation_raw": "A displacement map texture is assigned. Default false.",
+          "name": "has_displacement_map",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "image_path:str              # Source image file path of the assigned map. Read-only, empty when no map is assigned.",
+          "documentation_raw": "Source image file path of the assigned map. Read-only, empty when no map is assigned.",
+          "name": "image_path",
+          "kind": "field",
+          "annotation_raw": "str",
+          "type_references": []
+        },
+        {
+          "raw": "amount_mm:float             # Displacement amount in millimeters. Default 0.",
+          "documentation_raw": "Displacement amount in millimeters. Default 0.",
+          "name": "amount_mm",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "shift_mm:float              # Displacement shift in millimeters. Default 0.",
+          "documentation_raw": "Displacement shift in millimeters. Default 0.",
+          "name": "shift_mm",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "clipping_mm:float           # Displacement clipping in millimeters. Default 0.",
+          "documentation_raw": "Displacement clipping in millimeters. Default 0.",
+          "name": "clipping_mm",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "particle_distance_mm:float  # Particle distance in millimeters. Default 4.",
+          "documentation_raw": "Particle distance in millimeters. Default 4.",
+          "name": "particle_distance_mm",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "keep_continuity:bool        # Keep continuity across seams. Default false.",
+          "documentation_raw": "Keep continuity across seams. Default false.",
+          "name": "keep_continuity",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 1104,
+              "block": 59
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 1159,
+              "block": 59,
+              "anchor": "materialdisplacementmapoptions"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:MaterialFaceOptions",
+      "name": "MaterialFaceOptions",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nThe complete material stack for a single face (Front, Back, or Side).\n\"\"\"\ntexture_mapping:str                                     # Texture mapping mode (e.g. \"Repeat\", \"Unified\"). Default \"Repeat\".\ntype:str                                                # Material type (e.g. \"Fabric_Matte\", \"PBR\"). Default \"Fabric_Matte\".\nbase_color:MaterialBaseColorOptions                     # base color and its optional map\nnormal_map:MaterialNormalMapOptions                     # normal map: file, intensity and transform\ndisplacement_map:MaterialDisplacementMapOptions         # displacement map: file, amount, shift, clipping and particle distance\nopacity:MaterialOpacityOptions                          # opacity and its optional map\nreflection:MaterialReflectionOptions                    # reflection: roughness, reflection intensity, metalness and metalness map\nGetBaseColorMap() -> MaterialBaseColorMapOptions        # Flattened, read-only accessors for each texture map on this face. They hide the value+map\n                                                        # nesting - base color and opacity carry their map under a sub-struct, roughness and metalness\n                                                        # live under reflection - so a caller can fetch any map's details in a single call.\nGetNormalMap() -> MaterialNormalMapOptions              # read-only: the same as normal_map\nGetDisplacementMap() -> MaterialDisplacementMapOptions  # read-only: the same as displacement_map\nGetOpacityMap() -> MaterialOpacityMapOptions            # read-only: the same as opacity.map\nGetRoughnessMap() -> MaterialRoughnessOptions           # read-only: the same as reflection.roughness\nGetMetalnessMap() -> MaterialMetalnessMapOptions        # read-only: the same as reflection.metalness_map\nGetPresentMaps() -> list[str]                           # Names of every texture map currently assigned on this face, driven by CLO_MATERIAL_FACE_MAP_TABLE\n                                                        # so it stays in sync with the accessors above. e.g. returns [\"base_color\", \"normal\"] when only the\n                                                        # base color and normal maps have a texture assigned; an empty list when the face has no maps.",
+      "description_raw": "The complete material stack for a single face (Front, Back, or Side).",
+      "members": [
+        {
+          "raw": "texture_mapping:str                                     # Texture mapping mode (e.g. \"Repeat\", \"Unified\"). Default \"Repeat\".",
+          "documentation_raw": "Texture mapping mode (e.g. \"Repeat\", \"Unified\"). Default \"Repeat\".",
+          "name": "texture_mapping",
+          "kind": "field",
+          "annotation_raw": "str",
+          "type_references": []
+        },
+        {
+          "raw": "type:str                                                # Material type (e.g. \"Fabric_Matte\", \"PBR\"). Default \"Fabric_Matte\".",
+          "documentation_raw": "Material type (e.g. \"Fabric_Matte\", \"PBR\"). Default \"Fabric_Matte\".",
+          "name": "type",
+          "kind": "field",
+          "annotation_raw": "str",
+          "type_references": []
+        },
+        {
+          "raw": "base_color:MaterialBaseColorOptions                     # base color and its optional map",
+          "documentation_raw": "base color and its optional map",
+          "name": "base_color",
+          "kind": "field",
+          "annotation_raw": "MaterialBaseColorOptions",
+          "type_references": [
+            {
+              "name": "MaterialBaseColorOptions",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:MaterialBaseColorOptions"
+            }
+          ]
+        },
+        {
+          "raw": "normal_map:MaterialNormalMapOptions                     # normal map: file, intensity and transform",
+          "documentation_raw": "normal map: file, intensity and transform",
+          "name": "normal_map",
+          "kind": "field",
+          "annotation_raw": "MaterialNormalMapOptions",
+          "type_references": [
+            {
+              "name": "MaterialNormalMapOptions",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:MaterialNormalMapOptions"
+            }
+          ]
+        },
+        {
+          "raw": "displacement_map:MaterialDisplacementMapOptions         # displacement map: file, amount, shift, clipping and particle distance",
+          "documentation_raw": "displacement map: file, amount, shift, clipping and particle distance",
+          "name": "displacement_map",
+          "kind": "field",
+          "annotation_raw": "MaterialDisplacementMapOptions",
+          "type_references": [
+            {
+              "name": "MaterialDisplacementMapOptions",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:MaterialDisplacementMapOptions"
+            }
+          ]
+        },
+        {
+          "raw": "opacity:MaterialOpacityOptions                          # opacity and its optional map",
+          "documentation_raw": "opacity and its optional map",
+          "name": "opacity",
+          "kind": "field",
+          "annotation_raw": "MaterialOpacityOptions",
+          "type_references": [
+            {
+              "name": "MaterialOpacityOptions",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:MaterialOpacityOptions"
+            }
+          ]
+        },
+        {
+          "raw": "reflection:MaterialReflectionOptions                    # reflection: roughness, reflection intensity, metalness and metalness map",
+          "documentation_raw": "reflection: roughness, reflection intensity, metalness and metalness map",
+          "name": "reflection",
+          "kind": "field",
+          "annotation_raw": "MaterialReflectionOptions",
+          "type_references": [
+            {
+              "name": "MaterialReflectionOptions",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:MaterialReflectionOptions"
+            }
+          ]
+        },
+        {
+          "raw": "GetBaseColorMap() -> MaterialBaseColorMapOptions        # Flattened, read-only accessors for each texture map on this face. They hide the value+map\n                                                        # nesting - base color and opacity carry their map under a sub-struct, roughness and metalness\n                                                        # live under reflection - so a caller can fetch any map's details in a single call.",
+          "documentation_raw": "Flattened, read-only accessors for each texture map on this face. They hide the value+map\nnesting - base color and opacity carry their map under a sub-struct, roughness and metalness\nlive under reflection - so a caller can fetch any map's details in a single call.",
+          "name": "GetBaseColorMap",
+          "kind": "method",
+          "parameters": [],
+          "return_raw": "MaterialBaseColorMapOptions",
+          "type_references": [
+            {
+              "name": "MaterialBaseColorMapOptions",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:MaterialBaseColorMapOptions"
+            }
+          ]
+        },
+        {
+          "raw": "GetNormalMap() -> MaterialNormalMapOptions              # read-only: the same as normal_map",
+          "documentation_raw": "read-only: the same as normal_map",
+          "name": "GetNormalMap",
+          "kind": "method",
+          "parameters": [],
+          "return_raw": "MaterialNormalMapOptions",
+          "type_references": [
+            {
+              "name": "MaterialNormalMapOptions",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:MaterialNormalMapOptions"
+            }
+          ]
+        },
+        {
+          "raw": "GetDisplacementMap() -> MaterialDisplacementMapOptions  # read-only: the same as displacement_map",
+          "documentation_raw": "read-only: the same as displacement_map",
+          "name": "GetDisplacementMap",
+          "kind": "method",
+          "parameters": [],
+          "return_raw": "MaterialDisplacementMapOptions",
+          "type_references": [
+            {
+              "name": "MaterialDisplacementMapOptions",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:MaterialDisplacementMapOptions"
+            }
+          ]
+        },
+        {
+          "raw": "GetOpacityMap() -> MaterialOpacityMapOptions            # read-only: the same as opacity.map",
+          "documentation_raw": "read-only: the same as opacity.map",
+          "name": "GetOpacityMap",
+          "kind": "method",
+          "parameters": [],
+          "return_raw": "MaterialOpacityMapOptions",
+          "type_references": [
+            {
+              "name": "MaterialOpacityMapOptions",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:MaterialOpacityMapOptions"
+            }
+          ]
+        },
+        {
+          "raw": "GetRoughnessMap() -> MaterialRoughnessOptions           # read-only: the same as reflection.roughness",
+          "documentation_raw": "read-only: the same as reflection.roughness",
+          "name": "GetRoughnessMap",
+          "kind": "method",
+          "parameters": [],
+          "return_raw": "MaterialRoughnessOptions",
+          "type_references": [
+            {
+              "name": "MaterialRoughnessOptions",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:MaterialRoughnessOptions"
+            }
+          ]
+        },
+        {
+          "raw": "GetMetalnessMap() -> MaterialMetalnessMapOptions        # read-only: the same as reflection.metalness_map",
+          "documentation_raw": "read-only: the same as reflection.metalness_map",
+          "name": "GetMetalnessMap",
+          "kind": "method",
+          "parameters": [],
+          "return_raw": "MaterialMetalnessMapOptions",
+          "type_references": [
+            {
+              "name": "MaterialMetalnessMapOptions",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:MaterialMetalnessMapOptions"
+            }
+          ]
+        },
+        {
+          "raw": "GetPresentMaps() -> list[str]                           # Names of every texture map currently assigned on this face, driven by CLO_MATERIAL_FACE_MAP_TABLE\n                                                        # so it stays in sync with the accessors above. e.g. returns [\"base_color\", \"normal\"] when only the\n                                                        # base color and normal maps have a texture assigned; an empty list when the face has no maps.",
+          "documentation_raw": "Names of every texture map currently assigned on this face, driven by CLO_MATERIAL_FACE_MAP_TABLE\nso it stays in sync with the accessors above. e.g. returns [\"base_color\", \"normal\"] when only the\nbase color and normal maps have a texture assigned; an empty list when the face has no maps.",
+          "name": "GetPresentMaps",
+          "kind": "method",
+          "parameters": [],
+          "return_raw": "list[str]",
+          "type_references": []
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 1189,
+              "block": 65
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 1232,
+              "block": 65,
+              "anchor": "materialfaceoptions"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:MaterialMapTransformationOptions",
+      "name": "MaterialMapTransformationOptions",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nTexture transform (rotate/scale/translate) shared by every material map that supports transformation.\n\"\"\"\nangle:float           # Rotation angle in degrees. Default 0.\nwidth_mm:float        # Width in millimeters. Default 0 (use width_percent instead).\nwidth_percent:float   # Width as a percentage (100 = original size). Default 100.\nheight_mm:float       # Height in millimeters. Default 0 (use height_percent instead).\nheight_percent:float  # Height as a percentage (100 = original size). Default 100.\naspect_ratio_on:bool  # Keep width/height aspect ratio locked while scaling. Default true.\nposition_x_mm:float   # Horizontal offset in millimeters. Default 0.\nposition_y_mm:float   # Vertical offset in millimeters. Default 0.",
+      "description_raw": "Texture transform (rotate/scale/translate) shared by every material map that supports transformation.",
+      "members": [
+        {
+          "raw": "angle:float           # Rotation angle in degrees. Default 0.",
+          "documentation_raw": "Rotation angle in degrees. Default 0.",
+          "name": "angle",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "width_mm:float        # Width in millimeters. Default 0 (use width_percent instead).",
+          "documentation_raw": "Width in millimeters. Default 0 (use width_percent instead).",
+          "name": "width_mm",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "width_percent:float   # Width as a percentage (100 = original size). Default 100.",
+          "documentation_raw": "Width as a percentage (100 = original size). Default 100.",
+          "name": "width_percent",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "height_mm:float       # Height in millimeters. Default 0 (use height_percent instead).",
+          "documentation_raw": "Height in millimeters. Default 0 (use height_percent instead).",
+          "name": "height_mm",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "height_percent:float  # Height as a percentage (100 = original size). Default 100.",
+          "documentation_raw": "Height as a percentage (100 = original size). Default 100.",
+          "name": "height_percent",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "aspect_ratio_on:bool  # Keep width/height aspect ratio locked while scaling. Default true.",
+          "documentation_raw": "Keep width/height aspect ratio locked while scaling. Default true.",
+          "name": "aspect_ratio_on",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "position_x_mm:float   # Horizontal offset in millimeters. Default 0.",
+          "documentation_raw": "Horizontal offset in millimeters. Default 0.",
+          "name": "position_x_mm",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "position_y_mm:float   # Vertical offset in millimeters. Default 0.",
+          "documentation_raw": "Vertical offset in millimeters. Default 0.",
+          "name": "position_y_mm",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 1042,
+              "block": 55
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 1105,
+              "block": 55,
+              "anchor": "materialmaptransformationoptions"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:MaterialMetalnessMapOptions",
+      "name": "MaterialMetalnessMapOptions",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nMetalness map configuration and its transformation.\n\"\"\"\nhas_map:bool                                     # A metalness map texture is assigned. Default false.\nimage_path:str                                   # Source image file path of the assigned map. Read-only, empty when no map is assigned.\ntransformation:MaterialMapTransformationOptions  # texture transform of the metalness map; read by GetMaterialProperties, ignored by SetMaterialProperties",
+      "description_raw": "Metalness map configuration and its transformation.",
+      "members": [
+        {
+          "raw": "has_map:bool                                     # A metalness map texture is assigned. Default false.",
+          "documentation_raw": "A metalness map texture is assigned. Default false.",
+          "name": "has_map",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "image_path:str                                   # Source image file path of the assigned map. Read-only, empty when no map is assigned.",
+          "documentation_raw": "Source image file path of the assigned map. Read-only, empty when no map is assigned.",
+          "name": "image_path",
+          "kind": "field",
+          "annotation_raw": "str",
+          "type_references": []
+        },
+        {
+          "raw": "transformation:MaterialMapTransformationOptions  # texture transform of the metalness map; read by GetMaterialProperties, ignored by SetMaterialProperties",
+          "documentation_raw": "texture transform of the metalness map; read by GetMaterialProperties, ignored by SetMaterialProperties",
+          "name": "transformation",
+          "kind": "field",
+          "annotation_raw": "MaterialMapTransformationOptions",
+          "type_references": [
+            {
+              "name": "MaterialMapTransformationOptions",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:MaterialMapTransformationOptions"
+            }
+          ]
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 1162,
+              "block": 63
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 1209,
+              "block": 63,
+              "anchor": "materialmetalnessmapoptions"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:MaterialNormalMapOptions",
+      "name": "MaterialNormalMapOptions",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nNormal map configuration.\n\"\"\"\nhas_normal_map:bool                              # A normal map texture is assigned. Default false.\nimage_path:str                                   # Source image file path of the assigned map. Read-only, empty when no map is assigned.\nintensity:int                                    # Normal map intensity (0-100). Default 50.\ntransformation:MaterialMapTransformationOptions  # texture transform of the normal map; read by GetMaterialProperties, ignored by SetMaterialProperties",
+      "description_raw": "Normal map configuration.",
+      "members": [
+        {
+          "raw": "has_normal_map:bool                              # A normal map texture is assigned. Default false.",
+          "documentation_raw": "A normal map texture is assigned. Default false.",
+          "name": "has_normal_map",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "image_path:str                                   # Source image file path of the assigned map. Read-only, empty when no map is assigned.",
+          "documentation_raw": "Source image file path of the assigned map. Read-only, empty when no map is assigned.",
+          "name": "image_path",
+          "kind": "field",
+          "annotation_raw": "str",
+          "type_references": []
+        },
+        {
+          "raw": "intensity:int                                    # Normal map intensity (0-100). Default 50.",
+          "documentation_raw": "Normal map intensity (0-100). Default 50.",
+          "name": "intensity",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "transformation:MaterialMapTransformationOptions  # texture transform of the normal map; read by GetMaterialProperties, ignored by SetMaterialProperties",
+          "documentation_raw": "texture transform of the normal map; read by GetMaterialProperties, ignored by SetMaterialProperties",
+          "name": "transformation",
+          "kind": "field",
+          "annotation_raw": "MaterialMapTransformationOptions",
+          "type_references": [
+            {
+              "name": "MaterialMapTransformationOptions",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:MaterialMapTransformationOptions"
+            }
+          ]
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 1090,
+              "block": 58
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 1147,
+              "block": 58,
+              "anchor": "materialnormalmapoptions"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:MaterialOpacityMapOptions",
+      "name": "MaterialOpacityMapOptions",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nOpacity map configuration and its transformation.\n\"\"\"\nhas_map:bool                                     # An opacity map texture is assigned. Default false.\nimage_path:str                                   # Source image file path of the assigned map. Read-only, empty when no map is assigned.\nmode:str                                         # Opacity map mode (e.g. \"RGB\", \"Alpha\"). Default \"RGB\".\ntransformation:MaterialMapTransformationOptions  # texture transform of the opacity map; read by GetMaterialProperties, ignored by SetMaterialProperties",
+      "description_raw": "Opacity map configuration and its transformation.",
+      "members": [
+        {
+          "raw": "has_map:bool                                     # An opacity map texture is assigned. Default false.",
+          "documentation_raw": "An opacity map texture is assigned. Default false.",
+          "name": "has_map",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "image_path:str                                   # Source image file path of the assigned map. Read-only, empty when no map is assigned.",
+          "documentation_raw": "Source image file path of the assigned map. Read-only, empty when no map is assigned.",
+          "name": "image_path",
+          "kind": "field",
+          "annotation_raw": "str",
+          "type_references": []
+        },
+        {
+          "raw": "mode:str                                         # Opacity map mode (e.g. \"RGB\", \"Alpha\"). Default \"RGB\".",
+          "documentation_raw": "Opacity map mode (e.g. \"RGB\", \"Alpha\"). Default \"RGB\".",
+          "name": "mode",
+          "kind": "field",
+          "annotation_raw": "str",
+          "type_references": []
+        },
+        {
+          "raw": "transformation:MaterialMapTransformationOptions  # texture transform of the opacity map; read by GetMaterialProperties, ignored by SetMaterialProperties",
+          "documentation_raw": "texture transform of the opacity map; read by GetMaterialProperties, ignored by SetMaterialProperties",
+          "name": "transformation",
+          "kind": "field",
+          "annotation_raw": "MaterialMapTransformationOptions",
+          "type_references": [
+            {
+              "name": "MaterialMapTransformationOptions",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:MaterialMapTransformationOptions"
+            }
+          ]
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 1121,
+              "block": 60
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 1174,
+              "block": 60,
+              "anchor": "materialopacitymapoptions"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:MaterialOpacityOptions",
+      "name": "MaterialOpacityOptions",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nOpacity value plus its optional map.\n\"\"\"\nopacity_value:int              # Opacity percentage (0-100). Default 100.\nmap:MaterialOpacityMapOptions  # opacity texture map: file, channel and transform",
+      "description_raw": "Opacity value plus its optional map.",
+      "members": [
+        {
+          "raw": "opacity_value:int              # Opacity percentage (0-100). Default 100.",
+          "documentation_raw": "Opacity percentage (0-100). Default 100.",
+          "name": "opacity_value",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "map:MaterialOpacityMapOptions  # opacity texture map: file, channel and transform",
+          "documentation_raw": "opacity texture map: file, channel and transform",
+          "name": "map",
+          "kind": "field",
+          "annotation_raw": "MaterialOpacityMapOptions",
+          "type_references": [
+            {
+              "name": "MaterialOpacityMapOptions",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:MaterialOpacityMapOptions"
+            }
+          ]
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 1135,
+              "block": 61
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 1186,
+              "block": 61,
+              "anchor": "materialopacityoptions"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:MaterialPropertyOptions",
+      "name": "MaterialPropertyOptions",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nFull material property payload exposed through the SDK. Groups the per-face stacks (Front/Back/Side)\nwith the physical-property settings so an entire material can be read or written in one call.\ncontextOptions (added in DEV-20805) selects which component tab / mapping the payload applies to and\nis carried inside this struct so the get/set signatures stay symmetric.\n\"\"\"\ncontextOptions:MaterialContextOptions             # which component, mapping and material type the call targets; the getter reads only this field\nmaterial_type:str                                 # Overall material type (e.g. \"PBR\"). Default \"PBR\".\nfront:MaterialFaceOptions                         # front face material; also used for buttons, threads and single-faced objects such as graphics and trims\nback:MaterialFaceOptions                          # back face material; used when contextOptions.targetComponent is COMPONENT_BACK\nside:MaterialFaceOptions                          # side face material; used when contextOptions.targetComponent is COMPONENT_SIDE\nphysical_type:str                                 # Physical property type (e.g. \"Fabric\"). Default \"Fabric\".\nphysical_preset:str                               # Physical property preset name. Default \"Custom\".\nphysical_thickness_mm:float                       # Physical thickness in millimeters. Default 0.\nGetContext() -> MaterialContextOptions            # Read-only accessor for the Property-Editor context this payload targets (which component tab,\n                                                  # texture mapping and material type the front/back/side maps above belong to).\nGetFrontFaceOptions() -> MaterialFaceOptions      # Read-only accessors for each per-face material stack.\nGetBackFaceOptions() -> MaterialFaceOptions       # read-only: the same as back\nGetSideFaceOptions() -> MaterialFaceOptions       # read-only: the same as side\nGetSelectedFaceOptions() -> MaterialFaceOptions*  # Returns the per-face material stack for the face currently selected by contextOptions\n                                                  # (targetComponent). Only COMPONENT_FRONT / COMPONENT_BACK / COMPONENT_SIDE map to a face;\n                                                  # COMPONENT_BUTTON / COMPONENT_THREAD / COMPONENT_NONE have no face and return nullptr.",
+      "description_raw": "Full material property payload exposed through the SDK. Groups the per-face stacks (Front/Back/Side)\nwith the physical-property settings so an entire material can be read or written in one call.\ncontextOptions (added in DEV-20805) selects which component tab / mapping the payload applies to and\nis carried inside this struct so the get/set signatures stay symmetric.",
+      "members": [
+        {
+          "raw": "contextOptions:MaterialContextOptions             # which component, mapping and material type the call targets; the getter reads only this field",
+          "documentation_raw": "which component, mapping and material type the call targets; the getter reads only this field",
+          "name": "contextOptions",
+          "kind": "field",
+          "annotation_raw": "MaterialContextOptions",
+          "type_references": [
+            {
+              "name": "MaterialContextOptions",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:MaterialContextOptions"
+            }
+          ]
+        },
+        {
+          "raw": "material_type:str                                 # Overall material type (e.g. \"PBR\"). Default \"PBR\".",
+          "documentation_raw": "Overall material type (e.g. \"PBR\"). Default \"PBR\".",
+          "name": "material_type",
+          "kind": "field",
+          "annotation_raw": "str",
+          "type_references": []
+        },
+        {
+          "raw": "front:MaterialFaceOptions                         # front face material; also used for buttons, threads and single-faced objects such as graphics and trims",
+          "documentation_raw": "front face material; also used for buttons, threads and single-faced objects such as graphics and trims",
+          "name": "front",
+          "kind": "field",
+          "annotation_raw": "MaterialFaceOptions",
+          "type_references": [
+            {
+              "name": "MaterialFaceOptions",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:MaterialFaceOptions"
+            }
+          ]
+        },
+        {
+          "raw": "back:MaterialFaceOptions                          # back face material; used when contextOptions.targetComponent is COMPONENT_BACK",
+          "documentation_raw": "back face material; used when contextOptions.targetComponent is COMPONENT_BACK",
+          "name": "back",
+          "kind": "field",
+          "annotation_raw": "MaterialFaceOptions",
+          "type_references": [
+            {
+              "name": "MaterialFaceOptions",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:MaterialFaceOptions"
+            }
+          ]
+        },
+        {
+          "raw": "side:MaterialFaceOptions                          # side face material; used when contextOptions.targetComponent is COMPONENT_SIDE",
+          "documentation_raw": "side face material; used when contextOptions.targetComponent is COMPONENT_SIDE",
+          "name": "side",
+          "kind": "field",
+          "annotation_raw": "MaterialFaceOptions",
+          "type_references": [
+            {
+              "name": "MaterialFaceOptions",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:MaterialFaceOptions"
+            }
+          ]
+        },
+        {
+          "raw": "physical_type:str                                 # Physical property type (e.g. \"Fabric\"). Default \"Fabric\".",
+          "documentation_raw": "Physical property type (e.g. \"Fabric\"). Default \"Fabric\".",
+          "name": "physical_type",
+          "kind": "field",
+          "annotation_raw": "str",
+          "type_references": []
+        },
+        {
+          "raw": "physical_preset:str                               # Physical property preset name. Default \"Custom\".",
+          "documentation_raw": "Physical property preset name. Default \"Custom\".",
+          "name": "physical_preset",
+          "kind": "field",
+          "annotation_raw": "str",
+          "type_references": []
+        },
+        {
+          "raw": "physical_thickness_mm:float                       # Physical thickness in millimeters. Default 0.",
+          "documentation_raw": "Physical thickness in millimeters. Default 0.",
+          "name": "physical_thickness_mm",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "GetContext() -> MaterialContextOptions            # Read-only accessor for the Property-Editor context this payload targets (which component tab,\n                                                  # texture mapping and material type the front/back/side maps above belong to).",
+          "documentation_raw": "Read-only accessor for the Property-Editor context this payload targets (which component tab,\ntexture mapping and material type the front/back/side maps above belong to).",
+          "name": "GetContext",
+          "kind": "method",
+          "parameters": [],
+          "return_raw": "MaterialContextOptions",
+          "type_references": [
+            {
+              "name": "MaterialContextOptions",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:MaterialContextOptions"
+            }
+          ]
+        },
+        {
+          "raw": "GetFrontFaceOptions() -> MaterialFaceOptions      # Read-only accessors for each per-face material stack.",
+          "documentation_raw": "Read-only accessors for each per-face material stack.",
+          "name": "GetFrontFaceOptions",
+          "kind": "method",
+          "parameters": [],
+          "return_raw": "MaterialFaceOptions",
+          "type_references": [
+            {
+              "name": "MaterialFaceOptions",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:MaterialFaceOptions"
+            }
+          ]
+        },
+        {
+          "raw": "GetBackFaceOptions() -> MaterialFaceOptions       # read-only: the same as back",
+          "documentation_raw": "read-only: the same as back",
+          "name": "GetBackFaceOptions",
+          "kind": "method",
+          "parameters": [],
+          "return_raw": "MaterialFaceOptions",
+          "type_references": [
+            {
+              "name": "MaterialFaceOptions",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:MaterialFaceOptions"
+            }
+          ]
+        },
+        {
+          "raw": "GetSideFaceOptions() -> MaterialFaceOptions       # read-only: the same as side",
+          "documentation_raw": "read-only: the same as side",
+          "name": "GetSideFaceOptions",
+          "kind": "method",
+          "parameters": [],
+          "return_raw": "MaterialFaceOptions",
+          "type_references": [
+            {
+              "name": "MaterialFaceOptions",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:MaterialFaceOptions"
+            }
+          ]
+        },
+        {
+          "raw": "GetSelectedFaceOptions() -> MaterialFaceOptions*  # Returns the per-face material stack for the face currently selected by contextOptions\n                                                  # (targetComponent). Only COMPONENT_FRONT / COMPONENT_BACK / COMPONENT_SIDE map to a face;\n                                                  # COMPONENT_BUTTON / COMPONENT_THREAD / COMPONENT_NONE have no face and return nullptr.",
+          "documentation_raw": "Returns the per-face material stack for the face currently selected by contextOptions\n(targetComponent). Only COMPONENT_FRONT / COMPONENT_BACK / COMPONENT_SIDE map to a face;\nCOMPONENT_BUTTON / COMPONENT_THREAD / COMPONENT_NONE have no face and return nullptr.",
+          "name": "GetSelectedFaceOptions",
+          "kind": "method",
+          "parameters": [],
+          "return_raw": "MaterialFaceOptions*",
+          "type_references": [
+            {
+              "name": "MaterialFaceOptions",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:MaterialFaceOptions"
+            }
+          ]
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 1251,
+              "block": 68
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 1288,
+              "block": 68,
+              "anchor": "materialpropertyoptions"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:MaterialReflectionOptions",
+      "name": "MaterialReflectionOptions",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nReflection stack: roughness, reflection/metalness intensities and the metalness map.\n\"\"\"\nroughness:MaterialRoughnessOptions         # roughness: value or map, map file, intensity and invert\nreflection_intensity:int                   # Reflection intensity (0-100). Default 0.\nmetalness:int                              # Metalness value (0-100). Default 0.\nmetalness_map:MaterialMetalnessMapOptions  # metalness texture map: file and transform",
+      "description_raw": "Reflection stack: roughness, reflection/metalness intensities and the metalness map.",
+      "members": [
+        {
+          "raw": "roughness:MaterialRoughnessOptions         # roughness: value or map, map file, intensity and invert",
+          "documentation_raw": "roughness: value or map, map file, intensity and invert",
+          "name": "roughness",
+          "kind": "field",
+          "annotation_raw": "MaterialRoughnessOptions",
+          "type_references": [
+            {
+              "name": "MaterialRoughnessOptions",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:MaterialRoughnessOptions"
+            }
+          ]
+        },
+        {
+          "raw": "reflection_intensity:int                   # Reflection intensity (0-100). Default 0.",
+          "documentation_raw": "Reflection intensity (0-100). Default 0.",
+          "name": "reflection_intensity",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "metalness:int                              # Metalness value (0-100). Default 0.",
+          "documentation_raw": "Metalness value (0-100). Default 0.",
+          "name": "metalness",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "metalness_map:MaterialMetalnessMapOptions  # metalness texture map: file and transform",
+          "documentation_raw": "metalness texture map: file and transform",
+          "name": "metalness_map",
+          "kind": "field",
+          "annotation_raw": "MaterialMetalnessMapOptions",
+          "type_references": [
+            {
+              "name": "MaterialMetalnessMapOptions",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:MaterialMetalnessMapOptions"
+            }
+          ]
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 1175,
+              "block": 64
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 1220,
+              "block": 64,
+              "anchor": "materialreflectionoptions"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:MaterialRoughnessOptions",
+      "name": "MaterialRoughnessOptions",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nRoughness (glossiness) configuration.\n\"\"\"\ntype:str           # Roughness source: \"Value\" or \"Map\". Default \"Value\".\nhas_map:bool       # A roughness map texture is assigned. Default false.\nimage_path:str     # Source image file path of the assigned map. Read-only, empty when no map is assigned.\nmap_intensity:int  # Roughness map intensity (0-100). Default 100.\ninvert:bool        # Invert the roughness map. Default false.",
+      "description_raw": "Roughness (glossiness) configuration.",
+      "members": [
+        {
+          "raw": "type:str           # Roughness source: \"Value\" or \"Map\". Default \"Value\".",
+          "documentation_raw": "Roughness source: \"Value\" or \"Map\". Default \"Value\".",
+          "name": "type",
+          "kind": "field",
+          "annotation_raw": "str",
+          "type_references": []
+        },
+        {
+          "raw": "has_map:bool       # A roughness map texture is assigned. Default false.",
+          "documentation_raw": "A roughness map texture is assigned. Default false.",
+          "name": "has_map",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "image_path:str     # Source image file path of the assigned map. Read-only, empty when no map is assigned.",
+          "documentation_raw": "Source image file path of the assigned map. Read-only, empty when no map is assigned.",
+          "name": "image_path",
+          "kind": "field",
+          "annotation_raw": "str",
+          "type_references": []
+        },
+        {
+          "raw": "map_intensity:int  # Roughness map intensity (0-100). Default 100.",
+          "documentation_raw": "Roughness map intensity (0-100). Default 100.",
+          "name": "map_intensity",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "invert:bool        # Invert the roughness map. Default false.",
+          "documentation_raw": "Invert the roughness map. Default false.",
+          "name": "invert",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 1147,
+              "block": 62
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 1196,
+              "block": 62,
+              "anchor": "materialroughnessoptions"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:MaterialTargetComponent",
+      "name": "MaterialTargetComponent",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nThe sub-component tab a material operation targets. Fabric objects expose Front/Back/Side; Button\nobjects expose Button/Thread; Graphics and Avatars have no tabs (COMPONENT_NONE).\n\"\"\"\nCOMPONENT_FRONT = 0   # Fabric front face\nCOMPONENT_BACK = 1    # Fabric back face\nCOMPONENT_SIDE = 2    # Fabric side face\nCOMPONENT_BUTTON = 3  # Button body\nCOMPONENT_THREAD = 4  # Button thread\nCOMPONENT_NONE = -1   # Graphics, Avatar (no component tabs)",
+      "description_raw": "The sub-component tab a material operation targets. Fabric objects expose Front/Back/Side; Button\nobjects expose Button/Thread; Graphics and Avatars have no tabs (COMPONENT_NONE).",
+      "members": [
+        {
+          "raw": "COMPONENT_FRONT = 0   # Fabric front face",
+          "documentation_raw": "Fabric front face",
+          "name": "COMPONENT_FRONT",
+          "kind": "enum_value",
+          "value_raw": "0",
+          "type_references": []
+        },
+        {
+          "raw": "COMPONENT_BACK = 1    # Fabric back face",
+          "documentation_raw": "Fabric back face",
+          "name": "COMPONENT_BACK",
+          "kind": "enum_value",
+          "value_raw": "1",
+          "type_references": []
+        },
+        {
+          "raw": "COMPONENT_SIDE = 2    # Fabric side face",
+          "documentation_raw": "Fabric side face",
+          "name": "COMPONENT_SIDE",
+          "kind": "enum_value",
+          "value_raw": "2",
+          "type_references": []
+        },
+        {
+          "raw": "COMPONENT_BUTTON = 3  # Button body",
+          "documentation_raw": "Button body",
+          "name": "COMPONENT_BUTTON",
+          "kind": "enum_value",
+          "value_raw": "3",
+          "type_references": []
+        },
+        {
+          "raw": "COMPONENT_THREAD = 4  # Button thread",
+          "documentation_raw": "Button thread",
+          "name": "COMPONENT_THREAD",
+          "kind": "enum_value",
+          "value_raw": "4",
+          "type_references": []
+        },
+        {
+          "raw": "COMPONENT_NONE = -1   # Graphics, Avatar (no component tabs)",
+          "documentation_raw": "Graphics, Avatar (no component tabs)",
+          "name": "COMPONENT_NONE",
+          "kind": "enum_value",
+          "value_raw": "-1",
+          "type_references": []
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 1217,
+              "block": 66
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 1258,
+              "block": 66,
+              "anchor": "materialtargetcomponent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:MimeData",
+      "name": "MimeData",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nMimeData structure for form-data type\n\"\"\"\nmimeType:str   # MIME type\nmimeNmae:str   # MIME field name\nmimeValue:str  # MIME value",
+      "description_raw": "MimeData structure for form-data type",
+      "members": [
+        {
+          "raw": "mimeType:str   # MIME type",
+          "documentation_raw": "MIME type",
+          "name": "mimeType",
+          "kind": "field",
+          "annotation_raw": "str",
+          "type_references": []
+        },
+        {
+          "raw": "mimeNmae:str   # MIME field name",
+          "documentation_raw": "MIME field name",
+          "name": "mimeNmae",
+          "kind": "field",
+          "annotation_raw": "str",
+          "type_references": []
+        },
+        {
+          "raw": "mimeValue:str  # MIME value",
+          "documentation_raw": "MIME value",
+          "name": "mimeValue",
+          "kind": "field",
+          "annotation_raw": "str",
+          "type_references": []
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 471,
+              "block": 22
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 600,
+              "block": 22,
+              "anchor": "mimedata"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:OBJECT_BROWSER_CATEGORY",
+      "name": "OBJECT_BROWSER_CATEGORY",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nObject Browser style category that an Object Browser API operation targets.\nUsed by every ObjectBrowserAPI function to select which style list (Fabric, Button, ...)\nthe given object UID belongs to.\n\"\"\"\nOB_FABRIC = 0      # Fabric style list\nOB_BUTTON = 1      # Button (head) style list\nOB_TOPSTITCH = 2   # Topstitch style list\nOB_TRIM = 3        # Trim style list\nOB_ZIPPER = 4      # Zipper style list\nOB_GRAPHIC = 5     # Graphic style list\nOB_BUTTONHOLE = 6  # Buttonhole style list\nOB_PUCKERING = 7   # Puckering style list",
+      "description_raw": "Object Browser style category that an Object Browser API operation targets.\nUsed by every ObjectBrowserAPI function to select which style list (Fabric, Button, ...)\nthe given object UID belongs to.",
+      "members": [
+        {
+          "raw": "OB_FABRIC = 0      # Fabric style list",
+          "documentation_raw": "Fabric style list",
+          "name": "OB_FABRIC",
+          "kind": "enum_value",
+          "value_raw": "0",
+          "type_references": []
+        },
+        {
+          "raw": "OB_BUTTON = 1      # Button (head) style list",
+          "documentation_raw": "Button (head) style list",
+          "name": "OB_BUTTON",
+          "kind": "enum_value",
+          "value_raw": "1",
+          "type_references": []
+        },
+        {
+          "raw": "OB_TOPSTITCH = 2   # Topstitch style list",
+          "documentation_raw": "Topstitch style list",
+          "name": "OB_TOPSTITCH",
+          "kind": "enum_value",
+          "value_raw": "2",
+          "type_references": []
+        },
+        {
+          "raw": "OB_TRIM = 3        # Trim style list",
+          "documentation_raw": "Trim style list",
+          "name": "OB_TRIM",
+          "kind": "enum_value",
+          "value_raw": "3",
+          "type_references": []
+        },
+        {
+          "raw": "OB_ZIPPER = 4      # Zipper style list",
+          "documentation_raw": "Zipper style list",
+          "name": "OB_ZIPPER",
+          "kind": "enum_value",
+          "value_raw": "4",
+          "type_references": []
+        },
+        {
+          "raw": "OB_GRAPHIC = 5     # Graphic style list",
+          "documentation_raw": "Graphic style list",
+          "name": "OB_GRAPHIC",
+          "kind": "enum_value",
+          "value_raw": "5",
+          "type_references": []
+        },
+        {
+          "raw": "OB_BUTTONHOLE = 6  # Buttonhole style list",
+          "documentation_raw": "Buttonhole style list",
+          "name": "OB_BUTTONHOLE",
+          "kind": "enum_value",
+          "value_raw": "6",
+          "type_references": []
+        },
+        {
+          "raw": "OB_PUCKERING = 7   # Puckering style list",
+          "documentation_raw": "Puckering style list",
+          "name": "OB_PUCKERING",
+          "kind": "enum_value",
+          "value_raw": "7",
+          "type_references": []
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 21,
+              "block": 2
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 190,
+              "block": 2,
+              "anchor": "object-browser-category"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:ObjRegisterOptions",
+      "name": "ObjRegisterOptions",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nFull option set for GenerateZippersFromObj, mirroring all settings in the\n\"Register OBJ\" dialog (DialogRegisterZipperObject). Supports all 7 zipper part types:\nSlider, Puller, Slider+Puller, Teeth, Top Stopper, Bottom Open Stopper, Bottom Closed Stopper.\n\"\"\"\nobjectType:ZipperObjectType  # Zipper part type. Determines the output file format.\nobjFilePath:str              # Full path to the primary OBJ file.\nsecondObjFilePath:str        # Full path to the secondary OBJ file. Required for ZIPPER_OBJECT_TOP_STOPPER and ZIPPER_OBJECT_BOTTOM_OPEN_STOPPER.\nsliderMeshNames:list[str]    # OBJ group names to assign as Slider mesh(es). Empty list triggers auto-assignment. (ZIPPER_OBJECT_SLIDER_PULLER only)\npullerMeshNames:list[str]    # OBJ group names to assign as Puller mesh(es). Empty list triggers auto-assignment. (ZIPPER_OBJECT_SLIDER_PULLER only)\nscaleUnit:ZipperScaleUnit    # Measurement unit. Combined with scaleValue to compute the final scale factor.\nscaleValue:double            # Scale percentage (e.g., 100.0 = 100%). Multiplied by the unit factor (e.g., 0.01 for MM yields 1.0 at 100%).\naxisX:int                    # OBJ axis mapped to CLO X (0=X, 1=Y, 2=Z). Default: 0.\naxisY:int                    # OBJ axis mapped to CLO Y (0=X, 1=Y, 2=Z). Default: 1.\naxisZ:int                    # OBJ axis mapped to CLO Z (0=X, 1=Y, 2=Z). Default: 2.\ninvertX:bool                 # Invert the mapped X axis. Default: false.\ninvertY:bool                 # Invert the mapped Y axis. Default: false.\ninvertZ:bool                 # Invert the mapped Z axis. Default: false.\npullerPositionX:float        # Puller anchor X position in the zipper coordinate system. (ZIPPER_OBJECT_SLIDER type only)\npullerPositionY:float        # Puller anchor Y position in the zipper coordinate system. (ZIPPER_OBJECT_SLIDER type only)\npullerPositionZ:float        # Puller anchor Z position in the zipper coordinate system. (ZIPPER_OBJECT_SLIDER type only)\nteethSpace:double            # Spacing between zipper teeth rows in CLO units. (ZIPPER_OBJECT_TEETH type only) Default: 0.0.\naddToObjectBrowser:bool      # If true, refreshes the Object Browser asset list after saving so the new preset appears in the dropdown.",
+      "description_raw": "Full option set for GenerateZippersFromObj, mirroring all settings in the\n\"Register OBJ\" dialog (DialogRegisterZipperObject). Supports all 7 zipper part types:\nSlider, Puller, Slider+Puller, Teeth, Top Stopper, Bottom Open Stopper, Bottom Closed Stopper.",
+      "members": [
+        {
+          "raw": "objectType:ZipperObjectType  # Zipper part type. Determines the output file format.",
+          "documentation_raw": "Zipper part type. Determines the output file format.",
+          "name": "objectType",
+          "kind": "field",
+          "annotation_raw": "ZipperObjectType",
+          "type_references": [
+            {
+              "name": "ZipperObjectType",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:ZipperObjectType"
+            }
+          ]
+        },
+        {
+          "raw": "objFilePath:str              # Full path to the primary OBJ file.",
+          "documentation_raw": "Full path to the primary OBJ file.",
+          "name": "objFilePath",
+          "kind": "field",
+          "annotation_raw": "str",
+          "type_references": []
+        },
+        {
+          "raw": "secondObjFilePath:str        # Full path to the secondary OBJ file. Required for ZIPPER_OBJECT_TOP_STOPPER and ZIPPER_OBJECT_BOTTOM_OPEN_STOPPER.",
+          "documentation_raw": "Full path to the secondary OBJ file. Required for ZIPPER_OBJECT_TOP_STOPPER and ZIPPER_OBJECT_BOTTOM_OPEN_STOPPER.",
+          "name": "secondObjFilePath",
+          "kind": "field",
+          "annotation_raw": "str",
+          "type_references": []
+        },
+        {
+          "raw": "sliderMeshNames:list[str]    # OBJ group names to assign as Slider mesh(es). Empty list triggers auto-assignment. (ZIPPER_OBJECT_SLIDER_PULLER only)",
+          "documentation_raw": "OBJ group names to assign as Slider mesh(es). Empty list triggers auto-assignment. (ZIPPER_OBJECT_SLIDER_PULLER only)",
+          "name": "sliderMeshNames",
+          "kind": "field",
+          "annotation_raw": "list[str]",
+          "type_references": []
+        },
+        {
+          "raw": "pullerMeshNames:list[str]    # OBJ group names to assign as Puller mesh(es). Empty list triggers auto-assignment. (ZIPPER_OBJECT_SLIDER_PULLER only)",
+          "documentation_raw": "OBJ group names to assign as Puller mesh(es). Empty list triggers auto-assignment. (ZIPPER_OBJECT_SLIDER_PULLER only)",
+          "name": "pullerMeshNames",
+          "kind": "field",
+          "annotation_raw": "list[str]",
+          "type_references": []
+        },
+        {
+          "raw": "scaleUnit:ZipperScaleUnit    # Measurement unit. Combined with scaleValue to compute the final scale factor.",
+          "documentation_raw": "Measurement unit. Combined with scaleValue to compute the final scale factor.",
+          "name": "scaleUnit",
+          "kind": "field",
+          "annotation_raw": "ZipperScaleUnit",
+          "type_references": [
+            {
+              "name": "ZipperScaleUnit",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:ZipperScaleUnit"
+            }
+          ]
+        },
+        {
+          "raw": "scaleValue:double            # Scale percentage (e.g., 100.0 = 100%). Multiplied by the unit factor (e.g., 0.01 for MM yields 1.0 at 100%).",
+          "documentation_raw": "Scale percentage (e.g., 100.0 = 100%). Multiplied by the unit factor (e.g., 0.01 for MM yields 1.0 at 100%).",
+          "name": "scaleValue",
+          "kind": "field",
+          "annotation_raw": "double",
+          "type_references": []
+        },
+        {
+          "raw": "axisX:int                    # OBJ axis mapped to CLO X (0=X, 1=Y, 2=Z). Default: 0.",
+          "documentation_raw": "OBJ axis mapped to CLO X (0=X, 1=Y, 2=Z). Default: 0.",
+          "name": "axisX",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "axisY:int                    # OBJ axis mapped to CLO Y (0=X, 1=Y, 2=Z). Default: 1.",
+          "documentation_raw": "OBJ axis mapped to CLO Y (0=X, 1=Y, 2=Z). Default: 1.",
+          "name": "axisY",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "axisZ:int                    # OBJ axis mapped to CLO Z (0=X, 1=Y, 2=Z). Default: 2.",
+          "documentation_raw": "OBJ axis mapped to CLO Z (0=X, 1=Y, 2=Z). Default: 2.",
+          "name": "axisZ",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "invertX:bool                 # Invert the mapped X axis. Default: false.",
+          "documentation_raw": "Invert the mapped X axis. Default: false.",
+          "name": "invertX",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "invertY:bool                 # Invert the mapped Y axis. Default: false.",
+          "documentation_raw": "Invert the mapped Y axis. Default: false.",
+          "name": "invertY",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "invertZ:bool                 # Invert the mapped Z axis. Default: false.",
+          "documentation_raw": "Invert the mapped Z axis. Default: false.",
+          "name": "invertZ",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "pullerPositionX:float        # Puller anchor X position in the zipper coordinate system. (ZIPPER_OBJECT_SLIDER type only)",
+          "documentation_raw": "Puller anchor X position in the zipper coordinate system. (ZIPPER_OBJECT_SLIDER type only)",
+          "name": "pullerPositionX",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "pullerPositionY:float        # Puller anchor Y position in the zipper coordinate system. (ZIPPER_OBJECT_SLIDER type only)",
+          "documentation_raw": "Puller anchor Y position in the zipper coordinate system. (ZIPPER_OBJECT_SLIDER type only)",
+          "name": "pullerPositionY",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "pullerPositionZ:float        # Puller anchor Z position in the zipper coordinate system. (ZIPPER_OBJECT_SLIDER type only)",
+          "documentation_raw": "Puller anchor Z position in the zipper coordinate system. (ZIPPER_OBJECT_SLIDER type only)",
+          "name": "pullerPositionZ",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "teethSpace:double            # Spacing between zipper teeth rows in CLO units. (ZIPPER_OBJECT_TEETH type only) Default: 0.0.",
+          "documentation_raw": "Spacing between zipper teeth rows in CLO units. (ZIPPER_OBJECT_TEETH type only) Default: 0.0.",
+          "name": "teethSpace",
+          "kind": "field",
+          "annotation_raw": "double",
+          "type_references": []
+        },
+        {
+          "raw": "addToObjectBrowser:bool      # If true, refreshes the Object Browser asset list after saving so the new preset appears in the dropdown.",
+          "documentation_raw": "If true, refreshes the Object Browser asset list after saving so the new preset appears in the dropdown.",
+          "name": "addToObjectBrowser",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 1012,
+              "block": 54
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 1077,
+              "block": 54,
+              "anchor": "objregisteroptions"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:ObjectBrowserContextOptions",
+      "name": "ObjectBrowserContextOptions",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nObject Browser context: identifies which object/sub-item a material texture transform targets.\n\"\"\"\ntype:ObjectBrowserType      # object category (see ObjectBrowserType)\ntargetPrint:bool            # FABRIC only: target the print/AOP texture (true) vs base color (false)\nstyleChipIndex:int          # AOP/style-chip index. -1 = first/default\nsubItemIndex:int            # sub-item/mesh index: button material tab (0=Button body, 1=Thread), trim mesh index, zipper component, top-stitch line index, or avatar mesh index. Default 0\nfolderName:str              # Object Browser folder this object's context is scoped to. Empty (\"\") = root directory. GetObjectBrowserItems (FABRIC): folder to fetch from (non-empty = that named folder; empty result if not found)\nbIncludeUnusedObjects:bool  # when false, free/unused objects (not used by any colorway) are filtered out\nbShowAllColorways:bool      # (material-context API) expose every colorway rather than only the current one. Default false\nshowAllColorways:int        # GetObjectBrowserItems colorway scope (tri-state). -1 (default) = follow the app's per-type \"Show All Colorways\" UI toggle. 0 = force the single colorway given by colorwayIndex. 1 = force all colorways. 0 and 1 override the UI toggle\ncolorwayIndex:int           # GetObjectBrowserItems: colorway to scope the \"used\" check to when the effective \"show all colorways\" is off. -1 = current colorway\nbIncludePrints:bool         # FABRIC only. Default true. When true, the fabric response is an ObjectList of entries, each with Name and (only when the fabric has a print) PrintName. Set false to get a flat name list without prints",
+      "description_raw": "Object Browser context: identifies which object/sub-item a material texture transform targets.",
+      "members": [
+        {
+          "raw": "type:ObjectBrowserType      # object category (see ObjectBrowserType)",
+          "documentation_raw": "object category (see ObjectBrowserType)",
+          "name": "type",
+          "kind": "field",
+          "annotation_raw": "ObjectBrowserType",
+          "type_references": [
+            {
+              "name": "ObjectBrowserType",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:ObjectBrowserType"
+            },
+            {
+              "name": "ObjectBrowserType",
+              "basis": "documentation_mention",
+              "status": "resolved",
+              "type_id": "type:ObjectBrowserType"
+            }
+          ]
+        },
+        {
+          "raw": "targetPrint:bool            # FABRIC only: target the print/AOP texture (true) vs base color (false)",
+          "documentation_raw": "FABRIC only: target the print/AOP texture (true) vs base color (false)",
+          "name": "targetPrint",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "styleChipIndex:int          # AOP/style-chip index. -1 = first/default",
+          "documentation_raw": "AOP/style-chip index. -1 = first/default",
+          "name": "styleChipIndex",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "subItemIndex:int            # sub-item/mesh index: button material tab (0=Button body, 1=Thread), trim mesh index, zipper component, top-stitch line index, or avatar mesh index. Default 0",
+          "documentation_raw": "sub-item/mesh index: button material tab (0=Button body, 1=Thread), trim mesh index, zipper component, top-stitch line index, or avatar mesh index. Default 0",
+          "name": "subItemIndex",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "folderName:str              # Object Browser folder this object's context is scoped to. Empty (\"\") = root directory. GetObjectBrowserItems (FABRIC): folder to fetch from (non-empty = that named folder; empty result if not found)",
+          "documentation_raw": "Object Browser folder this object's context is scoped to. Empty (\"\") = root directory. GetObjectBrowserItems (FABRIC): folder to fetch from (non-empty = that named folder; empty result if not found)",
+          "name": "folderName",
+          "kind": "field",
+          "annotation_raw": "str",
+          "type_references": []
+        },
+        {
+          "raw": "bIncludeUnusedObjects:bool  # when false, free/unused objects (not used by any colorway) are filtered out",
+          "documentation_raw": "when false, free/unused objects (not used by any colorway) are filtered out",
+          "name": "bIncludeUnusedObjects",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "bShowAllColorways:bool      # (material-context API) expose every colorway rather than only the current one. Default false",
+          "documentation_raw": "(material-context API) expose every colorway rather than only the current one. Default false",
+          "name": "bShowAllColorways",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "showAllColorways:int        # GetObjectBrowserItems colorway scope (tri-state). -1 (default) = follow the app's per-type \"Show All Colorways\" UI toggle. 0 = force the single colorway given by colorwayIndex. 1 = force all colorways. 0 and 1 override the UI toggle",
+          "documentation_raw": "GetObjectBrowserItems colorway scope (tri-state). -1 (default) = follow the app's per-type \"Show All Colorways\" UI toggle. 0 = force the single colorway given by colorwayIndex. 1 = force all colorways. 0 and 1 override the UI toggle",
+          "name": "showAllColorways",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "colorwayIndex:int           # GetObjectBrowserItems: colorway to scope the \"used\" check to when the effective \"show all colorways\" is off. -1 = current colorway",
+          "documentation_raw": "GetObjectBrowserItems: colorway to scope the \"used\" check to when the effective \"show all colorways\" is off. -1 = current colorway",
+          "name": "colorwayIndex",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "bIncludePrints:bool         # FABRIC only. Default true. When true, the fabric response is an ObjectList of entries, each with Name and (only when the fabric has a print) PrintName. Set false to get a flat name list without prints",
+          "documentation_raw": "FABRIC only. Default true. When true, the fabric response is an ObjectList of entries, each with Name and (only when the fabric has a print) PrintName. Set false to get a flat name list without prints",
+          "name": "bIncludePrints",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 910,
+              "block": 48
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 987,
+              "block": 48,
+              "anchor": "objectbrowsercontextoptions"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:ObjectBrowserResult",
+      "name": "ObjectBrowserResult",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nStructured result returned by every Object Browser API mutation.\nCarries a success flag, the UID of the created or affected object, and a human-readable\nmessage describing the outcome (empty on success, an explanation on failure).\n\"\"\"\nsuccess:bool   # true when the operation succeeded, false otherwise\nobjectUid:int  # UID of the created/affected object, or -1 when not applicable\nmessage:str    # outcome text, empty on success and an error reason on failure",
+      "description_raw": "Structured result returned by every Object Browser API mutation.\nCarries a success flag, the UID of the created or affected object, and a human-readable\nmessage describing the outcome (empty on success, an explanation on failure).",
+      "members": [
+        {
+          "raw": "success:bool   # true when the operation succeeded, false otherwise",
+          "documentation_raw": "true when the operation succeeded, false otherwise",
+          "name": "success",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "objectUid:int  # UID of the created/affected object, or -1 when not applicable",
+          "documentation_raw": "UID of the created/affected object, or -1 when not applicable",
+          "name": "objectUid",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "message:str    # outcome text, empty on success and an error reason on failure",
+          "documentation_raw": "outcome text, empty on success and an error reason on failure",
+          "name": "message",
+          "kind": "field",
+          "annotation_raw": "str",
+          "type_references": []
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 41,
+              "block": 3
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 208,
+              "block": 3,
+              "anchor": "objectbrowserresult"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:ObjectBrowserType",
+      "name": "ObjectBrowserType",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nObject Browser category targeted by the unified material texture-transform API.\n\"\"\"\nOB_TYPE_FABRIC = 0       # Fabric (base color, or print/AOP via targetPrint)\nOB_TYPE_GRAPHIC = 1      # Graphic style\nOB_TYPE_TRIM = 2         # Trim object style (subItemIndex = trim mesh index)\nOB_TYPE_BUTTON = 3       # Button head style (subItemIndex: 0=Button body, 1=Thread)\nOB_TYPE_BUTTON_HOLE = 4  # Buttonhole style\nOB_TYPE_PUCKERING = 5    # Puckering style\nOB_TYPE_ZIPPER = 6       # Zipper style. subItemIndex selects the component: 0=Tape, 1=Teeth, 2=Slider, 3=Puller, 4=Bottom Slider, 5=Bottom Puller, 6=Top Stopper, 7=Bottom Stopper. targetComponent must be COMPONENT_NONE. Each index reports ONE representative material; a component built from several meshes (stoppers) exposes only the first, which need not be the one the Object Browser shows\nOB_TYPE_POM = 7          # Points of Measure (POM) tab\nOB_TYPE_GRADING = 8      # Grading tab\nOB_TYPE_PATTERN = 9      # Pattern / Scene tree tab (maps to GUI_SCENEGRAPH)\nOB_TYPE_TOPSTITCH = 10   # Top-stitch style (subItemIndex = stitch line index)\nOB_TYPE_AVATAR = 11      # Avatar material (objectIndex = avatar index, subItemIndex = mesh index over the avatar's non-accessory meshes)",
+      "description_raw": "Object Browser category targeted by the unified material texture-transform API.",
+      "members": [
+        {
+          "raw": "OB_TYPE_FABRIC = 0       # Fabric (base color, or print/AOP via targetPrint)",
+          "documentation_raw": "Fabric (base color, or print/AOP via targetPrint)",
+          "name": "OB_TYPE_FABRIC",
+          "kind": "enum_value",
+          "value_raw": "0",
+          "type_references": []
+        },
+        {
+          "raw": "OB_TYPE_GRAPHIC = 1      # Graphic style",
+          "documentation_raw": "Graphic style",
+          "name": "OB_TYPE_GRAPHIC",
+          "kind": "enum_value",
+          "value_raw": "1",
+          "type_references": []
+        },
+        {
+          "raw": "OB_TYPE_TRIM = 2         # Trim object style (subItemIndex = trim mesh index)",
+          "documentation_raw": "Trim object style (subItemIndex = trim mesh index)",
+          "name": "OB_TYPE_TRIM",
+          "kind": "enum_value",
+          "value_raw": "2",
+          "type_references": []
+        },
+        {
+          "raw": "OB_TYPE_BUTTON = 3       # Button head style (subItemIndex: 0=Button body, 1=Thread)",
+          "documentation_raw": "Button head style (subItemIndex: 0=Button body, 1=Thread)",
+          "name": "OB_TYPE_BUTTON",
+          "kind": "enum_value",
+          "value_raw": "3",
+          "type_references": []
+        },
+        {
+          "raw": "OB_TYPE_BUTTON_HOLE = 4  # Buttonhole style",
+          "documentation_raw": "Buttonhole style",
+          "name": "OB_TYPE_BUTTON_HOLE",
+          "kind": "enum_value",
+          "value_raw": "4",
+          "type_references": []
+        },
+        {
+          "raw": "OB_TYPE_PUCKERING = 5    # Puckering style",
+          "documentation_raw": "Puckering style",
+          "name": "OB_TYPE_PUCKERING",
+          "kind": "enum_value",
+          "value_raw": "5",
+          "type_references": []
+        },
+        {
+          "raw": "OB_TYPE_ZIPPER = 6       # Zipper style. subItemIndex selects the component: 0=Tape, 1=Teeth, 2=Slider, 3=Puller, 4=Bottom Slider, 5=Bottom Puller, 6=Top Stopper, 7=Bottom Stopper. targetComponent must be COMPONENT_NONE. Each index reports ONE representative material; a component built from several meshes (stoppers) exposes only the first, which need not be the one the Object Browser shows",
+          "documentation_raw": "Zipper style. subItemIndex selects the component: 0=Tape, 1=Teeth, 2=Slider, 3=Puller, 4=Bottom Slider, 5=Bottom Puller, 6=Top Stopper, 7=Bottom Stopper. targetComponent must be COMPONENT_NONE. Each index reports ONE representative material; a component built from several meshes (stoppers) exposes only the first, which need not be the one the Object Browser shows",
+          "name": "OB_TYPE_ZIPPER",
+          "kind": "enum_value",
+          "value_raw": "6",
+          "type_references": []
+        },
+        {
+          "raw": "OB_TYPE_POM = 7          # Points of Measure (POM) tab",
+          "documentation_raw": "Points of Measure (POM) tab",
+          "name": "OB_TYPE_POM",
+          "kind": "enum_value",
+          "value_raw": "7",
+          "type_references": []
+        },
+        {
+          "raw": "OB_TYPE_GRADING = 8      # Grading tab",
+          "documentation_raw": "Grading tab",
+          "name": "OB_TYPE_GRADING",
+          "kind": "enum_value",
+          "value_raw": "8",
+          "type_references": []
+        },
+        {
+          "raw": "OB_TYPE_PATTERN = 9      # Pattern / Scene tree tab (maps to GUI_SCENEGRAPH)",
+          "documentation_raw": "Pattern / Scene tree tab (maps to GUI_SCENEGRAPH)",
+          "name": "OB_TYPE_PATTERN",
+          "kind": "enum_value",
+          "value_raw": "9",
+          "type_references": []
+        },
+        {
+          "raw": "OB_TYPE_TOPSTITCH = 10   # Top-stitch style (subItemIndex = stitch line index)",
+          "documentation_raw": "Top-stitch style (subItemIndex = stitch line index)",
+          "name": "OB_TYPE_TOPSTITCH",
+          "kind": "enum_value",
+          "value_raw": "10",
+          "type_references": []
+        },
+        {
+          "raw": "OB_TYPE_AVATAR = 11      # Avatar material (objectIndex = avatar index, subItemIndex = mesh index over the avatar's non-accessory meshes)",
+          "documentation_raw": "Avatar material (objectIndex = avatar index, subItemIndex = mesh index over the avatar's non-accessory meshes)",
+          "name": "OB_TYPE_AVATAR",
+          "kind": "enum_value",
+          "value_raw": "11",
+          "type_references": []
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 888,
+              "block": 47
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 967,
+              "block": 47,
+              "anchor": "objectbrowsertype"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:PatternSnapShotColorwayOption",
+      "name": "PatternSnapShotColorwayOption",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nColorways of the 2D pattern snapshot, for UtilityAPI::SetPatternSnapShotColorwayOption (mode 0 = 2D window, 1 = Print Layout).\n\"\"\"\nColorwayOption:int                        # not applied by the API yet (Get returns 0); the dialog's choice is kept\nm_customSelectColorwayIndexes:list[ int]  # 0-based colorway indexes used when the snapshot's colorway choice is Custom (default [0])",
+      "description_raw": "Colorways of the 2D pattern snapshot, for UtilityAPI::SetPatternSnapShotColorwayOption (mode 0 = 2D window, 1 = Print Layout).",
+      "members": [
+        {
+          "raw": "ColorwayOption:int                        # not applied by the API yet (Get returns 0); the dialog's choice is kept",
+          "documentation_raw": "not applied by the API yet (Get returns 0); the dialog's choice is kept",
+          "name": "ColorwayOption",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "m_customSelectColorwayIndexes:list[ int]  # 0-based colorway indexes used when the snapshot's colorway choice is Custom (default [0])",
+          "documentation_raw": "0-based colorway indexes used when the snapshot's colorway choice is Custom (default [0])",
+          "name": "m_customSelectColorwayIndexes",
+          "kind": "field",
+          "annotation_raw": "list[ int]",
+          "type_references": []
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 858,
+              "block": 45
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 941,
+              "block": 45,
+              "anchor": "patternsnapshotcolorwayoption"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:PatternSnapShotImageOption",
+      "name": "PatternSnapShotImageOption",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nTextures and graphics drawn in the 2D pattern snapshot, for UtilityAPI::SetPatternSnapShotImageOption.\n\"\"\"\nShowFabricTexture:bool      # draw the fabric texture (default true)\nShowPatternTexture:bool     # draw pattern textures on the fabric; Print Layout (mode 1) only (default true)\nShowGraphicTexture:bool     # draw graphics (default true)\nFabricTextureOpacity:float  # fabric texture opacity in percent, 0-100; Print Layout (default 100)",
+      "description_raw": "Textures and graphics drawn in the 2D pattern snapshot, for UtilityAPI::SetPatternSnapShotImageOption.",
+      "members": [
+        {
+          "raw": "ShowFabricTexture:bool      # draw the fabric texture (default true)",
+          "documentation_raw": "draw the fabric texture (default true)",
+          "name": "ShowFabricTexture",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "ShowPatternTexture:bool     # draw pattern textures on the fabric; Print Layout (mode 1) only (default true)",
+          "documentation_raw": "draw pattern textures on the fabric; Print Layout (mode 1) only (default true)",
+          "name": "ShowPatternTexture",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "ShowGraphicTexture:bool     # draw graphics (default true)",
+          "documentation_raw": "draw graphics (default true)",
+          "name": "ShowGraphicTexture",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "FabricTextureOpacity:float  # fabric texture opacity in percent, 0-100; Print Layout (default 100)",
+          "documentation_raw": "fabric texture opacity in percent, 0-100; Print Layout (default 100)",
+          "name": "FabricTextureOpacity",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 804,
+              "block": 42
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 893,
+              "block": 42,
+              "anchor": "patternsnapshotimageoption"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:PatternSnapShotInformationOption",
+      "name": "PatternSnapShotInformationOption",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nText and markings printed in the 2D pattern snapshot, for UtilityAPI::SetPatternSnapShotInformationOption. Each item has a text size, a PatternSnapShotPrintType value: 1 = shrink to fit, 2 = actual size.\n\"\"\"\nShowPatternName:bool        # print pattern names (default true)\nPatternNameType:int         # pattern name text size: 1 = shrink to fit, 2 = actual size (default 2)\nShowPatternAnnotation:bool  # print pattern annotations (default true)\nPatternAnnotationType:int   # annotation text size: 1 = shrink to fit, 2 = actual size (default 2)\nShowLineLength:bool         # print line lengths (default true)\nLineLengthType:int          # line length text size: 1 = shrink to fit, 2 = actual size (default 2)\nShowGrainLine:bool          # print grain lines (default true)\nGrainLineType:int           # grain line text size: 1 = shrink to fit, 2 = actual size (default 2)\nShowButtonHole:bool         # print buttons and buttonholes (default true)\nButtonHoleType:int          # button / buttonhole text size: 1 = shrink to fit, 2 = actual size (default 2)\nShowSeamTaping:bool         # print seam taping (default true)\nSeamTapingType:int          # seam taping text size: 1 = shrink to fit, 2 = actual size (default 2)\nShowMeasurement2D:bool      # print 2D measurements (default true)\nMeasurement2DType:int       # 2D measurement text size: 1 = shrink to fit, 2 = actual size (default 2)\nShowGradingSizeName:bool    # print grading size names; Print Layout (default true)\nGradingSizeNameType:int     # grading size name text size: 1 = shrink to fit, 2 = actual size (default 2)\nShowNestInformation:bool    # print the nesting information; Print Layout (default true)\nNestInformationType:int     # nesting information text size: 1 = shrink to fit, 2 = actual size (default 2)",
+      "description_raw": "Text and markings printed in the 2D pattern snapshot, for UtilityAPI::SetPatternSnapShotInformationOption. Each item has a text size, a PatternSnapShotPrintType value: 1 = shrink to fit, 2 = actual size.",
+      "members": [
+        {
+          "raw": "ShowPatternName:bool        # print pattern names (default true)",
+          "documentation_raw": "print pattern names (default true)",
+          "name": "ShowPatternName",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "PatternNameType:int         # pattern name text size: 1 = shrink to fit, 2 = actual size (default 2)",
+          "documentation_raw": "pattern name text size: 1 = shrink to fit, 2 = actual size (default 2)",
+          "name": "PatternNameType",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "ShowPatternAnnotation:bool  # print pattern annotations (default true)",
+          "documentation_raw": "print pattern annotations (default true)",
+          "name": "ShowPatternAnnotation",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "PatternAnnotationType:int   # annotation text size: 1 = shrink to fit, 2 = actual size (default 2)",
+          "documentation_raw": "annotation text size: 1 = shrink to fit, 2 = actual size (default 2)",
+          "name": "PatternAnnotationType",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "ShowLineLength:bool         # print line lengths (default true)",
+          "documentation_raw": "print line lengths (default true)",
+          "name": "ShowLineLength",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "LineLengthType:int          # line length text size: 1 = shrink to fit, 2 = actual size (default 2)",
+          "documentation_raw": "line length text size: 1 = shrink to fit, 2 = actual size (default 2)",
+          "name": "LineLengthType",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "ShowGrainLine:bool          # print grain lines (default true)",
+          "documentation_raw": "print grain lines (default true)",
+          "name": "ShowGrainLine",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "GrainLineType:int           # grain line text size: 1 = shrink to fit, 2 = actual size (default 2)",
+          "documentation_raw": "grain line text size: 1 = shrink to fit, 2 = actual size (default 2)",
+          "name": "GrainLineType",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "ShowButtonHole:bool         # print buttons and buttonholes (default true)",
+          "documentation_raw": "print buttons and buttonholes (default true)",
+          "name": "ShowButtonHole",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "ButtonHoleType:int          # button / buttonhole text size: 1 = shrink to fit, 2 = actual size (default 2)",
+          "documentation_raw": "button / buttonhole text size: 1 = shrink to fit, 2 = actual size (default 2)",
+          "name": "ButtonHoleType",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "ShowSeamTaping:bool         # print seam taping (default true)",
+          "documentation_raw": "print seam taping (default true)",
+          "name": "ShowSeamTaping",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "SeamTapingType:int          # seam taping text size: 1 = shrink to fit, 2 = actual size (default 2)",
+          "documentation_raw": "seam taping text size: 1 = shrink to fit, 2 = actual size (default 2)",
+          "name": "SeamTapingType",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "ShowMeasurement2D:bool      # print 2D measurements (default true)",
+          "documentation_raw": "print 2D measurements (default true)",
+          "name": "ShowMeasurement2D",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "Measurement2DType:int       # 2D measurement text size: 1 = shrink to fit, 2 = actual size (default 2)",
+          "documentation_raw": "2D measurement text size: 1 = shrink to fit, 2 = actual size (default 2)",
+          "name": "Measurement2DType",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "ShowGradingSizeName:bool    # print grading size names; Print Layout (default true)",
+          "documentation_raw": "print grading size names; Print Layout (default true)",
+          "name": "ShowGradingSizeName",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "GradingSizeNameType:int     # grading size name text size: 1 = shrink to fit, 2 = actual size (default 2)",
+          "documentation_raw": "grading size name text size: 1 = shrink to fit, 2 = actual size (default 2)",
+          "name": "GradingSizeNameType",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "ShowNestInformation:bool    # print the nesting information; Print Layout (default true)",
+          "documentation_raw": "print the nesting information; Print Layout (default true)",
+          "name": "ShowNestInformation",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "NestInformationType:int     # nesting information text size: 1 = shrink to fit, 2 = actual size (default 2)",
+          "documentation_raw": "nesting information text size: 1 = shrink to fit, 2 = actual size (default 2)",
+          "name": "NestInformationType",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 830,
+              "block": 44
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 915,
+              "block": 44,
+              "anchor": "patternsnapshotinformationoption"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:PatternSnapShotLineOption",
+      "name": "PatternSnapShotLineOption",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nVisibility, color and line style of each line kind in the 2D pattern snapshot, for UtilityAPI::SetPatternSnapShotLineOption. Colors are RGBA 0-255 (alpha is not drawn); line types are PatternSnapShotLineType values: 1 = solid, 2 = dotted, 3 = dashed.\n\"\"\"\nShowPatternOutline:bool                # draw the pattern outline; forced on when neither seam allowance nor reference line is shown (default true)\nPatternOutlineColor:CloApiRgba         # pattern outline color (default opaque black)\nPatternOutLineType:int                 # pattern outline style: 1 = solid, 2 = dotted, 3 = dashed (default 1)\nShowInternalLine:bool                  # draw internal lines (default true)\nInternalLineColor:CloApiRgba           # internal line color (default opaque black)\nInternalLineType:int                   # internal line style: 1 = solid, 2 = dotted, 3 = dashed (default 1)\nShowGraphicOutline:bool                # draw graphic outlines (default true)\nGraphicOutlineColor:CloApiRgba         # graphic outline color (default opaque black)\nGraphicOutlineType:int                 # graphic outline style: 1 = solid, 2 = dotted, 3 = dashed (default 1)\nShowBaseline:bool                      # draw baselines (default true)\nBaselineColor:CloApiRgba               # baseline color (default opaque black)\nBaselineType:int                       # baseline style: 1 = solid, 2 = dotted, 3 = dashed (default 1)\nShowNotch:bool                         # draw notches on the seam allowance (default true)\nNotchColor:CloApiRgba                  # seam allowance notch color (default opaque black)\nNotchType:int                          # seam allowance notch style: 1 = solid, 2 = dotted, 3 = dashed (default 1)\nShowSeamAllowance:bool                 # draw seam allowance lines (default true)\nSeamAllowanceColor:CloApiRgba          # seam allowance color (default opaque black)\nSeamAllowanceType:int                  # seam allowance style: 1 = solid, 2 = dotted, 3 = dashed (default 1)\nShowSymmetricInstanceLine:bool         # draw the lines of symmetric / instance patterns (default true)\nSymmetricInstanceLineColor:CloApiRgba  # symmetric / instance pattern line color (default opaque black)\nSymmetricInstanceLineType:int          # symmetric / instance pattern line style: 1 = solid, 2 = dotted, 3 = dashed (default 1)\nShowReferenceLine:bool                 # draw reference lines (default true)\nReferenceLineColor:CloApiRgba          # reference line color (default opaque black)\nReferenceLineType:int                  # reference line style: 1 = solid, 2 = dotted, 3 = dashed (default 1)",
+      "description_raw": "Visibility, color and line style of each line kind in the 2D pattern snapshot, for UtilityAPI::SetPatternSnapShotLineOption. Colors are RGBA 0-255 (alpha is not drawn); line types are PatternSnapShotLineType values: 1 = solid, 2 = dotted, 3 = dashed.",
+      "members": [
+        {
+          "raw": "ShowPatternOutline:bool                # draw the pattern outline; forced on when neither seam allowance nor reference line is shown (default true)",
+          "documentation_raw": "draw the pattern outline; forced on when neither seam allowance nor reference line is shown (default true)",
+          "name": "ShowPatternOutline",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "PatternOutlineColor:CloApiRgba         # pattern outline color (default opaque black)",
+          "documentation_raw": "pattern outline color (default opaque black)",
+          "name": "PatternOutlineColor",
+          "kind": "field",
+          "annotation_raw": "CloApiRgba",
+          "type_references": [
+            {
+              "name": "CloApiRgba",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:CloApiRgba"
+            }
+          ]
+        },
+        {
+          "raw": "PatternOutLineType:int                 # pattern outline style: 1 = solid, 2 = dotted, 3 = dashed (default 1)",
+          "documentation_raw": "pattern outline style: 1 = solid, 2 = dotted, 3 = dashed (default 1)",
+          "name": "PatternOutLineType",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "ShowInternalLine:bool                  # draw internal lines (default true)",
+          "documentation_raw": "draw internal lines (default true)",
+          "name": "ShowInternalLine",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "InternalLineColor:CloApiRgba           # internal line color (default opaque black)",
+          "documentation_raw": "internal line color (default opaque black)",
+          "name": "InternalLineColor",
+          "kind": "field",
+          "annotation_raw": "CloApiRgba",
+          "type_references": [
+            {
+              "name": "CloApiRgba",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:CloApiRgba"
+            }
+          ]
+        },
+        {
+          "raw": "InternalLineType:int                   # internal line style: 1 = solid, 2 = dotted, 3 = dashed (default 1)",
+          "documentation_raw": "internal line style: 1 = solid, 2 = dotted, 3 = dashed (default 1)",
+          "name": "InternalLineType",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "ShowGraphicOutline:bool                # draw graphic outlines (default true)",
+          "documentation_raw": "draw graphic outlines (default true)",
+          "name": "ShowGraphicOutline",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "GraphicOutlineColor:CloApiRgba         # graphic outline color (default opaque black)",
+          "documentation_raw": "graphic outline color (default opaque black)",
+          "name": "GraphicOutlineColor",
+          "kind": "field",
+          "annotation_raw": "CloApiRgba",
+          "type_references": [
+            {
+              "name": "CloApiRgba",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:CloApiRgba"
+            }
+          ]
+        },
+        {
+          "raw": "GraphicOutlineType:int                 # graphic outline style: 1 = solid, 2 = dotted, 3 = dashed (default 1)",
+          "documentation_raw": "graphic outline style: 1 = solid, 2 = dotted, 3 = dashed (default 1)",
+          "name": "GraphicOutlineType",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "ShowBaseline:bool                      # draw baselines (default true)",
+          "documentation_raw": "draw baselines (default true)",
+          "name": "ShowBaseline",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "BaselineColor:CloApiRgba               # baseline color (default opaque black)",
+          "documentation_raw": "baseline color (default opaque black)",
+          "name": "BaselineColor",
+          "kind": "field",
+          "annotation_raw": "CloApiRgba",
+          "type_references": [
+            {
+              "name": "CloApiRgba",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:CloApiRgba"
+            }
+          ]
+        },
+        {
+          "raw": "BaselineType:int                       # baseline style: 1 = solid, 2 = dotted, 3 = dashed (default 1)",
+          "documentation_raw": "baseline style: 1 = solid, 2 = dotted, 3 = dashed (default 1)",
+          "name": "BaselineType",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "ShowNotch:bool                         # draw notches on the seam allowance (default true)",
+          "documentation_raw": "draw notches on the seam allowance (default true)",
+          "name": "ShowNotch",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "NotchColor:CloApiRgba                  # seam allowance notch color (default opaque black)",
+          "documentation_raw": "seam allowance notch color (default opaque black)",
+          "name": "NotchColor",
+          "kind": "field",
+          "annotation_raw": "CloApiRgba",
+          "type_references": [
+            {
+              "name": "CloApiRgba",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:CloApiRgba"
+            }
+          ]
+        },
+        {
+          "raw": "NotchType:int                          # seam allowance notch style: 1 = solid, 2 = dotted, 3 = dashed (default 1)",
+          "documentation_raw": "seam allowance notch style: 1 = solid, 2 = dotted, 3 = dashed (default 1)",
+          "name": "NotchType",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "ShowSeamAllowance:bool                 # draw seam allowance lines (default true)",
+          "documentation_raw": "draw seam allowance lines (default true)",
+          "name": "ShowSeamAllowance",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "SeamAllowanceColor:CloApiRgba          # seam allowance color (default opaque black)",
+          "documentation_raw": "seam allowance color (default opaque black)",
+          "name": "SeamAllowanceColor",
+          "kind": "field",
+          "annotation_raw": "CloApiRgba",
+          "type_references": [
+            {
+              "name": "CloApiRgba",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:CloApiRgba"
+            }
+          ]
+        },
+        {
+          "raw": "SeamAllowanceType:int                  # seam allowance style: 1 = solid, 2 = dotted, 3 = dashed (default 1)",
+          "documentation_raw": "seam allowance style: 1 = solid, 2 = dotted, 3 = dashed (default 1)",
+          "name": "SeamAllowanceType",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "ShowSymmetricInstanceLine:bool         # draw the lines of symmetric / instance patterns (default true)",
+          "documentation_raw": "draw the lines of symmetric / instance patterns (default true)",
+          "name": "ShowSymmetricInstanceLine",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "SymmetricInstanceLineColor:CloApiRgba  # symmetric / instance pattern line color (default opaque black)",
+          "documentation_raw": "symmetric / instance pattern line color (default opaque black)",
+          "name": "SymmetricInstanceLineColor",
+          "kind": "field",
+          "annotation_raw": "CloApiRgba",
+          "type_references": [
+            {
+              "name": "CloApiRgba",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:CloApiRgba"
+            }
+          ]
+        },
+        {
+          "raw": "SymmetricInstanceLineType:int          # symmetric / instance pattern line style: 1 = solid, 2 = dotted, 3 = dashed (default 1)",
+          "documentation_raw": "symmetric / instance pattern line style: 1 = solid, 2 = dotted, 3 = dashed (default 1)",
+          "name": "SymmetricInstanceLineType",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "ShowReferenceLine:bool                 # draw reference lines (default true)",
+          "documentation_raw": "draw reference lines (default true)",
+          "name": "ShowReferenceLine",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "ReferenceLineColor:CloApiRgba          # reference line color (default opaque black)",
+          "documentation_raw": "reference line color (default opaque black)",
+          "name": "ReferenceLineColor",
+          "kind": "field",
+          "annotation_raw": "CloApiRgba",
+          "type_references": [
+            {
+              "name": "CloApiRgba",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:CloApiRgba"
+            }
+          ]
+        },
+        {
+          "raw": "ReferenceLineType:int                  # reference line style: 1 = solid, 2 = dotted, 3 = dashed (default 1)",
+          "documentation_raw": "reference line style: 1 = solid, 2 = dotted, 3 = dashed (default 1)",
+          "name": "ReferenceLineType",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 770,
+              "block": 41
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 861,
+              "block": 41,
+              "anchor": "patternsnapshotlineoption"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:PatternSnapShotLineType",
+      "name": "PatternSnapShotLineType",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nValues for the *Type fields of PatternSnapShotLineOption.\n\"\"\"\nDefualtLine:int  # solid line (1)\nDottedLine:int   # dotted line (2)\nDashedLine:int   # dashed line (3)",
+      "description_raw": "Values for the *Type fields of PatternSnapShotLineOption.",
+      "members": [
+        {
+          "raw": "DefualtLine:int  # solid line (1)",
+          "documentation_raw": "solid line (1)",
+          "name": "DefualtLine",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "DottedLine:int   # dotted line (2)",
+          "documentation_raw": "dotted line (2)",
+          "name": "DottedLine",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "DashedLine:int   # dashed line (3)",
+          "documentation_raw": "dashed line (3)",
+          "name": "DashedLine",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 757,
+              "block": 40
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 850,
+              "block": 40,
+              "anchor": "patternsnapshotlinetype"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:PatternSnapShotPaperPreset",
+      "name": "PatternSnapShotPaperPreset",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nValues for PatternSnapShotSizeOption.m_paperPreset. Read them from an instance, for example ApiTypes.PatternSnapShotPaperPreset().A3.\n\"\"\"\nA4:int             # A4 (0)\nA3:int             # A3 (1)\nB5:int             # B5 (2)\nB4:int             # B4 (3)\nLetter:int         # Letter (4)\nLegal:int          # Legal (5)\nTabloid:int        # Tabloid (6)\nWideFormat_24:int  # wide-format roll, 24 inches wide; the length follows the patterns (7)\nWideFormat_36:int  # wide-format roll, 36 inches wide; the length follows the patterns (8)\nWideFormat_44:int  # wide-format roll, 44 inches wide; the length follows the patterns (9)\noneToOne:int       # 1:1 scale; Print Layout (mode 1) only (10)\nCustom:int         # custom size from m_width / m_height in mm (11)",
+      "description_raw": "Values for PatternSnapShotSizeOption.m_paperPreset. Read them from an instance, for example ApiTypes.PatternSnapShotPaperPreset().A3.",
+      "members": [
+        {
+          "raw": "A4:int             # A4 (0)",
+          "documentation_raw": "A4 (0)",
+          "name": "A4",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "A3:int             # A3 (1)",
+          "documentation_raw": "A3 (1)",
+          "name": "A3",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "B5:int             # B5 (2)",
+          "documentation_raw": "B5 (2)",
+          "name": "B5",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "B4:int             # B4 (3)",
+          "documentation_raw": "B4 (3)",
+          "name": "B4",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "Letter:int         # Letter (4)",
+          "documentation_raw": "Letter (4)",
+          "name": "Letter",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "Legal:int          # Legal (5)",
+          "documentation_raw": "Legal (5)",
+          "name": "Legal",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "Tabloid:int        # Tabloid (6)",
+          "documentation_raw": "Tabloid (6)",
+          "name": "Tabloid",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "WideFormat_24:int  # wide-format roll, 24 inches wide; the length follows the patterns (7)",
+          "documentation_raw": "wide-format roll, 24 inches wide; the length follows the patterns (7)",
+          "name": "WideFormat_24",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "WideFormat_36:int  # wide-format roll, 36 inches wide; the length follows the patterns (8)",
+          "documentation_raw": "wide-format roll, 36 inches wide; the length follows the patterns (8)",
+          "name": "WideFormat_36",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "WideFormat_44:int  # wide-format roll, 44 inches wide; the length follows the patterns (9)",
+          "documentation_raw": "wide-format roll, 44 inches wide; the length follows the patterns (9)",
+          "name": "WideFormat_44",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "oneToOne:int       # 1:1 scale; Print Layout (mode 1) only (10)",
+          "documentation_raw": "1:1 scale; Print Layout (mode 1) only (10)",
+          "name": "oneToOne",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "Custom:int         # custom size from m_width / m_height in mm (11)",
+          "documentation_raw": "custom size from m_width / m_height in mm (11)",
+          "name": "Custom",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 705,
+              "block": 37
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 804,
+              "block": 37,
+              "anchor": "patternsnapshotpaperpreset"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:PatternSnapShotPaperUnit",
+      "name": "PatternSnapShotPaperUnit",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nValues for PatternSnapShotSizeOption.m_unit.\n\"\"\"\nPixel:int        # pixels (0)\nInches:int       # inches (1)\nMilimeters:int   # millimeters (2)\nCentimeters:int  # centimeters (3)",
+      "description_raw": "Values for PatternSnapShotSizeOption.m_unit.",
+      "members": [
+        {
+          "raw": "Pixel:int        # pixels (0)",
+          "documentation_raw": "pixels (0)",
+          "name": "Pixel",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "Inches:int       # inches (1)",
+          "documentation_raw": "inches (1)",
+          "name": "Inches",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "Milimeters:int   # millimeters (2)",
+          "documentation_raw": "millimeters (2)",
+          "name": "Milimeters",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "Centimeters:int  # centimeters (3)",
+          "documentation_raw": "centimeters (3)",
+          "name": "Centimeters",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 727,
+              "block": 38
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 824,
+              "block": 38,
+              "anchor": "patternsnapshotpaperunit"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:PatternSnapShotPrintType",
+      "name": "PatternSnapShotPrintType",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nValues for the *Type fields of PatternSnapShotInformationOption: the text size.\n\"\"\"\nShrinkToFit:int  # shrink the text to fit the pattern (1)\nActualSize:int   # actual size (2)",
+      "description_raw": "Values for the *Type fields of PatternSnapShotInformationOption: the text size.",
+      "members": [
+        {
+          "raw": "ShrinkToFit:int  # shrink the text to fit the pattern (1)",
+          "documentation_raw": "shrink the text to fit the pattern (1)",
+          "name": "ShrinkToFit",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "ActualSize:int   # actual size (2)",
+          "documentation_raw": "actual size (2)",
+          "name": "ActualSize",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 818,
+              "block": 43
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 905,
+              "block": 43,
+              "anchor": "patternsnapshotprinttype"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:PatternSnapShotSizeOption",
+      "name": "PatternSnapShotSizeOption",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nPaper size and resolution of the 2D pattern snapshot, for UtilityAPI::SetPatternSnapShotSizeOption (mode 0 = 2D window, 1 = Print Layout). Set writes every field.\n\"\"\"\nm_width:float      # always set mm\nm_height:float     # always set mm\nm_resolution:int   # resolution in DPI, clamped to 72-1000 (default 0, applied as 72); PNG / JPEG only\nm_paperPreset:int  # PatternSnapShotPaperPreset value (0 = A4 ... 11 = Custom); out of range = A4 (default 0)\nm_orientation:int  # 0 = portrait, 1 = landscape; swaps width and height, ignored for wide-format presets (default 0)\nm_unit:int         # display unit, PatternSnapShotPaperUnit (0 = pixel, 1 = inch, 2 = mm, 3 = cm); m_width / m_height stay in mm (default 0)",
+      "description_raw": "Paper size and resolution of the 2D pattern snapshot, for UtilityAPI::SetPatternSnapShotSizeOption (mode 0 = 2D window, 1 = Print Layout). Set writes every field.",
+      "members": [
+        {
+          "raw": "m_width:float      # always set mm",
+          "documentation_raw": "always set mm",
+          "name": "m_width",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "m_height:float     # always set mm",
+          "documentation_raw": "always set mm",
+          "name": "m_height",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "m_resolution:int   # resolution in DPI, clamped to 72-1000 (default 0, applied as 72); PNG / JPEG only",
+          "documentation_raw": "resolution in DPI, clamped to 72-1000 (default 0, applied as 72); PNG / JPEG only",
+          "name": "m_resolution",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "m_paperPreset:int  # PatternSnapShotPaperPreset value (0 = A4 ... 11 = Custom); out of range = A4 (default 0)",
+          "documentation_raw": "PatternSnapShotPaperPreset value (0 = A4 ... 11 = Custom); out of range = A4 (default 0)",
+          "name": "m_paperPreset",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": [
+            {
+              "name": "PatternSnapShotPaperPreset",
+              "basis": "documentation_mention",
+              "status": "resolved",
+              "type_id": "type:PatternSnapShotPaperPreset"
+            }
+          ]
+        },
+        {
+          "raw": "m_orientation:int  # 0 = portrait, 1 = landscape; swaps width and height, ignored for wide-format presets (default 0)",
+          "documentation_raw": "0 = portrait, 1 = landscape; swaps width and height, ignored for wide-format presets (default 0)",
+          "name": "m_orientation",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "m_unit:int         # display unit, PatternSnapShotPaperUnit (0 = pixel, 1 = inch, 2 = mm, 3 = cm); m_width / m_height stay in mm (default 0)",
+          "documentation_raw": "display unit, PatternSnapShotPaperUnit (0 = pixel, 1 = inch, 2 = mm, 3 = cm); m_width / m_height stay in mm (default 0)",
+          "name": "m_unit",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": [
+            {
+              "name": "PatternSnapShotPaperUnit",
+              "basis": "documentation_mention",
+              "status": "resolved",
+              "type_id": "type:PatternSnapShotPaperUnit"
+            }
+          ]
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 741,
+              "block": 39
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 836,
+              "block": 39,
+              "anchor": "patternsnapshotsizeoption"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:PropertyEditorContextOptions",
+      "name": "PropertyEditorContextOptions",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nProperty Editor context: which material face and texture map a transform applies to.\n\"\"\"\nmaterialSide:int          # which material face: 0=Front, 1=Back, 2=Side\nmapType:TextureMapTarget  # which texture map (see TextureMapTarget)",
+      "description_raw": "Property Editor context: which material face and texture map a transform applies to.",
+      "members": [
+        {
+          "raw": "materialSide:int          # which material face: 0=Front, 1=Back, 2=Side",
+          "documentation_raw": "which material face: 0=Front, 1=Back, 2=Side",
+          "name": "materialSide",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "mapType:TextureMapTarget  # which texture map (see TextureMapTarget)",
+          "documentation_raw": "which texture map (see TextureMapTarget)",
+          "name": "mapType",
+          "kind": "field",
+          "annotation_raw": "TextureMapTarget",
+          "type_references": [
+            {
+              "name": "TextureMapTarget",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:TextureMapTarget"
+            },
+            {
+              "name": "TextureMapTarget",
+              "basis": "documentation_mention",
+              "status": "resolved",
+              "type_id": "type:TextureMapTarget"
+            }
+          ]
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 930,
+              "block": 49
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 1005,
+              "block": 49,
+              "anchor": "propertyeditorcontextoptions"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:RenderColorwayType",
+      "name": "RenderColorwayType",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nColorway Type for ExportRenderingImage in CLO API\n\"\"\"\nSINGLE = 0        # Export Rendering Image for only the current colorway\nALL = 1           # Export Rendering Image for all the colorways\nUSER_DEFINED = 2  # Export Rendering Image per the current setting in the colorway type",
+      "description_raw": "Colorway Type for ExportRenderingImage in CLO API",
+      "members": [
+        {
+          "raw": "SINGLE = 0        # Export Rendering Image for only the current colorway",
+          "documentation_raw": "Export Rendering Image for only the current colorway",
+          "name": "SINGLE",
+          "kind": "enum_value",
+          "value_raw": "0",
+          "type_references": []
+        },
+        {
+          "raw": "ALL = 1           # Export Rendering Image for all the colorways",
+          "documentation_raw": "Export Rendering Image for all the colorways",
+          "name": "ALL",
+          "kind": "enum_value",
+          "value_raw": "1",
+          "type_references": []
+        },
+        {
+          "raw": "USER_DEFINED = 2  # Export Rendering Image per the current setting in the colorway type",
+          "documentation_raw": "Export Rendering Image per the current setting in the colorway type",
+          "name": "USER_DEFINED",
+          "kind": "enum_value",
+          "value_raw": "2",
+          "type_references": []
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 446,
+              "block": 20
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 579,
+              "block": 20,
+              "anchor": "rendercolorwaytype"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:RenderImageVideoOptions",
+      "name": "RenderImageVideoOptions",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nRender > Image/Video Properties (output type, turntable / animation, size, background, save) for UtilityAPI::SetRenderImageVideoProperties, without the dialog.\n\"\"\"\nm_Colorway:int               # colorways to render: 0 = current colorway, 1 = all colorways (default 0)\nm_ImageVideo:int             # output type: 0 = image, 1 = turntable, 2 = animation (default 0); selects which fields below are used\nm_ViewPoint:int              # image viewpoint: 0 = current 3D view, 1 = all custom views (default 0); image output only\nm_ImageCount:int             # turntable image count: 0-7 = 2, 4, 8, 16, 32, 64, 180, 360 images (default 1 = 4 images)\nm_RotationAngle:int          # turntable rotation angle in degrees, 1-360 (default 360)\nm_RotationAxis:int           # turntable axis: 0 = auto (scene center), 1 = origin, 2 = custom (m_RotationAxisX / Z) (default 0)\nm_RotationAxisX:float        # X position of the custom turntable axis, in the current length unit; used when m_RotationAxis is 2\nm_RotationAxisZ:float        # Z position of the custom turntable axis, in the current length unit; used when m_RotationAxis is 2\nm_RotationDirection:int      # turntable direction: 0 = counterclockwise, 1 = clockwise (default 0)\nm_bTurnTableSaveVideo:bool   # if true, the turntable render also saves a video in m_VideoFormat (default false)\nm_TotalDuration:float        # not used: the video length is m_FrameDuration x the image count\nm_FrameDuration:float        # seconds each turntable image is shown in the video / GIF, > 0 (default 1)\nm_bSaveGIF:bool              # if true, the turntable render also saves an animated GIF (default false)\nm_Region:int                 # animation frames to render: 0 = entire animation, 1 = play region (default 0)\nm_bAnimationSaveVideo:bool   # if true, the animation render also saves a video in m_VideoFormat (default false)\nm_AnimationFPS:float         # frames per second of the animation render, > 0 (default 30)\nm_bAnimSaveGIF:bool          # if true, the animation render also saves an animated GIF (default false)\nm_ImageSize:int              # size preset: 0 = 640x480, 1 = 720x480, 2 = 720x576, 3 = 1280x720, 4 = 1920x1080, 5-11 = A3, A4, B4, B5, Legal, Letter, Tabloid, 12 = custom (m_Width / m_Height) (default 0)\nm_Orientation:int            # 0 = portrait, 1 = landscape (default 0)\nm_Width:float                # custom image width in m_Unit, > 0; used when m_ImageSize is 12 (default 480)\nm_Height:float               # custom image height in m_Unit, > 0; used when m_ImageSize is 12 (default 640)\nm_bMaintainRatio:bool        # if true, keep the width / height ratio when the size changes (default false)\nm_Unit:int                   # unit of m_Width / m_Height: 0 = px, 1 = inch, 2 = mm, 3 = cm (default 2 = mm); custom size only\nm_Resolution:int             # resolution in pixels per inch, >= 1 (default 300); custom size only\nm_ColorHex:str               # background color as \"#RRGGBB\" (default \"#FFFFFF\"); an invalid string is ignored\nm_Texture:str                # background image path (.jpg / .png / .bmp / .tif / .hdr); empty = the default background\nm_bTransparency:bool         # if true, the background is transparent; PNG images only, not videos (default false)\nm_bBackgroundCrop:bool       # if true, crop the background image (Crop, final render only) (default false)\nm_FileName:str               # output file name; ignored if empty or if it contains \\ / : * ? \" < > | (default \"Untitled\")\nm_FilePath:str               # output folder; empty = Assets/Render/, a folder that does not exist is ignored (default \"\")\nm_ImageFormat:int            # image file format: 0 = PNG, 1 = JPG (default 0)\nm_VideoFormat:int            # video file format: 0 = AVI (MOV on macOS), 1 = MP4 (default 0)\nm_bPanaromicCustomView:bool  # if true, also save one image with all custom views side by side (default false)\nm_bPanaromicColorways:bool   # if true, also save one image with all colorways side by side (default false)\nm_bSaveHtml:bool             # if true, also save an HTML page that shows the rendered images (default false)",
+      "description_raw": "Render > Image/Video Properties (output type, turntable / animation, size, background, save) for UtilityAPI::SetRenderImageVideoProperties, without the dialog.",
+      "members": [
+        {
+          "raw": "m_Colorway:int               # colorways to render: 0 = current colorway, 1 = all colorways (default 0)",
+          "documentation_raw": "colorways to render: 0 = current colorway, 1 = all colorways (default 0)",
+          "name": "m_Colorway",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "m_ImageVideo:int             # output type: 0 = image, 1 = turntable, 2 = animation (default 0); selects which fields below are used",
+          "documentation_raw": "output type: 0 = image, 1 = turntable, 2 = animation (default 0); selects which fields below are used",
+          "name": "m_ImageVideo",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "m_ViewPoint:int              # image viewpoint: 0 = current 3D view, 1 = all custom views (default 0); image output only",
+          "documentation_raw": "image viewpoint: 0 = current 3D view, 1 = all custom views (default 0); image output only",
+          "name": "m_ViewPoint",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "m_ImageCount:int             # turntable image count: 0-7 = 2, 4, 8, 16, 32, 64, 180, 360 images (default 1 = 4 images)",
+          "documentation_raw": "turntable image count: 0-7 = 2, 4, 8, 16, 32, 64, 180, 360 images (default 1 = 4 images)",
+          "name": "m_ImageCount",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "m_RotationAngle:int          # turntable rotation angle in degrees, 1-360 (default 360)",
+          "documentation_raw": "turntable rotation angle in degrees, 1-360 (default 360)",
+          "name": "m_RotationAngle",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "m_RotationAxis:int           # turntable axis: 0 = auto (scene center), 1 = origin, 2 = custom (m_RotationAxisX / Z) (default 0)",
+          "documentation_raw": "turntable axis: 0 = auto (scene center), 1 = origin, 2 = custom (m_RotationAxisX / Z) (default 0)",
+          "name": "m_RotationAxis",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "m_RotationAxisX:float        # X position of the custom turntable axis, in the current length unit; used when m_RotationAxis is 2",
+          "documentation_raw": "X position of the custom turntable axis, in the current length unit; used when m_RotationAxis is 2",
+          "name": "m_RotationAxisX",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "m_RotationAxisZ:float        # Z position of the custom turntable axis, in the current length unit; used when m_RotationAxis is 2",
+          "documentation_raw": "Z position of the custom turntable axis, in the current length unit; used when m_RotationAxis is 2",
+          "name": "m_RotationAxisZ",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "m_RotationDirection:int      # turntable direction: 0 = counterclockwise, 1 = clockwise (default 0)",
+          "documentation_raw": "turntable direction: 0 = counterclockwise, 1 = clockwise (default 0)",
+          "name": "m_RotationDirection",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "m_bTurnTableSaveVideo:bool   # if true, the turntable render also saves a video in m_VideoFormat (default false)",
+          "documentation_raw": "if true, the turntable render also saves a video in m_VideoFormat (default false)",
+          "name": "m_bTurnTableSaveVideo",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "m_TotalDuration:float        # not used: the video length is m_FrameDuration x the image count",
+          "documentation_raw": "not used: the video length is m_FrameDuration x the image count",
+          "name": "m_TotalDuration",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "m_FrameDuration:float        # seconds each turntable image is shown in the video / GIF, > 0 (default 1)",
+          "documentation_raw": "seconds each turntable image is shown in the video / GIF, > 0 (default 1)",
+          "name": "m_FrameDuration",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "m_bSaveGIF:bool              # if true, the turntable render also saves an animated GIF (default false)",
+          "documentation_raw": "if true, the turntable render also saves an animated GIF (default false)",
+          "name": "m_bSaveGIF",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "m_Region:int                 # animation frames to render: 0 = entire animation, 1 = play region (default 0)",
+          "documentation_raw": "animation frames to render: 0 = entire animation, 1 = play region (default 0)",
+          "name": "m_Region",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "m_bAnimationSaveVideo:bool   # if true, the animation render also saves a video in m_VideoFormat (default false)",
+          "documentation_raw": "if true, the animation render also saves a video in m_VideoFormat (default false)",
+          "name": "m_bAnimationSaveVideo",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "m_AnimationFPS:float         # frames per second of the animation render, > 0 (default 30)",
+          "documentation_raw": "frames per second of the animation render, > 0 (default 30)",
+          "name": "m_AnimationFPS",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "m_bAnimSaveGIF:bool          # if true, the animation render also saves an animated GIF (default false)",
+          "documentation_raw": "if true, the animation render also saves an animated GIF (default false)",
+          "name": "m_bAnimSaveGIF",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "m_ImageSize:int              # size preset: 0 = 640x480, 1 = 720x480, 2 = 720x576, 3 = 1280x720, 4 = 1920x1080, 5-11 = A3, A4, B4, B5, Legal, Letter, Tabloid, 12 = custom (m_Width / m_Height) (default 0)",
+          "documentation_raw": "size preset: 0 = 640x480, 1 = 720x480, 2 = 720x576, 3 = 1280x720, 4 = 1920x1080, 5-11 = A3, A4, B4, B5, Legal, Letter, Tabloid, 12 = custom (m_Width / m_Height) (default 0)",
+          "name": "m_ImageSize",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "m_Orientation:int            # 0 = portrait, 1 = landscape (default 0)",
+          "documentation_raw": "0 = portrait, 1 = landscape (default 0)",
+          "name": "m_Orientation",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "m_Width:float                # custom image width in m_Unit, > 0; used when m_ImageSize is 12 (default 480)",
+          "documentation_raw": "custom image width in m_Unit, > 0; used when m_ImageSize is 12 (default 480)",
+          "name": "m_Width",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "m_Height:float               # custom image height in m_Unit, > 0; used when m_ImageSize is 12 (default 640)",
+          "documentation_raw": "custom image height in m_Unit, > 0; used when m_ImageSize is 12 (default 640)",
+          "name": "m_Height",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "m_bMaintainRatio:bool        # if true, keep the width / height ratio when the size changes (default false)",
+          "documentation_raw": "if true, keep the width / height ratio when the size changes (default false)",
+          "name": "m_bMaintainRatio",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "m_Unit:int                   # unit of m_Width / m_Height: 0 = px, 1 = inch, 2 = mm, 3 = cm (default 2 = mm); custom size only",
+          "documentation_raw": "unit of m_Width / m_Height: 0 = px, 1 = inch, 2 = mm, 3 = cm (default 2 = mm); custom size only",
+          "name": "m_Unit",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "m_Resolution:int             # resolution in pixels per inch, >= 1 (default 300); custom size only",
+          "documentation_raw": "resolution in pixels per inch, >= 1 (default 300); custom size only",
+          "name": "m_Resolution",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "m_ColorHex:str               # background color as \"#RRGGBB\" (default \"#FFFFFF\"); an invalid string is ignored",
+          "documentation_raw": "background color as \"#RRGGBB\" (default \"#FFFFFF\"); an invalid string is ignored",
+          "name": "m_ColorHex",
+          "kind": "field",
+          "annotation_raw": "str",
+          "type_references": []
+        },
+        {
+          "raw": "m_Texture:str                # background image path (.jpg / .png / .bmp / .tif / .hdr); empty = the default background",
+          "documentation_raw": "background image path (.jpg / .png / .bmp / .tif / .hdr); empty = the default background",
+          "name": "m_Texture",
+          "kind": "field",
+          "annotation_raw": "str",
+          "type_references": []
+        },
+        {
+          "raw": "m_bTransparency:bool         # if true, the background is transparent; PNG images only, not videos (default false)",
+          "documentation_raw": "if true, the background is transparent; PNG images only, not videos (default false)",
+          "name": "m_bTransparency",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "m_bBackgroundCrop:bool       # if true, crop the background image (Crop, final render only) (default false)",
+          "documentation_raw": "if true, crop the background image (Crop, final render only) (default false)",
+          "name": "m_bBackgroundCrop",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "m_FileName:str               # output file name; ignored if empty or if it contains \\ / : * ? \" < > | (default \"Untitled\")",
+          "documentation_raw": "output file name; ignored if empty or if it contains \\ / : * ? \" < > | (default \"Untitled\")",
+          "name": "m_FileName",
+          "kind": "field",
+          "annotation_raw": "str",
+          "type_references": []
+        },
+        {
+          "raw": "m_FilePath:str               # output folder; empty = Assets/Render/, a folder that does not exist is ignored (default \"\")",
+          "documentation_raw": "output folder; empty = Assets/Render/, a folder that does not exist is ignored (default \"\")",
+          "name": "m_FilePath",
+          "kind": "field",
+          "annotation_raw": "str",
+          "type_references": []
+        },
+        {
+          "raw": "m_ImageFormat:int            # image file format: 0 = PNG, 1 = JPG (default 0)",
+          "documentation_raw": "image file format: 0 = PNG, 1 = JPG (default 0)",
+          "name": "m_ImageFormat",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "m_VideoFormat:int            # video file format: 0 = AVI (MOV on macOS), 1 = MP4 (default 0)",
+          "documentation_raw": "video file format: 0 = AVI (MOV on macOS), 1 = MP4 (default 0)",
+          "name": "m_VideoFormat",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "m_bPanaromicCustomView:bool  # if true, also save one image with all custom views side by side (default false)",
+          "documentation_raw": "if true, also save one image with all custom views side by side (default false)",
+          "name": "m_bPanaromicCustomView",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "m_bPanaromicColorways:bool   # if true, also save one image with all colorways side by side (default false)",
+          "documentation_raw": "if true, also save one image with all colorways side by side (default false)",
+          "name": "m_bPanaromicColorways",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "m_bSaveHtml:bool             # if true, also save an HTML page that shows the rendered images (default false)",
+          "documentation_raw": "if true, also save an HTML page that shows the rendered images (default false)",
+          "name": "m_bSaveHtml",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 249,
+              "block": 11
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 400,
+              "block": 11,
+              "anchor": "renderimagevideooptions"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

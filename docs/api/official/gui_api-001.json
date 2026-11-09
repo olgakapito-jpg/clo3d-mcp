@@ -1,0 +1,2617 @@
+{
+  "kind": "methods",
+  "records": [
+    {
+      "id": "gui_api.AddButton",
+      "qualified_name": "gui_api.AddButton",
+      "module": "gui_api",
+      "symbol": "AddButton",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "gui_api.AddButton#47fa25e75a26726c",
+          "signature_normalized": "gui_api.AddButton(parentHandle: int, text: str, onClick: Callable[[], None]) -> int",
+          "signature_raw": "gui_api.AddButton(parentHandle: int, text: str, onClick: Callable[[], None]) -> int",
+          "parameters": [
+            {
+              "raw": "parentHandle: int",
+              "name": "parentHandle",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "text: str",
+              "name": "text",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "onClick: Callable[[], None]",
+              "name": "onClick",
+              "annotation_raw": "Callable[[], None]"
+            }
+          ],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "gui_api.AddButton(parentHandle: int, text: str, onClick: Callable[[], None]) -> int",
+              "documentation_raw": "gui_api.AddButton(parentHandle: int, text: str, onClick: Callable[[], None]) -> int\n\nAppend a push button to a window created by CreateToolWindow. The Python callable runs on the main thread every time the button is clicked, also after the creating script has finished. Exceptions raised inside the callable are logged and do not close the window.\n\n- ``parentHandle``: Handle of the parent window.\n- ``text``: Button caption.\n- ``onClick``: Python callable taking no arguments.\n\n**Returns:** Widget handle (greater than 0) on success, 0 when the parent handle is invalid or in headless mode.\n\n|",
+              "section": "Text and buttons",
+              "sources": [
+                {
+                  "source_id": "gui_api_reference.rst.txt",
+                  "line": 241,
+                  "block": 17
+                },
+                {
+                  "source_id": "gui_api_reference.html",
+                  "line": 335,
+                  "block": 17,
+                  "anchor": "text-and-buttons"
+                }
+              ]
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "- ``parentHandle``: Handle of the parent window.",
+            "- ``text``: Button caption.",
+            "- ``onClick``: Python callable taking no arguments."
+          ],
+          "return_docs_raw": [
+            "**Returns:** Widget handle (greater than 0) on success, 0 when the parent handle is invalid or in headless mode."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "gui_api.AddCheckBox",
+      "qualified_name": "gui_api.AddCheckBox",
+      "module": "gui_api",
+      "symbol": "AddCheckBox",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "gui_api.AddCheckBox#75dc3dfee1d33eb9",
+          "signature_normalized": "gui_api.AddCheckBox(parentHandle: int, text: str, checked: bool = false, onChanged: Callable[[bool], None] = None) -> int",
+          "signature_raw": "gui_api.AddCheckBox(parentHandle: int, text: str, checked: bool = false, onChanged: Callable[[bool], None] = None) -> int",
+          "parameters": [
+            {
+              "raw": "parentHandle: int",
+              "name": "parentHandle",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "text: str",
+              "name": "text",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "checked: bool = false",
+              "name": "checked",
+              "annotation_raw": "bool",
+              "default_raw": "false"
+            },
+            {
+              "raw": "onChanged: Callable[[bool], None] = None",
+              "name": "onChanged",
+              "annotation_raw": "Callable[[bool], None]",
+              "default_raw": "None"
+            }
+          ],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "gui_api.AddCheckBox(parentHandle: int, text: str, checked: bool = false, onChanged: Callable[[bool], None] = None) -> int",
+              "documentation_raw": "gui_api.AddCheckBox(parentHandle: int, text: str, checked: bool = false, onChanged: Callable[[bool], None] = None) -> int\n\nAppend a check box. GetWidgetValue returns true or false as text, SetWidgetValue accepts true, false, 1 or 0.\n\n- ``parentHandle``: Handle of a window, group or row.\n- ``text``: Caption shown next to the box.\n- ``checked``: Initial state.\n- ``onChanged``: Python callable taking the new state (bool). Called on user clicks only.\n\n**Returns:** Widget handle (greater than 0) on success, 0 when the parent handle is invalid or in headless mode.\n\n|",
+              "section": "Input widgets",
+              "sources": [
+                {
+                  "source_id": "gui_api_reference.rst.txt",
+                  "line": 300,
+                  "block": 21
+                },
+                {
+                  "source_id": "gui_api_reference.html",
+                  "line": 390,
+                  "block": 21,
+                  "anchor": "input-widgets"
+                }
+              ]
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "- ``parentHandle``: Handle of a window, group or row.",
+            "- ``text``: Caption shown next to the box.",
+            "- ``checked``: Initial state.",
+            "- ``onChanged``: Python callable taking the new state (bool). Called on user clicks only."
+          ],
+          "return_docs_raw": [
+            "**Returns:** Widget handle (greater than 0) on success, 0 when the parent handle is invalid or in headless mode."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "gui_api.AddDropdown",
+      "qualified_name": "gui_api.AddDropdown",
+      "module": "gui_api",
+      "symbol": "AddDropdown",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "gui_api.AddDropdown#22d9babc4cd6349f",
+          "signature_normalized": "gui_api.AddDropdown(parentHandle: int, options: list[str], defaultIndex: int = 0, onChanged: Callable[[int], None] = None) -> int",
+          "signature_raw": "gui_api.AddDropdown(parentHandle: int, options: list[str], defaultIndex: int = 0, onChanged: Callable[[int], None] = None) -> int",
+          "parameters": [
+            {
+              "raw": "parentHandle: int",
+              "name": "parentHandle",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "options: list[str]",
+              "name": "options",
+              "annotation_raw": "list[str]"
+            },
+            {
+              "raw": "defaultIndex: int = 0",
+              "name": "defaultIndex",
+              "annotation_raw": "int",
+              "default_raw": "0"
+            },
+            {
+              "raw": "onChanged: Callable[[int], None] = None",
+              "name": "onChanged",
+              "annotation_raw": "Callable[[int], None]",
+              "default_raw": "None"
+            }
+          ],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "gui_api.AddDropdown(parentHandle: int, options: list[str], defaultIndex: int = 0, onChanged: Callable[[int], None] = None) -> int",
+              "documentation_raw": "gui_api.AddDropdown(parentHandle: int, options: list[str], defaultIndex: int = 0, onChanged: Callable[[int], None] = None) -> int\n\nAppend a drop-down list. GetWidgetSelectedIndex / SetWidgetSelectedIndex work with the index, GetWidgetValue returns the selected caption, SetWidgetItems replaces the options.\n\n- ``parentHandle``: Handle of a window, group or row.\n- ``options``: Option captions.\n- ``defaultIndex``: Index selected initially. Out-of-range values select the first option.\n- ``onChanged``: Python callable taking the new index (int). Called on user selection only.\n\n**Returns:** Widget handle (greater than 0) on success, 0 when the parent handle is invalid or in headless mode.\n\n|",
+              "section": "Input widgets",
+              "sources": [
+                {
+                  "source_id": "gui_api_reference.rst.txt",
+                  "line": 315,
+                  "block": 22
+                },
+                {
+                  "source_id": "gui_api_reference.html",
+                  "line": 404,
+                  "block": 22,
+                  "anchor": "input-widgets"
+                }
+              ]
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "- ``parentHandle``: Handle of a window, group or row.",
+            "- ``options``: Option captions.",
+            "- ``defaultIndex``: Index selected initially. Out-of-range values select the first option.",
+            "- ``onChanged``: Python callable taking the new index (int). Called on user selection only."
+          ],
+          "return_docs_raw": [
+            "**Returns:** Widget handle (greater than 0) on success, 0 when the parent handle is invalid or in headless mode."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "gui_api.AddGroup",
+      "qualified_name": "gui_api.AddGroup",
+      "module": "gui_api",
+      "symbol": "AddGroup",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "gui_api.AddGroup#ddc241798a095326",
+          "signature_normalized": "gui_api.AddGroup(parentHandle: int, title: str) -> int",
+          "signature_raw": "gui_api.AddGroup(parentHandle: int, title: str) -> int",
+          "parameters": [
+            {
+              "raw": "parentHandle: int",
+              "name": "parentHandle",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "title: str",
+              "name": "title",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "gui_api.AddGroup(parentHandle: int, title: str) -> int",
+              "documentation_raw": "gui_api.AddGroup(parentHandle: int, title: str) -> int\n\nAppend a titled group box to a window, group or row. Widgets added to the returned handle are laid out top to bottom inside the box.\n\n- ``parentHandle``: Handle of a window, group or row.\n- ``title``: Group title.\n\n**Returns:** Container handle (greater than 0) on success, 0 when the parent handle is invalid or in headless mode.\n\n|",
+              "section": "Layout containers",
+              "sources": [
+                {
+                  "source_id": "gui_api_reference.rst.txt",
+                  "line": 200,
+                  "block": 14
+                },
+                {
+                  "source_id": "gui_api_reference.html",
+                  "line": 297,
+                  "block": 14,
+                  "anchor": "layout-containers"
+                }
+              ]
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "- ``parentHandle``: Handle of a window, group or row.",
+            "- ``title``: Group title."
+          ],
+          "return_docs_raw": [
+            "**Returns:** Container handle (greater than 0) on success, 0 when the parent handle is invalid or in headless mode."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "gui_api.AddImage",
+      "qualified_name": "gui_api.AddImage",
+      "module": "gui_api",
+      "symbol": "AddImage",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "gui_api.AddImage#f2351c59edd3a400",
+          "signature_normalized": "gui_api.AddImage(parentHandle: int, imageFilePath: str, maxWidth: int = 0, maxHeight: int = 0) -> int",
+          "signature_raw": "gui_api.AddImage(parentHandle: int, imageFilePath: str, maxWidth: int = 0, maxHeight: int = 0) -> int",
+          "parameters": [
+            {
+              "raw": "parentHandle: int",
+              "name": "parentHandle",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "imageFilePath: str",
+              "name": "imageFilePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "maxWidth: int = 0",
+              "name": "maxWidth",
+              "annotation_raw": "int",
+              "default_raw": "0"
+            },
+            {
+              "raw": "maxHeight: int = 0",
+              "name": "maxHeight",
+              "annotation_raw": "int",
+              "default_raw": "0"
+            }
+          ],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "gui_api.AddImage(parentHandle: int, imageFilePath: str, maxWidth: int = 0, maxHeight: int = 0) -> int",
+              "documentation_raw": "gui_api.AddImage(parentHandle: int, imageFilePath: str, maxWidth: int = 0, maxHeight: int = 0) -> int\n\nAppend an image loaded from a file. SetWidgetValue with a file path replaces the image. Very large files such as 2D window snapshots are supported and decoded straight to the requested size.\n\n- ``parentHandle``: Handle of a window, group or row.\n- ``imageFilePath``: Path of a PNG or JPEG file.\n- ``maxWidth``: Scale the image down to this width if it is wider. 0 keeps the original width.\n- ``maxHeight``: Scale the image down to this height if it is taller. 0 keeps the original height. When both limits are 0 an image wider or taller than 4096 px is scaled down to 4096 px.\n\n**Returns:** Widget handle (greater than 0) on success, 0 when the parent handle is invalid, the file cannot be loaded or in headless mode.\n\n|",
+              "section": "Lists, tables, images and progress",
+              "sources": [
+                {
+                  "source_id": "gui_api_reference.rst.txt",
+                  "line": 412,
+                  "block": 28
+                },
+                {
+                  "source_id": "gui_api_reference.html",
+                  "line": 495,
+                  "block": 28,
+                  "anchor": "lists-tables-images-and-progress"
+                }
+              ]
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "- ``parentHandle``: Handle of a window, group or row.",
+            "- ``imageFilePath``: Path of a PNG or JPEG file.",
+            "- ``maxWidth``: Scale the image down to this width if it is wider. 0 keeps the original width.",
+            "- ``maxHeight``: Scale the image down to this height if it is taller. 0 keeps the original height. When both limits are 0 an image wider or taller than 4096 px is scaled down to 4096 px."
+          ],
+          "return_docs_raw": [
+            "**Returns:** Widget handle (greater than 0) on success, 0 when the parent handle is invalid, the file cannot be loaded or in headless mode."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "gui_api.AddLabel",
+      "qualified_name": "gui_api.AddLabel",
+      "module": "gui_api",
+      "symbol": "AddLabel",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "gui_api.AddLabel#20a3c529dd191145",
+          "signature_normalized": "gui_api.AddLabel(parentHandle: int, text: str) -> int",
+          "signature_raw": "gui_api.AddLabel(parentHandle: int, text: str) -> int",
+          "parameters": [
+            {
+              "raw": "parentHandle: int",
+              "name": "parentHandle",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "text: str",
+              "name": "text",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "gui_api.AddLabel(parentHandle: int, text: str) -> int",
+              "documentation_raw": "gui_api.AddLabel(parentHandle: int, text: str) -> int\n\nAppend a text label to a window created by CreateToolWindow.\n\n- ``parentHandle``: Handle of the parent window.\n- ``text``: Label text.\n\n**Returns:** Widget handle (greater than 0) on success, 0 when the parent handle is invalid or in headless mode.\n\n|",
+              "section": "Text and buttons",
+              "sources": [
+                {
+                  "source_id": "gui_api_reference.rst.txt",
+                  "line": 228,
+                  "block": 16
+                },
+                {
+                  "source_id": "gui_api_reference.html",
+                  "line": 323,
+                  "block": 16,
+                  "anchor": "text-and-buttons"
+                }
+              ]
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "- ``parentHandle``: Handle of the parent window.",
+            "- ``text``: Label text."
+          ],
+          "return_docs_raw": [
+            "**Returns:** Widget handle (greater than 0) on success, 0 when the parent handle is invalid or in headless mode."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "gui_api.AddList",
+      "qualified_name": "gui_api.AddList",
+      "module": "gui_api",
+      "symbol": "AddList",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "gui_api.AddList#f0db4c681985eeb7",
+          "signature_normalized": "gui_api.AddList(parentHandle: int, items: list[str], defaultIndex: int = -1, onSelected: Callable[[int], None] = None, onDoubleClicked: Callable[[int], None] = None) -> int",
+          "signature_raw": "gui_api.AddList(parentHandle: int, items: list[str], defaultIndex: int = -1, onSelected: Callable[[int], None] = None, onDoubleClicked: Callable[[int], None] = None) -> int",
+          "parameters": [
+            {
+              "raw": "parentHandle: int",
+              "name": "parentHandle",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "items: list[str]",
+              "name": "items",
+              "annotation_raw": "list[str]"
+            },
+            {
+              "raw": "defaultIndex: int = -1",
+              "name": "defaultIndex",
+              "annotation_raw": "int",
+              "default_raw": "-1"
+            },
+            {
+              "raw": "onSelected: Callable[[int], None] = None",
+              "name": "onSelected",
+              "annotation_raw": "Callable[[int], None]",
+              "default_raw": "None"
+            },
+            {
+              "raw": "onDoubleClicked: Callable[[int], None] = None",
+              "name": "onDoubleClicked",
+              "annotation_raw": "Callable[[int], None]",
+              "default_raw": "None"
+            }
+          ],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "gui_api.AddList(parentHandle: int, items: list[str], defaultIndex: int = -1, onSelected: Callable[[int], None] = None, onDoubleClicked: Callable[[int], None] = None) -> int",
+              "documentation_raw": "gui_api.AddList(parentHandle: int, items: list[str], defaultIndex: int = -1, onSelected: Callable[[int], None] = None, onDoubleClicked: Callable[[int], None] = None) -> int\n\nAppend a single-selection list. GetWidgetSelectedIndex / SetWidgetSelectedIndex work with the row, GetWidgetValue returns the selected caption, SetWidgetItems replaces the rows.\n\n- ``parentHandle``: Handle of a window, group or row.\n- ``items``: Row captions.\n- ``defaultIndex``: Row selected initially, -1 for no selection.\n- ``onSelected``: Python callable taking the new row (int). Called on user selection only.\n- ``onDoubleClicked``: Python callable taking the double-clicked row (int).\n\n**Returns:** Widget handle (greater than 0) on success, 0 when the parent handle is invalid or in headless mode.\n\n|",
+              "section": "Lists, tables, images and progress",
+              "sources": [
+                {
+                  "source_id": "gui_api_reference.rst.txt",
+                  "line": 381,
+                  "block": 26
+                },
+                {
+                  "source_id": "gui_api_reference.html",
+                  "line": 466,
+                  "block": 26,
+                  "anchor": "lists-tables-images-and-progress"
+                }
+              ]
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "- ``parentHandle``: Handle of a window, group or row.",
+            "- ``items``: Row captions.",
+            "- ``defaultIndex``: Row selected initially, -1 for no selection.",
+            "- ``onSelected``: Python callable taking the new row (int). Called on user selection only.",
+            "- ``onDoubleClicked``: Python callable taking the double-clicked row (int)."
+          ],
+          "return_docs_raw": [
+            "**Returns:** Widget handle (greater than 0) on success, 0 when the parent handle is invalid or in headless mode."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "gui_api.AddMenu",
+      "qualified_name": "gui_api.AddMenu",
+      "module": "gui_api",
+      "symbol": "AddMenu",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "gui_api.AddMenu#35a640753c91a782",
+          "signature_normalized": "gui_api.AddMenu(windowHandle: int, title: str) -> int",
+          "signature_raw": "gui_api.AddMenu(windowHandle: int, title: str) -> int",
+          "parameters": [
+            {
+              "raw": "windowHandle: int",
+              "name": "windowHandle",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "title: str",
+              "name": "title",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "gui_api.AddMenu(windowHandle: int, title: str) -> int",
+              "documentation_raw": "gui_api.AddMenu(windowHandle: int, title: str) -> int\n\nAdd a menu to the menu bar of a window. The menu bar is created on the first call.\n\n- ``windowHandle``: Handle returned by CreateToolWindow.\n- ``title``: Menu title shown in the menu bar.\n\n**Returns:** Menu handle (greater than 0) on success, 0 when the handle is not a window or in headless mode.\n\n|",
+              "section": "Menus",
+              "sources": [
+                {
+                  "source_id": "gui_api_reference.rst.txt",
+                  "line": 443,
+                  "block": 30
+                },
+                {
+                  "source_id": "gui_api_reference.html",
+                  "line": 524,
+                  "block": 30,
+                  "anchor": "menus"
+                }
+              ]
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "- ``windowHandle``: Handle returned by CreateToolWindow.",
+            "- ``title``: Menu title shown in the menu bar."
+          ],
+          "return_docs_raw": [
+            "**Returns:** Menu handle (greater than 0) on success, 0 when the handle is not a window or in headless mode."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "gui_api.AddMenuItem",
+      "qualified_name": "gui_api.AddMenuItem",
+      "module": "gui_api",
+      "symbol": "AddMenuItem",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "gui_api.AddMenuItem#371f4d314e6c4001",
+          "signature_normalized": "gui_api.AddMenuItem(menuHandle: int, text: str, onClick: Callable[[], None]) -> int",
+          "signature_raw": "gui_api.AddMenuItem(menuHandle: int, text: str, onClick: Callable[[], None]) -> int",
+          "parameters": [
+            {
+              "raw": "menuHandle: int",
+              "name": "menuHandle",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "text: str",
+              "name": "text",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "onClick: Callable[[], None]",
+              "name": "onClick",
+              "annotation_raw": "Callable[[], None]"
+            }
+          ],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "gui_api.AddMenuItem(menuHandle: int, text: str, onClick: Callable[[], None]) -> int",
+              "documentation_raw": "gui_api.AddMenuItem(menuHandle: int, text: str, onClick: Callable[[], None]) -> int\n\nAdd a clickable item to a menu created by AddMenu.\n\n- ``menuHandle``: Handle returned by AddMenu.\n- ``text``: Item caption.\n- ``onClick``: Python callable taking no arguments.\n\n**Returns:** Item handle (greater than 0) on success, 0 when the handle is not a menu or in headless mode.\n\n|\n\nReading and changing widgets\n----------------------------",
+              "section": "Menus",
+              "sources": [
+                {
+                  "source_id": "gui_api_reference.rst.txt",
+                  "line": 456,
+                  "block": 31
+                },
+                {
+                  "source_id": "gui_api_reference.html",
+                  "line": 536,
+                  "block": 31,
+                  "anchor": "menus"
+                }
+              ]
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "- ``menuHandle``: Handle returned by AddMenu.",
+            "- ``text``: Item caption.",
+            "- ``onClick``: Python callable taking no arguments."
+          ],
+          "return_docs_raw": [
+            "**Returns:** Item handle (greater than 0) on success, 0 when the handle is not a menu or in headless mode."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "gui_api.AddNumberInput",
+      "qualified_name": "gui_api.AddNumberInput",
+      "module": "gui_api",
+      "symbol": "AddNumberInput",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "gui_api.AddNumberInput#7f6db1e72480085b",
+          "signature_normalized": "gui_api.AddNumberInput(parentHandle: int, defaultValue: float = 0.0, minimum: float = -1000000.0, maximum: float = 1000000.0, decimals: int = 2, onChanged: Callable[[float], None] = None) -> int",
+          "signature_raw": "gui_api.AddNumberInput(parentHandle: int, defaultValue: float = 0.0, minimum: float = -1000000.0, maximum: float = 1000000.0, decimals: int = 2, onChanged: Callable[[float], None] = None) -> int",
+          "parameters": [
+            {
+              "raw": "parentHandle: int",
+              "name": "parentHandle",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "defaultValue: float = 0.0",
+              "name": "defaultValue",
+              "annotation_raw": "float",
+              "default_raw": "0.0"
+            },
+            {
+              "raw": "minimum: float = -1000000.0",
+              "name": "minimum",
+              "annotation_raw": "float",
+              "default_raw": "-1000000.0"
+            },
+            {
+              "raw": "maximum: float = 1000000.0",
+              "name": "maximum",
+              "annotation_raw": "float",
+              "default_raw": "1000000.0"
+            },
+            {
+              "raw": "decimals: int = 2",
+              "name": "decimals",
+              "annotation_raw": "int",
+              "default_raw": "2"
+            },
+            {
+              "raw": "onChanged: Callable[[float], None] = None",
+              "name": "onChanged",
+              "annotation_raw": "Callable[[float], None]",
+              "default_raw": "None"
+            }
+          ],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "gui_api.AddNumberInput(parentHandle: int, defaultValue: float = 0.0, minimum: float = -1000000.0, maximum: float = 1000000.0, decimals: int = 2, onChanged: Callable[[float], None] = None) -> int",
+              "documentation_raw": "gui_api.AddNumberInput(parentHandle: int, defaultValue: float = 0.0, minimum: float = -1000000.0, maximum: float = 1000000.0, decimals: int = 2, onChanged: Callable[[float], None] = None) -> int\n\nAppend a decimal number input with spin buttons. GetWidgetValue returns the number as decimal text, SetWidgetValue accepts decimal text.\n\n- ``parentHandle``: Handle of a window, group or row.\n- ``defaultValue``: Initial value.\n- ``minimum``: Smallest accepted value.\n- ``maximum``: Largest accepted value.\n- ``decimals``: Number of decimal places shown.\n- ``onChanged``: Python callable taking the new value (float). Called on user edits only.\n\n**Returns:** Widget handle (greater than 0) on success, 0 when the parent handle is invalid or in headless mode.\n\n|",
+              "section": "Input widgets",
+              "sources": [
+                {
+                  "source_id": "gui_api_reference.rst.txt",
+                  "line": 345,
+                  "block": 24
+                },
+                {
+                  "source_id": "gui_api_reference.html",
+                  "line": 432,
+                  "block": 24,
+                  "anchor": "input-widgets"
+                }
+              ]
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "- ``parentHandle``: Handle of a window, group or row.",
+            "- ``defaultValue``: Initial value.",
+            "- ``minimum``: Smallest accepted value.",
+            "- ``maximum``: Largest accepted value.",
+            "- ``decimals``: Number of decimal places shown.",
+            "- ``onChanged``: Python callable taking the new value (float). Called on user edits only."
+          ],
+          "return_docs_raw": [
+            "**Returns:** Widget handle (greater than 0) on success, 0 when the parent handle is invalid or in headless mode."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "gui_api.AddProgressBar",
+      "qualified_name": "gui_api.AddProgressBar",
+      "module": "gui_api",
+      "symbol": "AddProgressBar",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "gui_api.AddProgressBar#94b8e94686dc3009",
+          "signature_normalized": "gui_api.AddProgressBar(parentHandle: int, value: int = 0) -> int",
+          "signature_raw": "gui_api.AddProgressBar(parentHandle: int, value: int = 0) -> int",
+          "parameters": [
+            {
+              "raw": "parentHandle: int",
+              "name": "parentHandle",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "value: int = 0",
+              "name": "value",
+              "annotation_raw": "int",
+              "default_raw": "0"
+            }
+          ],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "gui_api.AddProgressBar(parentHandle: int, value: int = 0) -> int",
+              "documentation_raw": "gui_api.AddProgressBar(parentHandle: int, value: int = 0) -> int\n\nAppend a progress bar from 0 to 100. SetWidgetValue with integer text updates it.\n\n- ``parentHandle``: Handle of a window, group or row.\n- ``value``: Initial value from 0 to 100.\n\n**Returns:** Widget handle (greater than 0) on success, 0 when the parent handle is invalid or in headless mode.\n\n|\n\nMenus\n-----",
+              "section": "Lists, tables, images and progress",
+              "sources": [
+                {
+                  "source_id": "gui_api_reference.rst.txt",
+                  "line": 427,
+                  "block": 29
+                },
+                {
+                  "source_id": "gui_api_reference.html",
+                  "line": 509,
+                  "block": 29,
+                  "anchor": "lists-tables-images-and-progress"
+                }
+              ]
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "- ``parentHandle``: Handle of a window, group or row.",
+            "- ``value``: Initial value from 0 to 100."
+          ],
+          "return_docs_raw": [
+            "**Returns:** Widget handle (greater than 0) on success, 0 when the parent handle is invalid or in headless mode."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "gui_api.AddRadioGroup",
+      "qualified_name": "gui_api.AddRadioGroup",
+      "module": "gui_api",
+      "symbol": "AddRadioGroup",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "gui_api.AddRadioGroup#e5cb5195b887fa5a",
+          "signature_normalized": "gui_api.AddRadioGroup(parentHandle: int, options: list[str], defaultIndex: int = 0, onChanged: Callable[[int], None] = None) -> int",
+          "signature_raw": "gui_api.AddRadioGroup(parentHandle: int, options: list[str], defaultIndex: int = 0, onChanged: Callable[[int], None] = None) -> int",
+          "parameters": [
+            {
+              "raw": "parentHandle: int",
+              "name": "parentHandle",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "options: list[str]",
+              "name": "options",
+              "annotation_raw": "list[str]"
+            },
+            {
+              "raw": "defaultIndex: int = 0",
+              "name": "defaultIndex",
+              "annotation_raw": "int",
+              "default_raw": "0"
+            },
+            {
+              "raw": "onChanged: Callable[[int], None] = None",
+              "name": "onChanged",
+              "annotation_raw": "Callable[[int], None]",
+              "default_raw": "None"
+            }
+          ],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "gui_api.AddRadioGroup(parentHandle: int, options: list[str], defaultIndex: int = 0, onChanged: Callable[[int], None] = None) -> int",
+              "documentation_raw": "gui_api.AddRadioGroup(parentHandle: int, options: list[str], defaultIndex: int = 0, onChanged: Callable[[int], None] = None) -> int\n\nAppend a vertical group of radio buttons where exactly one option is checked. Same value functions as AddDropdown.\n\n- ``parentHandle``: Handle of a window, group or row.\n- ``options``: Option captions. Must not be empty.\n- ``defaultIndex``: Index checked initially. Out-of-range values check the first option.\n- ``onChanged``: Python callable taking the new index (int). Called on user clicks only.\n\n**Returns:** Widget handle (greater than 0) on success, 0 when the parent handle is invalid, the options are empty or in headless mode.\n\n|",
+              "section": "Input widgets",
+              "sources": [
+                {
+                  "source_id": "gui_api_reference.rst.txt",
+                  "line": 330,
+                  "block": 23
+                },
+                {
+                  "source_id": "gui_api_reference.html",
+                  "line": 418,
+                  "block": 23,
+                  "anchor": "input-widgets"
+                }
+              ]
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "- ``parentHandle``: Handle of a window, group or row.",
+            "- ``options``: Option captions. Must not be empty.",
+            "- ``defaultIndex``: Index checked initially. Out-of-range values check the first option.",
+            "- ``onChanged``: Python callable taking the new index (int). Called on user clicks only."
+          ],
+          "return_docs_raw": [
+            "**Returns:** Widget handle (greater than 0) on success, 0 when the parent handle is invalid, the options are empty or in headless mode."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "gui_api.AddRow",
+      "qualified_name": "gui_api.AddRow",
+      "module": "gui_api",
+      "symbol": "AddRow",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "gui_api.AddRow#c4229dc8cf12ab69",
+          "signature_normalized": "gui_api.AddRow(parentHandle: int) -> int",
+          "signature_raw": "gui_api.AddRow(parentHandle: int) -> int",
+          "parameters": [
+            {
+              "raw": "parentHandle: int",
+              "name": "parentHandle",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "gui_api.AddRow(parentHandle: int) -> int",
+              "documentation_raw": "gui_api.AddRow(parentHandle: int) -> int\n\nAppend a horizontal container to a window, group or row. Widgets added to the returned handle are laid out left to right.\n\n- ``parentHandle``: Handle of a window, group or row.\n\n**Returns:** Container handle (greater than 0) on success, 0 when the parent handle is invalid or in headless mode.\n\n|",
+              "section": "Layout containers",
+              "sources": [
+                {
+                  "source_id": "gui_api_reference.rst.txt",
+                  "line": 188,
+                  "block": 13
+                },
+                {
+                  "source_id": "gui_api_reference.html",
+                  "line": 286,
+                  "block": 13,
+                  "anchor": "layout-containers"
+                }
+              ]
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "- ``parentHandle``: Handle of a window, group or row."
+          ],
+          "return_docs_raw": [
+            "**Returns:** Container handle (greater than 0) on success, 0 when the parent handle is invalid or in headless mode."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "gui_api.AddSeparator",
+      "qualified_name": "gui_api.AddSeparator",
+      "module": "gui_api",
+      "symbol": "AddSeparator",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "gui_api.AddSeparator#ea2f059c6a50ed2e",
+          "signature_normalized": "gui_api.AddSeparator(parentHandle: int) -> int",
+          "signature_raw": "gui_api.AddSeparator(parentHandle: int) -> int",
+          "parameters": [
+            {
+              "raw": "parentHandle: int",
+              "name": "parentHandle",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "gui_api.AddSeparator(parentHandle: int) -> int",
+              "documentation_raw": "gui_api.AddSeparator(parentHandle: int) -> int\n\nAppend a thin separator line to a window, group or row.\n\n- ``parentHandle``: Handle of a window, group or row.\n\n**Returns:** Widget handle (greater than 0) on success, 0 when the parent handle is invalid or in headless mode.\n\n|\n\nText and buttons\n----------------",
+              "section": "Layout containers",
+              "sources": [
+                {
+                  "source_id": "gui_api_reference.rst.txt",
+                  "line": 213,
+                  "block": 15
+                },
+                {
+                  "source_id": "gui_api_reference.html",
+                  "line": 309,
+                  "block": 15,
+                  "anchor": "layout-containers"
+                }
+              ]
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "- ``parentHandle``: Handle of a window, group or row."
+          ],
+          "return_docs_raw": [
+            "**Returns:** Widget handle (greater than 0) on success, 0 when the parent handle is invalid or in headless mode."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "gui_api.AddSlider",
+      "qualified_name": "gui_api.AddSlider",
+      "module": "gui_api",
+      "symbol": "AddSlider",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "gui_api.AddSlider#29809e4651f22299",
+          "signature_normalized": "gui_api.AddSlider(parentHandle: int, defaultValue: int = 0, minimum: int = 0, maximum: int = 100, onChanged: Callable[[int], None] = None) -> int",
+          "signature_raw": "gui_api.AddSlider(parentHandle: int, defaultValue: int = 0, minimum: int = 0, maximum: int = 100, onChanged: Callable[[int], None] = None) -> int",
+          "parameters": [
+            {
+              "raw": "parentHandle: int",
+              "name": "parentHandle",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "defaultValue: int = 0",
+              "name": "defaultValue",
+              "annotation_raw": "int",
+              "default_raw": "0"
+            },
+            {
+              "raw": "minimum: int = 0",
+              "name": "minimum",
+              "annotation_raw": "int",
+              "default_raw": "0"
+            },
+            {
+              "raw": "maximum: int = 100",
+              "name": "maximum",
+              "annotation_raw": "int",
+              "default_raw": "100"
+            },
+            {
+              "raw": "onChanged: Callable[[int], None] = None",
+              "name": "onChanged",
+              "annotation_raw": "Callable[[int], None]",
+              "default_raw": "None"
+            }
+          ],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "gui_api.AddSlider(parentHandle: int, defaultValue: int = 0, minimum: int = 0, maximum: int = 100, onChanged: Callable[[int], None] = None) -> int",
+              "documentation_raw": "gui_api.AddSlider(parentHandle: int, defaultValue: int = 0, minimum: int = 0, maximum: int = 100, onChanged: Callable[[int], None] = None) -> int\n\nAppend a horizontal integer slider. GetWidgetValue returns the value as text, SetWidgetValue accepts integer text.\n\n- ``parentHandle``: Handle of a window, group or row.\n- ``defaultValue``: Initial value.\n- ``minimum``: Smallest value.\n- ``maximum``: Largest value.\n- ``onChanged``: Python callable taking the new value (int). Called on user drags only.\n\n**Returns:** Widget handle (greater than 0) on success, 0 when the parent handle is invalid or in headless mode.\n\n|\n\nLists, tables, images and progress\n----------------------------------",
+              "section": "Input widgets",
+              "sources": [
+                {
+                  "source_id": "gui_api_reference.rst.txt",
+                  "line": 362,
+                  "block": 25
+                },
+                {
+                  "source_id": "gui_api_reference.html",
+                  "line": 448,
+                  "block": 25,
+                  "anchor": "input-widgets"
+                }
+              ]
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "- ``parentHandle``: Handle of a window, group or row.",
+            "- ``defaultValue``: Initial value.",
+            "- ``minimum``: Smallest value.",
+            "- ``maximum``: Largest value.",
+            "- ``onChanged``: Python callable taking the new value (int). Called on user drags only."
+          ],
+          "return_docs_raw": [
+            "**Returns:** Widget handle (greater than 0) on success, 0 when the parent handle is invalid or in headless mode."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "gui_api.AddTable",
+      "qualified_name": "gui_api.AddTable",
+      "module": "gui_api",
+      "symbol": "AddTable",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "gui_api.AddTable#098f3afff8f14a6a",
+          "signature_normalized": "gui_api.AddTable(parentHandle: int, columns: list[str], rows: list[list[str]], onSelected: Callable[[int], None] = None) -> int",
+          "signature_raw": "gui_api.AddTable(parentHandle: int, columns: list[str], rows: list[list[str]], onSelected: Callable[[int], None] = None) -> int",
+          "parameters": [
+            {
+              "raw": "parentHandle: int",
+              "name": "parentHandle",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "columns: list[str]",
+              "name": "columns",
+              "annotation_raw": "list[str]"
+            },
+            {
+              "raw": "rows: list[list[str]]",
+              "name": "rows",
+              "annotation_raw": "list[list[str]]"
+            },
+            {
+              "raw": "onSelected: Callable[[int], None] = None",
+              "name": "onSelected",
+              "annotation_raw": "Callable[[int], None]",
+              "default_raw": "None"
+            }
+          ],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "gui_api.AddTable(parentHandle: int, columns: list[str], rows: list[list[str]], onSelected: Callable[[int], None] = None) -> int",
+              "documentation_raw": "gui_api.AddTable(parentHandle: int, columns: list[str], rows: list[list[str]], onSelected: Callable[[int], None] = None) -> int\n\nAppend a read-only table with a header row and whole-row selection. GetWidgetSelectedIndex returns the selected row, GetWidgetValue returns the first cell of the selected row, SetTableRows replaces the rows.\n\n- ``parentHandle``: Handle of a window, group or row.\n- ``columns``: Column captions.\n- ``rows``: Cell texts, one inner list per row. Missing cells are shown empty.\n- ``onSelected``: Python callable taking the new row (int). Called on user selection only.\n\n**Returns:** Widget handle (greater than 0) on success, 0 when the parent handle is invalid or in headless mode.\n\n|",
+              "section": "Lists, tables, images and progress",
+              "sources": [
+                {
+                  "source_id": "gui_api_reference.rst.txt",
+                  "line": 397,
+                  "block": 27
+                },
+                {
+                  "source_id": "gui_api_reference.html",
+                  "line": 481,
+                  "block": 27,
+                  "anchor": "lists-tables-images-and-progress"
+                }
+              ]
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "- ``parentHandle``: Handle of a window, group or row.",
+            "- ``columns``: Column captions.",
+            "- ``rows``: Cell texts, one inner list per row. Missing cells are shown empty.",
+            "- ``onSelected``: Python callable taking the new row (int). Called on user selection only."
+          ],
+          "return_docs_raw": [
+            "**Returns:** Widget handle (greater than 0) on success, 0 when the parent handle is invalid or in headless mode."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "gui_api.AddTextArea",
+      "qualified_name": "gui_api.AddTextArea",
+      "module": "gui_api",
+      "symbol": "AddTextArea",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "gui_api.AddTextArea#d5bfbacb48b57b58",
+          "signature_normalized": "gui_api.AddTextArea(parentHandle: int, text: str = \"\", readOnly: bool = false) -> int",
+          "signature_raw": "gui_api.AddTextArea(parentHandle: int, text: str = \"\", readOnly: bool = false) -> int",
+          "parameters": [
+            {
+              "raw": "parentHandle: int",
+              "name": "parentHandle",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "text: str = \"\"",
+              "name": "text",
+              "annotation_raw": "str",
+              "default_raw": "\"\""
+            },
+            {
+              "raw": "readOnly: bool = false",
+              "name": "readOnly",
+              "annotation_raw": "bool",
+              "default_raw": "false"
+            }
+          ],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "gui_api.AddTextArea(parentHandle: int, text: str = \"\", readOnly: bool = false) -> int",
+              "documentation_raw": "gui_api.AddTextArea(parentHandle: int, text: str = \"\", readOnly: bool = false) -> int\n\nAppend a multi-line text box. Read the text with GetWidgetValue, write it with SetWidgetValue.\n\n- ``parentHandle``: Handle of a window, group or row.\n- ``text``: Initial text.\n- ``readOnly``: true shows the text without allowing edits, for logs and reports.\n\n**Returns:** Widget handle (greater than 0) on success, 0 when the parent handle is invalid or in headless mode.\n\n|",
+              "section": "Input widgets",
+              "sources": [
+                {
+                  "source_id": "gui_api_reference.rst.txt",
+                  "line": 286,
+                  "block": 20
+                },
+                {
+                  "source_id": "gui_api_reference.html",
+                  "line": 377,
+                  "block": 20,
+                  "anchor": "input-widgets"
+                }
+              ]
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "- ``parentHandle``: Handle of a window, group or row.",
+            "- ``text``: Initial text.",
+            "- ``readOnly``: true shows the text without allowing edits, for logs and reports."
+          ],
+          "return_docs_raw": [
+            "**Returns:** Widget handle (greater than 0) on success, 0 when the parent handle is invalid or in headless mode."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "gui_api.AddTextInput",
+      "qualified_name": "gui_api.AddTextInput",
+      "module": "gui_api",
+      "symbol": "AddTextInput",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "gui_api.AddTextInput#fd316cdb62f908ea",
+          "signature_normalized": "gui_api.AddTextInput(parentHandle: int, defaultValue: str = \"\", placeholder: str = \"\", onChanged: Callable[[str], None] = None) -> int",
+          "signature_raw": "gui_api.AddTextInput(parentHandle: int, defaultValue: str = \"\", placeholder: str = \"\", onChanged: Callable[[str], None] = None) -> int",
+          "parameters": [
+            {
+              "raw": "parentHandle: int",
+              "name": "parentHandle",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "defaultValue: str = \"\"",
+              "name": "defaultValue",
+              "annotation_raw": "str",
+              "default_raw": "\"\""
+            },
+            {
+              "raw": "placeholder: str = \"\"",
+              "name": "placeholder",
+              "annotation_raw": "str",
+              "default_raw": "\"\""
+            },
+            {
+              "raw": "onChanged: Callable[[str], None] = None",
+              "name": "onChanged",
+              "annotation_raw": "Callable[[str], None]",
+              "default_raw": "None"
+            }
+          ],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "gui_api.AddTextInput(parentHandle: int, defaultValue: str = \"\", placeholder: str = \"\", onChanged: Callable[[str], None] = None) -> int",
+              "documentation_raw": "gui_api.AddTextInput(parentHandle: int, defaultValue: str = \"\", placeholder: str = \"\", onChanged: Callable[[str], None] = None) -> int\n\nAppend a single-line text input. Read the current text with GetWidgetValue, write it with SetWidgetValue.\n\n- ``parentHandle``: Handle of a window, group or row.\n- ``defaultValue``: Initial text.\n- ``placeholder``: Hint text shown while the field is empty.\n- ``onChanged``: Python callable taking the new text (str). Called on user edits only, not on SetWidgetValue.\n\n**Returns:** Widget handle (greater than 0) on success, 0 when the parent handle is invalid or in headless mode.\n\n|",
+              "section": "Input widgets",
+              "sources": [
+                {
+                  "source_id": "gui_api_reference.rst.txt",
+                  "line": 271,
+                  "block": 19
+                },
+                {
+                  "source_id": "gui_api_reference.html",
+                  "line": 363,
+                  "block": 19,
+                  "anchor": "input-widgets"
+                }
+              ]
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "- ``parentHandle``: Handle of a window, group or row.",
+            "- ``defaultValue``: Initial text.",
+            "- ``placeholder``: Hint text shown while the field is empty.",
+            "- ``onChanged``: Python callable taking the new text (str). Called on user edits only, not on SetWidgetValue."
+          ],
+          "return_docs_raw": [
+            "**Returns:** Widget handle (greater than 0) on success, 0 when the parent handle is invalid or in headless mode."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "gui_api.AskChoice",
+      "qualified_name": "gui_api.AskChoice",
+      "module": "gui_api",
+      "symbol": "AskChoice",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "gui_api.AskChoice#746a463ad93a0c86",
+          "signature_normalized": "gui_api.AskChoice(title: str, label: str, options: list[str], defaultIndex: int = 0) -> ApiTypes.CloApiGuiChoiceResult",
+          "signature_raw": "gui_api.AskChoice(title: str, label: str, options: list[str], defaultIndex: int = 0) -> ApiTypes.CloApiGuiChoiceResult",
+          "parameters": [
+            {
+              "raw": "title: str",
+              "name": "title",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "label: str",
+              "name": "label",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "options: list[str]",
+              "name": "options",
+              "annotation_raw": "list[str]"
+            },
+            {
+              "raw": "defaultIndex: int = 0",
+              "name": "defaultIndex",
+              "annotation_raw": "int",
+              "default_raw": "0"
+            }
+          ],
+          "return_raw": "ApiTypes.CloApiGuiChoiceResult",
+          "occurrences": [
+            {
+              "signature_raw": "gui_api.AskChoice(title: str, label: str, options: list[str], defaultIndex: int = 0) -> ApiTypes.CloApiGuiChoiceResult",
+              "documentation_raw": "gui_api.AskChoice(title: str, label: str, options: list[str], defaultIndex: int = 0) -> ApiTypes.CloApiGuiChoiceResult\n\nShow a modal dialog that lets the user pick exactly one option from a list and block until answered.\n\n- ``title``: Dialog title.\n- ``label``: Label shown above the option list.\n- ``options``: Option captions. Must not be empty.\n- ``defaultIndex``: Index of the option selected initially. Out-of-range values select the first option.\n\n**Returns:** CloApiGuiChoiceResult. accepted is true only when the user pressed OK, selectedIndex and selectedValue hold the choice.\n\n|",
+              "section": "Modal dialogs",
+              "sources": [
+                {
+                  "source_id": "gui_api_reference.rst.txt",
+                  "line": 64,
+                  "block": 4
+                },
+                {
+                  "source_id": "gui_api_reference.html",
+                  "line": 172,
+                  "block": 4,
+                  "anchor": "modal-dialogs"
+                }
+              ]
+            }
+          ],
+          "type_references": [
+            {
+              "name": "CloApiGuiChoiceResult",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:CloApiGuiChoiceResult"
+            },
+            {
+              "name": "CloApiGuiChoiceResult",
+              "basis": "documentation_mention",
+              "status": "resolved",
+              "type_id": "type:CloApiGuiChoiceResult"
+            }
+          ],
+          "parameter_docs_raw": [
+            "- ``title``: Dialog title.",
+            "- ``label``: Label shown above the option list.",
+            "- ``options``: Option captions. Must not be empty.",
+            "- ``defaultIndex``: Index of the option selected initially. Out-of-range values select the first option."
+          ],
+          "return_docs_raw": [
+            "**Returns:** CloApiGuiChoiceResult. accepted is true only when the user pressed OK, selectedIndex and selectedValue hold the choice."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "gui_api.AskConfirm",
+      "qualified_name": "gui_api.AskConfirm",
+      "module": "gui_api",
+      "symbol": "AskConfirm",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "gui_api.AskConfirm#861cdd4611fb6fa6",
+          "signature_normalized": "gui_api.AskConfirm(title: str, message: str, okLabel: str = \"OK\", cancelLabel: str = \"Cancel\") -> bool",
+          "signature_raw": "gui_api.AskConfirm(title: str, message: str, okLabel: str = \"OK\", cancelLabel: str = \"Cancel\") -> bool",
+          "parameters": [
+            {
+              "raw": "title: str",
+              "name": "title",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "message: str",
+              "name": "message",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "okLabel: str = \"OK\"",
+              "name": "okLabel",
+              "annotation_raw": "str",
+              "default_raw": "\"OK\""
+            },
+            {
+              "raw": "cancelLabel: str = \"Cancel\"",
+              "name": "cancelLabel",
+              "annotation_raw": "str",
+              "default_raw": "\"Cancel\""
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "gui_api.AskConfirm(title: str, message: str, okLabel: str = \"OK\", cancelLabel: str = \"Cancel\") -> bool",
+              "documentation_raw": "gui_api.AskConfirm(title: str, message: str, okLabel: str = \"OK\", cancelLabel: str = \"Cancel\") -> bool\n\nShow a modal confirmation dialog with two buttons and block until the user answers.\n\n- ``title``: Dialog title.\n- ``message``: Message text shown in the dialog body.\n- ``okLabel``: Caption of the accept button.\n- ``cancelLabel``: Caption of the reject button.\n\n**Returns:** true when the user pressed the accept button, false when rejected, closed or in headless mode.\n\n|",
+              "section": "Modal dialogs",
+              "sources": [
+                {
+                  "source_id": "gui_api_reference.rst.txt",
+                  "line": 34,
+                  "block": 2
+                },
+                {
+                  "source_id": "gui_api_reference.html",
+                  "line": 144,
+                  "block": 2,
+                  "anchor": "modal-dialogs"
+                }
+              ]
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "- ``title``: Dialog title.",
+            "- ``message``: Message text shown in the dialog body.",
+            "- ``okLabel``: Caption of the accept button.",
+            "- ``cancelLabel``: Caption of the reject button."
+          ],
+          "return_docs_raw": [
+            "**Returns:** true when the user pressed the accept button, false when rejected, closed or in headless mode."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "gui_api.AskForm",
+      "qualified_name": "gui_api.AskForm",
+      "module": "gui_api",
+      "symbol": "AskForm",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "gui_api.AskForm#5e2b367b361b8fef",
+          "signature_normalized": "gui_api.AskForm(title: str, fields: list[ApiTypes.CloApiGuiFormField]) -> ApiTypes.CloApiGuiFormResult",
+          "signature_raw": "gui_api.AskForm(title: str, fields: list[ApiTypes.CloApiGuiFormField]) -> ApiTypes.CloApiGuiFormResult",
+          "parameters": [
+            {
+              "raw": "title: str",
+              "name": "title",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "fields: list[ApiTypes.CloApiGuiFormField]",
+              "name": "fields",
+              "annotation_raw": "list[ApiTypes.CloApiGuiFormField]"
+            }
+          ],
+          "return_raw": "ApiTypes.CloApiGuiFormResult",
+          "occurrences": [
+            {
+              "signature_raw": "gui_api.AskForm(title: str, fields: list[ApiTypes.CloApiGuiFormField]) -> ApiTypes.CloApiGuiFormResult",
+              "documentation_raw": "gui_api.AskForm(title: str, fields: list[ApiTypes.CloApiGuiFormField]) -> ApiTypes.CloApiGuiFormResult\n\nShow a modal form built from a field list and block until the user answers.\n\n- ``title``: Dialog title.\n- ``fields``: Field descriptions, one row per field, in display order. Each key must be unique and non-empty.\n\n**Returns:** CloApiGuiFormResult. accepted is true only when the user pressed OK, values maps each field key to its text value (choice: option caption, check: true or false, number: decimal text).\n\n|\n\nWindows and dock panels\n-----------------------",
+              "section": "Modal dialogs",
+              "sources": [
+                {
+                  "source_id": "gui_api_reference.rst.txt",
+                  "line": 94,
+                  "block": 6
+                },
+                {
+                  "source_id": "gui_api_reference.html",
+                  "line": 200,
+                  "block": 6,
+                  "anchor": "modal-dialogs"
+                }
+              ]
+            }
+          ],
+          "type_references": [
+            {
+              "name": "CloApiGuiFormField",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:CloApiGuiFormField"
+            },
+            {
+              "name": "CloApiGuiFormField",
+              "basis": "documentation_mention",
+              "status": "resolved",
+              "type_id": "type:CloApiGuiFormField"
+            },
+            {
+              "name": "CloApiGuiFormResult",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:CloApiGuiFormResult"
+            },
+            {
+              "name": "CloApiGuiFormResult",
+              "basis": "documentation_mention",
+              "status": "resolved",
+              "type_id": "type:CloApiGuiFormResult"
+            }
+          ],
+          "parameter_docs_raw": [
+            "- ``title``: Dialog title.",
+            "- ``fields``: Field descriptions, one row per field, in display order. Each key must be unique and non-empty."
+          ],
+          "return_docs_raw": [
+            "**Returns:** CloApiGuiFormResult. accepted is true only when the user pressed OK, values maps each field key to its text value (choice: option caption, check: true or false, number: decimal text)."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "gui_api.AskMultiChoice",
+      "qualified_name": "gui_api.AskMultiChoice",
+      "module": "gui_api",
+      "symbol": "AskMultiChoice",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "gui_api.AskMultiChoice#59b98787d5056160",
+          "signature_normalized": "gui_api.AskMultiChoice(title: str, label: str, options: list[str], defaultIndices: list[int] = []) -> ApiTypes.CloApiGuiChoiceResult",
+          "signature_raw": "gui_api.AskMultiChoice(title: str, label: str, options: list[str], defaultIndices: list[int] = []) -> ApiTypes.CloApiGuiChoiceResult",
+          "parameters": [
+            {
+              "raw": "title: str",
+              "name": "title",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "label: str",
+              "name": "label",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "options: list[str]",
+              "name": "options",
+              "annotation_raw": "list[str]"
+            },
+            {
+              "raw": "defaultIndices: list[int] = []",
+              "name": "defaultIndices",
+              "annotation_raw": "list[int]",
+              "default_raw": "[]"
+            }
+          ],
+          "return_raw": "ApiTypes.CloApiGuiChoiceResult",
+          "occurrences": [
+            {
+              "signature_raw": "gui_api.AskMultiChoice(title: str, label: str, options: list[str], defaultIndices: list[int] = []) -> ApiTypes.CloApiGuiChoiceResult",
+              "documentation_raw": "gui_api.AskMultiChoice(title: str, label: str, options: list[str], defaultIndices: list[int] = []) -> ApiTypes.CloApiGuiChoiceResult\n\nShow a modal dialog that lets the user check any number of options and block until answered.\n\n- ``title``: Dialog title.\n- ``label``: Label shown above the option list.\n- ``options``: Option captions. Must not be empty.\n- ``defaultIndices``: Indices of the options checked initially. Out-of-range values are ignored.\n\n**Returns:** CloApiGuiChoiceResult. accepted is true only when the user pressed OK, selectedIndices holds every checked index in ascending order.\n\n|",
+              "section": "Modal dialogs",
+              "sources": [
+                {
+                  "source_id": "gui_api_reference.rst.txt",
+                  "line": 79,
+                  "block": 5
+                },
+                {
+                  "source_id": "gui_api_reference.html",
+                  "line": 186,
+                  "block": 5,
+                  "anchor": "modal-dialogs"
+                }
+              ]
+            }
+          ],
+          "type_references": [
+            {
+              "name": "CloApiGuiChoiceResult",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:CloApiGuiChoiceResult"
+            },
+            {
+              "name": "CloApiGuiChoiceResult",
+              "basis": "documentation_mention",
+              "status": "resolved",
+              "type_id": "type:CloApiGuiChoiceResult"
+            }
+          ],
+          "parameter_docs_raw": [
+            "- ``title``: Dialog title.",
+            "- ``label``: Label shown above the option list.",
+            "- ``options``: Option captions. Must not be empty.",
+            "- ``defaultIndices``: Indices of the options checked initially. Out-of-range values are ignored."
+          ],
+          "return_docs_raw": [
+            "**Returns:** CloApiGuiChoiceResult. accepted is true only when the user pressed OK, selectedIndices holds every checked index in ascending order."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "gui_api.AskText",
+      "qualified_name": "gui_api.AskText",
+      "module": "gui_api",
+      "symbol": "AskText",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "gui_api.AskText#43de5e5047eb96a8",
+          "signature_normalized": "gui_api.AskText(title: str, label: str, defaultValue: str = \"\", placeholder: str = \"\") -> ApiTypes.CloApiGuiTextResult",
+          "signature_raw": "gui_api.AskText(title: str, label: str, defaultValue: str = \"\", placeholder: str = \"\") -> ApiTypes.CloApiGuiTextResult",
+          "parameters": [
+            {
+              "raw": "title: str",
+              "name": "title",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "label: str",
+              "name": "label",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "defaultValue: str = \"\"",
+              "name": "defaultValue",
+              "annotation_raw": "str",
+              "default_raw": "\"\""
+            },
+            {
+              "raw": "placeholder: str = \"\"",
+              "name": "placeholder",
+              "annotation_raw": "str",
+              "default_raw": "\"\""
+            }
+          ],
+          "return_raw": "ApiTypes.CloApiGuiTextResult",
+          "occurrences": [
+            {
+              "signature_raw": "gui_api.AskText(title: str, label: str, defaultValue: str = \"\", placeholder: str = \"\") -> ApiTypes.CloApiGuiTextResult",
+              "documentation_raw": "gui_api.AskText(title: str, label: str, defaultValue: str = \"\", placeholder: str = \"\") -> ApiTypes.CloApiGuiTextResult\n\nShow a modal dialog with a single-line text input and block until the user answers.\n\n- ``title``: Dialog title.\n- ``label``: Label shown next to the input field.\n- ``defaultValue``: Initial text of the input field.\n- ``placeholder``: Hint text shown while the field is empty.\n\n**Returns:** CloApiGuiTextResult. accepted is true only when the user pressed OK, value holds the entered text.\n\n|",
+              "section": "Modal dialogs",
+              "sources": [
+                {
+                  "source_id": "gui_api_reference.rst.txt",
+                  "line": 49,
+                  "block": 3
+                },
+                {
+                  "source_id": "gui_api_reference.html",
+                  "line": 158,
+                  "block": 3,
+                  "anchor": "modal-dialogs"
+                }
+              ]
+            }
+          ],
+          "type_references": [
+            {
+              "name": "CloApiGuiTextResult",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:CloApiGuiTextResult"
+            },
+            {
+              "name": "CloApiGuiTextResult",
+              "basis": "documentation_mention",
+              "status": "resolved",
+              "type_id": "type:CloApiGuiTextResult"
+            }
+          ],
+          "parameter_docs_raw": [
+            "- ``title``: Dialog title.",
+            "- ``label``: Label shown next to the input field.",
+            "- ``defaultValue``: Initial text of the input field.",
+            "- ``placeholder``: Hint text shown while the field is empty."
+          ],
+          "return_docs_raw": [
+            "**Returns:** CloApiGuiTextResult. accepted is true only when the user pressed OK, value holds the entered text."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "gui_api.CloseAllWindows",
+      "qualified_name": "gui_api.CloseAllWindows",
+      "module": "gui_api",
+      "symbol": "CloseAllWindows",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "gui_api.CloseAllWindows#b4ea8da02e437e22",
+          "signature_normalized": "gui_api.CloseAllWindows() -> int",
+          "signature_raw": "gui_api.CloseAllWindows() -> int",
+          "parameters": [],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "gui_api.CloseAllWindows() -> int",
+              "documentation_raw": "gui_api.CloseAllWindows() -> int\n\nClose and destroy every window created through gui_api. Useful at the start of a script so a re-run does not leave the previous window open.\n\n**Returns:** Number of windows that were closed, 0 in headless mode.\n\n|",
+              "section": "Windows and dock panels",
+              "sources": [
+                {
+                  "source_id": "gui_api_reference.rst.txt",
+                  "line": 162,
+                  "block": 11
+                },
+                {
+                  "source_id": "gui_api_reference.html",
+                  "line": 263,
+                  "block": 11,
+                  "anchor": "windows-and-dock-panels"
+                }
+              ]
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "**Returns:** Number of windows that were closed, 0 in headless mode."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "gui_api.CloseWindow",
+      "qualified_name": "gui_api.CloseWindow",
+      "module": "gui_api",
+      "symbol": "CloseWindow",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "gui_api.CloseWindow#ce9594ad2801434c",
+          "signature_normalized": "gui_api.CloseWindow(windowHandle: int) -> bool",
+          "signature_raw": "gui_api.CloseWindow(windowHandle: int) -> bool",
+          "parameters": [
+            {
+              "raw": "windowHandle: int",
+              "name": "windowHandle",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "gui_api.CloseWindow(windowHandle: int) -> bool",
+              "documentation_raw": "gui_api.CloseWindow(windowHandle: int) -> bool\n\nClose and destroy a window created by CreateToolWindow together with every widget added to it. All handles that belonged to the window become invalid.\n\n- ``windowHandle``: Handle returned by CreateToolWindow.\n\n**Returns:** true on success, false when the handle is invalid or in headless mode.\n\n|",
+              "section": "Windows and dock panels",
+              "sources": [
+                {
+                  "source_id": "gui_api_reference.rst.txt",
+                  "line": 150,
+                  "block": 10
+                },
+                {
+                  "source_id": "gui_api_reference.html",
+                  "line": 252,
+                  "block": 10,
+                  "anchor": "windows-and-dock-panels"
+                }
+              ]
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "- ``windowHandle``: Handle returned by CreateToolWindow."
+          ],
+          "return_docs_raw": [
+            "**Returns:** true on success, false when the handle is invalid or in headless mode."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "gui_api.CreateDockPanel",
+      "qualified_name": "gui_api.CreateDockPanel",
+      "module": "gui_api",
+      "symbol": "CreateDockPanel",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "gui_api.CreateDockPanel#557e8cc2f95afa01",
+          "signature_normalized": "gui_api.CreateDockPanel(title: str, side: str = \"right\", name: str = \"\") -> int",
+          "signature_raw": "gui_api.CreateDockPanel(title: str, side: str = \"right\", name: str = \"\") -> int",
+          "parameters": [
+            {
+              "raw": "title: str",
+              "name": "title",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "side: str = \"right\"",
+              "name": "side",
+              "annotation_raw": "str",
+              "default_raw": "\"right\""
+            },
+            {
+              "raw": "name: str = \"\"",
+              "name": "name",
+              "annotation_raw": "str",
+              "default_raw": "\"\""
+            }
+          ],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "gui_api.CreateDockPanel(title: str, side: str = \"right\", name: str = \"\") -> int",
+              "documentation_raw": "gui_api.CreateDockPanel(title: str, side: str = \"right\", name: str = \"\") -> int\n\nCreate a dockable panel owned by CLO, like the Library or History panels: it docks into the main window, can be dragged to another side or floated, and has the CLO title bar. Use it as the parent of Add* calls and show it with ShowWindow. ShowWindow, CloseWindow, CloseAllWindows, SetWindowCloseCallback and SetWidgetText accept the panel handle.\n\n- ``title``: Panel title shown in its title bar.\n- ``side``: Initial docking side, one of left, right or bottom. Anything else fails.\n- ``name``: Stable identifier (letters, digits, underscore). Panels with the same name keep their docking position across mode switches and sessions. Empty generates a name from the handle.\n\n**Returns:** Panel handle (greater than 0) on success, 0 on failure or in headless mode.\n\n|",
+              "section": "Windows and dock panels",
+              "sources": [
+                {
+                  "source_id": "gui_api_reference.rst.txt",
+                  "line": 124,
+                  "block": 8
+                },
+                {
+                  "source_id": "gui_api_reference.html",
+                  "line": 228,
+                  "block": 8,
+                  "anchor": "windows-and-dock-panels"
+                }
+              ]
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "- ``title``: Panel title shown in its title bar.",
+            "- ``side``: Initial docking side, one of left, right or bottom. Anything else fails.",
+            "- ``name``: Stable identifier (letters, digits, underscore). Panels with the same name keep their docking position across mode switches and sessions. Empty generates a name from the handle."
+          ],
+          "return_docs_raw": [
+            "**Returns:** Panel handle (greater than 0) on success, 0 on failure or in headless mode."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "gui_api.CreateToolWindow",
+      "qualified_name": "gui_api.CreateToolWindow",
+      "module": "gui_api",
+      "symbol": "CreateToolWindow",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "gui_api.CreateToolWindow#26c980e27c5b5740",
+          "signature_normalized": "gui_api.CreateToolWindow(title: str, width: int = 400, height: int = 300) -> int",
+          "signature_raw": "gui_api.CreateToolWindow(title: str, width: int = 400, height: int = 300) -> int",
+          "parameters": [
+            {
+              "raw": "title: str",
+              "name": "title",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "width: int = 400",
+              "name": "width",
+              "annotation_raw": "int",
+              "default_raw": "400"
+            },
+            {
+              "raw": "height: int = 300",
+              "name": "height",
+              "annotation_raw": "int",
+              "default_raw": "300"
+            }
+          ],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "gui_api.CreateToolWindow(title: str, width: int = 400, height: int = 300) -> int",
+              "documentation_raw": "gui_api.CreateToolWindow(title: str, width: int = 400, height: int = 300) -> int\n\nCreate a non-modal tool window owned by CLO. The window is parented to the CLO main window so it stays in front of CLO. Call ShowWindow to display it.\n\n- ``title``: Window title.\n- ``width``: Initial width in pixels. Values below 1 use a default size.\n- ``height``: Initial height in pixels. Values below 1 use a default size.\n\n**Returns:** Window handle (greater than 0) on success, 0 on failure or in headless mode.\n\n|",
+              "section": "Windows and dock panels",
+              "sources": [
+                {
+                  "source_id": "gui_api_reference.rst.txt",
+                  "line": 110,
+                  "block": 7
+                },
+                {
+                  "source_id": "gui_api_reference.html",
+                  "line": 215,
+                  "block": 7,
+                  "anchor": "windows-and-dock-panels"
+                }
+              ]
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "- ``title``: Window title.",
+            "- ``width``: Initial width in pixels. Values below 1 use a default size.",
+            "- ``height``: Initial height in pixels. Values below 1 use a default size."
+          ],
+          "return_docs_raw": [
+            "**Returns:** Window handle (greater than 0) on success, 0 on failure or in headless mode."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "gui_api.GetWidgetSelectedIndex",
+      "qualified_name": "gui_api.GetWidgetSelectedIndex",
+      "module": "gui_api",
+      "symbol": "GetWidgetSelectedIndex",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "gui_api.GetWidgetSelectedIndex#d26578d2c4d87c74",
+          "signature_normalized": "gui_api.GetWidgetSelectedIndex(handle: int) -> int",
+          "signature_raw": "gui_api.GetWidgetSelectedIndex(handle: int) -> int",
+          "parameters": [
+            {
+              "raw": "handle: int",
+              "name": "handle",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "gui_api.GetWidgetSelectedIndex(handle: int) -> int",
+              "documentation_raw": "gui_api.GetWidgetSelectedIndex(handle: int) -> int\n\nRead the selected index of a drop-down, radio group, list or table.\n\n- ``handle``: Widget handle.\n\n**Returns:** The selected index, -1 when nothing is selected, the handle is not a selection widget or in headless mode.\n\n|",
+              "section": "Reading and changing widgets",
+              "sources": [
+                {
+                  "source_id": "gui_api_reference.rst.txt",
+                  "line": 524,
+                  "block": 36
+                },
+                {
+                  "source_id": "gui_api_reference.html",
+                  "line": 599,
+                  "block": 36,
+                  "anchor": "reading-and-changing-widgets"
+                }
+              ]
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "- ``handle``: Widget handle."
+          ],
+          "return_docs_raw": [
+            "**Returns:** The selected index, -1 when nothing is selected, the handle is not a selection widget or in headless mode."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "gui_api.GetWidgetValue",
+      "qualified_name": "gui_api.GetWidgetValue",
+      "module": "gui_api",
+      "symbol": "GetWidgetValue",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "gui_api.GetWidgetValue#5191beafe97ff04e",
+          "signature_normalized": "gui_api.GetWidgetValue(handle: int) -> str",
+          "signature_raw": "gui_api.GetWidgetValue(handle: int) -> str",
+          "parameters": [
+            {
+              "raw": "handle: int",
+              "name": "handle",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "gui_api.GetWidgetValue(handle: int) -> str",
+              "documentation_raw": "gui_api.GetWidgetValue(handle: int) -> str\n\nRead the current value of a widget as text: the text of inputs, labels and buttons, true or false for check boxes, the selected caption for drop-downs, radio groups and lists, the first cell of the selected row for tables, decimal text for numbers, sliders and progress bars.\n\n- ``handle``: Widget handle.\n\n**Returns:** The value as text, empty when the handle is invalid, nothing is selected or in headless mode.\n\n|",
+              "section": "Reading and changing widgets",
+              "sources": [
+                {
+                  "source_id": "gui_api_reference.rst.txt",
+                  "line": 499,
+                  "block": 34
+                },
+                {
+                  "source_id": "gui_api_reference.html",
+                  "line": 576,
+                  "block": 34,
+                  "anchor": "reading-and-changing-widgets"
+                }
+              ]
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "- ``handle``: Widget handle."
+          ],
+          "return_docs_raw": [
+            "**Returns:** The value as text, empty when the handle is invalid, nothing is selected or in headless mode."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "gui_api.IsGuiAvailable",
+      "qualified_name": "gui_api.IsGuiAvailable",
+      "module": "gui_api",
+      "symbol": "IsGuiAvailable",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "gui_api.IsGuiAvailable#954a8c41be0ef7a1",
+          "signature_normalized": "gui_api.IsGuiAvailable() -> bool",
+          "signature_raw": "gui_api.IsGuiAvailable() -> bool",
+          "parameters": [],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "gui_api.IsGuiAvailable() -> bool",
+              "documentation_raw": "gui_api.IsGuiAvailable() -> bool\n\nCheck whether native GUI commands can be used in the current session.\n\n**Returns:** true when CLO runs with a GUI and the call comes from the main thread, false in headless mode.\n\n|\n\nModal dialogs\n-------------",
+              "section": "Availability",
+              "sources": [
+                {
+                  "source_id": "gui_api_reference.rst.txt",
+                  "line": 21,
+                  "block": 1
+                },
+                {
+                  "source_id": "gui_api_reference.html",
+                  "line": 133,
+                  "block": 1,
+                  "anchor": "availability"
+                }
+              ]
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "**Returns:** true when CLO runs with a GUI and the call comes from the main thread, false in headless mode."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "gui_api.SetTableRows",
+      "qualified_name": "gui_api.SetTableRows",
+      "module": "gui_api",
+      "symbol": "SetTableRows",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "gui_api.SetTableRows#ca79e9cf35a09997",
+          "signature_normalized": "gui_api.SetTableRows(handle: int, rows: list[list[str]]) -> bool",
+          "signature_raw": "gui_api.SetTableRows(handle: int, rows: list[list[str]]) -> bool",
+          "parameters": [
+            {
+              "raw": "handle: int",
+              "name": "handle",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "rows: list[list[str]]",
+              "name": "rows",
+              "annotation_raw": "list[list[str]]"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "gui_api.SetTableRows(handle: int, rows: list[list[str]]) -> bool",
+              "documentation_raw": "gui_api.SetTableRows(handle: int, rows: list[list[str]]) -> bool\n\nReplace every row of a table created by AddTable. The selection is reset.\n\n- ``handle``: Table handle.\n- ``rows``: Cell texts, one inner list per row.\n\n**Returns:** true on success, false when the handle is not a table or in headless mode.\n\n|\n\nData types\n----------\n\n.. list-table::\n   :header-rows: 1\n   :widths: 30 70\n\n   * - Type\n     - Fields\n   * - ``ApiTypes.CloApiGuiTextResult``\n     - ``accepted`` (bool): True only when the user pressed OK.\n       ``value`` (str): the entered text, empty unless accepted.\n   * - ``ApiTypes.CloApiGuiChoiceResult``\n     - ``accepted`` (bool).\n       ``selectedIndex`` (int): the picked option (AskChoice) or the first checked one (AskMultiChoice), -1 unless accepted.\n       ``selectedValue`` (str): caption of that option.\n       ``selectedIndices`` (list[int]): every selected index in ascending order.\n   * - ``ApiTypes.CloApiGuiFormResult``\n     - ``accepted`` (bool).\n       ``values`` (dict[str, str]): field key to value as text.\n   * - ``ApiTypes.CloApiGuiFormField``\n     - ``key`` (str): unique result key. ``label`` (str): caption next to the input.\n       ``type``: one of the field types below (default ``GUI_FIELD_TEXT``).\n       ``defaultValue`` (str): initial value as text. ``options`` (list[str]): captions for ``GUI_FIELD_CHOICE``.\n\n.. list-table:: Form field types\n   :header-rows: 1\n   :widths: 35 65\n\n   * - Constant\n     - Input and value\n   * - ``ApiTypes.GUI_FIELD_TEXT``\n     - Single-line text input. Value: the entered text.\n   * - ``ApiTypes.GUI_FIELD_CHOICE``\n     - Drop-down built from ``options``. Value: the selected caption.\n   * - ``ApiTypes.GUI_FIELD_CHECK``\n     - Check box. Value: ``true`` or ``false``.\n   * - ``ApiTypes.GUI_FIELD_NUMBER``\n     - Decimal number input. Value: the number as decimal text.",
+              "section": "Reading and changing widgets",
+              "sources": [
+                {
+                  "source_id": "gui_api_reference.rst.txt",
+                  "line": 562,
+                  "block": 39
+                },
+                {
+                  "source_id": "gui_api_reference.html",
+                  "line": 634,
+                  "block": 39,
+                  "anchor": "reading-and-changing-widgets"
+                }
+              ]
+            }
+          ],
+          "type_references": [
+            {
+              "name": "CloApiGuiChoiceResult",
+              "basis": "documentation_mention",
+              "status": "resolved",
+              "type_id": "type:CloApiGuiChoiceResult"
+            },
+            {
+              "name": "CloApiGuiFormField",
+              "basis": "documentation_mention",
+              "status": "resolved",
+              "type_id": "type:CloApiGuiFormField"
+            },
+            {
+              "name": "CloApiGuiFormResult",
+              "basis": "documentation_mention",
+              "status": "resolved",
+              "type_id": "type:CloApiGuiFormResult"
+            },
+            {
+              "name": "CloApiGuiTextResult",
+              "basis": "documentation_mention",
+              "status": "resolved",
+              "type_id": "type:CloApiGuiTextResult"
+            }
+          ],
+          "parameter_docs_raw": [
+            "- ``handle``: Table handle.",
+            "- ``rows``: Cell texts, one inner list per row."
+          ],
+          "return_docs_raw": [
+            "**Returns:** true on success, false when the handle is not a table or in headless mode."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "gui_api.SetWidgetEnabled",
+      "qualified_name": "gui_api.SetWidgetEnabled",
+      "module": "gui_api",
+      "symbol": "SetWidgetEnabled",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "gui_api.SetWidgetEnabled#59383b92f72c303d",
+          "signature_normalized": "gui_api.SetWidgetEnabled(handle: int, enabled: bool) -> bool",
+          "signature_raw": "gui_api.SetWidgetEnabled(handle: int, enabled: bool) -> bool",
+          "parameters": [
+            {
+              "raw": "handle: int",
+              "name": "handle",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "enabled: bool",
+              "name": "enabled",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "gui_api.SetWidgetEnabled(handle: int, enabled: bool) -> bool",
+              "documentation_raw": "gui_api.SetWidgetEnabled(handle: int, enabled: bool) -> bool\n\nEnable or disable any widget, container or menu item.\n\n- ``handle``: Any handle except a window.\n- ``enabled``: false greys the widget out.\n\n**Returns:** true on success, false when the handle is invalid or in headless mode.\n\n|",
+              "section": "Reading and changing widgets",
+              "sources": [
+                {
+                  "source_id": "gui_api_reference.rst.txt",
+                  "line": 473,
+                  "block": 32
+                },
+                {
+                  "source_id": "gui_api_reference.html",
+                  "line": 552,
+                  "block": 32,
+                  "anchor": "reading-and-changing-widgets"
+                }
+              ]
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "- ``handle``: Any handle except a window.",
+            "- ``enabled``: false greys the widget out."
+          ],
+          "return_docs_raw": [
+            "**Returns:** true on success, false when the handle is invalid or in headless mode."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "gui_api.SetWidgetItems",
+      "qualified_name": "gui_api.SetWidgetItems",
+      "module": "gui_api",
+      "symbol": "SetWidgetItems",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "gui_api.SetWidgetItems#f9c92129f200c8f1",
+          "signature_normalized": "gui_api.SetWidgetItems(handle: int, items: list[str]) -> bool",
+          "signature_raw": "gui_api.SetWidgetItems(handle: int, items: list[str]) -> bool",
+          "parameters": [
+            {
+              "raw": "handle: int",
+              "name": "handle",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "items: list[str]",
+              "name": "items",
+              "annotation_raw": "list[str]"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "gui_api.SetWidgetItems(handle: int, items: list[str]) -> bool",
+              "documentation_raw": "gui_api.SetWidgetItems(handle: int, items: list[str]) -> bool\n\nReplace the options of a drop-down or radio group, or the rows of a list. The selection is reset.\n\n- ``handle``: Widget handle.\n- ``items``: New captions.\n\n**Returns:** true on success, false when the handle is invalid or in headless mode.\n\n|",
+              "section": "Reading and changing widgets",
+              "sources": [
+                {
+                  "source_id": "gui_api_reference.rst.txt",
+                  "line": 549,
+                  "block": 38
+                },
+                {
+                  "source_id": "gui_api_reference.html",
+                  "line": 622,
+                  "block": 38,
+                  "anchor": "reading-and-changing-widgets"
+                }
+              ]
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "- ``handle``: Widget handle.",
+            "- ``items``: New captions."
+          ],
+          "return_docs_raw": [
+            "**Returns:** true on success, false when the handle is invalid or in headless mode."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "gui_api.SetWidgetSelectedIndex",
+      "qualified_name": "gui_api.SetWidgetSelectedIndex",
+      "module": "gui_api",
+      "symbol": "SetWidgetSelectedIndex",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "gui_api.SetWidgetSelectedIndex#73a119c1a72333c7",
+          "signature_normalized": "gui_api.SetWidgetSelectedIndex(handle: int, index: int) -> bool",
+          "signature_raw": "gui_api.SetWidgetSelectedIndex(handle: int, index: int) -> bool",
+          "parameters": [
+            {
+              "raw": "handle: int",
+              "name": "handle",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "index: int",
+              "name": "index",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "gui_api.SetWidgetSelectedIndex(handle: int, index: int) -> bool",
+              "documentation_raw": "gui_api.SetWidgetSelectedIndex(handle: int, index: int) -> bool\n\nSelect an index in a drop-down, radio group, list or table. Change callbacks are not triggered.\n\n- ``handle``: Widget handle.\n- ``index``: Index to select. -1 clears the selection of a list or table.\n\n**Returns:** true on success, false when the handle is invalid, the index is out of range or in headless mode.\n\n|",
+              "section": "Reading and changing widgets",
+              "sources": [
+                {
+                  "source_id": "gui_api_reference.rst.txt",
+                  "line": 536,
+                  "block": 37
+                },
+                {
+                  "source_id": "gui_api_reference.html",
+                  "line": 610,
+                  "block": 37,
+                  "anchor": "reading-and-changing-widgets"
+                }
+              ]
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "- ``handle``: Widget handle.",
+            "- ``index``: Index to select. -1 clears the selection of a list or table."
+          ],
+          "return_docs_raw": [
+            "**Returns:** true on success, false when the handle is invalid, the index is out of range or in headless mode."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "gui_api.SetWidgetText",
+      "qualified_name": "gui_api.SetWidgetText",
+      "module": "gui_api",
+      "symbol": "SetWidgetText",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "gui_api.SetWidgetText#ef4512cd19933a33",
+          "signature_normalized": "gui_api.SetWidgetText(handle: int, text: str) -> bool",
+          "signature_raw": "gui_api.SetWidgetText(handle: int, text: str) -> bool",
+          "parameters": [
+            {
+              "raw": "handle: int",
+              "name": "handle",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "text: str",
+              "name": "text",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "gui_api.SetWidgetText(handle: int, text: str) -> bool",
+              "documentation_raw": "gui_api.SetWidgetText(handle: int, text: str) -> bool\n\nReplace the text of a label, a button or the title of a window.\n\n- ``handle``: Handle returned by CreateToolWindow, AddLabel or AddButton.\n- ``text``: New text.\n\n**Returns:** true on success, false when the handle is invalid or in headless mode.\n\n|\n\nInput widgets\n-------------",
+              "section": "Text and buttons",
+              "sources": [
+                {
+                  "source_id": "gui_api_reference.rst.txt",
+                  "line": 255,
+                  "block": 18
+                },
+                {
+                  "source_id": "gui_api_reference.html",
+                  "line": 348,
+                  "block": 18,
+                  "anchor": "text-and-buttons"
+                }
+              ]
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "- ``handle``: Handle returned by CreateToolWindow, AddLabel or AddButton.",
+            "- ``text``: New text."
+          ],
+          "return_docs_raw": [
+            "**Returns:** true on success, false when the handle is invalid or in headless mode."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "gui_api.SetWidgetValue",
+      "qualified_name": "gui_api.SetWidgetValue",
+      "module": "gui_api",
+      "symbol": "SetWidgetValue",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "gui_api.SetWidgetValue#c99d01215e044229",
+          "signature_normalized": "gui_api.SetWidgetValue(handle: int, value: str) -> bool",
+          "signature_raw": "gui_api.SetWidgetValue(handle: int, value: str) -> bool",
+          "parameters": [
+            {
+              "raw": "handle: int",
+              "name": "handle",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "value: str",
+              "name": "value",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "gui_api.SetWidgetValue(handle: int, value: str) -> bool",
+              "documentation_raw": "gui_api.SetWidgetValue(handle: int, value: str) -> bool\n\nWrite the value of a widget as text, using the same encoding GetWidgetValue returns. For drop-downs, radio groups and lists the caption must exist. For images the value is a file path. Change callbacks are not triggered.\n\n- ``handle``: Widget handle.\n- ``value``: New value as text.\n\n**Returns:** true on success, false when the handle is invalid, the value cannot be applied or in headless mode.\n\n|",
+              "section": "Reading and changing widgets",
+              "sources": [
+                {
+                  "source_id": "gui_api_reference.rst.txt",
+                  "line": 511,
+                  "block": 35
+                },
+                {
+                  "source_id": "gui_api_reference.html",
+                  "line": 587,
+                  "block": 35,
+                  "anchor": "reading-and-changing-widgets"
+                }
+              ]
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "- ``handle``: Widget handle.",
+            "- ``value``: New value as text."
+          ],
+          "return_docs_raw": [
+            "**Returns:** true on success, false when the handle is invalid, the value cannot be applied or in headless mode."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "gui_api.SetWidgetVisible",
+      "qualified_name": "gui_api.SetWidgetVisible",
+      "module": "gui_api",
+      "symbol": "SetWidgetVisible",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "gui_api.SetWidgetVisible#8c75c66949b4fab3",
+          "signature_normalized": "gui_api.SetWidgetVisible(handle: int, visible: bool) -> bool",
+          "signature_raw": "gui_api.SetWidgetVisible(handle: int, visible: bool) -> bool",
+          "parameters": [
+            {
+              "raw": "handle: int",
+              "name": "handle",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "visible: bool",
+              "name": "visible",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "gui_api.SetWidgetVisible(handle: int, visible: bool) -> bool",
+              "documentation_raw": "gui_api.SetWidgetVisible(handle: int, visible: bool) -> bool\n\nShow or hide any widget, container or menu item without destroying it.\n\n- ``handle``: Any handle except a window. Use ShowWindow / CloseWindow for windows.\n- ``visible``: false hides the widget.\n\n**Returns:** true on success, false when the handle is invalid or in headless mode.\n\n|",
+              "section": "Reading and changing widgets",
+              "sources": [
+                {
+                  "source_id": "gui_api_reference.rst.txt",
+                  "line": 486,
+                  "block": 33
+                },
+                {
+                  "source_id": "gui_api_reference.html",
+                  "line": 564,
+                  "block": 33,
+                  "anchor": "reading-and-changing-widgets"
+                }
+              ]
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "- ``handle``: Any handle except a window. Use ShowWindow / CloseWindow for windows.",
+            "- ``visible``: false hides the widget."
+          ],
+          "return_docs_raw": [
+            "**Returns:** true on success, false when the handle is invalid or in headless mode."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "gui_api.SetWindowCloseCallback",
+      "qualified_name": "gui_api.SetWindowCloseCallback",
+      "module": "gui_api",
+      "symbol": "SetWindowCloseCallback",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "gui_api.SetWindowCloseCallback#4d97502886678de5",
+          "signature_normalized": "gui_api.SetWindowCloseCallback(windowHandle: int, onClose: Callable[[], None]) -> bool",
+          "signature_raw": "gui_api.SetWindowCloseCallback(windowHandle: int, onClose: Callable[[], None]) -> bool",
+          "parameters": [
+            {
+              "raw": "windowHandle: int",
+              "name": "windowHandle",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "onClose: Callable[[], None]",
+              "name": "onClose",
+              "annotation_raw": "Callable[[], None]"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "gui_api.SetWindowCloseCallback(windowHandle: int, onClose: Callable[[], None]) -> bool",
+              "documentation_raw": "gui_api.SetWindowCloseCallback(windowHandle: int, onClose: Callable[[], None]) -> bool\n\nRegister a Python callable that runs when the window closes, either by the user pressing the close button or by CloseWindow / CloseAllWindows.\n\n- ``windowHandle``: Handle returned by CreateToolWindow.\n- ``onClose``: Python callable taking no arguments.\n\n**Returns:** true on success, false when the handle is invalid or in headless mode.\n\n|\n\nLayout containers\n-----------------",
+              "section": "Windows and dock panels",
+              "sources": [
+                {
+                  "source_id": "gui_api_reference.rst.txt",
+                  "line": 172,
+                  "block": 12
+                },
+                {
+                  "source_id": "gui_api_reference.html",
+                  "line": 271,
+                  "block": 12,
+                  "anchor": "windows-and-dock-panels"
+                }
+              ]
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "- ``windowHandle``: Handle returned by CreateToolWindow.",
+            "- ``onClose``: Python callable taking no arguments."
+          ],
+          "return_docs_raw": [
+            "**Returns:** true on success, false when the handle is invalid or in headless mode."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "gui_api.ShowWindow",
+      "qualified_name": "gui_api.ShowWindow",
+      "module": "gui_api",
+      "symbol": "ShowWindow",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "gui_api.ShowWindow#0e87343d739440fd",
+          "signature_normalized": "gui_api.ShowWindow(windowHandle: int) -> bool",
+          "signature_raw": "gui_api.ShowWindow(windowHandle: int) -> bool",
+          "parameters": [
+            {
+              "raw": "windowHandle: int",
+              "name": "windowHandle",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "gui_api.ShowWindow(windowHandle: int) -> bool",
+              "documentation_raw": "gui_api.ShowWindow(windowHandle: int) -> bool\n\nShow a window created by CreateToolWindow and raise it in front of CLO. The script may return afterwards, the window stays open until the user closes it or CloseWindow is called.\n\n- ``windowHandle``: Handle returned by CreateToolWindow.\n\n**Returns:** true on success, false when the handle is invalid or in headless mode.\n\n|",
+              "section": "Windows and dock panels",
+              "sources": [
+                {
+                  "source_id": "gui_api_reference.rst.txt",
+                  "line": 138,
+                  "block": 9
+                },
+                {
+                  "source_id": "gui_api_reference.html",
+                  "line": 241,
+                  "block": 9,
+                  "anchor": "windows-and-dock-panels"
+                }
+              ]
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "- ``windowHandle``: Handle returned by CreateToolWindow."
+          ],
+          "return_docs_raw": [
+            "**Returns:** true on success, false when the handle is invalid or in headless mode."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    }
+  ]
+}

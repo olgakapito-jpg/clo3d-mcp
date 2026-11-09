@@ -1,0 +1,506 @@
+{
+  "rows": [
+    {
+      "id": "rest_api.CallRESTGet#b2267c5b870f80d6",
+      "module": "rest_api",
+      "symbol": "CallRESTGet",
+      "qualified_name": "rest_api.CallRESTGet",
+      "overload": "rest_api.CallRESTGet#b2267c5b870f80d6",
+      "signature": "def CallRESTGet(url : str, headerNameAndValueList : list[tuple[str, str]], progressBarText : str) -> str",
+      "domain": "rest",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 15870,
+          "block": 1369
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 16648,
+          "block": 1369,
+          "anchor": "rest-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "rest_api.CallRESTGet",
+      "documentation_issues": [],
+      "review_gates": [
+        "external-global-lifecycle"
+      ]
+    },
+    {
+      "id": "rest_api.CallRESTPost#fc9872741814dd5d",
+      "module": "rest_api",
+      "symbol": "CallRESTPost",
+      "qualified_name": "rest_api.CallRESTPost",
+      "overload": "rest_api.CallRESTPost#fc9872741814dd5d",
+      "signature": "def CallRESTPost(url : str, postField : str, headerNameAndValueList : list[tuple[str, str]], progressBarText : str) -> str",
+      "domain": "rest",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 15893,
+          "block": 1371
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 16672,
+          "block": 1371,
+          "anchor": "rest-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "rest_api.CallRESTPost",
+      "documentation_issues": [],
+      "review_gates": [
+        "external-global-lifecycle"
+      ]
+    },
+    {
+      "id": "rest_api.CallRESTPost2#5d769a2aaaf39b27",
+      "module": "rest_api",
+      "symbol": "CallRESTPost2",
+      "qualified_name": "rest_api.CallRESTPost2",
+      "overload": "rest_api.CallRESTPost2#5d769a2aaaf39b27",
+      "signature": "def CallRESTPost2(url : str, postField : char, sizeInByte : int, headerNameAndValueList : list[tuple[str, str]], progressBarText : str) -> str",
+      "domain": "rest",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 15920,
+          "block": 1373
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 16700,
+          "block": 1373,
+          "anchor": "rest-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "rest_api.CallRESTPost2",
+      "documentation_issues": [],
+      "review_gates": [
+        "external-global-lifecycle"
+      ]
+    },
+    {
+      "id": "rest_api.CallRESTPostWithMultipartFormData#b0fc19907dff440d",
+      "module": "rest_api",
+      "symbol": "CallRESTPostWithMultipartFormData",
+      "qualified_name": "rest_api.CallRESTPostWithMultipartFormData",
+      "overload": "rest_api.CallRESTPostWithMultipartFormData#b0fc19907dff440d",
+      "signature": "def CallRESTPostWithMultipartFormData(url : str, filePath : str, headerNameAndValueList : list[tuple[str, str]], progressBarText : str) -> str",
+      "domain": "rest",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 15949,
+          "block": 1375
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 16730,
+          "block": 1375,
+          "anchor": "rest-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "rest_api.CallRESTPostWithMultipartFormData",
+      "documentation_issues": [],
+      "review_gates": [
+        "external-global-lifecycle"
+      ]
+    },
+    {
+      "id": "rest_api.CallRESTPostWithMultipartFormData#38a16e27d40c5788",
+      "module": "rest_api",
+      "symbol": "CallRESTPostWithMultipartFormData",
+      "qualified_name": "rest_api.CallRESTPostWithMultipartFormData",
+      "overload": "rest_api.CallRESTPostWithMultipartFormData#38a16e27d40c5788",
+      "signature": "def CallRESTPostWithMultipartFormData(url : str, filePathList : list[str], headerNameAndValueList : list[tuple[str, str]], progressBarText : str) -> str",
+      "domain": "rest",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 15976,
+          "block": 1377
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 16758,
+          "block": 1377,
+          "anchor": "rest-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "rest_api.CallRESTPostWithMultipartFormData",
+      "documentation_issues": [],
+      "review_gates": [
+        "external-global-lifecycle"
+      ]
+    },
+    {
+      "id": "rest_api.CallRESTPut#c8ded759a6ac375a",
+      "module": "rest_api",
+      "symbol": "CallRESTPut",
+      "qualified_name": "rest_api.CallRESTPut",
+      "overload": "rest_api.CallRESTPut#c8ded759a6ac375a",
+      "signature": "def CallRESTPut(restReq : CloApiRestRequest, progressBarText : str) -> str",
+      "domain": "rest",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 16047,
+          "block": 1383
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 16832,
+          "block": 1383,
+          "anchor": "rest-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [
+        {
+          "name": "CloApiRestRequest",
+          "basis": "annotation",
+          "status": "resolved",
+          "type_id": "type:CloApiRestRequest"
+        }
+      ],
+      "official_record_id": "rest_api.CallRESTPut",
+      "documentation_issues": [],
+      "review_gates": [
+        "binding-types",
+        "external-global-lifecycle"
+      ]
+    },
+    {
+      "id": "rest_api.CallbackRestMultiRequest#83f1b9ba86b194e7",
+      "module": "rest_api",
+      "symbol": "CallbackRestMultiRequest",
+      "qualified_name": "rest_api.CallbackRestMultiRequest",
+      "overload": "rest_api.CallbackRestMultiRequest#83f1b9ba86b194e7",
+      "signature": "def CallbackRestMultiRequest(restRequests : list[CloApiRestRequest], callbackFunc : std::function[None (CloApiRestResponse)], callbackFinished : std::function[None()]) -> None",
+      "domain": "rest",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 16024,
+          "block": 1381
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 16808,
+          "block": 1381,
+          "anchor": "rest-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [
+        {
+          "name": "CloApiRestRequest",
+          "basis": "annotation",
+          "status": "resolved",
+          "type_id": "type:CloApiRestRequest"
+        },
+        {
+          "name": "CloApiRestRequest",
+          "basis": "documentation_mention",
+          "status": "resolved",
+          "type_id": "type:CloApiRestRequest"
+        },
+        {
+          "name": "CloApiRestResponse",
+          "basis": "annotation",
+          "status": "resolved",
+          "type_id": "type:CloApiRestResponse"
+        },
+        {
+          "name": "CloApiRestResponse",
+          "basis": "documentation_mention",
+          "status": "resolved",
+          "type_id": "type:CloApiRestResponse"
+        },
+        {
+          "name": "std::function",
+          "basis": "annotation",
+          "status": "unresolved",
+          "type_id": null
+        }
+      ],
+      "official_record_id": "rest_api.CallbackRestMultiRequest",
+      "documentation_issues": [
+        "unresolved_annotation_type",
+        "cpp_spelling_in_python_declaration"
+      ],
+      "review_gates": [
+        "binding-types",
+        "external-global-lifecycle"
+      ]
+    },
+    {
+      "id": "rest_api.CallbackRestRequest#015f25eaf1a7cf9b",
+      "module": "rest_api",
+      "symbol": "CallbackRestRequest",
+      "qualified_name": "rest_api.CallbackRestRequest",
+      "overload": "rest_api.CallbackRestRequest#015f25eaf1a7cf9b",
+      "signature": "def CallbackRestRequest(restRequest : CloApiRestRequest, callbackFunc : std::function[None (CloApiRestResponse)]) -> None",
+      "domain": "rest",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 16003,
+          "block": 1379
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 16786,
+          "block": 1379,
+          "anchor": "rest-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [
+        {
+          "name": "CloApiRestRequest",
+          "basis": "annotation",
+          "status": "resolved",
+          "type_id": "type:CloApiRestRequest"
+        },
+        {
+          "name": "CloApiRestRequest",
+          "basis": "documentation_mention",
+          "status": "resolved",
+          "type_id": "type:CloApiRestRequest"
+        },
+        {
+          "name": "CloApiRestResponse",
+          "basis": "annotation",
+          "status": "resolved",
+          "type_id": "type:CloApiRestResponse"
+        },
+        {
+          "name": "CloApiRestResponse",
+          "basis": "documentation_mention",
+          "status": "resolved",
+          "type_id": "type:CloApiRestResponse"
+        },
+        {
+          "name": "std::function",
+          "basis": "annotation",
+          "status": "unresolved",
+          "type_id": null
+        }
+      ],
+      "official_record_id": "rest_api.CallbackRestRequest",
+      "documentation_issues": [
+        "unresolved_annotation_type",
+        "cpp_spelling_in_python_declaration"
+      ],
+      "review_gates": [
+        "binding-types",
+        "external-global-lifecycle"
+      ]
+    }
+  ]
+}

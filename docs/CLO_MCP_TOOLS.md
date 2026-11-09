@@ -1,0 +1,239 @@
+# Каталог действующих CLO MCP tools
+
+2026-11-09. Источник: `src/clo3d_mcp/transport_server.py`, `pattern_contract.py`,
+`pattern_api.py`, `jobs.py`, `pipe_session.py`, launcher. **14 tools** при
+включённом принятом pattern profile; не каталог legacy47 и не будущий full API.
+Этот документ не обновляет runtime descriptions сам по себе.
+
+## Общие контракты
+
+- В примерах JSON ниже — synthetic args, не команда выполнить вызов. Индексы
+  и expected_name брать из свежего списка реальной сцены, не копировать index0.
+- Девять pattern-команд проверяют exact keys raw HTTP payload, очередь и executor.
+  Числа strict int/float без bool, NaN/Infinity; имена1–128 Unicode code points
+  с ord≥32, без surrogates. Это не полная Unicode-category проверка: пробельные
+  имена, DEL и некоторые невидимые символы сейчас допускаются; выбирать осмысленные
+  видимые имена. Координаты/смещения |v|≤100000мм;
+  `pattern_index` strict int0–255. Фактическое наличие — отдельная проверка.
+  Для исходных пяти diagnostic tools raw exact-key validation пока не такая
+  же строгая: не утверждать обратного, передавать `{}`.
+- Queue calls success: `ok:true` + поля команды. `transport_status` и
+  `get_session_info` возвращают status dict **без обязательного ok**.
+- Error tool result: `isError:true`, structured `{ok:false,error:<code>}`;
+  для scene_change_unverified/outcome_unknown также scene_may_have_changed:true.
+  Отсутствие этого флага при другом error НЕ доказывает отсутствие эффекта.
+- get_session_info/status не идут в CLO; остальные через одну FIFO/UI executor.
+  Defaults очереди30с до dispatch и30с после dispatch, клиент может ждать иначе.
+  Срок после dispatch не прерывает native call. Поздний результат возможен.
+- Read tools имеют hints readOnly=true/destructive=false/idempotent=true/
+  openWorld=false. Pattern mutations: false/true/false/false. Diagnostic square:
+  false/false/false/false. Эти hints не ACL и не полная гарантия качества.
+- Geometry: `{index,name,position_mm:[x,y],area_mm2,bounding_box}`. Position —
+  native reference position (в проверенной2026.1 центр), не vertex/top-left.
+  Box — native bounded JSON record, в реальном тесте строки Height/Width;
+  не считать универсальным массивом min/max. Полного outline тут нет.
+- Mutation result кроме delete: `{ok:true,verified:true,pattern_count,pattern,
+  executor_ms}`. Executor timing включает preflight/setters/readback; не чистое
+  API time и не client latency. Read tools его не возвращают.
+- Все mutations без auto-retry/rollback. `verified` относится только к
+  описанным invariants. Multi-setter create/copy+name не atomic.
+- После успешного RESULT сервер ждёт до 2 секунд READY именно своего job,
+  прежде чем вернуть success. Это освобождение слота, не глобальная idle-гарантия:
+  другой клиент может уже поставить/выполнять работу. Client idle/session guards
+  остаются обязательны. Args, success schemas и число14 tools не меняются.
+- `executor_release_timeout` / `executor_release_unavailable`: RESULT уже получен,
+  но READY не подтверждён в срок либо связь потеряна. `isError=true`, `ok=false`,
+  `scene_may_have_changed=true` консервативно даже для reads. STOP зависимых действий,
+  не retry, не cleanup; позднее отдельная read-only сверка. Native command не
+  отменяется и slot не освобождается по тайм-ауту. Native ERROR возвращается сразу,
+  без ожидания READY и без разрешения продолжать старый сценарий.
+- Все перечисленные поля args обязательны, defaults у pattern-команд нет.
+  Output `pattern_count` — число деталей, `index` — текущий zero-based индекс,
+  `name`/`deleted_name` — точные имена без нормализации, `verified` — только
+  invariants данной команды. Area: finite 0–1e16 мм²; executor_ms: finite
+  0–1e12 мс. Position bounded ±100000 мм. Bounding box сохраняет native layout
+  (также возможны вложенные массивы/числа), его строки не получают выдуманных units.
+- Source mapping ниже указывает точные `pattern_api` names; status/info —
+  внешние snapshots, ping — executor response, introspection читает modules.
+  Official overload/build traceability для полного API остаётся задачей A0;
+  эти карточки фиксируют текущий код, а не закрывают все будущие DoD требования.
+
+## 1. get_session_info
+
+**Когда:** старт сценария, identity/capability/readiness. **Не:** версия CLO,
+имя проекта, прогресс native вызова. Args `{}`. Возвращает status + clo_pid,
+server_pid, capabilities и CLO session_id (не HTTP session ID).
+Capabilities — executor commands: два внешних status tools в этот список не
+обязаны входить. Выбирать реально опубликованные tools и профиль совместно.
+Read-only внешний snapshot, не доказывает текущий callback response.
+Пример: `{}` → сохранить session_id, проверить ready/error/quarantine.
+Invalid choice: для измерения roundtrip нужен ping, не повтор info в цикле.
+Composition: W1/W3; до mutation статус перепроверить, но guard не atomic.
+No-call: при ready=false не переходить к create, даже если capabilities есть.
+
+## 2. transport_status
+
+**Когда:** queue/busy/not-ready диагностика, включая занятой executor. Args `{}`.
+Результат: session_id, connected/closed/quarantined/ready, waiting/capacity,
+active_id/active_state, cached/history_limit/waiters, HTTP flags/endpoint/error.
+Внутренний job ID не даёт отдельного опубликованного lookup/cancel tool.
+Не native progress и не гарантия что API не блокирует UI. Пример `{}`.
+Invalid choice: ready=true не доказывает успешное завершение предыдущей mutation.
+Composition W1/W4; один bounded snapshot, не бесконечный polling.
+No-call: active_id не аргумент для несуществующего cancel tool.
+
+## 3. ping
+
+**Когда:** проверить обслуживание FIFO/UI executor без scene API. Args `{}`;
+результат `{ok:true,pong:true}`. No scene effect; handler отвечает на CLO UI
+thread, но не вызывает GetPatternCount. Может ждать очередь; не обгоняет
+занятый CLO. Ошибки readiness/очереди/unknown — общие ниже.
+Invalid choice: для числа деталей get_pattern_count; для внешнего busy status
+transport_status. Пример `{}`. Composition W1 после info при доступном executor.
+
+## 4. get_pattern_count
+
+**Когда:** число деталей без полного списка. Args `{}`; GetPatternCount →
+`{ok:true,pattern_count:<nonnegative int>}`. Диагностический count не ограничен
+лимитом256 в отличие от bounded pattern list. Не geometry/идентичность.
+Пример `{}`; invalid choice: count2 не определяет имена/index выбранной детали.
+Composition W1, затем list если нужны targets. API failure → command_error;
+не подавлять его нулём.
+
+## 5. create_test_rectangle
+
+**Когда:** осознанный transport mutation diagnostic: один квадрат100×100мм
+в начале2D через CreatePatternWithPoints. Args `{}`; result
+`{ok:true,created:true,pattern_count}`. Проверяет count+1, **не** полный geometry
+readback/unique name/долговременную identity. Не production polygon tool.
+Не нужен в обычном создании — выбрать create_pattern. Error может возникнуть
+после создания, даже если только command_error. Не повторять/не удалять по
+«последнему индексу» автоматически. Composition: отдельный diagnostic recipe,
+не включать принятый gate снова в общий batch. Пример `{}` только при такой цели.
+No-call: запрос произвольного контура не переводить в diagnostic square.
+
+## 6. list_clo_api
+
+**Когда:** bounded список публичных callable, без их native invocation.
+Args `{}`; result `{ok:true,modules:{<module>:[names]}}`. Фиксированные modules:
+pattern_api/export_api/fabric_api/import_api/utility_api; до512имён на модуль.
+Не включает rest_api/gui_api/ApiTypes; возможная обрезка не даёт полного catalogue.
+Presence не означает зарегистрированный MCP tool или безопасный binding.
+Invalid args `{"module":"rest_api"}` — extra key; describe имеет другой контракт.
+Composition W2 → выбрать до16имён → describe → official docs review, не execute.
+
+## 7. describe_clo_api
+
+**Когда:** bounded docstrings фиксированного module. Args `module` из пяти выше,
+`functions`1–16 ASCII public identifier strings1–128. Пример:
+`{"module":"fabric_api","functions":["GetFabricCount","GetFabricName"]}`.
+Result `{ok:true,module,functions:{name:{available:<bool>,doc:<str>}}}`;
+doc до8192символов. available=false/empty doc не ошибка исполнения метода:
+он не вызывался. Invalid:17имён, `_private`, неизвестный module, extra keys.
+Не гарантирует семантику arg0/constructible types/полноту сигнатуры.
+Composition W2; official/version сверка обязательна до нового adapter.
+
+## 8. get_pattern_list
+
+**Когда:** свежие indices/names targets; args `{}`. GetPatternCount/Name →
+`{ok:true,pattern_count,patterns:[{index,name}]}` с последовательными индексами,
+максимум256; не pagination. Сцена больше лимита → ошибка, не truncated success.
+Duplicate names в списке возможны; mutations требуют unique target name.
+Invalid choice: list не содержит outline/area/fabric assignments.
+Composition W1/W3/W4; после delete перечитать перед следующим target call.
+Пример `{}` → patterns с index/name; `{"limit":10}` invalid (extra key),
+такого pagination аргумента нет.
+
+## 9. get_pattern_geometry
+
+**Когда:** position/area/native bbox одной детали. Args
+`{"pattern_index":0}` только если0 из свежего списка. Result `{ok:true,pattern}`
+по общей geometry schema. GetPatternPieceName/GetPatternPiecePos/
+GetPatternPieceArea/GetBoundingBoxOfPattern; не полный contour.
+Read не принимает expected_name, поэтому сравнить returned name с ожиданием
+самостоятельно. Bool index или256 invalid, отсутствующий target stale_pattern.
+Composition W1, независимый readback W3. Не использовать bbox для point editing.
+
+## 10. create_pattern
+
+**Когда:** одна новая simple straight polygon деталь с уникальным именем.
+Args `points`:3–64 пары[x,y]мм, `name`:bounded unique name. Контур замыкается
+неявно: не повторять первую точку в конце. Shoelace area должна быть ≥0.01 мм²;
+adjacent cross products |cross|≥1e-8, без самопересечений. Пример:
+`{"points":[[0,0],[120,0],[100,80],[0,60]],"name":"sample_panel"}`.
+Invalid: самопересечение, duplicate vertices, adjacent collinear edges,
+тройка[x,y,type], holes/curves. Имя уже занято/нет места → отказ до creation.
+CreatePatternWithPoints+SetPatternPieceName; проверяются count+1, порядок/имена остальных,
+новое имя, площадь shoelace с допуском. Не гарантируется точное совпадение всех
+vertices/3D placement/sewing. Setter/readback failure → scene_change_unverified.
+Composition W3: returned pattern.index/name → fresh readback → далее copy/move.
+Не вызывать diagnostic square для параметризованной формы.
+
+## 11. set_pattern_name
+
+**Когда:** переименовать одну uniquely named деталь. Args
+`{"pattern_index":0,"expected_name":"sample_panel","name":"front_panel"}`.
+Все поля mandatory; target index/name должен совпасть, новое имя свободно
+(то же имя на самой детали допустимо). Result — общая mutation schema.
+SetPatternPieceName, readback list/name/position/area; verified сохраняет list/order/count,
+position и area. Не durable identity. Wrong expected/duplicates → stale_pattern.
+Нельзя далее использовать прежний expected_name. Composition W3; readback затем
+последующие операции с новым именем. Bool index/пустая строка invalid;
+строка из пробелов текущим валидатором не отклоняется.
+
+## 12. copy_pattern_with_offset
+
+**Когда:** копия одной детали со смещением относительно текущей позиции.
+Args `{pattern_index,expected_name,name,dx,dy}`; пример
+`{"pattern_index":0,"expected_name":"front_panel","name":"front_copy","dx":250,"dy":30}`.
+CopyPatternPieceMove+SetPatternPieceName; проверка returned index/count+1/остальных имён,
+new name, position=old+[dx,dy], area сохранена. Result содержит **новую** pattern.
+Не абсолютная позиция и не обещание symmetry/сохранения всех sewing relations.
+dx/dy finite bounded; итоговая position тоже в bounds; target/new-name stale
+guard, максимум256деталей. Invalid: `dx:true`; отказ до setter при занятом name.
+Composition W3; copy return index вместо guessed last index. Error может
+оставить unnamed/copied деталь: STOP, без auto-delete/re-copy.
+
+## 13. move_pattern_relative
+
+**Когда:** сдвинуть целую существующую деталь, не создать новую/двигать точку.
+Args `{pattern_index,expected_name,dx,dy}`; пример
+`{"pattern_index":0,"expected_name":"front_panel","dx":20,"dy":-5}`.
+SetPatternPieceMove; verified проверяет relative position, area, count/names.
+dx/dy finite |v|≤100000; итоговая position тоже должна остаться в bounds.
+Tolerance position/area: rel_tol1e-5 или abs_tol0.05 соответствующей единицы.
+Не считать это strict0.05 для любых больших значений и не путать мм с мм².
+Не 3D arrangement/point editing. Composition W3: fresh list/geometry → move →
+отдельный geometry read. Если нужен duplicate — выбрать copy, не move.
+
+## 14. delete_pattern
+
+**Когда:** удалить ровно одну однозначно идентифицированную деталь в разрешённом
+scope. Args `{"pattern_index":0,"expected_name":"front_copy"}`. DeletePatternPiece;
+result `{ok:true,verified:true,pattern_count,deleted_name,executor_ms}`,
+**нет pattern**. Readback сравнивает точный оставшийся список имён/order.
+Нет гарантии полного восстановления связанных швов/material relationships;
+индексы сдвигаются. Нельзя delete по prefix без fresh уникального target.
+Wrong expected/duplicate name → stale_pattern, no automatic retry.
+Composition W3 planned cleanup только own objects, затем fresh list; два delete
+не gather и не использовать старый второй index. После ошибки — W4, не cleanup.
+
+## Ошибки и безопасные действия
+
+- invalid_parameters: проверить schema/bounds/extras, не пробовать наугад.
+- api_unavailable: описать binding, сверить docs/build; не native fallback.
+- stale_pattern: остановить старый план, fresh list/geometry; имя не ID.
+- scene_change_unverified: эффект мог быть; stop mutations, separate read-only
+  сверка. Иногда возникает и при invalid preflight snapshot — код консервативен.
+- command_error: native exception sanitised; diagnostic square мог изменить
+  сцену. Не считать его гарантированным no-op.
+- queue_full/queue_timeout/executor_unavailable/waiter_limit: нет разрешения
+  blind retry; проверить status. Отсутствие выполнения утверждать только при
+  достоверном знании stage, не по клиентскому таймауту.
+- outcome_unknown/disconnect/client timeout: прекратить сценарий; dispatched
+  work может продолжаться. Нет опубликованного resume/cancel/job-lookup tool.
+
+Status/info могут оставаться доступны при busy CLO. Любые native getters в
+reconciliation ждут ту же FIFO; ограничивать запросы и не объявлять их способом
+прервать заблокированный API. Историческая real acceptance:
+`PATTERN_API_CHECK.md`, `P3_MCP_CHECK.md`; не все возможные сцены/геометрии.

@@ -1,0 +1,3556 @@
+{
+  "kind": "methods",
+  "records": [
+    {
+      "id": "utility_api.ABPNetworkAuth",
+      "qualified_name": "utility_api.ABPNetworkAuth",
+      "module": "utility_api",
+      "symbol": "ABPNetworkAuth",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.ABPNetworkAuth#780d47657f566e03",
+          "signature_normalized": "def ABPNetworkAuth(id : str, pw : str, _APFpath : str) -> None",
+          "signature_raw": "def ABPNetworkAuth(id : str, pw : str, _APFpath : str) -> None",
+          "parameters": [
+            {
+              "raw": "id : str",
+              "name": "id",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "pw : str",
+              "name": "pw",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_APFpath : str",
+              "name": "_APFpath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def ABPNetworkAuth(id : str, pw : str, _APFpath : str) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Regist Alvanon ID and Password\n@param id: Alvanon ID \n@param pw: Alvanon Password \n@param _APFpath : APF File path\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 20935,
+                  "block": 1821
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 21935,
+                  "block": 1821,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ABPNetworkAuth()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Regist Alvanon ID and Password\n/// @param id: Alvanon ID \n/// @param pw: Alvanon Password \n/// @param _APFpath : APF File path",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 20946,
+                    "block": 1822
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 21946,
+                    "block": 1822,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param id: Alvanon ID ",
+            "@param pw: Alvanon Password ",
+            "@param _APFpath : APF File path"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.AddBlockTypeToStyle",
+      "qualified_name": "utility_api.AddBlockTypeToStyle",
+      "module": "utility_api",
+      "symbol": "AddBlockTypeToStyle",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.AddBlockTypeToStyle#448f83c8ea936501",
+          "signature_normalized": "def AddBlockTypeToStyle(_blockName : str, _blockType : int, _styleName : str, _categoryPath : str, _lineName : str) -> bool",
+          "signature_raw": "def AddBlockTypeToStyle(_blockName : str, _blockType : int, _styleName : str, _categoryPath : str, _lineName : str) -> bool",
+          "parameters": [
+            {
+              "raw": "_blockName : str",
+              "name": "_blockName",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_blockType : int",
+              "name": "_blockType",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_styleName : str",
+              "name": "_styleName",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_categoryPath : str",
+              "name": "_categoryPath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_lineName : str",
+              "name": "_lineName",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def AddBlockTypeToStyle(_blockName : str, _blockType : int, _styleName : str, _categoryPath : str, _lineName : str) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Add block type to style\n@param _blockName : The name of the block to be added\n@param _blockType : Specifies the block type. You must select the desired type from the list below.\nBlock Type List:\nFront Body         = 0\nBack Body          = 1\nFull Body          = 2\nSleeves            = 3\nCollar             = 4\nRaglan Front Body  = 5\nRaglan Back Body   = 6\nRaglan Full Body   = 7\nRaglan Sleeve      = 8\nRaglan Collar      = 9\nHem                = 10\nPlacket Front      = 11\nCuff               = 12\nFront Skirt        = 13\nSkirt Back         = 14\nFull Skirt         = 15\nFront Pants        = 16\nBack Pants         = 17\nLeft Pants         = 18\nRight Pants        = 19\nFront Left Pants   = 20\nFront Right Pants  = 21\nBack Left Pants    = 22\nBack Right Pants   = 23\nFull Pants         = 24\nWaistband          = 25\nCuff Leg           = 26\n@param _styleName : The name of the style to which the block type will be added\n@param _categoryPath : Has a default value of 'None'. Only provide a value if a line exists in the category you are adding\n@param _lineName : Has a default value of 'None'. Only provide a value if a line exists in the category you are adding\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 19107,
+                  "block": 1661
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 20027,
+                  "block": 1661,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "AddBlockTypeToStyle(const std::wstring& _blockName, const unsigned int _blockType, const std::wstring& _styleName, const std::wstring& _categoryPath, const std::wstring& _lineName = L\"None\")",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Add block type to style\n/// @param _blockName : The name of the block to be added\n/// @param _blockType : Specifies the block type. You must select the desired type from the list below.\n/// Block Type List:\n/// Front Body         = 0\n/// Back Body          = 1\n/// Full Body          = 2\n/// Sleeves            = 3\n/// Collar             = 4\n/// Raglan Front Body  = 5\n/// Raglan Back Body   = 6\n/// Raglan Full Body   = 7\n/// Raglan Sleeve      = 8\n/// Raglan Collar      = 9\n/// Hem                = 10\n/// Placket Front      = 11\n/// Cuff               = 12\n/// Front Skirt        = 13\n/// Skirt Back         = 14\n/// Full Skirt         = 15\n/// Front Pants        = 16\n/// Back Pants         = 17\n/// Left Pants         = 18\n/// Right Pants        = 19\n/// Front Left Pants   = 20\n/// Front Right Pants  = 21\n/// Back Left Pants    = 22\n/// Back Right Pants   = 23\n/// Full Pants         = 24\n/// Waistband          = 25\n/// Cuff Leg           = 26\n/// @param _styleName : The name of the style to which the block type will be added\n/// @param _categoryPath : Has a default value of 'None'. Only provide a value if a line exists in the category you are adding\n/// @param _lineName : Has a default value of 'None'. Only provide a value if a line exists in the category you are adding",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 19148,
+                    "block": 1662
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 20068,
+                    "block": 1662,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _blockName : The name of the block to be added",
+            "@param _blockType : Specifies the block type. You must select the desired type from the list below.",
+            "@param _styleName : The name of the style to which the block type will be added",
+            "@param _categoryPath : Has a default value of 'None'. Only provide a value if a line exists in the category you are adding",
+            "@param _lineName : Has a default value of 'None'. Only provide a value if a line exists in the category you are adding"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.AddColorSwatch",
+      "qualified_name": "utility_api.AddColorSwatch",
+      "module": "utility_api",
+      "symbol": "AddColorSwatch",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.AddColorSwatch#957bfaa02aa7e625",
+          "signature_normalized": "def AddColorSwatch(plmIDtoNameList : map[str, str], plmIDtoColorList : map[str, CloApiRgb], plmIDtoApiMetaDataList : map[str, str], swatchName : str) -> str",
+          "signature_raw": "def AddColorSwatch(plmIDtoNameList : map[str, str], plmIDtoColorList : map[str, CloApiRgb], plmIDtoApiMetaDataList : map[str, str], swatchName : str) -> str",
+          "parameters": [
+            {
+              "raw": "plmIDtoNameList : map[str, str]",
+              "name": "plmIDtoNameList",
+              "annotation_raw": "map[str, str]"
+            },
+            {
+              "raw": "plmIDtoColorList : map[str, CloApiRgb]",
+              "name": "plmIDtoColorList",
+              "annotation_raw": "map[str, CloApiRgb]"
+            },
+            {
+              "raw": "plmIDtoApiMetaDataList : map[str, str]",
+              "name": "plmIDtoApiMetaDataList",
+              "annotation_raw": "map[str, str]"
+            },
+            {
+              "raw": "swatchName : str",
+              "name": "swatchName",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def AddColorSwatch(plmIDtoNameList : map[str, str], plmIDtoColorList : map[str, CloApiRgb], plmIDtoApiMetaDataList : map[str, str], swatchName : str) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Add Color Swatch\n@param plmIDtoNameList: the list for map of PLM ID to Color Name\n@param plmIDtoColorList: list for map of PLM ID to color name\n@param plmIDtoApiMetaDataList: list for map of PLM ID to Api Meta Data\n@param swatchName: swatchName which will be shown in the color palette and the swatch file name to save\n@return added swatch file name(.aco) inside the asset folder for the current version of CLO\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 16983,
+                  "block": 1465
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 17807,
+                  "block": 1465,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "AddColorSwatch(const map<string, string>& plmIDtoNameList, const map<string, Marvelous::CloApiRgb>& plmIDtoColorList, const map<string, string>& plmIDtoApiMetaDataList, const string& swatchName)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Add Color Swatch\n/// @param plmIDtoNameList: the list for map of PLM ID to Color Name\n/// @param plmIDtoColorList: list for map of PLM ID to color name\n/// @param plmIDtoApiMetaDataList: list for map of PLM ID to Api Meta Data\n/// @param swatchName: swatchName which will be shown in the color palette and the swatch file name to save\n/// @return added swatch file name(.aco) inside the asset folder for the current version of CLO",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 16996,
+                    "block": 1466
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 17820,
+                    "block": 1466,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "CloApiRgb",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:CloApiRgb"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param plmIDtoNameList: the list for map of PLM ID to Color Name",
+            "@param plmIDtoColorList: list for map of PLM ID to color name",
+            "@param plmIDtoApiMetaDataList: list for map of PLM ID to Api Meta Data",
+            "@param swatchName: swatchName which will be shown in the color palette and the swatch file name to save"
+          ],
+          "return_docs_raw": [
+            "@return added swatch file name(.aco) inside the asset folder for the current version of CLO"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.AddColorSwatchW",
+      "qualified_name": "utility_api.AddColorSwatchW",
+      "module": "utility_api",
+      "symbol": "AddColorSwatchW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.AddColorSwatchW#ab8d7d6fd1e3045d",
+          "signature_normalized": "def AddColorSwatchW(plmIDtoNameList : map[str, str], plmIDtoColorList : map[str, CloApiRgb], plmIDtoApiMetaDataList : map[str, str], swatchName : str) -> str",
+          "signature_raw": "def AddColorSwatchW(plmIDtoNameList : map[str, str], plmIDtoColorList : map[str, CloApiRgb], plmIDtoApiMetaDataList : map[str, str], swatchName : str) -> str",
+          "parameters": [
+            {
+              "raw": "plmIDtoNameList : map[str, str]",
+              "name": "plmIDtoNameList",
+              "annotation_raw": "map[str, str]"
+            },
+            {
+              "raw": "plmIDtoColorList : map[str, CloApiRgb]",
+              "name": "plmIDtoColorList",
+              "annotation_raw": "map[str, CloApiRgb]"
+            },
+            {
+              "raw": "plmIDtoApiMetaDataList : map[str, str]",
+              "name": "plmIDtoApiMetaDataList",
+              "annotation_raw": "map[str, str]"
+            },
+            {
+              "raw": "swatchName : str",
+              "name": "swatchName",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def AddColorSwatchW(plmIDtoNameList : map[str, str], plmIDtoColorList : map[str, CloApiRgb], plmIDtoApiMetaDataList : map[str, str], swatchName : str) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Add Color Swatch\n@param plmIDtoNameList: the list for map of PLM ID to Color Name\n@param plmIDtoColorList: list for map of PLM ID to color name\n@param plmIDtoApiMetaDataList: list for map of PLM ID to Api Meta Data\n@param swatchName: swatchName which will be shown in the color palette and the swatch file name to save\n@return added swatch file name(.aco) inside the asset folder for the current version of CLO\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 17010,
+                  "block": 1467
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 17835,
+                  "block": 1467,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "AddColorSwatchW(const map<wstring, wstring>& plmIDtoNameList, const map<wstring, Marvelous::CloApiRgb>& plmIDtoColorList, const map<wstring, wstring>& plmIDtoApiMetaDataList, const wstring& swatchName)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Add Color Swatch\n/// @param plmIDtoNameList: the list for map of PLM ID to Color Name\n/// @param plmIDtoColorList: list for map of PLM ID to color name\n/// @param plmIDtoApiMetaDataList: list for map of PLM ID to Api Meta Data\n/// @param swatchName: swatchName which will be shown in the color palette and the swatch file name to save\n/// @return added swatch file name(.aco) inside the asset folder for the current version of CLO",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 17023,
+                    "block": 1468
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 17848,
+                    "block": 1468,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "CloApiRgb",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:CloApiRgb"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param plmIDtoNameList: the list for map of PLM ID to Color Name",
+            "@param plmIDtoColorList: list for map of PLM ID to color name",
+            "@param plmIDtoApiMetaDataList: list for map of PLM ID to Api Meta Data",
+            "@param swatchName: swatchName which will be shown in the color palette and the swatch file name to save"
+          ],
+          "return_docs_raw": [
+            "@return added swatch file name(.aco) inside the asset folder for the current version of CLO"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.AddGraphicStyleFromImageFile",
+      "qualified_name": "utility_api.AddGraphicStyleFromImageFile",
+      "module": "utility_api",
+      "symbol": "AddGraphicStyleFromImageFile",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.AddGraphicStyleFromImageFile#688abafa42cc2d2c",
+          "signature_normalized": "def AddGraphicStyleFromImageFile(_filePath : str, _index : int) -> bool",
+          "signature_raw": "def AddGraphicStyleFromImageFile(_filePath : str, _index : int) -> bool",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_index : int",
+              "name": "_index",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def AddGraphicStyleFromImageFile(_filePath : str, _index : int) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Converts an image file to a graphic style and inserts it into the graphic file list at the given index.\n@param _filePath: The file path of the image file (.png, .jpg, etc.).\n@param _index: The position in the graphic file list. Must be >= 0 and <= current graphic style count.\n@return true if the graphic style was added or replaced successfully, otherwise false.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 20745,
+                  "block": 1801
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 21735,
+                  "block": 1801,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "AddGraphicStyleFromImageFile(const std::string& _filePath, int _index)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Converts an image file to a graphic style and inserts it into the graphic file list at the given index.\n/// @param _filePath: The file path of the image file (.png, .jpg, etc.).\n/// @param _index: The position in the graphic file list. Must be >= 0 and <= current graphic style count.\n/// @return true if the graphic style was added or replaced successfully, otherwise false.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 20756,
+                    "block": 1802
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 21746,
+                    "block": 1802,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath: The file path of the image file (.png, .jpg, etc.).",
+            "@param _index: The position in the graphic file list. Must be >= 0 and <= current graphic style count."
+          ],
+          "return_docs_raw": [
+            "@return true if the graphic style was added or replaced successfully, otherwise false."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.AddGraphicStyleToPattern",
+      "qualified_name": "utility_api.AddGraphicStyleToPattern",
+      "module": "utility_api",
+      "symbol": "AddGraphicStyleToPattern",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.AddGraphicStyleToPattern#4b54d4d0f56fb19b",
+          "signature_normalized": "def AddGraphicStyleToPattern(_patternIndex : int, _graphicStyleIndex : int, _x : float, _y : float, _width : float, _height : float, _face : int, _zOffset : float, _fAngle : float) -> bool",
+          "signature_raw": "def AddGraphicStyleToPattern(_patternIndex : int, _graphicStyleIndex : int, _x : float, _y : float, _width : float, _height : float, _face : int, _zOffset : float, _fAngle : float) -> bool",
+          "parameters": [
+            {
+              "raw": "_patternIndex : int",
+              "name": "_patternIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_graphicStyleIndex : int",
+              "name": "_graphicStyleIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_x : float",
+              "name": "_x",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_y : float",
+              "name": "_y",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_width : float",
+              "name": "_width",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_height : float",
+              "name": "_height",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_face : int",
+              "name": "_face",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_zOffset : float",
+              "name": "_zOffset",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_fAngle : float",
+              "name": "_fAngle",
+              "annotation_raw": "float"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def AddGraphicStyleToPattern(_patternIndex : int, _graphicStyleIndex : int, _x : float, _y : float, _width : float, _height : float, _face : int, _zOffset : float, _fAngle : float) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Add Graphic Style to Pattern\n@param _patternIndex: pattern index to add graphic style\n@param _graphicStyleIndex: graphic style index to add to pattern\n@param _x: The values along the X-axis represent the horizontal position relative to this point, moving to the right.\n@param _y: The values along the Y-axis represent the vertical position relative to this point, moving downward.\nFor example, in a 100x100 pattern, the bottom-right corner is located at (100, 100)\nPlace the graphic so that its center aligns with the specified (X, Y) coordinates.   \n@param _width: Width of the graphic\n@param _height: Height of the graphic\n@param _face: 0: Front, 1: Back 2: Both\n@param _zOffset: offset value\n@param _fAngle: angle value\n@return if it succeeds, return true.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 22902,
+                  "block": 1995
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 23989,
+                  "block": 1995,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "AddGraphicStyleToPattern(int _textureType)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Add Graphic Style to Pattern\n/// @param _patternIndex: pattern index to add graphic style\n/// @param _graphicStyleIndex: graphic style index to add to pattern\n/// @param _x: The values along the X-axis represent the horizontal position relative to this point, moving to the right.\n/// @param _y: The values along the Y-axis represent the vertical position relative to this point, moving downward.\n/// For example, in a 100x100 pattern, the bottom-right corner is located at (100, 100)\n/// Place the graphic so that its center aligns with the specified (X, Y) coordinates.   \n/// @param _width: Width of the graphic\n/// @param _height: Height of the graphic\n/// @param _face: 0: Front, 1: Back 2: Both\n/// @param _zOffset: offset value\n/// @param _fAngle: angle value\n/// @return if it succeeds, return true.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 22922,
+                    "block": 1996
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 24009,
+                    "block": 1996,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _patternIndex: pattern index to add graphic style",
+            "@param _graphicStyleIndex: graphic style index to add to pattern",
+            "@param _x: The values along the X-axis represent the horizontal position relative to this point, moving to the right.",
+            "@param _y: The values along the Y-axis represent the vertical position relative to this point, moving downward.",
+            "@param _width: Width of the graphic",
+            "@param _height: Height of the graphic",
+            "@param _face: 0: Front, 1: Back 2: Both",
+            "@param _zOffset: offset value",
+            "@param _fAngle: angle value"
+          ],
+          "return_docs_raw": [
+            "@return if it succeeds, return true."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.AddGraphicStyleToPatternV2",
+      "qualified_name": "utility_api.AddGraphicStyleToPatternV2",
+      "module": "utility_api",
+      "symbol": "AddGraphicStyleToPatternV2",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.AddGraphicStyleToPatternV2#2e762c4d034267b5",
+          "signature_normalized": "def AddGraphicStyleToPatternV2(_patternIndex : int, _graphicStyleIndex : int, _x : float, _y : float, _width : float, _height : float, _face : int, _zOffset : float, _fAngle : float) -> str",
+          "signature_raw": "def AddGraphicStyleToPatternV2(_patternIndex : int, _graphicStyleIndex : int, _x : float, _y : float, _width : float, _height : float, _face : int, _zOffset : float, _fAngle : float) -> str",
+          "parameters": [
+            {
+              "raw": "_patternIndex : int",
+              "name": "_patternIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_graphicStyleIndex : int",
+              "name": "_graphicStyleIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_x : float",
+              "name": "_x",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_y : float",
+              "name": "_y",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_width : float",
+              "name": "_width",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_height : float",
+              "name": "_height",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_face : int",
+              "name": "_face",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_zOffset : float",
+              "name": "_zOffset",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_fAngle : float",
+              "name": "_fAngle",
+              "annotation_raw": "float"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def AddGraphicStyleToPatternV2(_patternIndex : int, _graphicStyleIndex : int, _x : float, _y : float, _width : float, _height : float, _face : int, _zOffset : float, _fAngle : float) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Add Graphic Style to Pattern and return result as JSON-like map\n@param _patternIndex: pattern index to add graphic style\n@param _graphicStyleIndex: graphic style index to add to pattern\n@param _x: The values along the X-axis represent the horizontal position relative to this point, moving to the right.\n@param _y: The values along the Y-axis represent the vertical position relative to this point, moving downward.\nFor example, in a 100x100 pattern, the bottom-right corner is located at (100, 100)\nPlace the graphic so that its center aligns with the specified (X, Y) coordinates.\n@param _width: Width of the graphic\n@param _height: Height of the graphic\n@param _face: 0: Front, 1: Back 2: Both\n@param _zOffset: offset value\n@param _fAngle: angle value\n@return A string containing \"status\" (\"success\" or \"failure\") and \"message\" with details\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 24749,
+                  "block": 2153
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 25915,
+                  "block": 2153,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "AddGraphicStyleToPatternV2(int _patternIndex, int _graphicStyleIndex, float _x, float _y, float _width, float _height, int _face, float _zOffset, float _fAngle)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Add Graphic Style to Pattern and return result as JSON-like map\n/// @param _patternIndex: pattern index to add graphic style\n/// @param _graphicStyleIndex: graphic style index to add to pattern\n/// @param _x: The values along the X-axis represent the horizontal position relative to this point, moving to the right.\n/// @param _y: The values along the Y-axis represent the vertical position relative to this point, moving downward.\n/// For example, in a 100x100 pattern, the bottom-right corner is located at (100, 100)\n/// Place the graphic so that its center aligns with the specified (X, Y) coordinates.\n/// @param _width: Width of the graphic\n/// @param _height: Height of the graphic\n/// @param _face: 0: Front, 1: Back 2: Both\n/// @param _zOffset: offset value\n/// @param _fAngle: angle value\n/// @return A string containing \"status\" (\"success\" or \"failure\") and \"message\" with details",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 24769,
+                    "block": 2154
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 25935,
+                    "block": 2154,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _patternIndex: pattern index to add graphic style",
+            "@param _graphicStyleIndex: graphic style index to add to pattern",
+            "@param _x: The values along the X-axis represent the horizontal position relative to this point, moving to the right.",
+            "@param _y: The values along the Y-axis represent the vertical position relative to this point, moving downward.",
+            "@param _width: Width of the graphic",
+            "@param _height: Height of the graphic",
+            "@param _face: 0: Front, 1: Back 2: Both",
+            "@param _zOffset: offset value",
+            "@param _fAngle: angle value"
+          ],
+          "return_docs_raw": [
+            "@return A string containing \"status\" (\"success\" or \"failure\") and \"message\" with details"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.AddLibraryColorSwatchList",
+      "qualified_name": "utility_api.AddLibraryColorSwatchList",
+      "module": "utility_api",
+      "symbol": "AddLibraryColorSwatchList",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.AddLibraryColorSwatchList#dfee9ab4c32c34f7",
+          "signature_normalized": "def AddLibraryColorSwatchList(library : list[str], tabName : str) -> bool",
+          "signature_raw": "def AddLibraryColorSwatchList(library : list[str], tabName : str) -> bool",
+          "parameters": [
+            {
+              "raw": "library : list[str]",
+              "name": "library",
+              "annotation_raw": "list[str]"
+            },
+            {
+              "raw": "tabName : str",
+              "name": "tabName",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def AddLibraryColorSwatchList(library : list[str], tabName : str) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Add the library to the color swatch list of the color palette tab(for combobox palette).\n@param library: The list of multiple color swatch file paths\n@param tabName: Name of the color palette library tab\n@return true on success, false on failure\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 17058,
+                  "block": 1471
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 17885,
+                  "block": 1471,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "AddLibraryColorSwatchList(const std::vector<std::string>& library, const std::string& tabName)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Add the library to the color swatch list of the color palette tab(for combobox palette).\n/// @param library: The list of multiple color swatch file paths\n/// @param tabName: Name of the color palette library tab\n/// @return true on success, false on failure",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 17069,
+                    "block": 1472
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 17896,
+                    "block": 1472,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param library: The list of multiple color swatch file paths",
+            "@param tabName: Name of the color palette library tab"
+          ],
+          "return_docs_raw": [
+            "@return true on success, false on failure"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.AddLineToCategory",
+      "qualified_name": "utility_api.AddLineToCategory",
+      "module": "utility_api",
+      "symbol": "AddLineToCategory",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.AddLineToCategory#4153fc92913285e4",
+          "signature_normalized": "def AddLineToCategory(_lineName : str, _lineThumbnailPath : str, _categoryPath : str) -> bool",
+          "signature_raw": "def AddLineToCategory(_lineName : str, _lineThumbnailPath : str, _categoryPath : str) -> bool",
+          "parameters": [
+            {
+              "raw": "_lineName : str",
+              "name": "_lineName",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_lineThumbnailPath : str",
+              "name": "_lineThumbnailPath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_categoryPath : str",
+              "name": "_categoryPath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def AddLineToCategory(_lineName : str, _lineThumbnailPath : str, _categoryPath : str) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief This function creates a line that includes all existing styles if there are no lines in the current category. If there is a line, it adds the line to the category.\n@param _lineName : The name of the line to be added\n@param _lineThumbnailPath : The path of the thumbnail image to be used for the style\n@param _categoryPath : The path where the category to be added is located\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 19059,
+                  "block": 1657
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 19977,
+                  "block": 1657,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "AddLineToCategory(const std::wstring& _lineName, const std::wstring& _lineThumbnailPath, const std::wstring& _categoryPath)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief This function creates a line that includes all existing styles if there are no lines in the current category. If there is a line, it adds the line to the category.\n/// @param _lineName : The name of the line to be added\n/// @param _lineThumbnailPath : The path of the thumbnail image to be used for the style\n/// @param _categoryPath : The path where the category to be added is located",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 19070,
+                    "block": 1658
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 19988,
+                    "block": 1658,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _lineName : The name of the line to be added",
+            "@param _lineThumbnailPath : The path of the thumbnail image to be used for the style",
+            "@param _categoryPath : The path where the category to be added is located"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.AddPinsForFabricValidation",
+      "qualified_name": "utility_api.AddPinsForFabricValidation",
+      "module": "utility_api",
+      "symbol": "AddPinsForFabricValidation",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.AddPinsForFabricValidation#c049760d72f9d3e5",
+          "signature_normalized": "def AddPinsForFabricValidation(size1 : float, size2 : float, size3 : float, size4 : float) -> bool",
+          "signature_raw": "def AddPinsForFabricValidation(size1 : float, size2 : float, size3 : float, size4 : float) -> bool",
+          "parameters": [
+            {
+              "raw": "size1 : float",
+              "name": "size1",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "size2 : float",
+              "name": "size2",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "size3 : float",
+              "name": "size3",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "size4 : float",
+              "name": "size4",
+              "annotation_raw": "float"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def AddPinsForFabricValidation(size1 : float, size2 : float, size3 : float, size4 : float) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Adjust lengths and adjust pin locations\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 21739,
+                  "block": 1897
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 22777,
+                  "block": 1897,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "AddPinsForFabricValidation(loat size1, float size2, float size3, float size4)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Adjust lengths and adjust pin locations",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 21747,
+                    "block": 1898
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 22785,
+                    "block": 1898,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.AddPlugInFromFile",
+      "qualified_name": "utility_api.AddPlugInFromFile",
+      "module": "utility_api",
+      "symbol": "AddPlugInFromFile",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.AddPlugInFromFile#fe10d0cbcf0c3606",
+          "signature_normalized": "def AddPlugInFromFile(_filePath : str) -> None",
+          "signature_raw": "def AddPlugInFromFile(_filePath : str) -> None",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def AddPlugInFromFile(_filePath : str) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Add Plug In From Filepath\n@param _filePath: File path to be added plugin.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 19734,
+                  "block": 1715
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 20681,
+                  "block": 1715,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "AddPlugInFromFile(const std::string& _filePath)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Add Plug In From Filepath\n/// @param _filePath: File path to be added plugin.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 19743,
+                    "block": 1716
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 20690,
+                    "block": 1716,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath: File path to be added plugin."
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.AddStyleToCategory",
+      "qualified_name": "utility_api.AddStyleToCategory",
+      "module": "utility_api",
+      "symbol": "AddStyleToCategory",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.AddStyleToCategory#4d517bce7834695f",
+          "signature_normalized": "def AddStyleToCategory(_styleName : str, _styleThumbnailPath : str, _categoryPath : str, _lineName : str) -> bool",
+          "signature_raw": "def AddStyleToCategory(_styleName : str, _styleThumbnailPath : str, _categoryPath : str, _lineName : str) -> bool",
+          "parameters": [
+            {
+              "raw": "_styleName : str",
+              "name": "_styleName",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_styleThumbnailPath : str",
+              "name": "_styleThumbnailPath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_categoryPath : str",
+              "name": "_categoryPath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_lineName : str",
+              "name": "_lineName",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def AddStyleToCategory(_styleName : str, _styleThumbnailPath : str, _categoryPath : str, _lineName : str) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Add Style to category\n@param _styleName : The name of the style to be added\n@param _styleThumbnailPath : The path of the thumbnail image to be used for the style\n@param _categoryPath : The path where the category to be added is located\n@param _lineName : Has a default value of 'None'. Only provide a value if a line exists in the category you are adding\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 19082,
+                  "block": 1659
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 20001,
+                  "block": 1659,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "AddStyleToCategory(const std::wstring& _styleName, const std::wstring& _styleThumbnailPath, const std::wstring& _categoryPath, const std::wstring& _lineName = L\"None\")",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Add Style to category\n/// @param _styleName : The name of the style to be added\n/// @param _styleThumbnailPath : The path of the thumbnail image to be used for the style\n/// @param _categoryPath : The path where the category to be added is located\n/// @param _lineName : Has a default value of 'None'. Only provide a value if a line exists in the category you are adding",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 19094,
+                    "block": 1660
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 20013,
+                    "block": 1660,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _styleName : The name of the style to be added",
+            "@param _styleThumbnailPath : The path of the thumbnail image to be used for the style",
+            "@param _categoryPath : The path where the category to be added is located",
+            "@param _lineName : Has a default value of 'None'. Only provide a value if a line exists in the category you are adding"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.AddUserCustomLibraryFolder",
+      "qualified_name": "utility_api.AddUserCustomLibraryFolder",
+      "module": "utility_api",
+      "symbol": "AddUserCustomLibraryFolder",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.AddUserCustomLibraryFolder#f4cfbb21f4ef33e3",
+          "signature_normalized": "def AddUserCustomLibraryFolder(libraryIndex : int, folderPath : str) -> bool",
+          "signature_raw": "def AddUserCustomLibraryFolder(libraryIndex : int, folderPath : str) -> bool",
+          "parameters": [
+            {
+              "raw": "libraryIndex : int",
+              "name": "libraryIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "folderPath : str",
+              "name": "folderPath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def AddUserCustomLibraryFolder(libraryIndex : int, folderPath : str) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Add a folder to a User Custom Library.\n@param libraryIndex: 0-based index among User Custom Library tabs in current visual order.\n@param folderPath: Absolute folder path to add.\n@return true on success, false on failure.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 17232,
+                  "block": 1487
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 18067,
+                  "block": 1487,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "AddUserCustomLibraryFolder(int libraryIndex, const std::string& folderPath)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Add a folder to a User Custom Library.\n/// @param libraryIndex: 0-based index among User Custom Library tabs in current visual order.\n/// @param folderPath: Absolute folder path to add.\n/// @return true on success, false on failure.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 17243,
+                    "block": 1488
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 18078,
+                    "block": 1488,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param libraryIndex: 0-based index among User Custom Library tabs in current visual order.",
+            "@param folderPath: Absolute folder path to add."
+          ],
+          "return_docs_raw": [
+            "@return true on success, false on failure."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.AddUserCustomLibraryFolderW",
+      "qualified_name": "utility_api.AddUserCustomLibraryFolderW",
+      "module": "utility_api",
+      "symbol": "AddUserCustomLibraryFolderW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.AddUserCustomLibraryFolderW#1dd2f2b57d113a39",
+          "signature_normalized": "def AddUserCustomLibraryFolderW(libraryIndex : int, folderPath : str) -> bool",
+          "signature_raw": "def AddUserCustomLibraryFolderW(libraryIndex : int, folderPath : str) -> bool",
+          "parameters": [
+            {
+              "raw": "libraryIndex : int",
+              "name": "libraryIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "folderPath : str",
+              "name": "folderPath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def AddUserCustomLibraryFolderW(libraryIndex : int, folderPath : str) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Add a folder to a User Custom Library.\n@param libraryIndex: 0-based index among User Custom Library tabs in current visual order.\n@param folderPath: Absolute folder path to add.\n@return true on success, false on failure.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 17255,
+                  "block": 1489
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 18091,
+                  "block": 1489,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "AddUserCustomLibraryFolderW(int libraryIndex, const std::wstring& folderPath)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Add a folder to a User Custom Library.\n/// @param libraryIndex: 0-based index among User Custom Library tabs in current visual order.\n/// @param folderPath: Absolute folder path to add.\n/// @return true on success, false on failure.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 17266,
+                    "block": 1490
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 18102,
+                    "block": 1490,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param libraryIndex: 0-based index among User Custom Library tabs in current visual order.",
+            "@param folderPath: Absolute folder path to add."
+          ],
+          "return_docs_raw": [
+            "@return true on success, false on failure."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.AlignAvatarsAndGarmentToCenter",
+      "qualified_name": "utility_api.AlignAvatarsAndGarmentToCenter",
+      "module": "utility_api",
+      "symbol": "AlignAvatarsAndGarmentToCenter",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.AlignAvatarsAndGarmentToCenter#e342d90e969dc889",
+          "signature_normalized": "def AlignAvatarsAndGarmentToCenter() -> None",
+          "signature_raw": "def AlignAvatarsAndGarmentToCenter() -> None",
+          "parameters": [],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def AlignAvatarsAndGarmentToCenter() -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Align Avatars and Garment to Center\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 22885,
+                  "block": 1993
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 23971,
+                  "block": 1993,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "AlignAvatarsAndGarmentToCenter()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Align Avatars and Garment to Center",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 22893,
+                    "block": 1994
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 23979,
+                    "block": 1994,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.AutoGenerateGraphicDisplacementMap",
+      "qualified_name": "utility_api.AutoGenerateGraphicDisplacementMap",
+      "module": "utility_api",
+      "symbol": "AutoGenerateGraphicDisplacementMap",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.AutoGenerateGraphicDisplacementMap#26dbe596a37a6e5a",
+          "signature_normalized": "def AutoGenerateGraphicDisplacementMap(_graphicIndex : int, _colorwayIndex : int) -> None",
+          "signature_raw": "def AutoGenerateGraphicDisplacementMap(_graphicIndex : int, _colorwayIndex : int) -> None",
+          "parameters": [
+            {
+              "raw": "_graphicIndex : int",
+              "name": "_graphicIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def AutoGenerateGraphicDisplacementMap(_graphicIndex : int, _colorwayIndex : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Auto-generates the displacement map from the current base color map of a graphic style.\n@param _graphicIndex: Graphic style index.\n@param _colorwayIndex: Colorway index.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 21246,
+                  "block": 1851
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 22261,
+                  "block": 1851,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "AutoGenerateGraphicDisplacementMap(int _graphicIndex, int _colorwayIndex)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Auto-generates the displacement map from the current base color map of a graphic style.\n/// @param _graphicIndex: Graphic style index.\n/// @param _colorwayIndex: Colorway index.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 21256,
+                    "block": 1852
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 22271,
+                    "block": 1852,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _graphicIndex: Graphic style index.",
+            "@param _colorwayIndex: Colorway index."
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.AutoGenerateGraphicNormalMap",
+      "qualified_name": "utility_api.AutoGenerateGraphicNormalMap",
+      "module": "utility_api",
+      "symbol": "AutoGenerateGraphicNormalMap",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.AutoGenerateGraphicNormalMap#3e33f2d27d9f3b23",
+          "signature_normalized": "def AutoGenerateGraphicNormalMap(_graphicIndex : int, _colorwayIndex : int) -> None",
+          "signature_raw": "def AutoGenerateGraphicNormalMap(_graphicIndex : int, _colorwayIndex : int) -> None",
+          "parameters": [
+            {
+              "raw": "_graphicIndex : int",
+              "name": "_graphicIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def AutoGenerateGraphicNormalMap(_graphicIndex : int, _colorwayIndex : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Auto-generates the normal map from the current base color map of a graphic style.\n@param _graphicIndex: Graphic style index.\n@param _colorwayIndex: Colorway index.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 21120,
+                  "block": 1839
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 22129,
+                  "block": 1839,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "AutoGenerateGraphicNormalMap(int _graphicIndex, int _colorwayIndex)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Auto-generates the normal map from the current base color map of a graphic style.\n/// @param _graphicIndex: Graphic style index.\n/// @param _colorwayIndex: Colorway index.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 21130,
+                    "block": 1840
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 22139,
+                    "block": 1840,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _graphicIndex: Graphic style index.",
+            "@param _colorwayIndex: Colorway index."
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.AutoGenerateGraphicOpacityMap",
+      "qualified_name": "utility_api.AutoGenerateGraphicOpacityMap",
+      "module": "utility_api",
+      "symbol": "AutoGenerateGraphicOpacityMap",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.AutoGenerateGraphicOpacityMap#38708cc6aa7af4bc",
+          "signature_normalized": "def AutoGenerateGraphicOpacityMap(_graphicIndex : int, _colorwayIndex : int) -> None",
+          "signature_raw": "def AutoGenerateGraphicOpacityMap(_graphicIndex : int, _colorwayIndex : int) -> None",
+          "parameters": [
+            {
+              "raw": "_graphicIndex : int",
+              "name": "_graphicIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def AutoGenerateGraphicOpacityMap(_graphicIndex : int, _colorwayIndex : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Auto-generates the opacity map from the current base color map of a graphic style.\n@param _graphicIndex: Graphic style index.\n@param _colorwayIndex: Colorway index.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 21162,
+                  "block": 1843
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 22173,
+                  "block": 1843,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "AutoGenerateGraphicOpacityMap(int _graphicIndex, int _colorwayIndex)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Auto-generates the opacity map from the current base color map of a graphic style.\n/// @param _graphicIndex: Graphic style index.\n/// @param _colorwayIndex: Colorway index.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 21172,
+                    "block": 1844
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 22183,
+                    "block": 1844,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _graphicIndex: Graphic style index.",
+            "@param _colorwayIndex: Colorway index."
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.AutoGenerateGraphicRoughnessMap",
+      "qualified_name": "utility_api.AutoGenerateGraphicRoughnessMap",
+      "module": "utility_api",
+      "symbol": "AutoGenerateGraphicRoughnessMap",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.AutoGenerateGraphicRoughnessMap#7c37365e74eece67",
+          "signature_normalized": "def AutoGenerateGraphicRoughnessMap(_graphicIndex : int, _colorwayIndex : int) -> None",
+          "signature_raw": "def AutoGenerateGraphicRoughnessMap(_graphicIndex : int, _colorwayIndex : int) -> None",
+          "parameters": [
+            {
+              "raw": "_graphicIndex : int",
+              "name": "_graphicIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def AutoGenerateGraphicRoughnessMap(_graphicIndex : int, _colorwayIndex : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Auto-generates the roughness map from the current base color map of a graphic style.\n@param _graphicIndex: Graphic style index.\n@param _colorwayIndex: Colorway index.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 21204,
+                  "block": 1847
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 22217,
+                  "block": 1847,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "AutoGenerateGraphicRoughnessMap(int _graphicIndex, int _colorwayIndex)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Auto-generates the roughness map from the current base color map of a graphic style.\n/// @param _graphicIndex: Graphic style index.\n/// @param _colorwayIndex: Colorway index.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 21214,
+                    "block": 1848
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 22227,
+                    "block": 1848,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _graphicIndex: Graphic style index.",
+            "@param _colorwayIndex: Colorway index."
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.AutoHang",
+      "qualified_name": "utility_api.AutoHang",
+      "module": "utility_api",
+      "symbol": "AutoHang",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.AutoHang#337b87e42b5caabe",
+          "signature_normalized": "def AutoHang(_garmentPath : str, _hangerPath : str, _hangerType : int, _hangerImportOption : ImportExportOption) -> bool",
+          "signature_raw": "def AutoHang(_garmentPath : str, _hangerPath : str, _hangerType : int, _hangerImportOption : ImportExportOption) -> bool",
+          "parameters": [
+            {
+              "raw": "_garmentPath : str",
+              "name": "_garmentPath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_hangerPath : str",
+              "name": "_hangerPath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_hangerType : int",
+              "name": "_hangerType",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_hangerImportOption : ImportExportOption",
+              "name": "_hangerImportOption",
+              "annotation_raw": "ImportExportOption"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def AutoHang(_garmentPath : str, _hangerPath : str, _hangerType : int, _hangerImportOption : ImportExportOption) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Auto-hang a garment to a hanger.\n@parm _garmentPath : path to a garment file. .zprj or .zpac is accepted. If .zprj is given, only the garment will be loaded. \n@parm _hangerPath : path to a hanger file. .obj or .avt is accepted.\n@parm _hangerType : type of the _hangerFIlePath hanger. 0 = top hanger, 1 = bottom hanger\n@parm _hangerImportOption : if .obj is given for _hangerFIlePath, specify the import option. Especially, specify the scale. For example, if the file is in cm, scale should be 10.\n@return if it succeeds, return true.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 21712,
+                  "block": 1895
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 22749,
+                  "block": 1895,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "AutoHang(const std::string _garmentPath, const std::string _hangerPath, const unsigned int _hangerType, const Marvelous::ImportExportOption& _hangerImportOption)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Auto-hang a garment to a hanger.\n/// @parm _garmentPath : path to a garment file. .zprj or .zpac is accepted. If .zprj is given, only the garment will be loaded. \n/// @parm _hangerPath : path to a hanger file. .obj or .avt is accepted.\n/// @parm _hangerType : type of the _hangerFIlePath hanger. 0 = top hanger, 1 = bottom hanger\n/// @parm _hangerImportOption : if .obj is given for _hangerFIlePath, specify the import option. Especially, specify the scale. For example, if the file is in cm, scale should be 10.\n/// @return if it succeeds, return true.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 21725,
+                    "block": 1896
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 22762,
+                    "block": 1896,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "ImportExportOption",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:ImportExportOption"
+            }
+          ],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return if it succeeds, return true."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.BakeUVTexture",
+      "qualified_name": "utility_api.BakeUVTexture",
+      "module": "utility_api",
+      "symbol": "BakeUVTexture",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.BakeUVTexture#0e59ffe7114d4730",
+          "signature_normalized": "def BakeUVTexture(_filePath : str, _options : ImportExportOption, _bAll : bool) -> list[str]",
+          "signature_raw": "def BakeUVTexture(_filePath : str, _options : ImportExportOption, _bAll : bool) -> list[str]",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_options : ImportExportOption",
+              "name": "_options",
+              "annotation_raw": "ImportExportOption"
+            },
+            {
+              "raw": "_bAll : bool",
+              "name": "_bAll",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "list[str]",
+          "occurrences": [
+            {
+              "signature_raw": "def BakeUVTexture(_filePath : str, _options : ImportExportOption, _bAll : bool) -> list[str]",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Bake textures on UV editor\n@param _filePath: File path to be saved.\n@param _options: It bakes textures according to options, not allowing user for selecting options in Bake Textures Dialog.\n@param _bAll: true for all UV tiles, false for only 0-1 tile\n@return Output file paths. \n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 19483,
+                  "block": 1693
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 20419,
+                  "block": 1693,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "BakeUVTexture(const string& _filePath, const Marvelous::ImportExportOption& _options)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Bake textures on UV editor\n/// @param _filePath: File path to be saved.\n/// @param _options: It bakes textures according to options, not allowing user for selecting options in Bake Textures Dialog.\n/// @param _bAll: true for all UV tiles, false for only 0-1 tile\n/// @return Output file paths.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 19495,
+                    "block": 1694
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 20431,
+                    "block": 1694,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "ImportExportOption",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:ImportExportOption"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param _filePath: File path to be saved.",
+            "@param _options: It bakes textures according to options, not allowing user for selecting options in Bake Textures Dialog.",
+            "@param _bAll: true for all UV tiles, false for only 0-1 tile"
+          ],
+          "return_docs_raw": [
+            "@return Output file paths. "
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.BakeUVTextureW",
+      "qualified_name": "utility_api.BakeUVTextureW",
+      "module": "utility_api",
+      "symbol": "BakeUVTextureW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.BakeUVTextureW#21d076098662d445",
+          "signature_normalized": "def BakeUVTextureW(_filePath : str, _options : ImportExportOption, _bAll : bool) -> list[str]",
+          "signature_raw": "def BakeUVTextureW(_filePath : str, _options : ImportExportOption, _bAll : bool) -> list[str]",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_options : ImportExportOption",
+              "name": "_options",
+              "annotation_raw": "ImportExportOption"
+            },
+            {
+              "raw": "_bAll : bool",
+              "name": "_bAll",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "list[str]",
+          "occurrences": [
+            {
+              "signature_raw": "def BakeUVTextureW(_filePath : str, _options : ImportExportOption, _bAll : bool) -> list[str]",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Bake textures on UV editor\n@param _filePath: File path to be saved.\n@param _options: It bakes textures according to options, not allowing user for selecting options in Bake Textures Dialog.\n@param _bAll: true for all UV tiles, false for only 0-1 tile\n@return Output file paths. \n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 19508,
+                  "block": 1695
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 20445,
+                  "block": 1695,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "BakeUVTextureW(const wstring& _filePath, const Marvelous::ImportExportOption& _options)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Bake textures on UV editor\n/// @param _filePath: File path to be saved.\n/// @param _options: It bakes textures according to options, not allowing user for selecting options in Bake Textures Dialog.\n/// @param _bAll: true for all UV tiles, false for only 0-1 tile\n/// @return Output file paths.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 19520,
+                    "block": 1696
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 20457,
+                    "block": 1696,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "ImportExportOption",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:ImportExportOption"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param _filePath: File path to be saved.",
+            "@param _options: It bakes textures according to options, not allowing user for selecting options in Bake Textures Dialog.",
+            "@param _bAll: true for all UV tiles, false for only 0-1 tile"
+          ],
+          "return_docs_raw": [
+            "@return Output file paths. "
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.ChangeMetaDataValueForCurrentGarment",
+      "qualified_name": "utility_api.ChangeMetaDataValueForCurrentGarment",
+      "module": "utility_api",
+      "symbol": "ChangeMetaDataValueForCurrentGarment",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.ChangeMetaDataValueForCurrentGarment#b1353101461056eb",
+          "signature_normalized": "def ChangeMetaDataValueForCurrentGarment(metaDataKey : str, metaDataValue : str) -> None",
+          "signature_raw": "def ChangeMetaDataValueForCurrentGarment(metaDataKey : str, metaDataValue : str) -> None",
+          "parameters": [
+            {
+              "raw": "metaDataKey : str",
+              "name": "metaDataKey",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "metaDataValue : str",
+              "name": "metaDataValue",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def ChangeMetaDataValueForCurrentGarment(metaDataKey : str, metaDataValue : str) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Change Meta Data Value for the current Garment\n@param metaDataKey: target Key\n@param metaDataValue: the new value for the key\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 16871,
+                  "block": 1453
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 17689,
+                  "block": 1453,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ChangeMetaDataValueForCurrentGarment(const string& metaDataKey, const string& metaDataValue)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Change Meta Data Value for the current Garment\n/// @param metaDataKey: target Key\n/// @param metaDataValue: the new value for the key",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 16881,
+                    "block": 1454
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 17699,
+                    "block": 1454,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param metaDataKey: target Key",
+            "@param metaDataValue: the new value for the key"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.CheckZPRJForUnsavedChanges",
+      "qualified_name": "utility_api.CheckZPRJForUnsavedChanges",
+      "module": "utility_api",
+      "symbol": "CheckZPRJForUnsavedChanges",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.CheckZPRJForUnsavedChanges#eec33ac88b55b5af",
+          "signature_normalized": "def CheckZPRJForUnsavedChanges() -> bool",
+          "signature_raw": "def CheckZPRJForUnsavedChanges() -> bool",
+          "parameters": [],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def CheckZPRJForUnsavedChanges() -> bool",
+              "documentation_raw": "\"\"\"\n@return Returns true if the file has been modified.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 22641,
+                  "block": 1969
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 23715,
+                  "block": 1969,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "CheckZPRJForUnsavedChanges()",
+                "documentation_raw": "/// @return Returns true if the file has been modified.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 22648,
+                    "block": 1970
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 23722,
+                    "block": 1970,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return Returns true if the file has been modified."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.CleanFilePath",
+      "qualified_name": "utility_api.CleanFilePath",
+      "module": "utility_api",
+      "symbol": "CleanFilePath",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.CleanFilePath#317ee4e4d4d0fc2a",
+          "signature_normalized": "def CleanFilePath(_filePath : str) -> CleanedPathResult",
+          "signature_raw": "def CleanFilePath(_filePath : str) -> CleanedPathResult",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "CleanedPathResult",
+          "occurrences": [
+            {
+              "signature_raw": "def CleanFilePath(_filePath : str) -> CleanedPathResult",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Sanitize a file name or full file path for safe cross-platform / cloud / web use.\n@param _filePath: the raw file name or path (UTF-8). The input is auto-detected as a standalone\nfile name or a full path (it is a path when it contains a slash or a drive letter such as\n\"C:\"). Processing per component: NFC Unicode normalization; stripping of characters that\nconflict with Windows / cloud clients / HTTP-FTP\n(< > : \" | ? * # % & { } \\ $ ! ' @ + = and ASCII control characters); spaces become '_';\nleading/trailing spaces and periods are trimmed; \".\" and \"..\" segments are dropped; Windows\nreserved device names (CON, PRN, AUX, NUL, COM1..9, LPT1..9) get a trailing '_' on the stem;\neach component is truncated to 255 bytes on a UTF-8 boundary. Drive letters (e.g. \"C:\") and\nUNC / POSIX roots are preserved, and mixed slashes are collapsed.\n@return a CleanedPathResult holding the path in universal ('/'), Windows native ('\\') and Windows\nlong-path (\\\\?\\ / \\\\?\\UNC\\) forms, plus the isolated and percent-encoded file name.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 16347,
+                  "block": 1413
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 17145,
+                  "block": 1413,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "CleanFilePath(const std::string& _filePath)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Sanitize a file name or full file path for safe cross-platform / cloud / web use.\n/// @param _filePath: the raw file name or path (UTF-8). The input is auto-detected as a standalone\n/// file name or a full path (it is a path when it contains a slash or a drive letter such as\n/// \"C:\"). Processing per component: NFC Unicode normalization; stripping of characters that\n/// conflict with Windows / cloud clients / HTTP-FTP\n/// (< > : \" | ? * # % & { } \\ $ ! ' @ + = and ASCII control characters); spaces become '_';\n/// leading/trailing spaces and periods are trimmed; \".\" and \"..\" segments are dropped; Windows\n/// reserved device names (CON, PRN, AUX, NUL, COM1..9, LPT1..9) get a trailing '_' on the stem;\n/// each component is truncated to 255 bytes on a UTF-8 boundary. Drive letters (e.g. \"C:\") and\n/// UNC / POSIX roots are preserved, and mixed slashes are collapsed.\n/// @return a CleanedPathResult holding the path in universal ('/'), Windows native ('\\') and Windows\n/// long-path (\\\\?\\ / \\\\?\\UNC\\) forms, plus the isolated and percent-encoded file name.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 16366,
+                    "block": 1414
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 17164,
+                    "block": 1414,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "CleanedPathResult",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:CleanedPathResult"
+            },
+            {
+              "name": "CleanedPathResult",
+              "basis": "documentation_mention",
+              "status": "resolved",
+              "type_id": "type:CleanedPathResult"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param _filePath: the raw file name or path (UTF-8). The input is auto-detected as a standalone"
+          ],
+          "return_docs_raw": [
+            "@return a CleanedPathResult holding the path in universal ('/'), Windows native ('\\') and Windows"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.ConvertTrimsToButtons",
+      "qualified_name": "utility_api.ConvertTrimsToButtons",
+      "module": "utility_api",
+      "symbol": "ConvertTrimsToButtons",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.ConvertTrimsToButtons#7394d21750bb456d",
+          "signature_normalized": "def ConvertTrimsToButtons(_trimStyleIndex : int, _bButtonHead : bool) -> int",
+          "signature_raw": "def ConvertTrimsToButtons(_trimStyleIndex : int, _bButtonHead : bool) -> int",
+          "parameters": [
+            {
+              "raw": "_trimStyleIndex : int",
+              "name": "_trimStyleIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_bButtonHead : bool",
+              "name": "_bButtonHead",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "def ConvertTrimsToButtons(_trimStyleIndex : int, _bButtonHead : bool) -> int",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Convert placed trim objects into real Button-tool items (button heads or buttonholes) at each trim's position on its glued pattern, then delete the source trims. Use this to migrate \"fake buttons\" that were built with the trim/sewing tools into proper Button-tool objects, so the FDT trim library stays clean.\n@param _trimStyleIndex: Index of the trim style whose instances to convert. Pass -1 to convert every trim object in the scene. Trim indices match GetTrimStyleListWithIndex().\n@param _bButtonHead: true creates Button heads; false creates Buttonholes. The project's current button-head / buttonhole style is used for the new items.\n@return The number of trim objects successfully converted.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 23117,
+                  "block": 2013
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 24213,
+                  "block": 2013,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ConvertTrimsToButtons(int _trimStyleIndex, bool _bButtonHead)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Convert placed trim objects into real Button-tool items (button heads or buttonholes) at each trim's position on its glued pattern, then delete the source trims. Use this to migrate \"fake buttons\" that were built with the trim/sewing tools into proper Button-tool objects, so the FDT trim library stays clean.\n/// @param _trimStyleIndex: Index of the trim style whose instances to convert. Pass -1 to convert every trim object in the scene. Trim indices match GetTrimStyleListWithIndex().\n/// @param _bButtonHead: true creates Button heads; false creates Buttonholes. The project's current button-head / buttonhole style is used for the new items.\n/// @return The number of trim objects successfully converted.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 23128,
+                    "block": 2014
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 24224,
+                    "block": 2014,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _trimStyleIndex: Index of the trim style whose instances to convert. Pass -1 to convert every trim object in the scene. Trim indices match GetTrimStyleListWithIndex().",
+            "@param _bButtonHead: true creates Button heads; false creates Buttonholes. The project's current button-head / buttonhole style is used for the new items."
+          ],
+          "return_docs_raw": [
+            "@return The number of trim objects successfully converted."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.CopyColorway",
+      "qualified_name": "utility_api.CopyColorway",
+      "module": "utility_api",
+      "symbol": "CopyColorway",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.CopyColorway#96fdfcad301fb9e1",
+          "signature_normalized": "def CopyColorway(index : int, _colorwayCopyOption : int) -> int",
+          "signature_raw": "def CopyColorway(index : int, _colorwayCopyOption : int) -> int",
+          "parameters": [
+            {
+              "raw": "index : int",
+              "name": "index",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_colorwayCopyOption : int",
+              "name": "_colorwayCopyOption",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "def CopyColorway(index : int, _colorwayCopyOption : int) -> int",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Copy the colorway in the index and create a new one\n@param index: the source colorway index to copy\n@param _colorwayCopyOption: The copy option\n0: Unlink all properties\n1: Unlink material properties only\n2: Link all properties\n\n@return index for the created colorway\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 16527,
+                  "block": 1429
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 17333,
+                  "block": 1429,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "CopyColorway(unsigned int index, int _colorwayCopyOption)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Copy the colorway in the index and create a new one\n/// @param index: the source colorway index to copy\n/// @param _colorwayCopyOption: The copy option\n/// 0: Unlink all properties\n/// 1: Unlink material properties only\n/// 2: Link all properties\n\n/// @return index for the created colorway",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 16542,
+                    "block": 1430
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 17348,
+                    "block": 1430,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param index: the source colorway index to copy",
+            "@param _colorwayCopyOption: The copy option"
+          ],
+          "return_docs_raw": [
+            "\n@return index for the created colorway"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.CopyFromFirstClothCache",
+      "qualified_name": "utility_api.CopyFromFirstClothCache",
+      "module": "utility_api",
+      "symbol": "CopyFromFirstClothCache",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.CopyFromFirstClothCache#e56acd42bb315f99",
+          "signature_normalized": "def CopyFromFirstClothCache() -> None",
+          "signature_raw": "def CopyFromFirstClothCache() -> None",
+          "parameters": [],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def CopyFromFirstClothCache() -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Copy the first cloth cache to current frame \n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 18792,
+                  "block": 1627
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 19695,
+                  "block": 1627,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "CopyFromFirstClothCache()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Copy the first cloth cache to current frame",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 18800,
+                    "block": 1628
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 19703,
+                    "block": 1628,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.CopyGraphicStyle",
+      "qualified_name": "utility_api.CopyGraphicStyle",
+      "module": "utility_api",
+      "symbol": "CopyGraphicStyle",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.CopyGraphicStyle#aa1b82af4893ffa3",
+          "signature_normalized": "def CopyGraphicStyle(_graphicStyleIndex : int) -> int",
+          "signature_raw": "def CopyGraphicStyle(_graphicStyleIndex : int) -> int",
+          "parameters": [
+            {
+              "raw": "_graphicStyleIndex : int",
+              "name": "_graphicStyleIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "def CopyGraphicStyle(_graphicStyleIndex : int) -> int",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Creates an independent copy of the specified graphic style and adds it to the graphic style library.\nUse this before placing the same graphic on multiple pattern pieces so that resizing one does not affect the others.\n@param _graphicStyleIndex: Index of the graphic style to copy.\n@return Index of the newly created graphic style copy, or -1 on failure.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 24680,
+                  "block": 2147
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 25843,
+                  "block": 2147,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "CopyGraphicStyle(int _graphicStyleIndex)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Creates an independent copy of the specified graphic style and adds it to the graphic style library.\n/// Use this before placing the same graphic on multiple pattern pieces so that resizing one does not affect the others.\n/// @param _graphicStyleIndex: Index of the graphic style to copy.\n/// @return Index of the newly created graphic style copy, or -1 on failure.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 24691,
+                    "block": 2148
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 25854,
+                    "block": 2148,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _graphicStyleIndex: Index of the graphic style to copy."
+          ],
+          "return_docs_raw": [
+            "@return Index of the newly created graphic style copy, or -1 on failure."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.CreateButtonholesForButtonHeads",
+      "qualified_name": "utility_api.CreateButtonholesForButtonHeads",
+      "module": "utility_api",
+      "symbol": "CreateButtonholesForButtonHeads",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.CreateButtonholesForButtonHeads#b0850dfb7fdce7d5",
+          "signature_normalized": "def CreateButtonholesForButtonHeads() -> int",
+          "signature_raw": "def CreateButtonholesForButtonHeads() -> int",
+          "parameters": [],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "def CreateButtonholesForButtonHeads() -> int",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief For every button head in the scene, ray-cast through the placket (in the direction the head is attached) to find the underlap layer and create a buttonhole there (the \"find the pattern itself\" step). Uses the project's current buttonhole style.\n@note Safe to call more than once: it will not add a second hole to a head that already has one. A button head is skipped when (a) it has no second layer beneath it, (b) it is already fastened to a buttonhole, or (c) a buttonhole already sits within half a buttonhole width of the point where this call would place one.\n@return The number of buttonholes created. Heads skipped by any of the rules above are not counted, so a second call on an unchanged garment returns 0.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 23140,
+                  "block": 2015
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 24237,
+                  "block": 2015,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "CreateButtonholesForButtonHeads()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief For every button head in the scene, ray-cast through the placket (in the direction the head is attached) to find the underlap layer and create a buttonhole there (the \"find the pattern itself\" step). Uses the project's current buttonhole style.\n/// @note Safe to call more than once: it will not add a second hole to a head that already has one. A button head is skipped when (a) it has no second layer beneath it, (b) it is already fastened to a buttonhole, or (c) a buttonhole already sits within half a buttonhole width of the point where this call would place one.\n/// @return The number of buttonholes created. Heads skipped by any of the rules above are not counted, so a second call on an unchanged garment returns 0.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 23150,
+                    "block": 2016
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 24247,
+                    "block": 2016,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return The number of buttonholes created. Heads skipped by any of the rules above are not counted, so a second call on an unchanged garment returns 0."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.CreateModularCategory",
+      "qualified_name": "utility_api.CreateModularCategory",
+      "module": "utility_api",
+      "symbol": "CreateModularCategory",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.CreateModularCategory#c467a1d873a00660",
+          "signature_normalized": "def CreateModularCategory(_title : str, _folderPath : str) -> None",
+          "signature_raw": "def CreateModularCategory(_title : str, _folderPath : str) -> None",
+          "parameters": [
+            {
+              "raw": "_title : str",
+              "name": "_title",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_folderPath : str",
+              "name": "_folderPath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def CreateModularCategory(_title : str, _folderPath : str) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief create modular category\n@param _title : category title, \n@param _folderPath: groupFolderPath\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 19019,
+                  "block": 1653
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 19935,
+                  "block": 1653,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "CreateModularCategory(const std::wstring& _title, const std::wstring& _folderPath)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief create modular category\n/// @param _title : category title, \n/// @param _folderPath: groupFolderPath",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 19029,
+                    "block": 1654
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 19945,
+                    "block": 1654,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _title : category title, ",
+            "@param _folderPath: groupFolderPath"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.CreateProgressBar",
+      "qualified_name": "utility_api.CreateProgressBar",
+      "module": "utility_api",
+      "symbol": "CreateProgressBar",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.CreateProgressBar#00a1bd9eb0ac1d53",
+          "signature_normalized": "def CreateProgressBar() -> None",
+          "signature_raw": "def CreateProgressBar() -> None",
+          "parameters": [],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def CreateProgressBar() -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Create Progress Bar to show progress. This function should be called before using SetProgress function                           \n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 16892,
+                  "block": 1455
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 17711,
+                  "block": 1455,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "CreateProgressBar()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Create Progress Bar to show progress. This function should be called before using SetProgress function",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 16900,
+                    "block": 1456
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 17719,
+                    "block": 1456,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.CreateUserCustomLibrary",
+      "qualified_name": "utility_api.CreateUserCustomLibrary",
+      "module": "utility_api",
+      "symbol": "CreateUserCustomLibrary",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.CreateUserCustomLibrary#0c428fb7ea532a1c",
+          "signature_normalized": "def CreateUserCustomLibrary() -> int",
+          "signature_raw": "def CreateUserCustomLibrary() -> int",
+          "parameters": [],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "def CreateUserCustomLibrary() -> int",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Create a new empty User Custom Library tab.\n@return 0-based index among User Custom Library tabs in current visual order, or -1 on failure.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 17213,
+                  "block": 1485
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 18047,
+                  "block": 1485,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "CreateUserCustomLibrary()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Create a new empty User Custom Library tab.\n/// @return 0-based index among User Custom Library tabs in current visual order, or -1 on failure.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 17222,
+                    "block": 1486
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 18056,
+                    "block": 1486,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return 0-based index among User Custom Library tabs in current visual order, or -1 on failure."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.CurrentlyThemeInCLO",
+      "qualified_name": "utility_api.CurrentlyThemeInCLO",
+      "module": "utility_api",
+      "symbol": "CurrentlyThemeInCLO",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.CurrentlyThemeInCLO#3d36baeb9f319039",
+          "signature_normalized": "def CurrentlyThemeInCLO() -> CloTheme",
+          "signature_raw": "def CurrentlyThemeInCLO() -> CloTheme",
+          "parameters": [],
+          "return_raw": "CloTheme",
+          "occurrences": [
+            {
+              "signature_raw": "def CurrentlyThemeInCLO() -> CloTheme",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Returns the currently Theme information used in CLO\n@return currently Theme type\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 20497,
+                  "block": 1777
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 21475,
+                  "block": 1777,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "CurrentlyThemeInCLO()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Returns the currently Theme information used in CLO\n/// @return currently Theme type",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 20506,
+                    "block": 1778
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 21484,
+                    "block": 1778,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "CloTheme",
+              "basis": "annotation",
+              "status": "unresolved",
+              "type_id": null
+            }
+          ],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return currently Theme type"
+          ],
+          "documentation_issues": [
+            "unresolved_annotation_type"
+          ],
+          "contract_status": "ambiguous"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.DeleteAvatar",
+      "qualified_name": "utility_api.DeleteAvatar",
+      "module": "utility_api",
+      "symbol": "DeleteAvatar",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.DeleteAvatar#60a473a707e153c3",
+          "signature_normalized": "def DeleteAvatar(_avatarIndexList : list[int]) -> bool",
+          "signature_raw": "def DeleteAvatar(_avatarIndexList : list[int]) -> bool",
+          "parameters": [
+            {
+              "raw": "_avatarIndexList : list[int]",
+              "name": "_avatarIndexList",
+              "annotation_raw": "list[int]"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def DeleteAvatar(_avatarIndexList : list[int]) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Delete Avatars\n@param _avatarIndexList: List of indices for avatars to delete\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 21798,
+                  "block": 1903
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 22839,
+                  "block": 1903,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "DeleteAvatar(std::vector<int> _avatarIndexList)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Delete Avatars\n/// @param _avatarIndexList: List of indices for avatars to delete",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 21807,
+                    "block": 1904
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 22848,
+                    "block": 1904,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _avatarIndexList: List of indices for avatars to delete"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.DeleteColorSwatchLibraryTabByName",
+      "qualified_name": "utility_api.DeleteColorSwatchLibraryTabByName",
+      "module": "utility_api",
+      "symbol": "DeleteColorSwatchLibraryTabByName",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.DeleteColorSwatchLibraryTabByName#30da8c8b8bd58bf0",
+          "signature_normalized": "def DeleteColorSwatchLibraryTabByName(tabName : str, bCaseInsensitive : bool) -> bool",
+          "signature_raw": "def DeleteColorSwatchLibraryTabByName(tabName : str, bCaseInsensitive : bool) -> bool",
+          "parameters": [
+            {
+              "raw": "tabName : str",
+              "name": "tabName",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "bCaseInsensitive : bool",
+              "name": "bCaseInsensitive",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def DeleteColorSwatchLibraryTabByName(tabName : str, bCaseInsensitive : bool) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Delete library tab from color palette in name \n@param tabName: tabName which will be shown in the color palette library tab\n@param bCaseInsensitive: If true, case is not sensitive.\n@return true if deletion is successful\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 17152,
+                  "block": 1479
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 17983,
+                  "block": 1479,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "DeleteColorSwatchLibraryTabByName(const std::string tabName, bool bCaseInsensitive = true)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Delete library tab from color palette in name \n/// @param tabName: tabName which will be shown in the color palette library tab\n/// @param bCaseInsensitive: If true, case is not sensitive.\n/// @return true if deletion is successful",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 17163,
+                    "block": 1480
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 17994,
+                    "block": 1480,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param tabName: tabName which will be shown in the color palette library tab",
+            "@param bCaseInsensitive: If true, case is not sensitive."
+          ],
+          "return_docs_raw": [
+            "@return true if deletion is successful"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.DeleteColorSwatchListItem",
+      "qualified_name": "utility_api.DeleteColorSwatchListItem",
+      "module": "utility_api",
+      "symbol": "DeleteColorSwatchListItem",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.DeleteColorSwatchListItem#5a6659332a1e2d80",
+          "signature_normalized": "def DeleteColorSwatchListItem(tabName : str, index : int) -> bool",
+          "signature_raw": "def DeleteColorSwatchListItem(tabName : str, index : int) -> bool",
+          "parameters": [
+            {
+              "raw": "tabName : str",
+              "name": "tabName",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "index : int",
+              "name": "index",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def DeleteColorSwatchListItem(tabName : str, index : int) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Delete the index item from the Color Switch list within the library tab(for combobox palette).\n@param tabName: Name of the color palette library tab\n@param index: Index of the item to be deleted from the color swatch list.\n@return true on success, false on failure\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 17106,
+                  "block": 1475
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 17935,
+                  "block": 1475,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "DeleteColorSwatchListItem(const std::string& tabName, int index)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Delete the index item from the Color Switch list within the library tab(for combobox palette).\n/// @param tabName: Name of the color palette library tab\n/// @param index: Index of the item to be deleted from the color swatch list.\n/// @return true on success, false on failure",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 17117,
+                    "block": 1476
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 17946,
+                    "block": 1476,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param tabName: Name of the color palette library tab",
+            "@param index: Index of the item to be deleted from the color swatch list."
+          ],
+          "return_docs_raw": [
+            "@return true on success, false on failure"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.DeleteColorwayItem",
+      "qualified_name": "utility_api.DeleteColorwayItem",
+      "module": "utility_api",
+      "symbol": "DeleteColorwayItem",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.DeleteColorwayItem#328ec68fc4eeb997",
+          "signature_normalized": "def DeleteColorwayItem(_index : int) -> None",
+          "signature_raw": "def DeleteColorwayItem(_index : int) -> None",
+          "parameters": [
+            {
+              "raw": "_index : int",
+              "name": "_index",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def DeleteColorwayItem(_index : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Delete the colorway in the index\n@param index: the source colorway index to delete\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 17847,
+                  "block": 1545
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 18711,
+                  "block": 1545,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "DeleteColorwayItem(unsigned int _index)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Delete the colorway in the index\n/// @param index: the source colorway index to delete",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 17856,
+                    "block": 1546
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 18720,
+                    "block": 1546,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param index: the source colorway index to delete"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.DeleteGraphicDisplacementMap",
+      "qualified_name": "utility_api.DeleteGraphicDisplacementMap",
+      "module": "utility_api",
+      "symbol": "DeleteGraphicDisplacementMap",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.DeleteGraphicDisplacementMap#5e95b571e2b1890c",
+          "signature_normalized": "def DeleteGraphicDisplacementMap(_graphicIndex : int, _colorwayIndex : int) -> None",
+          "signature_raw": "def DeleteGraphicDisplacementMap(_graphicIndex : int, _colorwayIndex : int) -> None",
+          "parameters": [
+            {
+              "raw": "_graphicIndex : int",
+              "name": "_graphicIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def DeleteGraphicDisplacementMap(_graphicIndex : int, _colorwayIndex : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Deletes the displacement map of a graphic style.\n@param _graphicIndex: Graphic style index.\n@param _colorwayIndex: Colorway index.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 21267,
+                  "block": 1853
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 22283,
+                  "block": 1853,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "DeleteGraphicDisplacementMap(int _graphicIndex, int _colorwayIndex)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Deletes the displacement map of a graphic style.\n/// @param _graphicIndex: Graphic style index.\n/// @param _colorwayIndex: Colorway index.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 21277,
+                    "block": 1854
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 22293,
+                    "block": 1854,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _graphicIndex: Graphic style index.",
+            "@param _colorwayIndex: Colorway index."
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.DeleteGraphicNormalMap",
+      "qualified_name": "utility_api.DeleteGraphicNormalMap",
+      "module": "utility_api",
+      "symbol": "DeleteGraphicNormalMap",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.DeleteGraphicNormalMap#11192debf4f97ff8",
+          "signature_normalized": "def DeleteGraphicNormalMap(_graphicIndex : int, _colorwayIndex : int) -> None",
+          "signature_raw": "def DeleteGraphicNormalMap(_graphicIndex : int, _colorwayIndex : int) -> None",
+          "parameters": [
+            {
+              "raw": "_graphicIndex : int",
+              "name": "_graphicIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def DeleteGraphicNormalMap(_graphicIndex : int, _colorwayIndex : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Deletes the normal map of a graphic style.\n@param _graphicIndex: Graphic style index.\n@param _colorwayIndex: Colorway index.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 21141,
+                  "block": 1841
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 22151,
+                  "block": 1841,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "DeleteGraphicNormalMap(int _graphicIndex, int _colorwayIndex)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Deletes the normal map of a graphic style.\n/// @param _graphicIndex: Graphic style index.\n/// @param _colorwayIndex: Colorway index.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 21151,
+                    "block": 1842
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 22161,
+                    "block": 1842,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _graphicIndex: Graphic style index.",
+            "@param _colorwayIndex: Colorway index."
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.DeleteGraphicOpacityMap",
+      "qualified_name": "utility_api.DeleteGraphicOpacityMap",
+      "module": "utility_api",
+      "symbol": "DeleteGraphicOpacityMap",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.DeleteGraphicOpacityMap#5c79f55c65b995f2",
+          "signature_normalized": "def DeleteGraphicOpacityMap(_graphicIndex : int, _colorwayIndex : int) -> None",
+          "signature_raw": "def DeleteGraphicOpacityMap(_graphicIndex : int, _colorwayIndex : int) -> None",
+          "parameters": [
+            {
+              "raw": "_graphicIndex : int",
+              "name": "_graphicIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def DeleteGraphicOpacityMap(_graphicIndex : int, _colorwayIndex : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Deletes the opacity map of a graphic style.\n@param _graphicIndex: Graphic style index.\n@param _colorwayIndex: Colorway index.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 21183,
+                  "block": 1845
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 22195,
+                  "block": 1845,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "DeleteGraphicOpacityMap(int _graphicIndex, int _colorwayIndex)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Deletes the opacity map of a graphic style.\n/// @param _graphicIndex: Graphic style index.\n/// @param _colorwayIndex: Colorway index.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 21193,
+                    "block": 1846
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 22205,
+                    "block": 1846,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _graphicIndex: Graphic style index.",
+            "@param _colorwayIndex: Colorway index."
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.DeleteGraphicRoughnessMap",
+      "qualified_name": "utility_api.DeleteGraphicRoughnessMap",
+      "module": "utility_api",
+      "symbol": "DeleteGraphicRoughnessMap",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.DeleteGraphicRoughnessMap#94835a2d3f649eee",
+          "signature_normalized": "def DeleteGraphicRoughnessMap(_graphicIndex : int, _colorwayIndex : int) -> None",
+          "signature_raw": "def DeleteGraphicRoughnessMap(_graphicIndex : int, _colorwayIndex : int) -> None",
+          "parameters": [
+            {
+              "raw": "_graphicIndex : int",
+              "name": "_graphicIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def DeleteGraphicRoughnessMap(_graphicIndex : int, _colorwayIndex : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Deletes the roughness map of a graphic style.\n@param _graphicIndex: Graphic style index.\n@param _colorwayIndex: Colorway index.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 21225,
+                  "block": 1849
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 22239,
+                  "block": 1849,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "DeleteGraphicRoughnessMap(int _graphicIndex, int _colorwayIndex)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Deletes the roughness map of a graphic style.\n/// @param _graphicIndex: Graphic style index.\n/// @param _colorwayIndex: Colorway index.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 21235,
+                    "block": 1850
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 22249,
+                    "block": 1850,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _graphicIndex: Graphic style index.",
+            "@param _colorwayIndex: Colorway index."
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.DeleteModularCategory",
+      "qualified_name": "utility_api.DeleteModularCategory",
+      "module": "utility_api",
+      "symbol": "DeleteModularCategory",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.DeleteModularCategory#3fee243f73c13370",
+          "signature_normalized": "def DeleteModularCategory(_categoryPath : str) -> None",
+          "signature_raw": "def DeleteModularCategory(_categoryPath : str) -> None",
+          "parameters": [
+            {
+              "raw": "_categoryPath : str",
+              "name": "_categoryPath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def DeleteModularCategory(_categoryPath : str) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief delete modular category\n@param _categoryPath : category title\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 19040,
+                  "block": 1655
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 19957,
+                  "block": 1655,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "DeleteModularCategory(const std::wstring& _categoryPath)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief delete modular category\n/// @param _categoryPath : category title",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 19049,
+                    "block": 1656
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 19966,
+                    "block": 1656,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _categoryPath : category title"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.DeleteProgressBar",
+      "qualified_name": "utility_api.DeleteProgressBar",
+      "module": "utility_api",
+      "symbol": "DeleteProgressBar",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.DeleteProgressBar#8931306d4560b592",
+          "signature_normalized": "def DeleteProgressBar(bForce : bool) -> None",
+          "signature_raw": "def DeleteProgressBar(bForce : bool) -> None",
+          "parameters": [
+            {
+              "raw": "bForce : bool",
+              "name": "bForce",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def DeleteProgressBar(bForce : bool) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Delete the current Progress Bar. This function should be called after using the SetProgress funtion\n@param bForce: true - retry to delete progress bar; false - try only once to delete progress bar\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 16943,
+                  "block": 1461
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 17765,
+                  "block": 1461,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "DeleteProgressBar(bool bForce)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Delete the current Progress Bar. This function should be called after using the SetProgress funtion\n/// @param bForce: true - retry to delete progress bar; false - try only once to delete progress bar",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 16952,
+                    "block": 1462
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 17774,
+                    "block": 1462,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param bForce: true - retry to delete progress bar; false - try only once to delete progress bar"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.DeleteUserCustomLibrary",
+      "qualified_name": "utility_api.DeleteUserCustomLibrary",
+      "module": "utility_api",
+      "symbol": "DeleteUserCustomLibrary",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.DeleteUserCustomLibrary#a8903647409712f9",
+          "signature_normalized": "def DeleteUserCustomLibrary(index : int) -> bool",
+          "signature_raw": "def DeleteUserCustomLibrary(index : int) -> bool",
+          "parameters": [
+            {
+              "raw": "index : int",
+              "name": "index",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def DeleteUserCustomLibrary(index : int) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Delete a User Custom Library tab by 0-based index in the current visual order of User Custom tabs only.\n@param index: 0-based index among User Custom Library tabs only.\n@return true on success, false on failure.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 17301,
+                  "block": 1493
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 18139,
+                  "block": 1493,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "DeleteUserCustomLibrary(int index)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Delete a User Custom Library tab by 0-based index in the current visual order of User Custom tabs only.\n/// @param index: 0-based index among User Custom Library tabs only.\n/// @return true on success, false on failure.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 17311,
+                    "block": 1494
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 18149,
+                    "block": 1494,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param index: 0-based index among User Custom Library tabs only."
+          ],
+          "return_docs_raw": [
+            "@return true on success, false on failure."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    }
+  ]
+}

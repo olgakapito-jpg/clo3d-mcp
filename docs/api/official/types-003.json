@@ -1,0 +1,833 @@
+{
+  "kind": "types",
+  "records": [
+    {
+      "id": "type:RenderPropertyOptions",
+      "name": "RenderPropertyOptions",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nRender > Render Properties (engine, finish conditions, quality, color mapping) for UtilityAPI::SetRenderingProperties, without the dialog.\n\"\"\"\nm_RenderEngineType:int          # render engine: 0 = CPU, 1 = GPU (CUDA / HIP, or Metal on Apple silicon) (default 0)\nm_bCPUSupporting:bool           # if true, the CPU renders along with the GPU; GPU engine only (default false)\nm_bLowGPUPriority:bool          # if true, leave GPU time to other programs; GPU engine only (default false)\nm_NoiseThreshold:float          # noise level at which rendering stops, 0.001-0.1; lower is cleaner but slower (default 0.01)\nm_MaxRenderTime:int             # maximum render time in minutes, 1-100 (default 0 = keep the current value)\nm_SeamPuckeringIntensity:float  # strength of seam puckering in the render, 0-5 (default 0.5)\nm_LightQuality:int              # light quality: 0 = low, 1 = medium, 2 = high, 3 = very high (default 0)\nm_MaterialQuality:int           # material quality: 0 = low, 1 = medium, 2 = high, 3 = very high (default 0)\nm_bKnitWearFrustumCulling:bool  # if true, skip knitwear mesh outside the camera view; final render only (default true)\nm_bKnitWearLOD:bool             # if true, use knitwear level of detail (mesh optimization); final render only (default true)\nm_ColorMappingType:int          # color mapping: 0 = HSV exponential, 1 = Reinhard (uses m_BurnValue) (default 0)\nm_BurnValue:float               # Reinhard burn value, 0-1 (1 = linear); used when m_ColorMappingType is 1 (default 0.5)\nm_bLinearWorkFlow:bool          # if true, render with the linear workflow (default false)\nm_ImageFilterSize:float         # image filter size, 1-10 (default 1)",
+      "description_raw": "Render > Render Properties (engine, finish conditions, quality, color mapping) for UtilityAPI::SetRenderingProperties, without the dialog.",
+      "members": [
+        {
+          "raw": "m_RenderEngineType:int          # render engine: 0 = CPU, 1 = GPU (CUDA / HIP, or Metal on Apple silicon) (default 0)",
+          "documentation_raw": "render engine: 0 = CPU, 1 = GPU (CUDA / HIP, or Metal on Apple silicon) (default 0)",
+          "name": "m_RenderEngineType",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "m_bCPUSupporting:bool           # if true, the CPU renders along with the GPU; GPU engine only (default false)",
+          "documentation_raw": "if true, the CPU renders along with the GPU; GPU engine only (default false)",
+          "name": "m_bCPUSupporting",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "m_bLowGPUPriority:bool          # if true, leave GPU time to other programs; GPU engine only (default false)",
+          "documentation_raw": "if true, leave GPU time to other programs; GPU engine only (default false)",
+          "name": "m_bLowGPUPriority",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "m_NoiseThreshold:float          # noise level at which rendering stops, 0.001-0.1; lower is cleaner but slower (default 0.01)",
+          "documentation_raw": "noise level at which rendering stops, 0.001-0.1; lower is cleaner but slower (default 0.01)",
+          "name": "m_NoiseThreshold",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "m_MaxRenderTime:int             # maximum render time in minutes, 1-100 (default 0 = keep the current value)",
+          "documentation_raw": "maximum render time in minutes, 1-100 (default 0 = keep the current value)",
+          "name": "m_MaxRenderTime",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "m_SeamPuckeringIntensity:float  # strength of seam puckering in the render, 0-5 (default 0.5)",
+          "documentation_raw": "strength of seam puckering in the render, 0-5 (default 0.5)",
+          "name": "m_SeamPuckeringIntensity",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "m_LightQuality:int              # light quality: 0 = low, 1 = medium, 2 = high, 3 = very high (default 0)",
+          "documentation_raw": "light quality: 0 = low, 1 = medium, 2 = high, 3 = very high (default 0)",
+          "name": "m_LightQuality",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "m_MaterialQuality:int           # material quality: 0 = low, 1 = medium, 2 = high, 3 = very high (default 0)",
+          "documentation_raw": "material quality: 0 = low, 1 = medium, 2 = high, 3 = very high (default 0)",
+          "name": "m_MaterialQuality",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "m_bKnitWearFrustumCulling:bool  # if true, skip knitwear mesh outside the camera view; final render only (default true)",
+          "documentation_raw": "if true, skip knitwear mesh outside the camera view; final render only (default true)",
+          "name": "m_bKnitWearFrustumCulling",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "m_bKnitWearLOD:bool             # if true, use knitwear level of detail (mesh optimization); final render only (default true)",
+          "documentation_raw": "if true, use knitwear level of detail (mesh optimization); final render only (default true)",
+          "name": "m_bKnitWearLOD",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "m_ColorMappingType:int          # color mapping: 0 = HSV exponential, 1 = Reinhard (uses m_BurnValue) (default 0)",
+          "documentation_raw": "color mapping: 0 = HSV exponential, 1 = Reinhard (uses m_BurnValue) (default 0)",
+          "name": "m_ColorMappingType",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "m_BurnValue:float               # Reinhard burn value, 0-1 (1 = linear); used when m_ColorMappingType is 1 (default 0.5)",
+          "documentation_raw": "Reinhard burn value, 0-1 (1 = linear); used when m_ColorMappingType is 1 (default 0.5)",
+          "name": "m_BurnValue",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "m_bLinearWorkFlow:bool          # if true, render with the linear workflow (default false)",
+          "documentation_raw": "if true, render with the linear workflow (default false)",
+          "name": "m_bLinearWorkFlow",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "m_ImageFilterSize:float         # image filter size, 1-10 (default 1)",
+          "documentation_raw": "image filter size, 1-10 (default 1)",
+          "name": "m_ImageFilterSize",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 294,
+              "block": 12
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 443,
+              "block": 12,
+              "anchor": "renderpropertyoptions"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:SeamlinePairGroupResult",
+      "name": "SeamlinePairGroupResult",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nStatus code returned by the AddSeamlinePairGroupPartial family of APIs.\nSEAMLINE_PAIR_SUCCESS is 0 and every failure is negative, so test the result with\n'== SEAMLINE_PAIR_SUCCESS' rather than for truthiness (0 is falsy in Python).\n\"\"\"\nSEAMLINE_PAIR_SUCCESS = 0                     # The stitch was created.\nSEAMLINE_PAIR_ERROR_NO_PATTERN_EDITOR = -1    # No pattern editor is available in the current scene.\nSEAMLINE_PAIR_ERROR_INVALID_PATTERN = -2      # A pattern index does not refer to an existing pattern.\nSEAMLINE_PAIR_ERROR_INVALID_INNER_SHAPE = -3  # An inner shape (child) index does not refer to an existing inner shape.\nSEAMLINE_PAIR_ERROR_INVALID_LINE = -4         # A line index does not refer to an existing line on the given shape.\nSEAMLINE_PAIR_ERROR_RATIO_OUT_OF_RANGE = -5   # A start/end ratio lies outside the closed range [0.0, 1.0].\nSEAMLINE_PAIR_ERROR_EMPTY_SEGMENT = -6        # A start ratio is not strictly less than its end ratio, so the segment is empty or inverted.\nSEAMLINE_PAIR_ERROR_CREATE_FAILED = -7        # The stitch passed validation but the pattern editor rejected it.",
+      "description_raw": "Status code returned by the AddSeamlinePairGroupPartial family of APIs.\nSEAMLINE_PAIR_SUCCESS is 0 and every failure is negative, so test the result with\n'== SEAMLINE_PAIR_SUCCESS' rather than for truthiness (0 is falsy in Python).",
+      "members": [
+        {
+          "raw": "SEAMLINE_PAIR_SUCCESS = 0                     # The stitch was created.",
+          "documentation_raw": "The stitch was created.",
+          "name": "SEAMLINE_PAIR_SUCCESS",
+          "kind": "enum_value",
+          "value_raw": "0",
+          "type_references": []
+        },
+        {
+          "raw": "SEAMLINE_PAIR_ERROR_NO_PATTERN_EDITOR = -1    # No pattern editor is available in the current scene.",
+          "documentation_raw": "No pattern editor is available in the current scene.",
+          "name": "SEAMLINE_PAIR_ERROR_NO_PATTERN_EDITOR",
+          "kind": "enum_value",
+          "value_raw": "-1",
+          "type_references": []
+        },
+        {
+          "raw": "SEAMLINE_PAIR_ERROR_INVALID_PATTERN = -2      # A pattern index does not refer to an existing pattern.",
+          "documentation_raw": "A pattern index does not refer to an existing pattern.",
+          "name": "SEAMLINE_PAIR_ERROR_INVALID_PATTERN",
+          "kind": "enum_value",
+          "value_raw": "-2",
+          "type_references": []
+        },
+        {
+          "raw": "SEAMLINE_PAIR_ERROR_INVALID_INNER_SHAPE = -3  # An inner shape (child) index does not refer to an existing inner shape.",
+          "documentation_raw": "An inner shape (child) index does not refer to an existing inner shape.",
+          "name": "SEAMLINE_PAIR_ERROR_INVALID_INNER_SHAPE",
+          "kind": "enum_value",
+          "value_raw": "-3",
+          "type_references": []
+        },
+        {
+          "raw": "SEAMLINE_PAIR_ERROR_INVALID_LINE = -4         # A line index does not refer to an existing line on the given shape.",
+          "documentation_raw": "A line index does not refer to an existing line on the given shape.",
+          "name": "SEAMLINE_PAIR_ERROR_INVALID_LINE",
+          "kind": "enum_value",
+          "value_raw": "-4",
+          "type_references": []
+        },
+        {
+          "raw": "SEAMLINE_PAIR_ERROR_RATIO_OUT_OF_RANGE = -5   # A start/end ratio lies outside the closed range [0.0, 1.0].",
+          "documentation_raw": "A start/end ratio lies outside the closed range [0.0, 1.0].",
+          "name": "SEAMLINE_PAIR_ERROR_RATIO_OUT_OF_RANGE",
+          "kind": "enum_value",
+          "value_raw": "-5",
+          "type_references": []
+        },
+        {
+          "raw": "SEAMLINE_PAIR_ERROR_EMPTY_SEGMENT = -6        # A start ratio is not strictly less than its end ratio, so the segment is empty or inverted.",
+          "documentation_raw": "A start ratio is not strictly less than its end ratio, so the segment is empty or inverted.",
+          "name": "SEAMLINE_PAIR_ERROR_EMPTY_SEGMENT",
+          "kind": "enum_value",
+          "value_raw": "-6",
+          "type_references": []
+        },
+        {
+          "raw": "SEAMLINE_PAIR_ERROR_CREATE_FAILED = -7        # The stitch passed validation but the pattern editor rejected it.",
+          "documentation_raw": "The stitch passed validation but the pattern editor rejected it.",
+          "name": "SEAMLINE_PAIR_ERROR_CREATE_FAILED",
+          "kind": "enum_value",
+          "value_raw": "-7",
+          "type_references": []
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 604,
+              "block": 31
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 715,
+              "block": 31,
+              "anchor": "seamlinepairgroupresult"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:TextureMapTarget",
+      "name": "TextureMapTarget",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nSelects which texture map a texture-transform API targets.\nUsed by the unified texture-transform getters/setters (Fabric, Print, Graphic)\nto choose the map the TransformOptions apply to.\n\"\"\"\nTEXTURE_MAP_BASE_COLOR = 0    # Base color / albedo map\nTEXTURE_MAP_NORMAL = 1        # Normal map\nTEXTURE_MAP_OPACITY = 2       # Opacity (alpha) map\nTEXTURE_MAP_ROUGHNESS = 3     # Roughness (glossiness) map\nTEXTURE_MAP_METALNESS = 4     # Metalness map\nTEXTURE_MAP_DISPLACEMENT = 5  # Displacement map",
+      "description_raw": "Selects which texture map a texture-transform API targets.\nUsed by the unified texture-transform getters/setters (Fabric, Print, Graphic)\nto choose the map the TransformOptions apply to.",
+      "members": [
+        {
+          "raw": "TEXTURE_MAP_BASE_COLOR = 0    # Base color / albedo map",
+          "documentation_raw": "Base color / albedo map",
+          "name": "TEXTURE_MAP_BASE_COLOR",
+          "kind": "enum_value",
+          "value_raw": "0",
+          "type_references": []
+        },
+        {
+          "raw": "TEXTURE_MAP_NORMAL = 1        # Normal map",
+          "documentation_raw": "Normal map",
+          "name": "TEXTURE_MAP_NORMAL",
+          "kind": "enum_value",
+          "value_raw": "1",
+          "type_references": []
+        },
+        {
+          "raw": "TEXTURE_MAP_OPACITY = 2       # Opacity (alpha) map",
+          "documentation_raw": "Opacity (alpha) map",
+          "name": "TEXTURE_MAP_OPACITY",
+          "kind": "enum_value",
+          "value_raw": "2",
+          "type_references": []
+        },
+        {
+          "raw": "TEXTURE_MAP_ROUGHNESS = 3     # Roughness (glossiness) map",
+          "documentation_raw": "Roughness (glossiness) map",
+          "name": "TEXTURE_MAP_ROUGHNESS",
+          "kind": "enum_value",
+          "value_raw": "3",
+          "type_references": []
+        },
+        {
+          "raw": "TEXTURE_MAP_METALNESS = 4     # Metalness map",
+          "documentation_raw": "Metalness map",
+          "name": "TEXTURE_MAP_METALNESS",
+          "kind": "enum_value",
+          "value_raw": "4",
+          "type_references": []
+        },
+        {
+          "raw": "TEXTURE_MAP_DISPLACEMENT = 5  # Displacement map",
+          "documentation_raw": "Displacement map",
+          "name": "TEXTURE_MAP_DISPLACEMENT",
+          "kind": "enum_value",
+          "value_raw": "5",
+          "type_references": []
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 870,
+              "block": 46
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 951,
+              "block": 46,
+              "anchor": "texturemaptarget"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:TransformOptions",
+      "name": "TransformOptions",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nOptions for AOP (All Over Print) texture transformation operations\nProvides parameters to control texture transformations including rotation, scaling, and translation.\nSupports both percentage-based and millimeter-based sizing.\n\"\"\"\nangle:float            # Rotation angle in degrees (0.0 = no rotation)\nwidthMm:float          # Width in millimeters (system unit). Set to 0.0 to use widthPercent instead.\nwidthPercent:float     # Width as percentage (100.0 = 100%, original size)\nheightMm:float         # Height in millimeters (system unit). Set to 0.0 to use heightPercent instead.\nheightPercent:float    # Height as percentage (100.0 = 100%, original size)\naspectRatioFixed:bool  # true to maintain aspect ratio during scaling, false to allow independent width/height scaling\nposX:float             # Horizontal position/translation in display units\nposY:float             # Vertical position/translation in display units}",
+      "description_raw": "Options for AOP (All Over Print) texture transformation operations\nProvides parameters to control texture transformations including rotation, scaling, and translation.\nSupports both percentage-based and millimeter-based sizing.",
+      "members": [
+        {
+          "raw": "angle:float            # Rotation angle in degrees (0.0 = no rotation)",
+          "documentation_raw": "Rotation angle in degrees (0.0 = no rotation)",
+          "name": "angle",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "widthMm:float          # Width in millimeters (system unit). Set to 0.0 to use widthPercent instead.",
+          "documentation_raw": "Width in millimeters (system unit). Set to 0.0 to use widthPercent instead.",
+          "name": "widthMm",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "widthPercent:float     # Width as percentage (100.0 = 100%, original size)",
+          "documentation_raw": "Width as percentage (100.0 = 100%, original size)",
+          "name": "widthPercent",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "heightMm:float         # Height in millimeters (system unit). Set to 0.0 to use heightPercent instead.",
+          "documentation_raw": "Height in millimeters (system unit). Set to 0.0 to use heightPercent instead.",
+          "name": "heightMm",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "heightPercent:float    # Height as percentage (100.0 = 100%, original size)",
+          "documentation_raw": "Height as percentage (100.0 = 100%, original size)",
+          "name": "heightPercent",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "aspectRatioFixed:bool  # true to maintain aspect ratio during scaling, false to allow independent width/height scaling",
+          "documentation_raw": "true to maintain aspect ratio during scaling, false to allow independent width/height scaling",
+          "name": "aspectRatioFixed",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "posX:float             # Horizontal position/translation in display units",
+          "documentation_raw": "Horizontal position/translation in display units",
+          "name": "posX",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "posY:float             # Vertical position/translation in display units}",
+          "documentation_raw": "Vertical position/translation in display units}",
+          "name": "posY",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 942,
+              "block": 50
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 1015,
+              "block": 50,
+              "anchor": "transformoptions"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:VideoExportOption",
+      "name": "VideoExportOption",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nOptions for ExportAnimationVideo without showing the dialog in CLO API\n\"\"\"\nwidth:int       # Video width in pixels\nheight:int      # Video height in pixels\nfps:int         # FPS index: 0 = 24fps, 1 = 25fps, 2 = 30fps, 3 = 60fps. Set to -1 to use the animation's system FPS\nstartFrame:int  # Start frame index, -1 means use the animation's start frame\nendFrame:int    # End frame index, -1 means use the animation's end frame",
+      "description_raw": "Options for ExportAnimationVideo without showing the dialog in CLO API",
+      "members": [
+        {
+          "raw": "width:int       # Video width in pixels",
+          "documentation_raw": "Video width in pixels",
+          "name": "width",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "height:int      # Video height in pixels",
+          "documentation_raw": "Video height in pixels",
+          "name": "height",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "fps:int         # FPS index: 0 = 24fps, 1 = 25fps, 2 = 30fps, 3 = 60fps. Set to -1 to use the animation's system FPS",
+          "documentation_raw": "FPS index: 0 = 24fps, 1 = 25fps, 2 = 30fps, 3 = 60fps. Set to -1 to use the animation's system FPS",
+          "name": "fps",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "startFrame:int  # Start frame index, -1 means use the animation's start frame",
+          "documentation_raw": "Start frame index, -1 means use the animation's start frame",
+          "name": "startFrame",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "endFrame:int    # End frame index, -1 means use the animation's end frame",
+          "documentation_raw": "End frame index, -1 means use the animation's end frame",
+          "name": "endFrame",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 170,
+              "block": 7
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 329,
+              "block": 7,
+              "anchor": "videoexportoption"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:WELD_TYPE",
+      "name": "WELD_TYPE",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nWeld type to export meshes. WELDED - merge meshes on seamlines, UNWELDED - as-is\n\"\"\"\nFULLY_UNWELDED = 0   # UNWELDED for all seamlines\nDEFAULT_WELDED = 1   # deprecated, but DO NOT REMOVE.\nFULLY_WELDED = 2     # WELDED for all seamlines\nSELECTED_WELDED = 3  # WELDED for selected seamlines",
+      "description_raw": "Weld type to export meshes. WELDED - merge meshes on seamlines, UNWELDED - as-is",
+      "members": [
+        {
+          "raw": "FULLY_UNWELDED = 0   # UNWELDED for all seamlines",
+          "documentation_raw": "UNWELDED for all seamlines",
+          "name": "FULLY_UNWELDED",
+          "kind": "enum_value",
+          "value_raw": "0",
+          "type_references": []
+        },
+        {
+          "raw": "DEFAULT_WELDED = 1   # deprecated, but DO NOT REMOVE.",
+          "documentation_raw": "deprecated, but DO NOT REMOVE.",
+          "name": "DEFAULT_WELDED",
+          "kind": "enum_value",
+          "value_raw": "1",
+          "type_references": []
+        },
+        {
+          "raw": "FULLY_WELDED = 2     # WELDED for all seamlines",
+          "documentation_raw": "WELDED for all seamlines",
+          "name": "FULLY_WELDED",
+          "kind": "enum_value",
+          "value_raw": "2",
+          "type_references": []
+        },
+        {
+          "raw": "SELECTED_WELDED = 3  # WELDED for selected seamlines",
+          "documentation_raw": "WELDED for selected seamlines",
+          "name": "SELECTED_WELDED",
+          "kind": "enum_value",
+          "value_raw": "3",
+          "type_references": []
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 7,
+              "block": 1
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 178,
+              "block": 1,
+              "anchor": "weld-type"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:WindControllerOptions",
+      "name": "WindControllerOptions",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nSettings of one wind controller (Object Browser > Scene > Wind) for UtilityAPI::SetWindControllerSettings / GetWindControllerSettings. Set writes every field.\n\"\"\"\nbWindActive:bool  # true = the wind controller is on (default false)\nwindType:int      # 0 = spherical (blows outward from the controller), any other value = planar (along its direction) (default 0)\nstrength:float    # wind strength, as Strength in the Property Editor (default 0)\ndecay:float       # how fast the strength fades with distance, 0-100 (default 0)\nfrequency:float   # gust period in seconds, 0-100000; 0 = constant wind (default 0)\nturbulence:float  # random variation of the strength, 0-100 (default 0)\nx:float           # X position of the controller in 3D, in mm (default 0)\ny:float           # Y position of the controller in 3D, in mm (default 0)\nz:float           # Z position of the controller in 3D, in mm (default 0)\nrotationX:float   # rotation around the X axis in degrees; the wind blows along the rotated +Z axis (default 0)\nrotationY:float   # rotation around the Y axis in degrees (default 0)\nrotationZ:float   # rotation around the Z axis in degrees (default 0)",
+      "description_raw": "Settings of one wind controller (Object Browser > Scene > Wind) for UtilityAPI::SetWindControllerSettings / GetWindControllerSettings. Set writes every field.",
+      "members": [
+        {
+          "raw": "bWindActive:bool  # true = the wind controller is on (default false)",
+          "documentation_raw": "true = the wind controller is on (default false)",
+          "name": "bWindActive",
+          "kind": "field",
+          "annotation_raw": "bool",
+          "type_references": []
+        },
+        {
+          "raw": "windType:int      # 0 = spherical (blows outward from the controller), any other value = planar (along its direction) (default 0)",
+          "documentation_raw": "0 = spherical (blows outward from the controller), any other value = planar (along its direction) (default 0)",
+          "name": "windType",
+          "kind": "field",
+          "annotation_raw": "int",
+          "type_references": []
+        },
+        {
+          "raw": "strength:float    # wind strength, as Strength in the Property Editor (default 0)",
+          "documentation_raw": "wind strength, as Strength in the Property Editor (default 0)",
+          "name": "strength",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "decay:float       # how fast the strength fades with distance, 0-100 (default 0)",
+          "documentation_raw": "how fast the strength fades with distance, 0-100 (default 0)",
+          "name": "decay",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "frequency:float   # gust period in seconds, 0-100000; 0 = constant wind (default 0)",
+          "documentation_raw": "gust period in seconds, 0-100000; 0 = constant wind (default 0)",
+          "name": "frequency",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "turbulence:float  # random variation of the strength, 0-100 (default 0)",
+          "documentation_raw": "random variation of the strength, 0-100 (default 0)",
+          "name": "turbulence",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "x:float           # X position of the controller in 3D, in mm (default 0)",
+          "documentation_raw": "X position of the controller in 3D, in mm (default 0)",
+          "name": "x",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "y:float           # Y position of the controller in 3D, in mm (default 0)",
+          "documentation_raw": "Y position of the controller in 3D, in mm (default 0)",
+          "name": "y",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "z:float           # Z position of the controller in 3D, in mm (default 0)",
+          "documentation_raw": "Z position of the controller in 3D, in mm (default 0)",
+          "name": "z",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "rotationX:float   # rotation around the X axis in degrees; the wind blows along the rotated +Z axis (default 0)",
+          "documentation_raw": "rotation around the X axis in degrees; the wind blows along the rotated +Z axis (default 0)",
+          "name": "rotationX",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "rotationY:float   # rotation around the Y axis in degrees (default 0)",
+          "documentation_raw": "rotation around the Y axis in degrees (default 0)",
+          "name": "rotationY",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        },
+        {
+          "raw": "rotationZ:float   # rotation around the Z axis in degrees (default 0)",
+          "documentation_raw": "rotation around the Z axis in degrees (default 0)",
+          "name": "rotationZ",
+          "kind": "field",
+          "annotation_raw": "float",
+          "type_references": []
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 56,
+              "block": 4
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 221,
+              "block": 4,
+              "anchor": "windcontrolleroptions"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:ZipperObjectType",
+      "name": "ZipperObjectType",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nSpecifies the zipper part type to generate via GenerateZippersFromObj.\nEach value corresponds to a specific output file format and save behavior.\n\"\"\"\nZIPPER_OBJECT_SLIDER = 0                 # Slider only (.zsl): single OBJ input, saved as a single shape.\nZIPPER_OBJECT_PULLER = 1                 # Puller only (.zpu): single OBJ input, saved as a single shape.\nZIPPER_OBJECT_SLIDER_PULLER = 2          # Slider + Puller combined (.zss): single OBJ with two meshes, saved as dual shape.\nZIPPER_OBJECT_TEETH = 3                  # Zipper teeth (.zth): single OBJ, loaded with fixed internal axes.\nZIPPER_OBJECT_TOP_STOPPER = 4            # Top stopper (.zst): two OBJ inputs, saved as dual shape.\nZIPPER_OBJECT_BOTTOM_OPEN_STOPPER = 5    # Bottom open-end stopper (.zst): two OBJ inputs, saved as dual shape.\nZIPPER_OBJECT_BOTTOM_CLOSED_STOPPER = 6  # Bottom closed-end stopper (.zst): single OBJ input, saved as a single shape.",
+      "description_raw": "Specifies the zipper part type to generate via GenerateZippersFromObj.\nEach value corresponds to a specific output file format and save behavior.",
+      "members": [
+        {
+          "raw": "ZIPPER_OBJECT_SLIDER = 0                 # Slider only (.zsl): single OBJ input, saved as a single shape.",
+          "documentation_raw": "Slider only (.zsl): single OBJ input, saved as a single shape.",
+          "name": "ZIPPER_OBJECT_SLIDER",
+          "kind": "enum_value",
+          "value_raw": "0",
+          "type_references": []
+        },
+        {
+          "raw": "ZIPPER_OBJECT_PULLER = 1                 # Puller only (.zpu): single OBJ input, saved as a single shape.",
+          "documentation_raw": "Puller only (.zpu): single OBJ input, saved as a single shape.",
+          "name": "ZIPPER_OBJECT_PULLER",
+          "kind": "enum_value",
+          "value_raw": "1",
+          "type_references": []
+        },
+        {
+          "raw": "ZIPPER_OBJECT_SLIDER_PULLER = 2          # Slider + Puller combined (.zss): single OBJ with two meshes, saved as dual shape.",
+          "documentation_raw": "Slider + Puller combined (.zss): single OBJ with two meshes, saved as dual shape.",
+          "name": "ZIPPER_OBJECT_SLIDER_PULLER",
+          "kind": "enum_value",
+          "value_raw": "2",
+          "type_references": []
+        },
+        {
+          "raw": "ZIPPER_OBJECT_TEETH = 3                  # Zipper teeth (.zth): single OBJ, loaded with fixed internal axes.",
+          "documentation_raw": "Zipper teeth (.zth): single OBJ, loaded with fixed internal axes.",
+          "name": "ZIPPER_OBJECT_TEETH",
+          "kind": "enum_value",
+          "value_raw": "3",
+          "type_references": []
+        },
+        {
+          "raw": "ZIPPER_OBJECT_TOP_STOPPER = 4            # Top stopper (.zst): two OBJ inputs, saved as dual shape.",
+          "documentation_raw": "Top stopper (.zst): two OBJ inputs, saved as dual shape.",
+          "name": "ZIPPER_OBJECT_TOP_STOPPER",
+          "kind": "enum_value",
+          "value_raw": "4",
+          "type_references": []
+        },
+        {
+          "raw": "ZIPPER_OBJECT_BOTTOM_OPEN_STOPPER = 5    # Bottom open-end stopper (.zst): two OBJ inputs, saved as dual shape.",
+          "documentation_raw": "Bottom open-end stopper (.zst): two OBJ inputs, saved as dual shape.",
+          "name": "ZIPPER_OBJECT_BOTTOM_OPEN_STOPPER",
+          "kind": "enum_value",
+          "value_raw": "5",
+          "type_references": []
+        },
+        {
+          "raw": "ZIPPER_OBJECT_BOTTOM_CLOSED_STOPPER = 6  # Bottom closed-end stopper (.zst): single OBJ input, saved as a single shape.",
+          "documentation_raw": "Bottom closed-end stopper (.zst): single OBJ input, saved as a single shape.",
+          "name": "ZIPPER_OBJECT_BOTTOM_CLOSED_STOPPER",
+          "kind": "enum_value",
+          "value_raw": "6",
+          "type_references": []
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 962,
+              "block": 51
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 1033,
+              "block": 51,
+              "anchor": "zipperobjecttype"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type:ZipperScaleUnit",
+      "name": "ZipperScaleUnit",
+      "documented_namespace": "ApiTypes",
+      "binding_status": "not_checked",
+      "classification": "documented_python_type",
+      "raw": "\"\"\"\nUnit of measurement for the OBJ geometry passed to GenerateZippersFromObj.\nMirrors the scale unit combobox in the \"Register OBJ\" dialog.\n\"\"\"\nZIPPER_SCALE_MM = 0        # 1 mm   = 0.01    CLO units (default)\nZIPPER_SCALE_CM = 1        # 1 cm   = 0.1     CLO units\nZIPPER_SCALE_INCH = 2      # 1 in   = 0.254   CLO units\nZIPPER_SCALE_FEET = 3      # 1 ft   = 3.048   CLO units\nZIPPER_SCALE_M = 4         # 1 m    = 10.0    CLO units\nZIPPER_SCALE_8_FEET = 5    # 8 ft   = 24.384  CLO units\nZIPPER_SCALE_8_6_FEET = 6  # 8'6\"   = 26.2128 CLO units\nZIPPER_SCALE_AUTO = 7      # Auto scale from OBJ bounding box (applies 0.01 factor with auto-scale flag)",
+      "description_raw": "Unit of measurement for the OBJ geometry passed to GenerateZippersFromObj.\nMirrors the scale unit combobox in the \"Register OBJ\" dialog.",
+      "members": [
+        {
+          "raw": "ZIPPER_SCALE_MM = 0        # 1 mm   = 0.01    CLO units (default)",
+          "documentation_raw": "1 mm   = 0.01    CLO units (default)",
+          "name": "ZIPPER_SCALE_MM",
+          "kind": "enum_value",
+          "value_raw": "0",
+          "type_references": []
+        },
+        {
+          "raw": "ZIPPER_SCALE_CM = 1        # 1 cm   = 0.1     CLO units",
+          "documentation_raw": "1 cm   = 0.1     CLO units",
+          "name": "ZIPPER_SCALE_CM",
+          "kind": "enum_value",
+          "value_raw": "1",
+          "type_references": []
+        },
+        {
+          "raw": "ZIPPER_SCALE_INCH = 2      # 1 in   = 0.254   CLO units",
+          "documentation_raw": "1 in   = 0.254   CLO units",
+          "name": "ZIPPER_SCALE_INCH",
+          "kind": "enum_value",
+          "value_raw": "2",
+          "type_references": []
+        },
+        {
+          "raw": "ZIPPER_SCALE_FEET = 3      # 1 ft   = 3.048   CLO units",
+          "documentation_raw": "1 ft   = 3.048   CLO units",
+          "name": "ZIPPER_SCALE_FEET",
+          "kind": "enum_value",
+          "value_raw": "3",
+          "type_references": []
+        },
+        {
+          "raw": "ZIPPER_SCALE_M = 4         # 1 m    = 10.0    CLO units",
+          "documentation_raw": "1 m    = 10.0    CLO units",
+          "name": "ZIPPER_SCALE_M",
+          "kind": "enum_value",
+          "value_raw": "4",
+          "type_references": []
+        },
+        {
+          "raw": "ZIPPER_SCALE_8_FEET = 5    # 8 ft   = 24.384  CLO units",
+          "documentation_raw": "8 ft   = 24.384  CLO units",
+          "name": "ZIPPER_SCALE_8_FEET",
+          "kind": "enum_value",
+          "value_raw": "5",
+          "type_references": []
+        },
+        {
+          "raw": "ZIPPER_SCALE_8_6_FEET = 6  # 8'6\"   = 26.2128 CLO units",
+          "documentation_raw": "8'6\"   = 26.2128 CLO units",
+          "name": "ZIPPER_SCALE_8_6_FEET",
+          "kind": "enum_value",
+          "value_raw": "6",
+          "type_references": []
+        },
+        {
+          "raw": "ZIPPER_SCALE_AUTO = 7      # Auto scale from OBJ bounding box (applies 0.01 factor with auto-scale flag)",
+          "documentation_raw": "Auto scale from OBJ bounding box (applies 0.01 factor with auto-scale flag)",
+          "name": "ZIPPER_SCALE_AUTO",
+          "kind": "enum_value",
+          "value_raw": "7",
+          "type_references": []
+        }
+      ],
+      "occurrences": [
+        {
+          "sources": [
+            {
+              "source_id": "optiontype.rst.txt",
+              "line": 980,
+              "block": 52
+            },
+            {
+              "source_id": "optiontype.html",
+              "line": 1049,
+              "block": 52,
+              "anchor": "zipperscaleunit"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

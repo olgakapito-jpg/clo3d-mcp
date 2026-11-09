@@ -1,0 +1,3213 @@
+{
+  "kind": "methods",
+  "records": [
+    {
+      "id": "utility_api.SetAvatarActivation",
+      "qualified_name": "utility_api.SetAvatarActivation",
+      "module": "utility_api",
+      "symbol": "SetAvatarActivation",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetAvatarActivation#9fc14f749bc1b0cf",
+          "signature_normalized": "def SetAvatarActivation(_avatarName : str, _bActivate : bool) -> bool",
+          "signature_raw": "def SetAvatarActivation(_avatarName : str, _bActivate : bool) -> bool",
+          "parameters": [
+            {
+              "raw": "_avatarName : str",
+              "name": "_avatarName",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_bActivate : bool",
+              "name": "_bActivate",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def SetAvatarActivation(_avatarName : str, _bActivate : bool) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Set Avatar Activation/Deactivation\n@param _avatarName: Avatar name to activate or deactivate               \n@param _bActivate: true for activate, false for deactivate\n@return if it succeeds, return true.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 22943,
+                  "block": 1997
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 24031,
+                  "block": 1997,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetAvatarActivation(const std::string _avatarName, bool _bActivate)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Set Avatar Activation/Deactivation\n/// @param _avatarName: Avatar name to activate or deactivate           \n/// @param _bActivate: true for activate, false for deactivate\n/// @return if it succeeds, return true.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 22954,
+                    "block": 1998
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 24042,
+                    "block": 1998,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _avatarName: Avatar name to activate or deactivate               ",
+            "@param _bActivate: true for activate, false for deactivate"
+          ],
+          "return_docs_raw": [
+            "@return if it succeeds, return true."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetAvatarMeshTexture",
+      "qualified_name": "utility_api.SetAvatarMeshTexture",
+      "module": "utility_api",
+      "symbol": "SetAvatarMeshTexture",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetAvatarMeshTexture#4573ad3d509f6116",
+          "signature_normalized": "def SetAvatarMeshTexture(_matShapeName : str, _matMeshIndex : int, _textureImagePath : str) -> bool",
+          "signature_raw": "def SetAvatarMeshTexture(_matShapeName : str, _matMeshIndex : int, _textureImagePath : str) -> bool",
+          "parameters": [
+            {
+              "raw": "_matShapeName : str",
+              "name": "_matShapeName",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_matMeshIndex : int",
+              "name": "_matMeshIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_textureImagePath : str",
+              "name": "_textureImagePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def SetAvatarMeshTexture(_matShapeName : str, _matMeshIndex : int, _textureImagePath : str) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Import AvatarTexture Body Part(face, body, arm, leg)\n@param _matShapeName: input avatar shape name(find object browser)\n@param _matMeshIndex: mat mesh index (0: face, 1:body, 2:arm, 3:leg)\n@param _textureImagePath: change texture full path\n@return if it succeeds, return true.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 18562,
+                  "block": 1603
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 19453,
+                  "block": 1603,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetAvatarMeshTexture(const wstring& _matShapeName, int _matMeshIndex, const wstring& _textureImagePath)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Import AvatarTexture Body Part(face, body, arm, leg)\n/// @param _matShapeName: input avatar shape name(find object browser)\n/// @param _matMeshIndex: mat mesh index (0: face, 1:body, 2:arm, 3:leg)\n/// @param _textureImagePath: change texture full path\n/// @return if it succeeds, return true.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 18574,
+                    "block": 1604
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 19465,
+                    "block": 1604,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _matShapeName: input avatar shape name(find object browser)",
+            "@param _matMeshIndex: mat mesh index (0: face, 1:body, 2:arm, 3:leg)",
+            "@param _textureImagePath: change texture full path"
+          ],
+          "return_docs_raw": [
+            "@return if it succeeds, return true."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetAvatarOpacityMap",
+      "qualified_name": "utility_api.SetAvatarOpacityMap",
+      "module": "utility_api",
+      "symbol": "SetAvatarOpacityMap",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetAvatarOpacityMap#b9ebafab091d2388",
+          "signature_normalized": "def SetAvatarOpacityMap(_imageFilePath : str) -> None",
+          "signature_raw": "def SetAvatarOpacityMap(_imageFilePath : str) -> None",
+          "parameters": [
+            {
+              "raw": "_imageFilePath : str",
+              "name": "_imageFilePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetAvatarOpacityMap(_imageFilePath : str) -> None",
+              "documentation_raw": "\"\"\"\n@brief          Set OpacityMap of Avatar\n@param          _imageFilePath: The file path to be set for the Avatar Map\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 22675,
+                  "block": 1973
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 23751,
+                  "block": 1973,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetAvatarOpacityMap(const std::string _imageFilePath)",
+                "documentation_raw": "/// @brief              Set OpacityMap of Avatar\n/// @param              _imageFilePath: The file path to be set for the Avatar Map",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 22683,
+                    "block": 1974
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 23759,
+                    "block": 1974,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          _imageFilePath: The file path to be set for the Avatar Map"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetAvatarOpacityMapByIndex",
+      "qualified_name": "utility_api.SetAvatarOpacityMapByIndex",
+      "module": "utility_api",
+      "symbol": "SetAvatarOpacityMapByIndex",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetAvatarOpacityMapByIndex#7946232ea06eb723",
+          "signature_normalized": "def SetAvatarOpacityMapByIndex(_imageFilePath : str, _matShapeIndex : int) -> None",
+          "signature_raw": "def SetAvatarOpacityMapByIndex(_imageFilePath : str, _matShapeIndex : int) -> None",
+          "parameters": [
+            {
+              "raw": "_imageFilePath : str",
+              "name": "_imageFilePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_matShapeIndex : int",
+              "name": "_matShapeIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetAvatarOpacityMapByIndex(_imageFilePath : str, _matShapeIndex : int) -> None",
+              "documentation_raw": "\"\"\"\n@brief          Set OpacityMap of Avatar\n@param          _imageFilePath: The file path to be set for the Avatar Map\n@param _matShapeIndex: mat shape index (0: face, 1:body, 2:arm, 3:leg)\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 22656,
+                  "block": 1971
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 23731,
+                  "block": 1971,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetAvatarOpacityMapByIndex(const std::string _imageFilePath, int _matShapeIndex)",
+                "documentation_raw": "/// @brief              Set OpacityMap of Avatar\n/// @param              _imageFilePath: The file path to be set for the Avatar Map\n/// @param _matShapeIndex: mat shape index (0: face, 1:body, 2:arm, 3:leg)",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 22665,
+                    "block": 1972
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 23740,
+                    "block": 1972,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          _imageFilePath: The file path to be set for the Avatar Map",
+            "@param _matShapeIndex: mat shape index (0: face, 1:body, 2:arm, 3:leg)"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetAvatarProperties",
+      "qualified_name": "utility_api.SetAvatarProperties",
+      "module": "utility_api",
+      "symbol": "SetAvatarProperties",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetAvatarProperties#c32220f81a7b18dd",
+          "signature_normalized": "def SetAvatarProperties(_avatarIndex : int, avatarPropertyMap : map[str, str]) -> None",
+          "signature_raw": "def SetAvatarProperties(_avatarIndex : int, avatarPropertyMap : map[str, str]) -> None",
+          "parameters": [
+            {
+              "raw": "_avatarIndex : int",
+              "name": "_avatarIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "avatarPropertyMap : map[str, str]",
+              "name": "avatarPropertyMap",
+              "annotation_raw": "map[str, str]"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetAvatarProperties(_avatarIndex : int, avatarPropertyMap : map[str, str]) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Set multiple properties for the avatar at the specified index.           \n@param _avatarIndex: The index of the avatar to set properties for.\n@param avatarPropertyMap: A map containing property names and their corresponding values to set for the avatar. Such as {'KineticFriction': '0.050000', 'SkinOffsetMM': '3.000000', 'StaticFriction': '0.800000'}\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 23844,
+                  "block": 2079
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 24973,
+                  "block": 2079,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetAvatarProperties(unsigned int _avatarIndex, const std::map<std::string, std::string>& avatarPropertyMap)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Set multiple properties for the avatar at the specified index.               \n/// @param _avatarIndex: The index of the avatar to set properties for.\n/// @param avatarPropertyMap: A map containing property names and their corresponding values to set for the avatar. Such as {'KineticFriction': '0.050000', 'SkinOffsetMM': '3.000000', 'StaticFriction': '0.800000'}",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 23854,
+                    "block": 2080
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 24983,
+                    "block": 2080,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _avatarIndex: The index of the avatar to set properties for.",
+            "@param avatarPropertyMap: A map containing property names and their corresponding values to set for the avatar. Such as {'KineticFriction': '0.050000', 'SkinOffsetMM': '3.000000', 'StaticFriction': '0.800000'}"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetAvatarSmooth",
+      "qualified_name": "utility_api.SetAvatarSmooth",
+      "module": "utility_api",
+      "symbol": "SetAvatarSmooth",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetAvatarSmooth#3adb92f3bd06e925",
+          "signature_normalized": "def SetAvatarSmooth(_avatarIndex : int, _smoothlevel : int) -> None",
+          "signature_raw": "def SetAvatarSmooth(_avatarIndex : int, _smoothlevel : int) -> None",
+          "parameters": [
+            {
+              "raw": "_avatarIndex : int",
+              "name": "_avatarIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_smoothlevel : int",
+              "name": "_smoothlevel",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetAvatarSmooth(_avatarIndex : int, _smoothlevel : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Set the maximum subdivision level for avatar smoothing.\n@param _avatarIndex: The index of the avatar to apply smoothing to.\n@param _smoothlevel: The maximum subdivision level to set for avatar smoothing. (1-3)\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 23802,
+                  "block": 2075
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 24929,
+                  "block": 2075,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetAvatarSmooth(unsigned int _avatarIndex, unsigned int _smoothlevel)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Set the maximum subdivision level for avatar smoothing.\n/// @param _avatarIndex: The index of the avatar to apply smoothing to.\n/// @param _smoothlevel: The maximum subdivision level to set for avatar smoothing. (1-3)",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 23812,
+                    "block": 2076
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 24939,
+                    "block": 2076,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _avatarIndex: The index of the avatar to apply smoothing to.",
+            "@param _smoothlevel: The maximum subdivision level to set for avatar smoothing. (1-3)"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetAvatarSoftBodyStiffness",
+      "qualified_name": "utility_api.SetAvatarSoftBodyStiffness",
+      "module": "utility_api",
+      "symbol": "SetAvatarSoftBodyStiffness",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetAvatarSoftBodyStiffness#63bdb21c6676b9d6",
+          "signature_normalized": "def SetAvatarSoftBodyStiffness(_avatarIndex : int, _stiffnessValue : float) -> None",
+          "signature_raw": "def SetAvatarSoftBodyStiffness(_avatarIndex : int, _stiffnessValue : float) -> None",
+          "parameters": [
+            {
+              "raw": "_avatarIndex : int",
+              "name": "_avatarIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_stiffnessValue : float",
+              "name": "_stiffnessValue",
+              "annotation_raw": "float"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetAvatarSoftBodyStiffness(_avatarIndex : int, _stiffnessValue : float) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Set the stiffness value for soft body simulation of the avatar at the specified\n@param _avatarIndex: The index of the avatar to set the stiffness value for.\n@param _stiffnessValue: The value to set for soft body stiffness. (5000.0 - 10000.0).  If 0.0f to uncheck/unselect SoftBodySimulation.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 23886,
+                  "block": 2083
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 25017,
+                  "block": 2083,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetAvatarSoftBodyStiffness(unsigned int _avatarIndex, float _stiffnessValue)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Set the stiffness value for soft body simulation of the avatar at the specified\n/// @param _avatarIndex: The index of the avatar to set the stiffness value for.\n/// @param _stiffnessValue: The value to set for soft body stiffness. (5000.0 - 10000.0).  If 0.0f to uncheck/unselect SoftBodySimulation.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 23896,
+                    "block": 2084
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 25027,
+                    "block": 2084,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _avatarIndex: The index of the avatar to set the stiffness value for.",
+            "@param _stiffnessValue: The value to set for soft body stiffness. (5000.0 - 10000.0).  If 0.0f to uncheck/unselect SoftBodySimulation."
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetAvatarTexureMap",
+      "qualified_name": "utility_api.SetAvatarTexureMap",
+      "module": "utility_api",
+      "symbol": "SetAvatarTexureMap",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetAvatarTexureMap#016860a968518658",
+          "signature_normalized": "def SetAvatarTexureMap(_imageFilePath : str, _textureType : int) -> None",
+          "signature_raw": "def SetAvatarTexureMap(_imageFilePath : str, _textureType : int) -> None",
+          "parameters": [
+            {
+              "raw": "_imageFilePath : str",
+              "name": "_imageFilePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_textureType : int",
+              "name": "_textureType",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetAvatarTexureMap(_imageFilePath : str, _textureType : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Set texture maps for Avatar\n@param _imageFilePath: The file path to be set for the Avatar Map\n@param _textureType: 0: BaseColorMap, 1: MetalnessMap, 2: NormalMap 3: GlossinessMap 4: AlphaMap 5: DisplacementMap\n@return Output file paths. \n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 22841,
+                  "block": 1989
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 23925,
+                  "block": 1989,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetAvatarTexureMap(const std::string _imageFilePath, int _textureType)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Set texture maps for Avatar\n/// @param _imageFilePath: The file path to be set for the Avatar Map\n/// @param _textureType: 0: BaseColorMap, 1: MetalnessMap, 2: NormalMap 3: GlossinessMap 4: AlphaMap 5: DisplacementMap\n/// @return Output file paths.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 22852,
+                    "block": 1990
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 23936,
+                    "block": 1990,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _imageFilePath: The file path to be set for the Avatar Map",
+            "@param _textureType: 0: BaseColorMap, 1: MetalnessMap, 2: NormalMap 3: GlossinessMap 4: AlphaMap 5: DisplacementMap"
+          ],
+          "return_docs_raw": [
+            "@return Output file paths. "
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetBackgroundColorForExportRenderingImage",
+      "qualified_name": "utility_api.SetBackgroundColorForExportRenderingImage",
+      "module": "utility_api",
+      "symbol": "SetBackgroundColorForExportRenderingImage",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetBackgroundColorForExportRenderingImage#16b0ba13820ed1a0",
+          "signature_normalized": "def SetBackgroundColorForExportRenderingImage(_r : float, _g : float, _b : float, _a : float) -> None",
+          "signature_raw": "def SetBackgroundColorForExportRenderingImage(_r : float, _g : float, _b : float, _a : float) -> None",
+          "parameters": [
+            {
+              "raw": "_r : float",
+              "name": "_r",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_g : float",
+              "name": "_g",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_b : float",
+              "name": "_b",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_a : float",
+              "name": "_a",
+              "annotation_raw": "float"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetBackgroundColorForExportRenderingImage(_r : float, _g : float, _b : float, _a : float) -> None",
+              "documentation_raw": "\"\"\"\n@brief Set the background color used when exporting rendering images with the V-Ray renderer.\nThis color will be applied as the rendering environment background, replacing any default\nscene background. It is useful for generating images with transparent backgrounds or\nconsistent studio-like setups.\n@param _r Red component of the background color (range: 0.0 ~ 1.0).\n@param _g Green component of the background color (range: 0.0 ~ 1.0).\n@param _b Blue component of the background color (range: 0.0 ~ 1.0).\n@param _a Alpha component of the background color (range: 0.0 ~ 1.0). \nSet to 0.0 for fully transparent or 1.0 for fully opaque.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 20535,
+                  "block": 1781
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 21515,
+                  "block": 1781,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetBackgroundColorForExportRenderingImage(_r, _g, _b, _a)",
+                "documentation_raw": "/// @brief Set the background color used when exporting rendering images with the V-Ray renderer.\n/// This color will be applied as the rendering environment background, replacing any default\n/// scene background. It is useful for generating images with transparent backgrounds or\n/// consistent studio-like setups.\n/// @param _r Red component of the background color (range: 0.0 ~ 1.0).\n/// @param _g Green component of the background color (range: 0.0 ~ 1.0).\n/// @param _b Blue component of the background color (range: 0.0 ~ 1.0).\n/// @param _a Alpha component of the background color (range: 0.0 ~ 1.0). \n/// Set to 0.0 for fully transparent or 1.0 for fully opaque.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 20550,
+                    "block": 1782
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 21530,
+                    "block": 1782,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _r Red component of the background color (range: 0.0 ~ 1.0).",
+            "@param _g Green component of the background color (range: 0.0 ~ 1.0).",
+            "@param _b Blue component of the background color (range: 0.0 ~ 1.0).",
+            "@param _a Alpha component of the background color (range: 0.0 ~ 1.0). "
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetBasePath",
+      "qualified_name": "utility_api.SetBasePath",
+      "module": "utility_api",
+      "symbol": "SetBasePath",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetBasePath#9c089640c4982c00",
+          "signature_normalized": "def SetBasePath(_basePath : str) -> None",
+          "signature_raw": "def SetBasePath(_basePath : str) -> None",
+          "parameters": [
+            {
+              "raw": "_basePath : str",
+              "name": "_basePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetBasePath(_basePath : str) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Sets the base folder used to resolve project-relative '//<folder>/<file>' paths on EXPORT/SAVE\nAPIs. A path like '//USD/out.usd' then resolves to '<basePath>/USD/out.usd' (the whole remainder\nis appended, so multi-level paths like '//A/B/C/out.usd' work too). Opening a project sets this\nautomatically to the project's folder; call this to override it (e.g. in a headless script or to\nredirect output). Full/absolute paths are unaffected. Note: while a base is set, EVERY '//' path\nis treated as project-relative (never as a UNC server or home folder); pass a full/mounted path\nfor those. '//' resolution applies to export/save paths only - IMPORT paths (e.g. ImportFile)\nare NOT resolved; pass a full path when importing. Pass an empty string to clear it.\n@param _basePath: the base folder, e.g. \"C:/CLO/Test/Project\".\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 25172,
+                  "block": 2179
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 26351,
+                  "block": 2179,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetBasePath(const std::string& _basePath)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Sets the base folder used to resolve project-relative '//<folder>/<file>' paths on EXPORT/SAVE\n/// APIs. A path like '//USD/out.usd' then resolves to '<basePath>/USD/out.usd' (the whole remainder\n/// is appended, so multi-level paths like '//A/B/C/out.usd' work too). Opening a project sets this\n/// automatically to the project's folder; call this to override it (e.g. in a headless script or to\n/// redirect output). Full/absolute paths are unaffected. Note: while a base is set, EVERY '//' path\n/// is treated as project-relative (never as a UNC server or home folder); pass a full/mounted path\n/// for those. '//' resolution applies to export/save paths only - IMPORT paths (e.g. ImportFile)\n/// are NOT resolved; pass a full path when importing. Pass an empty string to clear it.\n/// @param _basePath: the base folder, e.g. \"C:/CLO/Test/Project\".",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 25188,
+                    "block": 2180
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 26367,
+                    "block": 2180,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _basePath: the base folder, e.g. \"C:/CLO/Test/Project\"."
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetBaseTextureMapImageDesaturation",
+      "qualified_name": "utility_api.SetBaseTextureMapImageDesaturation",
+      "module": "utility_api",
+      "symbol": "SetBaseTextureMapImageDesaturation",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetBaseTextureMapImageDesaturation#b7bb5ffc37d75a53",
+          "signature_normalized": "def SetBaseTextureMapImageDesaturation(_fabricIndex : int, _colorwayIndex : int, _bSetOnOff : bool) -> None",
+          "signature_raw": "def SetBaseTextureMapImageDesaturation(_fabricIndex : int, _colorwayIndex : int, _bSetOnOff : bool) -> None",
+          "parameters": [
+            {
+              "raw": "_fabricIndex : int",
+              "name": "_fabricIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_bSetOnOff : bool",
+              "name": "_bSetOnOff",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetBaseTextureMapImageDesaturation(_fabricIndex : int, _colorwayIndex : int, _bSetOnOff : bool) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Set desaturation on/off for base texture map image of fabric in colorway.\n@param _fabricIndex: the target fabric index in the Colorway Editor\n@param _colorwayIndex: target colorway index in the Colorway Editor\n@param _bSetOnOff: true to enable desaturation, false to disable\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 21097,
+                  "block": 1837
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 22105,
+                  "block": 1837,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetBaseTextureMapImageDesaturation(int _fabricIndex, int _colorwayIndex, bool _bSetOnOff)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Set desaturation on/off for base texture map image of fabric in colorway.\n/// @param _fabricIndex: the target fabric index in the Colorway Editor\n/// @param _colorwayIndex: target colorway index in the Colorway Editor\n/// @param _bSetOnOff: true to enable desaturation, false to disable",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 21108,
+                    "block": 1838
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 22116,
+                    "block": 1838,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _fabricIndex: the target fabric index in the Colorway Editor",
+            "@param _colorwayIndex: target colorway index in the Colorway Editor",
+            "@param _bSetOnOff: true to enable desaturation, false to disable"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetButtonHeadStyleColor",
+      "qualified_name": "utility_api.SetButtonHeadStyleColor",
+      "module": "utility_api",
+      "symbol": "SetButtonHeadStyleColor",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetButtonHeadStyleColor#54b2a01e950b570c",
+          "signature_normalized": "def SetButtonHeadStyleColor(_styleIndex : int, _meshIndex : int, _r : int, _g : int, _b : int, _a : int) -> None",
+          "signature_raw": "def SetButtonHeadStyleColor(_styleIndex : int, _meshIndex : int, _r : int, _g : int, _b : int, _a : int) -> None",
+          "parameters": [
+            {
+              "raw": "_styleIndex : int",
+              "name": "_styleIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_meshIndex : int",
+              "name": "_meshIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_r : int",
+              "name": "_r",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_g : int",
+              "name": "_g",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_b : int",
+              "name": "_b",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_a : int",
+              "name": "_a",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetButtonHeadStyleColor(_styleIndex : int, _meshIndex : int, _r : int, _g : int, _b : int, _a : int) -> None",
+              "documentation_raw": "\"\"\"\n@brief          Set base color of PBR material in a ButtonHead Style using given RGBA values\n@param          _styleIndex: ButtonHead Style index on Object Browser to set Color\n@param          _meshIndex: Mesh index to get Color\n-1: All\n0: ButtonHead\n1: Thread\n@param          _r: Red channel \n@param          _g: Green channel\n@param          _b: Blue channel\n@param          _a: Alpha channel\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 21986,
+                  "block": 1919
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 23035,
+                  "block": 1919,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetButtonHeadStyleColor(int _styleIndex, int _meshIndex, int _r, int _g, int _b, int _a)",
+                "documentation_raw": "/// @brief              Set base color of PBR material in a ButtonHead Style using given RGBA values\n/// @param              _styleIndex: ButtonHead Style index on Object Browser to set Color\n/// @param              _meshIndex: Mesh index to get Color\n/// -1: All\n/// 0: ButtonHead\n/// 1: Thread\n/// @param              _r: Red channel \n/// @param              _g: Green channel\n/// @param              _b: Blue channel\n/// @param              _a: Alpha channel",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 22002,
+                    "block": 1920
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 23051,
+                    "block": 1920,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          _styleIndex: ButtonHead Style index on Object Browser to set Color",
+            "@param          _meshIndex: Mesh index to get Color",
+            "@param          _r: Red channel ",
+            "@param          _g: Green channel",
+            "@param          _b: Blue channel",
+            "@param          _a: Alpha channel"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "utility_api.SetButtonHeadStyleColor#dd611d9d7a3abca5",
+          "signature_normalized": "def SetButtonHeadStyleColor(_styleIndex : int, _colorwayIndex : int, _meshIndex : int, _r : int, _g : int, _b : int, _a : int) -> None",
+          "signature_raw": "def SetButtonHeadStyleColor(_styleIndex : int, _colorwayIndex : int, _meshIndex : int, _r : int, _g : int, _b : int, _a : int) -> None",
+          "parameters": [
+            {
+              "raw": "_styleIndex : int",
+              "name": "_styleIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_meshIndex : int",
+              "name": "_meshIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_r : int",
+              "name": "_r",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_g : int",
+              "name": "_g",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_b : int",
+              "name": "_b",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_a : int",
+              "name": "_a",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetButtonHeadStyleColor(_styleIndex : int, _colorwayIndex : int, _meshIndex : int, _r : int, _g : int, _b : int, _a : int) -> None",
+              "documentation_raw": "\"\"\"\n@brief          Set base color of PBR material in a ButtonHead Style using given RGBA values\n@param          _styleIndex: ButtonHead Style index [_colorwayIndex]th Colorway to set Color\n_colorwayIndex: Colorway Index to get Style\n@param          _meshIndex: Mesh index to get Color\n-1: All\n0: ButtonHead\n1: Thread\n@param          _r: Red channel \n@param          _g: Green channel\n@param          _b: Blue channel\n@param          _a: Alpha channel\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 22019,
+                  "block": 1921
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 23069,
+                  "block": 1921,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetButtonHeadStyleColor(int _styleIndex, int _colorwayIndex, int _meshIndex, int _r, int _g, int _b, int _a)",
+                "documentation_raw": "/// @brief              Set base color of PBR material in a ButtonHead Style using given RGBA values\n/// @param              _styleIndex: ButtonHead Style index [_colorwayIndex]th Colorway to set Color\n/// _colorwayIndex: Colorway Index to get Style\n/// @param              _meshIndex: Mesh index to get Color\n/// -1: All\n/// 0: ButtonHead\n/// 1: Thread\n/// @param              _r: Red channel \n/// @param              _g: Green channel\n/// @param              _b: Blue channel\n/// @param              _a: Alpha channel",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 22036,
+                    "block": 1922
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 23086,
+                    "block": 1922,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          _styleIndex: ButtonHead Style index [_colorwayIndex]th Colorway to set Color",
+            "@param          _meshIndex: Mesh index to get Color",
+            "@param          _r: Red channel ",
+            "@param          _g: Green channel",
+            "@param          _b: Blue channel",
+            "@param          _a: Alpha channel"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetButtonHoleStyleColor",
+      "qualified_name": "utility_api.SetButtonHoleStyleColor",
+      "module": "utility_api",
+      "symbol": "SetButtonHoleStyleColor",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetButtonHoleStyleColor#4549095c3de5f49f",
+          "signature_normalized": "def SetButtonHoleStyleColor(_styleIndex : int, _r : int, _g : int, _b : int, _a : int) -> None",
+          "signature_raw": "def SetButtonHoleStyleColor(_styleIndex : int, _r : int, _g : int, _b : int, _a : int) -> None",
+          "parameters": [
+            {
+              "raw": "_styleIndex : int",
+              "name": "_styleIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_r : int",
+              "name": "_r",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_g : int",
+              "name": "_g",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_b : int",
+              "name": "_b",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_a : int",
+              "name": "_a",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetButtonHoleStyleColor(_styleIndex : int, _r : int, _g : int, _b : int, _a : int) -> None",
+              "documentation_raw": "\"\"\"\n@brief          Set base color of PBR material in a ButtonHole Style using given RGBA values\n@param          _styleIndex: ButtonHole Style index on Object Browser to set Color\n@param          _r: Red channel \n@param          _g: Green channel\n@param          _b: Blue channel\n@param          _a: Alpha channel\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 22094,
+                  "block": 1927
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 23147,
+                  "block": 1927,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetButtonHoleStyleColor(int _styleIndex, int _r, int _g, int _b, int _a)",
+                "documentation_raw": "/// @brief              Set base color of PBR material in a ButtonHole Style using given RGBA values\n/// @param              _styleIndex: ButtonHole Style index on Object Browser to set Color\n/// @param              _r: Red channel \n/// @param              _g: Green channel\n/// @param              _b: Blue channel\n/// @param              _a: Alpha channel",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 22106,
+                    "block": 1928
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 23159,
+                    "block": 1928,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          _styleIndex: ButtonHole Style index on Object Browser to set Color",
+            "@param          _r: Red channel ",
+            "@param          _g: Green channel",
+            "@param          _b: Blue channel",
+            "@param          _a: Alpha channel"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "utility_api.SetButtonHoleStyleColor#3762ebf1d5f4a0f0",
+          "signature_normalized": "def SetButtonHoleStyleColor(_styleIndex : int, _colorwayIndex : int, _r : int, _g : int, _b : int, _a : int) -> None",
+          "signature_raw": "def SetButtonHoleStyleColor(_styleIndex : int, _colorwayIndex : int, _r : int, _g : int, _b : int, _a : int) -> None",
+          "parameters": [
+            {
+              "raw": "_styleIndex : int",
+              "name": "_styleIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_r : int",
+              "name": "_r",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_g : int",
+              "name": "_g",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_b : int",
+              "name": "_b",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_a : int",
+              "name": "_a",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetButtonHoleStyleColor(_styleIndex : int, _colorwayIndex : int, _r : int, _g : int, _b : int, _a : int) -> None",
+              "documentation_raw": "\"\"\"\n@brief          Set base color of PBR material in a ButtonHole Style using given RGBA values\n@param          _styleIndex: ButtonHole Style index [_colorwayIndex]th Colorway to set Color\n@param          _colorwayIndex: Colorway Index to get Style\n@param          _r: Red channel \n@param          _g: Green channel\n@param          _b: Blue channel\n@param          _a: Alpha channel\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 22119,
+                  "block": 1929
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 23173,
+                  "block": 1929,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetButtonHoleStyleColor(int _styleIndex, int _colorwayIndex, int _r, int _g, int _b, int _a)",
+                "documentation_raw": "/// @brief              Set base color of PBR material in a ButtonHole Style using given RGBA values\n/// @param              _styleIndex: ButtonHole Style index [_colorwayIndex]th Colorway to set Color\n/// @param              _colorwayIndex: Colorway Index to get Style\n/// @param              _r: Red channel \n/// @param              _g: Green channel\n/// @param              _b: Blue channel\n/// @param              _a: Alpha channel",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 22132,
+                    "block": 1930
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 23186,
+                    "block": 1930,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          _styleIndex: ButtonHole Style index [_colorwayIndex]th Colorway to set Color",
+            "@param          _colorwayIndex: Colorway Index to get Style",
+            "@param          _r: Red channel ",
+            "@param          _g: Green channel",
+            "@param          _b: Blue channel",
+            "@param          _a: Alpha channel"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetCamViewPoint",
+      "qualified_name": "utility_api.SetCamViewPoint",
+      "module": "utility_api",
+      "symbol": "SetCamViewPoint",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetCamViewPoint#86e2e12037b09e6d",
+          "signature_normalized": "def SetCamViewPoint(_viewPointIndex : int) -> None",
+          "signature_raw": "def SetCamViewPoint(_viewPointIndex : int) -> None",
+          "parameters": [
+            {
+              "raw": "_viewPointIndex : int",
+              "name": "_viewPointIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetCamViewPoint(_viewPointIndex : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief set camera view point\n@param _viewPointIndex: Value for setting camera view point index(0: bottom, 1:3/4 right, 2:front, 3:3/4 left, 4: right, 5:top, 6:left, 7:focus zoom, 8:back, 9:zoom extents all)\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 18983,
+                  "block": 1649
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 19897,
+                  "block": 1649,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetCamViewPoint(int _viewPointIndex)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief set camera view point\n/// @param _viewPointIndex: Value for setting camera view point index(0: bottom, 1:3/4 right, 2:front, 3:3/4 left, 4: right, 5:top, 6:left, 7:focus zoom, 8:back, 9:zoom extents all)",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 18992,
+                    "block": 1650
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 19906,
+                    "block": 1650,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _viewPointIndex: Value for setting camera view point index(0: bottom, 1:3/4 right, 2:front, 3:3/4 left, 4: right, 5:top, 6:left, 7:focus zoom, 8:back, 9:zoom extents all)"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetColorSwatchLibraryTabName",
+      "qualified_name": "utility_api.SetColorSwatchLibraryTabName",
+      "module": "utility_api",
+      "symbol": "SetColorSwatchLibraryTabName",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetColorSwatchLibraryTabName#bc8abb48440eef81",
+          "signature_normalized": "def SetColorSwatchLibraryTabName(tabName : str, newTabName : str) -> bool",
+          "signature_raw": "def SetColorSwatchLibraryTabName(tabName : str, newTabName : str) -> bool",
+          "parameters": [
+            {
+              "raw": "tabName : str",
+              "name": "tabName",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "newTabName : str",
+              "name": "newTabName",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def SetColorSwatchLibraryTabName(tabName : str, newTabName : str) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Sets the name of the library tab.\n@param tabName: Name of the color palette library tab\n@param newTabName: Text to be set\n@return true on success, false on failure\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 17129,
+                  "block": 1477
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 17959,
+                  "block": 1477,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetColorSwatchListItemName(const std::string& tabName, const int index, const std::string& text)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Sets the name of the library tab.\n/// @param tabName: Name of the color palette library tab\n/// @param newTabName: Text to be set\n/// @return true on success, false on failure",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 17140,
+                    "block": 1478
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 17970,
+                    "block": 1478,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param tabName: Name of the color palette library tab",
+            "@param newTabName: Text to be set"
+          ],
+          "return_docs_raw": [
+            "@return true on success, false on failure"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetColorSwatchListItemName",
+      "qualified_name": "utility_api.SetColorSwatchListItemName",
+      "module": "utility_api",
+      "symbol": "SetColorSwatchListItemName",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetColorSwatchListItemName#dc3bfdb62f5d24e1",
+          "signature_normalized": "def SetColorSwatchListItemName(tabName : str, index : int, text : str) -> bool",
+          "signature_raw": "def SetColorSwatchListItemName(tabName : str, index : int, text : str) -> bool",
+          "parameters": [
+            {
+              "raw": "tabName : str",
+              "name": "tabName",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "index : int",
+              "name": "index",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "text : str",
+              "name": "text",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def SetColorSwatchListItemName(tabName : str, index : int, text : str) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Sets the name of a color switch item in the library(for combobox palette).\n@param tabName: Name of the color palette library tab\n@param index: Index of the item to be renamed from the color swatch list\n@param text: Text to be set\n@return true on success, false on failure\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 17081,
+                  "block": 1473
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 17909,
+                  "block": 1473,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetColorSwatchListItemName(const std::string& tabName, const int index, const std::string& text)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Sets the name of a color switch item in the library(for combobox palette).\n/// @param tabName: Name of the color palette library tab\n/// @param index: Index of the item to be renamed from the color swatch list\n/// @param text: Text to be set\n/// @return true on success, false on failure",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 17093,
+                    "block": 1474
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 17921,
+                    "block": 1474,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param tabName: Name of the color palette library tab",
+            "@param index: Index of the item to be renamed from the color swatch list",
+            "@param text: Text to be set"
+          ],
+          "return_docs_raw": [
+            "@return true on success, false on failure"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetColorwayColorItem",
+      "qualified_name": "utility_api.SetColorwayColorItem",
+      "module": "utility_api",
+      "symbol": "SetColorwayColorItem",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetColorwayColorItem#a435ed95c3a92745",
+          "signature_normalized": "def SetColorwayColorItem(_colorwayIndex : int, _colorItemIndex : int, _plmId : str, _colorName : str, _rgb : CloApiRgb) -> None",
+          "signature_raw": "def SetColorwayColorItem(_colorwayIndex : int, _colorItemIndex : int, _plmId : str, _colorName : str, _rgb : CloApiRgb) -> None",
+          "parameters": [
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_colorItemIndex : int",
+              "name": "_colorItemIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_plmId : str",
+              "name": "_plmId",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_colorName : str",
+              "name": "_colorName",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_rgb : CloApiRgb",
+              "name": "_rgb",
+              "annotation_raw": "CloApiRgb"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetColorwayColorItem(_colorwayIndex : int, _colorItemIndex : int, _plmId : str, _colorName : str, _rgb : CloApiRgb) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Changes the color of the color item in colorway\n@param _colorwayIndex: colorway index to change color of color item\n@param _colorItemIndex: color item index to change color of colorway\n@param _plmId: plm id of color\n@param _colorName: name of color\n@param _rgb: rgb value of color\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 19619,
+                  "block": 1705
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 20561,
+                  "block": 1705,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetColorwayColorItem(int _colorwayIndex, int _colorItemIndex, std::string _plmId, std::string _colorName, Marvelous::CloApiRgb _rgb)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Changes the color of the color item in colorway\n/// @param _colorwayIndex: colorway index to change color of color item\n/// @param _colorItemIndex: color item index to change color of colorway\n/// @param _plmId: plm id of color\n/// @param _colorName: name of color\n/// @param _rgb: rgb value of color",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 19632,
+                    "block": 1706
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 20574,
+                    "block": 1706,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "CloApiRgb",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:CloApiRgb"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param _colorwayIndex: colorway index to change color of color item",
+            "@param _colorItemIndex: color item index to change color of colorway",
+            "@param _plmId: plm id of color",
+            "@param _colorName: name of color",
+            "@param _rgb: rgb value of color"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetColorwayName",
+      "qualified_name": "utility_api.SetColorwayName",
+      "module": "utility_api",
+      "symbol": "SetColorwayName",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetColorwayName#7bb53b9625953b0a",
+          "signature_normalized": "def SetColorwayName(index : int, str : str) -> None",
+          "signature_raw": "def SetColorwayName(index : int, str : str) -> None",
+          "parameters": [
+            {
+              "raw": "index : int",
+              "name": "index",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "str : str",
+              "name": "str",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetColorwayName(index : int, str : str) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Change colorway name\n@param index: the target colorway index to change the name\n@param str: new name for the colorway\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 16443,
+                  "block": 1421
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 17245,
+                  "block": 1421,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetColorwayName(unsigned int index, const string& str)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Change colorway name\n/// @param index: the target colorway index to change the name\n/// @param str: new name for the colorway",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 16453,
+                    "block": 1422
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 17255,
+                    "block": 1422,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param index: the target colorway index to change the name",
+            "@param str: new name for the colorway"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetColorwayNameW",
+      "qualified_name": "utility_api.SetColorwayNameW",
+      "module": "utility_api",
+      "symbol": "SetColorwayNameW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetColorwayNameW#6ca9208f6fc78e50",
+          "signature_normalized": "def SetColorwayNameW(index : int, wstr : str) -> None",
+          "signature_raw": "def SetColorwayNameW(index : int, wstr : str) -> None",
+          "parameters": [
+            {
+              "raw": "index : int",
+              "name": "index",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "wstr : str",
+              "name": "wstr",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetColorwayNameW(index : int, wstr : str) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Change colorway name\n@param index: the target colorway index to change the name\n@param wstr: new name for the colorway\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 16464,
+                  "block": 1423
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 17267,
+                  "block": 1423,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetColorwayNameW(unsigned int index, const wstring& wstr)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Change colorway name\n/// @param index: the target colorway index to change the name\n/// @param wstr: new name for the colorway",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 16474,
+                    "block": 1424
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 17277,
+                    "block": 1424,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param index: the target colorway index to change the name",
+            "@param wstr: new name for the colorway"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetCropBackground",
+      "qualified_name": "utility_api.SetCropBackground",
+      "module": "utility_api",
+      "symbol": "SetCropBackground",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetCropBackground#674b9f522a40ff33",
+          "signature_normalized": "def SetCropBackground(_bToggle : bool) -> None",
+          "signature_raw": "def SetCropBackground(_bToggle : bool) -> None",
+          "parameters": [
+            {
+              "raw": "_bToggle : bool",
+              "name": "_bToggle",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetCropBackground(_bToggle : bool) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Set crop status.\n@param _bToggle: change crop background as _bToggle\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 20516,
+                  "block": 1779
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 21495,
+                  "block": 1779,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetCropStatus()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Set crop status.\n/// @param _bToggle: change crop background as _bToggle",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 20525,
+                    "block": 1780
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 21504,
+                    "block": 1780,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _bToggle: change crop background as _bToggle"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetCurrentAnimationFrame",
+      "qualified_name": "utility_api.SetCurrentAnimationFrame",
+      "module": "utility_api",
+      "symbol": "SetCurrentAnimationFrame",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetCurrentAnimationFrame#c89e3967a2ce0fec",
+          "signature_normalized": "def SetCurrentAnimationFrame(_frame : double) -> None",
+          "signature_raw": "def SetCurrentAnimationFrame(_frame : double) -> None",
+          "parameters": [
+            {
+              "raw": "_frame : double",
+              "name": "_frame",
+              "annotation_raw": "double"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetCurrentAnimationFrame(_frame : double) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief set current animation frame\n@param _frame: Value for setting current frame\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 18606,
+                  "block": 1607
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 19499,
+                  "block": 1607,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetCurrentAnimationFrame(double _frame)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief set current animation frame\n/// @param _frame: Value for setting current frame",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 18615,
+                    "block": 1608
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 19508,
+                    "block": 1608,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _frame: Value for setting current frame"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetCurrentColorwayIndex",
+      "qualified_name": "utility_api.SetCurrentColorwayIndex",
+      "module": "utility_api",
+      "symbol": "SetCurrentColorwayIndex",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetCurrentColorwayIndex#ef265989f098c704",
+          "signature_normalized": "def SetCurrentColorwayIndex(index : int) -> None",
+          "signature_raw": "def SetCurrentColorwayIndex(index : int) -> None",
+          "parameters": [
+            {
+              "raw": "index : int",
+              "name": "index",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetCurrentColorwayIndex(index : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Change the current colorway\n@param index: the colorway index\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 16424,
+                  "block": 1419
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 17225,
+                  "block": 1419,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetCurrentColorwayIndex(unsigned int index)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Change the current colorway\n/// @param index: the colorway index",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 16433,
+                    "block": 1420
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 17234,
+                    "block": 1420,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param index: the colorway index"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetEndAnimationFrame",
+      "qualified_name": "utility_api.SetEndAnimationFrame",
+      "module": "utility_api",
+      "symbol": "SetEndAnimationFrame",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetEndAnimationFrame#1819a2e893e2e61c",
+          "signature_normalized": "def SetEndAnimationFrame(_frame : double) -> None",
+          "signature_raw": "def SetEndAnimationFrame(_frame : double) -> None",
+          "parameters": [
+            {
+              "raw": "_frame : double",
+              "name": "_frame",
+              "annotation_raw": "double"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetEndAnimationFrame(_frame : double) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief set end animation frame\n@param _frame: Value for setting end frame\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 18678,
+                  "block": 1615
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 19575,
+                  "block": 1615,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetEndAnimationFrame(double _frame)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief set end animation frame\n/// @param _frame: Value for setting end frame",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 18687,
+                    "block": 1616
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 19584,
+                    "block": 1616,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _frame: Value for setting end frame"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetEnvironmentDisplayProperties",
+      "qualified_name": "utility_api.SetEnvironmentDisplayProperties",
+      "module": "utility_api",
+      "symbol": "SetEnvironmentDisplayProperties",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetEnvironmentDisplayProperties#36c93f3ef2ed9785",
+          "signature_normalized": "def SetEnvironmentDisplayProperties(_option : int, _show : bool) -> None",
+          "signature_raw": "def SetEnvironmentDisplayProperties(_option : int, _show : bool) -> None",
+          "parameters": [
+            {
+              "raw": "_option : int",
+              "name": "_option",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_show : bool",
+              "name": "_show",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetEnvironmentDisplayProperties(_option : int, _show : bool) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Set Show/Hide Environment Properties\n@param _option: Option 0: Light (3D), 1: Light (Render), 2: Wind Controller, 3: 3D Shadow, 4: Ground Grid, 5: Grid , 6: All \n@param _show: True/False. True is for show. False is for Hide \n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 22799,
+                  "block": 1985
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 23881,
+                  "block": 1985,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetEnvironmentDisplayProperties()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Set Show/Hide Environment Properties\n/// @param _option: Option 0: Light (3D), 1: Light (Render), 2: Wind Controller, 3: 3D Shadow, 4: Ground Grid, 5: Grid , 6: All \n/// @param _show: True/False. True is for show. False is for Hide",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 22809,
+                    "block": 1986
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 23891,
+                    "block": 1986,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _option: Option 0: Light (3D), 1: Light (Render), 2: Wind Controller, 3: 3D Shadow, 4: Ground Grid, 5: Grid , 6: All ",
+            "@param _show: True/False. True is for show. False is for Hide "
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetFormat3DBackground",
+      "qualified_name": "utility_api.SetFormat3DBackground",
+      "module": "utility_api",
+      "symbol": "SetFormat3DBackground",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetFormat3DBackground#66a937ac28f17e51",
+          "signature_normalized": "def SetFormat3DBackground(r : float, g : float, b : float) -> None",
+          "signature_raw": "def SetFormat3DBackground(r : float, g : float, b : float) -> None",
+          "parameters": [
+            {
+              "raw": "r : float",
+              "name": "r",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "g : float",
+              "name": "g",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "b : float",
+              "name": "b",
+              "annotation_raw": "float"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetFormat3DBackground(r : float, g : float, b : float) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Set 3D Background color\n@param          _r: Red channel \n@param          _g: Green channel\n@param          _b: Blue channel\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 22755,
+                  "block": 1981
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 23835,
+                  "block": 1981,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetFormat3DBackground(float r, float g, float b)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Set 3D Background color\n/// @param              _r: Red channel \n/// @param              _g: Green channel\n/// @param              _b: Blue channel",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 22766,
+                    "block": 1982
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 23846,
+                    "block": 1982,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          _r: Red channel ",
+            "@param          _g: Green channel",
+            "@param          _b: Blue channel"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetGarmentDisplayProperties",
+      "qualified_name": "utility_api.SetGarmentDisplayProperties",
+      "module": "utility_api",
+      "symbol": "SetGarmentDisplayProperties",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetGarmentDisplayProperties#5b90b71fea9fd0a6",
+          "signature_normalized": "def SetGarmentDisplayProperties(_option : int, _show : bool) -> None",
+          "signature_raw": "def SetGarmentDisplayProperties(_option : int, _show : bool) -> None",
+          "parameters": [
+            {
+              "raw": "_option : int",
+              "name": "_option",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_show : bool",
+              "name": "_show",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetGarmentDisplayProperties(_option : int, _show : bool) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Set Show/Hide Garment Properties\n@param _option: Option 0: Garment, 1: Archived Pattern, 2: Seamlines, 3: Internal Lines, 4: ShowBaselines, 5: 3D Pen (Garment), 6: Threads, 7: Pins, 8: Garment Measurements, 9: 2D Measurements, 10: Garment Fitting Suit, 11: All  \n@param _show: True/False. True is for show. False is for Hide \n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 22778,
+                  "block": 1983
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 23859,
+                  "block": 1983,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetGarmentDisplayProperties()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Set Show/Hide Garment Properties\n/// @param _option: Option 0: Garment, 1: Archived Pattern, 2: Seamlines, 3: Internal Lines, 4: ShowBaselines, 5: 3D Pen (Garment), 6: Threads, 7: Pins, 8: Garment Measurements, 9: 2D Measurements, 10: Garment Fitting Suit, 11: All  \n/// @param _show: True/False. True is for show. False is for Hide",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 22788,
+                    "block": 1984
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 23869,
+                    "block": 1984,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _option: Option 0: Garment, 1: Archived Pattern, 2: Seamlines, 3: Internal Lines, 4: ShowBaselines, 5: 3D Pen (Garment), 6: Threads, 7: Pins, 8: Garment Measurements, 9: 2D Measurements, 10: Garment Fitting Suit, 11: All  ",
+            "@param _show: True/False. True is for show. False is for Hide "
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetGraphicBaseColorMapTexture",
+      "qualified_name": "utility_api.SetGraphicBaseColorMapTexture",
+      "module": "utility_api",
+      "symbol": "SetGraphicBaseColorMapTexture",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetGraphicBaseColorMapTexture#261e788285f88889",
+          "signature_normalized": "def SetGraphicBaseColorMapTexture(_imageFilePath : str, _graphicStyleIndex : int) -> None",
+          "signature_raw": "def SetGraphicBaseColorMapTexture(_imageFilePath : str, _graphicStyleIndex : int) -> None",
+          "parameters": [
+            {
+              "raw": "_imageFilePath : str",
+              "name": "_imageFilePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_graphicStyleIndex : int",
+              "name": "_graphicStyleIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetGraphicBaseColorMapTexture(_imageFilePath : str, _graphicStyleIndex : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Sets the base color map texture for the graphic style\n@param _imageFilePath: The file path to be set for the graphic style\n@param _graphicStyleIndex: The graphic style index to change the base color map texture\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 20958,
+                  "block": 1823
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 21959,
+                  "block": 1823,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetGraphicBaseColorMapTexture(std::string _imageFilePath, int _graphicStyleIndex)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Sets the base color map texture for the graphic style\n/// @param _imageFilePath: The file path to be set for the graphic style\n/// @param _graphicStyleIndex: The graphic style index to change the base color map texture",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 20968,
+                    "block": 1824
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 21969,
+                    "block": 1824,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _imageFilePath: The file path to be set for the graphic style",
+            "@param _graphicStyleIndex: The graphic style index to change the base color map texture"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "utility_api.SetGraphicBaseColorMapTexture#5dc29a6789bb4ab8",
+          "signature_normalized": "def SetGraphicBaseColorMapTexture(_imageFilePath : str, _graphicStyleIndex : int, _colorwayIndex : int) -> None",
+          "signature_raw": "def SetGraphicBaseColorMapTexture(_imageFilePath : str, _graphicStyleIndex : int, _colorwayIndex : int) -> None",
+          "parameters": [
+            {
+              "raw": "_imageFilePath : str",
+              "name": "_imageFilePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_graphicStyleIndex : int",
+              "name": "_graphicStyleIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetGraphicBaseColorMapTexture(_imageFilePath : str, _graphicStyleIndex : int, _colorwayIndex : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Sets the base color map texture for the graphic style in the specified colorway\n@param _imageFilePath: The file path to be set for the graphic style\n@param _graphicStyleIndex: The graphic style index to change the base color map texture         \n@param _colorwayIndex: The colorway index to change the base color map texture\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 20979,
+                  "block": 1825
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 21981,
+                  "block": 1825,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetGraphicBaseColorMapTexture(std::string _imageFilePath, int _graphicStyleIndex, int _colorwayIndex)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Sets the base color map texture for the graphic style in the specified colorway\n/// @param _imageFilePath: The file path to be set for the graphic style\n/// @param _graphicStyleIndex: The graphic style index to change the base color map texture             \n/// @param _colorwayIndex: The colorway index to change the base color map texture",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 20990,
+                    "block": 1826
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 21992,
+                    "block": 1826,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _imageFilePath: The file path to be set for the graphic style",
+            "@param _graphicStyleIndex: The graphic style index to change the base color map texture         ",
+            "@param _colorwayIndex: The colorway index to change the base color map texture"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetGraphicDisplacementMapTexture",
+      "qualified_name": "utility_api.SetGraphicDisplacementMapTexture",
+      "module": "utility_api",
+      "symbol": "SetGraphicDisplacementMapTexture",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetGraphicDisplacementMapTexture#329700bb468834d3",
+          "signature_normalized": "def SetGraphicDisplacementMapTexture(_imageFilePath : str) -> None",
+          "signature_raw": "def SetGraphicDisplacementMapTexture(_imageFilePath : str) -> None",
+          "parameters": [
+            {
+              "raw": "_imageFilePath : str",
+              "name": "_imageFilePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetGraphicDisplacementMapTexture(_imageFilePath : str) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Sets the texture map for the graphic style (default index = 0)\n@param _imageFilePath: The file path to be set for the graphic style\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 21021,
+                  "block": 1829
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 22025,
+                  "block": 1829,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetGraphicDisplacementMapTexture(std::string _imageFilePath)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Sets the texture map for the graphic style (default index = 0)\n/// @param _imageFilePath: The file path to be set for the graphic style",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 21030,
+                    "block": 1830
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 22034,
+                    "block": 1830,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _imageFilePath: The file path to be set for the graphic style"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "utility_api.SetGraphicDisplacementMapTexture#e6c5a574c386068e",
+          "signature_normalized": "def SetGraphicDisplacementMapTexture(_GraphicIndex : int, _imageFilePath : str) -> None",
+          "signature_raw": "def SetGraphicDisplacementMapTexture(_GraphicIndex : int, _imageFilePath : str) -> None",
+          "parameters": [
+            {
+              "raw": "_GraphicIndex : int",
+              "name": "_GraphicIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_imageFilePath : str",
+              "name": "_imageFilePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetGraphicDisplacementMapTexture(_GraphicIndex : int, _imageFilePath : str) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Sets the texture map for the graphic style\n@param _index: Graphic style index to use the plugin\n@param _imageFilePath: The file path to be set for the graphic style\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 21309,
+                  "block": 1857
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 22327,
+                  "block": 1857,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetGraphicDisplacementMapTexture(unsigned int _GraphicIndex, std::string _imageFilePath)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Sets the texture map for the graphic style\n/// @param _index: Graphic style index to use the plugin\n/// @param _imageFilePath: The file path to be set for the graphic style",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 21319,
+                    "block": 1858
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 22337,
+                    "block": 1858,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _index: Graphic style index to use the plugin",
+            "@param _imageFilePath: The file path to be set for the graphic style"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetGraphicInstanceLocked",
+      "qualified_name": "utility_api.SetGraphicInstanceLocked",
+      "module": "utility_api",
+      "symbol": "SetGraphicInstanceLocked",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetGraphicInstanceLocked#50c5d6853655f3ef",
+          "signature_normalized": "def SetGraphicInstanceLocked(_patternIndex : int, _graphicIndex : int, _bLocked : bool) -> None",
+          "signature_raw": "def SetGraphicInstanceLocked(_patternIndex : int, _graphicIndex : int, _bLocked : bool) -> None",
+          "parameters": [
+            {
+              "raw": "_patternIndex : int",
+              "name": "_patternIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_graphicIndex : int",
+              "name": "_graphicIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_bLocked : bool",
+              "name": "_bLocked",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetGraphicInstanceLocked(_patternIndex : int, _graphicIndex : int, _bLocked : bool) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Sets the lock state of the graphic instance placed on a specific pattern piece (instance-level: affects angle, position, Z-offset, configuration)\n@param _patternIndex: Pattern piece index in the PatternEditor's pattern list\n@param _graphicIndex: Graphic style index in the current colorway's style list\n@param _bLocked: If true, locks the instance; if false, unlocks it\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 19982,
+                  "block": 1739
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 20941,
+                  "block": 1739,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetGraphicInstanceLocked(int _patternIndex, int _graphicIndex, bool _bLocked)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Sets the lock state of the graphic instance placed on a specific pattern piece (instance-level: affects angle, position, Z-offset, configuration)\n/// @param _patternIndex: Pattern piece index in the PatternEditor's pattern list\n/// @param _graphicIndex: Graphic style index in the current colorway's style list\n/// @param _bLocked: If true, locks the instance; if false, unlocks it",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 19993,
+                    "block": 1740
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 20952,
+                    "block": 1740,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _patternIndex: Pattern piece index in the PatternEditor's pattern list",
+            "@param _graphicIndex: Graphic style index in the current colorway's style list",
+            "@param _bLocked: If true, locks the instance; if false, unlocks it"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetGraphicMetalnessMapTexture",
+      "qualified_name": "utility_api.SetGraphicMetalnessMapTexture",
+      "module": "utility_api",
+      "symbol": "SetGraphicMetalnessMapTexture",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetGraphicMetalnessMapTexture#eadc1ddee176a9d6",
+          "signature_normalized": "def SetGraphicMetalnessMapTexture(_imageFilePath : str) -> None",
+          "signature_raw": "def SetGraphicMetalnessMapTexture(_imageFilePath : str) -> None",
+          "parameters": [
+            {
+              "raw": "_imageFilePath : str",
+              "name": "_imageFilePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetGraphicMetalnessMapTexture(_imageFilePath : str) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Sets the texture map for the graphic style (default index = 0)\n@param _imageFilePath: The file path to be set for the graphic style\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 21078,
+                  "block": 1835
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 22085,
+                  "block": 1835,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetGraphicMetalnessMapTexture(std::string _imageFilePath)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Sets the texture map for the graphic style (default index = 0)\n/// @param _imageFilePath: The file path to be set for the graphic style",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 21087,
+                    "block": 1836
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 22094,
+                    "block": 1836,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _imageFilePath: The file path to be set for the graphic style"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "utility_api.SetGraphicMetalnessMapTexture#cab5952144ace297",
+          "signature_normalized": "def SetGraphicMetalnessMapTexture(_GraphicIndex : int, _imageFilePath : str) -> None",
+          "signature_raw": "def SetGraphicMetalnessMapTexture(_GraphicIndex : int, _imageFilePath : str) -> None",
+          "parameters": [
+            {
+              "raw": "_GraphicIndex : int",
+              "name": "_GraphicIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_imageFilePath : str",
+              "name": "_imageFilePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetGraphicMetalnessMapTexture(_GraphicIndex : int, _imageFilePath : str) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Sets the texture map for the graphic style\n@param _GraphicIndex: Graphic style index to use the plugin\n@param _imageFilePath: The file path to be set for the graphic style\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 21372,
+                  "block": 1863
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 22393,
+                  "block": 1863,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetGraphicMetalnessMapTexture(unsigned int _GraphicIndex, std::string _imageFilePath)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Sets the texture map for the graphic style\n/// @param _GraphicIndex: Graphic style index to use the plugin\n/// @param _imageFilePath: The file path to be set for the graphic style",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 21382,
+                    "block": 1864
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 22403,
+                    "block": 1864,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _GraphicIndex: Graphic style index to use the plugin",
+            "@param _imageFilePath: The file path to be set for the graphic style"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetGraphicNormalMapTexture",
+      "qualified_name": "utility_api.SetGraphicNormalMapTexture",
+      "module": "utility_api",
+      "symbol": "SetGraphicNormalMapTexture",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetGraphicNormalMapTexture#7c39cfc92302edf3",
+          "signature_normalized": "def SetGraphicNormalMapTexture(_imageFilePath : str) -> None",
+          "signature_raw": "def SetGraphicNormalMapTexture(_imageFilePath : str) -> None",
+          "parameters": [
+            {
+              "raw": "_imageFilePath : str",
+              "name": "_imageFilePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetGraphicNormalMapTexture(_imageFilePath : str) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Sets the texture map for the graphic style (default index = 0)\n@param _imageFilePath: The file path to be set for the graphic style\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 21002,
+                  "block": 1827
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 22005,
+                  "block": 1827,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetGraphicNormalMapTexture(std::string _imageFilePath)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Sets the texture map for the graphic style (default index = 0)\n/// @param _imageFilePath: The file path to be set for the graphic style",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 21011,
+                    "block": 1828
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 22014,
+                    "block": 1828,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _imageFilePath: The file path to be set for the graphic style"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "utility_api.SetGraphicNormalMapTexture#b1c6cc98bd273f3e",
+          "signature_normalized": "def SetGraphicNormalMapTexture(_GraphicIndex : int, _imageFilePath : str) -> None",
+          "signature_raw": "def SetGraphicNormalMapTexture(_GraphicIndex : int, _imageFilePath : str) -> None",
+          "parameters": [
+            {
+              "raw": "_GraphicIndex : int",
+              "name": "_GraphicIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_imageFilePath : str",
+              "name": "_imageFilePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetGraphicNormalMapTexture(_GraphicIndex : int, _imageFilePath : str) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Sets the texture map for the graphic style\n@param _index: Graphic style index to use the plugin\n@param _imageFilePath: The file path to be set for the graphic style\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 21288,
+                  "block": 1855
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 22305,
+                  "block": 1855,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetGraphicNormalMapTexture(unsigned int _GraphicIndex, std::string _imageFilePath)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Sets the texture map for the graphic style\n/// @param _index: Graphic style index to use the plugin\n/// @param _imageFilePath: The file path to be set for the graphic style",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 21298,
+                    "block": 1856
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 22315,
+                    "block": 1856,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _index: Graphic style index to use the plugin",
+            "@param _imageFilePath: The file path to be set for the graphic style"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetGraphicOpacityMapTexture",
+      "qualified_name": "utility_api.SetGraphicOpacityMapTexture",
+      "module": "utility_api",
+      "symbol": "SetGraphicOpacityMapTexture",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetGraphicOpacityMapTexture#979734f0ffea58d9",
+          "signature_normalized": "def SetGraphicOpacityMapTexture(_imageFilePath : str) -> None",
+          "signature_raw": "def SetGraphicOpacityMapTexture(_imageFilePath : str) -> None",
+          "parameters": [
+            {
+              "raw": "_imageFilePath : str",
+              "name": "_imageFilePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetGraphicOpacityMapTexture(_imageFilePath : str) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Sets the texture map for the graphic style (default index = 0)\n@param _imageFilePath: The file path to be set for the graphic style\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 21040,
+                  "block": 1831
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 22045,
+                  "block": 1831,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetGraphicOpacityMapTexture(std::string _imageFilePath)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Sets the texture map for the graphic style (default index = 0)\n/// @param _imageFilePath: The file path to be set for the graphic style",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 21049,
+                    "block": 1832
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 22054,
+                    "block": 1832,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _imageFilePath: The file path to be set for the graphic style"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "utility_api.SetGraphicOpacityMapTexture#13ed7478818051ea",
+          "signature_normalized": "def SetGraphicOpacityMapTexture(_GraphicIndex : int, _imageFilePath : str) -> None",
+          "signature_raw": "def SetGraphicOpacityMapTexture(_GraphicIndex : int, _imageFilePath : str) -> None",
+          "parameters": [
+            {
+              "raw": "_GraphicIndex : int",
+              "name": "_GraphicIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_imageFilePath : str",
+              "name": "_imageFilePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetGraphicOpacityMapTexture(_GraphicIndex : int, _imageFilePath : str) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Sets the texture map for the graphic style\n@param _GraphicIndex: Graphic style index to use the plugin\n@param _imageFilePath: The file path to be set for the graphic style\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 21330,
+                  "block": 1859
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 22349,
+                  "block": 1859,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetGraphicOpacityMapTexture(unsigned int _GraphicIndex, std::string _imageFilePath)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Sets the texture map for the graphic style\n/// @param _GraphicIndex: Graphic style index to use the plugin\n/// @param _imageFilePath: The file path to be set for the graphic style",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 21340,
+                    "block": 1860
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 22359,
+                    "block": 1860,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _GraphicIndex: Graphic style index to use the plugin",
+            "@param _imageFilePath: The file path to be set for the graphic style"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetGraphicRoughnessMapTexture",
+      "qualified_name": "utility_api.SetGraphicRoughnessMapTexture",
+      "module": "utility_api",
+      "symbol": "SetGraphicRoughnessMapTexture",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetGraphicRoughnessMapTexture#52fe6b19be2d1ca4",
+          "signature_normalized": "def SetGraphicRoughnessMapTexture(_imageFilePath : str) -> None",
+          "signature_raw": "def SetGraphicRoughnessMapTexture(_imageFilePath : str) -> None",
+          "parameters": [
+            {
+              "raw": "_imageFilePath : str",
+              "name": "_imageFilePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetGraphicRoughnessMapTexture(_imageFilePath : str) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Sets the texture map for the graphic style (default index = 0)\n@param _imageFilePath: The file path to be set for the graphic style\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 21059,
+                  "block": 1833
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 22065,
+                  "block": 1833,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetGraphicRoughnessMapTexture(std::string _imageFilePath)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Sets the texture map for the graphic style (default index = 0)\n/// @param _imageFilePath: The file path to be set for the graphic style",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 21068,
+                    "block": 1834
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 22074,
+                    "block": 1834,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _imageFilePath: The file path to be set for the graphic style"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "utility_api.SetGraphicRoughnessMapTexture#de021a6556ba9879",
+          "signature_normalized": "def SetGraphicRoughnessMapTexture(_GraphicIndex : int, _imageFilePath : str) -> None",
+          "signature_raw": "def SetGraphicRoughnessMapTexture(_GraphicIndex : int, _imageFilePath : str) -> None",
+          "parameters": [
+            {
+              "raw": "_GraphicIndex : int",
+              "name": "_GraphicIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_imageFilePath : str",
+              "name": "_imageFilePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetGraphicRoughnessMapTexture(_GraphicIndex : int, _imageFilePath : str) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Sets the texture map for the graphic style\n@param _GraphicIndex: Graphic style index to use the plugin\n@param _imageFilePath: The file path to be set for the graphic style\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 21351,
+                  "block": 1861
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 22371,
+                  "block": 1861,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetGraphicRoughnessMapTexture(unsigned int _GraphicIndex, std::string _imageFilePath)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Sets the texture map for the graphic style\n/// @param _GraphicIndex: Graphic style index to use the plugin\n/// @param _imageFilePath: The file path to be set for the graphic style",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 21361,
+                    "block": 1862
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 22381,
+                    "block": 1862,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _GraphicIndex: Graphic style index to use the plugin",
+            "@param _imageFilePath: The file path to be set for the graphic style"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetGraphicStyleBaseColorMapTextureDesaturation",
+      "qualified_name": "utility_api.SetGraphicStyleBaseColorMapTextureDesaturation",
+      "module": "utility_api",
+      "symbol": "SetGraphicStyleBaseColorMapTextureDesaturation",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetGraphicStyleBaseColorMapTextureDesaturation#6daa85c40b31f0e2",
+          "signature_normalized": "def SetGraphicStyleBaseColorMapTextureDesaturation(_graphicStyleIndex : int, _colorwayIndex : int, _bSetOnOff : bool) -> None",
+          "signature_raw": "def SetGraphicStyleBaseColorMapTextureDesaturation(_graphicStyleIndex : int, _colorwayIndex : int, _bSetOnOff : bool) -> None",
+          "parameters": [
+            {
+              "raw": "_graphicStyleIndex : int",
+              "name": "_graphicStyleIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_bSetOnOff : bool",
+              "name": "_bSetOnOff",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetGraphicStyleBaseColorMapTextureDesaturation(_graphicStyleIndex : int, _colorwayIndex : int, _bSetOnOff : bool) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Turns the desaturation (grayscale) on or off for the base color map texture of the specified graphic style in the specified colorway\n@param _graphicStyleIndex: The graphic style index to apply the desaturation setting\n@param _colorwayIndex: The colorway index to apply the desaturation setting\n@param _bSetOnOff: true to enable desaturation, false to disable\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 24726,
+                  "block": 2151
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 25891,
+                  "block": 2151,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetGraphicStyleBaseColorMapTextureDesaturation(int _graphicStyleIndex, int _colorwayIndex, bool _bSetOnOff)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Turns the desaturation (grayscale) on or off for the base color map texture of the specified graphic style in the specified colorway\n/// @param _graphicStyleIndex: The graphic style index to apply the desaturation setting\n/// @param _colorwayIndex: The colorway index to apply the desaturation setting\n/// @param _bSetOnOff: true to enable desaturation, false to disable",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 24737,
+                    "block": 2152
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 25902,
+                    "block": 2152,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _graphicStyleIndex: The graphic style index to apply the desaturation setting",
+            "@param _colorwayIndex: The colorway index to apply the desaturation setting",
+            "@param _bSetOnOff: true to enable desaturation, false to disable"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    }
+  ]
+}

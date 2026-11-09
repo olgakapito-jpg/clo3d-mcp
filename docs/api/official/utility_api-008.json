@@ -1,0 +1,3693 @@
+{
+  "kind": "methods",
+  "records": [
+    {
+      "id": "utility_api.SetShowHideAvatar",
+      "qualified_name": "utility_api.SetShowHideAvatar",
+      "module": "utility_api",
+      "symbol": "SetShowHideAvatar",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetShowHideAvatar#1132e83118f7f18e",
+          "signature_normalized": "def SetShowHideAvatar(_bShow : bool) -> None",
+          "signature_raw": "def SetShowHideAvatar(_bShow : bool) -> None",
+          "parameters": [
+            {
+              "raw": "_bShow : bool",
+              "name": "_bShow",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetShowHideAvatar(_bShow : bool) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Set all avatars' show/hide status\n@param _bShow: true for show, false for hide\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 17748,
+                  "block": 1535
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 18607,
+                  "block": 1535,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetShowHideAvatar(bool _bShow)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Set all avatars' show/hide status\n/// @param _bShow: true for show, false for hide",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 17757,
+                    "block": 1536
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 18616,
+                    "block": 1536,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _bShow: true for show, false for hide"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "utility_api.SetShowHideAvatar#908921233b340443",
+          "signature_normalized": "def SetShowHideAvatar(_bShow : bool, _avatarIdex : int) -> None",
+          "signature_raw": "def SetShowHideAvatar(_bShow : bool, _avatarIdex : int) -> None",
+          "parameters": [
+            {
+              "raw": "_bShow : bool",
+              "name": "_bShow",
+              "annotation_raw": "bool"
+            },
+            {
+              "raw": "_avatarIdex : int",
+              "name": "_avatarIdex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetShowHideAvatar(_bShow : bool, _avatarIdex : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Set show/hide status of avatar that matches the index\n@param _bShow: true for show, false for hide\n@param _avatarIdex: the target avatar index\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 17767,
+                  "block": 1537
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 18627,
+                  "block": 1537,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetShowHideAvatar(bool _bShow, int _avatarIdex)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Set show/hide status of avatar that matches the index\n/// @param _bShow: true for show, false for hide\n/// @param _avatarIdex: the target avatar index",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 17777,
+                    "block": 1538
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 18637,
+                    "block": 1538,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _bShow: true for show, false for hide",
+            "@param _avatarIdex: the target avatar index"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetShowHideColorOptions",
+      "qualified_name": "utility_api.SetShowHideColorOptions",
+      "module": "utility_api",
+      "symbol": "SetShowHideColorOptions",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetShowHideColorOptions#e0f01c76e5246aae",
+          "signature_normalized": "def SetShowHideColorOptions(_option : int, _show : bool) -> None",
+          "signature_raw": "def SetShowHideColorOptions(_option : int, _show : bool) -> None",
+          "parameters": [
+            {
+              "raw": "_option : int",
+              "name": "_option",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_show : bool",
+              "name": "_show",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetShowHideColorOptions(_option : int, _show : bool) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Set Show/Hide Color Options\n@param _option: Option 0: All, 1: Freeze, 2: Strengthen, 3: Solidify, 4: Layer, 5: All (Mesh) , 6: Subdivide (Mesh), 7: Freeze (Mesh), 8: Strengthen (Mesh), 9: Solidify (Mesh) \n@param _show: True/False. True is for show. False is for Hide \n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 22820,
+                  "block": 1987
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 23903,
+                  "block": 1987,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetShowHideColorOptions()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Set Show/Hide Color Options\n/// @param _option: Option 0: All, 1: Freeze, 2: Strengthen, 3: Solidify, 4: Layer, 5: All (Mesh) , 6: Subdivide (Mesh), 7: Freeze (Mesh), 8: Strengthen (Mesh), 9: Solidify (Mesh) \n/// @param _show: True/False. True is for show. False is for Hide",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 22830,
+                    "block": 1988
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 23913,
+                    "block": 1988,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _option: Option 0: All, 1: Freeze, 2: Strengthen, 3: Solidify, 4: Layer, 5: All (Mesh) , 6: Subdivide (Mesh), 7: Freeze (Mesh), 8: Strengthen (Mesh), 9: Solidify (Mesh) ",
+            "@param _show: True/False. True is for show. False is for Hide "
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetShowSchematicInternalLine",
+      "qualified_name": "utility_api.SetShowSchematicInternalLine",
+      "module": "utility_api",
+      "symbol": "SetShowSchematicInternalLine",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetShowSchematicInternalLine#3b53bdebfa71da91",
+          "signature_normalized": "def SetShowSchematicInternalLine(_bOn : bool) -> None",
+          "signature_raw": "def SetShowSchematicInternalLine(_bOn : bool) -> None",
+          "parameters": [
+            {
+              "raw": "_bOn : bool",
+              "name": "_bOn",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetShowSchematicInternalLine(_bOn : bool) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief set show schematic internal line\n@param _bOn: Value for setting show schematic internalline\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 19340,
+                  "block": 1679
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 20269,
+                  "block": 1679,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetShowSchematicInternalLine(bool _bOn)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief set show schematic internal line\n/// @param _bOn: Value for setting show schematic internalline",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 19349,
+                    "block": 1680
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 20278,
+                    "block": 1680,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _bOn: Value for setting show schematic internalline"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetShowSchematicSeamLine",
+      "qualified_name": "utility_api.SetShowSchematicSeamLine",
+      "module": "utility_api",
+      "symbol": "SetShowSchematicSeamLine",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetShowSchematicSeamLine#d1ec476a150d8faa",
+          "signature_normalized": "def SetShowSchematicSeamLine(_bOn : bool) -> None",
+          "signature_raw": "def SetShowSchematicSeamLine(_bOn : bool) -> None",
+          "parameters": [
+            {
+              "raw": "_bOn : bool",
+              "name": "_bOn",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetShowSchematicSeamLine(_bOn : bool) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief set show schematic seamline\n@param _bOn: Value for setting show schematic seamline\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 19321,
+                  "block": 1677
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 20249,
+                  "block": 1677,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetShowSchematicSeamLine(int _bOn)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief set show schematic seamline\n/// @param _bOn: Value for setting show schematic seamline",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 19330,
+                    "block": 1678
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 20258,
+                    "block": 1678,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _bOn: Value for setting show schematic seamline"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetShowSchematicSilhouetteLine",
+      "qualified_name": "utility_api.SetShowSchematicSilhouetteLine",
+      "module": "utility_api",
+      "symbol": "SetShowSchematicSilhouetteLine",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetShowSchematicSilhouetteLine#997d192539ff2031",
+          "signature_normalized": "def SetShowSchematicSilhouetteLine(_bOn : bool) -> None",
+          "signature_raw": "def SetShowSchematicSilhouetteLine(_bOn : bool) -> None",
+          "parameters": [
+            {
+              "raw": "_bOn : bool",
+              "name": "_bOn",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetShowSchematicSilhouetteLine(_bOn : bool) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief set show schematic silhouetteline\n@param _bOn: Value for setting showschematic silhouetteline\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 19302,
+                  "block": 1675
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 20229,
+                  "block": 1675,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetShowSchematicSilhouetteLine(bool _bOn)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief set show schematic silhouetteline\n/// @param _bOn: Value for setting showschematic silhouetteline",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 19311,
+                    "block": 1676
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 20238,
+                    "block": 1676,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _bOn: Value for setting showschematic silhouetteline"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetShowSchematicTopstitchLine",
+      "qualified_name": "utility_api.SetShowSchematicTopstitchLine",
+      "module": "utility_api",
+      "symbol": "SetShowSchematicTopstitchLine",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetShowSchematicTopstitchLine#c3c4a95a92b218d0",
+          "signature_normalized": "def SetShowSchematicTopstitchLine(_bOn : bool) -> None",
+          "signature_raw": "def SetShowSchematicTopstitchLine(_bOn : bool) -> None",
+          "parameters": [
+            {
+              "raw": "_bOn : bool",
+              "name": "_bOn",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetShowSchematicTopstitchLine(_bOn : bool) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief set show schematic topstitch line\n@param _bOn: Value for setting show schematic topstitchline\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 19359,
+                  "block": 1681
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 20289,
+                  "block": 1681,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetShowSchematicTopstitchLine(bool _bOn)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief set show schematic topstitch line\n/// @param _bOn: Value for setting show schematic topstitchline",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 19368,
+                    "block": 1682
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 20298,
+                    "block": 1682,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _bOn: Value for setting show schematic topstitchline"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetSimulationAirDamping",
+      "qualified_name": "utility_api.SetSimulationAirDamping",
+      "module": "utility_api",
+      "symbol": "SetSimulationAirDamping",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetSimulationAirDamping#0ee1f37d88e0f202",
+          "signature_normalized": "def SetSimulationAirDamping(_airDamping : float) -> None",
+          "signature_raw": "def SetSimulationAirDamping(_airDamping : float) -> None",
+          "parameters": [
+            {
+              "raw": "_airDamping : float",
+              "name": "_airDamping",
+              "annotation_raw": "float"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetSimulationAirDamping(_airDamping : float) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Set air damping value\n@param _airDamping : air damping(Default: 1.0)\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 18254,
+                  "block": 1571
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 19129,
+                  "block": 1571,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetSimulationAirDamping(int _airDamping)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Set air damping value\n/// @param _airDamping : air damping(Default: 1.0)",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 18263,
+                    "block": 1572
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 19138,
+                    "block": 1572,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _airDamping : air damping(Default: 1.0)"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetSimulationCGFinishCondition",
+      "qualified_name": "utility_api.SetSimulationCGFinishCondition",
+      "module": "utility_api",
+      "symbol": "SetSimulationCGFinishCondition",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetSimulationCGFinishCondition#3975689995c7825f",
+          "signature_normalized": "def SetSimulationCGFinishCondition(_cgFinishCondition : int) -> None",
+          "signature_raw": "def SetSimulationCGFinishCondition(_cgFinishCondition : int) -> None",
+          "parameters": [
+            {
+              "raw": "_cgFinishCondition : int",
+              "name": "_cgFinishCondition",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetSimulationCGFinishCondition(_cgFinishCondition : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Set simulation finish condition\n@param _cgFinishCondition : Conjugate Gradient finish condition (0: iteration, 1: residual)\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 18178,
+                  "block": 1563
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 19049,
+                  "block": 1563,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetSimulationCGFinishCondition(int _cgFinishCondition)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Set simulation finish condition\n/// @param _cgFinishCondition : Conjugate Gradient finish condition (0: iteration, 1: residual)",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 18187,
+                    "block": 1564
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 19058,
+                    "block": 1564,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _cgFinishCondition : Conjugate Gradient finish condition (0: iteration, 1: residual)"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetSimulationCGIterationCount",
+      "qualified_name": "utility_api.SetSimulationCGIterationCount",
+      "module": "utility_api",
+      "symbol": "SetSimulationCGIterationCount",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetSimulationCGIterationCount#b64b7319641ef198",
+          "signature_normalized": "def SetSimulationCGIterationCount(_cgIterationCount : int) -> None",
+          "signature_raw": "def SetSimulationCGIterationCount(_cgIterationCount : int) -> None",
+          "parameters": [
+            {
+              "raw": "_cgIterationCount : int",
+              "name": "_cgIterationCount",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetSimulationCGIterationCount(_cgIterationCount : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Set Conjugate Gradient iteration count per one step.\n@param _cgIterationCount : iteration count (Default : 50, Min/Max Range 1~1000)\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 18197,
+                  "block": 1565
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 19069,
+                  "block": 1565,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetSimulationCGIterationCount(int _cgIterationCount)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Set Conjugate Gradient iteration count per one step.\n/// @param _cgIterationCount : iteration count (Default : 50, Min/Max Range 1~1000)",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 18206,
+                    "block": 1566
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 19078,
+                    "block": 1566,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _cgIterationCount : iteration count (Default : 50, Min/Max Range 1~1000)"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetSimulationCGResidual",
+      "qualified_name": "utility_api.SetSimulationCGResidual",
+      "module": "utility_api",
+      "symbol": "SetSimulationCGResidual",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetSimulationCGResidual#493ed79092641008",
+          "signature_normalized": "def SetSimulationCGResidual(_cgResidual : float) -> None",
+          "signature_raw": "def SetSimulationCGResidual(_cgResidual : float) -> None",
+          "parameters": [
+            {
+              "raw": "_cgResidual : float",
+              "name": "_cgResidual",
+              "annotation_raw": "float"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetSimulationCGResidual(_cgResidual : float) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Set Conjugate Gradient relative residual value for finishing\n@param _cgResidual : relative residual value for finishing (0.0001 in Normal, 0.00001 in Animation and Fitting)\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 18216,
+                  "block": 1567
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 19089,
+                  "block": 1567,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetSimulationCGResidual(int _cgResidual)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Set Conjugate Gradient relative residual value for finishing\n/// @param _cgResidual : relative residual value for finishing (0.0001 in Normal, 0.00001 in Animation and Fitting)",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 18225,
+                    "block": 1568
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 19098,
+                    "block": 1568,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _cgResidual : relative residual value for finishing (0.0001 in Normal, 0.00001 in Animation and Fitting)"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetSimulationGravity",
+      "qualified_name": "utility_api.SetSimulationGravity",
+      "module": "utility_api",
+      "symbol": "SetSimulationGravity",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetSimulationGravity#404626a53c7cc898",
+          "signature_normalized": "def SetSimulationGravity(_gravity : float) -> None",
+          "signature_raw": "def SetSimulationGravity(_gravity : float) -> None",
+          "parameters": [
+            {
+              "raw": "_gravity : float",
+              "name": "_gravity",
+              "annotation_raw": "float"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetSimulationGravity(_gravity : float) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Set gravity value in y-axis\n@param _gravity : gravity  (Default: -9800.0 mm/s^2)\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 18273,
+                  "block": 1573
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 19149,
+                  "block": 1573,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetSimulationGravity(int _gravity)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Set gravity value in y-axis\n/// @param _gravity : gravity  (Default: -9800.0 mm/s^2)",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 18282,
+                    "block": 1574
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 19158,
+                    "block": 1574,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _gravity : gravity  (Default: -9800.0 mm/s^2)"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetSimulationGroundCollision",
+      "qualified_name": "utility_api.SetSimulationGroundCollision",
+      "module": "utility_api",
+      "symbol": "SetSimulationGroundCollision",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetSimulationGroundCollision#be254c497a567acf",
+          "signature_normalized": "def SetSimulationGroundCollision(_bGroundCollision : bool) -> None",
+          "signature_raw": "def SetSimulationGroundCollision(_bGroundCollision : bool) -> None",
+          "parameters": [
+            {
+              "raw": "_bGroundCollision : bool",
+              "name": "_bGroundCollision",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetSimulationGroundCollision(_bGroundCollision : bool) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Set ground collision\n@param _bGroundCollision : true for enable, false for disable\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 18330,
+                  "block": 1579
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 19209,
+                  "block": 1579,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetSimulationGroundCollision(int _bGroundCollision)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Set ground collision\n/// @param _bGroundCollision : true for enable, false for disable",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 18339,
+                    "block": 1580
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 19218,
+                    "block": 1580,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _bGroundCollision : true for enable, false for disable"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetSimulationGroundHeight",
+      "qualified_name": "utility_api.SetSimulationGroundHeight",
+      "module": "utility_api",
+      "symbol": "SetSimulationGroundHeight",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetSimulationGroundHeight#6468f03d914a248f",
+          "signature_normalized": "def SetSimulationGroundHeight(_groundHeight : float) -> None",
+          "signature_raw": "def SetSimulationGroundHeight(_groundHeight : float) -> None",
+          "parameters": [
+            {
+              "raw": "_groundHeight : float",
+              "name": "_groundHeight",
+              "annotation_raw": "float"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetSimulationGroundHeight(_groundHeight : float) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Set ground height value\n@param _groundHeight : ground height in y-axis (Default: 0.0)\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 18349,
+                  "block": 1581
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 19229,
+                  "block": 1581,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetSimulationGroundHeight(int _groundHeight)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Set ground height value\n/// @param _groundHeight : ground height in y-axis (Default: 0.0)",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 18358,
+                    "block": 1582
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 19238,
+                    "block": 1582,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _groundHeight : ground height in y-axis (Default: 0.0)"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetSimulationLayerBasedCollisionDetection",
+      "qualified_name": "utility_api.SetSimulationLayerBasedCollisionDetection",
+      "module": "utility_api",
+      "symbol": "SetSimulationLayerBasedCollisionDetection",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetSimulationLayerBasedCollisionDetection#8bcf5b99e4407247",
+          "signature_normalized": "def SetSimulationLayerBasedCollisionDetection(_bUseLayer : bool) -> None",
+          "signature_raw": "def SetSimulationLayerBasedCollisionDetection(_bUseLayer : bool) -> None",
+          "parameters": [
+            {
+              "raw": "_bUseLayer : bool",
+              "name": "_bUseLayer",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetSimulationLayerBasedCollisionDetection(_bUseLayer : bool) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Set layer based collision detection \n@param _bUseLayer : true for enable, false for disable\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 18387,
+                  "block": 1585
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 19269,
+                  "block": 1585,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetSimulationLayerBasedCollisionDetection(int _bUseLayer)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Set layer based collision detection \n/// @param _bUseLayer : true for enable, false for disable",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 18396,
+                    "block": 1586
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 19278,
+                    "block": 1586,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _bUseLayer : true for enable, false for disable"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetSimulationNonlinearSimulation",
+      "qualified_name": "utility_api.SetSimulationNonlinearSimulation",
+      "module": "utility_api",
+      "symbol": "SetSimulationNonlinearSimulation",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetSimulationNonlinearSimulation#3801b6ba30f9b263",
+          "signature_normalized": "def SetSimulationNonlinearSimulation(_bNonlinearSimulation : bool) -> None",
+          "signature_raw": "def SetSimulationNonlinearSimulation(_bNonlinearSimulation : bool) -> None",
+          "parameters": [
+            {
+              "raw": "_bNonlinearSimulation : bool",
+              "name": "_bNonlinearSimulation",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetSimulationNonlinearSimulation(_bNonlinearSimulation : bool) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Set nonlinear simulation\n@param _bNonlinearSimulation : true for enable, false for disable\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 18311,
+                  "block": 1577
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 19189,
+                  "block": 1577,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetSimulationNonlinearSimulation(int _bNonlinearSimulation)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Set nonlinear simulation\n/// @param _bNonlinearSimulation : true for enable, false for disable",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 18320,
+                    "block": 1578
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 19198,
+                    "block": 1578,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _bNonlinearSimulation : true for enable, false for disable"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetSimulationNumberOfCPUInUse",
+      "qualified_name": "utility_api.SetSimulationNumberOfCPUInUse",
+      "module": "utility_api",
+      "symbol": "SetSimulationNumberOfCPUInUse",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetSimulationNumberOfCPUInUse#b4a4b98cea4a45c3",
+          "signature_normalized": "def SetSimulationNumberOfCPUInUse(_numberOfSimulationInUse : int) -> None",
+          "signature_raw": "def SetSimulationNumberOfCPUInUse(_numberOfSimulationInUse : int) -> None",
+          "parameters": [
+            {
+              "raw": "_numberOfSimulationInUse : int",
+              "name": "_numberOfSimulationInUse",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetSimulationNumberOfCPUInUse(_numberOfSimulationInUse : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Set the number of CPUs for simulation\n@param _numberOfSimulationInUse : the number of CPUs (Default: total number of logical threads - 1, Min/Max Range : 1~total number of logical threads)\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 18292,
+                  "block": 1575
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 19169,
+                  "block": 1575,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetSimulationNumberOfCPUInUse(int _numberOfSimulationInUse)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Set the number of CPUs for simulation\n/// @param _numberOfSimulationInUse : the number of CPUs (Default: total number of logical threads - 1, Min/Max Range : 1~total number of logical threads)",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 18301,
+                    "block": 1576
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 19178,
+                    "block": 1576,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _numberOfSimulationInUse : the number of CPUs (Default: total number of logical threads - 1, Min/Max Range : 1~total number of logical threads)"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetSimulationNumberOfSimulation",
+      "qualified_name": "utility_api.SetSimulationNumberOfSimulation",
+      "module": "utility_api",
+      "symbol": "SetSimulationNumberOfSimulation",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetSimulationNumberOfSimulation#e4d4b42e44feb4ef",
+          "signature_normalized": "def SetSimulationNumberOfSimulation(_numberOfSimulation : int) -> None",
+          "signature_raw": "def SetSimulationNumberOfSimulation(_numberOfSimulation : int) -> None",
+          "parameters": [
+            {
+              "raw": "_numberOfSimulation : int",
+              "name": "_numberOfSimulation",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetSimulationNumberOfSimulation(_numberOfSimulation : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Set simulation substeps in one time step\n@param _numberOfSimulation: the number of substeps in one time step (Default : 1, Min/Max Range : 1~50)\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 18159,
+                  "block": 1561
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 19029,
+                  "block": 1561,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetSimulationNumberOfSimulation(int _numberOfSimulation)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Set simulation substeps in one time step\n/// @param _numberOfSimulation: the number of substeps in one time step (Default : 1, Min/Max Range : 1~50)",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 18168,
+                    "block": 1562
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 19038,
+                    "block": 1562,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _numberOfSimulation: the number of substeps in one time step (Default : 1, Min/Max Range : 1~50)"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetSimulationQuality",
+      "qualified_name": "utility_api.SetSimulationQuality",
+      "module": "utility_api",
+      "symbol": "SetSimulationQuality",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetSimulationQuality#2fd17ac0f33c88f3",
+          "signature_normalized": "def SetSimulationQuality(_quality : int, _simulationMode : int) -> None",
+          "signature_raw": "def SetSimulationQuality(_quality : int, _simulationMode : int) -> None",
+          "parameters": [
+            {
+              "raw": "_quality : int",
+              "name": "_quality",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_simulationMode : int",
+              "name": "_simulationMode",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetSimulationQuality(_quality : int, _simulationMode : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Set simulation quality preset\n@param _quality: input simulation preset (0: Normal(Default), 1: Animation(Stable), 2: Fitting(Accurate Fabric), 3: FAST(GPU))\n@param _simulationMode: input simulation mode (0: CPU, 1: FAST(GPU))\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 18119,
+                  "block": 1557
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 18987,
+                  "block": 1557,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetSimulationQuality(int _quality)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Set simulation quality preset\n/// @param _quality: input simulation preset (0: Normal(Default), 1: Animation(Stable), 2: Fitting(Accurate Fabric), 3: FAST(GPU))\n/// @param _simulationMode: input simulation mode (0: CPU, 1: FAST(GPU))",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 18129,
+                    "block": 1558
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 18997,
+                    "block": 1558,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _quality: input simulation preset (0: Normal(Default), 1: Animation(Stable), 2: Fitting(Accurate Fabric), 3: FAST(GPU))",
+            "@param _simulationMode: input simulation mode (0: CPU, 1: FAST(GPU))"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetSimulationSelfCollisionAvoidanceStiffness",
+      "qualified_name": "utility_api.SetSimulationSelfCollisionAvoidanceStiffness",
+      "module": "utility_api",
+      "symbol": "SetSimulationSelfCollisionAvoidanceStiffness",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetSimulationSelfCollisionAvoidanceStiffness#387bceb806d4e2a0",
+          "signature_normalized": "def SetSimulationSelfCollisionAvoidanceStiffness(_avoidanceStiffness : float) -> None",
+          "signature_raw": "def SetSimulationSelfCollisionAvoidanceStiffness(_avoidanceStiffness : float) -> None",
+          "parameters": [
+            {
+              "raw": "_avoidanceStiffness : float",
+              "name": "_avoidanceStiffness",
+              "annotation_raw": "float"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetSimulationSelfCollisionAvoidanceStiffness(_avoidanceStiffness : float) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Set stiffness of the inserted spring to avoid self collision\n@param _avoidanceStiffness : (Default: 0.001)\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 18368,
+                  "block": 1583
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 19249,
+                  "block": 1583,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetSimulationSelfCollisionAvoidanceStiffness(int _avoidanceStiffness)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Set stiffness of the inserted spring to avoid self collision\n/// @param _avoidanceStiffness : (Default: 0.001)",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 18377,
+                    "block": 1584
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 19258,
+                    "block": 1584,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _avoidanceStiffness : (Default: 0.001)"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetSimulationSelfCollisionIterationCount",
+      "qualified_name": "utility_api.SetSimulationSelfCollisionIterationCount",
+      "module": "utility_api",
+      "symbol": "SetSimulationSelfCollisionIterationCount",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetSimulationSelfCollisionIterationCount#c6be85b9f6ddfe5c",
+          "signature_normalized": "def SetSimulationSelfCollisionIterationCount(_selfCollisionIterationCount : int) -> None",
+          "signature_raw": "def SetSimulationSelfCollisionIterationCount(_selfCollisionIterationCount : int) -> None",
+          "parameters": [
+            {
+              "raw": "_selfCollisionIterationCount : int",
+              "name": "_selfCollisionIterationCount",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetSimulationSelfCollisionIterationCount(_selfCollisionIterationCount : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Set self collision iteration count\n@param _selfCollisionIterationCount : self collision iteration count (Default: 1)\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 18235,
+                  "block": 1569
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 19109,
+                  "block": 1569,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetSimulationSelfCollisionIterationCount(int _selfCollisionIterationCount)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Set self collision iteration count\n/// @param _selfCollisionIterationCount : self collision iteration count (Default: 1)",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 18244,
+                    "block": 1570
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 19118,
+                    "block": 1570,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _selfCollisionIterationCount : self collision iteration count (Default: 1)"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetSimulationTimeStep",
+      "qualified_name": "utility_api.SetSimulationTimeStep",
+      "module": "utility_api",
+      "symbol": "SetSimulationTimeStep",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetSimulationTimeStep#426171c0ce2760ca",
+          "signature_normalized": "def SetSimulationTimeStep(_timeStep : float) -> None",
+          "signature_raw": "def SetSimulationTimeStep(_timeStep : float) -> None",
+          "parameters": [
+            {
+              "raw": "_timeStep : float",
+              "name": "_timeStep",
+              "annotation_raw": "float"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetSimulationTimeStep(_timeStep : float) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Set simulation time step\n@param _timeStep: time step in second (Default : 0.03333, Min value: 0.001)\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 18140,
+                  "block": 1559
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 19009,
+                  "block": 1559,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetSimulationTimeStep(int _timeStep)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Set simulation time step\n/// @param _timeStep: time step in second (Default : 0.03333, Min value: 0.001)",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 18149,
+                    "block": 1560
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 19018,
+                    "block": 1560,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _timeStep: time step in second (Default : 0.03333, Min value: 0.001)"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetStartAnimationFrame",
+      "qualified_name": "utility_api.SetStartAnimationFrame",
+      "module": "utility_api",
+      "symbol": "SetStartAnimationFrame",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetStartAnimationFrame#a6167c0f4ad8e664",
+          "signature_normalized": "def SetStartAnimationFrame(_frame : double) -> None",
+          "signature_raw": "def SetStartAnimationFrame(_frame : double) -> None",
+          "parameters": [
+            {
+              "raw": "_frame : double",
+              "name": "_frame",
+              "annotation_raw": "double"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetStartAnimationFrame(_frame : double) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief set start animation frame\n@param _frame: Value for setting start frame\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 18642,
+                  "block": 1611
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 19537,
+                  "block": 1611,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetStartAnimationFrame(double _frame)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief set start animation frame\n/// @param _frame: Value for setting start frame",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 18651,
+                    "block": 1612
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 19546,
+                    "block": 1612,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _frame: Value for setting start frame"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetStrainMapStatus",
+      "qualified_name": "utility_api.SetStrainMapStatus",
+      "module": "utility_api",
+      "symbol": "SetStrainMapStatus",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetStrainMapStatus#d2318b48d2b1c838",
+          "signature_normalized": "def SetStrainMapStatus(_bOn : bool) -> None",
+          "signature_raw": "def SetStrainMapStatus(_bOn : bool) -> None",
+          "parameters": [
+            {
+              "raw": "_bOn : bool",
+              "name": "_bOn",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetStrainMapStatus(_bOn : bool) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief set the rendered status of strain map\n@param _bOn: false = Off | true = On\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 18862,
+                  "block": 1635
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 19769,
+                  "block": 1635,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetStrainMapStatus(bool _bOn)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief set the rendered status of strain map\n/// @param _bOn: false = Off | true = On",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 18871,
+                    "block": 1636
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 19778,
+                    "block": 1636,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _bOn: false = Off | true = On"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetStressMapStatus",
+      "qualified_name": "utility_api.SetStressMapStatus",
+      "module": "utility_api",
+      "symbol": "SetStressMapStatus",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetStressMapStatus#2b1d3e1eaff7e277",
+          "signature_normalized": "def SetStressMapStatus(_bOn : bool) -> None",
+          "signature_raw": "def SetStressMapStatus(_bOn : bool) -> None",
+          "parameters": [
+            {
+              "raw": "_bOn : bool",
+              "name": "_bOn",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetStressMapStatus(_bOn : bool) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief set the rendered status of stress map\n@param _bOn: false = Off | true = On\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 18826,
+                  "block": 1631
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 19731,
+                  "block": 1631,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetStressMapStatus(bool _bOn)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief set the rendered status of stress map\n/// @param _bOn: false = Off | true = On",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 18835,
+                    "block": 1632
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 19740,
+                    "block": 1632,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _bOn: false = Off | true = On"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetStyleLineColor",
+      "qualified_name": "utility_api.SetStyleLineColor",
+      "module": "utility_api",
+      "symbol": "SetStyleLineColor",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetStyleLineColor#214f25c1f0adf094",
+          "signature_normalized": "def SetStyleLineColor(_r : int, _g : int, _b : int) -> None",
+          "signature_raw": "def SetStyleLineColor(_r : int, _g : int, _b : int) -> None",
+          "parameters": [
+            {
+              "raw": "_r : int",
+              "name": "_r",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_g : int",
+              "name": "_g",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_b : int",
+              "name": "_b",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetStyleLineColor(_r : int, _g : int, _b : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief set style line color\n@param int _r, int _g, int _b: Value for setting style line color\nRed: 0 ~ 255\nGreen: 0 ~ 255\nBlue: 0 ~ 255\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 19397,
+                  "block": 1685
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 20329,
+                  "block": 1685,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetStyleLineColor(int _r, int _g, int _b)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief set style line color\n/// @param int _r, int _g, int _b: Value for setting style line color\n/// Red: 0 ~ 255\n/// Green: 0 ~ 255\n/// Blue: 0 ~ 255",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 19409,
+                    "block": 1686
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 20341,
+                    "block": 1686,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param int _r, int _g, int _b: Value for setting style line color"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetTopStitchColor",
+      "qualified_name": "utility_api.SetTopStitchColor",
+      "module": "utility_api",
+      "symbol": "SetTopStitchColor",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetTopStitchColor#f5adccc9da6d1ed7",
+          "signature_normalized": "def SetTopStitchColor(_styleIndex : int, _lineIndex : int, _r : int, _g : int, _b : int, _a : int) -> None",
+          "signature_raw": "def SetTopStitchColor(_styleIndex : int, _lineIndex : int, _r : int, _g : int, _b : int, _a : int) -> None",
+          "parameters": [
+            {
+              "raw": "_styleIndex : int",
+              "name": "_styleIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_lineIndex : int",
+              "name": "_lineIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_r : int",
+              "name": "_r",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_g : int",
+              "name": "_g",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_b : int",
+              "name": "_b",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_a : int",
+              "name": "_a",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetTopStitchColor(_styleIndex : int, _lineIndex : int, _r : int, _g : int, _b : int, _a : int) -> None",
+              "documentation_raw": "\"\"\"\n@brief          Set base color of PBR material in a TopStitch Style using given RGBA values\n@param          _styleIndex: TopStitch Style index on Object Browser to set Color\n@param          _lineIndex: Stitch index to set Color\n-1: All\n0~: [_lineIndex]th Stitch\n@param          _r: Red channel \n@param          _g: Green channel\n@param          _b: Blue channel\n@param          _a: Alpha channel\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 22454,
+                  "block": 1955
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 23521,
+                  "block": 1955,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetTopStitchColor(int _styleIndex, int _lineIndex, int _r, int _g, int _b, int _a)",
+                "documentation_raw": "/// @brief              Set base color of PBR material in a TopStitch Style using given RGBA values\n/// @param              _styleIndex: TopStitch Style index on Object Browser to set Color\n/// @param              _lineIndex: Stitch index to set Color\n/// -1: All\n/// 0~: [_lineIndex]th Stitch\n/// @param              _r: Red channel \n/// @param              _g: Green channel\n/// @param              _b: Blue channel\n/// @param              _a: Alpha channel",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 22469,
+                    "block": 1956
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 23536,
+                    "block": 1956,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          _styleIndex: TopStitch Style index on Object Browser to set Color",
+            "@param          _lineIndex: Stitch index to set Color",
+            "@param          _r: Red channel ",
+            "@param          _g: Green channel",
+            "@param          _b: Blue channel",
+            "@param          _a: Alpha channel"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "utility_api.SetTopStitchColor#a5da5db5ea3d3de8",
+          "signature_normalized": "def SetTopStitchColor(_styleIndex : int, _lineIndex : int, _colorName : str) -> bool",
+          "signature_raw": "def SetTopStitchColor(_styleIndex : int, _lineIndex : int, _colorName : str) -> bool",
+          "parameters": [
+            {
+              "raw": "_styleIndex : int",
+              "name": "_styleIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_lineIndex : int",
+              "name": "_lineIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_colorName : str",
+              "name": "_colorName",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def SetTopStitchColor(_styleIndex : int, _lineIndex : int, _colorName : str) -> bool",
+              "documentation_raw": "\"\"\"\n@brief          Set base color of PBR material in a TopStitch Style using given Color name values\n@param          _styleIndex: TopStitch Style index on Object Browser to set Color\n@param          _lineIndex: Stitch index to set Color\n-1: All\n0~: [_lineIndex]th Stitch\n/// /// @param _colorName: Color name\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 22485,
+                  "block": 1957
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 23553,
+                  "block": 1957,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetTopStitchColor(int _styleIndex, int _lineIndex, std::string _colorName)",
+                "documentation_raw": "/// @brief              Set base color of PBR material in a TopStitch Style using given Color name values\n/// @param              _styleIndex: TopStitch Style index on Object Browser to set Color\n/// @param              _lineIndex: Stitch index to set Color\n/// -1: All\n/// 0~: [_lineIndex]th Stitch\n/// /// /// @param _colorName: Color name",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 22497,
+                    "block": 1958
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 23565,
+                    "block": 1958,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          _styleIndex: TopStitch Style index on Object Browser to set Color",
+            "@param          _lineIndex: Stitch index to set Color"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "utility_api.SetTopStitchColor#307b34276f87c787",
+          "signature_normalized": "def SetTopStitchColor(_styleIndex : int, _colorwayIndex : int, _lineIndex : int, _r : int, _g : int, _b : int, _a : int) -> None",
+          "signature_raw": "def SetTopStitchColor(_styleIndex : int, _colorwayIndex : int, _lineIndex : int, _r : int, _g : int, _b : int, _a : int) -> None",
+          "parameters": [
+            {
+              "raw": "_styleIndex : int",
+              "name": "_styleIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_lineIndex : int",
+              "name": "_lineIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_r : int",
+              "name": "_r",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_g : int",
+              "name": "_g",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_b : int",
+              "name": "_b",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_a : int",
+              "name": "_a",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetTopStitchColor(_styleIndex : int, _colorwayIndex : int, _lineIndex : int, _r : int, _g : int, _b : int, _a : int) -> None",
+              "documentation_raw": "\"\"\"\n@brief          Set base color of PBR material in a TopStitch Style using given RGBA values\n@param          _styleIndex: TopStitch Style index [_colorwayIndex]th Colorway to set Color\n@param          _colorwayIndex: Colorway Index to get Style\n@param          _lineIndex: Stitch index to set Color\n-1: All\n0~: [_lineIndex]th Stitch\n@param          _r: Red channel \n@param          _g: Green channel\n@param          _b: Blue channel\n@param          _a: Alpha channel\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 22510,
+                  "block": 1959
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 23579,
+                  "block": 1959,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetTopStitchColor(int _styleIndex, int _colorwayIndex, int _lineIndex, int _r, int _g, int _b, int _a)",
+                "documentation_raw": "/// @brief              Set base color of PBR material in a TopStitch Style using given RGBA values\n/// @param              _styleIndex: TopStitch Style index [_colorwayIndex]th Colorway to set Color\n/// @param              _colorwayIndex: Colorway Index to get Style\n/// @param              _lineIndex: Stitch index to set Color\n/// -1: All\n/// 0~: [_lineIndex]th Stitch\n/// @param              _r: Red channel \n/// @param              _g: Green channel\n/// @param              _b: Blue channel\n/// @param              _a: Alpha channel",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 22526,
+                    "block": 1960
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 23595,
+                    "block": 1960,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          _styleIndex: TopStitch Style index [_colorwayIndex]th Colorway to set Color",
+            "@param          _colorwayIndex: Colorway Index to get Style",
+            "@param          _lineIndex: Stitch index to set Color",
+            "@param          _r: Red channel ",
+            "@param          _g: Green channel",
+            "@param          _b: Blue channel",
+            "@param          _a: Alpha channel"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "utility_api.SetTopStitchColor#b40446e54e241756",
+          "signature_normalized": "def SetTopStitchColor(_styleIndex : int, _colorwayIndex : int, _lineIndex : int, _colorName : str) -> bool",
+          "signature_raw": "def SetTopStitchColor(_styleIndex : int, _colorwayIndex : int, _lineIndex : int, _colorName : str) -> bool",
+          "parameters": [
+            {
+              "raw": "_styleIndex : int",
+              "name": "_styleIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_lineIndex : int",
+              "name": "_lineIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_colorName : str",
+              "name": "_colorName",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def SetTopStitchColor(_styleIndex : int, _colorwayIndex : int, _lineIndex : int, _colorName : str) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief          Set base color of PBR material in a TopStitch Style using given color name\n@param          _styleIndex: TopStitch Style index on [_colorwayIndex]th Colorway to set Color\n@param          _colorwayIndex: Colorway Index to get Style\n@param          _lineIndex: Stitch index to set Color (-1: All, 0~: [_lineIndex]th Stitch)\n@param          _colorName: Name of color from the color palette\n@return         true if successful, false otherwise\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 22543,
+                  "block": 1961
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 23613,
+                  "block": 1961,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetTopStitchColor(int _styleIndex, int _colorwayIndex, int _lineIndex, const std::string& _colorName)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief              Set base color of PBR material in a TopStitch Style using given color name\n/// @param              _styleIndex: TopStitch Style index on [_colorwayIndex]th Colorway to set Color\n/// @param              _colorwayIndex: Colorway Index to get Style\n/// @param              _lineIndex: Stitch index to set Color (-1: All, 0~: [_lineIndex]th Stitch)\n/// @param              _colorName: Name of color from the color palette\n/// @return             true if successful, false otherwise",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 22556,
+                    "block": 1962
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 23626,
+                    "block": 1962,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          _styleIndex: TopStitch Style index on [_colorwayIndex]th Colorway to set Color",
+            "@param          _colorwayIndex: Colorway Index to get Style",
+            "@param          _lineIndex: Stitch index to set Color (-1: All, 0~: [_lineIndex]th Stitch)",
+            "@param          _colorName: Name of color from the color palette"
+          ],
+          "return_docs_raw": [
+            "@return         true if successful, false otherwise"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetTopStitchDistanceValue",
+      "qualified_name": "utility_api.SetTopStitchDistanceValue",
+      "module": "utility_api",
+      "symbol": "SetTopStitchDistanceValue",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetTopStitchDistanceValue#2af94e44f3907fb1",
+          "signature_normalized": "def SetTopStitchDistanceValue(_topStitchIndex : int, _stitchCountIndex : int, _distanceValue : float) -> None",
+          "signature_raw": "def SetTopStitchDistanceValue(_topStitchIndex : int, _stitchCountIndex : int, _distanceValue : float) -> None",
+          "parameters": [
+            {
+              "raw": "_topStitchIndex : int",
+              "name": "_topStitchIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_stitchCountIndex : int",
+              "name": "_stitchCountIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_distanceValue : float",
+              "name": "_distanceValue",
+              "annotation_raw": "float"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetTopStitchDistanceValue(_topStitchIndex : int, _stitchCountIndex : int, _distanceValue : float) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Update the top stitch distance value.\n@param _topStitchIndex: The top stitch style index.\n@param _stitchCountIndex: The stitch count index. Ex: for 3 count, 1:index for 1st line, 2:index for 2nd line, 3:index for 3rd line\n@param _distanceValue: The distance value. Based on CLO unit (mm/inch).\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 24424,
+                  "block": 2123
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 25575,
+                  "block": 2123,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetTopStitchDistanceValue(int _topStitchIndex, int _stitchCountIndex, float _distanceValue)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Update the top stitch distance value.\n/// @param _topStitchIndex: The top stitch style index.\n/// @param _stitchCountIndex: The stitch count index. Ex: for 3 count, 1:index for 1st line, 2:index for 2nd line, 3:index for 3rd line\n/// @param _distanceValue: The distance value. Based on CLO unit (mm/inch).",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 24435,
+                    "block": 2124
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 25586,
+                    "block": 2124,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _topStitchIndex: The top stitch style index.",
+            "@param _stitchCountIndex: The stitch count index. Ex: for 3 count, 1:index for 1st line, 2:index for 2nd line, 3:index for 3rd line",
+            "@param _distanceValue: The distance value. Based on CLO unit (mm/inch)."
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetTopStitchName",
+      "qualified_name": "utility_api.SetTopStitchName",
+      "module": "utility_api",
+      "symbol": "SetTopStitchName",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetTopStitchName#d3567cd660ac55c4",
+          "signature_normalized": "def SetTopStitchName(_topStitchIndex : int, _name : str) -> None",
+          "signature_raw": "def SetTopStitchName(_topStitchIndex : int, _name : str) -> None",
+          "parameters": [
+            {
+              "raw": "_topStitchIndex : int",
+              "name": "_topStitchIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_name : str",
+              "name": "_name",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetTopStitchName(_topStitchIndex : int, _name : str) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Updates the top stitch style name.\n@param _topStitchIndex: The top stitch style index.\n@param _name: Name.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 24336,
+                  "block": 2115
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 25483,
+                  "block": 2115,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetTopStitchName(int _topStitchIndex, const std::string& _name)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Updates the top stitch style name.\n/// @param _topStitchIndex: The top stitch style index.\n/// @param _name: Name.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 24346,
+                    "block": 2116
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 25493,
+                    "block": 2116,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _topStitchIndex: The top stitch style index.",
+            "@param _name: Name."
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetTopStitchNumberOfLines",
+      "qualified_name": "utility_api.SetTopStitchNumberOfLines",
+      "module": "utility_api",
+      "symbol": "SetTopStitchNumberOfLines",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetTopStitchNumberOfLines#a1eecd1c5180e4f3",
+          "signature_normalized": "def SetTopStitchNumberOfLines(_topStitchIndex : int, _stitchCountIndex : int, _numberOfLines : int) -> None",
+          "signature_raw": "def SetTopStitchNumberOfLines(_topStitchIndex : int, _stitchCountIndex : int, _numberOfLines : int) -> None",
+          "parameters": [
+            {
+              "raw": "_topStitchIndex : int",
+              "name": "_topStitchIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_stitchCountIndex : int",
+              "name": "_stitchCountIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_numberOfLines : int",
+              "name": "_numberOfLines",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetTopStitchNumberOfLines(_topStitchIndex : int, _stitchCountIndex : int, _numberOfLines : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Update the top stitch number of lines.\n@param _topStitchIndex: The top stitch style index.\n@param _stitchCountIndex: The stitch count index. Ex: for 3 count, 1:index for 1st line, 2:index for 2nd line, 3:index for 3rd line\n@param _numberOfLines: The number of lines.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 24378,
+                  "block": 2119
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 25527,
+                  "block": 2119,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetTopStitchNumberOfLines(int _topStitchIndex, int _stitchCountIndex, int _numberOfLines)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Update the top stitch number of lines.\n/// @param _topStitchIndex: The top stitch style index.\n/// @param _stitchCountIndex: The stitch count index. Ex: for 3 count, 1:index for 1st line, 2:index for 2nd line, 3:index for 3rd line\n/// @param _numberOfLines: The number of lines.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 24389,
+                    "block": 2120
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 25538,
+                    "block": 2120,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _topStitchIndex: The top stitch style index.",
+            "@param _stitchCountIndex: The stitch count index. Ex: for 3 count, 1:index for 1st line, 2:index for 2nd line, 3:index for 3rd line",
+            "@param _numberOfLines: The number of lines."
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetTopStitchOffsetIndex",
+      "qualified_name": "utility_api.SetTopStitchOffsetIndex",
+      "module": "utility_api",
+      "symbol": "SetTopStitchOffsetIndex",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetTopStitchOffsetIndex#7f365837d54481ab",
+          "signature_normalized": "def SetTopStitchOffsetIndex(_topStitchIndex : int, _offsetIndex : int) -> None",
+          "signature_raw": "def SetTopStitchOffsetIndex(_topStitchIndex : int, _offsetIndex : int) -> None",
+          "parameters": [
+            {
+              "raw": "_topStitchIndex : int",
+              "name": "_topStitchIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_offsetIndex : int",
+              "name": "_offsetIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetTopStitchOffsetIndex(_topStitchIndex : int, _offsetIndex : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Update the top stitch offset index.\n@param _topStitchIndex: The top stitch style index.\n@param _offsetIndex: The offset index.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 24357,
+                  "block": 2117
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 25505,
+                  "block": 2117,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetTopStitchOffsetIndex(int _topStitchIndex, int _offsetIndex)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Update the top stitch offset index.\n/// @param _topStitchIndex: The top stitch style index.\n/// @param _offsetIndex: The offset index.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 24367,
+                    "block": 2118
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 25515,
+                    "block": 2118,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _topStitchIndex: The top stitch style index.",
+            "@param _offsetIndex: The offset index."
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetTopStitchOpacity",
+      "qualified_name": "utility_api.SetTopStitchOpacity",
+      "module": "utility_api",
+      "symbol": "SetTopStitchOpacity",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetTopStitchOpacity#cf6981cb1130cdb3",
+          "signature_normalized": "def SetTopStitchOpacity(_styleIndex : int, _lineIndex : int, _opacityValue : int) -> None",
+          "signature_raw": "def SetTopStitchOpacity(_styleIndex : int, _lineIndex : int, _opacityValue : int) -> None",
+          "parameters": [
+            {
+              "raw": "_styleIndex : int",
+              "name": "_styleIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_lineIndex : int",
+              "name": "_lineIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_opacityValue : int",
+              "name": "_opacityValue",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetTopStitchOpacity(_styleIndex : int, _lineIndex : int, _opacityValue : int) -> None",
+              "documentation_raw": "\"\"\"\n@brief          Set opacity of PBR material in a TopStitch\n@param          _styleIndex: TopStitch index on Object Browser\n@param          _lineIndex: Stitch index to set opacity\n0~: [_lineIndex]th Stitch\n@param          _opacityValue: opacity\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 22358,
+                  "block": 1947
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 23421,
+                  "block": 1947,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetTopStitchOpacity(int _styleIndex, int _opacityValue)",
+                "documentation_raw": "/// @brief              Set opacity of PBR material in a TopStitch\n/// @param              _styleIndex: TopStitch index on Object Browser\n/// @param              _lineIndex: Stitch index to set opacity\n/// 0~: [_lineIndex]th Stitch\n/// @param              _opacityValue: opacity",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 22369,
+                    "block": 1948
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 23432,
+                    "block": 1948,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          _styleIndex: TopStitch index on Object Browser",
+            "@param          _lineIndex: Stitch index to set opacity",
+            "@param          _opacityValue: opacity"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "utility_api.SetTopStitchOpacity#1927387666a2cd96",
+          "signature_normalized": "def SetTopStitchOpacity(_styleIndex : int, _colorwayIndex : int, _lineIndex : int, _opacityValue : int) -> None",
+          "signature_raw": "def SetTopStitchOpacity(_styleIndex : int, _colorwayIndex : int, _lineIndex : int, _opacityValue : int) -> None",
+          "parameters": [
+            {
+              "raw": "_styleIndex : int",
+              "name": "_styleIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_lineIndex : int",
+              "name": "_lineIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_opacityValue : int",
+              "name": "_opacityValue",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetTopStitchOpacity(_styleIndex : int, _colorwayIndex : int, _lineIndex : int, _opacityValue : int) -> None",
+              "documentation_raw": "\"\"\"\n@brief          Set opacity of PBR material in a TopStitch\n@param          _styleIndex: TopStitch index [_colorwayIndex]th Colorway\n@param          _colorwayIndex: Colorway Index to get Style\n@param          _lineIndex: Stitch index to set opacity\n0~: [_lineIndex]th Stitch\n@param          _opacityValue: opacity\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 22381,
+                  "block": 1949
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 23445,
+                  "block": 1949,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetTopStitchOpacity(int _styleIndex, int _colorwayIndex, int _opacityValue)",
+                "documentation_raw": "/// @brief              Set opacity of PBR material in a TopStitch\n/// @param              _styleIndex: TopStitch index [_colorwayIndex]th Colorway\n/// @param              _colorwayIndex: Colorway Index to get Style\n/// @param              _lineIndex: Stitch index to set opacity\n/// 0~: [_lineIndex]th Stitch\n/// @param              _opacityValue: opacity",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 22393,
+                    "block": 1950
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 23457,
+                    "block": 1950,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          _styleIndex: TopStitch index [_colorwayIndex]th Colorway",
+            "@param          _colorwayIndex: Colorway Index to get Style",
+            "@param          _lineIndex: Stitch index to set opacity",
+            "@param          _opacityValue: opacity"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetTopStitchWidthValue",
+      "qualified_name": "utility_api.SetTopStitchWidthValue",
+      "module": "utility_api",
+      "symbol": "SetTopStitchWidthValue",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetTopStitchWidthValue#b194fcbc4b23b200",
+          "signature_normalized": "def SetTopStitchWidthValue(_topStitchIndex : int, _stitchCountIndex : int, _widthValue : float) -> None",
+          "signature_raw": "def SetTopStitchWidthValue(_topStitchIndex : int, _stitchCountIndex : int, _widthValue : float) -> None",
+          "parameters": [
+            {
+              "raw": "_topStitchIndex : int",
+              "name": "_topStitchIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_stitchCountIndex : int",
+              "name": "_stitchCountIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_widthValue : float",
+              "name": "_widthValue",
+              "annotation_raw": "float"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetTopStitchWidthValue(_topStitchIndex : int, _stitchCountIndex : int, _widthValue : float) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Update the top stitch width value.\n@param _topStitchIndex: The top stitch style index.\n@param _stitchCountIndex: The stitch count index. Ex: for 3 count, 1:index for 1st line, 2:index for 2nd line, 3:index for 3rd line\n@param _widthValue: The width value.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 24401,
+                  "block": 2121
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 25551,
+                  "block": 2121,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetTopStitchWidthValue(int _topStitchIndex, int _stitchCountIndex, float _widthValue)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Update the top stitch width value.\n/// @param _topStitchIndex: The top stitch style index.\n/// @param _stitchCountIndex: The stitch count index. Ex: for 3 count, 1:index for 1st line, 2:index for 2nd line, 3:index for 3rd line\n/// @param _widthValue: The width value.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 24412,
+                    "block": 2122
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 25562,
+                    "block": 2122,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _topStitchIndex: The top stitch style index.",
+            "@param _stitchCountIndex: The stitch count index. Ex: for 3 count, 1:index for 1st line, 2:index for 2nd line, 3:index for 3rd line",
+            "@param _widthValue: The width value."
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetTransparentBackgroundForExportRenderingImage",
+      "qualified_name": "utility_api.SetTransparentBackgroundForExportRenderingImage",
+      "module": "utility_api",
+      "symbol": "SetTransparentBackgroundForExportRenderingImage",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetTransparentBackgroundForExportRenderingImage#29051e2b7e117305",
+          "signature_normalized": "def SetTransparentBackgroundForExportRenderingImage(_bTransparent : bool) -> None",
+          "signature_raw": "def SetTransparentBackgroundForExportRenderingImage(_bTransparent : bool) -> None",
+          "parameters": [
+            {
+              "raw": "_bTransparent : bool",
+              "name": "_bTransparent",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetTransparentBackgroundForExportRenderingImage(_bTransparent : bool) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Enable the transparent background option in the V-Ray renderer.\n@param _bTransparent : If set to True, the transparent background option will be enabled.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 20612,
+                  "block": 1787
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 21595,
+                  "block": 1787,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetTransparentBackgroundForExportRenderingImage()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Enable the transparent background option in the V-Ray renderer.\n/// @param _bTransparent : If set to True, the transparent background option will be enabled.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 20621,
+                    "block": 1788
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 21604,
+                    "block": 1788,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _bTransparent : If set to True, the transparent background option will be enabled."
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetTrimDisplaySettings",
+      "qualified_name": "utility_api.SetTrimDisplaySettings",
+      "module": "utility_api",
+      "symbol": "SetTrimDisplaySettings",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetTrimDisplaySettings#d6d2ac5beef2ad8a",
+          "signature_normalized": "def SetTrimDisplaySettings(_option : int, _show : bool) -> None",
+          "signature_raw": "def SetTrimDisplaySettings(_option : int, _show : bool) -> None",
+          "parameters": [
+            {
+              "raw": "_option : int",
+              "name": "_option",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_show : bool",
+              "name": "_show",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetTrimDisplaySettings(_option : int, _show : bool) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Set Show/Hide Trim Properties\n@param          _option: Option 0: Button, 1: Pipings, 2: Bond/Skive, 3: Puckering, 4: All Trims, 5: All  \n@param _show: True/False. True is for show. False is for Hide \n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 22711,
+                  "block": 1977
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 23789,
+                  "block": 1977,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetTrimDisplaySettings()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Set Show/Hide Trim Properties\n/// @param              _option: Option 0: Button, 1: Pipings, 2: Bond/Skive, 3: Puckering, 4: All Trims, 5: All  \n/// @param _show: True/False. True is for show. False is for Hide",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 22721,
+                    "block": 1978
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 23799,
+                    "block": 1978,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          _option: Option 0: Button, 1: Pipings, 2: Bond/Skive, 3: Puckering, 4: All Trims, 5: All  ",
+            "@param _show: True/False. True is for show. False is for Hide "
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetTrimMaterialProperties",
+      "qualified_name": "utility_api.SetTrimMaterialProperties",
+      "module": "utility_api",
+      "symbol": "SetTrimMaterialProperties",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetTrimMaterialProperties#e2dfc46d23a63ee5",
+          "signature_normalized": "def SetTrimMaterialProperties(_trimStyleIndex : int, _meshIndex : int, _props : map[str, str]) -> None",
+          "signature_raw": "def SetTrimMaterialProperties(_trimStyleIndex : int, _meshIndex : int, _props : map[str, str]) -> None",
+          "parameters": [
+            {
+              "raw": "_trimStyleIndex : int",
+              "name": "_trimStyleIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_meshIndex : int",
+              "name": "_meshIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_props : map[str, str]",
+              "name": "_props",
+              "annotation_raw": "map[str, str]"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetTrimMaterialProperties(_trimStyleIndex : int, _meshIndex : int, _props : map[str, str]) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Sets multiple material properties for a specific trim style and mesh index.\n@param _trimStyleIndex: The index of the trim style to set properties for.\n@param _meshIndex: The index of the mesh within the trim style to set properties for.\n@param _props: A map containing property names and their corresponding values to set for the trim material. MaterialType 0 to 14, Such as {'MaterialType': '0', 'Metalness': '0.100000', 'NormalMapIntensity': '2', 'Opacity': '0.500000', 'ReflectionIntensity': '0.250000', 'Roughness': '0.550000', 'RoughnessMapIntensity': '1.600000', 'RoughnessMapInvert': 'true'}\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 24252,
+                  "block": 2107
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 25395,
+                  "block": 2107,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetTrimMaterialProperties(int _trimStyleIndex, int _meshIndex, const std::map<std::string, std::string>& _props)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Sets multiple material properties for a specific trim style and mesh index.\n/// @param _trimStyleIndex: The index of the trim style to set properties for.\n/// @param _meshIndex: The index of the mesh within the trim style to set properties for.\n/// @param _props: A map containing property names and their corresponding values to set for the trim material. MaterialType 0 to 14, Such as {'MaterialType': '0', 'Metalness': '0.100000', 'NormalMapIntensity': '2', 'Opacity': '0.500000', 'ReflectionIntensity': '0.250000', 'Roughness': '0.550000', 'RoughnessMapIntensity': '1.600000', 'RoughnessMapInvert': 'true'}",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 24263,
+                    "block": 2108
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 25406,
+                    "block": 2108,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _trimStyleIndex: The index of the trim style to set properties for.",
+            "@param _meshIndex: The index of the mesh within the trim style to set properties for.",
+            "@param _props: A map containing property names and their corresponding values to set for the trim material. MaterialType 0 to 14, Such as {'MaterialType': '0', 'Metalness': '0.100000', 'NormalMapIntensity': '2', 'Opacity': '0.500000', 'ReflectionIntensity': '0.250000', 'Roughness': '0.550000', 'RoughnessMapIntensity': '1.600000', 'RoughnessMapInvert': 'true'}"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetTrimStyleColor",
+      "qualified_name": "utility_api.SetTrimStyleColor",
+      "module": "utility_api",
+      "symbol": "SetTrimStyleColor",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetTrimStyleColor#d916388e15ef679b",
+          "signature_normalized": "def SetTrimStyleColor(_styleIndex : int, _meshIndex : int, _r : int, _g : int, _b : int, _a : int) -> None",
+          "signature_raw": "def SetTrimStyleColor(_styleIndex : int, _meshIndex : int, _r : int, _g : int, _b : int, _a : int) -> None",
+          "parameters": [
+            {
+              "raw": "_styleIndex : int",
+              "name": "_styleIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_meshIndex : int",
+              "name": "_meshIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_r : int",
+              "name": "_r",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_g : int",
+              "name": "_g",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_b : int",
+              "name": "_b",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_a : int",
+              "name": "_a",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetTrimStyleColor(_styleIndex : int, _meshIndex : int, _r : int, _g : int, _b : int, _a : int) -> None",
+              "documentation_raw": "\"\"\"\n@brief          Set base color of PBR material in a Trim Style using given RGBA values\n@param          _styleIndex: Trim Style index on Object Browser to set Color\n@param          _meshIndex: Mesh index to get Color\n-1: All\n0~: [_meshIndex]th mesh\n@param          _r: Red channel \n@param          _g: Green channel\n@param          _b: Blue channel\n@param          _a: Alpha channel\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 22194,
+                  "block": 1935
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 23251,
+                  "block": 1935,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetTrimStyleColor(int _styleIndex, int _meshIndex, int _r, int _g, int _b, int _a)",
+                "documentation_raw": "/// @brief              Set base color of PBR material in a Trim Style using given RGBA values\n/// @param              _styleIndex: Trim Style index on Object Browser to set Color\n/// @param              _meshIndex: Mesh index to get Color\n/// -1: All\n/// 0~: [_meshIndex]th mesh\n/// @param              _r: Red channel \n/// @param              _g: Green channel\n/// @param              _b: Blue channel\n/// @param              _a: Alpha channel",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 22209,
+                    "block": 1936
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 23266,
+                    "block": 1936,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          _styleIndex: Trim Style index on Object Browser to set Color",
+            "@param          _meshIndex: Mesh index to get Color",
+            "@param          _r: Red channel ",
+            "@param          _g: Green channel",
+            "@param          _b: Blue channel",
+            "@param          _a: Alpha channel"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "utility_api.SetTrimStyleColor#a9af2c252f08ae69",
+          "signature_normalized": "def SetTrimStyleColor(_styleIndex : int, _meshIndex : int, _colorName : str) -> bool",
+          "signature_raw": "def SetTrimStyleColor(_styleIndex : int, _meshIndex : int, _colorName : str) -> bool",
+          "parameters": [
+            {
+              "raw": "_styleIndex : int",
+              "name": "_styleIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_meshIndex : int",
+              "name": "_meshIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_colorName : str",
+              "name": "_colorName",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def SetTrimStyleColor(_styleIndex : int, _meshIndex : int, _colorName : str) -> bool",
+              "documentation_raw": "\"\"\"\n@brief          Set base color of PBR material in a Trim Style using given Color name values\n@param          _styleIndex: Trim Style index on Object Browser to set Color\n@param          _meshIndex: Mesh index to get Color\n-1: All\n0~: [_meshIndex]th mesh\n/// @param              _colorName: Color name\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 22225,
+                  "block": 1937
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 23283,
+                  "block": 1937,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetTrimStyleColor(int _styleIndex, int _meshIndex, std::string _colorName)",
+                "documentation_raw": "/// @brief              Set base color of PBR material in a Trim Style using given Color name values\n/// @param              _styleIndex: Trim Style index on Object Browser to set Color\n/// @param              _meshIndex: Mesh index to get Color\n/// -1: All\n/// 0~: [_meshIndex]th mesh\n/// /// @param          _colorName: Color name",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 22237,
+                    "block": 1938
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 23295,
+                    "block": 1938,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          _styleIndex: Trim Style index on Object Browser to set Color",
+            "@param          _meshIndex: Mesh index to get Color"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "utility_api.SetTrimStyleColor#cb6d82f1e62accb0",
+          "signature_normalized": "def SetTrimStyleColor(_styleIndex : int, _colorwayIndex : int, _meshIndex : int, _r : int, _g : int, _b : int, _a : int) -> None",
+          "signature_raw": "def SetTrimStyleColor(_styleIndex : int, _colorwayIndex : int, _meshIndex : int, _r : int, _g : int, _b : int, _a : int) -> None",
+          "parameters": [
+            {
+              "raw": "_styleIndex : int",
+              "name": "_styleIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_meshIndex : int",
+              "name": "_meshIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_r : int",
+              "name": "_r",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_g : int",
+              "name": "_g",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_b : int",
+              "name": "_b",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_a : int",
+              "name": "_a",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetTrimStyleColor(_styleIndex : int, _colorwayIndex : int, _meshIndex : int, _r : int, _g : int, _b : int, _a : int) -> None",
+              "documentation_raw": "\"\"\"\n@brief          Set base color of PBR material in a Trim Style using given RGBA values\n@param          _styleIndex: Trim Style index [_colorwayIndex]th Colorway to set Color\n@param          _colorwayIndex: Colorway Index to get Style\n@param          _meshIndex: Mesh index to get Color\n-1: All\n0~: [_meshIndex]th mesh\n@param          _r: Red channel \n@param          _g: Green channel\n@param          _b: Blue channel\n@param          _a: Alpha channel\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 22250,
+                  "block": 1939
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 23309,
+                  "block": 1939,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetTrimStyleColor(int _styleIndex, int _colorwayIndex, int _meshIndex, int _r, int _g, int _b, int _a)",
+                "documentation_raw": "/// @brief              Set base color of PBR material in a Trim Style using given RGBA values\n/// @param              _styleIndex: Trim Style index [_colorwayIndex]th Colorway to set Color\n/// @param              _colorwayIndex: Colorway Index to get Style\n/// @param              _meshIndex: Mesh index to get Color\n/// -1: All\n/// 0~: [_meshIndex]th mesh\n/// @param              _r: Red channel \n/// @param              _g: Green channel\n/// @param              _b: Blue channel\n/// @param              _a: Alpha channel",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 22266,
+                    "block": 1940
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 23325,
+                    "block": 1940,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          _styleIndex: Trim Style index [_colorwayIndex]th Colorway to set Color",
+            "@param          _colorwayIndex: Colorway Index to get Style",
+            "@param          _meshIndex: Mesh index to get Color",
+            "@param          _r: Red channel ",
+            "@param          _g: Green channel",
+            "@param          _b: Blue channel",
+            "@param          _a: Alpha channel"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "utility_api.SetTrimStyleColor#fa344b35573132e5",
+          "signature_normalized": "def SetTrimStyleColor(_styleIndex : int, _colorwayIndex : int, _meshIndex : int, _colorName : str) -> bool",
+          "signature_raw": "def SetTrimStyleColor(_styleIndex : int, _colorwayIndex : int, _meshIndex : int, _colorName : str) -> bool",
+          "parameters": [
+            {
+              "raw": "_styleIndex : int",
+              "name": "_styleIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_meshIndex : int",
+              "name": "_meshIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_colorName : str",
+              "name": "_colorName",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def SetTrimStyleColor(_styleIndex : int, _colorwayIndex : int, _meshIndex : int, _colorName : str) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief          Set base color of PBR material in a Trim Style using given color name\n@param          _styleIndex: Trim Style index on [_colorwayIndex]th Colorway to set Color\n@param          _colorwayIndex: Colorway Index to get Style\n@param          _meshIndex: Mesh index to set color\n@param          _colorName: Name of color from the color palette\n@return         true if successful, false otherwise\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 22283,
+                  "block": 1941
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 23343,
+                  "block": 1941,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetTrimStyleColor(int _styleIndex, int _colorwayIndex, int _meshIndex, const std::string& _colorName)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief              Set base color of PBR material in a Trim Style using given color name\n/// @param              _styleIndex: Trim Style index on [_colorwayIndex]th Colorway to set Color\n/// @param              _colorwayIndex: Colorway Index to get Style\n/// @param              _meshIndex: Mesh index to set color\n/// @param              _colorName: Name of color from the color palette\n/// @return             true if successful, false otherwise",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 22296,
+                    "block": 1942
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 23356,
+                    "block": 1942,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          _styleIndex: Trim Style index on [_colorwayIndex]th Colorway to set Color",
+            "@param          _colorwayIndex: Colorway Index to get Style",
+            "@param          _meshIndex: Mesh index to set color",
+            "@param          _colorName: Name of color from the color palette"
+          ],
+          "return_docs_raw": [
+            "@return         true if successful, false otherwise"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetTrimWeight",
+      "qualified_name": "utility_api.SetTrimWeight",
+      "module": "utility_api",
+      "symbol": "SetTrimWeight",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetTrimWeight#8c861f6b25a0e8f1",
+          "signature_normalized": "def SetTrimWeight(_trimStyleIndex : int, _mass : float) -> None",
+          "signature_raw": "def SetTrimWeight(_trimStyleIndex : int, _mass : float) -> None",
+          "parameters": [
+            {
+              "raw": "_trimStyleIndex : int",
+              "name": "_trimStyleIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_mass : float",
+              "name": "_mass",
+              "annotation_raw": "float"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetTrimWeight(_trimStyleIndex : int, _mass : float) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Change weight of the trim style\n@param _trimStyleIndex: trimstyle index to change weight of trim style\n@param _mass: value to set weight of trim\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 19581,
+                  "block": 1701
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 20521,
+                  "block": 1701,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetTrimWeight(unsigned int _trimStyleIndex, float _mass)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Change weight of the trim style\n/// @param _trimStyleIndex: trimstyle index to change weight of trim style\n/// @param _mass: value to set weight of trim",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 19591,
+                    "block": 1702
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 20531,
+                    "block": 1702,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _trimStyleIndex: trimstyle index to change weight of trim style",
+            "@param _mass: value to set weight of trim"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetUseSameMapAsFabricForGraphicOpacity",
+      "qualified_name": "utility_api.SetUseSameMapAsFabricForGraphicOpacity",
+      "module": "utility_api",
+      "symbol": "SetUseSameMapAsFabricForGraphicOpacity",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetUseSameMapAsFabricForGraphicOpacity#de632a25c19b42ed",
+          "signature_normalized": "def SetUseSameMapAsFabricForGraphicOpacity(_colorwayIndex : int, _graphicItemIndex : int, _materialFace : int, _bUse : bool) -> None",
+          "signature_raw": "def SetUseSameMapAsFabricForGraphicOpacity(_colorwayIndex : int, _graphicItemIndex : int, _materialFace : int, _bUse : bool) -> None",
+          "parameters": [
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_graphicItemIndex : int",
+              "name": "_graphicItemIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_materialFace : int",
+              "name": "_materialFace",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_bUse : bool",
+              "name": "_bUse",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetUseSameMapAsFabricForGraphicOpacity(_colorwayIndex : int, _graphicItemIndex : int, _materialFace : int, _bUse : bool) -> None",
+              "documentation_raw": "\"\"\"\n@brief          Sets whether the graphic's opacity map uses the same map as the fabric.\n@param          _colorwayIndex: Colorway Index to get Style\n@param          _graphicItemIndex: The index of the graphic item within the list of graphics applied to the object in the Object Browser.\n@param          _materialFace: 0 ,  back : 1 , side : 2 \n@param          _bUse: True to use the fabric's opacity map, False to use a separate map.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 22989,
+                  "block": 2001
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 24079,
+                  "block": 2001,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "void SetUseSameMapAsFabricForGraphicOpacity(graphic index, bool)",
+                "documentation_raw": "/// @brief              Sets whether the graphic's opacity map uses the same map as the fabric.\n/// @param              _colorwayIndex: Colorway Index to get Style\n/// @param              _graphicItemIndex: The index of the graphic item within the list of graphics applied to the object in the Object Browser.\n/// @param              _materialFace: 0 ,  back : 1 , side : 2 \n/// @param              _bUse: True to use the fabric's opacity map, False to use a separate map.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 23000,
+                    "block": 2002
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 24090,
+                    "block": 2002,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          _colorwayIndex: Colorway Index to get Style",
+            "@param          _graphicItemIndex: The index of the graphic item within the list of graphics applied to the object in the Object Browser.",
+            "@param          _materialFace: 0 ,  back : 1 , side : 2 ",
+            "@param          _bUse: True to use the fabric's opacity map, False to use a separate map."
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetViewControlDefaults",
+      "qualified_name": "utility_api.SetViewControlDefaults",
+      "module": "utility_api",
+      "symbol": "SetViewControlDefaults",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetViewControlDefaults#a056b44d775e76e6",
+          "signature_normalized": "def SetViewControlDefaults(_xAngle : double, _yPosition : double, _cameraDistance : double) -> None",
+          "signature_raw": "def SetViewControlDefaults(_xAngle : double, _yPosition : double, _cameraDistance : double) -> None",
+          "parameters": [
+            {
+              "raw": "_xAngle : double",
+              "name": "_xAngle",
+              "annotation_raw": "double"
+            },
+            {
+              "raw": "_yPosition : double",
+              "name": "_yPosition",
+              "annotation_raw": "double"
+            },
+            {
+              "raw": "_cameraDistance : double",
+              "name": "_cameraDistance",
+              "annotation_raw": "double"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetViewControlDefaults(_xAngle : double, _yPosition : double, _cameraDistance : double) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Set default setting for view controls\n@param _xAngle: Angle to set the Default X-Axis Angle \n@param _yPosition: Angle to set the Default Y-Axis Position \n@param _cameraDistance: Angle to set the Default Camera Distance for view point shortcuts \n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 22732,
+                  "block": 1979
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 23811,
+                  "block": 1979,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetViewControlDefaults(double _xAngle, double _yPosition, double _cameraDistance)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Set default setting for view controls\n/// @param _xAngle: Angle to set the Default X-Axis Angle \n/// @param _yPosition: Angle to set the Default Y-Axis Position \n/// @param _cameraDistance: Angle to set the Default Camera Distance for view point shortcuts",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 22743,
+                    "block": 1980
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 23822,
+                    "block": 1980,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _xAngle: Angle to set the Default X-Axis Angle ",
+            "@param _yPosition: Angle to set the Default Y-Axis Position ",
+            "@param _cameraDistance: Angle to set the Default Camera Distance for view point shortcuts "
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetViewPoint",
+      "qualified_name": "utility_api.SetViewPoint",
+      "module": "utility_api",
+      "symbol": "SetViewPoint",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetViewPoint#a4e0b6a04752b5e6",
+          "signature_normalized": "def SetViewPoint(_index : int) -> None",
+          "signature_raw": "def SetViewPoint(_index : int) -> None",
+          "parameters": [
+            {
+              "raw": "_index : int",
+              "name": "_index",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetViewPoint(_index : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Set View Point in render property window\n@param _index: View Point index to set (0: Current View, 1: Custom View)\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 20859,
+                  "block": 1813
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 21855,
+                  "block": 1813,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetViewPoint()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Set View Point in render property window\n/// @param _index: View Point index to set (0: Current View, 1: Custom View)",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 20868,
+                    "block": 1814
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 21864,
+                    "block": 1814,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _index: View Point index to set (0: Current View, 1: Custom View)"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.SetWindActive",
+      "qualified_name": "utility_api.SetWindActive",
+      "module": "utility_api",
+      "symbol": "SetWindActive",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.SetWindActive#f390a203e0c1d8b2",
+          "signature_normalized": "def SetWindActive(_bActive : bool) -> None",
+          "signature_raw": "def SetWindActive(_bActive : bool) -> None",
+          "parameters": [
+            {
+              "raw": "_bActive : bool",
+              "name": "_bActive",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetWindActive(_bActive : bool) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief It is a function that sets whether the wind is active or not.\n@param _bActive : True to activate wind, False to deactivate wind.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 24558,
+                  "block": 2135
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 25715,
+                  "block": 2135,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetWindActive(bool _bActive)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief It is a function that sets whether the wind is active or not.\n/// @param _bActive : True to activate wind, False to deactivate wind.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 24567,
+                    "block": 2136
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 25724,
+                    "block": 2136,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _bActive : True to activate wind, False to deactivate wind."
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    }
+  ]
+}

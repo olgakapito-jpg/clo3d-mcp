@@ -1,0 +1,3791 @@
+{
+  "kind": "methods",
+  "records": [
+    {
+      "id": "utility_api.GetPatternSnapShotSizeOption",
+      "qualified_name": "utility_api.GetPatternSnapShotSizeOption",
+      "module": "utility_api",
+      "symbol": "GetPatternSnapShotSizeOption",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetPatternSnapShotSizeOption#aa339b623886ed26",
+          "signature_normalized": "def GetPatternSnapShotSizeOption(_mode : int) -> PatternSnapShotSizeOption",
+          "signature_raw": "def GetPatternSnapShotSizeOption(_mode : int) -> PatternSnapShotSizeOption",
+          "parameters": [
+            {
+              "raw": "_mode : int",
+              "name": "_mode",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "PatternSnapShotSizeOption",
+          "occurrences": [
+            {
+              "signature_raw": "def GetPatternSnapShotSizeOption(_mode : int) -> PatternSnapShotSizeOption",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Retrieves the currently set PatternSnapShotSizeOption.\n@param int _mode : 0 = capture from PatternWindow, 1 = capture from PrintLayoutWindow.\n@return The currently set PatternSnapShotSizeOption value.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 24105,
+                  "block": 2093
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 25241,
+                  "block": 2093,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetPatternSnapShotSizeOption(int _mode)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Retrieves the currently set PatternSnapShotSizeOption.\n/// @param int _mode : 0 = capture from PatternWindow, 1 = capture from PrintLayoutWindow.\n/// @return The currently set PatternSnapShotSizeOption value.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 24115,
+                    "block": 2094
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 25251,
+                    "block": 2094,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "PatternSnapShotSizeOption",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:PatternSnapShotSizeOption"
+            },
+            {
+              "name": "PatternSnapShotSizeOption",
+              "basis": "documentation_mention",
+              "status": "resolved",
+              "type_id": "type:PatternSnapShotSizeOption"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param int _mode : 0 = capture from PatternWindow, 1 = capture from PrintLayoutWindow."
+          ],
+          "return_docs_raw": [
+            "@return The currently set PatternSnapShotSizeOption value."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetProjectFilePath",
+      "qualified_name": "utility_api.GetProjectFilePath",
+      "module": "utility_api",
+      "symbol": "GetProjectFilePath",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetProjectFilePath#7017db54e747c6c6",
+          "signature_normalized": "def GetProjectFilePath() -> str",
+          "signature_raw": "def GetProjectFilePath() -> str",
+          "parameters": [],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetProjectFilePath() -> str",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Get the current profile file path\n@return The current project file path. If you load a project file saved in \"c://download/default.zprj\", this function returns the full path - \"c://download/default.zprj\". If you never load project files, then it returns \"NULL\".\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 16231,
+                  "block": 1401
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 17023,
+                  "block": 1401,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetProjectFilePath()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Get the current profile file path\n/// @return The current project file path. If you load a project file saved in \"c://download/default.zprj\", this function returns the full path - \"c://download/default.zprj\". If you never load project files, then it returns \"NULL\".",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 16240,
+                    "block": 1402
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 17032,
+                    "block": 1402,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return The current project file path. If you load a project file saved in \"c://download/default.zprj\", this function returns the full path - \"c://download/default.zprj\". If you never load project files, then it returns \"NULL\"."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetProjectFilePathW",
+      "qualified_name": "utility_api.GetProjectFilePathW",
+      "module": "utility_api",
+      "symbol": "GetProjectFilePathW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetProjectFilePathW#82642bf5ae3f9b8e",
+          "signature_normalized": "def GetProjectFilePathW() -> str",
+          "signature_raw": "def GetProjectFilePathW() -> str",
+          "parameters": [],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetProjectFilePathW() -> str",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Get the current profile file path\n@return The current project file path. If you load a project file saved in \"c://download/default.zprj\", this function returns the full path - \"c://download/default.zprj\". If you never load project files, then it returns \"NULL\".\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 16250,
+                  "block": 1403
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 17043,
+                  "block": 1403,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetProjectFilePathW()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Get the current profile file path\n/// @return The current project file path. If you load a project file saved in \"c://download/default.zprj\", this function returns the full path - \"c://download/default.zprj\". If you never load project files, then it returns \"NULL\".",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 16259,
+                    "block": 1404
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 17052,
+                    "block": 1404,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return The current project file path. If you load a project file saved in \"c://download/default.zprj\", this function returns the full path - \"c://download/default.zprj\". If you never load project files, then it returns \"NULL\"."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetProjectName",
+      "qualified_name": "utility_api.GetProjectName",
+      "module": "utility_api",
+      "symbol": "GetProjectName",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetProjectName#fbf3dcd26be991e6",
+          "signature_normalized": "def GetProjectName() -> str",
+          "signature_raw": "def GetProjectName() -> str",
+          "parameters": [],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetProjectName() -> str",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Get the current project name in CLO\n@return The current project name. When you opening \"test.zprj\" file at last, then the project name is given as \"test\"\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 16155,
+                  "block": 1393
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 16943,
+                  "block": 1393,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetProjectName()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Get the current project name in CLO\n/// @return The current project name. When you opening \"test.zprj\" file at last, then the project name is given as \"test\"",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 16164,
+                    "block": 1394
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 16952,
+                    "block": 1394,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return The current project name. When you opening \"test.zprj\" file at last, then the project name is given as \"test\""
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetProjectNameW",
+      "qualified_name": "utility_api.GetProjectNameW",
+      "module": "utility_api",
+      "symbol": "GetProjectNameW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetProjectNameW#1aa64d1b4305755f",
+          "signature_normalized": "def GetProjectNameW() -> str",
+          "signature_raw": "def GetProjectNameW() -> str",
+          "parameters": [],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetProjectNameW() -> str",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Get the current project name in CLO\n@return The current project name. When you opening \"test.zprj\" file at last, then the project name is given as \"test\"\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 16174,
+                  "block": 1395
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 16963,
+                  "block": 1395,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetProjectNameW()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Get the current project name in CLO\n/// @return The current project name. When you opening \"test.zprj\" file at last, then the project name is given as \"test\"",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 16183,
+                    "block": 1396
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 16972,
+                    "block": 1396,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return The current project name. When you opening \"test.zprj\" file at last, then the project name is given as \"test\""
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetQualityRenderStatus",
+      "qualified_name": "utility_api.GetQualityRenderStatus",
+      "module": "utility_api",
+      "symbol": "GetQualityRenderStatus",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetQualityRenderStatus#2e45b0e6bd5fc44e",
+          "signature_normalized": "def GetQualityRenderStatus() -> bool",
+          "signature_raw": "def GetQualityRenderStatus() -> bool",
+          "parameters": [],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def GetQualityRenderStatus() -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Get Current Quality Render Status\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 19466,
+                  "block": 1691
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 20401,
+                  "block": 1691,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetQualityRenderStatus(bool _bSet)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Get Current Quality Render Status",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 19474,
+                    "block": 1692
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 20409,
+                    "block": 1692,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetRenderImageVideoProperties",
+      "qualified_name": "utility_api.GetRenderImageVideoProperties",
+      "module": "utility_api",
+      "symbol": "GetRenderImageVideoProperties",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetRenderImageVideoProperties#f1b5946b34446d0e",
+          "signature_normalized": "def GetRenderImageVideoProperties() -> str",
+          "signature_raw": "def GetRenderImageVideoProperties() -> str",
+          "parameters": [],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetRenderImageVideoProperties() -> str",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Returns render image/video property values\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 20787,
+                  "block": 1805
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 21779,
+                  "block": 1805,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetRenderImageVideoProperties()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Returns render image/video property values",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 20795,
+                    "block": 1806
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 21787,
+                    "block": 1806,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetRenderingProperties",
+      "qualified_name": "utility_api.GetRenderingProperties",
+      "module": "utility_api",
+      "symbol": "GetRenderingProperties",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetRenderingProperties#a3e52c53781d9850",
+          "signature_normalized": "def GetRenderingProperties() -> str",
+          "signature_raw": "def GetRenderingProperties() -> str",
+          "parameters": [],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetRenderingProperties() -> str",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Gets rendering property values\n@return If valid, returns a string containing rendering property values.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 20823,
+                  "block": 1809
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 21817,
+                  "block": 1809,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetRenderingProperties()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Gets rendering property values\n/// @return If valid, returns a string containing rendering property values.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 20832,
+                    "block": 1810
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 21826,
+                    "block": 1810,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return If valid, returns a string containing rendering property values."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetSchematicRender",
+      "qualified_name": "utility_api.GetSchematicRender",
+      "module": "utility_api",
+      "symbol": "GetSchematicRender",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetSchematicRender#d3bf58049c3932a9",
+          "signature_normalized": "def GetSchematicRender() -> bool",
+          "signature_raw": "def GetSchematicRender() -> bool",
+          "parameters": [],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def GetSchematicRender() -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Get Show Schematic Render Status\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 18881,
+                  "block": 1637
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 19789,
+                  "block": 1637,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetSchematicRender(bool _bSet)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Get Show Schematic Render Status",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 18889,
+                    "block": 1638
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 19797,
+                    "block": 1638,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetSimulationQuality",
+      "qualified_name": "utility_api.GetSimulationQuality",
+      "module": "utility_api",
+      "symbol": "GetSimulationQuality",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetSimulationQuality#d33aa2dda9353ca7",
+          "signature_normalized": "def GetSimulationQuality() -> tuple[int, int]",
+          "signature_raw": "def GetSimulationQuality() -> tuple[int, int]",
+          "parameters": [],
+          "return_raw": "tuple[int, int]",
+          "occurrences": [
+            {
+              "signature_raw": "def GetSimulationQuality() -> tuple[int, int]",
+              "documentation_raw": "\"\"\"\n@return The Simulation type(0: Normal(Default), 1: Animation(Stable), 2: Fitting(Accurate Fabric)) and simulation mode (0: CPU, 1: FAST(GPU))\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 22626,
+                  "block": 1967
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 23699,
+                  "block": 1967,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetSimulationQuality()",
+                "documentation_raw": "/// @return The Simulation type(0: Normal(Default), 1: Animation(Stable), 2: Fitting(Accurate Fabric)) and simulation mode (0: CPU, 1: FAST(GPU))",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 22633,
+                    "block": 1968
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 23706,
+                    "block": 1968,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return The Simulation type(0: Normal(Default), 1: Animation(Stable), 2: Fitting(Accurate Fabric)) and simulation mode (0: CPU, 1: FAST(GPU))"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetStartAnimationFrame",
+      "qualified_name": "utility_api.GetStartAnimationFrame",
+      "module": "utility_api",
+      "symbol": "GetStartAnimationFrame",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetStartAnimationFrame#bd660e7302541765",
+          "signature_normalized": "def GetStartAnimationFrame() -> double",
+          "signature_raw": "def GetStartAnimationFrame() -> double",
+          "parameters": [],
+          "return_raw": "double",
+          "occurrences": [
+            {
+              "signature_raw": "def GetStartAnimationFrame() -> double",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief get start animation frame\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 18661,
+                  "block": 1613
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 19557,
+                  "block": 1613,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetStartAnimationFrame()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief get start animation frame",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 18669,
+                    "block": 1614
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 19565,
+                    "block": 1614,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetStrainMapStatus",
+      "qualified_name": "utility_api.GetStrainMapStatus",
+      "module": "utility_api",
+      "symbol": "GetStrainMapStatus",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetStrainMapStatus#d994f25eac3c883f",
+          "signature_normalized": "def GetStrainMapStatus() -> bool",
+          "signature_raw": "def GetStrainMapStatus() -> bool",
+          "parameters": [],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def GetStrainMapStatus() -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief return current rendered status of the strain map (false = Off | true = On)\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 18845,
+                  "block": 1633
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 19751,
+                  "block": 1633,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetStrainMapStatus()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief return current rendered status of the strain map (false = Off | true = On)",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 18853,
+                    "block": 1634
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 19759,
+                    "block": 1634,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetStressMapStatus",
+      "qualified_name": "utility_api.GetStressMapStatus",
+      "module": "utility_api",
+      "symbol": "GetStressMapStatus",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetStressMapStatus#eaf39b422fb1fd53",
+          "signature_normalized": "def GetStressMapStatus() -> bool",
+          "signature_raw": "def GetStressMapStatus() -> bool",
+          "parameters": [],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def GetStressMapStatus() -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief return current rendered status of the stress map (false = Off | true = On)\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 18809,
+                  "block": 1629
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 19713,
+                  "block": 1629,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetStressMapStatus()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief return current rendered status of the stress map (false = Off | true = On)",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 18817,
+                    "block": 1630
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 19721,
+                    "block": 1630,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetStyleSheetCodeForWidget",
+      "qualified_name": "utility_api.GetStyleSheetCodeForWidget",
+      "module": "utility_api",
+      "symbol": "GetStyleSheetCodeForWidget",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetStyleSheetCodeForWidget#72717c5aeaca9b18",
+          "signature_normalized": "def GetStyleSheetCodeForWidget(_type : CloWidgetType) -> str",
+          "signature_raw": "def GetStyleSheetCodeForWidget(_type : CloWidgetType) -> str",
+          "parameters": [
+            {
+              "raw": "_type : CloWidgetType",
+              "name": "_type",
+              "annotation_raw": "CloWidgetType"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetStyleSheetCodeForWidget(_type : CloWidgetType) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Returns the style-sheet code for CloWidgetType\n@param _type: CloWidgetType of widget pointer\n@return Style-sheet code for CloWidgetType\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 20455,
+                  "block": 1773
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 21431,
+                  "block": 1773,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetStyleSheetCodeForWidget(Marvelous::CloWidgetType _type)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Returns the style-sheet code for CloWidgetType\n/// @param _type: CloWidgetType of widget pointer\n/// @return Style-sheet code for CloWidgetType",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 20465,
+                    "block": 1774
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 21441,
+                    "block": 1774,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "CloWidgetType",
+              "basis": "annotation",
+              "status": "unresolved",
+              "type_id": null
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param _type: CloWidgetType of widget pointer"
+          ],
+          "return_docs_raw": [
+            "@return Style-sheet code for CloWidgetType"
+          ],
+          "documentation_issues": [
+            "unresolved_annotation_type"
+          ],
+          "contract_status": "ambiguous"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetStyleSheetCodeForWidgetW",
+      "qualified_name": "utility_api.GetStyleSheetCodeForWidgetW",
+      "module": "utility_api",
+      "symbol": "GetStyleSheetCodeForWidgetW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetStyleSheetCodeForWidgetW#5067f79824eb4d42",
+          "signature_normalized": "def GetStyleSheetCodeForWidgetW(_type : CloWidgetType) -> str",
+          "signature_raw": "def GetStyleSheetCodeForWidgetW(_type : CloWidgetType) -> str",
+          "parameters": [
+            {
+              "raw": "_type : CloWidgetType",
+              "name": "_type",
+              "annotation_raw": "CloWidgetType"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetStyleSheetCodeForWidgetW(_type : CloWidgetType) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Returns the style-sheet code for CloWidgetType\n@param _type: CloWidgetType of widget pointer\n@return Style-sheet code for CloWidgetType\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 20476,
+                  "block": 1775
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 21453,
+                  "block": 1775,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetStyleSheetCodeForWidgetW(Marvelous::CloWidgetType _type)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Returns the style-sheet code for CloWidgetType\n/// @param _type: CloWidgetType of widget pointer\n/// @return Style-sheet code for CloWidgetType",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 20486,
+                    "block": 1776
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 21463,
+                    "block": 1776,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "CloWidgetType",
+              "basis": "annotation",
+              "status": "unresolved",
+              "type_id": null
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param _type: CloWidgetType of widget pointer"
+          ],
+          "return_docs_raw": [
+            "@return Style-sheet code for CloWidgetType"
+          ],
+          "documentation_issues": [
+            "unresolved_annotation_type"
+          ],
+          "contract_status": "ambiguous"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetThumbnailInCLOFile",
+      "qualified_name": "utility_api.GetThumbnailInCLOFile",
+      "module": "utility_api",
+      "symbol": "GetThumbnailInCLOFile",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetThumbnailInCLOFile#fda50bc298a7baad",
+          "signature_normalized": "def GetThumbnailInCLOFile(filePath : str, thumbnailIndex : int, fileSize : int) -> char*",
+          "signature_raw": "def GetThumbnailInCLOFile(filePath : str, thumbnailIndex : int, fileSize : int) -> char*",
+          "parameters": [
+            {
+              "raw": "filePath : str",
+              "name": "filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "thumbnailIndex : int",
+              "name": "thumbnailIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "fileSize : int",
+              "name": "fileSize",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "char*",
+          "occurrences": [
+            {
+              "signature_raw": "def GetThumbnailInCLOFile(filePath : str, thumbnailIndex : int, fileSize : int) -> char*",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Get Preview thumbnail file buffer(png type) from the CLO file format(.zprj, .zpac, .zfab, .sst, and so on)\n@param filePath: the source file path to retrieve the thumbnail buffer\n@param thumbnailIndex: the index of the thumbnails in the CLO file format(the number of thumbnails differs by the format)\n@param fileSize: get the size of the thumbnail buffer\n@return thumbnail(png) buffer\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 16716,
+                  "block": 1439
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 17527,
+                  "block": 1439,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetThumbnailInCLOFile(std::string filePath, unsigned int thumbnailIndex, unsigned int& fileSize)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Get Preview thumbnail file buffer(png type) from the CLO file format(.zprj, .zpac, .zfab, .sst, and so on)\n/// @param filePath: the source file path to retrieve the thumbnail buffer\n/// @param thumbnailIndex: the index of the thumbnails in the CLO file format(the number of thumbnails differs by the format)\n/// @param fileSize: get the size of the thumbnail buffer\n/// @return thumbnail(png) buffer",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 16728,
+                    "block": 1440
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 17539,
+                    "block": 1440,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param filePath: the source file path to retrieve the thumbnail buffer",
+            "@param thumbnailIndex: the index of the thumbnails in the CLO file format(the number of thumbnails differs by the format)",
+            "@param fileSize: get the size of the thumbnail buffer"
+          ],
+          "return_docs_raw": [
+            "@return thumbnail(png) buffer"
+          ],
+          "documentation_issues": [
+            "cpp_spelling_in_python_declaration"
+          ],
+          "contract_status": "ambiguous"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetTopStitchColor",
+      "qualified_name": "utility_api.GetTopStitchColor",
+      "module": "utility_api",
+      "symbol": "GetTopStitchColor",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetTopStitchColor#dc52d19a30d2bb40",
+          "signature_normalized": "def GetTopStitchColor(_styleIndex : int, _lineIndex : int) -> CloApiRgba",
+          "signature_raw": "def GetTopStitchColor(_styleIndex : int, _lineIndex : int) -> CloApiRgba",
+          "parameters": [
+            {
+              "raw": "_styleIndex : int",
+              "name": "_styleIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_lineIndex : int",
+              "name": "_lineIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "CloApiRgba",
+          "occurrences": [
+            {
+              "signature_raw": "def GetTopStitchColor(_styleIndex : int, _lineIndex : int) -> CloApiRgba",
+              "documentation_raw": "\"\"\"\n@brief          Get base color of PBR material from TopStitch Style\n@param          _styleIndex: TopStitch Style index on Object Browser to get Color\n@param          _lineIndex: Stitch index to get Color\n0~: [_lineIndex]th Stitch\n@return The color value in CloAgiRgba.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 22406,
+                  "block": 1951
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 23471,
+                  "block": 1951,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetTopStitchColor(int _styleIndex, int _lineIndex)",
+                "documentation_raw": "/// @brief              Get base color of PBR material from TopStitch Style\n/// @param              _styleIndex: TopStitch Style index on Object Browser to get Color\n/// @param              _lineIndex: Stitch index to get Color\n/// 0~: [_lineIndex]th Stitch\n/// @return The color value in CloAgiRgba.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 22417,
+                    "block": 1952
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 23482,
+                    "block": 1952,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "CloApiRgba",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:CloApiRgba"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param          _styleIndex: TopStitch Style index on Object Browser to get Color",
+            "@param          _lineIndex: Stitch index to get Color"
+          ],
+          "return_docs_raw": [
+            "@return The color value in CloAgiRgba."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "utility_api.GetTopStitchColor#0dee162524fe869a",
+          "signature_normalized": "def GetTopStitchColor(_styleIndex : int, _colorwayIndex : int, _lineIndex : int) -> CloApiRgba",
+          "signature_raw": "def GetTopStitchColor(_styleIndex : int, _colorwayIndex : int, _lineIndex : int) -> CloApiRgba",
+          "parameters": [
+            {
+              "raw": "_styleIndex : int",
+              "name": "_styleIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_lineIndex : int",
+              "name": "_lineIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "CloApiRgba",
+          "occurrences": [
+            {
+              "signature_raw": "def GetTopStitchColor(_styleIndex : int, _colorwayIndex : int, _lineIndex : int) -> CloApiRgba",
+              "documentation_raw": "\"\"\"\n@brief          Get base color of PBR material from TopStitch Style\n@param          _styleIndex: TopStitch Style index [_colorwayIndex]th Colorway to get Color\n@param          _colorwayIndex: Colorway Index to get Style\n@param          _lineIndex: Stitch index to get Color\n0~: [_lineIndex]th Stitch\n@return The color value in CloAgiRgba.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 22429,
+                  "block": 1953
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 23495,
+                  "block": 1953,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetTopStitchColor(int _styleIndex, int _colorwayIndex, int _lineIndex)",
+                "documentation_raw": "/// @brief              Get base color of PBR material from TopStitch Style\n/// @param              _styleIndex: TopStitch Style index [_colorwayIndex]th Colorway to get Color\n/// @param              _colorwayIndex: Colorway Index to get Style\n/// @param              _lineIndex: Stitch index to get Color\n/// 0~: [_lineIndex]th Stitch\n/// @return The color value in CloAgiRgba.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 22441,
+                    "block": 1954
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 23507,
+                    "block": 1954,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "CloApiRgba",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:CloApiRgba"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param          _styleIndex: TopStitch Style index [_colorwayIndex]th Colorway to get Color",
+            "@param          _colorwayIndex: Colorway Index to get Style",
+            "@param          _lineIndex: Stitch index to get Color"
+          ],
+          "return_docs_raw": [
+            "@return The color value in CloAgiRgba."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetTopStitchCount",
+      "qualified_name": "utility_api.GetTopStitchCount",
+      "module": "utility_api",
+      "symbol": "GetTopStitchCount",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetTopStitchCount#316c2dbe3fd1bba2",
+          "signature_normalized": "def GetTopStitchCount(_usedOnly : bool) -> int",
+          "signature_raw": "def GetTopStitchCount(_usedOnly : bool) -> int",
+          "parameters": [
+            {
+              "raw": "_usedOnly : bool",
+              "name": "_usedOnly",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "def GetTopStitchCount(_usedOnly : bool) -> int",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Get the count of Top Stitch Styles\n@param _usedOnly: If true, only count the Top Stitch Styles that are currently used in the garment. else, count all available Top Stitch Styles.\n@return The number of Top Stitch Styles available.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 23033,
+                  "block": 2005
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 24125,
+                  "block": 2005,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetTopStitchCount(bool _usedOnly)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Get the count of Top Stitch Styles\n/// @param _usedOnly: If true, only count the Top Stitch Styles that are currently used in the garment. else, count all available Top Stitch Styles.\n/// @return The number of Top Stitch Styles available.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 23043,
+                    "block": 2006
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 24135,
+                    "block": 2006,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _usedOnly: If true, only count the Top Stitch Styles that are currently used in the garment. else, count all available Top Stitch Styles."
+          ],
+          "return_docs_raw": [
+            "@return The number of Top Stitch Styles available."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetTopStitchDistanceValue",
+      "qualified_name": "utility_api.GetTopStitchDistanceValue",
+      "module": "utility_api",
+      "symbol": "GetTopStitchDistanceValue",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetTopStitchDistanceValue#b0ff8d96cd444395",
+          "signature_normalized": "def GetTopStitchDistanceValue(_topStitchIndex : int, _stitchCountIndex : int) -> float",
+          "signature_raw": "def GetTopStitchDistanceValue(_topStitchIndex : int, _stitchCountIndex : int) -> float",
+          "parameters": [
+            {
+              "raw": "_topStitchIndex : int",
+              "name": "_topStitchIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_stitchCountIndex : int",
+              "name": "_stitchCountIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "float",
+          "occurrences": [
+            {
+              "signature_raw": "def GetTopStitchDistanceValue(_topStitchIndex : int, _stitchCountIndex : int) -> float",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Get the top stitch distance value.\n@param _topStitchIndex: The top stitch style index.\n@param _stitchCountIndex: The stitch count index. Ex: for 3 count, 1:index for 1st line, 2:index for 2nd line, 3:index for 3rd line\n@return The distance value.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 24535,
+                  "block": 2133
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 25691,
+                  "block": 2133,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetTopStitchDistanceValue(int _topStitchIndex, int _stitchCountIndex)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Get the top stitch distance value.\n/// @param _topStitchIndex: The top stitch style index.\n/// @param _stitchCountIndex: The stitch count index. Ex: for 3 count, 1:index for 1st line, 2:index for 2nd line, 3:index for 3rd line\n/// @return The distance value.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 24546,
+                    "block": 2134
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 25702,
+                    "block": 2134,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _topStitchIndex: The top stitch style index.",
+            "@param _stitchCountIndex: The stitch count index. Ex: for 3 count, 1:index for 1st line, 2:index for 2nd line, 3:index for 3rd line"
+          ],
+          "return_docs_raw": [
+            "@return The distance value."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetTopStitchIndex",
+      "qualified_name": "utility_api.GetTopStitchIndex",
+      "module": "utility_api",
+      "symbol": "GetTopStitchIndex",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetTopStitchIndex#56947b967b27b5c0",
+          "signature_normalized": "def GetTopStitchIndex(_stitchName : str) -> int",
+          "signature_raw": "def GetTopStitchIndex(_stitchName : str) -> int",
+          "parameters": [
+            {
+              "raw": "_stitchName : str",
+              "name": "_stitchName",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "def GetTopStitchIndex(_stitchName : str) -> int",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Get the index of a Top Stitch Style by its name\n@param _stitchName: The name of the Top Stitch Style to search for.\n@return The index of the Top Stitch Style if found, otherwise -1.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 23075,
+                  "block": 2009
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 24169,
+                  "block": 2009,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetTopStitchIndex(const std::string _stitchName)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Get the index of a Top Stitch Style by its name\n/// @param _stitchName: The name of the Top Stitch Style to search for.\n/// @return The index of the Top Stitch Style if found, otherwise -1.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 23085,
+                    "block": 2010
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 24179,
+                    "block": 2010,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _stitchName: The name of the Top Stitch Style to search for."
+          ],
+          "return_docs_raw": [
+            "@return The index of the Top Stitch Style if found, otherwise -1."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetTopStitchName",
+      "qualified_name": "utility_api.GetTopStitchName",
+      "module": "utility_api",
+      "symbol": "GetTopStitchName",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetTopStitchName#f2c8f7eebcb3cdd9",
+          "signature_normalized": "def GetTopStitchName(_stitchIndex : int) -> str",
+          "signature_raw": "def GetTopStitchName(_stitchIndex : int) -> str",
+          "parameters": [
+            {
+              "raw": "_stitchIndex : int",
+              "name": "_stitchIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetTopStitchName(_stitchIndex : int) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Get the name of a Top Stitch Style by its index\n@param _stitchIndex: The index of the Top Stitch Style to retrieve the name for.\n@return The name of the Top Stitch Style if found, otherwise an empty string\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 23224,
+                  "block": 2023
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 24325,
+                  "block": 2023,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetTopStitchName(int _stitchIndex)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Get the name of a Top Stitch Style by its index\n/// @param _stitchIndex: The index of the Top Stitch Style to retrieve the name for.\n/// @return The name of the Top Stitch Style if found, otherwise an empty string",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 23234,
+                    "block": 2024
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 24335,
+                    "block": 2024,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _stitchIndex: The index of the Top Stitch Style to retrieve the name for."
+          ],
+          "return_docs_raw": [
+            "@return The name of the Top Stitch Style if found, otherwise an empty string"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetTopStitchNumberOfLines",
+      "qualified_name": "utility_api.GetTopStitchNumberOfLines",
+      "module": "utility_api",
+      "symbol": "GetTopStitchNumberOfLines",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetTopStitchNumberOfLines#8d6104d4eae1aabf",
+          "signature_normalized": "def GetTopStitchNumberOfLines(_topStitchIndex : int, _stitchCountIndex : int) -> int",
+          "signature_raw": "def GetTopStitchNumberOfLines(_topStitchIndex : int, _stitchCountIndex : int) -> int",
+          "parameters": [
+            {
+              "raw": "_topStitchIndex : int",
+              "name": "_topStitchIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_stitchCountIndex : int",
+              "name": "_stitchCountIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "def GetTopStitchNumberOfLines(_topStitchIndex : int, _stitchCountIndex : int) -> int",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Get the top stitch number of lines.\n@param _topStitchIndex: The top stitch style index.\n@param _stitchCountIndex: The stitch count index. Ex: for 3 count, 1:index for 1st line, 2:index for 2nd line, 3:index for 3rd line\n@return The number of lines.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 24468,
+                  "block": 2127
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 25621,
+                  "block": 2127,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetTopStitchNumberOfLines(int _topStitchIndex, int _stitchCountIndex)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Get the top stitch number of lines.\n/// @param _topStitchIndex: The top stitch style index.\n/// @param _stitchCountIndex: The stitch count index. Ex: for 3 count, 1:index for 1st line, 2:index for 2nd line, 3:index for 3rd line\n/// @return The number of lines.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 24479,
+                    "block": 2128
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 25632,
+                    "block": 2128,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _topStitchIndex: The top stitch style index.",
+            "@param _stitchCountIndex: The stitch count index. Ex: for 3 count, 1:index for 1st line, 2:index for 2nd line, 3:index for 3rd line"
+          ],
+          "return_docs_raw": [
+            "@return The number of lines."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetTopStitchOffsetIndex",
+      "qualified_name": "utility_api.GetTopStitchOffsetIndex",
+      "module": "utility_api",
+      "symbol": "GetTopStitchOffsetIndex",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetTopStitchOffsetIndex#6d05640df4df1e1a",
+          "signature_normalized": "def GetTopStitchOffsetIndex(_topStitchIndex : int) -> int",
+          "signature_raw": "def GetTopStitchOffsetIndex(_topStitchIndex : int) -> int",
+          "parameters": [
+            {
+              "raw": "_topStitchIndex : int",
+              "name": "_topStitchIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "def GetTopStitchOffsetIndex(_topStitchIndex : int) -> int",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Get the top stitch offset index.\n@param _topStitchIndex: The top stitch style index.\n@return The offset index.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 24447,
+                  "block": 2125
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 25599,
+                  "block": 2125,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetTopStitchOffsetIndex(int _topStitchIndex)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Get the top stitch offset index.\n/// @param _topStitchIndex: The top stitch style index.\n/// @return The offset index.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 24457,
+                    "block": 2126
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 25609,
+                    "block": 2126,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _topStitchIndex: The top stitch style index."
+          ],
+          "return_docs_raw": [
+            "@return The offset index."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetTopStitchOffsetValue",
+      "qualified_name": "utility_api.GetTopStitchOffsetValue",
+      "module": "utility_api",
+      "symbol": "GetTopStitchOffsetValue",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetTopStitchOffsetValue#2903c7717c2e2fcd",
+          "signature_normalized": "def GetTopStitchOffsetValue(_topStitchIndex : int) -> float",
+          "signature_raw": "def GetTopStitchOffsetValue(_topStitchIndex : int) -> float",
+          "parameters": [
+            {
+              "raw": "_topStitchIndex : int",
+              "name": "_topStitchIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "float",
+          "occurrences": [
+            {
+              "signature_raw": "def GetTopStitchOffsetValue(_topStitchIndex : int) -> float",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Get the top stitch stitch offset value.\n@param _topStitchIndex: The top stitch style index.\n@return The offset value.               \n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 24491,
+                  "block": 2129
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 25645,
+                  "block": 2129,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetTopStitchOffsetValue(int _topStitchIndex)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Get the top stitch stitch offset value.\n/// @param _topStitchIndex: The top stitch style index.\n/// @return The offset value.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 24501,
+                    "block": 2130
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 25655,
+                    "block": 2130,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _topStitchIndex: The top stitch style index."
+          ],
+          "return_docs_raw": [
+            "@return The offset value.               "
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetTopStitchOpacity",
+      "qualified_name": "utility_api.GetTopStitchOpacity",
+      "module": "utility_api",
+      "symbol": "GetTopStitchOpacity",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetTopStitchOpacity#97619e30b0d0234d",
+          "signature_normalized": "def GetTopStitchOpacity(_styleIndex : int, _lineIndex : int) -> int",
+          "signature_raw": "def GetTopStitchOpacity(_styleIndex : int, _lineIndex : int) -> int",
+          "parameters": [
+            {
+              "raw": "_styleIndex : int",
+              "name": "_styleIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_lineIndex : int",
+              "name": "_lineIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "def GetTopStitchOpacity(_styleIndex : int, _lineIndex : int) -> int",
+              "documentation_raw": "\"\"\"\n@brief          Get opacity of PBR material from TopStitch\n@param          _styleIndex: TopStitch index on Object Browser\n@param          _lineIndex: Stitch index to get opacity\n0~: [_lineIndex]th Stitch\n@return Opacity value\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 22310,
+                  "block": 1943
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 23371,
+                  "block": 1943,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetTopStitchOpacity(int _styleIndex)",
+                "documentation_raw": "/// @brief              Get opacity of PBR material from TopStitch\n/// @param              _styleIndex: TopStitch index on Object Browser\n/// @param              _lineIndex: Stitch index to get opacity\n/// 0~: [_lineIndex]th Stitch\n/// @return Opacity value",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 22321,
+                    "block": 1944
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 23382,
+                    "block": 1944,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          _styleIndex: TopStitch index on Object Browser",
+            "@param          _lineIndex: Stitch index to get opacity"
+          ],
+          "return_docs_raw": [
+            "@return Opacity value"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "utility_api.GetTopStitchOpacity#3db262f7e778de0e",
+          "signature_normalized": "def GetTopStitchOpacity(_styleIndex : int, _colorwayIndex : int, _lineIndex : int) -> int",
+          "signature_raw": "def GetTopStitchOpacity(_styleIndex : int, _colorwayIndex : int, _lineIndex : int) -> int",
+          "parameters": [
+            {
+              "raw": "_styleIndex : int",
+              "name": "_styleIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_lineIndex : int",
+              "name": "_lineIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "def GetTopStitchOpacity(_styleIndex : int, _colorwayIndex : int, _lineIndex : int) -> int",
+              "documentation_raw": "\"\"\"\n@brief          Get opacity of PBR material from TopStitch\n@param          _styleIndex: TopStitch index [_colorwayIndex]th Colorway\n@param          _colorwayIndex: Colorway Index to get Style\n@param          _lineIndex: Stitch index to get opacity\n0~: [_lineIndex]th Stitch\n@return Opacity value\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 22333,
+                  "block": 1945
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 23395,
+                  "block": 1945,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetTopStitchOpacity(int _styleIndex, int _colorwayIndex)",
+                "documentation_raw": "/// @brief              Get opacity of PBR material from TopStitch\n/// @param              _styleIndex: TopStitch index [_colorwayIndex]th Colorway\n/// @param              _colorwayIndex: Colorway Index to get Style\n/// @param              _lineIndex: Stitch index to get opacity\n/// 0~: [_lineIndex]th Stitch\n/// @return Opacity value",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 22345,
+                    "block": 1946
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 23407,
+                    "block": 1946,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          _styleIndex: TopStitch index [_colorwayIndex]th Colorway",
+            "@param          _colorwayIndex: Colorway Index to get Style",
+            "@param          _lineIndex: Stitch index to get opacity"
+          ],
+          "return_docs_raw": [
+            "@return Opacity value"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetTopStitchWidthValue",
+      "qualified_name": "utility_api.GetTopStitchWidthValue",
+      "module": "utility_api",
+      "symbol": "GetTopStitchWidthValue",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetTopStitchWidthValue#9f728f19b9c7f9a6",
+          "signature_normalized": "def GetTopStitchWidthValue(_topStitchIndex : int, _stitchCountIndex : int) -> float",
+          "signature_raw": "def GetTopStitchWidthValue(_topStitchIndex : int, _stitchCountIndex : int) -> float",
+          "parameters": [
+            {
+              "raw": "_topStitchIndex : int",
+              "name": "_topStitchIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_stitchCountIndex : int",
+              "name": "_stitchCountIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "float",
+          "occurrences": [
+            {
+              "signature_raw": "def GetTopStitchWidthValue(_topStitchIndex : int, _stitchCountIndex : int) -> float",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Get the top stitch width value.\n@param _topStitchIndex: The top stitch style index.\n@param _stitchCountIndex: The stitch count index. Ex: for 3 count, 1:index for 1st line, 2:index for 2nd line, 3:index for 3rd line\n@return The width value.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 24512,
+                  "block": 2131
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 25667,
+                  "block": 2131,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetTopStitchWidthValue(int _topStitchIndex, int _stitchCountIndex)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Get the top stitch width value.\n/// @param _topStitchIndex: The top stitch style index.\n/// @param _stitchCountIndex: The stitch count index. Ex: for 3 count, 1:index for 1st line, 2:index for 2nd line, 3:index for 3rd line\n/// @return The width value.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 24523,
+                    "block": 2132
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 25678,
+                    "block": 2132,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _topStitchIndex: The top stitch style index.",
+            "@param _stitchCountIndex: The stitch count index. Ex: for 3 count, 1:index for 1st line, 2:index for 2nd line, 3:index for 3rd line"
+          ],
+          "return_docs_raw": [
+            "@return The width value."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetTotalEndAnimationFrame",
+      "qualified_name": "utility_api.GetTotalEndAnimationFrame",
+      "module": "utility_api",
+      "symbol": "GetTotalEndAnimationFrame",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetTotalEndAnimationFrame#ce810e77f9cec427",
+          "signature_normalized": "def GetTotalEndAnimationFrame() -> double",
+          "signature_raw": "def GetTotalEndAnimationFrame() -> double",
+          "parameters": [],
+          "return_raw": "double",
+          "occurrences": [
+            {
+              "signature_raw": "def GetTotalEndAnimationFrame() -> double",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Returns the last frame from the animation list.\n@return end animation frame value type Double. Returns -FLT_MAX if the value is invalid.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 18714,
+                  "block": 1619
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 19613,
+                  "block": 1619,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetTotalEndAnimationFrame()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Returns the last frame from the animation list.\n/// @return end animation frame value type Double. Returns -FLT_MAX if the value is invalid.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 18723,
+                    "block": 1620
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 19622,
+                    "block": 1620,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return end animation frame value type Double. Returns -FLT_MAX if the value is invalid."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetTotalGraphicItemQuantity",
+      "qualified_name": "utility_api.GetTotalGraphicItemQuantity",
+      "module": "utility_api",
+      "symbol": "GetTotalGraphicItemQuantity",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetTotalGraphicItemQuantity#05b6338cda99db5e",
+          "signature_normalized": "def GetTotalGraphicItemQuantity() -> int",
+          "signature_raw": "def GetTotalGraphicItemQuantity() -> int",
+          "parameters": [],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "def GetTotalGraphicItemQuantity() -> int",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Returns the total quantity of all graphic items\n@return If valid, returns the total quantity; otherwise, -1.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 19833,
+                  "block": 1725
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 20785,
+                  "block": 1725,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetTotalGraphicItemQuantity()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Returns the total quantity of all graphic items\n/// @return If valid, returns the total quantity; otherwise, -1.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 19842,
+                    "block": 1726
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 20794,
+                    "block": 1726,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return If valid, returns the total quantity; otherwise, -1."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetTrimMaterialProperties",
+      "qualified_name": "utility_api.GetTrimMaterialProperties",
+      "module": "utility_api",
+      "symbol": "GetTrimMaterialProperties",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetTrimMaterialProperties#01fb13d73a2c939c",
+          "signature_normalized": "def GetTrimMaterialProperties(_trimStyleIndex : int, _meshIndex : int) -> map[str, str]",
+          "signature_raw": "def GetTrimMaterialProperties(_trimStyleIndex : int, _meshIndex : int) -> map[str, str]",
+          "parameters": [
+            {
+              "raw": "_trimStyleIndex : int",
+              "name": "_trimStyleIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_meshIndex : int",
+              "name": "_meshIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "map[str, str]",
+          "occurrences": [
+            {
+              "signature_raw": "def GetTrimMaterialProperties(_trimStyleIndex : int, _meshIndex : int) -> map[str, str]",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Gets multiple material properties for a specific trim style and mesh index.\n@param _trimStyleIndex: The index of the trim style to get properties for.\n@param _meshIndex: The index of the mesh within the trim style to get properties for.\n@return A map containing property names and their corresponding values for the trim material. Such as {'MaterialType': '0', 'Metalness': '0.100000', 'NormalMapIntensity': '2', 'Opacity': '0.500000', 'ReflectionIntensity': '0.250000', 'Roughness': '0.550000', 'RoughnessMapIntensity': '1.600000', 'RoughnessMapInvert': 'true'}\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 24275,
+                  "block": 2109
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 25419,
+                  "block": 2109,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetTrimMaterialProperties(int _trimStyleIndex, int _meshIndex)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Gets multiple material properties for a specific trim style and mesh index.\n/// @param _trimStyleIndex: The index of the trim style to get properties for.\n/// @param _meshIndex: The index of the mesh within the trim style to get properties for.\n/// @return A map containing property names and their corresponding values for the trim material. Such as {'MaterialType': '0', 'Metalness': '0.100000', 'NormalMapIntensity': '2', 'Opacity': '0.500000', 'ReflectionIntensity': '0.250000', 'Roughness': '0.550000', 'RoughnessMapIntensity': '1.600000', 'RoughnessMapInvert': 'true'}",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 24286,
+                    "block": 2110
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 25430,
+                    "block": 2110,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _trimStyleIndex: The index of the trim style to get properties for.",
+            "@param _meshIndex: The index of the mesh within the trim style to get properties for."
+          ],
+          "return_docs_raw": [
+            "@return A map containing property names and their corresponding values for the trim material. Such as {'MaterialType': '0', 'Metalness': '0.100000', 'NormalMapIntensity': '2', 'Opacity': '0.500000', 'ReflectionIntensity': '0.250000', 'Roughness': '0.550000', 'RoughnessMapIntensity': '1.600000', 'RoughnessMapInvert': 'true'}"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetTrimStyleColor",
+      "qualified_name": "utility_api.GetTrimStyleColor",
+      "module": "utility_api",
+      "symbol": "GetTrimStyleColor",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetTrimStyleColor#6294c56e817db70c",
+          "signature_normalized": "def GetTrimStyleColor(_styleIndex : int, _meshIndex : int) -> CloApiRgba",
+          "signature_raw": "def GetTrimStyleColor(_styleIndex : int, _meshIndex : int) -> CloApiRgba",
+          "parameters": [
+            {
+              "raw": "_styleIndex : int",
+              "name": "_styleIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_meshIndex : int",
+              "name": "_meshIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "CloApiRgba",
+          "occurrences": [
+            {
+              "signature_raw": "def GetTrimStyleColor(_styleIndex : int, _meshIndex : int) -> CloApiRgba",
+              "documentation_raw": "\"\"\"\n@brief          Get base color of PBR material from Trim Style\n@param          _styleIndex: Trim Style index on Object Browser to get Color\n@param          _meshIndex: Mesh index to get Color\n0~: [_meshIndex]th mesh\n@return The color value in CloAgiRgba.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 22146,
+                  "block": 1931
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 23201,
+                  "block": 1931,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetTrimStyleColor(int _styleIndex, int _meshIndex)",
+                "documentation_raw": "/// @brief              Get base color of PBR material from Trim Style\n/// @param              _styleIndex: Trim Style index on Object Browser to get Color\n/// @param              _meshIndex: Mesh index to get Color\n/// 0~: [_meshIndex]th mesh\n/// @return The color value in CloAgiRgba.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 22157,
+                    "block": 1932
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 23212,
+                    "block": 1932,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "CloApiRgba",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:CloApiRgba"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param          _styleIndex: Trim Style index on Object Browser to get Color",
+            "@param          _meshIndex: Mesh index to get Color"
+          ],
+          "return_docs_raw": [
+            "@return The color value in CloAgiRgba."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "utility_api.GetTrimStyleColor#15c764b98ccd97c9",
+          "signature_normalized": "def GetTrimStyleColor(_styleIndex : int, _colorwayIndex : int, _meshIndex : int) -> CloApiRgba",
+          "signature_raw": "def GetTrimStyleColor(_styleIndex : int, _colorwayIndex : int, _meshIndex : int) -> CloApiRgba",
+          "parameters": [
+            {
+              "raw": "_styleIndex : int",
+              "name": "_styleIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_meshIndex : int",
+              "name": "_meshIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "CloApiRgba",
+          "occurrences": [
+            {
+              "signature_raw": "def GetTrimStyleColor(_styleIndex : int, _colorwayIndex : int, _meshIndex : int) -> CloApiRgba",
+              "documentation_raw": "\"\"\"\n@brief          Get base color of PBR material from Trim Style\n@param          _styleIndex: Trim Style index [_colorwayIndex]th Colorway to get Color\n@param          _colorwayIndex: Colorway Index to get Style\n@param          _meshIndex: Mesh index to get Color\n0~: [_meshIndex]th mesh\n@return The color value in CloAgiRgba.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 22169,
+                  "block": 1933
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 23225,
+                  "block": 1933,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetTrimStyleColor(int _styleIndex, int _colorwayIndex, int _meshIndex)",
+                "documentation_raw": "/// @brief              Get base color of PBR material from Trim Style\n/// @param              _styleIndex: Trim Style index [_colorwayIndex]th Colorway to get Color\n/// @param              _colorwayIndex: Colorway Index to get Style\n/// @param              _meshIndex: Mesh index to get Color\n/// 0~: [_meshIndex]th mesh\n/// @return The color value in CloAgiRgba.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 22181,
+                    "block": 1934
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 23237,
+                    "block": 1934,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "CloApiRgba",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:CloApiRgba"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param          _styleIndex: Trim Style index [_colorwayIndex]th Colorway to get Color",
+            "@param          _colorwayIndex: Colorway Index to get Style",
+            "@param          _meshIndex: Mesh index to get Color"
+          ],
+          "return_docs_raw": [
+            "@return The color value in CloAgiRgba."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetTrimStyleCount",
+      "qualified_name": "utility_api.GetTrimStyleCount",
+      "module": "utility_api",
+      "symbol": "GetTrimStyleCount",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetTrimStyleCount#edcd56708b7c4672",
+          "signature_normalized": "def GetTrimStyleCount(_usedOnly : bool) -> int",
+          "signature_raw": "def GetTrimStyleCount(_usedOnly : bool) -> int",
+          "parameters": [
+            {
+              "raw": "_usedOnly : bool",
+              "name": "_usedOnly",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "def GetTrimStyleCount(_usedOnly : bool) -> int",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Get the count of Trim Styles\n@param _usedOnly: If true, only count the Trim Styles that are currently used in the garment. else, count all available Trim Styles.\n@return The number of Trim Styles available.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 23012,
+                  "block": 2003
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 24103,
+                  "block": 2003,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetTrimStyleCount(bool _usedOnly)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Get the count of Trim Styles\n/// @param _usedOnly: If true, only count the Trim Styles that are currently used in the garment. else, count all available Trim Styles.\n/// @return The number of Trim Styles available.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 23022,
+                    "block": 2004
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 24113,
+                    "block": 2004,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _usedOnly: If true, only count the Trim Styles that are currently used in the garment. else, count all available Trim Styles."
+          ],
+          "return_docs_raw": [
+            "@return The number of Trim Styles available."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetTrimStyleIndex",
+      "qualified_name": "utility_api.GetTrimStyleIndex",
+      "module": "utility_api",
+      "symbol": "GetTrimStyleIndex",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetTrimStyleIndex#3d8d216d14d2a142",
+          "signature_normalized": "def GetTrimStyleIndex(_trimStyleName : str) -> int",
+          "signature_raw": "def GetTrimStyleIndex(_trimStyleName : str) -> int",
+          "parameters": [
+            {
+              "raw": "_trimStyleName : str",
+              "name": "_trimStyleName",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "def GetTrimStyleIndex(_trimStyleName : str) -> int",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Get the index of a Trim Style by its name\n@param _trimStyleName: The name of the Trim Style to search for.\n@return The index of the Trim Style if found, otherwise -1.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 23054,
+                  "block": 2007
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 24147,
+                  "block": 2007,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetTrimStyleIndex(const std::string _trimStyleName)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Get the index of a Trim Style by its name\n/// @param _trimStyleName: The name of the Trim Style to search for.\n/// @return The index of the Trim Style if found, otherwise -1.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 23064,
+                    "block": 2008
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 24157,
+                    "block": 2008,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _trimStyleName: The name of the Trim Style to search for."
+          ],
+          "return_docs_raw": [
+            "@return The index of the Trim Style if found, otherwise -1."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetTrimStyleListWithIndex",
+      "qualified_name": "utility_api.GetTrimStyleListWithIndex",
+      "module": "utility_api",
+      "symbol": "GetTrimStyleListWithIndex",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetTrimStyleListWithIndex#1f57c2d62c0f80a0",
+          "signature_normalized": "def GetTrimStyleListWithIndex() -> str",
+          "signature_raw": "def GetTrimStyleListWithIndex() -> str",
+          "parameters": [],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetTrimStyleListWithIndex() -> str",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Gets the list of trim styles available in the current project's object browser.\n@return Returns a JSON-formatted string containing the list of trim styles with their corresponding indices and names.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 20650,
+                  "block": 1791
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 21635,
+                  "block": 1791,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetTrimStyleListWithIndex()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Gets the list of trim styles available in the current project's object browser.\n/// @return Returns a JSON-formatted string containing the list of trim styles with their corresponding indices and names.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 20659,
+                    "block": 1792
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 21644,
+                    "block": 1792,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return Returns a JSON-formatted string containing the list of trim styles with their corresponding indices and names."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetTrimStyleName",
+      "qualified_name": "utility_api.GetTrimStyleName",
+      "module": "utility_api",
+      "symbol": "GetTrimStyleName",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetTrimStyleName#76dcf62c72f569ad",
+          "signature_normalized": "def GetTrimStyleName(_trimStyleIndex : int) -> str",
+          "signature_raw": "def GetTrimStyleName(_trimStyleIndex : int) -> str",
+          "parameters": [
+            {
+              "raw": "_trimStyleIndex : int",
+              "name": "_trimStyleIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetTrimStyleName(_trimStyleIndex : int) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Get the name of a Trim Style by its index\n@param _trimStyleIndex: The index of the Trim Style to retrieve the name for.\n@return The name of the Trim Style if found, otherwise an empty string.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 23096,
+                  "block": 2011
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 24191,
+                  "block": 2011,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetTrimStyleName(int _trimStyleIndex)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Get the name of a Trim Style by its index\n/// @param _trimStyleIndex: The index of the Trim Style to retrieve the name for.\n/// @return The name of the Trim Style if found, otherwise an empty string.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 23106,
+                    "block": 2012
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 24201,
+                    "block": 2012,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _trimStyleIndex: The index of the Trim Style to retrieve the name for."
+          ],
+          "return_docs_raw": [
+            "@return The name of the Trim Style if found, otherwise an empty string."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetUseSameMapAsFabricForGraphicOpacity",
+      "qualified_name": "utility_api.GetUseSameMapAsFabricForGraphicOpacity",
+      "module": "utility_api",
+      "symbol": "GetUseSameMapAsFabricForGraphicOpacity",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetUseSameMapAsFabricForGraphicOpacity#a2b08afc8ca3e1c4",
+          "signature_normalized": "def GetUseSameMapAsFabricForGraphicOpacity(_colorwayIndex : int, _graphicItemIndex : int, _materialFace : int) -> bool",
+          "signature_raw": "def GetUseSameMapAsFabricForGraphicOpacity(_colorwayIndex : int, _graphicItemIndex : int, _materialFace : int) -> bool",
+          "parameters": [
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_graphicItemIndex : int",
+              "name": "_graphicItemIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_materialFace : int",
+              "name": "_materialFace",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def GetUseSameMapAsFabricForGraphicOpacity(_colorwayIndex : int, _graphicItemIndex : int, _materialFace : int) -> bool",
+              "documentation_raw": "\"\"\"\n@brief          Returns whether the graphic's opacity map uses the same map as the fabric it is applied to.\n@param          _colorwayIndex: Colorway Index to get Style\n@param          _graphicItemIndex: The index of the graphic item within the list of graphics applied to the object in the Object Browser.\n@param          _materialFace: 0 ,  back : 1 , side : 2 \n@return Returns True if 'Use Same Map as Fabric' is enabled for the graphic opacity map.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 22966,
+                  "block": 1999
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 24055,
+                  "block": 1999,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetUseSameMapAsFabricForGraphicOpacity(graphic index)",
+                "documentation_raw": "/// @brief              Returns whether the graphic's opacity map uses the same map as the fabric it is applied to.\n/// @param              _colorwayIndex: Colorway Index to get Style\n/// @param              _graphicItemIndex: The index of the graphic item within the list of graphics applied to the object in the Object Browser.\n/// @param              _materialFace: 0 ,  back : 1 , side : 2 \n/// @return Returns True if 'Use Same Map as Fabric' is enabled for the graphic opacity map.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 22977,
+                    "block": 2000
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 24066,
+                    "block": 2000,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          _colorwayIndex: Colorway Index to get Style",
+            "@param          _graphicItemIndex: The index of the graphic item within the list of graphics applied to the object in the Object Browser.",
+            "@param          _materialFace: 0 ,  back : 1 , side : 2 "
+          ],
+          "return_docs_raw": [
+            "@return Returns True if 'Use Same Map as Fabric' is enabled for the graphic opacity map."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetViewPoint",
+      "qualified_name": "utility_api.GetViewPoint",
+      "module": "utility_api",
+      "symbol": "GetViewPoint",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetViewPoint#80d7f398840f8812",
+          "signature_normalized": "def GetViewPoint() -> int",
+          "signature_raw": "def GetViewPoint() -> int",
+          "parameters": [],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "def GetViewPoint() -> int",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Get current view point\n@return View Point index (0: Current View, 1: Custom View)\n@note If the view point is not set, it returns -1.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 20878,
+                  "block": 1815
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 21875,
+                  "block": 1815,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetViewPoint()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Get current view point\n/// @return View Point index (0: Current View, 1: Custom View)\n/// @note If the view point is not set, it returns -1.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 20888,
+                    "block": 1816
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 21885,
+                    "block": 1816,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return View Point index (0: Current View, 1: Custom View)"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetWindActive",
+      "qualified_name": "utility_api.GetWindActive",
+      "module": "utility_api",
+      "symbol": "GetWindActive",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetWindActive#c1d4463426da837d",
+          "signature_normalized": "def GetWindActive() -> bool",
+          "signature_raw": "def GetWindActive() -> bool",
+          "parameters": [],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def GetWindActive() -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief It is a function that gets whether the wind is active or not.\n@return It returns True if wind is active, False if wind is inactive.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 24577,
+                  "block": 2137
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 25735,
+                  "block": 2137,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetWindActive()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief It is a function that gets whether the wind is active or not.\n/// @return It returns True if wind is active, False if wind is inactive.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 24586,
+                    "block": 2138
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 25744,
+                    "block": 2138,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return It returns True if wind is active, False if wind is inactive."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetWindControllerSettings",
+      "qualified_name": "utility_api.GetWindControllerSettings",
+      "module": "utility_api",
+      "symbol": "GetWindControllerSettings",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetWindControllerSettings#9345e499ab428708",
+          "signature_normalized": "def GetWindControllerSettings(_index : int) -> WindControllerOptions",
+          "signature_raw": "def GetWindControllerSettings(_index : int) -> WindControllerOptions",
+          "parameters": [
+            {
+              "raw": "_index : int",
+              "name": "_index",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "WindControllerOptions",
+          "occurrences": [
+            {
+              "signature_raw": "def GetWindControllerSettings(_index : int) -> WindControllerOptions",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief It is a function that retrieves the option values set in the wind controller.\n@param  _index : It is the index of the wincontroller list.\n@return It returns a WindControllerOptions.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 23315,
+                  "block": 2033
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 24421,
+                  "block": 2033,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetWindControllerSettings()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief It is a function that retrieves the option values set in the wind controller.\n/// @param  _index : It is the index of the wincontroller list.\n/// @return It returns a WindControllerOptions.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 23325,
+                    "block": 2034
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 24431,
+                    "block": 2034,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "WindControllerOptions",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:WindControllerOptions"
+            },
+            {
+              "name": "WindControllerOptions",
+              "basis": "documentation_mention",
+              "status": "resolved",
+              "type_id": "type:WindControllerOptions"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param  _index : It is the index of the wincontroller list."
+          ],
+          "return_docs_raw": [
+            "@return It returns a WindControllerOptions."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetWindPosition",
+      "qualified_name": "utility_api.GetWindPosition",
+      "module": "utility_api",
+      "symbol": "GetWindPosition",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetWindPosition#683be1b461e946bb",
+          "signature_normalized": "def GetWindPosition() -> list[float]",
+          "signature_raw": "def GetWindPosition() -> list[float]",
+          "parameters": [],
+          "return_raw": "list[float]",
+          "occurrences": [
+            {
+              "signature_raw": "def GetWindPosition() -> list[float]",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief It is a function that gets the position of the wind.\n@return It returns a vector of three floats representing the position along the X, Y, and Z axes.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 24661,
+                  "block": 2145
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 25823,
+                  "block": 2145,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetWindPosition()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief It is a function that gets the position of the wind.\n/// @return It returns a vector of three floats representing the position along the X, Y, and Z axes.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 24670,
+                    "block": 2146
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 25832,
+                    "block": 2146,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return It returns a vector of three floats representing the position along the X, Y, and Z axes."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetWindRotation",
+      "qualified_name": "utility_api.GetWindRotation",
+      "module": "utility_api",
+      "symbol": "GetWindRotation",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetWindRotation#fa29dfebccf4f0ad",
+          "signature_normalized": "def GetWindRotation() -> list[float]",
+          "signature_raw": "def GetWindRotation() -> list[float]",
+          "parameters": [],
+          "return_raw": "list[float]",
+          "occurrences": [
+            {
+              "signature_raw": "def GetWindRotation() -> list[float]",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief It is a function that gets the rotation of the wind.\n@return It returns a vector of three floats representing the rotation angles around the X, Y, and Z axes in degrees.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 24619,
+                  "block": 2141
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 25779,
+                  "block": 2141,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetWindRotation()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief It is a function that gets the rotation of the wind.\n/// @return It returns a vector of three floats representing the rotation angles around the X, Y, and Z axes in degrees.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 24628,
+                    "block": 2142
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 25788,
+                    "block": 2142,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return It returns a vector of three floats representing the rotation angles around the X, Y, and Z axes in degrees."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetZipperStyleAssetType",
+      "qualified_name": "utility_api.GetZipperStyleAssetType",
+      "module": "utility_api",
+      "symbol": "GetZipperStyleAssetType",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetZipperStyleAssetType#4257fbb3eba6765c",
+          "signature_normalized": "def GetZipperStyleAssetType(_zipperStyleIndex : int) -> int",
+          "signature_raw": "def GetZipperStyleAssetType(_zipperStyleIndex : int) -> int",
+          "parameters": [
+            {
+              "raw": "_zipperStyleIndex : int",
+              "name": "_zipperStyleIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "def GetZipperStyleAssetType(_zipperStyleIndex : int) -> int",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Get the zipper style asset type index.\n@param _zipperStyleIndex: The zipper style index.\n@return It returns the zipper style asset type index.\n0: Custom(No Change)\n1: Plastic_01\n2: Plastic_02\n3: Metal\n4: Nylon\n5: Reverse_Nylon\n6: Invisible\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 23507,
+                  "block": 2049
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 24621,
+                  "block": 2049,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetZipperStyleAssetType(int _zipperStyleIndex)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Get the zipper style asset type index.\n/// @param _zipperStyleIndex: The zipper style index.\n/// @return It returns the zipper style asset type index.\n/// 0: Custom(No Change)\n/// 1: Plastic_01\n/// 2: Plastic_02\n/// 3: Metal\n/// 4: Nylon\n/// 5: Reverse_Nylon\n/// 6: Invisible",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 23524,
+                    "block": 2050
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 24638,
+                    "block": 2050,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _zipperStyleIndex: The zipper style index."
+          ],
+          "return_docs_raw": [
+            "@return It returns the zipper style asset type index."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetZipperStyleFunctionType",
+      "qualified_name": "utility_api.GetZipperStyleFunctionType",
+      "module": "utility_api",
+      "symbol": "GetZipperStyleFunctionType",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetZipperStyleFunctionType#04c7ecf42f2ebf96",
+          "signature_normalized": "def GetZipperStyleFunctionType(_zipperStyleIndex : int) -> int",
+          "signature_raw": "def GetZipperStyleFunctionType(_zipperStyleIndex : int) -> int",
+          "parameters": [
+            {
+              "raw": "_zipperStyleIndex : int",
+              "name": "_zipperStyleIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "def GetZipperStyleFunctionType(_zipperStyleIndex : int) -> int",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Get the zipper style function type.\n@param _zipperStyleIndex: The zipper style index.\n@return It returns the zipper style function type index.\n0: One way\n1: Two way(Bottom to bottom)\n2: Two way(Head to head)\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 23445,
+                  "block": 2045
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 24557,
+                  "block": 2045,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetZipperStyleFunctionType(int _zipperStyleIndex)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Get the zipper style function type.\n/// @param _zipperStyleIndex: The zipper style index.\n/// @return It returns the zipper style function type index.\n/// 0: One way\n/// 1: Two way(Bottom to bottom)\n/// 2: Two way(Head to head)",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 23458,
+                    "block": 2046
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 24570,
+                    "block": 2046,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _zipperStyleIndex: The zipper style index."
+          ],
+          "return_docs_raw": [
+            "@return It returns the zipper style function type index."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetZipperStyleName",
+      "qualified_name": "utility_api.GetZipperStyleName",
+      "module": "utility_api",
+      "symbol": "GetZipperStyleName",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetZipperStyleName#b7058a7f8c234429",
+          "signature_normalized": "def GetZipperStyleName(_zipperStyleIndex : int) -> str",
+          "signature_raw": "def GetZipperStyleName(_zipperStyleIndex : int) -> str",
+          "parameters": [
+            {
+              "raw": "_zipperStyleIndex : int",
+              "name": "_zipperStyleIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetZipperStyleName(_zipperStyleIndex : int) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Get the zipper style name.\n@param _zipperStyleIndex: The zipper style index.\n@return It returns the zipper style name.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 23397,
+                  "block": 2041
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 24507,
+                  "block": 2041,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetZipperStyleName(int _zipperStyleIndex)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Get the zipper style name.\n/// @param _zipperStyleIndex: The zipper style index.\n/// @return It returns the zipper style name.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 23407,
+                    "block": 2042
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 24517,
+                    "block": 2042,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _zipperStyleIndex: The zipper style index."
+          ],
+          "return_docs_raw": [
+            "@return It returns the zipper style name."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetZipperStyleTapeThickness",
+      "qualified_name": "utility_api.GetZipperStyleTapeThickness",
+      "module": "utility_api",
+      "symbol": "GetZipperStyleTapeThickness",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetZipperStyleTapeThickness#2e51a57271486c08",
+          "signature_normalized": "def GetZipperStyleTapeThickness(_zipperStyleIndex : int) -> float",
+          "signature_raw": "def GetZipperStyleTapeThickness(_zipperStyleIndex : int) -> float",
+          "parameters": [
+            {
+              "raw": "_zipperStyleIndex : int",
+              "name": "_zipperStyleIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "float",
+          "occurrences": [
+            {
+              "signature_raw": "def GetZipperStyleTapeThickness(_zipperStyleIndex : int) -> float",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Get the zipper style tape thickness.\n@param _zipperStyleIndex: The zipper style index.\n@return It returns the zipper style tape thickness (mm)\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 23781,
+                  "block": 2073
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 24907,
+                  "block": 2073,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetZipperStyleTapeThickness(int _zipperStyleIndex)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Get the zipper style tape thickness.\n/// @param _zipperStyleIndex: The zipper style index.\n/// @return It returns the zipper style tape thickness (mm)",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 23791,
+                    "block": 2074
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 24917,
+                    "block": 2074,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _zipperStyleIndex: The zipper style index."
+          ],
+          "return_docs_raw": [
+            "@return It returns the zipper style tape thickness (mm)"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetZipperStyleTeethType",
+      "qualified_name": "utility_api.GetZipperStyleTeethType",
+      "module": "utility_api",
+      "symbol": "GetZipperStyleTeethType",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetZipperStyleTeethType#c97f41b6e330d22c",
+          "signature_normalized": "def GetZipperStyleTeethType(_zipperStyleIndex : int) -> int",
+          "signature_raw": "def GetZipperStyleTeethType(_zipperStyleIndex : int) -> int",
+          "parameters": [
+            {
+              "raw": "_zipperStyleIndex : int",
+              "name": "_zipperStyleIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "def GetZipperStyleTeethType(_zipperStyleIndex : int) -> int",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Update the zipper style teeth type.\n@param _zipperStyleIndex: The zipper style index.\n@return It returns the teeth type index.\n0: Texture\n1: OBJ\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 23567,
+                  "block": 2053
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 24683,
+                  "block": 2053,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetZipperStyleTeethType(int _zipperStyleIndex, int _typeIndex)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Update the zipper style teeth type.\n/// @param _zipperStyleIndex: The zipper style index.\n/// @return It returns the teeth type index.\n/// 0: Texture\n/// 1: OBJ",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 23579,
+                    "block": 2054
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 24695,
+                    "block": 2054,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _zipperStyleIndex: The zipper style index."
+          ],
+          "return_docs_raw": [
+            "@return It returns the teeth type index."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetZipperStyleTeethWidth",
+      "qualified_name": "utility_api.GetZipperStyleTeethWidth",
+      "module": "utility_api",
+      "symbol": "GetZipperStyleTeethWidth",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetZipperStyleTeethWidth#0ce00b93ec400292",
+          "signature_normalized": "def GetZipperStyleTeethWidth(_zipperStyleIndex : int) -> float",
+          "signature_raw": "def GetZipperStyleTeethWidth(_zipperStyleIndex : int) -> float",
+          "parameters": [
+            {
+              "raw": "_zipperStyleIndex : int",
+              "name": "_zipperStyleIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "float",
+          "occurrences": [
+            {
+              "signature_raw": "def GetZipperStyleTeethWidth(_zipperStyleIndex : int) -> float",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Get the zipper style teeth width.\n@param _zipperStyleIndex: The zipper style index.\n@return It returns the zipper style teeth width (mm)\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 23697,
+                  "block": 2065
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 24819,
+                  "block": 2065,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetZipperStyleTeethWidth(int _zipperStyleIndex)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Get the zipper style teeth width.\n/// @param _zipperStyleIndex: The zipper style index.\n/// @return It returns the zipper style teeth width (mm)",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 23707,
+                    "block": 2066
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 24829,
+                    "block": 2066,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _zipperStyleIndex: The zipper style index."
+          ],
+          "return_docs_raw": [
+            "@return It returns the zipper style teeth width (mm)"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetZipperStyleWeight",
+      "qualified_name": "utility_api.GetZipperStyleWeight",
+      "module": "utility_api",
+      "symbol": "GetZipperStyleWeight",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetZipperStyleWeight#216802c0e6a48374",
+          "signature_normalized": "def GetZipperStyleWeight(_zipperStyleIndex : int) -> float",
+          "signature_raw": "def GetZipperStyleWeight(_zipperStyleIndex : int) -> float",
+          "parameters": [
+            {
+              "raw": "_zipperStyleIndex : int",
+              "name": "_zipperStyleIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "float",
+          "occurrences": [
+            {
+              "signature_raw": "def GetZipperStyleWeight(_zipperStyleIndex : int) -> float",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Get the zipper style weight.\n@param _zipperStyleIndex: The zipper style index.\n@return It returns the zipper style weight (g)\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 23739,
+                  "block": 2069
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 24863,
+                  "block": 2069,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetZipperStyleWeight(int _zipperStyleIndex)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Get the zipper style weight.\n/// @param _zipperStyleIndex: The zipper style index.\n/// @return It returns the zipper style weight (g)",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 23749,
+                    "block": 2070
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 24873,
+                    "block": 2070,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _zipperStyleIndex: The zipper style index."
+          ],
+          "return_docs_raw": [
+            "@return It returns the zipper style weight (g)"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.IsCLOFileFormatWithThumbnail",
+      "qualified_name": "utility_api.IsCLOFileFormatWithThumbnail",
+      "module": "utility_api",
+      "symbol": "IsCLOFileFormatWithThumbnail",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.IsCLOFileFormatWithThumbnail#cf10db049594a17c",
+          "signature_normalized": "def IsCLOFileFormatWithThumbnail(filePath : str) -> bool",
+          "signature_raw": "def IsCLOFileFormatWithThumbnail(filePath : str) -> bool",
+          "parameters": [
+            {
+              "raw": "filePath : str",
+              "name": "filePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def IsCLOFileFormatWithThumbnail(filePath : str) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Check if the CLO file format has the thumbnail memory.\n@return true if the file is the CLO format file and contains the thumbnail memory which can be displayed on Library Windows for item thumbnail and/or preview dialog\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 17395,
+                  "block": 1501
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 18237,
+                  "block": 1501,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "IsCLOFileFormatWithThumbnail(const string& filePath)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Check if the CLO file format has the thumbnail memory.\n/// @return true if the file is the CLO format file and contains the thumbnail memory which can be displayed on Library Windows for item thumbnail and/or preview dialog",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 17404,
+                    "block": 1502
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 18246,
+                    "block": 1502,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return true if the file is the CLO format file and contains the thumbnail memory which can be displayed on Library Windows for item thumbnail and/or preview dialog"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.IsCLOFileFormatWithThumbnailW",
+      "qualified_name": "utility_api.IsCLOFileFormatWithThumbnailW",
+      "module": "utility_api",
+      "symbol": "IsCLOFileFormatWithThumbnailW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.IsCLOFileFormatWithThumbnailW#2b2829f68e644028",
+          "signature_normalized": "def IsCLOFileFormatWithThumbnailW(filePath : str) -> bool",
+          "signature_raw": "def IsCLOFileFormatWithThumbnailW(filePath : str) -> bool",
+          "parameters": [
+            {
+              "raw": "filePath : str",
+              "name": "filePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def IsCLOFileFormatWithThumbnailW(filePath : str) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Check if the CLO file format has the thumbnail memory.\n@return true if the file is the CLO format file and contains the thumbnail memory which can be displayed on Library Windows for item thumbnail and/or preview dialog\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 17414,
+                  "block": 1503
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 18257,
+                  "block": 1503,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "IsCLOFileFormatWithThumbnailW(const wstring& filePath)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Check if the CLO file format has the thumbnail memory.\n/// @return true if the file is the CLO format file and contains the thumbnail memory which can be displayed on Library Windows for item thumbnail and/or preview dialog",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 17423,
+                    "block": 1504
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 18266,
+                    "block": 1504,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return true if the file is the CLO format file and contains the thumbnail memory which can be displayed on Library Windows for item thumbnail and/or preview dialog"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.IsCLOFileFormatWithTripleThumbnail",
+      "qualified_name": "utility_api.IsCLOFileFormatWithTripleThumbnail",
+      "module": "utility_api",
+      "symbol": "IsCLOFileFormatWithTripleThumbnail",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.IsCLOFileFormatWithTripleThumbnail#6bca6ed1553e61e7",
+          "signature_normalized": "def IsCLOFileFormatWithTripleThumbnail(filePath : str) -> bool",
+          "signature_raw": "def IsCLOFileFormatWithTripleThumbnail(filePath : str) -> bool",
+          "parameters": [
+            {
+              "raw": "filePath : str",
+              "name": "filePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def IsCLOFileFormatWithTripleThumbnail(filePath : str) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Check if the CLO file format has the three images memory for preview thumbnail for the Library Preview Dialog.\n@return true if the CLO file format has the three images memory for preview thumbnail for the Library Preview Dialog.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 17433,
+                  "block": 1505
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 18277,
+                  "block": 1505,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "IsCLOFileFormatWithTripleThumbnail(const string& filePath)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Check if the CLO file format has the three images memory for preview thumbnail for the Library Preview Dialog.\n/// @return true if the CLO file format has the three images memory for preview thumbnail for the Library Preview Dialog.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 17442,
+                    "block": 1506
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 18286,
+                    "block": 1506,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return true if the CLO file format has the three images memory for preview thumbnail for the Library Preview Dialog."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    }
+  ]
+}

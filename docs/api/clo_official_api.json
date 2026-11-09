@@ -1,0 +1,444 @@
+{
+  "schema_version": 1,
+  "target": "CLO2026.1.336",
+  "evidence_scope": "official_documentation_only_no_runtime_acceptance",
+  "provenance": {
+    "sdk_version": "11.0.1",
+    "clo_version": "2026.1.336",
+    "release_date_raw": "October 2026",
+    "documentation_update_raw": "October 2026",
+    "checked_on": "2026-11-09",
+    "version_evidence_raw": "**SDK v11.0.1** — *CLO 2026.1.336 Official Release",
+    "sdk_download_urls_not_fetched": [
+      "https://clo3d.oss-cn-shanghai.aliyuncs.com/CLO_SDK_v2026.1.336_Mac.zip",
+      "https://clo3d.oss-cn-shanghai.aliyuncs.com/CLO_SDK_v2026.1.336_Win.zip",
+      "https://s3.us-east-1.amazonaws.com/Outside_Work/CLO_SDK_v2026.1.336_Mac.zip",
+      "https://s3.us-east-1.amazonaws.com/Outside_Work/CLO_SDK_v2026.1.336_Win.zip"
+    ]
+  },
+  "sources": [
+    {
+      "id": "changelog.html",
+      "url": "https://developer.clo3d.com/changelog.html",
+      "sha256": "19657c3fd07ab7ce2bc962e82147efc44aefc0b988a1fde122587aef0bdbe543",
+      "hash_scope": "fetched_source_bytes_not_normalized",
+      "bytes": 122122,
+      "checked_on": "2026-11-09"
+    },
+    {
+      "id": "changelog.rst.txt",
+      "url": "https://developer.clo3d.com/_sources/changelog.rst.txt",
+      "sha256": "b5d351ea4965aaa8916d21cb640bcf68997e46b9398ec6d3f901075daf4e83f8",
+      "hash_scope": "fetched_source_bytes_not_normalized",
+      "bytes": 68406,
+      "checked_on": "2026-11-09"
+    },
+    {
+      "id": "download.html",
+      "url": "https://developer.clo3d.com/download.html",
+      "sha256": "c5766af01ebd9112f399cff9ff41119518cc45044c1a2e6425f7337b6454864f",
+      "hash_scope": "fetched_source_bytes_not_normalized",
+      "bytes": 56608,
+      "checked_on": "2026-11-09"
+    },
+    {
+      "id": "download.rst.txt",
+      "url": "https://developer.clo3d.com/_sources/download.rst.txt",
+      "sha256": "69d438b2284a5d6124db2f4f719d680bcbdd6aedfd6dedaf5819f83aac306eb4",
+      "hash_scope": "fetched_source_bytes_not_normalized",
+      "bytes": 17376,
+      "checked_on": "2026-11-09"
+    },
+    {
+      "id": "eventplugin.html",
+      "url": "https://developer.clo3d.com/eventplugin.html",
+      "sha256": "3b52cc3723356a129e95663deb68fd8464afc5b84054f915bb8b3bf5cf90fce7",
+      "hash_scope": "fetched_source_bytes_not_normalized",
+      "bytes": 19995,
+      "checked_on": "2026-11-09"
+    },
+    {
+      "id": "eventplugin.rst.txt",
+      "url": "https://developer.clo3d.com/_sources/eventplugin.rst.txt",
+      "sha256": "17e6e3bb977054bb976cfc343b6c2598e87ccb835d5f0b5cb9bf7110559b6118",
+      "hash_scope": "fetched_source_bytes_not_normalized",
+      "bytes": 4134,
+      "checked_on": "2026-11-09"
+    },
+    {
+      "id": "gui_api_reference.html",
+      "url": "https://developer.clo3d.com/gui_api_reference.html",
+      "sha256": "8b34f236abc73263e13c5899c93ab08278c1d5f506e2d4b4de3b1f0cd62c3b53",
+      "hash_scope": "fetched_source_bytes_not_normalized",
+      "bytes": 70402,
+      "checked_on": "2026-11-09"
+    },
+    {
+      "id": "gui_api_reference.rst.txt",
+      "url": "https://developer.clo3d.com/_sources/gui_api_reference.rst.txt",
+      "sha256": "707245798c3351e85ad883f4b343ba9cd9f422b7b13a302db9f23c9ba3d5f53b",
+      "hash_scope": "fetched_source_bytes_not_normalized",
+      "bytes": 22067,
+      "checked_on": "2026-11-09"
+    },
+    {
+      "id": "library.html",
+      "url": "https://developer.clo3d.com/library.html",
+      "sha256": "4e4ca06369b1df045cfec6e47890030b23709c6f49df66f90e9125034339dcb2",
+      "hash_scope": "fetched_source_bytes_not_normalized",
+      "bytes": 11112,
+      "checked_on": "2026-11-09"
+    },
+    {
+      "id": "library.rst.txt",
+      "url": "https://developer.clo3d.com/_sources/library.rst.txt",
+      "sha256": "1e14651d874bb3cfbe8c94492de9d82fc7d4ea17676847e67cb062679d101391",
+      "hash_scope": "fetched_source_bytes_not_normalized",
+      "bytes": 2032,
+      "checked_on": "2026-11-09"
+    },
+    {
+      "id": "list.html",
+      "url": "https://developer.clo3d.com/list.html",
+      "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+      "hash_scope": "fetched_source_bytes_not_normalized",
+      "bytes": 2564067,
+      "checked_on": "2026-11-09"
+    },
+    {
+      "id": "list.rst.txt",
+      "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+      "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+      "hash_scope": "fetched_source_bytes_not_normalized",
+      "bytes": 950239,
+      "checked_on": "2026-11-09"
+    },
+    {
+      "id": "optiontype.html",
+      "url": "https://developer.clo3d.com/optiontype.html",
+      "sha256": "71220fb0c2f8b2990a66aa85a38007e412056282b1c68ae18de09fb46e679984",
+      "hash_scope": "fetched_source_bytes_not_normalized",
+      "bytes": 169325,
+      "checked_on": "2026-11-09"
+    },
+    {
+      "id": "optiontype.rst.txt",
+      "url": "https://developer.clo3d.com/_sources/optiontype.rst.txt",
+      "sha256": "e07f57452eb101c2a529d7712e6421420b74182825c9e1deb1e58381f9d479a7",
+      "hash_scope": "fetched_source_bytes_not_normalized",
+      "bytes": 72889,
+      "checked_on": "2026-11-09"
+    },
+    {
+      "id": "python.html",
+      "url": "https://developer.clo3d.com/python.html",
+      "sha256": "d59059f2d1ea5c1b88e16e6dda5bef0b6254ff742f499cad2c8a4b2f26249d06",
+      "hash_scope": "fetched_source_bytes_not_normalized",
+      "bytes": 8830,
+      "checked_on": "2026-11-09"
+    },
+    {
+      "id": "python.rst.txt",
+      "url": "https://developer.clo3d.com/_sources/python.rst.txt",
+      "sha256": "8809f57014e453614799b4803bd4893536a759931b5309d26f4d3020c8c2d420",
+      "hash_scope": "fetched_source_bytes_not_normalized",
+      "bytes": 741,
+      "checked_on": "2026-11-09"
+    }
+  ],
+  "counts": {
+    "modules": {
+      "export_api": {
+        "names": 91,
+        "unique_declarations": 123,
+        "python_blocks": 123
+      },
+      "fabric_api": {
+        "names": 134,
+        "unique_declarations": 284,
+        "python_blocks": 284
+      },
+      "gui_api": {
+        "names": 39,
+        "unique_declarations": 39,
+        "python_blocks": 39
+      },
+      "import_api": {
+        "names": 38,
+        "unique_declarations": 42,
+        "python_blocks": 44
+      },
+      "pattern_api": {
+        "names": 217,
+        "unique_declarations": 233,
+        "python_blocks": 233
+      },
+      "rest_api": {
+        "names": 7,
+        "unique_declarations": 8,
+        "python_blocks": 8
+      },
+      "utility_api": {
+        "names": 364,
+        "unique_declarations": 405,
+        "python_blocks": 406
+      }
+    },
+    "python_names": 890,
+    "unique_python_declarations": 1134,
+    "python_blocks": 1137,
+    "type_records": 77,
+    "type_members": 582,
+    "cpp_interfaces": 6
+  },
+  "shards": [
+    {
+      "path": "official/export_api-001.json",
+      "kind": "methods",
+      "records": 36,
+      "bytes": 159550,
+      "sha256": "a3644b32338c273fd77644a1e72682c5ddc012e8cbb8714fb29645fa3ef2da1e",
+      "hash_scope": "normalized_json_shard_bytes"
+    },
+    {
+      "path": "official/export_api-002.json",
+      "kind": "methods",
+      "records": 29,
+      "bytes": 155254,
+      "sha256": "0c4426fe2b77cf89c47001b02c8d43f25777f3e5cf2b61e492a4abe9576cb650",
+      "hash_scope": "normalized_json_shard_bytes"
+    },
+    {
+      "path": "official/export_api-003.json",
+      "kind": "methods",
+      "records": 26,
+      "bytes": 90860,
+      "sha256": "571f5c1eb86f68bc44407d75a75d274c922af363174a7685cf6dc54195b14bd7",
+      "hash_scope": "normalized_json_shard_bytes"
+    },
+    {
+      "path": "official/fabric_api-001.json",
+      "kind": "methods",
+      "records": 28,
+      "bytes": 155296,
+      "sha256": "672521c7458b9b55b19aa3c28b77ac6b9a8ef970effd9a869058f08dabd5526c",
+      "hash_scope": "normalized_json_shard_bytes"
+    },
+    {
+      "path": "official/fabric_api-002.json",
+      "kind": "methods",
+      "records": 28,
+      "bytes": 155643,
+      "sha256": "287fc7f6b025a951c9b4a80c1606de58f934e63ae443eb2b859d3ae72e75800c",
+      "hash_scope": "normalized_json_shard_bytes"
+    },
+    {
+      "path": "official/fabric_api-003.json",
+      "kind": "methods",
+      "records": 20,
+      "bytes": 153981,
+      "sha256": "3e039ba4f18d6ff18b6372094ea003091c646eeb8c55b4adec3dd799864154ce",
+      "hash_scope": "normalized_json_shard_bytes"
+    },
+    {
+      "path": "official/fabric_api-004.json",
+      "kind": "methods",
+      "records": 22,
+      "bytes": 154340,
+      "sha256": "0912641b7aaf18b4d2aeb5886daec0c2cec504a7f7cd5eb31220be8d8e0b5bcd",
+      "hash_scope": "normalized_json_shard_bytes"
+    },
+    {
+      "path": "official/fabric_api-005.json",
+      "kind": "methods",
+      "records": 17,
+      "bytes": 157289,
+      "sha256": "6ccbccb5f186d45e211af262d59ea1fadd3d0121fe0369255f53913cc04ad10c",
+      "hash_scope": "normalized_json_shard_bytes"
+    },
+    {
+      "path": "official/fabric_api-006.json",
+      "kind": "methods",
+      "records": 19,
+      "bytes": 155900,
+      "sha256": "c4a37572123cd259974ba20e18ad88f8f2bafab2a181c005235b97f72aedab07",
+      "hash_scope": "normalized_json_shard_bytes"
+    },
+    {
+      "path": "official/gui_api-001.json",
+      "kind": "methods",
+      "records": 39,
+      "bytes": 116973,
+      "sha256": "3bb8fb5e50cc569daf758ce0783c0fdf63ac9cfa9460ba3e54e55330775283fa",
+      "hash_scope": "normalized_json_shard_bytes"
+    },
+    {
+      "path": "official/import_api-001.json",
+      "kind": "methods",
+      "records": 38,
+      "bytes": 130595,
+      "sha256": "df4fd2a464e6767713648470e3b68ca359ea413c730c6a5ff1ae14b8b17eea66",
+      "hash_scope": "normalized_json_shard_bytes"
+    },
+    {
+      "path": "official/pattern_api-001.json",
+      "kind": "methods",
+      "records": 27,
+      "bytes": 158642,
+      "sha256": "e23106e8647c88bc05880ce0aee1188deccff71d3011c1bc8a153d955252f839",
+      "hash_scope": "normalized_json_shard_bytes"
+    },
+    {
+      "path": "official/pattern_api-002.json",
+      "kind": "methods",
+      "records": 42,
+      "bytes": 157364,
+      "sha256": "cc501c2b91ae05cd6201bff4ebdc87afcc463c217cfbc145e3365cd81886aaa2",
+      "hash_scope": "normalized_json_shard_bytes"
+    },
+    {
+      "path": "official/pattern_api-003.json",
+      "kind": "methods",
+      "records": 41,
+      "bytes": 158193,
+      "sha256": "1f51e6fbfd375e5aaf17e62aad14692a1be7c0a032b719f313ff007dada551c7",
+      "hash_scope": "normalized_json_shard_bytes"
+    },
+    {
+      "path": "official/pattern_api-004.json",
+      "kind": "methods",
+      "records": 42,
+      "bytes": 158645,
+      "sha256": "aa985ec5c0c50094287a48bd9d491a3f9f507fc7e8b6e7fbd85cc42f839295d7",
+      "hash_scope": "normalized_json_shard_bytes"
+    },
+    {
+      "path": "official/pattern_api-005.json",
+      "kind": "methods",
+      "records": 41,
+      "bytes": 157878,
+      "sha256": "a3e24f692ac7db44b7caa335931bbeb7ff160178f1138bb0004f7c039903503f",
+      "hash_scope": "normalized_json_shard_bytes"
+    },
+    {
+      "path": "official/pattern_api-006.json",
+      "kind": "methods",
+      "records": 24,
+      "bytes": 88116,
+      "sha256": "0c93eb9d1a1b6b4df3e7fd29a7303c3f52391f2e3a6091a9cc34b29555a9a6db",
+      "hash_scope": "normalized_json_shard_bytes"
+    },
+    {
+      "path": "official/rest_api-001.json",
+      "kind": "methods",
+      "records": 7,
+      "bytes": 35949,
+      "sha256": "08abe1da596f7a31a432201464f6f353b9601a98ba239b3b4d3dd88cefe6e5b3",
+      "hash_scope": "normalized_json_shard_bytes"
+    },
+    {
+      "path": "official/utility_api-001.json",
+      "kind": "methods",
+      "records": 45,
+      "bytes": 159893,
+      "sha256": "4d372ee214be28be4d4d3d9824ddec1e18eeb97f7bc73b85e6c7f95a79ddd5b0",
+      "hash_scope": "normalized_json_shard_bytes"
+    },
+    {
+      "path": "official/utility_api-002.json",
+      "kind": "methods",
+      "records": 47,
+      "bytes": 158562,
+      "sha256": "179f86b2f857fae162bc64eb3f618f3e25c66ba63315cbca0930748dcda08ab2",
+      "hash_scope": "normalized_json_shard_bytes"
+    },
+    {
+      "path": "official/utility_api-003.json",
+      "kind": "methods",
+      "records": 39,
+      "bytes": 159707,
+      "sha256": "bc0e3930fdf607b7b80696383a74096331aaaa8aecb00aa264c42e25e7d9af37",
+      "hash_scope": "normalized_json_shard_bytes"
+    },
+    {
+      "path": "official/utility_api-004.json",
+      "kind": "methods",
+      "records": 50,
+      "bytes": 159764,
+      "sha256": "9b63129cbfe4dd15a6ac04e6013ee32f486adac82e41029b722fbfddc380d2be",
+      "hash_scope": "normalized_json_shard_bytes"
+    },
+    {
+      "path": "official/utility_api-005.json",
+      "kind": "methods",
+      "records": 41,
+      "bytes": 158435,
+      "sha256": "fe32e84d92cf54482df9a67aa32ca8c0fca855bf5fbb58c9b0fe4945360f0279",
+      "hash_scope": "normalized_json_shard_bytes"
+    },
+    {
+      "path": "official/utility_api-006.json",
+      "kind": "methods",
+      "records": 34,
+      "bytes": 141151,
+      "sha256": "95f2d66d7875debfcf0b599df6a28eec855b31e5502be8c4bf70a4150f6bf773",
+      "hash_scope": "normalized_json_shard_bytes"
+    },
+    {
+      "path": "official/utility_api-007.json",
+      "kind": "methods",
+      "records": 37,
+      "bytes": 158652,
+      "sha256": "02526b21f7343150e97d50aa009baa50c41c2bea26f8d044dd7f09bcf58d349a",
+      "hash_scope": "normalized_json_shard_bytes"
+    },
+    {
+      "path": "official/utility_api-008.json",
+      "kind": "methods",
+      "records": 41,
+      "bytes": 158170,
+      "sha256": "a57fb095d07721c4b9488fc8dcbdd9086c9044ce2858690105b7dbfd05190f3c",
+      "hash_scope": "normalized_json_shard_bytes"
+    },
+    {
+      "path": "official/utility_api-009.json",
+      "kind": "methods",
+      "records": 30,
+      "bytes": 94768,
+      "sha256": "068225e0635629a37350cb177fb6e4f4cf15a9bdb286b83696d74b3a2b2e698d",
+      "hash_scope": "normalized_json_shard_bytes"
+    },
+    {
+      "path": "official/types-001.json",
+      "kind": "types",
+      "records": 36,
+      "bytes": 158543,
+      "sha256": "b52d83d40afc31dde149f9019ea86909b99a66e71fe21fd607d7d807c11023b6",
+      "hash_scope": "normalized_json_shard_bytes"
+    },
+    {
+      "path": "official/types-002.json",
+      "kind": "types",
+      "records": 32,
+      "bytes": 158996,
+      "sha256": "d970951b7b9ed5600f8071cdaea39b97244b336976641d3ed806176fe7d0923f",
+      "hash_scope": "normalized_json_shard_bytes"
+    },
+    {
+      "path": "official/types-003.json",
+      "kind": "types",
+      "records": 9,
+      "bytes": 40526,
+      "sha256": "f5efba0eb6872fbf382f3288bf5f4750980476efde6ebf0aea9ea1bf246f6a1b",
+      "hash_scope": "normalized_json_shard_bytes"
+    },
+    {
+      "path": "official/interfaces-001.json",
+      "kind": "interfaces",
+      "records": 6,
+      "bytes": 4489,
+      "sha256": "0a33539bd29e1132bf4fb4444a5ce8ed270ffb8580a392c8a36e8963d7cfe892",
+      "hash_scope": "normalized_json_shard_bytes"
+    }
+  ]
+}

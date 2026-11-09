@@ -1,0 +1,1878 @@
+{
+  "kind": "methods",
+  "records": [
+    {
+      "id": "pattern_api.SetPatternPieceFabricIndex",
+      "qualified_name": "pattern_api.SetPatternPieceFabricIndex",
+      "module": "pattern_api",
+      "symbol": "SetPatternPieceFabricIndex",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "pattern_api.SetPatternPieceFabricIndex#1fd69065b5c5c21a",
+          "signature_normalized": "def SetPatternPieceFabricIndex(_patternPieceIndex : int, _fabricIndex : int) -> None",
+          "signature_raw": "def SetPatternPieceFabricIndex(_patternPieceIndex : int, _fabricIndex : int) -> None",
+          "parameters": [
+            {
+              "raw": "_patternPieceIndex : int",
+              "name": "_patternPieceIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_fabricIndex : int",
+              "name": "_fabricIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetPatternPieceFabricIndex(_patternPieceIndex : int, _fabricIndex : int) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup PATTERN_API\n@brief Set Pattern fabric index using the pattern index\n@param          _patternIndex: the pattern index to set\n_fabricIndex: the value to set as gabric index\n\"\"\"",
+              "section": "PATTERN_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 11573,
+                  "block": 1027
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 12183,
+                  "block": 1027,
+                  "anchor": "pattern-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetPatternPieceFabricIndex(int _patternPieceIndex, int _fabricIndex)",
+                "documentation_raw": "/// @ingroup PATTERN_API\n/// @brief Set Pattern fabric index using the pattern index\n/// @param              _patternIndex: the pattern index to set\n/// _fabricIndex: the value to set as gabric index",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 11583,
+                    "block": 1028
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 12193,
+                    "block": 1028,
+                    "anchor": "pattern-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          _patternIndex: the pattern index to set"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "pattern_api.SetPatternPieceGrainDirection",
+      "qualified_name": "pattern_api.SetPatternPieceGrainDirection",
+      "module": "pattern_api",
+      "symbol": "SetPatternPieceGrainDirection",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "pattern_api.SetPatternPieceGrainDirection#6f6c6bfc8fc3ea73",
+          "signature_normalized": "def SetPatternPieceGrainDirection(_patternPieceIndex : int, _degree : float) -> None",
+          "signature_raw": "def SetPatternPieceGrainDirection(_patternPieceIndex : int, _degree : float) -> None",
+          "parameters": [
+            {
+              "raw": "_patternPieceIndex : int",
+              "name": "_patternPieceIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_degree : float",
+              "name": "_degree",
+              "annotation_raw": "float"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetPatternPieceGrainDirection(_patternPieceIndex : int, _degree : float) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup PATTERN_API\n@brief Set Pattern grain direction value using the pattern index\n@param          _patternIndex: the pattern index to set\n_degree: the value to set as grain direction\n\"\"\"",
+              "section": "PATTERN_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 11613,
+                  "block": 1031
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 12225,
+                  "block": 1031,
+                  "anchor": "pattern-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetPatternPieceGrainDirection(int _patternPieceIndex, float _degree)",
+                "documentation_raw": "/// @ingroup PATTERN_API\n/// @brief Set Pattern grain direction value using the pattern index\n/// @param              _patternIndex: the pattern index to set\n/// _degree: the value to set as grain direction",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 11623,
+                    "block": 1032
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 12235,
+                    "block": 1032,
+                    "anchor": "pattern-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          _patternIndex: the pattern index to set"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "pattern_api.SetPatternPieceGrainLinkAllColorways",
+      "qualified_name": "pattern_api.SetPatternPieceGrainLinkAllColorways",
+      "module": "pattern_api",
+      "symbol": "SetPatternPieceGrainLinkAllColorways",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "pattern_api.SetPatternPieceGrainLinkAllColorways#6eef4e28d7d18d17",
+          "signature_normalized": "def SetPatternPieceGrainLinkAllColorways(_patternPieceIndex : int, _isOn : bool) -> None",
+          "signature_raw": "def SetPatternPieceGrainLinkAllColorways(_patternPieceIndex : int, _isOn : bool) -> None",
+          "parameters": [
+            {
+              "raw": "_patternPieceIndex : int",
+              "name": "_patternPieceIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_isOn : bool",
+              "name": "_isOn",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetPatternPieceGrainLinkAllColorways(_patternPieceIndex : int, _isOn : bool) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup PATTERN_API\n@brief Set Pattern link all color ways value using the pattern index\n@param          _patternIndex: the pattern index to set\n_isOn: the value to set as link all color ways\n\"\"\"",
+              "section": "PATTERN_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 11653,
+                  "block": 1035
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 12267,
+                  "block": 1035,
+                  "anchor": "pattern-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetPatternPieceGrainLinkAllColorways(int _patternPieceIndex, bool _isOn)",
+                "documentation_raw": "/// @ingroup PATTERN_API\n/// @brief Set Pattern link all color ways value using the pattern index\n/// @param              _patternIndex: the pattern index to set\n/// _isOn: the value to set as link all color ways",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 11663,
+                    "block": 1036
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 12277,
+                    "block": 1036,
+                    "anchor": "pattern-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          _patternIndex: the pattern index to set"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "pattern_api.SetPatternPieceMove",
+      "qualified_name": "pattern_api.SetPatternPieceMove",
+      "module": "pattern_api",
+      "symbol": "SetPatternPieceMove",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "pattern_api.SetPatternPieceMove#18110e79476584a0",
+          "signature_normalized": "def SetPatternPieceMove(_patternIndex : int, _offsetX : float, _offsetY : float) -> None",
+          "signature_raw": "def SetPatternPieceMove(_patternIndex : int, _offsetX : float, _offsetY : float) -> None",
+          "parameters": [
+            {
+              "raw": "_patternIndex : int",
+              "name": "_patternIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_offsetX : float",
+              "name": "_offsetX",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_offsetY : float",
+              "name": "_offsetY",
+              "annotation_raw": "float"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetPatternPieceMove(_patternIndex : int, _offsetX : float, _offsetY : float) -> None",
+              "documentation_raw": "\"\"\"\n@brief          Set Pattern piece's world position to (CurrentPosition.x + _offsetX, CurrentPosition.y + _offsetY)\n@param          _patternIndex: The pattern index to move\n_offsetX: The X position offset of pattern want to move\n_offsetY: The Y position offset of pattern want to move\n\"\"\"",
+              "section": "PATTERN_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 11945,
+                  "block": 1063
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 12573,
+                  "block": 1063,
+                  "anchor": "pattern-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetPatternPieceMove(int _patternIndex, float _offsetX, float _offsetY)",
+                "documentation_raw": "/// @brief              Set Pattern piece's world position to (CurrentPosition.x + _offsetX, CurrentPosition.y + _offsetY)\n/// @param              _patternIndex: The pattern index to move\n/// _offsetX: The X position offset of pattern want to move\n/// _offsetY: The Y position offset of pattern want to move",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 11955,
+                    "block": 1064
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 12583,
+                    "block": 1064,
+                    "anchor": "pattern-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          _patternIndex: The pattern index to move"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "pattern_api.SetPatternPieceName",
+      "qualified_name": "pattern_api.SetPatternPieceName",
+      "module": "pattern_api",
+      "symbol": "SetPatternPieceName",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "pattern_api.SetPatternPieceName#62bd8c9649182b8b",
+          "signature_normalized": "def SetPatternPieceName(_patternIndex : int, _patternName : str) -> None",
+          "signature_raw": "def SetPatternPieceName(_patternIndex : int, _patternName : str) -> None",
+          "parameters": [
+            {
+              "raw": "_patternIndex : int",
+              "name": "_patternIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_patternName : str",
+              "name": "_patternName",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetPatternPieceName(_patternIndex : int, _patternName : str) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup PATTERN_API\n@brief Set Pattern name using the pattern index\n@param          _patternIndex: the pattern index to set\n@param          _patternName: the value to set as pattern name\n\"\"\"",
+              "section": "PATTERN_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 11533,
+                  "block": 1023
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 12141,
+                  "block": 1023,
+                  "anchor": "pattern-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetPatternPieceName(int _patternIndex)",
+                "documentation_raw": "/// @ingroup PATTERN_API\n/// @brief Set Pattern name using the pattern index\n/// @param              _patternIndex: the pattern index to set\n/// @param              _patternName: the value to set as pattern name",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 11543,
+                    "block": 1024
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 12151,
+                    "block": 1024,
+                    "anchor": "pattern-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          _patternIndex: the pattern index to set",
+            "@param          _patternName: the value to set as pattern name"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "pattern_api.SetPatternPiecePos",
+      "qualified_name": "pattern_api.SetPatternPiecePos",
+      "module": "pattern_api",
+      "symbol": "SetPatternPiecePos",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "pattern_api.SetPatternPiecePos#1af3139e33b535bd",
+          "signature_normalized": "def SetPatternPiecePos(_patternIndex : int, _x : float, _y : float) -> None",
+          "signature_raw": "def SetPatternPiecePos(_patternIndex : int, _x : float, _y : float) -> None",
+          "parameters": [
+            {
+              "raw": "_patternIndex : int",
+              "name": "_patternIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_x : float",
+              "name": "_x",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_y : float",
+              "name": "_y",
+              "annotation_raw": "float"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetPatternPiecePos(_patternIndex : int, _x : float, _y : float) -> None",
+              "documentation_raw": "\"\"\"\n@brief          Set Pattern piece's world position to (_x, _y)\n@param          _patternIndex: The pattern index to move\n_x: The X position of pattern want to move\n_y: The Y position of pattern want to move\n\"\"\"",
+              "section": "PATTERN_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 11924,
+                  "block": 1061
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 12551,
+                  "block": 1061,
+                  "anchor": "pattern-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetPatternPiecePos(int _patternIndex)",
+                "documentation_raw": "/// @brief              Set Pattern piece's world position to (_x, _y)\n/// @param              _patternIndex: The pattern index to move\n/// _x: The X position of pattern want to move\n/// _y: The Y position of pattern want to move",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 11934,
+                    "block": 1062
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 12561,
+                    "block": 1062,
+                    "anchor": "pattern-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          _patternIndex: The pattern index to move"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "pattern_api.SetPatternPieceSametapingWidth",
+      "qualified_name": "pattern_api.SetPatternPieceSametapingWidth",
+      "module": "pattern_api",
+      "symbol": "SetPatternPieceSametapingWidth",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "pattern_api.SetPatternPieceSametapingWidth#c42cd1ab84844457",
+          "signature_normalized": "def SetPatternPieceSametapingWidth(_patternIndex : int, _lineIndex : int, _width : float) -> None",
+          "signature_raw": "def SetPatternPieceSametapingWidth(_patternIndex : int, _lineIndex : int, _width : float) -> None",
+          "parameters": [
+            {
+              "raw": "_patternIndex : int",
+              "name": "_patternIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_lineIndex : int",
+              "name": "_lineIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_width : float",
+              "name": "_width",
+              "annotation_raw": "float"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetPatternPieceSametapingWidth(_patternIndex : int, _lineIndex : int, _width : float) -> None",
+              "documentation_raw": "\"\"\"\n@brief          Set Pattern piece's seamtaping width. When _lineIndex == -1, apply to all line, 0 <= _lineIndex, apply to line\n@param          _patternIndex: The pattern index to apply seamtaping width\n_lineIndex: The line index to apply seamtaping width. When _lineIndex == -1, apply to all line, 0 <= _lineIndex, apply to line\n_width: The width of seamtaping width\n\"\"\"",
+              "section": "PATTERN_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 12176,
+                  "block": 1085
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 12815,
+                  "block": 1085,
+                  "anchor": "pattern-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetPatternPieceSametapingWidth(int _patternIndex, int _lineIndex, float _width)",
+                "documentation_raw": "/// @brief              Set Pattern piece's seamtaping width. When _lineIndex == -1, apply to all line, 0 <= _lineIndex, apply to line\n/// @param              _patternIndex: The pattern index to apply seamtaping width\n/// _lineIndex: The line index to apply seamtaping width. When _lineIndex == -1, apply to all line, 0 <= _lineIndex, apply to line\n/// _width: The width of seamtaping width",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 12186,
+                    "block": 1086
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 12825,
+                    "block": 1086,
+                    "anchor": "pattern-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          _patternIndex: The pattern index to apply seamtaping width"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "pattern_api.SetPatternPieceSeamtaping",
+      "qualified_name": "pattern_api.SetPatternPieceSeamtaping",
+      "module": "pattern_api",
+      "symbol": "SetPatternPieceSeamtaping",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "pattern_api.SetPatternPieceSeamtaping#12068d321c1423d1",
+          "signature_normalized": "def SetPatternPieceSeamtaping(_patternIndex : int, _lineIndex : int, _bSeamtaping : bool) -> None",
+          "signature_raw": "def SetPatternPieceSeamtaping(_patternIndex : int, _lineIndex : int, _bSeamtaping : bool) -> None",
+          "parameters": [
+            {
+              "raw": "_patternIndex : int",
+              "name": "_patternIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_lineIndex : int",
+              "name": "_lineIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_bSeamtaping : bool",
+              "name": "_bSeamtaping",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetPatternPieceSeamtaping(_patternIndex : int, _lineIndex : int, _bSeamtaping : bool) -> None",
+              "documentation_raw": "\"\"\"\n@brief          Set Pattern piece's seamtaping. When _lineIndex == -1, apply to all line, 0 <= _lineIndex, apply to line\n@param          _patternIndex: The pattern index to apply seamtaping\n_lineIndex: The line index to apply seamtaping. When _lineIndex == -1, apply to all line, 0 <= _lineIndex, apply to line\n_bSeamtaping: Whether to apply seamtaping\n\"\"\"",
+              "section": "PATTERN_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 12155,
+                  "block": 1083
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 12793,
+                  "block": 1083,
+                  "anchor": "pattern-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetPatternPieceSeamtaping(int _patternIndex, int _lineIndex, bool _bSeamtaping)",
+                "documentation_raw": "/// @brief              Set Pattern piece's seamtaping. When _lineIndex == -1, apply to all line, 0 <= _lineIndex, apply to line\n/// @param              _patternIndex: The pattern index to apply seamtaping\n/// _lineIndex: The line index to apply seamtaping. When _lineIndex == -1, apply to all line, 0 <= _lineIndex, apply to line\n/// _bSeamtaping: Whether to apply seamtaping",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 12165,
+                    "block": 1084
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 12803,
+                    "block": 1084,
+                    "anchor": "pattern-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          _patternIndex: The pattern index to apply seamtaping"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "pattern_api.SetPatternPieceShirring",
+      "qualified_name": "pattern_api.SetPatternPieceShirring",
+      "module": "pattern_api",
+      "symbol": "SetPatternPieceShirring",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "pattern_api.SetPatternPieceShirring#c3c343f8ad3b5e02",
+          "signature_normalized": "def SetPatternPieceShirring(_patternIndex : int, _lineIndex : int, _bShirring : bool) -> None",
+          "signature_raw": "def SetPatternPieceShirring(_patternIndex : int, _lineIndex : int, _bShirring : bool) -> None",
+          "parameters": [
+            {
+              "raw": "_patternIndex : int",
+              "name": "_patternIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_lineIndex : int",
+              "name": "_lineIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_bShirring : bool",
+              "name": "_bShirring",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetPatternPieceShirring(_patternIndex : int, _lineIndex : int, _bShirring : bool) -> None",
+              "documentation_raw": "\"\"\"\n@brief          Set Pattern piece's shirring. When _lineIndex == -1, apply to all line, 0 <= _lineIndex, apply to line\n@param          _patternIndex: The pattern index to apply shirring \n_lineIndex: The line index to apply shirring. When _lineIndex == -1, apply to all line, 0 <= _lineIndex, apply to line\n_bShirring: Whether to apply shirring\n\"\"\"",
+              "section": "PATTERN_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 12071,
+                  "block": 1075
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 12705,
+                  "block": 1075,
+                  "anchor": "pattern-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetPatternPieceShirring(int _patternIndex, int _lineIndex, bool _bShirring)",
+                "documentation_raw": "/// @brief              Set Pattern piece's shirring. When _lineIndex == -1, apply to all line, 0 <= _lineIndex, apply to line\n/// @param              _patternIndex: The pattern index to apply shirring \n/// _lineIndex: The line index to apply shirring. When _lineIndex == -1, apply to all line, 0 <= _lineIndex, apply to line\n/// _bShirring: Whether to apply shirring",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 12081,
+                    "block": 1076
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 12715,
+                    "block": 1076,
+                    "anchor": "pattern-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          _patternIndex: The pattern index to apply shirring "
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "pattern_api.SetPatternPieceShirringExtend",
+      "qualified_name": "pattern_api.SetPatternPieceShirringExtend",
+      "module": "pattern_api",
+      "symbol": "SetPatternPieceShirringExtend",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "pattern_api.SetPatternPieceShirringExtend#5653cb381489ebed",
+          "signature_normalized": "def SetPatternPieceShirringExtend(_patternIndex : int, _lineIndex : int, _bExtend : bool) -> None",
+          "signature_raw": "def SetPatternPieceShirringExtend(_patternIndex : int, _lineIndex : int, _bExtend : bool) -> None",
+          "parameters": [
+            {
+              "raw": "_patternIndex : int",
+              "name": "_patternIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_lineIndex : int",
+              "name": "_lineIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_bExtend : bool",
+              "name": "_bExtend",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetPatternPieceShirringExtend(_patternIndex : int, _lineIndex : int, _bExtend : bool) -> None",
+              "documentation_raw": "\"\"\"\n@brief          Set Pattern piece's shirring extend. When _lineIndex == -1, apply to all line, 0 <= _lineIndex, apply to line\n@param          _patternIndex: The pattern index to apply shirring extend\n_lineIndex: The line index to apply shirring extend. When _lineIndex == -1, apply to all line, 0 <= _lineIndex, apply to line\n_bExtend: Whether to apply shirring extend\n\"\"\"",
+              "section": "PATTERN_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 12134,
+                  "block": 1081
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 12771,
+                  "block": 1081,
+                  "anchor": "pattern-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetPatternPieceShirringExtend(int _patternIndex, int _lineIndex, bool _bExtend)",
+                "documentation_raw": "/// @brief              Set Pattern piece's shirring extend. When _lineIndex == -1, apply to all line, 0 <= _lineIndex, apply to line\n/// @param              _patternIndex: The pattern index to apply shirring extend\n/// _lineIndex: The line index to apply shirring extend. When _lineIndex == -1, apply to all line, 0 <= _lineIndex, apply to line\n/// _bExtend: Whether to apply shirring extend",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 12144,
+                    "block": 1082
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 12781,
+                    "block": 1082,
+                    "anchor": "pattern-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          _patternIndex: The pattern index to apply shirring extend"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "pattern_api.SetPatternPieceShirringHeight",
+      "qualified_name": "pattern_api.SetPatternPieceShirringHeight",
+      "module": "pattern_api",
+      "symbol": "SetPatternPieceShirringHeight",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "pattern_api.SetPatternPieceShirringHeight#4beaf500251baee7",
+          "signature_normalized": "def SetPatternPieceShirringHeight(_patternIndex : int, _lineIndex : int, _height : float) -> None",
+          "signature_raw": "def SetPatternPieceShirringHeight(_patternIndex : int, _lineIndex : int, _height : float) -> None",
+          "parameters": [
+            {
+              "raw": "_patternIndex : int",
+              "name": "_patternIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_lineIndex : int",
+              "name": "_lineIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_height : float",
+              "name": "_height",
+              "annotation_raw": "float"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetPatternPieceShirringHeight(_patternIndex : int, _lineIndex : int, _height : float) -> None",
+              "documentation_raw": "\"\"\"\n@brief          Set Pattern piece's shirring height. When _lineIndex == -1, apply to all line, 0 <= _lineIndex, apply to line\n@param          _patternIndex: The pattern index to apply shirring height\n_lineIndex: The line index to apply shirring height. When _lineIndex == -1, apply to all line, 0 <= _lineIndex, apply to line\n_height: The height of shirring\n\"\"\"",
+              "section": "PATTERN_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 12113,
+                  "block": 1079
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 12749,
+                  "block": 1079,
+                  "anchor": "pattern-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetPatternPieceShirringHeight(int _patternIndex, int _lineIndex, float _height)",
+                "documentation_raw": "/// @brief              Set Pattern piece's shirring height. When _lineIndex == -1, apply to all line, 0 <= _lineIndex, apply to line\n/// @param              _patternIndex: The pattern index to apply shirring height\n/// _lineIndex: The line index to apply shirring height. When _lineIndex == -1, apply to all line, 0 <= _lineIndex, apply to line\n/// _height: The height of shirring",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 12123,
+                    "block": 1080
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 12759,
+                    "block": 1080,
+                    "anchor": "pattern-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          _patternIndex: The pattern index to apply shirring height"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "pattern_api.SetPatternPieceShirringInterval",
+      "qualified_name": "pattern_api.SetPatternPieceShirringInterval",
+      "module": "pattern_api",
+      "symbol": "SetPatternPieceShirringInterval",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "pattern_api.SetPatternPieceShirringInterval#5c129b1549dca2a0",
+          "signature_normalized": "def SetPatternPieceShirringInterval(_patternIndex : int, _lineIndex : int, _interval : float) -> None",
+          "signature_raw": "def SetPatternPieceShirringInterval(_patternIndex : int, _lineIndex : int, _interval : float) -> None",
+          "parameters": [
+            {
+              "raw": "_patternIndex : int",
+              "name": "_patternIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_lineIndex : int",
+              "name": "_lineIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_interval : float",
+              "name": "_interval",
+              "annotation_raw": "float"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetPatternPieceShirringInterval(_patternIndex : int, _lineIndex : int, _interval : float) -> None",
+              "documentation_raw": "\"\"\"\n@brief          Set Pattern piece's shirring interval. When _lineIndex == -1, apply to all line, 0 <= _lineIndex, apply to line\n@param          _patternIndex: The pattern index to apply shirring interval\n_lineIndex: The line index to apply shirring interval. When _lineIndex == -1, apply to all line, 0 <= _lineIndex, apply to line\n_interval: The interval of shirring\n\"\"\"",
+              "section": "PATTERN_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 12092,
+                  "block": 1077
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 12727,
+                  "block": 1077,
+                  "anchor": "pattern-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetPatternPieceShirringInterval(int _patternIndex, int _lineIndex, float _interval)",
+                "documentation_raw": "/// @brief              Set Pattern piece's shirring interval. When _lineIndex == -1, apply to all line, 0 <= _lineIndex, apply to line\n/// @param              _patternIndex: The pattern index to apply shirring interval\n/// _lineIndex: The line index to apply shirring interval. When _lineIndex == -1, apply to all line, 0 <= _lineIndex, apply to line\n/// _interval: The interval of shirring",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 12102,
+                    "block": 1078
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 12737,
+                    "block": 1078,
+                    "anchor": "pattern-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          _patternIndex: The pattern index to apply shirring interval"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "pattern_api.SetPatternPieceSolidify",
+      "qualified_name": "pattern_api.SetPatternPieceSolidify",
+      "module": "pattern_api",
+      "symbol": "SetPatternPieceSolidify",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "pattern_api.SetPatternPieceSolidify#0a22ed75d281a879",
+          "signature_normalized": "def SetPatternPieceSolidify(_patternPieceIndex : int, _isOn : bool) -> None",
+          "signature_raw": "def SetPatternPieceSolidify(_patternPieceIndex : int, _isOn : bool) -> None",
+          "parameters": [
+            {
+              "raw": "_patternPieceIndex : int",
+              "name": "_patternPieceIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_isOn : bool",
+              "name": "_isOn",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetPatternPieceSolidify(_patternPieceIndex : int, _isOn : bool) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup PATTERN_API\n@brief Set Pattern Solidify using the pattern index\n@param          _patternPieceIndex: the pattern index to get\n_isOn: the value to set Solidify On/Off\n\"\"\"",
+              "section": "PATTERN_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 11773,
+                  "block": 1047
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 12393,
+                  "block": 1047,
+                  "anchor": "pattern-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetPatternPieceSolidify(int _patternPieceIndex, bool _isOn);",
+                "documentation_raw": "/// @ingroup PATTERN_API\n/// @brief Set Pattern Solidify using the pattern index\n/// @param              _patternPieceIndex: the pattern index to get\n/// _isOn: the value to set Solidify On/Off",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 11783,
+                    "block": 1048
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 12403,
+                    "block": 1048,
+                    "anchor": "pattern-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          _patternPieceIndex: the pattern index to get"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "pattern_api.SetPatternPieceSolidifyStrengthen",
+      "qualified_name": "pattern_api.SetPatternPieceSolidifyStrengthen",
+      "module": "pattern_api",
+      "symbol": "SetPatternPieceSolidifyStrengthen",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "pattern_api.SetPatternPieceSolidifyStrengthen#922deea0745dd2c9",
+          "signature_normalized": "def SetPatternPieceSolidifyStrengthen(_patternPieceIndex : int, _strengthen : float) -> None",
+          "signature_raw": "def SetPatternPieceSolidifyStrengthen(_patternPieceIndex : int, _strengthen : float) -> None",
+          "parameters": [
+            {
+              "raw": "_patternPieceIndex : int",
+              "name": "_patternPieceIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_strengthen : float",
+              "name": "_strengthen",
+              "annotation_raw": "float"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetPatternPieceSolidifyStrengthen(_patternPieceIndex : int, _strengthen : float) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup PATTERN_API\n@brief Set Pattern Solidify Strengthen using the pattern index\n@param          _patternPieceIndex: the pattern index to set\n_strengthen : strengthen value to set\n\"\"\"",
+              "section": "PATTERN_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 11813,
+                  "block": 1051
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 12435,
+                  "block": 1051,
+                  "anchor": "pattern-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetPatternPieceSolidifyStrengthen(int _patternPieceIndex, float _strengthen)",
+                "documentation_raw": "/// @ingroup PATTERN_API\n/// @brief Set Pattern Solidify Strengthen using the pattern index\n/// @param              _patternPieceIndex: the pattern index to set\n/// _strengthen : strengthen value to set",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 11823,
+                    "block": 1052
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 12445,
+                    "block": 1052,
+                    "anchor": "pattern-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          _patternPieceIndex: the pattern index to set"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "pattern_api.SetPatternPointsGradingPositionOffsets",
+      "qualified_name": "pattern_api.SetPatternPointsGradingPositionOffsets",
+      "module": "pattern_api",
+      "symbol": "SetPatternPointsGradingPositionOffsets",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "pattern_api.SetPatternPointsGradingPositionOffsets#919dcf569afc8404",
+          "signature_normalized": "def SetPatternPointsGradingPositionOffsets(_patternIndex : int, _pointIndices : list[int], _offsets : list[list[float]]) -> bool",
+          "signature_raw": "def SetPatternPointsGradingPositionOffsets(_patternIndex : int, _pointIndices : list[int], _offsets : list[list[float]]) -> bool",
+          "parameters": [
+            {
+              "raw": "_patternIndex : int",
+              "name": "_patternIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_pointIndices : list[int]",
+              "name": "_pointIndices",
+              "annotation_raw": "list[int]"
+            },
+            {
+              "raw": "_offsets : list[list[float]]",
+              "name": "_offsets",
+              "annotation_raw": "list[list[float]]"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def SetPatternPointsGradingPositionOffsets(_patternIndex : int, _pointIndices : list[int], _offsets : list[list[float]]) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup PATTERN_API\n@brief Grade the positions of selected pattern outline points per size — the API equivalent of selecting points with the GUI 'Edit Grading' tool and typing per-size values into the Distance table. Offsets are [x, y] millimeters per grading size relative to the points' CURRENT positions in the 2D window world axes (Y up); the entry for the currently selected grading size is the reference and is ignored (pass [0, 0]). Existing deviations of the edited points are REPLACED, matching the Distance-table semantics.\n@param _patternIndex: pattern index (0-based, real pattern list order)\n@param _pointIndices: outline point indices to grade (0-based, order of GetPatternOutlinePoints)\n@param _offsets: one [x, y] offset per grading size, ordered like GetGradingSizeNameList; length must equal the grading size count\n@note In a GUI session the grading-related widgets (Edit Grading Distance table, property panels) are not refreshed automatically by this API.\n@return true on success; false when the pattern/point is not found, the pattern has no grading rule table, the offsets length does not match the grading size count, or any target point's per-size grading data does not match the grading size count (stale grading state — nothing is applied)\n\"\"\"",
+              "section": "PATTERN_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 15430,
+                  "block": 1343
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 16197,
+                  "block": 1343,
+                  "anchor": "pattern-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetPatternPointsGradingPositionOffsets(int _patternIndex, const std::vector<int>& _pointIndices, const std::vector<std::vector<float>>& _offsets)",
+                "documentation_raw": "/// @ingroup PATTERN_API\n/// @brief Grade the positions of selected pattern outline points per size — the API equivalent of selecting points with the GUI 'Edit Grading' tool and typing per-size values into the Distance table. Offsets are [x, y] millimeters per grading size relative to the points' CURRENT positions in the 2D window world axes (Y up); the entry for the currently selected grading size is the reference and is ignored (pass [0, 0]). Existing deviations of the edited points are REPLACED, matching the Distance-table semantics.\n/// @param _patternIndex: pattern index (0-based, real pattern list order)\n/// @param _pointIndices: outline point indices to grade (0-based, order of GetPatternOutlinePoints)\n/// @param _offsets: one [x, y] offset per grading size, ordered like GetGradingSizeNameList; length must equal the grading size count\n/// @note In a GUI session the grading-related widgets (Edit Grading Distance table, property panels) are not refreshed automatically by this API.\n/// @return true on success; false when the pattern/point is not found, the pattern has no grading rule table, the offsets length does not match the grading size count, or any target point's per-size grading data does not match the grading size count (stale grading state — nothing is applied)",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 15443,
+                    "block": 1344
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 16210,
+                    "block": 1344,
+                    "anchor": "pattern-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _patternIndex: pattern index (0-based, real pattern list order)",
+            "@param _pointIndices: outline point indices to grade (0-based, order of GetPatternOutlinePoints)",
+            "@param _offsets: one [x, y] offset per grading size, ordered like GetGradingSizeNameList; length must equal the grading size count"
+          ],
+          "return_docs_raw": [
+            "@return true on success; false when the pattern/point is not found, the pattern has no grading rule table, the offsets length does not match the grading size count, or any target point's per-size grading data does not match the grading size count (stale grading state — nothing is applied)"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "pattern_api.SetPatternStrengthen",
+      "qualified_name": "pattern_api.SetPatternStrengthen",
+      "module": "pattern_api",
+      "symbol": "SetPatternStrengthen",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "pattern_api.SetPatternStrengthen#9bb772c97bf47b23",
+          "signature_normalized": "def SetPatternStrengthen(_patternIndex : int, _bStrengthen : bool) -> None",
+          "signature_raw": "def SetPatternStrengthen(_patternIndex : int, _bStrengthen : bool) -> None",
+          "parameters": [
+            {
+              "raw": "_patternIndex : int",
+              "name": "_patternIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_bStrengthen : bool",
+              "name": "_bStrengthen",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetPatternStrengthen(_patternIndex : int, _bStrengthen : bool) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup PATTERN_API\n@brief Set Pattern Strengthen using pattern index, Active state\n@param          patternIndex: the pattern index to set the pattern Strengthen,\nStrengthen: the Active state to determine pattern Strengthen\n\"\"\"",
+              "section": "PATTERN_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 12351,
+                  "block": 1099
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 12997,
+                  "block": 1099,
+                  "anchor": "pattern-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetPatternStrengthen(int _patternIndex, bool _bActive)",
+                "documentation_raw": "/// @ingroup PATTERN_API\n/// @brief Set Pattern Strengthen using pattern index, Active state\n/// @param              patternIndex: the pattern index to set the pattern Strengthen,\n/// Strengthen: the Active state to determine pattern Strengthen",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 12361,
+                    "block": 1100
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 13007,
+                    "block": 1100,
+                    "anchor": "pattern-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          patternIndex: the pattern index to set the pattern Strengthen,"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "pattern_api.SetSideUVExpansion",
+      "qualified_name": "pattern_api.SetSideUVExpansion",
+      "module": "pattern_api",
+      "symbol": "SetSideUVExpansion",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "pattern_api.SetSideUVExpansion#fab6c7a5805b8ca1",
+          "signature_normalized": "def SetSideUVExpansion(_patternIndex : int, _bSet : bool) -> None",
+          "signature_raw": "def SetSideUVExpansion(_patternIndex : int, _bSet : bool) -> None",
+          "parameters": [
+            {
+              "raw": "_patternIndex : int",
+              "name": "_patternIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_bSet : bool",
+              "name": "_bSet",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetSideUVExpansion(_patternIndex : int, _bSet : bool) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup PATTERN_API\n@brief Set side face UV expansion using pattern index\n@param          patternIndex: the pattern index to set the pattern side face UV expansion\n@param          _bSet : The state for side UV expansion, true : Enable side UV expansion, false : Disable side UV expansion\n\"\"\"",
+              "section": "PATTERN_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 14032,
+                  "block": 1251
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 14753,
+                  "block": 1251,
+                  "anchor": "pattern-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetSideUVExpansion(int _patternIndex, bool _bSet)",
+                "documentation_raw": "/// @ingroup PATTERN_API\n/// @brief Set side face UV expansion using pattern index\n/// @param              patternIndex: the pattern index to set the pattern side face UV expansion\n/// @param              _bSet : The state for side UV expansion, true : Enable side UV expansion, false : Disable side UV expansion",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 14042,
+                    "block": 1252
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 14763,
+                    "block": 1252,
+                    "anchor": "pattern-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          patternIndex: the pattern index to set the pattern side face UV expansion",
+            "@param          _bSet : The state for side UV expansion, true : Enable side UV expansion, false : Disable side UV expansion"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "pattern_api.SetTopstitchStyleModelType",
+      "qualified_name": "pattern_api.SetTopstitchStyleModelType",
+      "module": "pattern_api",
+      "symbol": "SetTopstitchStyleModelType",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "pattern_api.SetTopstitchStyleModelType#1e9eef6de80e0379",
+          "signature_normalized": "def SetTopstitchStyleModelType(_topStitchStyleIndex : int, _modelType : int) -> bool",
+          "signature_raw": "def SetTopstitchStyleModelType(_topStitchStyleIndex : int, _modelType : int) -> bool",
+          "parameters": [
+            {
+              "raw": "_topStitchStyleIndex : int",
+              "name": "_topStitchStyleIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_modelType : int",
+              "name": "_modelType",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def SetTopstitchStyleModelType(_topStitchStyleIndex : int, _modelType : int) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup PATTERN_API\n@brief Set topstitch style's model type. If it succeeds, return true\n@param          _topStitchStyleIndex: the topstitch style index for topstitch\n@param          _modelType:  the topstitch style model type (Type value: OBJ = 0, Texture = 1)\n\"\"\"",
+              "section": "PATTERN_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 13044,
+                  "block": 1165
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 13723,
+                  "block": 1165,
+                  "anchor": "pattern-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetTopstitchStyleModelType(int _topStitchStyleIndex, int _modelType)",
+                "documentation_raw": "/// @ingroup PATTERN_API\n/// @brief Set topstitch style's model type. If it succeeds, return true\n/// @param              _topStitchStyleIndex: the topstitch style index for topstitch\n/// @param              _modelType:  the topstitch style model type (Type value: OBJ = 0, Texture = 1)",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 13054,
+                    "block": 1166
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 13733,
+                    "block": 1166,
+                    "anchor": "pattern-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          _topStitchStyleIndex: the topstitch style index for topstitch",
+            "@param          _modelType:  the topstitch style model type (Type value: OBJ = 0, Texture = 1)"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "pattern_api.SetWidthShrinkagePercentage",
+      "qualified_name": "pattern_api.SetWidthShrinkagePercentage",
+      "module": "pattern_api",
+      "symbol": "SetWidthShrinkagePercentage",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "pattern_api.SetWidthShrinkagePercentage#d9ed152d4156d8e5",
+          "signature_normalized": "def SetWidthShrinkagePercentage(_patternIndex : int, _width : float) -> None",
+          "signature_raw": "def SetWidthShrinkagePercentage(_patternIndex : int, _width : float) -> None",
+          "parameters": [
+            {
+              "raw": "_patternIndex : int",
+              "name": "_patternIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_width : float",
+              "name": "_width",
+              "annotation_raw": "float"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SetWidthShrinkagePercentage(_patternIndex : int, _width : float) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup PATTERN_API\n@brief Set Width Shrinkage Percentage using pattern index, width\n@param          _patternIndex: the pattern index to set the pattern width shrinkage percentage,\n_width: the width value to determine width shrinkage percentage\n\"\"\"",
+              "section": "PATTERN_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 10929,
+                  "block": 967
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 11509,
+                  "block": 967,
+                  "anchor": "pattern-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SetWidthShrinkagePercentage(int _patternIndex, float _width)",
+                "documentation_raw": "/// @ingroup PATTERN_API\n/// @brief Set Width Shrinkage Percentage using pattern index, width\n/// @param              _patternIndex: the pattern index to set the pattern width shrinkage percentage,\n/// _width: the width value to determine width shrinkage percentage",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 10939,
+                    "block": 968
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 11519,
+                    "block": 968,
+                    "anchor": "pattern-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          _patternIndex: the pattern index to set the pattern width shrinkage percentage,"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "pattern_api.SymmetryPatternPiece",
+      "qualified_name": "pattern_api.SymmetryPatternPiece",
+      "module": "pattern_api",
+      "symbol": "SymmetryPatternPiece",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "pattern_api.SymmetryPatternPiece#7a55752c2bc9a18f",
+          "signature_normalized": "def SymmetryPatternPiece(_patternIndex : int, _bWithSewing : bool) -> None",
+          "signature_raw": "def SymmetryPatternPiece(_patternIndex : int, _bWithSewing : bool) -> None",
+          "parameters": [
+            {
+              "raw": "_patternIndex : int",
+              "name": "_patternIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_bWithSewing : bool",
+              "name": "_bWithSewing",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SymmetryPatternPiece(_patternIndex : int, _bWithSewing : bool) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup PATTERN_API\n@brief Symmetry Pattern using the pattern index and withSewing option\n@param          _patternIndex: the pattern index for symmetry pattern\n@param          _bWithSewing: the value to make symmetry pattern with sewing\n\"\"\"",
+              "section": "PATTERN_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 11434,
+                  "block": 1013
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 12037,
+                  "block": 1013,
+                  "anchor": "pattern-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SymmetryPatternPiece(int _patternIndex, bool _bWithSewing)",
+                "documentation_raw": "/// @ingroup PATTERN_API\n/// @brief Symmetry Pattern using the pattern index and withSewing option\n/// @param              _patternIndex: the pattern index for symmetry pattern\n/// @param              _bWithSewing: the value to make symmetry pattern with sewing",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 11444,
+                    "block": 1014
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 12047,
+                    "block": 1014,
+                    "anchor": "pattern-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          _patternIndex: the pattern index for symmetry pattern",
+            "@param          _bWithSewing: the value to make symmetry pattern with sewing"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "pattern_api.SymmetryPatternPieceWithPatternName",
+      "qualified_name": "pattern_api.SymmetryPatternPieceWithPatternName",
+      "module": "pattern_api",
+      "symbol": "SymmetryPatternPieceWithPatternName",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "pattern_api.SymmetryPatternPieceWithPatternName#80ef235e5ab9a22b",
+          "signature_normalized": "def SymmetryPatternPieceWithPatternName(_patternName : str, _bWithSewing : bool) -> None",
+          "signature_raw": "def SymmetryPatternPieceWithPatternName(_patternName : str, _bWithSewing : bool) -> None",
+          "parameters": [
+            {
+              "raw": "_patternName : str",
+              "name": "_patternName",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_bWithSewing : bool",
+              "name": "_bWithSewing",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def SymmetryPatternPieceWithPatternName(_patternName : str, _bWithSewing : bool) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup PATTERN_API\n@brief Symmetry Pattern using the pattern name and withSewing option\n@param          _patternName: the pattern name for symmetry pattern\n@param          _bWithSewing: the value to make symmetry pattern with sewing\n\"\"\"",
+              "section": "PATTERN_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 11474,
+                  "block": 1017
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 12079,
+                  "block": 1017,
+                  "anchor": "pattern-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "SymmetryPatternPieceWithPatternName(std::wstring _patternName, bool _bWithSewing)",
+                "documentation_raw": "/// @ingroup PATTERN_API\n/// @brief Symmetry Pattern using the pattern name and withSewing option\n/// @param              _patternName: the pattern name for symmetry pattern\n/// @param              _bWithSewing: the value to make symmetry pattern with sewing",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 11484,
+                    "block": 1018
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 12089,
+                    "block": 1018,
+                    "anchor": "pattern-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          _patternName: the pattern name for symmetry pattern",
+            "@param          _bWithSewing: the value to make symmetry pattern with sewing"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "pattern_api.TraceBaselineAsInternalShape",
+      "qualified_name": "pattern_api.TraceBaselineAsInternalShape",
+      "module": "pattern_api",
+      "symbol": "TraceBaselineAsInternalShape",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "pattern_api.TraceBaselineAsInternalShape#70889215303f634b",
+          "signature_normalized": "def TraceBaselineAsInternalShape(_patternIndex : int, _baselineIndex : int) -> bool",
+          "signature_raw": "def TraceBaselineAsInternalShape(_patternIndex : int, _baselineIndex : int) -> bool",
+          "parameters": [
+            {
+              "raw": "_patternIndex : int",
+              "name": "_patternIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_baselineIndex : int",
+              "name": "_baselineIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def TraceBaselineAsInternalShape(_patternIndex : int, _baselineIndex : int) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup PATTERN_API\n@brief Trace baseline(s) of a pattern into internal shapes — the API equivalent of selecting baseline lines in the GUI 2D 'Trace' tool and applying 'Trace as Internal Shape'. The traced internal lines inherit the baseline's per-size grading, so they follow the pattern's grading sizes. The original baseline is kept (same as the GUI).\n@param _patternIndex: pattern index (0-based, real pattern list order)\n@param _baselineIndex: baseline index on the pattern (0-based, same order as GetPatternBaselinePoints); pass -1 to trace every baseline of the pattern (-1 is the only accepted negative value — any other negative index fails). Punch-mark (cross-mark) entries in that index space are position markers, not traceable shapes — they are skipped, and passing a punch-mark index returns false\n@note In a GUI session the 2D/3D views and related widgets are not refreshed automatically by this API.\n@note The receiving pattern is decided by geometric containment of the traced lines (the core's FindParentPattern), not by _patternIndex — when patterns overlap in the 2D window, the internal shape can be created on a different pattern than the baseline's owner.\n@note On trace failure the core shows a modal message box that this API cannot suppress — it can block a headless session.\n@return true when at least one internal shape was created; false when the pattern/baseline is not found, the index is negative (other than -1), no baseline line is selectable, or the trace failed\n\"\"\"",
+              "section": "PATTERN_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 15240,
+                  "block": 1327
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 15999,
+                  "block": 1327,
+                  "anchor": "pattern-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "TraceBaselineAsInternalShape(int _patternIndex, int _baselineIndex)",
+                "documentation_raw": "/// @ingroup PATTERN_API\n/// @brief Trace baseline(s) of a pattern into internal shapes — the API equivalent of selecting baseline lines in the GUI 2D 'Trace' tool and applying 'Trace as Internal Shape'. The traced internal lines inherit the baseline's per-size grading, so they follow the pattern's grading sizes. The original baseline is kept (same as the GUI).\n/// @param _patternIndex: pattern index (0-based, real pattern list order)\n/// @param _baselineIndex: baseline index on the pattern (0-based, same order as GetPatternBaselinePoints); pass -1 to trace every baseline of the pattern (-1 is the only accepted negative value — any other negative index fails). Punch-mark (cross-mark) entries in that index space are position markers, not traceable shapes — they are skipped, and passing a punch-mark index returns false\n/// @note In a GUI session the 2D/3D views and related widgets are not refreshed automatically by this API.\n/// @note The receiving pattern is decided by geometric containment of the traced lines (the core's FindParentPattern), not by _patternIndex — when patterns overlap in the 2D window, the internal shape can be created on a different pattern than the baseline's owner.\n/// @note On trace failure the core shows a modal message box that this API cannot suppress — it can block a headless session.\n/// @return true when at least one internal shape was created; false when the pattern/baseline is not found, the index is negative (other than -1), no baseline line is selectable, or the trace failed",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 15254,
+                    "block": 1328
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 16013,
+                    "block": 1328,
+                    "anchor": "pattern-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _patternIndex: pattern index (0-based, real pattern list order)",
+            "@param _baselineIndex: baseline index on the pattern (0-based, same order as GetPatternBaselinePoints); pass -1 to trace every baseline of the pattern (-1 is the only accepted negative value — any other negative index fails). Punch-mark (cross-mark) entries in that index space are position markers, not traceable shapes — they are skipped, and passing a punch-mark index returns false"
+          ],
+          "return_docs_raw": [
+            "@return true when at least one internal shape was created; false when the pattern/baseline is not found, the index is negative (other than -1), no baseline line is selectable, or the trace failed"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "pattern_api.UnfoldPatternPiece",
+      "qualified_name": "pattern_api.UnfoldPatternPiece",
+      "module": "pattern_api",
+      "symbol": "UnfoldPatternPiece",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "pattern_api.UnfoldPatternPiece#25dd6170de3299a5",
+          "signature_normalized": "def UnfoldPatternPiece(_patternIndex : int, _lineIndex : int, _bHalfSymmetry : bool) -> bool",
+          "signature_raw": "def UnfoldPatternPiece(_patternIndex : int, _lineIndex : int, _bHalfSymmetry : bool) -> bool",
+          "parameters": [
+            {
+              "raw": "_patternIndex : int",
+              "name": "_patternIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_lineIndex : int",
+              "name": "_lineIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_bHalfSymmetry : bool",
+              "name": "_bHalfSymmetry",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def UnfoldPatternPiece(_patternIndex : int, _lineIndex : int, _bHalfSymmetry : bool) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup PATTERN_API\n@brief Unfold Pattern using the pattern index and line index and halfSymmetry option\n@param          patternIndex: the pattern index for unfold pattern\nlineIndex: the line index for unfold line\nhalfSymmetry: the value to make halfSymmetry pattern\n@return return true if success, false otherwise\n\"\"\"",
+              "section": "PATTERN_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 11384,
+                  "block": 1009
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 11985,
+                  "block": 1009,
+                  "anchor": "pattern-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "UnfoldPatternPiece(int _patternIndex, int _lineIndex, bool _bHalfSymmetry)",
+                "documentation_raw": "/// @ingroup PATTERN_API\n/// @brief Unfold Pattern using the pattern index and line index and halfSymmetry option\n/// @param              patternIndex: the pattern index for unfold pattern\n/// lineIndex: the line index for unfold line\n/// halfSymmetry: the value to make halfSymmetry pattern\n/// @return return true if success, false otherwise",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 11396,
+                    "block": 1010
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 11997,
+                    "block": 1010,
+                    "anchor": "pattern-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          patternIndex: the pattern index for unfold pattern"
+          ],
+          "return_docs_raw": [
+            "@return return true if success, false otherwise"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "pattern_api.UnfoldPatternPieceWithPatternName",
+      "qualified_name": "pattern_api.UnfoldPatternPieceWithPatternName",
+      "module": "pattern_api",
+      "symbol": "UnfoldPatternPieceWithPatternName",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "pattern_api.UnfoldPatternPieceWithPatternName#b69c4941710bc4c3",
+          "signature_normalized": "def UnfoldPatternPieceWithPatternName(_patternName : str, _lineIndex : int, _bHalfSymmetry : bool) -> bool",
+          "signature_raw": "def UnfoldPatternPieceWithPatternName(_patternName : str, _lineIndex : int, _bHalfSymmetry : bool) -> bool",
+          "parameters": [
+            {
+              "raw": "_patternName : str",
+              "name": "_patternName",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_lineIndex : int",
+              "name": "_lineIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_bHalfSymmetry : bool",
+              "name": "_bHalfSymmetry",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def UnfoldPatternPieceWithPatternName(_patternName : str, _lineIndex : int, _bHalfSymmetry : bool) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup PATTERN_API\n@brief Unfold Pattern using the pattern name and line index and halfSymmetry option\n@param          _patternName: the pattern index for unfold pattern\n@param          _lineIndex: the line index for unfold line\n@param          _bHalfSymmetry: the value to make halfSymmetry pattern\n@return return true if success, false otherwise\n\"\"\"",
+              "section": "PATTERN_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 11409,
+                  "block": 1011
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 12011,
+                  "block": 1011,
+                  "anchor": "pattern-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "UnfoldPatternPieceWithPatternName(std::wstring _patternName, int _lineIndex, bool _bHalfSymmetry)",
+                "documentation_raw": "/// @ingroup PATTERN_API\n/// @brief Unfold Pattern using the pattern name and line index and halfSymmetry option\n/// @param              _patternName: the pattern index for unfold pattern\n/// @param              _lineIndex: the line index for unfold line\n/// @param              _bHalfSymmetry: the value to make halfSymmetry pattern\n/// @return return true if success, false otherwise",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 11421,
+                    "block": 1012
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 12023,
+                    "block": 1012,
+                    "anchor": "pattern-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param          _patternName: the pattern index for unfold pattern",
+            "@param          _lineIndex: the line index for unfold line",
+            "@param          _bHalfSymmetry: the value to make halfSymmetry pattern"
+          ],
+          "return_docs_raw": [
+            "@return return true if success, false otherwise"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    }
+  ]
+}

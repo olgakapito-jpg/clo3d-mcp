@@ -1,0 +1,3477 @@
+{
+  "kind": "methods",
+  "records": [
+    {
+      "id": "fabric_api.GetFirstFabricTextureName",
+      "qualified_name": "fabric_api.GetFirstFabricTextureName",
+      "module": "fabric_api",
+      "symbol": "GetFirstFabricTextureName",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "fabric_api.GetFirstFabricTextureName#54eff6f3e74ccf03",
+          "signature_normalized": "def GetFirstFabricTextureName() -> str",
+          "signature_raw": "def GetFirstFabricTextureName() -> str",
+          "parameters": [],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetFirstFabricTextureName() -> str",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Get the main image file name for the first fabric in the object browser\n@return the name of the image file name without folder path and extension.\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 3100,
+                  "block": 281
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 3341,
+                  "block": 281,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetFirstFabricTextureName()",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Get the main image file name for the first fabric in the object browser\n/// @return the name of the image file name without folder path and extension.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 3109,
+                    "block": 282
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 3350,
+                    "block": 282,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return the name of the image file name without folder path and extension."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "fabric_api.GetFirstFabricTextureName#ad746dc1c6231f61",
+          "signature_normalized": "def GetFirstFabricTextureName(_colorwayIndex : int) -> str",
+          "signature_raw": "def GetFirstFabricTextureName(_colorwayIndex : int) -> str",
+          "parameters": [
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetFirstFabricTextureName(_colorwayIndex : int) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Get the main image file name for the first fabric in the object browser for a colorway index\n@param _colorwayIndex: colorway index\n@return the name of the image file name without folder path and extension.\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 3138,
+                  "block": 285
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 3381,
+                  "block": 285,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetFirstFabricTextureName(unsigned int _colorwayIndex)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Get the main image file name for the first fabric in the object browser for a colorway index\n/// @param _colorwayIndex: colorway index\n/// @return the name of the image file name without folder path and extension.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 3148,
+                    "block": 286
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 3391,
+                    "block": 286,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _colorwayIndex: colorway index"
+          ],
+          "return_docs_raw": [
+            "@return the name of the image file name without folder path and extension."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "fabric_api.GetFirstFabricTextureNameW",
+      "qualified_name": "fabric_api.GetFirstFabricTextureNameW",
+      "module": "fabric_api",
+      "symbol": "GetFirstFabricTextureNameW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "fabric_api.GetFirstFabricTextureNameW#6578ca06593ebdfa",
+          "signature_normalized": "def GetFirstFabricTextureNameW() -> str",
+          "signature_raw": "def GetFirstFabricTextureNameW() -> str",
+          "parameters": [],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetFirstFabricTextureNameW() -> str",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Get the main image file name for the first fabric in the object browser\n@return the name of the image file name without folder path and extension.\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 3119,
+                  "block": 283
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 3361,
+                  "block": 283,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetFirstFabricTextureNameW()",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Get the main image file name for the first fabric in the object browser\n/// @return the name of the image file name without folder path and extension.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 3128,
+                    "block": 284
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 3370,
+                    "block": 284,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return the name of the image file name without folder path and extension."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "fabric_api.GetFirstFabricTextureNameW#474e2e4631b0e7fa",
+          "signature_normalized": "def GetFirstFabricTextureNameW(_colorwayIndex : int) -> str",
+          "signature_raw": "def GetFirstFabricTextureNameW(_colorwayIndex : int) -> str",
+          "parameters": [
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetFirstFabricTextureNameW(_colorwayIndex : int) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Get the main image file name for the first fabric in the object browser for a colorway index\n@param _colorwayIndex: colorway index\n@return the name of the image file name without folder path and extension.\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 3159,
+                  "block": 287
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 3403,
+                  "block": 287,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetFirstFabricTextureNameW(unsigned int _colorwayIndex)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Get the main image file name for the first fabric in the object browser for a colorway index\n/// @param _colorwayIndex: colorway index\n/// @return the name of the image file name without folder path and extension.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 3169,
+                    "block": 288
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 3413,
+                    "block": 288,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _colorwayIndex: colorway index"
+          ],
+          "return_docs_raw": [
+            "@return the name of the image file name without folder path and extension."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "fabric_api.GetMaterialType",
+      "qualified_name": "fabric_api.GetMaterialType",
+      "module": "fabric_api",
+      "symbol": "GetMaterialType",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "fabric_api.GetMaterialType#1b52b9f8c36a967c",
+          "signature_normalized": "def GetMaterialType(_fabricIndex : int, _materialFace : int) -> int",
+          "signature_raw": "def GetMaterialType(_fabricIndex : int, _materialFace : int) -> int",
+          "parameters": [
+            {
+              "raw": "_fabricIndex : int",
+              "name": "_fabricIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_materialFace : int",
+              "name": "_materialFace",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "def GetMaterialType(_fabricIndex : int, _materialFace : int) -> int",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Get material type\n@param _fabricIndex: the target fabric index in the object browser\n@param _materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\"\n@return material type\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 6461,
+                  "block": 567
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 6845,
+                  "block": 567,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetMaterialType(int _fabricIndex, int _materialFace)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Get material type\n/// @param _fabricIndex: the target fabric index in the object browser\n/// @param _materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\"\n/// @return material type",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 6472,
+                    "block": 568
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 6856,
+                    "block": 568,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _fabricIndex: the target fabric index in the object browser",
+            "@param _materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\""
+          ],
+          "return_docs_raw": [
+            "@return material type"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "fabric_api.GetMaterialType#cfcd3addd02f9f31",
+          "signature_normalized": "def GetMaterialType(_colorwayIndex : int, _fabricIndex : int, _materialFace : int) -> int",
+          "signature_raw": "def GetMaterialType(_colorwayIndex : int, _fabricIndex : int, _materialFace : int) -> int",
+          "parameters": [
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_fabricIndex : int",
+              "name": "_fabricIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_materialFace : int",
+              "name": "_materialFace",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "def GetMaterialType(_colorwayIndex : int, _fabricIndex : int, _materialFace : int) -> int",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Get material type\n@param _colorwayIndex: index of colorway\n@param _fabricIndex: the target fabric index in the Colorway Editor\n@param _materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\"\n@return material type\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 6484,
+                  "block": 569
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 6869,
+                  "block": 569,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetMaterialType(int _colorwayIndex, int _fabricIndex, int _materialFace)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Get material type\n/// @param _colorwayIndex: index of colorway\n/// @param _fabricIndex: the target fabric index in the Colorway Editor\n/// @param _materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\"\n/// @return material type",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 6496,
+                    "block": 570
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 6881,
+                    "block": 570,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _colorwayIndex: index of colorway",
+            "@param _fabricIndex: the target fabric index in the Colorway Editor",
+            "@param _materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\""
+          ],
+          "return_docs_raw": [
+            "@return material type"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "fabric_api.GetMetalness",
+      "qualified_name": "fabric_api.GetMetalness",
+      "module": "fabric_api",
+      "symbol": "GetMetalness",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "fabric_api.GetMetalness#ea319bc79d069aae",
+          "signature_normalized": "def GetMetalness(_fabricIndex : int, _materialFace : int) -> float",
+          "signature_raw": "def GetMetalness(_fabricIndex : int, _materialFace : int) -> float",
+          "parameters": [
+            {
+              "raw": "_fabricIndex : int",
+              "name": "_fabricIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_materialFace : int",
+              "name": "_materialFace",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "float",
+          "occurrences": [
+            {
+              "signature_raw": "def GetMetalness(_fabricIndex : int, _materialFace : int) -> float",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Get metalness\n@param _fabricIndex: the target fabric index in the object browser\n@param _materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\"\n@return metalness value\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 6261,
+                  "block": 551
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 6637,
+                  "block": 551,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetMetalness(int _fabricIndex, int _materialFace)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Get metalness\n/// @param _fabricIndex: the target fabric index in the object browser\n/// @param _materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\"\n/// @return metalness value",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 6272,
+                    "block": 552
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 6648,
+                    "block": 552,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _fabricIndex: the target fabric index in the object browser",
+            "@param _materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\""
+          ],
+          "return_docs_raw": [
+            "@return metalness value"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "fabric_api.GetMetalness#17894fbcf167ec57",
+          "signature_normalized": "def GetMetalness(_colorwayIndex : int, fabricIndex : int, _materialFace : int) -> float",
+          "signature_raw": "def GetMetalness(_colorwayIndex : int, fabricIndex : int, _materialFace : int) -> float",
+          "parameters": [
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "fabricIndex : int",
+              "name": "fabricIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_materialFace : int",
+              "name": "_materialFace",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "float",
+          "occurrences": [
+            {
+              "signature_raw": "def GetMetalness(_colorwayIndex : int, fabricIndex : int, _materialFace : int) -> float",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Get metalness\n@param _colorwayIndex: index of colorway\n@param _fabricIndex: the target fabric index in the object browser\n@param _materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\"\n@return metalness value\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 6284,
+                  "block": 553
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 6661,
+                  "block": 553,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetMetalness(unsigned int _colorwayIndex, int fabricIndex, int _materialFace)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Get metalness\n/// @param _colorwayIndex: index of colorway\n/// @param _fabricIndex: the target fabric index in the object browser\n/// @param _materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\"\n/// @return metalness value",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 6296,
+                    "block": 554
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 6673,
+                    "block": 554,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _colorwayIndex: index of colorway",
+            "@param _fabricIndex: the target fabric index in the object browser",
+            "@param _materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\""
+          ],
+          "return_docs_raw": [
+            "@return metalness value"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "fabric_api.GetMetalnessMapImageFilePath",
+      "qualified_name": "fabric_api.GetMetalnessMapImageFilePath",
+      "module": "fabric_api",
+      "symbol": "GetMetalnessMapImageFilePath",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "fabric_api.GetMetalnessMapImageFilePath#1d72a48614709191",
+          "signature_normalized": "def GetMetalnessMapImageFilePath() -> str",
+          "signature_raw": "def GetMetalnessMapImageFilePath() -> str",
+          "parameters": [],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetMetalnessMapImageFilePath() -> str",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Get metalness map image file path of current selected fabric\n@return image file path string\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 6750,
+                  "block": 593
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 7147,
+                  "block": 593,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetMetalnessMapImageFilePath()",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Get metalness map image file path of current selected fabric\n/// @return image file path string",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 6759,
+                    "block": 594
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 7156,
+                    "block": 594,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return image file path string"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "fabric_api.GetMetalnessMapImageFilePath#d8cc269c72e3b0d3",
+          "signature_normalized": "def GetMetalnessMapImageFilePath(_fabricIndex : int) -> str",
+          "signature_raw": "def GetMetalnessMapImageFilePath(_fabricIndex : int) -> str",
+          "parameters": [
+            {
+              "raw": "_fabricIndex : int",
+              "name": "_fabricIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetMetalnessMapImageFilePath(_fabricIndex : int) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Get metalness map image file path of specified fabric\n@param _fabricIndex: the target fabric index in the object browser\n@return image file path string\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 7103,
+                  "block": 627
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 7517,
+                  "block": 627,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetMetalnessMapImageFilePath(int _fabricIndex)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Get metalness map image file path of specified fabric\n/// @param _fabricIndex: the target fabric index in the object browser\n/// @return image file path string",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 7113,
+                    "block": 628
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 7527,
+                    "block": 628,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _fabricIndex: the target fabric index in the object browser"
+          ],
+          "return_docs_raw": [
+            "@return image file path string"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "fabric_api.GetMetalnessMapImageFilePath#f0715ce76af3687c",
+          "signature_normalized": "def GetMetalnessMapImageFilePath(_colorwayIndex : int, _fabricIndex : int) -> str",
+          "signature_raw": "def GetMetalnessMapImageFilePath(_colorwayIndex : int, _fabricIndex : int) -> str",
+          "parameters": [
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_fabricIndex : int",
+              "name": "_fabricIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetMetalnessMapImageFilePath(_colorwayIndex : int, _fabricIndex : int) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Get metalness map image file path of specified fabric in colorway\n@param _colorwayIndex: target colorway index in the Colorway Editor\n@param _fabricIndex: the target fabric index in the Colorway Editor\n@return image file path string\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 7124,
+                  "block": 629
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 7539,
+                  "block": 629,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetMetalnessMapImageFilePath(int _colorwayIndex, int _fabricIndex)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Get metalness map image file path of specified fabric in colorway\n/// @param _colorwayIndex: target colorway index in the Colorway Editor\n/// @param _fabricIndex: the target fabric index in the Colorway Editor\n/// @return image file path string",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 7135,
+                    "block": 630
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 7550,
+                    "block": 630,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _colorwayIndex: target colorway index in the Colorway Editor",
+            "@param _fabricIndex: the target fabric index in the Colorway Editor"
+          ],
+          "return_docs_raw": [
+            "@return image file path string"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "fabric_api.GetMetalnessMapImageFilePath#3fd3d3adddbef50e",
+          "signature_normalized": "def GetMetalnessMapImageFilePath(_colorwayIndex : int, _fabricIndex : int, _styleChipIndex : int, _materialFace : int) -> str",
+          "signature_raw": "def GetMetalnessMapImageFilePath(_colorwayIndex : int, _fabricIndex : int, _styleChipIndex : int, _materialFace : int) -> str",
+          "parameters": [
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_fabricIndex : int",
+              "name": "_fabricIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_styleChipIndex : int",
+              "name": "_styleChipIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_materialFace : int",
+              "name": "_materialFace",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetMetalnessMapImageFilePath(_colorwayIndex : int, _fabricIndex : int, _styleChipIndex : int, _materialFace : int) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Get metalness map image file path of specified fabric and material face in colorway\n@param _colorwayIndex: target colorway index in the Colorway Editor\n@param _fabricIndex: the target fabric index in the Colorway Editor\n@param _styleChipIndex: target style chip index used to resolve exact linked fabric/colorway applicable if _colorwayIndex = -1, otherwise can be ignored\n@param _materialFace: target material face (0: Front, 1: Back, 2: Side)\n@return image file path string. Returns empty string if parameters are invalid.\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 8374,
+                  "block": 737
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 8843,
+                  "block": 737,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetMetalnessMapImageFilePath(int _colorwayIndex, int _fabricIndex, int _styleChipIndex, int _materialFace)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Get metalness map image file path of specified fabric and material face in colorway\n/// @param _colorwayIndex: target colorway index in the Colorway Editor\n/// @param _fabricIndex: the target fabric index in the Colorway Editor\n/// @param _styleChipIndex: target style chip index used to resolve exact linked fabric/colorway applicable if _colorwayIndex = -1, otherwise can be ignored\n/// @param _materialFace: target material face (0: Front, 1: Back, 2: Side)\n/// @return image file path string. Returns empty string if parameters are invalid.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 8387,
+                    "block": 738
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 8856,
+                    "block": 738,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _colorwayIndex: target colorway index in the Colorway Editor",
+            "@param _fabricIndex: the target fabric index in the Colorway Editor",
+            "@param _styleChipIndex: target style chip index used to resolve exact linked fabric/colorway applicable if _colorwayIndex = -1, otherwise can be ignored",
+            "@param _materialFace: target material face (0: Front, 1: Back, 2: Side)"
+          ],
+          "return_docs_raw": [
+            "@return image file path string. Returns empty string if parameters are invalid."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "fabric_api.GetMetalnessMapImageFilePathW",
+      "qualified_name": "fabric_api.GetMetalnessMapImageFilePathW",
+      "module": "fabric_api",
+      "symbol": "GetMetalnessMapImageFilePathW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "fabric_api.GetMetalnessMapImageFilePathW#62ab597f3d5bd18f",
+          "signature_normalized": "def GetMetalnessMapImageFilePathW() -> str",
+          "signature_raw": "def GetMetalnessMapImageFilePathW() -> str",
+          "parameters": [],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetMetalnessMapImageFilePathW() -> str",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Get metalness map image file path of current selected fabric\n@return image file path wstring\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 6864,
+                  "block": 605
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 7267,
+                  "block": 605,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetMetalnessMapImageFilePathW()",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Get metalness map image file path of current selected fabric\n/// @return image file path wstring",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 6873,
+                    "block": 606
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 7276,
+                    "block": 606,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return image file path wstring"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "fabric_api.GetMetalnessMapImageFilePathW#9544e1e9f89b26cb",
+          "signature_normalized": "def GetMetalnessMapImageFilePathW(_fabricIndex : int) -> str",
+          "signature_raw": "def GetMetalnessMapImageFilePathW(_fabricIndex : int) -> str",
+          "parameters": [
+            {
+              "raw": "_fabricIndex : int",
+              "name": "_fabricIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetMetalnessMapImageFilePathW(_fabricIndex : int) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Get metalness map image file path of specified fabric\n@param _fabricIndex: the target fabric index in the object browser\n@return image file path wstring\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 7367,
+                  "block": 651
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 7793,
+                  "block": 651,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetMetalnessMapImageFilePathW(int _fabricIndex)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Get metalness map image file path of specified fabric\n/// @param _fabricIndex: the target fabric index in the object browser\n/// @return image file path wstring",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 7377,
+                    "block": 652
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 7803,
+                    "block": 652,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _fabricIndex: the target fabric index in the object browser"
+          ],
+          "return_docs_raw": [
+            "@return image file path wstring"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "fabric_api.GetMetalnessMapImageFilePathW#061f59d88e6afd6a",
+          "signature_normalized": "def GetMetalnessMapImageFilePathW(_colorwayIndex : int, _fabricIndex : int) -> str",
+          "signature_raw": "def GetMetalnessMapImageFilePathW(_colorwayIndex : int, _fabricIndex : int) -> str",
+          "parameters": [
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_fabricIndex : int",
+              "name": "_fabricIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetMetalnessMapImageFilePathW(_colorwayIndex : int, _fabricIndex : int) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Get metalness map image file path of specified fabric in colorway\n@param _colorwayIndex: target colorway index in the Colorway Editor\n@param _fabricIndex: the target fabric index in the Colorway Editor\n@return image file path wstring\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 7388,
+                  "block": 653
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 7815,
+                  "block": 653,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetMetalnessMapImageFilePathW(int _colorwayIndex, int _fabricIndex)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Get metalness map image file path of specified fabric in colorway\n/// @param _colorwayIndex: target colorway index in the Colorway Editor\n/// @param _fabricIndex: the target fabric index in the Colorway Editor\n/// @return image file path wstring",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 7399,
+                    "block": 654
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 7826,
+                    "block": 654,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _colorwayIndex: target colorway index in the Colorway Editor",
+            "@param _fabricIndex: the target fabric index in the Colorway Editor"
+          ],
+          "return_docs_raw": [
+            "@return image file path wstring"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "fabric_api.GetNormalMapImageFilePath",
+      "qualified_name": "fabric_api.GetNormalMapImageFilePath",
+      "module": "fabric_api",
+      "symbol": "GetNormalMapImageFilePath",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "fabric_api.GetNormalMapImageFilePath#71357876c5a029d5",
+          "signature_normalized": "def GetNormalMapImageFilePath() -> str",
+          "signature_raw": "def GetNormalMapImageFilePath() -> str",
+          "parameters": [],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetNormalMapImageFilePath() -> str",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Get normal map image file path of current selected fabric\n@return image file path string\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 6674,
+                  "block": 585
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 7067,
+                  "block": 585,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetNormalMapImageFilePath()",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Get normal map image file path of current selected fabric\n/// @return image file path string",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 6683,
+                    "block": 586
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 7076,
+                    "block": 586,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return image file path string"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "fabric_api.GetNormalMapImageFilePath#ec8d2725f56a397c",
+          "signature_normalized": "def GetNormalMapImageFilePath(_fabricIndex : int) -> str",
+          "signature_raw": "def GetNormalMapImageFilePath(_fabricIndex : int) -> str",
+          "parameters": [
+            {
+              "raw": "_fabricIndex : int",
+              "name": "_fabricIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetNormalMapImageFilePath(_fabricIndex : int) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Get normal map image file path of specified fabric\n@param _fabricIndex: the target fabric index in the object browser\n@return image file path string\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 6927,
+                  "block": 611
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 7333,
+                  "block": 611,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetNormalMapImageFilePath(int _fabricIndex)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Get normal map image file path of specified fabric\n/// @param _fabricIndex: the target fabric index in the object browser\n/// @return image file path string",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 6937,
+                    "block": 612
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 7343,
+                    "block": 612,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _fabricIndex: the target fabric index in the object browser"
+          ],
+          "return_docs_raw": [
+            "@return image file path string"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "fabric_api.GetNormalMapImageFilePath#784eb76ed48c9ae2",
+          "signature_normalized": "def GetNormalMapImageFilePath(_colorwayIndex : int, _fabricIndex : int) -> str",
+          "signature_raw": "def GetNormalMapImageFilePath(_colorwayIndex : int, _fabricIndex : int) -> str",
+          "parameters": [
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_fabricIndex : int",
+              "name": "_fabricIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetNormalMapImageFilePath(_colorwayIndex : int, _fabricIndex : int) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Get normal map image file path of specified fabric in colorway\n@param _colorwayIndex: target colorway index in the Colorway Editor\n@param _fabricIndex: the target fabric index in the Colorway Editor\n@return image file path string\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 6948,
+                  "block": 613
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 7355,
+                  "block": 613,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetNormalMapImageFilePath(int _colorwayIndex, int _fabricIndex)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Get normal map image file path of specified fabric in colorway\n/// @param _colorwayIndex: target colorway index in the Colorway Editor\n/// @param _fabricIndex: the target fabric index in the Colorway Editor\n/// @return image file path string",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 6959,
+                    "block": 614
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 7366,
+                    "block": 614,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _colorwayIndex: target colorway index in the Colorway Editor",
+            "@param _fabricIndex: the target fabric index in the Colorway Editor"
+          ],
+          "return_docs_raw": [
+            "@return image file path string"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "fabric_api.GetNormalMapImageFilePath#1873886c8e1761d4",
+          "signature_normalized": "def GetNormalMapImageFilePath(_colorwayIndex : int, _fabricIndex : int, _styleChipIndex : int, _materialFace : int) -> str",
+          "signature_raw": "def GetNormalMapImageFilePath(_colorwayIndex : int, _fabricIndex : int, _styleChipIndex : int, _materialFace : int) -> str",
+          "parameters": [
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_fabricIndex : int",
+              "name": "_fabricIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_styleChipIndex : int",
+              "name": "_styleChipIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_materialFace : int",
+              "name": "_materialFace",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetNormalMapImageFilePath(_colorwayIndex : int, _fabricIndex : int, _styleChipIndex : int, _materialFace : int) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Get normal map image file path of specified fabric and material face in colorway\n@param _colorwayIndex: target colorway index in the Colorway Editor\n@param _fabricIndex: the target fabric index in the Colorway Editor\n@param _styleChipIndex: target style chip index used to resolve exact linked fabric/colorway applicable if _colorwayIndex = -1, otherwise can be ignored\n@param _materialFace: target material face (0: Front, 1: Back, 2: Side)\n@return image file path string. Returns empty string if parameters are invalid.\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 8266,
+                  "block": 729
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 8731,
+                  "block": 729,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetNormalMapImageFilePath(int _colorwayIndex, int _fabricIndex, int _styleChipIndex, int _materialFace)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Get normal map image file path of specified fabric and material face in colorway\n/// @param _colorwayIndex: target colorway index in the Colorway Editor\n/// @param _fabricIndex: the target fabric index in the Colorway Editor\n/// @param _styleChipIndex: target style chip index used to resolve exact linked fabric/colorway applicable if _colorwayIndex = -1, otherwise can be ignored\n/// @param _materialFace: target material face (0: Front, 1: Back, 2: Side)\n/// @return image file path string. Returns empty string if parameters are invalid.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 8279,
+                    "block": 730
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 8744,
+                    "block": 730,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _colorwayIndex: target colorway index in the Colorway Editor",
+            "@param _fabricIndex: the target fabric index in the Colorway Editor",
+            "@param _styleChipIndex: target style chip index used to resolve exact linked fabric/colorway applicable if _colorwayIndex = -1, otherwise can be ignored",
+            "@param _materialFace: target material face (0: Front, 1: Back, 2: Side)"
+          ],
+          "return_docs_raw": [
+            "@return image file path string. Returns empty string if parameters are invalid."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "fabric_api.GetNormalMapImageFilePathW",
+      "qualified_name": "fabric_api.GetNormalMapImageFilePathW",
+      "module": "fabric_api",
+      "symbol": "GetNormalMapImageFilePathW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "fabric_api.GetNormalMapImageFilePathW#45dbb14042bf28c0",
+          "signature_normalized": "def GetNormalMapImageFilePathW() -> str",
+          "signature_raw": "def GetNormalMapImageFilePathW() -> str",
+          "parameters": [],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetNormalMapImageFilePathW() -> str",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Get normal map image file path of current selected fabric\n@return image file path wstring\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 6788,
+                  "block": 597
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 7187,
+                  "block": 597,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetNormalMapImageFilePathW()",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Get normal map image file path of current selected fabric\n/// @return image file path wstring",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 6797,
+                    "block": 598
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 7196,
+                    "block": 598,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return image file path wstring"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "fabric_api.GetNormalMapImageFilePathW#33f589faa3174c22",
+          "signature_normalized": "def GetNormalMapImageFilePathW(_fabricIndex : int) -> str",
+          "signature_raw": "def GetNormalMapImageFilePathW(_fabricIndex : int) -> str",
+          "parameters": [
+            {
+              "raw": "_fabricIndex : int",
+              "name": "_fabricIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetNormalMapImageFilePathW(_fabricIndex : int) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Get normal map image file path of specified fabric\n@param _fabricIndex: the target fabric index in the object browser\n@return image file path wstring\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 7191,
+                  "block": 635
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 7609,
+                  "block": 635,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetNormalMapImageFilePathW(int _fabricIndex)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Get normal map image file path of specified fabric\n/// @param _fabricIndex: the target fabric index in the object browser\n/// @return image file path wstring",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 7201,
+                    "block": 636
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 7619,
+                    "block": 636,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _fabricIndex: the target fabric index in the object browser"
+          ],
+          "return_docs_raw": [
+            "@return image file path wstring"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "fabric_api.GetNormalMapImageFilePathW#abbe10debc2e341b",
+          "signature_normalized": "def GetNormalMapImageFilePathW(_colorwayIndex : int, _fabricIndex : int) -> str",
+          "signature_raw": "def GetNormalMapImageFilePathW(_colorwayIndex : int, _fabricIndex : int) -> str",
+          "parameters": [
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_fabricIndex : int",
+              "name": "_fabricIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetNormalMapImageFilePathW(_colorwayIndex : int, _fabricIndex : int) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Get normal map image file path of specified fabric in colorway\n@param _colorwayIndex: target colorway index in the Colorway Editor\n@param _fabricIndex: the target fabric index in the Colorway Editor\n@return image file path wstring\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 7212,
+                  "block": 637
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 7631,
+                  "block": 637,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetNormalMapImageFilePathW(int _colorwayIndex, int _fabricIndex)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Get normal map image file path of specified fabric in colorway\n/// @param _colorwayIndex: target colorway index in the Colorway Editor\n/// @param _fabricIndex: the target fabric index in the Colorway Editor\n/// @return image file path wstring",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 7223,
+                    "block": 638
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 7642,
+                    "block": 638,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _colorwayIndex: target colorway index in the Colorway Editor",
+            "@param _fabricIndex: the target fabric index in the Colorway Editor"
+          ],
+          "return_docs_raw": [
+            "@return image file path wstring"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "fabric_api.GetNormalMapIntensity",
+      "qualified_name": "fabric_api.GetNormalMapIntensity",
+      "module": "fabric_api",
+      "symbol": "GetNormalMapIntensity",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "fabric_api.GetNormalMapIntensity#cdd3c2b659fadc93",
+          "signature_normalized": "def GetNormalMapIntensity(_fabricIndex : int, _materialFace : int) -> float",
+          "signature_raw": "def GetNormalMapIntensity(_fabricIndex : int, _materialFace : int) -> float",
+          "parameters": [
+            {
+              "raw": "_fabricIndex : int",
+              "name": "_fabricIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_materialFace : int",
+              "name": "_materialFace",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "float",
+          "occurrences": [
+            {
+              "signature_raw": "def GetNormalMapIntensity(_fabricIndex : int, _materialFace : int) -> float",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Get normal map intensity in percent\n@param _fabricIndex: the target fabric index in the object browser\n@param _materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\"\n@return normal map intensity value\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 6361,
+                  "block": 559
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 6741,
+                  "block": 559,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetNormalMapIntensity(int _fabricIndex, int _materialFace)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Get normal map intensity in percent\n/// @param _fabricIndex: the target fabric index in the object browser\n/// @param _materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\"\n/// @return normal map intensity value",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 6372,
+                    "block": 560
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 6752,
+                    "block": 560,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _fabricIndex: the target fabric index in the object browser",
+            "@param _materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\""
+          ],
+          "return_docs_raw": [
+            "@return normal map intensity value"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "fabric_api.GetNormalMapIntensity#2eb99f6ee9b44857",
+          "signature_normalized": "def GetNormalMapIntensity(_colorwayIndex : int, fabricIndex : int, _materialFace : int) -> float",
+          "signature_raw": "def GetNormalMapIntensity(_colorwayIndex : int, fabricIndex : int, _materialFace : int) -> float",
+          "parameters": [
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "fabricIndex : int",
+              "name": "fabricIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_materialFace : int",
+              "name": "_materialFace",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "float",
+          "occurrences": [
+            {
+              "signature_raw": "def GetNormalMapIntensity(_colorwayIndex : int, fabricIndex : int, _materialFace : int) -> float",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Get normal map intensity in percent\n@param _colorwayIndex: index of colorway\n@param _fabricIndex: the target fabric index in the object browser\n@param _materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\"\n@return normal map intensity value\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 6384,
+                  "block": 561
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 6765,
+                  "block": 561,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetNormalMapIntensity(unsigned int _colorwayIndex, int fabricIndex, int _materialFace)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Get normal map intensity in percent\n/// @param _colorwayIndex: index of colorway\n/// @param _fabricIndex: the target fabric index in the object browser\n/// @param _materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\"\n/// @return normal map intensity value",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 6396,
+                    "block": 562
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 6777,
+                    "block": 562,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _colorwayIndex: index of colorway",
+            "@param _fabricIndex: the target fabric index in the object browser",
+            "@param _materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\""
+          ],
+          "return_docs_raw": [
+            "@return normal map intensity value"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "fabric_api.GetOpacityIntensity",
+      "qualified_name": "fabric_api.GetOpacityIntensity",
+      "module": "fabric_api",
+      "symbol": "GetOpacityIntensity",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "fabric_api.GetOpacityIntensity#4d70193b42c8e61f",
+          "signature_normalized": "def GetOpacityIntensity(_fabricIndex : int, _materialFace : int) -> float",
+          "signature_raw": "def GetOpacityIntensity(_fabricIndex : int, _materialFace : int) -> float",
+          "parameters": [
+            {
+              "raw": "_fabricIndex : int",
+              "name": "_fabricIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_materialFace : int",
+              "name": "_materialFace",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "float",
+          "occurrences": [
+            {
+              "signature_raw": "def GetOpacityIntensity(_fabricIndex : int, _materialFace : int) -> float",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Get opacity intensity in percent\n@param _fabricIndex: the target fabric index in the object browser\n@param _materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\"\n@return opacity intensity value\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 6557,
+                  "block": 575
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 6945,
+                  "block": 575,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetOpacityIntensity(int _fabricIndex, int _materialFace)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Get opacity intensity in percent\n/// @param _fabricIndex: the target fabric index in the object browser\n/// @param _materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\"\n/// @return opacity intensity value",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 6568,
+                    "block": 576
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 6956,
+                    "block": 576,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _fabricIndex: the target fabric index in the object browser",
+            "@param _materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\""
+          ],
+          "return_docs_raw": [
+            "@return opacity intensity value"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "fabric_api.GetOpacityIntensity#343a2d9d0f987403",
+          "signature_normalized": "def GetOpacityIntensity(_colorwayIndex : int, _fabricIndex : int, _materialFace : int) -> float",
+          "signature_raw": "def GetOpacityIntensity(_colorwayIndex : int, _fabricIndex : int, _materialFace : int) -> float",
+          "parameters": [
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_fabricIndex : int",
+              "name": "_fabricIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_materialFace : int",
+              "name": "_materialFace",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "float",
+          "occurrences": [
+            {
+              "signature_raw": "def GetOpacityIntensity(_colorwayIndex : int, _fabricIndex : int, _materialFace : int) -> float",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Get opacity intensity in percent\n@param _colorwayIndex: index of colorway\n@param _fabricIndex: the target fabric index in the Colorway Editor\n@param _materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\"\n@return opacity intensity value\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 6580,
+                  "block": 577
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 6969,
+                  "block": 577,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetOpacityIntensity(int _colorwayIndex, int _fabricIndex, int _materialFace)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Get opacity intensity in percent\n/// @param _colorwayIndex: index of colorway\n/// @param _fabricIndex: the target fabric index in the Colorway Editor\n/// @param _materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\"\n/// @return opacity intensity value",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 6592,
+                    "block": 578
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 6981,
+                    "block": 578,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _colorwayIndex: index of colorway",
+            "@param _fabricIndex: the target fabric index in the Colorway Editor",
+            "@param _materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\""
+          ],
+          "return_docs_raw": [
+            "@return opacity intensity value"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "fabric_api.GetOpacityMapImageFilePath",
+      "qualified_name": "fabric_api.GetOpacityMapImageFilePath",
+      "module": "fabric_api",
+      "symbol": "GetOpacityMapImageFilePath",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "fabric_api.GetOpacityMapImageFilePath#e2c2e8076e66a818",
+          "signature_normalized": "def GetOpacityMapImageFilePath() -> str",
+          "signature_raw": "def GetOpacityMapImageFilePath() -> str",
+          "parameters": [],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetOpacityMapImageFilePath() -> str",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Get opacity map image file path of current selected fabric\n@return image file path string\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 6712,
+                  "block": 589
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 7107,
+                  "block": 589,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetOpacityMapImageFilePath()",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Get opacity map image file path of current selected fabric\n/// @return image file path string",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 6721,
+                    "block": 590
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 7116,
+                    "block": 590,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return image file path string"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "fabric_api.GetOpacityMapImageFilePath#9a6d3f18fede26cb",
+          "signature_normalized": "def GetOpacityMapImageFilePath(_fabricIndex : int) -> str",
+          "signature_raw": "def GetOpacityMapImageFilePath(_fabricIndex : int) -> str",
+          "parameters": [
+            {
+              "raw": "_fabricIndex : int",
+              "name": "_fabricIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetOpacityMapImageFilePath(_fabricIndex : int) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Get opacity map image file path of specified fabric\n@param _fabricIndex: the target fabric index in the object browser\n@return image file path string\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 7015,
+                  "block": 619
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 7425,
+                  "block": 619,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetOpacityMapImageFilePath(int _fabricIndex)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Get opacity map image file path of specified fabric\n/// @param _fabricIndex: the target fabric index in the object browser\n/// @return image file path string",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 7025,
+                    "block": 620
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 7435,
+                    "block": 620,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _fabricIndex: the target fabric index in the object browser"
+          ],
+          "return_docs_raw": [
+            "@return image file path string"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "fabric_api.GetOpacityMapImageFilePath#6540afa73e692def",
+          "signature_normalized": "def GetOpacityMapImageFilePath(_colorwayIndex : int, _fabricIndex : int) -> str",
+          "signature_raw": "def GetOpacityMapImageFilePath(_colorwayIndex : int, _fabricIndex : int) -> str",
+          "parameters": [
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_fabricIndex : int",
+              "name": "_fabricIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetOpacityMapImageFilePath(_colorwayIndex : int, _fabricIndex : int) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Get opacity map image file path of specified fabric in colorway\n@param _colorwayIndex: target colorway index in the Colorway Editor\n@param _fabricIndex: the target fabric index in the Colorway Editor\n@return image file path string\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 7036,
+                  "block": 621
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 7447,
+                  "block": 621,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetOpacityMapImageFilePath(int _colorwayIndex, int _fabricIndex)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Get opacity map image file path of specified fabric in colorway\n/// @param _colorwayIndex: target colorway index in the Colorway Editor\n/// @param _fabricIndex: the target fabric index in the Colorway Editor\n/// @return image file path string",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 7047,
+                    "block": 622
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 7458,
+                    "block": 622,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _colorwayIndex: target colorway index in the Colorway Editor",
+            "@param _fabricIndex: the target fabric index in the Colorway Editor"
+          ],
+          "return_docs_raw": [
+            "@return image file path string"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "fabric_api.GetOpacityMapImageFilePath#60492a73c4a3df42",
+          "signature_normalized": "def GetOpacityMapImageFilePath(_colorwayIndex : int, _fabricIndex : int, _styleChipIndex : int, _materialFace : int) -> str",
+          "signature_raw": "def GetOpacityMapImageFilePath(_colorwayIndex : int, _fabricIndex : int, _styleChipIndex : int, _materialFace : int) -> str",
+          "parameters": [
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_fabricIndex : int",
+              "name": "_fabricIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_styleChipIndex : int",
+              "name": "_styleChipIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_materialFace : int",
+              "name": "_materialFace",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetOpacityMapImageFilePath(_colorwayIndex : int, _fabricIndex : int, _styleChipIndex : int, _materialFace : int) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Get opacity map image file path of specified fabric and material face in colorway\n@param _colorwayIndex: target colorway index in the Colorway Editor\n@param _fabricIndex: the target fabric index in the Colorway Editor\n@param _styleChipIndex: target style chip index used to resolve exact linked fabric/colorway applicable if _colorwayIndex = -1, otherwise can be ignored\n@param _materialFace: target material face (0: Front, 1: Back, 2: Side)\n@return image file path string. Returns empty string if parameters are invalid.\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 8320,
+                  "block": 733
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 8787,
+                  "block": 733,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetOpacityMapImageFilePath(int _colorwayIndex, int _fabricIndex, int _styleChipIndex, int _materialFace)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Get opacity map image file path of specified fabric and material face in colorway\n/// @param _colorwayIndex: target colorway index in the Colorway Editor\n/// @param _fabricIndex: the target fabric index in the Colorway Editor\n/// @param _styleChipIndex: target style chip index used to resolve exact linked fabric/colorway applicable if _colorwayIndex = -1, otherwise can be ignored\n/// @param _materialFace: target material face (0: Front, 1: Back, 2: Side)\n/// @return image file path string. Returns empty string if parameters are invalid.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 8333,
+                    "block": 734
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 8800,
+                    "block": 734,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _colorwayIndex: target colorway index in the Colorway Editor",
+            "@param _fabricIndex: the target fabric index in the Colorway Editor",
+            "@param _styleChipIndex: target style chip index used to resolve exact linked fabric/colorway applicable if _colorwayIndex = -1, otherwise can be ignored",
+            "@param _materialFace: target material face (0: Front, 1: Back, 2: Side)"
+          ],
+          "return_docs_raw": [
+            "@return image file path string. Returns empty string if parameters are invalid."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "fabric_api.GetOpacityMapImageFilePathW",
+      "qualified_name": "fabric_api.GetOpacityMapImageFilePathW",
+      "module": "fabric_api",
+      "symbol": "GetOpacityMapImageFilePathW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "fabric_api.GetOpacityMapImageFilePathW#0686df924e969263",
+          "signature_normalized": "def GetOpacityMapImageFilePathW() -> str",
+          "signature_raw": "def GetOpacityMapImageFilePathW() -> str",
+          "parameters": [],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetOpacityMapImageFilePathW() -> str",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Get opacity map image file path of current selected fabric\n@return image file path wstring\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 6826,
+                  "block": 601
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 7227,
+                  "block": 601,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetOpacityMapImageFilePathW()",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Get opacity map image file path of current selected fabric\n/// @return image file path wstring",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 6835,
+                    "block": 602
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 7236,
+                    "block": 602,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return image file path wstring"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "fabric_api.GetOpacityMapImageFilePathW#dc5ecca5bd634806",
+          "signature_normalized": "def GetOpacityMapImageFilePathW(_fabricIndex : int) -> str",
+          "signature_raw": "def GetOpacityMapImageFilePathW(_fabricIndex : int) -> str",
+          "parameters": [
+            {
+              "raw": "_fabricIndex : int",
+              "name": "_fabricIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetOpacityMapImageFilePathW(_fabricIndex : int) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Get opacity map image file path of specified fabric\n@param _fabricIndex: the target fabric index in the object browser\n@return image file path wstring\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 7279,
+                  "block": 643
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 7701,
+                  "block": 643,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetOpacityMapImageFilePathW(int _fabricIndex)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Get opacity map image file path of specified fabric\n/// @param _fabricIndex: the target fabric index in the object browser\n/// @return image file path wstring",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 7289,
+                    "block": 644
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 7711,
+                    "block": 644,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _fabricIndex: the target fabric index in the object browser"
+          ],
+          "return_docs_raw": [
+            "@return image file path wstring"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "fabric_api.GetOpacityMapImageFilePathW#66d93e30ceb0588d",
+          "signature_normalized": "def GetOpacityMapImageFilePathW(_colorwayIndex : int, _fabricIndex : int) -> str",
+          "signature_raw": "def GetOpacityMapImageFilePathW(_colorwayIndex : int, _fabricIndex : int) -> str",
+          "parameters": [
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_fabricIndex : int",
+              "name": "_fabricIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetOpacityMapImageFilePathW(_colorwayIndex : int, _fabricIndex : int) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Get opacity map image file path of specified fabric in colorway\n@param _colorwayIndex: target colorway index in the Colorway Editor\n@param _fabricIndex: the target fabric index in the Colorway Editor\n@return image file path wstring\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 7300,
+                  "block": 645
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 7723,
+                  "block": 645,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetOpacityMapImageFilePathW(int _colorwayIndex, int _fabricIndex)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Get opacity map image file path of specified fabric in colorway\n/// @param _colorwayIndex: target colorway index in the Colorway Editor\n/// @param _fabricIndex: the target fabric index in the Colorway Editor\n/// @return image file path wstring",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 7311,
+                    "block": 646
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 7734,
+                    "block": 646,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _colorwayIndex: target colorway index in the Colorway Editor",
+            "@param _fabricIndex: the target fabric index in the Colorway Editor"
+          ],
+          "return_docs_raw": [
+            "@return image file path wstring"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "fabric_api.GetPBRMaterialDisplacementMapValue",
+      "qualified_name": "fabric_api.GetPBRMaterialDisplacementMapValue",
+      "module": "fabric_api",
+      "symbol": "GetPBRMaterialDisplacementMapValue",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "fabric_api.GetPBRMaterialDisplacementMapValue#bcd12c7ec2b73efe",
+          "signature_normalized": "def GetPBRMaterialDisplacementMapValue(_fabricIndex : int) -> tuple[float, float, float, float, bool]",
+          "signature_raw": "def GetPBRMaterialDisplacementMapValue(_fabricIndex : int) -> tuple[float, float, float, float, bool]",
+          "parameters": [
+            {
+              "raw": "_fabricIndex : int",
+              "name": "_fabricIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "tuple[float, float, float, float, bool]",
+          "occurrences": [
+            {
+              "signature_raw": "def GetPBRMaterialDisplacementMapValue(_fabricIndex : int) -> tuple[float, float, float, float, bool]",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Get fabric's displacement map values.\n@param _fabricIndex: index of fabric\n@Return [Amount, Shift, Clipping, Particle Distance, Keep(bool)] tuple if succeed, [0, 0, 0, 0, false] otherwise.\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 5953,
+                  "block": 527
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 6317,
+                  "block": 527,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "std::tuple<float, float, float, float, bool> GetPBRMaterialDisplacementMapValue(unsigned int _fabricIndex)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Get fabric's displacement map values.\n/// @param _fabricIndex: index of fabric\n/// @Return [Amount, Shift, Clipping, Particle Distance, Keep(bool)] tuple if succeed, [0, 0, 0, 0, false] otherwise.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 5963,
+                    "block": 528
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 6327,
+                    "block": 528,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _fabricIndex: index of fabric"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "fabric_api.GetPBRMaterialDisplacementMapValue#5790ad168058fa57",
+          "signature_normalized": "def GetPBRMaterialDisplacementMapValue(_colorwayIndex : int, _fabricIndex : int) -> tuple[float, float, float, float, bool]",
+          "signature_raw": "def GetPBRMaterialDisplacementMapValue(_colorwayIndex : int, _fabricIndex : int) -> tuple[float, float, float, float, bool]",
+          "parameters": [
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_fabricIndex : int",
+              "name": "_fabricIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "tuple[float, float, float, float, bool]",
+          "occurrences": [
+            {
+              "signature_raw": "def GetPBRMaterialDisplacementMapValue(_colorwayIndex : int, _fabricIndex : int) -> tuple[float, float, float, float, bool]",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Get fabric's displacement map values.\n@param _colorwayIndex: _colorwayIndex: index of colorway\n@param _fabricIndex: index of fabric\n@Return [Amount, Shift, Clipping, Particle Distance, Keep(bool)] tuple if succeed, [0, 0, 0, 0, false] otherwise.\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 5974,
+                  "block": 529
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 6339,
+                  "block": 529,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "std::tuple<float, float, float, float, bool> GetPBRMaterialDisplacementMapValue(unsigned int _colorwayIndex, unsigned int _fabricIndex)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Get fabric's displacement map values.\n/// @param _colorwayIndex: _colorwayIndex: index of colorway\n/// @param _fabricIndex: index of fabric\n/// @Return [Amount, Shift, Clipping, Particle Distance, Keep(bool)] tuple if succeed, [0, 0, 0, 0, false] otherwise.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 5985,
+                    "block": 530
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 6350,
+                    "block": 530,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _colorwayIndex: _colorwayIndex: index of colorway",
+            "@param _fabricIndex: index of fabric"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "fabric_api.GetPrimaryFabric",
+      "qualified_name": "fabric_api.GetPrimaryFabric",
+      "module": "fabric_api",
+      "symbol": "GetPrimaryFabric",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "fabric_api.GetPrimaryFabric#f55fb47d942c65fc",
+          "signature_normalized": "def GetPrimaryFabric() -> int",
+          "signature_raw": "def GetPrimaryFabric() -> int",
+          "parameters": [],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "def GetPrimaryFabric() -> int",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Return the fabric index used for a major number of the patterns\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 4470,
+                  "block": 401
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 4771,
+                  "block": 401,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetPrimaryFabric()",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Return the fabric index used for a major number of the patterns",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 4478,
+                    "block": 402
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 4779,
+                    "block": 402,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "fabric_api.GetReflectionIntensity",
+      "qualified_name": "fabric_api.GetReflectionIntensity",
+      "module": "fabric_api",
+      "symbol": "GetReflectionIntensity",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "fabric_api.GetReflectionIntensity#0c78b9ba9e64688f",
+          "signature_normalized": "def GetReflectionIntensity(_fabricIndex : int, _materialFace : int) -> float",
+          "signature_raw": "def GetReflectionIntensity(_fabricIndex : int, _materialFace : int) -> float",
+          "parameters": [
+            {
+              "raw": "_fabricIndex : int",
+              "name": "_fabricIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_materialFace : int",
+              "name": "_materialFace",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "float",
+          "occurrences": [
+            {
+              "signature_raw": "def GetReflectionIntensity(_fabricIndex : int, _materialFace : int) -> float",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Get reflection intensity\n@param _fabricIndex: the target fabric index in the object browser\n@param _materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\"\n@return reflection intensity value\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 6161,
+                  "block": 543
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 6533,
+                  "block": 543,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetReflectionIntensity(int _fabricIndex, int _materialFace)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Get reflection intensity\n/// @param _fabricIndex: the target fabric index in the object browser\n/// @param _materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\"\n/// @return reflection intensity value",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 6172,
+                    "block": 544
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 6544,
+                    "block": 544,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _fabricIndex: the target fabric index in the object browser",
+            "@param _materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\""
+          ],
+          "return_docs_raw": [
+            "@return reflection intensity value"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "fabric_api.GetReflectionIntensity#af207d177981c065",
+          "signature_normalized": "def GetReflectionIntensity(_colorwayIndex : int, fabricIndex : int, _materialFace : int) -> float",
+          "signature_raw": "def GetReflectionIntensity(_colorwayIndex : int, fabricIndex : int, _materialFace : int) -> float",
+          "parameters": [
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "fabricIndex : int",
+              "name": "fabricIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_materialFace : int",
+              "name": "_materialFace",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "float",
+          "occurrences": [
+            {
+              "signature_raw": "def GetReflectionIntensity(_colorwayIndex : int, fabricIndex : int, _materialFace : int) -> float",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Get reflection intensity\n@param _colorwayIndex: index of colorway\n@param _fabricIndex: the target fabric index in the object browser\n@param _materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\"\n@return reflection intensity value\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 6184,
+                  "block": 545
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 6557,
+                  "block": 545,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetReflectionIntensity(unsigned int _colorwayIndex, int fabricIndex, int _materialFace)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Get reflection intensity\n/// @param _colorwayIndex: index of colorway\n/// @param _fabricIndex: the target fabric index in the object browser\n/// @param _materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\"\n/// @return reflection intensity value",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 6196,
+                    "block": 546
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 6569,
+                    "block": 546,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _colorwayIndex: index of colorway",
+            "@param _fabricIndex: the target fabric index in the object browser",
+            "@param _materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\""
+          ],
+          "return_docs_raw": [
+            "@return reflection intensity value"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "fabric_api.GetReflectionRoughness",
+      "qualified_name": "fabric_api.GetReflectionRoughness",
+      "module": "fabric_api",
+      "symbol": "GetReflectionRoughness",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "fabric_api.GetReflectionRoughness#062461234cccf107",
+          "signature_normalized": "def GetReflectionRoughness(_fabricIndex : int, _materialFace : int) -> float",
+          "signature_raw": "def GetReflectionRoughness(_fabricIndex : int, _materialFace : int) -> float",
+          "parameters": [
+            {
+              "raw": "_fabricIndex : int",
+              "name": "_fabricIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_materialFace : int",
+              "name": "_materialFace",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "float",
+          "occurrences": [
+            {
+              "signature_raw": "def GetReflectionRoughness(_fabricIndex : int, _materialFace : int) -> float",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Get reflection roughness value\n@param _fabricIndex: the target fabric index in the object browser\n@param _materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\"\n@return reflection roughness value\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 6061,
+                  "block": 535
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 6429,
+                  "block": 535,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetReflectionRoughness(int _fabricIndex, int _materialFace)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Get reflection roughness value\n/// @param _fabricIndex: the target fabric index in the object browser\n/// @param _materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\"\n/// @return reflection roughness value",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 6072,
+                    "block": 536
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 6440,
+                    "block": 536,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _fabricIndex: the target fabric index in the object browser",
+            "@param _materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\""
+          ],
+          "return_docs_raw": [
+            "@return reflection roughness value"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "fabric_api.GetReflectionRoughness#11effa0538bffec3",
+          "signature_normalized": "def GetReflectionRoughness(_colorwayIndex : int, fabricIndex : int, _materialFace : int) -> float",
+          "signature_raw": "def GetReflectionRoughness(_colorwayIndex : int, fabricIndex : int, _materialFace : int) -> float",
+          "parameters": [
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "fabricIndex : int",
+              "name": "fabricIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_materialFace : int",
+              "name": "_materialFace",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "float",
+          "occurrences": [
+            {
+              "signature_raw": "def GetReflectionRoughness(_colorwayIndex : int, fabricIndex : int, _materialFace : int) -> float",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Get reflection roughness value\n@param _colorwayIndex: index of colorway\n@param _fabricIndex: the target fabric index in the object browser\n@param _materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\"\n@return reflection roughness value\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 6084,
+                  "block": 537
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 6453,
+                  "block": 537,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetReflectionRoughness(unsigned int _colorwayIndex, int fabricIndex, int _materialFace)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Get reflection roughness value\n/// @param _colorwayIndex: index of colorway\n/// @param _fabricIndex: the target fabric index in the object browser\n/// @param _materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\"\n/// @return reflection roughness value",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 6096,
+                    "block": 538
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 6465,
+                    "block": 538,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _colorwayIndex: index of colorway",
+            "@param _fabricIndex: the target fabric index in the object browser",
+            "@param _materialFace: the target material index in the property editor. 0: \"Front\", 1: \"Back\", 2: \"Side\""
+          ],
+          "return_docs_raw": [
+            "@return reflection roughness value"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "fabric_api.GetRoughnessMapImageFilePath",
+      "qualified_name": "fabric_api.GetRoughnessMapImageFilePath",
+      "module": "fabric_api",
+      "symbol": "GetRoughnessMapImageFilePath",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "fabric_api.GetRoughnessMapImageFilePath#8d07e16c87d1b463",
+          "signature_normalized": "def GetRoughnessMapImageFilePath() -> str",
+          "signature_raw": "def GetRoughnessMapImageFilePath() -> str",
+          "parameters": [],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetRoughnessMapImageFilePath() -> str",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Get roughness map image file path of current selected fabric\n@return image file path string\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 6731,
+                  "block": 591
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 7127,
+                  "block": 591,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetRoughnessMapImageFilePath()",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Get roughness map image file path of current selected fabric\n/// @return image file path string",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 6740,
+                    "block": 592
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 7136,
+                    "block": 592,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return image file path string"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "fabric_api.GetRoughnessMapImageFilePath#39a34121199966be",
+          "signature_normalized": "def GetRoughnessMapImageFilePath(_fabricIndex : int) -> str",
+          "signature_raw": "def GetRoughnessMapImageFilePath(_fabricIndex : int) -> str",
+          "parameters": [
+            {
+              "raw": "_fabricIndex : int",
+              "name": "_fabricIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetRoughnessMapImageFilePath(_fabricIndex : int) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Get roughness map image file path of specified fabric\n@param _fabricIndex: the target fabric index in the object browser\n@return image file path string\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 7059,
+                  "block": 623
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 7471,
+                  "block": 623,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetRoughnessMapImageFilePath(int _fabricIndex)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Get roughness map image file path of specified fabric\n/// @param _fabricIndex: the target fabric index in the object browser\n/// @return image file path string",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 7069,
+                    "block": 624
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 7481,
+                    "block": 624,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _fabricIndex: the target fabric index in the object browser"
+          ],
+          "return_docs_raw": [
+            "@return image file path string"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "fabric_api.GetRoughnessMapImageFilePath#7c4f80d0636fad85",
+          "signature_normalized": "def GetRoughnessMapImageFilePath(_colorwayIndex : int, _fabricIndex : int) -> str",
+          "signature_raw": "def GetRoughnessMapImageFilePath(_colorwayIndex : int, _fabricIndex : int) -> str",
+          "parameters": [
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_fabricIndex : int",
+              "name": "_fabricIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetRoughnessMapImageFilePath(_colorwayIndex : int, _fabricIndex : int) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Get roughness map image file path of specified fabric in colorway\n@param _colorwayIndex: target colorway index in the Colorway Editor\n@param _fabricIndex: the target fabric index in the Colorway Editor\n@return image file path string\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 7080,
+                  "block": 625
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 7493,
+                  "block": 625,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetRoughnessMapImageFilePath(int _colorwayIndex, int _fabricIndex)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Get roughness map image file path of specified fabric in colorway\n/// @param _colorwayIndex: target colorway index in the Colorway Editor\n/// @param _fabricIndex: the target fabric index in the Colorway Editor\n/// @return image file path string",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 7091,
+                    "block": 626
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 7504,
+                    "block": 626,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _colorwayIndex: target colorway index in the Colorway Editor",
+            "@param _fabricIndex: the target fabric index in the Colorway Editor"
+          ],
+          "return_docs_raw": [
+            "@return image file path string"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "fabric_api.GetRoughnessMapImageFilePath#5f9c8d2a7393810e",
+          "signature_normalized": "def GetRoughnessMapImageFilePath(_colorwayIndex : int, _fabricIndex : int, _styleChipIndex : int, _materialFace : int) -> str",
+          "signature_raw": "def GetRoughnessMapImageFilePath(_colorwayIndex : int, _fabricIndex : int, _styleChipIndex : int, _materialFace : int) -> str",
+          "parameters": [
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_fabricIndex : int",
+              "name": "_fabricIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_styleChipIndex : int",
+              "name": "_styleChipIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_materialFace : int",
+              "name": "_materialFace",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetRoughnessMapImageFilePath(_colorwayIndex : int, _fabricIndex : int, _styleChipIndex : int, _materialFace : int) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Get roughness map image file path of specified fabric and material face in colorway\n@param _colorwayIndex: target colorway index in the Colorway Editor\n@param _fabricIndex: the target fabric index in the Colorway Editor\n@param _styleChipIndex: target style chip index used to resolve exact linked fabric/colorway applicable if _colorwayIndex = -1, otherwise can be ignored\n@param _materialFace: target material face (0: Front, 1: Back, 2: Side)\n@return image file path string. Returns empty string if parameters are invalid.\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 8347,
+                  "block": 735
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 8815,
+                  "block": 735,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetRoughnessMapImageFilePath(int _colorwayIndex, int _fabricIndex, int _styleChipIndex, int _materialFace)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Get roughness map image file path of specified fabric and material face in colorway\n/// @param _colorwayIndex: target colorway index in the Colorway Editor\n/// @param _fabricIndex: the target fabric index in the Colorway Editor\n/// @param _styleChipIndex: target style chip index used to resolve exact linked fabric/colorway applicable if _colorwayIndex = -1, otherwise can be ignored\n/// @param _materialFace: target material face (0: Front, 1: Back, 2: Side)\n/// @return image file path string. Returns empty string if parameters are invalid.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 8360,
+                    "block": 736
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 8828,
+                    "block": 736,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _colorwayIndex: target colorway index in the Colorway Editor",
+            "@param _fabricIndex: the target fabric index in the Colorway Editor",
+            "@param _styleChipIndex: target style chip index used to resolve exact linked fabric/colorway applicable if _colorwayIndex = -1, otherwise can be ignored",
+            "@param _materialFace: target material face (0: Front, 1: Back, 2: Side)"
+          ],
+          "return_docs_raw": [
+            "@return image file path string. Returns empty string if parameters are invalid."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "fabric_api.GetRoughnessMapImageFilePathW",
+      "qualified_name": "fabric_api.GetRoughnessMapImageFilePathW",
+      "module": "fabric_api",
+      "symbol": "GetRoughnessMapImageFilePathW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "fabric_api.GetRoughnessMapImageFilePathW#ccdff3335feb6f13",
+          "signature_normalized": "def GetRoughnessMapImageFilePathW() -> str",
+          "signature_raw": "def GetRoughnessMapImageFilePathW() -> str",
+          "parameters": [],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetRoughnessMapImageFilePathW() -> str",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Get roughness map image file path of current selected fabric\n@return image file path wstring\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 6845,
+                  "block": 603
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 7247,
+                  "block": 603,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetRoughnessMapImageFilePathW()",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Get roughness map image file path of current selected fabric\n/// @return image file path wstring",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 6854,
+                    "block": 604
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 7256,
+                    "block": 604,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return image file path wstring"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "fabric_api.GetRoughnessMapImageFilePathW#062bfb7078f7466c",
+          "signature_normalized": "def GetRoughnessMapImageFilePathW(_fabricIndex : int) -> str",
+          "signature_raw": "def GetRoughnessMapImageFilePathW(_fabricIndex : int) -> str",
+          "parameters": [
+            {
+              "raw": "_fabricIndex : int",
+              "name": "_fabricIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetRoughnessMapImageFilePathW(_fabricIndex : int) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Get roughness map image file path of specified fabric\n@param _fabricIndex: the target fabric index in the object browser\n@return image file path wstring\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 7323,
+                  "block": 647
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 7747,
+                  "block": 647,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetRoughnessMapImageFilePathW(int _fabricIndex)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Get roughness map image file path of specified fabric\n/// @param _fabricIndex: the target fabric index in the object browser\n/// @return image file path wstring",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 7333,
+                    "block": 648
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 7757,
+                    "block": 648,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _fabricIndex: the target fabric index in the object browser"
+          ],
+          "return_docs_raw": [
+            "@return image file path wstring"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "fabric_api.GetRoughnessMapImageFilePathW#4921a7ec5d6a38a0",
+          "signature_normalized": "def GetRoughnessMapImageFilePathW(_colorwayIndex : int, _fabricIndex : int) -> str",
+          "signature_raw": "def GetRoughnessMapImageFilePathW(_colorwayIndex : int, _fabricIndex : int) -> str",
+          "parameters": [
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_fabricIndex : int",
+              "name": "_fabricIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetRoughnessMapImageFilePathW(_colorwayIndex : int, _fabricIndex : int) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Get roughness map image file path of specified fabric in colorway\n@param _colorwayIndex: target colorway index in the Colorway Editor\n@param _fabricIndex: the target fabric index in the Colorway Editor\n@return image file path wstring\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 7344,
+                  "block": 649
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 7769,
+                  "block": 649,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetRoughnessMapImageFilePathW(int _colorwayIndex, int _fabricIndex)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Get roughness map image file path of specified fabric in colorway\n/// @param _colorwayIndex: target colorway index in the Colorway Editor\n/// @param _fabricIndex: the target fabric index in the Colorway Editor\n/// @return image file path wstring",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 7355,
+                    "block": 650
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 7780,
+                    "block": 650,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _colorwayIndex: target colorway index in the Colorway Editor",
+            "@param _fabricIndex: the target fabric index in the Colorway Editor"
+          ],
+          "return_docs_raw": [
+            "@return image file path wstring"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "fabric_api.GetRoughnessType",
+      "qualified_name": "fabric_api.GetRoughnessType",
+      "module": "fabric_api",
+      "symbol": "GetRoughnessType",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "fabric_api.GetRoughnessType#115394153a85e105",
+          "signature_normalized": "def GetRoughnessType(_index : int, _materialFace : int) -> int",
+          "signature_raw": "def GetRoughnessType(_index : int, _materialFace : int) -> int",
+          "parameters": [
+            {
+              "raw": "_index : int",
+              "name": "_index",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_materialFace : int",
+              "name": "_materialFace",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "def GetRoughnessType(_index : int, _materialFace : int) -> int",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Get Material RoughnessType\n@param _index: Fabric Index, _materialFace : Fabric Material Face Type (0 : Front , 1 : BACK , 2 : SIDE)\n@return Return fabric's material Roughness Type. ( 0 : Intensity, 1 : Map )\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 5551,
+                  "block": 491
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 5897,
+                  "block": 491,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "int GetRoughnessType(int _index, int _materialFace)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Get Material RoughnessType\n/// @param _index: Fabric Index, _materialFace : Fabric Material Face Type (0 : Front , 1 : BACK , 2 : SIDE)\n/// @return Return fabric's material Roughness Type. ( 0 : Intensity, 1 : Map )",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 5561,
+                    "block": 492
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 5907,
+                    "block": 492,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _index: Fabric Index, _materialFace : Fabric Material Face Type (0 : Front , 1 : BACK , 2 : SIDE)"
+          ],
+          "return_docs_raw": [
+            "@return Return fabric's material Roughness Type. ( 0 : Intensity, 1 : Map )"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "fabric_api.GetRoughnessType#b3e8dcc66e647fbb",
+          "signature_normalized": "def GetRoughnessType(_colorwayIndex : int, _index : int, _materialFace : int) -> int",
+          "signature_raw": "def GetRoughnessType(_colorwayIndex : int, _index : int, _materialFace : int) -> int",
+          "parameters": [
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_index : int",
+              "name": "_index",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_materialFace : int",
+              "name": "_materialFace",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "def GetRoughnessType(_colorwayIndex : int, _index : int, _materialFace : int) -> int",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Get Material RoughnessType\n@param _colorwayIndex: target colorway index in the Colorway Editor\n@param _index: Fabric Index, _materialFace : Fabric Material Face Type (0 : Front , 1 : BACK , 2 : SIDE)\n@return Return fabric's material Roughness Type. ( 0 : Intensity, 1 : Map )\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 5572,
+                  "block": 493
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 5919,
+                  "block": 493,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "int GetRoughnessType(unsigned int _colorwayIndex, int _index, int _materialFace)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Get Material RoughnessType\n/// @param _colorwayIndex: target colorway index in the Colorway Editor\n/// @param _index: Fabric Index, _materialFace : Fabric Material Face Type (0 : Front , 1 : BACK , 2 : SIDE)\n/// @return Return fabric's material Roughness Type. ( 0 : Intensity, 1 : Map )",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 5583,
+                    "block": 494
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 5930,
+                    "block": 494,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _colorwayIndex: target colorway index in the Colorway Editor",
+            "@param _index: Fabric Index, _materialFace : Fabric Material Face Type (0 : Front , 1 : BACK , 2 : SIDE)"
+          ],
+          "return_docs_raw": [
+            "@return Return fabric's material Roughness Type. ( 0 : Intensity, 1 : Map )"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "fabric_api.GetRoughnessValueIntensity",
+      "qualified_name": "fabric_api.GetRoughnessValueIntensity",
+      "module": "fabric_api",
+      "symbol": "GetRoughnessValueIntensity",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "fabric_api.GetRoughnessValueIntensity#e74b3b0088ea0567",
+          "signature_normalized": "def GetRoughnessValueIntensity(_index : int, _face : int) -> int",
+          "signature_raw": "def GetRoughnessValueIntensity(_index : int, _face : int) -> int",
+          "parameters": [
+            {
+              "raw": "_index : int",
+              "name": "_index",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_face : int",
+              "name": "_face",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "def GetRoughnessValueIntensity(_index : int, _face : int) -> int",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Get fabric material's Roughness Intensity values.\n@param _index: Fabric Index, _face : target material Face Type (0 : Front , 1 : BACK , 2 : SIDE)\n@return Fabric material's Roughness Intensity values.\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 5639,
+                  "block": 499
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 5989,
+                  "block": 499,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "int GetRoughnessValueIntensity(int _index, int _face)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Get fabric material's Roughness Intensity values.\n/// @param _index: Fabric Index, _face : target material Face Type (0 : Front , 1 : BACK , 2 : SIDE)\n/// @return Fabric material's Roughness Intensity values.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 5649,
+                    "block": 500
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 5999,
+                    "block": 500,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _index: Fabric Index, _face : target material Face Type (0 : Front , 1 : BACK , 2 : SIDE)"
+          ],
+          "return_docs_raw": [
+            "@return Fabric material's Roughness Intensity values."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "fabric_api.GetRoughnessValueIntensity#c0b90281426869ec",
+          "signature_normalized": "def GetRoughnessValueIntensity(_colorwayIndex : int, _index : int, _face : int) -> int",
+          "signature_raw": "def GetRoughnessValueIntensity(_colorwayIndex : int, _index : int, _face : int) -> int",
+          "parameters": [
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_index : int",
+              "name": "_index",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_face : int",
+              "name": "_face",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "def GetRoughnessValueIntensity(_colorwayIndex : int, _index : int, _face : int) -> int",
+              "documentation_raw": "\"\"\"\n@ingroup FABRIC_API\n@brief Get fabric material's Roughness Intensity values.\n@param _colorwayIndex: target colorway index in the Colorway Editor\n@param _index: Fabric Index, _face : target material Face Type (0 : Front , 1 : BACK , 2 : SIDE)\n@return Fabric material's Roughness Intensity values.\n\"\"\"",
+              "section": "FABRIC_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 5660,
+                  "block": 501
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 6011,
+                  "block": 501,
+                  "anchor": "fabric-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "int GetRoughnessValueIntensity(unsigned int _colorwayIndex, int _index, int _face)",
+                "documentation_raw": "/// @ingroup FABRIC_API\n/// @brief Get fabric material's Roughness Intensity values.\n/// @param _colorwayIndex: target colorway index in the Colorway Editor\n/// @param _index: Fabric Index, _face : target material Face Type (0 : Front , 1 : BACK , 2 : SIDE)\n/// @return Fabric material's Roughness Intensity values.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 5671,
+                    "block": 502
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 6022,
+                    "block": 502,
+                    "anchor": "fabric-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _colorwayIndex: target colorway index in the Colorway Editor",
+            "@param _index: Fabric Index, _face : target material Face Type (0 : Front , 1 : BACK , 2 : SIDE)"
+          ],
+          "return_docs_raw": [
+            "@return Fabric material's Roughness Intensity values."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    }
+  ]
+}

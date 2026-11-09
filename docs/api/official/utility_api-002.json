@@ -1,0 +1,3547 @@
+{
+  "kind": "methods",
+  "records": [
+    {
+      "id": "utility_api.DeleteUserCustomLibraryFolder",
+      "qualified_name": "utility_api.DeleteUserCustomLibraryFolder",
+      "module": "utility_api",
+      "symbol": "DeleteUserCustomLibraryFolder",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.DeleteUserCustomLibraryFolder#c4e6ca8e423be14b",
+          "signature_normalized": "def DeleteUserCustomLibraryFolder(libraryIndex : int, index : int) -> bool",
+          "signature_raw": "def DeleteUserCustomLibraryFolder(libraryIndex : int, index : int) -> bool",
+          "parameters": [
+            {
+              "raw": "libraryIndex : int",
+              "name": "libraryIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "index : int",
+              "name": "index",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def DeleteUserCustomLibraryFolder(libraryIndex : int, index : int) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Delete a folder from a User Custom Library.\n@param libraryIndex: 0-based index among User Custom Library tabs in current visual order.\n@param index: 0-based index among the target library's root folders.\n@return true on success, false on failure.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 17278,
+                  "block": 1491
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 18115,
+                  "block": 1491,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "DeleteUserCustomLibraryFolder(int libraryIndex, int index)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Delete a folder from a User Custom Library.\n/// @param libraryIndex: 0-based index among User Custom Library tabs in current visual order.\n/// @param index: 0-based index among the target library's root folders.\n/// @return true on success, false on failure.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 17289,
+                    "block": 1492
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 18126,
+                    "block": 1492,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param libraryIndex: 0-based index among User Custom Library tabs in current visual order.",
+            "@param index: 0-based index among the target library's root folders."
+          ],
+          "return_docs_raw": [
+            "@return true on success, false on failure."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.DeleteWidgets",
+      "qualified_name": "utility_api.DeleteWidgets",
+      "module": "utility_api",
+      "symbol": "DeleteWidgets",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.DeleteWidgets#2c7d87d65c465133",
+          "signature_normalized": "def DeleteWidgets() -> None",
+          "signature_raw": "def DeleteWidgets() -> None",
+          "parameters": [],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def DeleteWidgets() -> None",
+              "documentation_raw": "\"\"\"\n@brief          Removes and deletes all widgets that were registered using the RegisterWidget function.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 23262,
+                  "block": 2027
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 24365,
+                  "block": 2027,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "void DeleteWidgets()",
+                "documentation_raw": "/// @brief              Removes and deletes all widgets that were registered using the RegisterWidget function.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 23269,
+                    "block": 2028
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 24372,
+                    "block": 2028,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.DisplayMessageBox",
+      "qualified_name": "utility_api.DisplayMessageBox",
+      "module": "utility_api",
+      "symbol": "DisplayMessageBox",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.DisplayMessageBox#8f1ffb6f65fc43d3",
+          "signature_normalized": "def DisplayMessageBox(str : str) -> None",
+          "signature_raw": "def DisplayMessageBox(str : str) -> None",
+          "parameters": [
+            {
+              "raw": "str : str",
+              "name": "str",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def DisplayMessageBox(str : str) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Show a message with using the DialogBox implemented in CLO software\n@param str: message\n@return Display a message box to show input string on CLO. This can be used for debugging.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 16113,
+                  "block": 1389
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 16899,
+                  "block": 1389,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "DisplayMessageBox(string str)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Show a message with using the DialogBox implemented in CLO software\n/// @param str: message\n/// @return Display a message box to show input string on CLO. This can be used for debugging.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 16123,
+                    "block": 1390
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 16909,
+                    "block": 1390,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param str: message"
+          ],
+          "return_docs_raw": [
+            "@return Display a message box to show input string on CLO. This can be used for debugging."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.DisplayMessageBoxW",
+      "qualified_name": "utility_api.DisplayMessageBoxW",
+      "module": "utility_api",
+      "symbol": "DisplayMessageBoxW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.DisplayMessageBoxW#c06cbfe5298ea30d",
+          "signature_normalized": "def DisplayMessageBoxW(str : str) -> None",
+          "signature_raw": "def DisplayMessageBoxW(str : str) -> None",
+          "parameters": [
+            {
+              "raw": "str : str",
+              "name": "str",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def DisplayMessageBoxW(str : str) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Show a message with using the DialogBox implemented in CLO software\n@param str: message\n@return Display a message box to show input string on CLO. This can be used for debugging.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 16134,
+                  "block": 1391
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 16921,
+                  "block": 1391,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "DisplayMessageBoxW(wstring str)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Show a message with using the DialogBox implemented in CLO software\n/// @param str: message\n/// @return Display a message box to show input string on CLO. This can be used for debugging.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 16144,
+                    "block": 1392
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 16931,
+                    "block": 1392,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param str: message"
+          ],
+          "return_docs_raw": [
+            "@return Display a message box to show input string on CLO. This can be used for debugging."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.DrawInternalLinesAroundGraphic",
+      "qualified_name": "utility_api.DrawInternalLinesAroundGraphic",
+      "module": "utility_api",
+      "symbol": "DrawInternalLinesAroundGraphic",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.DrawInternalLinesAroundGraphic#118eb32fad6c4aa2",
+          "signature_normalized": "def DrawInternalLinesAroundGraphic(_patternIndex : int, _placementPoints : CloApiGraphicPlacementPoints) -> CloApiInternalShape",
+          "signature_raw": "def DrawInternalLinesAroundGraphic(_patternIndex : int, _placementPoints : CloApiGraphicPlacementPoints) -> CloApiInternalShape",
+          "parameters": [
+            {
+              "raw": "_patternIndex : int",
+              "name": "_patternIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_placementPoints : CloApiGraphicPlacementPoints",
+              "name": "_placementPoints",
+              "annotation_raw": "CloApiGraphicPlacementPoints"
+            }
+          ],
+          "return_raw": "CloApiInternalShape",
+          "occurrences": [
+            {
+              "signature_raw": "def DrawInternalLinesAroundGraphic(_patternIndex : int, _placementPoints : CloApiGraphicPlacementPoints) -> CloApiInternalShape",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Creates a closed internal shape tracing the boundary of a placed graphic, connecting\n_placementPoints' corners in order with straight internal lines (any polygon, not just rectangles).\n@param _patternIndex: The index of the pattern piece to draw the internal lines on.\n@param _placementPoints: Corners describing the boundary, in pattern-local 2D coordinates (e.g. from\nGetGraphicStylePlacementPoints with _is2D == true). At least 3 corners are required.\n@return The created boundary as GetInternalShapeInformation reports it — same name space, so the\nreturned name can be passed straight to PlaceGraphicOnInternalShape — with its lines and their\nintersection points in pattern-local 2D coordinates. If the new boundary touches existing\ninternal lines they are grouped into one shape, so the result can span more than the input\ncorners. Empty CloApiInternalShape on failure.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 25245,
+                  "block": 2185
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 26427,
+                  "block": 2185,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "DrawInternalLinesAroundGraphic(int _patternIndex, const Marvelous::CloApiGraphicPlacementPoints& _placementPoints)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Creates a closed internal shape tracing the boundary of a placed graphic, connecting\n/// _placementPoints' corners in order with straight internal lines (any polygon, not just rectangles).\n/// @param _patternIndex: The index of the pattern piece to draw the internal lines on.\n/// @param _placementPoints: Corners describing the boundary, in pattern-local 2D coordinates (e.g. from\n/// GetGraphicStylePlacementPoints with _is2D == true). At least 3 corners are required.\n/// @return The created boundary as GetInternalShapeInformation reports it — same name space, so the\n/// returned name can be passed straight to PlaceGraphicOnInternalShape — with its lines and their\n/// intersection points in pattern-local 2D coordinates. If the new boundary touches existing\n/// internal lines they are grouped into one shape, so the result can span more than the input\n/// corners. Empty CloApiInternalShape on failure.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 25262,
+                    "block": 2186
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 26444,
+                    "block": 2186,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "CloApiGraphicPlacementPoints",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:CloApiGraphicPlacementPoints"
+            },
+            {
+              "name": "CloApiInternalShape",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:CloApiInternalShape"
+            },
+            {
+              "name": "CloApiInternalShape",
+              "basis": "documentation_mention",
+              "status": "resolved",
+              "type_id": "type:CloApiInternalShape"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param _patternIndex: The index of the pattern piece to draw the internal lines on.",
+            "@param _placementPoints: Corners describing the boundary, in pattern-local 2D coordinates (e.g. from"
+          ],
+          "return_docs_raw": [
+            "@return The created boundary as GetInternalShapeInformation reports it — same name space, so the"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.ExportColorwayEditorImage",
+      "qualified_name": "utility_api.ExportColorwayEditorImage",
+      "module": "utility_api",
+      "symbol": "ExportColorwayEditorImage",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.ExportColorwayEditorImage#e5cd8716e736510a",
+          "signature_normalized": "def ExportColorwayEditorImage(_filePath : str, _scale : int) -> bool",
+          "signature_raw": "def ExportColorwayEditorImage(_filePath : str, _scale : int) -> bool",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_scale : int",
+              "name": "_scale",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportColorwayEditorImage(_filePath : str, _scale : int) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Exprot Colorway Editor as Image.\n@param _filePath: Image path to save\n_scale: Image scale (1-4)\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 23355,
+                  "block": 2037
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 24463,
+                  "block": 2037,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportColorwayEditorImage(const std::string _trimStyleName, int _scale)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Exprot Colorway Editor as Image.\n/// @param _filePath: Image path to save\n/// _scale: Image scale (1-4)",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 23365,
+                    "block": 2038
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 24473,
+                    "block": 2038,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath: Image path to save"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.FastenButtons",
+      "qualified_name": "utility_api.FastenButtons",
+      "module": "utility_api",
+      "symbol": "FastenButtons",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.FastenButtons#668fff58007f8269",
+          "signature_normalized": "def FastenButtons(_maxDistance : float) -> int",
+          "signature_raw": "def FastenButtons(_maxDistance : float) -> int",
+          "parameters": [
+            {
+              "raw": "_maxDistance : float",
+              "name": "_maxDistance",
+              "annotation_raw": "float"
+            }
+          ],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "def FastenButtons(_maxDistance : float) -> int",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Fasten button heads into buttonholes: each unfastened buttonhole is paired with the nearest unfastened button head (by 3D distance) and a fastener is created, which also pulls the head onto the hole. Buttons already fastened are left untouched.\n@param _maxDistance: Maximum 3D distance (in CLO units) allowed between a head and a hole to pair them. Pass 0 or a negative value for no distance limit.\n@return The number of head/hole pairs fastened.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 23161,
+                  "block": 2017
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 24259,
+                  "block": 2017,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "FastenButtons(float _maxDistance)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Fasten button heads into buttonholes: each unfastened buttonhole is paired with the nearest unfastened button head (by 3D distance) and a fastener is created, which also pulls the head onto the hole. Buttons already fastened are left untouched.\n/// @param _maxDistance: Maximum 3D distance (in CLO units) allowed between a head and a hole to pair them. Pass 0 or a negative value for no distance limit.\n/// @return The number of head/hole pairs fastened.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 23171,
+                    "block": 2018
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 24269,
+                    "block": 2018,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _maxDistance: Maximum 3D distance (in CLO units) allowed between a head and a hole to pair them. Pass 0 or a negative value for no distance limit."
+          ],
+          "return_docs_raw": [
+            "@return The number of head/hole pairs fastened."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.FitAllUV",
+      "qualified_name": "utility_api.FitAllUV",
+      "module": "utility_api",
+      "symbol": "FitAllUV",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.FitAllUV#defa25a4bd793f00",
+          "signature_normalized": "def FitAllUV(x_coordinate : int, y_coordinate : int, _bIsRelative : bool, _marginValue : float) -> None",
+          "signature_raw": "def FitAllUV(x_coordinate : int, y_coordinate : int, _bIsRelative : bool, _marginValue : float) -> None",
+          "parameters": [
+            {
+              "raw": "x_coordinate : int",
+              "name": "x_coordinate",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "y_coordinate : int",
+              "name": "y_coordinate",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_bIsRelative : bool",
+              "name": "_bIsRelative",
+              "annotation_raw": "bool"
+            },
+            {
+              "raw": "_marginValue : float",
+              "name": "_marginValue",
+              "annotation_raw": "float"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def FitAllUV(x_coordinate : int, y_coordinate : int, _bIsRelative : bool, _marginValue : float) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Fitting patterns in UV editor to given coordinates\n@param x_coordinate: x coordinate value\n@param y_coordinate: y coordinate value\n@param _bIsRelative: true for relative, false for Absolute\n@param _marginValue: margin value\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 21773,
+                  "block": 1901
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 22813,
+                  "block": 1901,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "FitAllUV(int x_coordinate, int y_coordinate, bool _bIsRelative, float _marginValue)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Fitting patterns in UV editor to given coordinates\n/// @param x_coordinate: x coordinate value\n/// @param y_coordinate: y coordinate value\n/// @param _bIsRelative: true for relative, false for Absolute\n/// @param _marginValue: margin value",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 21785,
+                    "block": 1902
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 22825,
+                    "block": 1902,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param x_coordinate: x coordinate value",
+            "@param y_coordinate: y coordinate value",
+            "@param _bIsRelative: true for relative, false for Absolute",
+            "@param _marginValue: margin value"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GenerateZippersFromObj",
+      "qualified_name": "utility_api.GenerateZippersFromObj",
+      "module": "utility_api",
+      "symbol": "GenerateZippersFromObj",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GenerateZippersFromObj#5a6a4aa7da911e40",
+          "signature_normalized": "def GenerateZippersFromObj(_outputFilePathWithExt : str, _options : ObjRegisterOptions, _zipperIndex : int) -> bool",
+          "signature_raw": "def GenerateZippersFromObj(_outputFilePathWithExt : str, _options : ObjRegisterOptions, _zipperIndex : int) -> bool",
+          "parameters": [
+            {
+              "raw": "_outputFilePathWithExt : str",
+              "name": "_outputFilePathWithExt",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_options : ObjRegisterOptions",
+              "name": "_options",
+              "annotation_raw": "ObjRegisterOptions"
+            },
+            {
+              "raw": "_zipperIndex : int",
+              "name": "_zipperIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "bool",
+          "occurrences": [
+            {
+              "signature_raw": "def GenerateZippersFromObj(_outputFilePathWithExt : str, _options : ObjRegisterOptions, _zipperIndex : int) -> bool",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Generates a zipper part asset file from one or two OBJ files, mirroring the full\n\"Register OBJ\" dialog (DialogRegisterZipperObject) without any UI interaction.\nSupports all 7 object types:\n- 0: ZIPPER_OBJECT_SLIDER                → .zsl (single OBJ, single shape)\n- 1: ZIPPER_OBJECT_PULLER                → .zpu (single OBJ, single shape)\n- 2: ZIPPER_OBJECT_SLIDER_PULLER         → .zss (single OBJ, dual shape; mesh auto-assignment fallback)\n- 3: ZIPPER_OBJECT_TEETH                 → .zth (single OBJ, fixed internal axes)\n- 4: ZIPPER_OBJECT_TOP_STOPPER           → .zst (dual OBJ, dual shape)\n- 5: ZIPPER_OBJECT_BOTTOM_OPEN_STOPPER   → .zst (dual OBJ, dual shape)\n- 6: ZIPPER_OBJECT_BOTTOM_CLOSED_STOPPER → .zst (single OBJ, single shape)\nFor ZIPPER_OBJECT_SLIDER_PULLER, mesh assignment follows this fallback hierarchy:\n1. User Explicit: OBJ group names listed in ObjRegisterOptions::sliderMeshNames / pullerMeshNames.\n2. CLO Default: mesh names containing \"slider\" or \"puller\" (case-insensitive).\n3. Dimensional: the mesh with the larger bounding-box extent is classified as Puller.\n4. Alphabetical: sorted names; index 0 = Slider, index 1 = Puller.\nNOTE: ZIPPER_OBJECT_TEETH ignores user-defined axis settings (axes are fixed internally).\n@param _outputFilePathWithExt: Full output file path including the extension matching the object type.\n@param _options: Full set of registration options (see ObjRegisterOptions).\n@param _zipperIndex: Index of the zipper style in the Object Browser to assign the registered file to after saving. -1 = do not assign.\n@return true on success; false if validation fails, OBJ loading fails, or saving fails.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 24846,
+                  "block": 2159
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 26015,
+                  "block": 2159,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GenerateZippersFromObj(const std::string& _outputFilePathWithExt, const Marvelous::ObjRegisterOptions& _options)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Generates a zipper part asset file from one or two OBJ files, mirroring the full\n/// \"Register OBJ\" dialog (DialogRegisterZipperObject) without any UI interaction.\n/// Supports all 7 object types:\n/// - 0: ZIPPER_OBJECT_SLIDER                → .zsl (single OBJ, single shape)\n/// - 1: ZIPPER_OBJECT_PULLER                → .zpu (single OBJ, single shape)\n/// - 2: ZIPPER_OBJECT_SLIDER_PULLER         → .zss (single OBJ, dual shape; mesh auto-assignment fallback)\n/// - 3: ZIPPER_OBJECT_TEETH                 → .zth (single OBJ, fixed internal axes)\n/// - 4: ZIPPER_OBJECT_TOP_STOPPER           → .zst (dual OBJ, dual shape)\n/// - 5: ZIPPER_OBJECT_BOTTOM_OPEN_STOPPER   → .zst (dual OBJ, dual shape)\n/// - 6: ZIPPER_OBJECT_BOTTOM_CLOSED_STOPPER → .zst (single OBJ, single shape)\n/// For ZIPPER_OBJECT_SLIDER_PULLER, mesh assignment follows this fallback hierarchy:\n/// 1. User Explicit: OBJ group names listed in ObjRegisterOptions::sliderMeshNames / pullerMeshNames.\n/// 2. CLO Default: mesh names containing \"slider\" or \"puller\" (case-insensitive).\n/// 3. Dimensional: the mesh with the larger bounding-box extent is classified as Puller.\n/// 4. Alphabetical: sorted names; index 0 = Slider, index 1 = Puller.\n/// NOTE: ZIPPER_OBJECT_TEETH ignores user-defined axis settings (axes are fixed internally).\n/// @param _outputFilePathWithExt: Full output file path including the extension matching the object type.\n/// @param _options: Full set of registration options (see ObjRegisterOptions).\n/// @param _zipperIndex: Index of the zipper style in the Object Browser to assign the registered file to after saving. -1 = do not assign.\n/// @return true on success; false if validation fails, OBJ loading fails, or saving fails.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 24873,
+                    "block": 2160
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 26042,
+                    "block": 2160,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "ObjRegisterOptions",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:ObjRegisterOptions"
+            },
+            {
+              "name": "ObjRegisterOptions",
+              "basis": "documentation_mention",
+              "status": "resolved",
+              "type_id": "type:ObjRegisterOptions"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param _outputFilePathWithExt: Full output file path including the extension matching the object type.",
+            "@param _options: Full set of registration options (see ObjRegisterOptions).",
+            "@param _zipperIndex: Index of the zipper style in the Object Browser to assign the registered file to after saving. -1 = do not assign."
+          ],
+          "return_docs_raw": [
+            "@return true on success; false if validation fails, OBJ loading fails, or saving fails."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.Get3DGarmentRenderingStyle",
+      "qualified_name": "utility_api.Get3DGarmentRenderingStyle",
+      "module": "utility_api",
+      "symbol": "Get3DGarmentRenderingStyle",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.Get3DGarmentRenderingStyle#9cced6852ada98d9",
+          "signature_normalized": "def Get3DGarmentRenderingStyle() -> int",
+          "signature_raw": "def Get3DGarmentRenderingStyle() -> int",
+          "parameters": [],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "def Get3DGarmentRenderingStyle() -> int",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Gets garment surface rending style currently used in the 3D window.\nreturn: _surfaceTextureTypeIndex : 0: textured surface, 1: thick textured surface, 2 : monochrome surface, \n3 : translucent surface, 4 : mesh, 5 : thick textured surface (back), 6 : random color surface. Invalid response : -1. \n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 19812,
+                  "block": 1723
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 20763,
+                  "block": 1723,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "Get3DGarmentRenderingStyle()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Gets garment surface rending style currently used in the 3D window.\n/// return: _surfaceTextureTypeIndex : 0: textured surface, 1: thick textured surface, 2 : monochrome surface, \n/// 3 : translucent surface, 4 : mesh, 5 : thick textured surface (back), 6 : random color surface. Invalid response : -1.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 19822,
+                    "block": 1724
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 20773,
+                    "block": 1724,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetAPIMetaData",
+      "qualified_name": "utility_api.GetAPIMetaData",
+      "module": "utility_api",
+      "symbol": "GetAPIMetaData",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetAPIMetaData#da1ae3a375e3396f",
+          "signature_normalized": "def GetAPIMetaData(filePath : str) -> str",
+          "signature_raw": "def GetAPIMetaData(filePath : str) -> str",
+          "parameters": [
+            {
+              "raw": "filePath : str",
+              "name": "filePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetAPIMetaData(filePath : str) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Get API meta data for the file\n@param filePath: CLO file path\n@return json string for meta data [key - value] list                            \n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 17597,
+                  "block": 1521
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 18449,
+                  "block": 1521,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetAPIMetaData(const string& filePath)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Get API meta data for the file\n/// @param filePath: CLO file path\n/// @return json string for meta data [key - value] list",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 17607,
+                    "block": 1522
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 18459,
+                    "block": 1522,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param filePath: CLO file path"
+          ],
+          "return_docs_raw": [
+            "@return json string for meta data [key - value] list                            "
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetAPIMetaDataW",
+      "qualified_name": "utility_api.GetAPIMetaDataW",
+      "module": "utility_api",
+      "symbol": "GetAPIMetaDataW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetAPIMetaDataW#b5e51f25cd278217",
+          "signature_normalized": "def GetAPIMetaDataW(filePath : str) -> str",
+          "signature_raw": "def GetAPIMetaDataW(filePath : str) -> str",
+          "parameters": [
+            {
+              "raw": "filePath : str",
+              "name": "filePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetAPIMetaDataW(filePath : str) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Get API meta data for the file\n@param filePath: CLO file path\n@return json string for meta data [key - value] list\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 17618,
+                  "block": 1523
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 18471,
+                  "block": 1523,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetAPIMetaDataW(const wstring& filePath)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Get API meta data for the file\n/// @param filePath: CLO file path\n/// @return json string for meta data [key - value] list",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 17628,
+                    "block": 1524
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 18481,
+                    "block": 1524,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param filePath: CLO file path"
+          ],
+          "return_docs_raw": [
+            "@return json string for meta data [key - value] list"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetActiveWorkspaceFileName",
+      "qualified_name": "utility_api.GetActiveWorkspaceFileName",
+      "module": "utility_api",
+      "symbol": "GetActiveWorkspaceFileName",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetActiveWorkspaceFileName#1babef802a87df8f",
+          "signature_normalized": "def GetActiveWorkspaceFileName() -> str",
+          "signature_raw": "def GetActiveWorkspaceFileName() -> str",
+          "parameters": [],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetActiveWorkspaceFileName() -> str",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Get the name of the file currently active in the CLO workspace, of any file type\n@return The active file's name with extension, e.g. \"test.zprj\", \"test.zpac\" or \"test.avt\". Returns \"NULL\" if no file is active.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 16193,
+                  "block": 1397
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 16983,
+                  "block": 1397,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetActiveWorkspaceFileName()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Get the name of the file currently active in the CLO workspace, of any file type\n/// @return The active file's name with extension, e.g. \"test.zprj\", \"test.zpac\" or \"test.avt\". Returns \"NULL\" if no file is active.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 16202,
+                    "block": 1398
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 16992,
+                    "block": 1398,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return The active file's name with extension, e.g. \"test.zprj\", \"test.zpac\" or \"test.avt\". Returns \"NULL\" if no file is active."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetActiveWorkspaceFileNameW",
+      "qualified_name": "utility_api.GetActiveWorkspaceFileNameW",
+      "module": "utility_api",
+      "symbol": "GetActiveWorkspaceFileNameW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetActiveWorkspaceFileNameW#9ac50caa3c678a1f",
+          "signature_normalized": "def GetActiveWorkspaceFileNameW() -> str",
+          "signature_raw": "def GetActiveWorkspaceFileNameW() -> str",
+          "parameters": [],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetActiveWorkspaceFileNameW() -> str",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Get the name of the file currently active in the CLO workspace, of any file type\n@return The active file's name with extension, e.g. \"test.zprj\", \"test.zpac\" or \"test.avt\". Returns \"NULL\" if no file is active.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 16212,
+                  "block": 1399
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 17003,
+                  "block": 1399,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetActiveWorkspaceFileNameW()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Get the name of the file currently active in the CLO workspace, of any file type\n/// @return The active file's name with extension, e.g. \"test.zprj\", \"test.zpac\" or \"test.avt\". Returns \"NULL\" if no file is active.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 16221,
+                    "block": 1400
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 17012,
+                    "block": 1400,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return The active file's name with extension, e.g. \"test.zprj\", \"test.zpac\" or \"test.avt\". Returns \"NULL\" if no file is active."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetAnimationLayerFrameRange",
+      "qualified_name": "utility_api.GetAnimationLayerFrameRange",
+      "module": "utility_api",
+      "symbol": "GetAnimationLayerFrameRange",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetAnimationLayerFrameRange#5a51d8d399af24ae",
+          "signature_normalized": "def GetAnimationLayerFrameRange(_layerIndex : int) -> tuple[double, double]",
+          "signature_raw": "def GetAnimationLayerFrameRange(_layerIndex : int) -> tuple[double, double]",
+          "parameters": [
+            {
+              "raw": "_layerIndex : int",
+              "name": "_layerIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "tuple[double, double]",
+          "occurrences": [
+            {
+              "signature_raw": "def GetAnimationLayerFrameRange(_layerIndex : int) -> tuple[double, double]",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Returns the start and end frame values of the specified animation layer. \n@return A pair containing the start frame (first) and end frame (second) as double values. Returns -FLT_MAX if the value is invalid.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 18733,
+                  "block": 1621
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 19633,
+                  "block": 1621,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetAnimationLayerFrameRange(int _layerIndex)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Returns the start and end frame values of the specified animation layer. \n/// @return A pair containing the start frame (first) and end frame (second) as double values. Returns -FLT_MAX if the value is invalid.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 18742,
+                    "block": 1622
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 19642,
+                    "block": 1622,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return A pair containing the start frame (first) and end frame (second) as double values. Returns -FLT_MAX if the value is invalid."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetAssetIconInCLOFile",
+      "qualified_name": "utility_api.GetAssetIconInCLOFile",
+      "module": "utility_api",
+      "symbol": "GetAssetIconInCLOFile",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetAssetIconInCLOFile#6f1c8fbcdae7b665",
+          "signature_normalized": "def GetAssetIconInCLOFile(filePath : str, fileSize : int) -> char*",
+          "signature_raw": "def GetAssetIconInCLOFile(filePath : str, fileSize : int) -> char*",
+          "parameters": [
+            {
+              "raw": "filePath : str",
+              "name": "filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "fileSize : int",
+              "name": "fileSize",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "char*",
+          "occurrences": [
+            {
+              "signature_raw": "def GetAssetIconInCLOFile(filePath : str, fileSize : int) -> char*",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Get Asset Icon thumbnail file buffer(png type) from the CLO file format(.zprj, .zpac, .zfab, .sst, and so on)\n@param filePath: the source file path to retrieve the thumbnail buffer                          \n@param fileSize: get the size of the thumbnail buffer\n@return thumbnail(png) buffer\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 16791,
+                  "block": 1445
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 17605,
+                  "block": 1445,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetAssetIconInCLOFile(std::string filePath, unsigned int& fileSize)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Get Asset Icon thumbnail file buffer(png type) from the CLO file format(.zprj, .zpac, .zfab, .sst, and so on)\n/// @param filePath: the source file path to retrieve the thumbnail buffer                              \n/// @param fileSize: get the size of the thumbnail buffer\n/// @return thumbnail(png) buffer",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 16802,
+                    "block": 1446
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 17616,
+                    "block": 1446,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param filePath: the source file path to retrieve the thumbnail buffer                          ",
+            "@param fileSize: get the size of the thumbnail buffer"
+          ],
+          "return_docs_raw": [
+            "@return thumbnail(png) buffer"
+          ],
+          "documentation_issues": [
+            "cpp_spelling_in_python_declaration"
+          ],
+          "contract_status": "ambiguous"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetAssetShareRoot",
+      "qualified_name": "utility_api.GetAssetShareRoot",
+      "module": "utility_api",
+      "symbol": "GetAssetShareRoot",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetAssetShareRoot#05a5f5fa1df5cb14",
+          "signature_normalized": "def GetAssetShareRoot() -> str",
+          "signature_raw": "def GetAssetShareRoot() -> str",
+          "parameters": [],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetAssetShareRoot() -> str",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Returns the fallback base folder set by SetAssetShareRoot, or an empty string if none is set.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 25155,
+                  "block": 2177
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 26333,
+                  "block": 2177,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetAssetShareRoot()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Returns the fallback base folder set by SetAssetShareRoot, or an empty string if none is set.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 25163,
+                    "block": 2178
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 26341,
+                    "block": 2178,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetAvatarMeasurements",
+      "qualified_name": "utility_api.GetAvatarMeasurements",
+      "module": "utility_api",
+      "symbol": "GetAvatarMeasurements",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetAvatarMeasurements#169c08c46ebabba4",
+          "signature_normalized": "def GetAvatarMeasurements(_avatarIndex : int) -> list[CloApiAvatarMeasurement]",
+          "signature_raw": "def GetAvatarMeasurements(_avatarIndex : int) -> list[CloApiAvatarMeasurement]",
+          "parameters": [
+            {
+              "raw": "_avatarIndex : int",
+              "name": "_avatarIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "list[CloApiAvatarMeasurement]",
+          "occurrences": [
+            {
+              "signature_raw": "def GetAvatarMeasurements(_avatarIndex : int) -> list[CloApiAvatarMeasurement]",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Gets all measurements (user measures and avatar-default resizing measurements) on the avatar at the given index.\n@param _avatarIndex: Zero-based index of the target avatar.\n@return List of measurements. Empty if no avatar is loaded or the index is out of range.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 25224,
+                  "block": 2183
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 26405,
+                  "block": 2183,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetAvatarMeasurements(int _avatarIndex)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Gets all measurements (user measures and avatar-default resizing measurements) on the avatar at the given index.\n/// @param _avatarIndex: Zero-based index of the target avatar.\n/// @return List of measurements. Empty if no avatar is loaded or the index is out of range.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 25234,
+                    "block": 2184
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 26415,
+                    "block": 2184,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "CloApiAvatarMeasurement",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:CloApiAvatarMeasurement"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param _avatarIndex: Zero-based index of the target avatar."
+          ],
+          "return_docs_raw": [
+            "@return List of measurements. Empty if no avatar is loaded or the index is out of range."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetAvatarOpacityMaps",
+      "qualified_name": "utility_api.GetAvatarOpacityMaps",
+      "module": "utility_api",
+      "symbol": "GetAvatarOpacityMaps",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetAvatarOpacityMaps#6bc795f77355a6b6",
+          "signature_normalized": "def GetAvatarOpacityMaps() -> list[str]",
+          "signature_raw": "def GetAvatarOpacityMaps() -> list[str]",
+          "parameters": [],
+          "return_raw": "list[str]",
+          "occurrences": [
+            {
+              "signature_raw": "def GetAvatarOpacityMaps() -> list[str]",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Get opacity maps Avatar\n@return Output file paths. \n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 22692,
+                  "block": 1975
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 23769,
+                  "block": 1975,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetAvatarOpacityMaps()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Get opacity maps Avatar\n/// @return Output file paths.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 22701,
+                    "block": 1976
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 23778,
+                    "block": 1976,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return Output file paths. "
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetAvatarProperties",
+      "qualified_name": "utility_api.GetAvatarProperties",
+      "module": "utility_api",
+      "symbol": "GetAvatarProperties",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetAvatarProperties#c342afa7fecd16b5",
+          "signature_normalized": "def GetAvatarProperties(_avatarIndex : int) -> map[str, str]",
+          "signature_raw": "def GetAvatarProperties(_avatarIndex : int) -> map[str, str]",
+          "parameters": [
+            {
+              "raw": "_avatarIndex : int",
+              "name": "_avatarIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "map[str, str]",
+          "occurrences": [
+            {
+              "signature_raw": "def GetAvatarProperties(_avatarIndex : int) -> map[str, str]",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Get multiple properties for the avatar at the specified index.\n@param _avatarIndex: The index of the avatar to get properties for.\n@return A map containing property names and their corresponding values for the avatar. Such as {'DivideMesh': 'true/false', 'KineticFriction': '0.050000', 'SkinOffsetMM': '3.000000', 'SoftBodySimulation': 'true/false', 'StaticFriction': '0.800000'}\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 23865,
+                  "block": 2081
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 24995,
+                  "block": 2081,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetAvatarProperties(unsigned int _avatarIndex)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Get multiple properties for the avatar at the specified index.\n/// @param _avatarIndex: The index of the avatar to get properties for.\n/// @return A map containing property names and their corresponding values for the avatar. Such as {'DivideMesh': 'true/false', 'KineticFriction': '0.050000', 'SkinOffsetMM': '3.000000', 'SoftBodySimulation': 'true/false', 'StaticFriction': '0.800000'}",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 23875,
+                    "block": 2082
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 25005,
+                    "block": 2082,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _avatarIndex: The index of the avatar to get properties for."
+          ],
+          "return_docs_raw": [
+            "@return A map containing property names and their corresponding values for the avatar. Such as {'DivideMesh': 'true/false', 'KineticFriction': '0.050000', 'SkinOffsetMM': '3.000000', 'SoftBodySimulation': 'true/false', 'StaticFriction': '0.800000'}"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetAvatarSoftBodyStiffness",
+      "qualified_name": "utility_api.GetAvatarSoftBodyStiffness",
+      "module": "utility_api",
+      "symbol": "GetAvatarSoftBodyStiffness",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetAvatarSoftBodyStiffness#3bb89ad271deda37",
+          "signature_normalized": "def GetAvatarSoftBodyStiffness(_avatarIndex : int) -> float",
+          "signature_raw": "def GetAvatarSoftBodyStiffness(_avatarIndex : int) -> float",
+          "parameters": [
+            {
+              "raw": "_avatarIndex : int",
+              "name": "_avatarIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "float",
+          "occurrences": [
+            {
+              "signature_raw": "def GetAvatarSoftBodyStiffness(_avatarIndex : int) -> float",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Get the stiffness value for soft body simulation of the avatar at the specified\n@param _avatarIndex: The index of the avatar to get the stiffness value for.\n@return The current stiffness value for soft body simulation of the avatar. (5000.0 - 10000.0, 0.0f means no soft body simulation).\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 23907,
+                  "block": 2085
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 25039,
+                  "block": 2085,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetAvatarSoftBodyStiffness(unsigned int _avatarIndex)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Get the stiffness value for soft body simulation of the avatar at the specified\n/// @param _avatarIndex: The index of the avatar to get the stiffness value for.\n/// @return The current stiffness value for soft body simulation of the avatar. (5000.0 - 10000.0, 0.0f means no soft body simulation).",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 23917,
+                    "block": 2086
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 25049,
+                    "block": 2086,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _avatarIndex: The index of the avatar to get the stiffness value for."
+          ],
+          "return_docs_raw": [
+            "@return The current stiffness value for soft body simulation of the avatar. (5000.0 - 10000.0, 0.0f means no soft body simulation)."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetAvatarSubdivisionLevel",
+      "qualified_name": "utility_api.GetAvatarSubdivisionLevel",
+      "module": "utility_api",
+      "symbol": "GetAvatarSubdivisionLevel",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetAvatarSubdivisionLevel#1f3a859fa13e37fe",
+          "signature_normalized": "def GetAvatarSubdivisionLevel(_avatarIndex : int) -> int",
+          "signature_raw": "def GetAvatarSubdivisionLevel(_avatarIndex : int) -> int",
+          "parameters": [
+            {
+              "raw": "_avatarIndex : int",
+              "name": "_avatarIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "def GetAvatarSubdivisionLevel(_avatarIndex : int) -> int",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Get the current subdivision level for avatar smoothing.\n@param _avatarIndex: The index of the avatar to query.\n@return The current subdivision level for avatar smoothing. (1-3, 0 means no subdivision). If 0 to uncheck/unselect DivideMesh.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 23823,
+                  "block": 2077
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 24951,
+                  "block": 2077,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetAvatarSubdivisionLevel(unsigned int _avatarIndex)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Get the current subdivision level for avatar smoothing.\n/// @param _avatarIndex: The index of the avatar to query.\n/// @return The current subdivision level for avatar smoothing. (1-3, 0 means no subdivision). If 0 to uncheck/unselect DivideMesh.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 23833,
+                    "block": 2078
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 24961,
+                    "block": 2078,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _avatarIndex: The index of the avatar to query."
+          ],
+          "return_docs_raw": [
+            "@return The current subdivision level for avatar smoothing. (1-3, 0 means no subdivision). If 0 to uncheck/unselect DivideMesh."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetAvatarTexureMap",
+      "qualified_name": "utility_api.GetAvatarTexureMap",
+      "module": "utility_api",
+      "symbol": "GetAvatarTexureMap",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetAvatarTexureMap#0f4f2fbff018f2ac",
+          "signature_normalized": "def GetAvatarTexureMap(_textureType : int) -> list[str]",
+          "signature_raw": "def GetAvatarTexureMap(_textureType : int) -> list[str]",
+          "parameters": [
+            {
+              "raw": "_textureType : int",
+              "name": "_textureType",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "list[str]",
+          "occurrences": [
+            {
+              "signature_raw": "def GetAvatarTexureMap(_textureType : int) -> list[str]",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Get texture maps for Avatar\n@param _textureType: 0: BaseColorMap, 1: MetalnessMap, 2: NormalMap 3: GlossinessMap 4: AlphaMap 5: DisplacementMap\n@return Output file paths. \n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 22864,
+                  "block": 1991
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 23949,
+                  "block": 1991,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetAvatarTexureMap(int _textureType)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Get texture maps for Avatar\n/// @param _textureType: 0: BaseColorMap, 1: MetalnessMap, 2: NormalMap 3: GlossinessMap 4: AlphaMap 5: DisplacementMap\n/// @return Output file paths.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 22874,
+                    "block": 1992
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 23959,
+                    "block": 1992,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _textureType: 0: BaseColorMap, 1: MetalnessMap, 2: NormalMap 3: GlossinessMap 4: AlphaMap 5: DisplacementMap"
+          ],
+          "return_docs_raw": [
+            "@return Output file paths. "
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetBasePath",
+      "qualified_name": "utility_api.GetBasePath",
+      "module": "utility_api",
+      "symbol": "GetBasePath",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetBasePath#227e9efb8225446b",
+          "signature_normalized": "def GetBasePath() -> str",
+          "signature_raw": "def GetBasePath() -> str",
+          "parameters": [],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetBasePath() -> str",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Returns the base folder currently used for project-relative '//' path resolution, or an\nempty string if none is set.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 25205,
+                  "block": 2181
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 26385,
+                  "block": 2181,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetBasePath()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Returns the base folder currently used for project-relative '//' path resolution, or an\n/// empty string if none is set.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 25214,
+                    "block": 2182
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 26394,
+                    "block": 2182,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetButtonHeadStyleColor",
+      "qualified_name": "utility_api.GetButtonHeadStyleColor",
+      "module": "utility_api",
+      "symbol": "GetButtonHeadStyleColor",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetButtonHeadStyleColor#38ea15bc6c8dc838",
+          "signature_normalized": "def GetButtonHeadStyleColor(_styleIndex : int, _meshIndex : int) -> CloApiRgba",
+          "signature_raw": "def GetButtonHeadStyleColor(_styleIndex : int, _meshIndex : int) -> CloApiRgba",
+          "parameters": [
+            {
+              "raw": "_styleIndex : int",
+              "name": "_styleIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_meshIndex : int",
+              "name": "_meshIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "CloApiRgba",
+          "occurrences": [
+            {
+              "signature_raw": "def GetButtonHeadStyleColor(_styleIndex : int, _meshIndex : int) -> CloApiRgba",
+              "documentation_raw": "\"\"\"\n@brief          Get base color of PBR material from ButtonHead Style\n@param          _styleIndex: ButtonHead Style index on Object Browser to get Color\n@param          _meshIndex: Mesh index to get Color\n0: ButtonHead\n1: Thread\n@return The color value in CloAgiRgba.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 21934,
+                  "block": 1915
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 22981,
+                  "block": 1915,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetButtonHeadStyleColor(int _styleIndex, int _meshIndex)",
+                "documentation_raw": "/// @brief              Get base color of PBR material from ButtonHead Style\n/// @param              _styleIndex: ButtonHead Style index on Object Browser to get Color\n/// @param              _meshIndex: Mesh index to get Color\n/// 0: ButtonHead\n/// 1: Thread\n/// @return The color value in CloAgiRgba.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 21946,
+                    "block": 1916
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 22993,
+                    "block": 1916,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "CloApiRgba",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:CloApiRgba"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param          _styleIndex: ButtonHead Style index on Object Browser to get Color",
+            "@param          _meshIndex: Mesh index to get Color"
+          ],
+          "return_docs_raw": [
+            "@return The color value in CloAgiRgba."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "utility_api.GetButtonHeadStyleColor#514aa3bb07087209",
+          "signature_normalized": "def GetButtonHeadStyleColor(_styleIndex : int, _colorwayIndex : int, _meshIndex : int) -> CloApiRgba",
+          "signature_raw": "def GetButtonHeadStyleColor(_styleIndex : int, _colorwayIndex : int, _meshIndex : int) -> CloApiRgba",
+          "parameters": [
+            {
+              "raw": "_styleIndex : int",
+              "name": "_styleIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_meshIndex : int",
+              "name": "_meshIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "CloApiRgba",
+          "occurrences": [
+            {
+              "signature_raw": "def GetButtonHeadStyleColor(_styleIndex : int, _colorwayIndex : int, _meshIndex : int) -> CloApiRgba",
+              "documentation_raw": "\"\"\"\n@brief          Get base color of PBR material from ButtonHead Style\n@param          _styleIndex: ButtonHead Style index [_colorwayIndex]th Colorway to get Color\n@param          _colorwayIndex: Colorway Index to get Style\n@param          _meshIndex: Mesh index to get Color\n0: ButtonHead\n1: Thread\n@return The color value in CloAgiRgba.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 21959,
+                  "block": 1917
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 23007,
+                  "block": 1917,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetButtonHeadStyleColor(int _styleIndex, int _colorwayIndex, int _meshIndex)",
+                "documentation_raw": "/// @brief              Get base color of PBR material from ButtonHead Style\n/// @param              _styleIndex: ButtonHead Style index [_colorwayIndex]th Colorway to get Color\n/// @param              _colorwayIndex: Colorway Index to get Style\n/// @param              _meshIndex: Mesh index to get Color\n/// 0: ButtonHead\n/// 1: Thread\n/// @return The color value in CloAgiRgba.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 21972,
+                    "block": 1918
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 23020,
+                    "block": 1918,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "CloApiRgba",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:CloApiRgba"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param          _styleIndex: ButtonHead Style index [_colorwayIndex]th Colorway to get Color",
+            "@param          _colorwayIndex: Colorway Index to get Style",
+            "@param          _meshIndex: Mesh index to get Color"
+          ],
+          "return_docs_raw": [
+            "@return The color value in CloAgiRgba."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetButtonHeadStyleListWithIndex",
+      "qualified_name": "utility_api.GetButtonHeadStyleListWithIndex",
+      "module": "utility_api",
+      "symbol": "GetButtonHeadStyleListWithIndex",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetButtonHeadStyleListWithIndex#b70e4ea1e6d4a11c",
+          "signature_normalized": "def GetButtonHeadStyleListWithIndex() -> str",
+          "signature_raw": "def GetButtonHeadStyleListWithIndex() -> str",
+          "parameters": [],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetButtonHeadStyleListWithIndex() -> str",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Gets the list of button head styles available in the Current project.\n@return Returns the list of button head styles with their corresponding indices.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 20631,
+                  "block": 1789
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 21615,
+                  "block": 1789,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetButtonHeadStyleListWithIndex()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Gets the list of button head styles available in the Current project.\n/// @return Returns the list of button head styles with their corresponding indices.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 20640,
+                    "block": 1790
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 21624,
+                    "block": 1790,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return Returns the list of button head styles with their corresponding indices."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetButtonHoleStyleColor",
+      "qualified_name": "utility_api.GetButtonHoleStyleColor",
+      "module": "utility_api",
+      "symbol": "GetButtonHoleStyleColor",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetButtonHoleStyleColor#8f66c60e4756f126",
+          "signature_normalized": "def GetButtonHoleStyleColor(_styleIndex : int) -> CloApiRgba",
+          "signature_raw": "def GetButtonHoleStyleColor(_styleIndex : int) -> CloApiRgba",
+          "parameters": [
+            {
+              "raw": "_styleIndex : int",
+              "name": "_styleIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "CloApiRgba",
+          "occurrences": [
+            {
+              "signature_raw": "def GetButtonHoleStyleColor(_styleIndex : int) -> CloApiRgba",
+              "documentation_raw": "\"\"\"\n@brief          Get base color of PBR material from ButtonHole Style\n@param          _styleIndex: ButtonHole Style index on Object Browser to get Color              \n@return The color value in CloAgiRgba.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 22054,
+                  "block": 1923
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 23105,
+                  "block": 1923,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetButtonHoleStyleColor(int _styleIndex)",
+                "documentation_raw": "/// @brief              Get base color of PBR material from ButtonHole Style\n/// @param              _styleIndex: ButtonHole Style index on Object Browser to get Color              \n/// @return The color value in CloAgiRgba.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 22063,
+                    "block": 1924
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 23114,
+                    "block": 1924,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "CloApiRgba",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:CloApiRgba"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param          _styleIndex: ButtonHole Style index on Object Browser to get Color              "
+          ],
+          "return_docs_raw": [
+            "@return The color value in CloAgiRgba."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "utility_api.GetButtonHoleStyleColor#3ad60180ba82cc8d",
+          "signature_normalized": "def GetButtonHoleStyleColor(_styleIndex : int, _colorwayIndex : int) -> CloApiRgba",
+          "signature_raw": "def GetButtonHoleStyleColor(_styleIndex : int, _colorwayIndex : int) -> CloApiRgba",
+          "parameters": [
+            {
+              "raw": "_styleIndex : int",
+              "name": "_styleIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "CloApiRgba",
+          "occurrences": [
+            {
+              "signature_raw": "def GetButtonHoleStyleColor(_styleIndex : int, _colorwayIndex : int) -> CloApiRgba",
+              "documentation_raw": "\"\"\"\n@brief          Get base color of PBR material from ButtonHole Style\n@param          _styleIndex: ButtonHole Style index [_colorwayIndex]th Colorway to get Color\n@param          _colorwayIndex: Colorway Index to get Style\n@return The color value in CloAgiRgba.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 22073,
+                  "block": 1925
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 23125,
+                  "block": 1925,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetButtonHoleStyleColor(int _styleIndex, int _colorwayIndex)",
+                "documentation_raw": "/// @brief              Get base color of PBR material from ButtonHole Style\n/// @param              _styleIndex: ButtonHole Style index [_colorwayIndex]th Colorway to get Color\n/// @param              _colorwayIndex: Colorway Index to get Style\n/// @return The color value in CloAgiRgba.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 22083,
+                    "block": 1926
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 23135,
+                    "block": 1926,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "CloApiRgba",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:CloApiRgba"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param          _styleIndex: ButtonHole Style index [_colorwayIndex]th Colorway to get Color",
+            "@param          _colorwayIndex: Colorway Index to get Style"
+          ],
+          "return_docs_raw": [
+            "@return The color value in CloAgiRgba."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetButtonPairInfoAsJson",
+      "qualified_name": "utility_api.GetButtonPairInfoAsJson",
+      "module": "utility_api",
+      "symbol": "GetButtonPairInfoAsJson",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetButtonPairInfoAsJson#d1d4177c526f7870",
+          "signature_normalized": "def GetButtonPairInfoAsJson(_maxDistance : float, _misalignmentTolerance : float) -> str",
+          "signature_raw": "def GetButtonPairInfoAsJson(_maxDistance : float, _misalignmentTolerance : float) -> str",
+          "parameters": [
+            {
+              "raw": "_maxDistance : float",
+              "name": "_maxDistance",
+              "annotation_raw": "float"
+            },
+            {
+              "raw": "_misalignmentTolerance : float",
+              "name": "_misalignmentTolerance",
+              "annotation_raw": "float"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetButtonPairInfoAsJson(_maxDistance : float, _misalignmentTolerance : float) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Return a JSON report of every Button head / Buttonhole pair in the current garment: whether each pair is fastened, whether FastenButtons would fasten it, each item's distance from its pattern edge, and whether a pair is misaligned relative to the majority (median) edge distance. Intended for QC validation of button placement. Read-only; does not modify the scene.\n@param _maxDistance: The same distance gate FastenButtons uses. A pair is reported fastenable only when its 3D separation is below this value. Pass 0 or negative for no distance limit.\n@param _misalignmentTolerance: Maximum allowed deviation (in CLO units) of a pair's edge distance from the median before it is flagged misaligned. Pass 0 or negative to use a relative default (25% of the median).\n@return JSON string: { status, reason, buttonHeadCount, buttonHoleCount, maxDistance, standardEdgeDistance, misalignmentTolerance, pairs[], unpairedHeads[], unpairedHoles[] }. Top-level status is one of \"NO_PAIRS_AVAILABLE\", \"MISALIGNED\", \"PAIRS_NOT_FASTENABLE\", \"OK\". Each pairs[] entry has headUid, headName, holeUid, holeName, fastened, fastenable, reason, separation, headEdgeDistance, holeEdgeDistance, deviation, misaligned. Per-pair reason is one of \"OK\", \"ALREADY_FASTENED\", \"TOO_FAR\". unpairedHeads[] and unpairedHoles[] entries have uid and name. Reported maxDistance is -1 when no distance limit was requested.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 23201,
+                  "block": 2021
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 24301,
+                  "block": 2021,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetButtonPairInfoAsJson(float _maxDistance, float _misalignmentTolerance)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Return a JSON report of every Button head / Buttonhole pair in the current garment: whether each pair is fastened, whether FastenButtons would fasten it, each item's distance from its pattern edge, and whether a pair is misaligned relative to the majority (median) edge distance. Intended for QC validation of button placement. Read-only; does not modify the scene.\n/// @param _maxDistance: The same distance gate FastenButtons uses. A pair is reported fastenable only when its 3D separation is below this value. Pass 0 or negative for no distance limit.\n/// @param _misalignmentTolerance: Maximum allowed deviation (in CLO units) of a pair's edge distance from the median before it is flagged misaligned. Pass 0 or negative to use a relative default (25% of the median).\n/// @return JSON string: { status, reason, buttonHeadCount, buttonHoleCount, maxDistance, standardEdgeDistance, misalignmentTolerance, pairs[], unpairedHeads[], unpairedHoles[] }. Top-level status is one of \"NO_PAIRS_AVAILABLE\", \"MISALIGNED\", \"PAIRS_NOT_FASTENABLE\", \"OK\". Each pairs[] entry has headUid, headName, holeUid, holeName, fastened, fastenable, reason, separation, headEdgeDistance, holeEdgeDistance, deviation, misaligned. Per-pair reason is one of \"OK\", \"ALREADY_FASTENED\", \"TOO_FAR\". unpairedHeads[] and unpairedHoles[] entries have uid and name. Reported maxDistance is -1 when no distance limit was requested.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 23212,
+                    "block": 2022
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 24312,
+                    "block": 2022,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _maxDistance: The same distance gate FastenButtons uses. A pair is reported fastenable only when its 3D separation is below this value. Pass 0 or negative for no distance limit.",
+            "@param _misalignmentTolerance: Maximum allowed deviation (in CLO units) of a pair's edge distance from the median before it is flagged misaligned. Pass 0 or negative to use a relative default (25% of the median)."
+          ],
+          "return_docs_raw": [
+            "@return JSON string: { status, reason, buttonHeadCount, buttonHoleCount, maxDistance, standardEdgeDistance, misalignmentTolerance, pairs[], unpairedHeads[], unpairedHoles[] }. Top-level status is one of \"NO_PAIRS_AVAILABLE\", \"MISALIGNED\", \"PAIRS_NOT_FASTENABLE\", \"OK\". Each pairs[] entry has headUid, headName, holeUid, holeName, fastened, fastenable, reason, separation, headEdgeDistance, holeEdgeDistance, deviation, misaligned. Per-pair reason is one of \"OK\", \"ALREADY_FASTENED\", \"TOO_FAR\". unpairedHeads[] and unpairedHoles[] entries have uid and name. Reported maxDistance is -1 when no distance limit was requested."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetCLOAssetFolderPath",
+      "qualified_name": "utility_api.GetCLOAssetFolderPath",
+      "module": "utility_api",
+      "symbol": "GetCLOAssetFolderPath",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetCLOAssetFolderPath#ee72e8df827f5fe0",
+          "signature_normalized": "def GetCLOAssetFolderPath(bLinuxTypePathDelimeter : bool) -> str",
+          "signature_raw": "def GetCLOAssetFolderPath(bLinuxTypePathDelimeter : bool) -> str",
+          "parameters": [
+            {
+              "raw": "bLinuxTypePathDelimeter : bool",
+              "name": "bLinuxTypePathDelimeter",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetCLOAssetFolderPath(bLinuxTypePathDelimeter : bool) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Get the folder path where the CLO asset files are distributed\n@param bLinuxTypePathDelimeter: if true, set path delimiter to '/', false: set path delimiter to '\\'\n@return Get the asset folder path where the CLO asset files are located in\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 17555,
+                  "block": 1517
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 18405,
+                  "block": 1517,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetCLOAssetFolderPath(bool bLinuxTypePathDelimeter = true)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Get the folder path where the CLO asset files are distributed\n/// @param bLinuxTypePathDelimeter: if true, set path delimiter to '/', false: set path delimiter to '\\'\n/// @return Get the asset folder path where the CLO asset files are located in",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 17565,
+                    "block": 1518
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 18415,
+                    "block": 1518,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param bLinuxTypePathDelimeter: if true, set path delimiter to '/', false: set path delimiter to '\\'"
+          ],
+          "return_docs_raw": [
+            "@return Get the asset folder path where the CLO asset files are located in"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetCLOAssetFolderPathW",
+      "qualified_name": "utility_api.GetCLOAssetFolderPathW",
+      "module": "utility_api",
+      "symbol": "GetCLOAssetFolderPathW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetCLOAssetFolderPathW#1dd4a152eb011d6b",
+          "signature_normalized": "def GetCLOAssetFolderPathW(bLinuxTypePathDelimeter : bool) -> str",
+          "signature_raw": "def GetCLOAssetFolderPathW(bLinuxTypePathDelimeter : bool) -> str",
+          "parameters": [
+            {
+              "raw": "bLinuxTypePathDelimeter : bool",
+              "name": "bLinuxTypePathDelimeter",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetCLOAssetFolderPathW(bLinuxTypePathDelimeter : bool) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Get the folder path where the CLO asset files are distributed\n@param bLinuxTypePathDelimeter: if true, set path delimiter to '/', false: set path delimiter to '\\'\n@return Get the asset folder path where the CLO asset files are located in\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 17576,
+                  "block": 1519
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 18427,
+                  "block": 1519,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetCLOAssetFolderPathW(bool bLinuxTypePathDelimeter = true)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Get the folder path where the CLO asset files are distributed\n/// @param bLinuxTypePathDelimeter: if true, set path delimiter to '/', false: set path delimiter to '\\'\n/// @return Get the asset folder path where the CLO asset files are located in",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 17586,
+                    "block": 1520
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 18437,
+                    "block": 1520,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param bLinuxTypePathDelimeter: if true, set path delimiter to '/', false: set path delimiter to '\\'"
+          ],
+          "return_docs_raw": [
+            "@return Get the asset folder path where the CLO asset files are located in"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetCLOExecutableFolderPath",
+      "qualified_name": "utility_api.GetCLOExecutableFolderPath",
+      "module": "utility_api",
+      "symbol": "GetCLOExecutableFolderPath",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetCLOExecutableFolderPath#48c4143176c0bb87",
+          "signature_normalized": "def GetCLOExecutableFolderPath(bLinuxTypePathDelimeter : bool) -> str",
+          "signature_raw": "def GetCLOExecutableFolderPath(bLinuxTypePathDelimeter : bool) -> str",
+          "parameters": [
+            {
+              "raw": "bLinuxTypePathDelimeter : bool",
+              "name": "bLinuxTypePathDelimeter",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetCLOExecutableFolderPath(bLinuxTypePathDelimeter : bool) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Get the executable folder path where the current version of CLO is located\n@param bLinuxTypePathDelimeter: if true, set path delimiter to '/', false: set path delimiter to '\\'\n@return Get the executable folder path for the current version of CLO software\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 17513,
+                  "block": 1513
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 18361,
+                  "block": 1513,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetCLOExecutableFolderPath(bool bLinuxTypePathDelimeter = true)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Get the executable folder path where the current version of CLO is located\n/// @param bLinuxTypePathDelimeter: if true, set path delimiter to '/', false: set path delimiter to '\\'\n/// @return Get the executable folder path for the current version of CLO software",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 17523,
+                    "block": 1514
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 18371,
+                    "block": 1514,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param bLinuxTypePathDelimeter: if true, set path delimiter to '/', false: set path delimiter to '\\'"
+          ],
+          "return_docs_raw": [
+            "@return Get the executable folder path for the current version of CLO software"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetCLOExecutableFolderPathW",
+      "qualified_name": "utility_api.GetCLOExecutableFolderPathW",
+      "module": "utility_api",
+      "symbol": "GetCLOExecutableFolderPathW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetCLOExecutableFolderPathW#231fb9553257fd27",
+          "signature_normalized": "def GetCLOExecutableFolderPathW(bLinuxTypePathDelimeter : bool) -> str",
+          "signature_raw": "def GetCLOExecutableFolderPathW(bLinuxTypePathDelimeter : bool) -> str",
+          "parameters": [
+            {
+              "raw": "bLinuxTypePathDelimeter : bool",
+              "name": "bLinuxTypePathDelimeter",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetCLOExecutableFolderPathW(bLinuxTypePathDelimeter : bool) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Get the executable folder path where the current version of CLO is located\n@param bLinuxTypePathDelimeter: if true, set path delimiter to '/', false: set path delimiter to '\\'\n@return Get the executable folder path for the current version of CLO software\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 17534,
+                  "block": 1515
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 18383,
+                  "block": 1515,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetCLOExecutableFolderPathW(bool bLinuxTypePathDelimeter = true)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Get the executable folder path where the current version of CLO is located\n/// @param bLinuxTypePathDelimeter: if true, set path delimiter to '/', false: set path delimiter to '\\'\n/// @return Get the executable folder path for the current version of CLO software",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 17544,
+                    "block": 1516
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 18393,
+                    "block": 1516,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param bLinuxTypePathDelimeter: if true, set path delimiter to '/', false: set path delimiter to '\\'"
+          ],
+          "return_docs_raw": [
+            "@return Get the executable folder path for the current version of CLO software"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetCLOTemporaryFolderPath",
+      "qualified_name": "utility_api.GetCLOTemporaryFolderPath",
+      "module": "utility_api",
+      "symbol": "GetCLOTemporaryFolderPath",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetCLOTemporaryFolderPath#a6738acaae204f74",
+          "signature_normalized": "def GetCLOTemporaryFolderPath() -> str",
+          "signature_raw": "def GetCLOTemporaryFolderPath() -> str",
+          "parameters": [],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetCLOTemporaryFolderPath() -> str",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Create and get the temporary folder path\n@return Get the temporary folder path to store temporary files used when exporting to server\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 16075,
+                  "block": 1385
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 16859,
+                  "block": 1385,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetCLOTemporaryFolderPath()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Create and get the temporary folder path\n/// @return Get the temporary folder path to store temporary files used when exporting to server",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 16084,
+                    "block": 1386
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 16868,
+                    "block": 1386,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return Get the temporary folder path to store temporary files used when exporting to server"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetCLOTemporaryFolderPathW",
+      "qualified_name": "utility_api.GetCLOTemporaryFolderPathW",
+      "module": "utility_api",
+      "symbol": "GetCLOTemporaryFolderPathW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetCLOTemporaryFolderPathW#77152d60887f6c85",
+          "signature_normalized": "def GetCLOTemporaryFolderPathW() -> str",
+          "signature_raw": "def GetCLOTemporaryFolderPathW() -> str",
+          "parameters": [],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetCLOTemporaryFolderPathW() -> str",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Create and get the temporary folder path\n@return Get the temporary folder path to store temporary files used when exporting to server\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 16094,
+                  "block": 1387
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 16879,
+                  "block": 1387,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetCLOTemporaryFolderPathW()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Create and get the temporary folder path\n/// @return Get the temporary folder path to store temporary files used when exporting to server",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 16103,
+                    "block": 1388
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 16888,
+                    "block": 1388,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return Get the temporary folder path to store temporary files used when exporting to server"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetClothPositions",
+      "qualified_name": "utility_api.GetClothPositions",
+      "module": "utility_api",
+      "symbol": "GetClothPositions",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetClothPositions#8200ce12795b04d8",
+          "signature_normalized": "def GetClothPositions(positions : list[float]) -> None",
+          "signature_raw": "def GetClothPositions(positions : list[float]) -> None",
+          "parameters": [
+            {
+              "raw": "positions : list[float]",
+              "name": "positions",
+              "annotation_raw": "list[float]"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def GetClothPositions(positions : list[float]) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Get the position array of cloth shape. Each three array has x, y, z position of each vertex. \n@param positions: the output position list for the cloth shape\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 16680,
+                  "block": 1435
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 17489,
+                  "block": 1435,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetClothPositions(vector<float>& positions)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Get the position array of cloth shape. Each three array has x, y, z position of each vertex. \n/// @param positions: the output position list for the cloth shape",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 16689,
+                    "block": 1436
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 17498,
+                    "block": 1436,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param positions: the output position list for the cloth shape"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetColorListForColorWay",
+      "qualified_name": "utility_api.GetColorListForColorWay",
+      "module": "utility_api",
+      "symbol": "GetColorListForColorWay",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetColorListForColorWay#483e0c66b4a9e1df",
+          "signature_normalized": "def GetColorListForColorWay(_colorWayIndex : int) -> list[CloApiRgba]",
+          "signature_raw": "def GetColorListForColorWay(_colorWayIndex : int) -> list[CloApiRgba]",
+          "parameters": [
+            {
+              "raw": "_colorWayIndex : int",
+              "name": "_colorWayIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "list[CloApiRgba]",
+          "occurrences": [
+            {
+              "signature_raw": "def GetColorListForColorWay(_colorWayIndex : int) -> list[CloApiRgba]",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Get Color List for ColorWay\n@param _colorwayIndex: the colorway index to get the result\n@return the color list in CloAgiRgba for the target ColorWay\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 17727,
+                  "block": 1533
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 18585,
+                  "block": 1533,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetColorListForColorWay(unsigned int _colorWayIndex)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Get Color List for ColorWay\n/// @param _colorwayIndex: the colorway index to get the result\n/// @return the color list in CloAgiRgba for the target ColorWay",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 17737,
+                    "block": 1534
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 18595,
+                    "block": 1534,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "CloApiRgba",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:CloApiRgba"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param _colorwayIndex: the colorway index to get the result"
+          ],
+          "return_docs_raw": [
+            "@return the color list in CloAgiRgba for the target ColorWay"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetColorSwatchLibraryTabList",
+      "qualified_name": "utility_api.GetColorSwatchLibraryTabList",
+      "module": "utility_api",
+      "symbol": "GetColorSwatchLibraryTabList",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetColorSwatchLibraryTabList#320bd59f5da7dc02",
+          "signature_normalized": "def GetColorSwatchLibraryTabList() -> list[str]",
+          "signature_raw": "def GetColorSwatchLibraryTabList() -> list[str]",
+          "parameters": [],
+          "return_raw": "list[str]",
+          "occurrences": [
+            {
+              "signature_raw": "def GetColorSwatchLibraryTabList() -> list[str]",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Get the list of color swatch library tab names\n@return the list of color swatch library tab names\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 17175,
+                  "block": 1481
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 18007,
+                  "block": 1481,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetColorSwatchLibraryTabList()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Get the list of color swatch library tab names\n/// @return the list of color swatch library tab names",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 17184,
+                    "block": 1482
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 18016,
+                    "block": 1482,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return the list of color swatch library tab names"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetColorSwatchLibraryTabListW",
+      "qualified_name": "utility_api.GetColorSwatchLibraryTabListW",
+      "module": "utility_api",
+      "symbol": "GetColorSwatchLibraryTabListW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetColorSwatchLibraryTabListW#1b444f1580e4ae65",
+          "signature_normalized": "def GetColorSwatchLibraryTabListW() -> list[str]",
+          "signature_raw": "def GetColorSwatchLibraryTabListW() -> list[str]",
+          "parameters": [],
+          "return_raw": "list[str]",
+          "occurrences": [
+            {
+              "signature_raw": "def GetColorSwatchLibraryTabListW() -> list[str]",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Get the list of color swatch library tab names as wstring\n@return the list of color swatch library tab names as wstring\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 17194,
+                  "block": 1483
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 18027,
+                  "block": 1483,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetColorSwatchLibraryTabListW()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Get the list of color swatch library tab names as wstring\n/// @return the list of color swatch library tab names as wstring",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 17203,
+                    "block": 1484
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 18036,
+                    "block": 1484,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return the list of color swatch library tab names as wstring"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetColorwayColorItemName",
+      "qualified_name": "utility_api.GetColorwayColorItemName",
+      "module": "utility_api",
+      "symbol": "GetColorwayColorItemName",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetColorwayColorItemName#51072dc27981655a",
+          "signature_normalized": "def GetColorwayColorItemName(_colorwayIndex : int, _colorItemIndex : int) -> str",
+          "signature_raw": "def GetColorwayColorItemName(_colorwayIndex : int, _colorItemIndex : int) -> str",
+          "parameters": [
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_colorItemIndex : int",
+              "name": "_colorItemIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetColorwayColorItemName(_colorwayIndex : int, _colorItemIndex : int) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Get color name of the color item in colorway\n@param _colorwayIndex: colorway index to get color name of color item\n@param _colorItemIndex: color item index to get color name of colorway\n@return color name if the indices are valid, empty string otherwise.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 19692,
+                  "block": 1711
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 20637,
+                  "block": 1711,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetColorwayColorItemName(int _colorwayIndex, int _colorItemIndex)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Get color name of the color item in colorway\n/// @param _colorwayIndex: colorway index to get color name of color item\n/// @param _colorItemIndex: color item index to get color name of colorway\n/// @return color name if the indices are valid, empty string otherwise.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 19703,
+                    "block": 1712
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 20648,
+                    "block": 1712,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _colorwayIndex: colorway index to get color name of color item",
+            "@param _colorItemIndex: color item index to get color name of colorway"
+          ],
+          "return_docs_raw": [
+            "@return color name if the indices are valid, empty string otherwise."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetColorwayColorItemPlmId",
+      "qualified_name": "utility_api.GetColorwayColorItemPlmId",
+      "module": "utility_api",
+      "symbol": "GetColorwayColorItemPlmId",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetColorwayColorItemPlmId#dd29b329535195e1",
+          "signature_normalized": "def GetColorwayColorItemPlmId(_colorwayIndex : int, _colorItemIndex : int) -> str",
+          "signature_raw": "def GetColorwayColorItemPlmId(_colorwayIndex : int, _colorItemIndex : int) -> str",
+          "parameters": [
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_colorItemIndex : int",
+              "name": "_colorItemIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetColorwayColorItemPlmId(_colorwayIndex : int, _colorItemIndex : int) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Get plm id of the color item in colorway\n@param _colorwayIndex: colorway index to get plm id of color item\n@param _colorItemIndex: color item index to get plm id of colorway\n@return a plm id if the indices are valid, empty string otherwise.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 19669,
+                  "block": 1709
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 20613,
+                  "block": 1709,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetColorwayColorItemPlmId(int _colorwayIndex, int _colorItemIndex)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Get plm id of the color item in colorway\n/// @param _colorwayIndex: colorway index to get plm id of color item\n/// @param _colorItemIndex: color item index to get plm id of colorway\n/// @return a plm id if the indices are valid, empty string otherwise.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 19680,
+                    "block": 1710
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 20624,
+                    "block": 1710,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _colorwayIndex: colorway index to get plm id of color item",
+            "@param _colorItemIndex: color item index to get plm id of colorway"
+          ],
+          "return_docs_raw": [
+            "@return a plm id if the indices are valid, empty string otherwise."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetColorwayColorItemRGB",
+      "qualified_name": "utility_api.GetColorwayColorItemRGB",
+      "module": "utility_api",
+      "symbol": "GetColorwayColorItemRGB",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetColorwayColorItemRGB#aa52cccdf6a6eeb9",
+          "signature_normalized": "def GetColorwayColorItemRGB(_colorwayIndex : int, _colorItemIndex : int) -> CloApiRgb",
+          "signature_raw": "def GetColorwayColorItemRGB(_colorwayIndex : int, _colorItemIndex : int) -> CloApiRgb",
+          "parameters": [
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_colorItemIndex : int",
+              "name": "_colorItemIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "CloApiRgb",
+          "occurrences": [
+            {
+              "signature_raw": "def GetColorwayColorItemRGB(_colorwayIndex : int, _colorItemIndex : int) -> CloApiRgb",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Get rgb color value of the color item in colorway\n@param _colorwayIndex: colorway index to get rgb color value of color item\n@param _colorItemIndex: color item index to get rgb color value color of colorway\n@return a rgb color value if the indices are valid, (0, 0, 0) otherwise.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 19646,
+                  "block": 1707
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 20589,
+                  "block": 1707,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetColorwayColorItemRGB(int _colorwayIndex, int _colorItemIndex)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Get rgb color value of the color item in colorway\n/// @param _colorwayIndex: colorway index to get rgb color value of color item\n/// @param _colorItemIndex: color item index to get rgb color value color of colorway\n/// @return a rgb color value if the indices are valid, (0, 0, 0) otherwise.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 19657,
+                    "block": 1708
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 20600,
+                    "block": 1708,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "CloApiRgb",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:CloApiRgb"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param _colorwayIndex: colorway index to get rgb color value of color item",
+            "@param _colorItemIndex: color item index to get rgb color value color of colorway"
+          ],
+          "return_docs_raw": [
+            "@return a rgb color value if the indices are valid, (0, 0, 0) otherwise."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetColorwayCount",
+      "qualified_name": "utility_api.GetColorwayCount",
+      "module": "utility_api",
+      "symbol": "GetColorwayCount",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetColorwayCount#bf256085ea6b51aa",
+          "signature_normalized": "def GetColorwayCount() -> int",
+          "signature_raw": "def GetColorwayCount() -> int",
+          "parameters": [],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "def GetColorwayCount() -> int",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Get the number of colorways in the current project\n@return The number of Colorways in the current project.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 16386,
+                  "block": 1415
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 17185,
+                  "block": 1415,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetColorwayCount()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Get the number of colorways in the current project\n/// @return The number of Colorways in the current project.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 16395,
+                    "block": 1416
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 17194,
+                    "block": 1416,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return The number of Colorways in the current project."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetColorwayName",
+      "qualified_name": "utility_api.GetColorwayName",
+      "module": "utility_api",
+      "symbol": "GetColorwayName",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetColorwayName#9ef483e3538e45d0",
+          "signature_normalized": "def GetColorwayName(index : int) -> str",
+          "signature_raw": "def GetColorwayName(index : int) -> str",
+          "parameters": [
+            {
+              "raw": "index : int",
+              "name": "index",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetColorwayName(index : int) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Get the colorway name for the colorway index\n@param index: colorway index to get the name\n@return the colorway name for the colorway index\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 16485,
+                  "block": 1425
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 17289,
+                  "block": 1425,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetColorwayName(unsigned int index)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Get the colorway name for the colorway index\n/// @param index: colorway index to get the name\n/// @return the colorway name for the colorway index",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 16495,
+                    "block": 1426
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 17299,
+                    "block": 1426,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param index: colorway index to get the name"
+          ],
+          "return_docs_raw": [
+            "@return the colorway name for the colorway index"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetColorwayNameW",
+      "qualified_name": "utility_api.GetColorwayNameW",
+      "module": "utility_api",
+      "symbol": "GetColorwayNameW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetColorwayNameW#1815921153688df5",
+          "signature_normalized": "def GetColorwayNameW(index : int) -> str",
+          "signature_raw": "def GetColorwayNameW(index : int) -> str",
+          "parameters": [
+            {
+              "raw": "index : int",
+              "name": "index",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetColorwayNameW(index : int) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Get the colorway name for the colorway index\n@param index: colorway index to get the name\n@return the colorway name for the colorway index\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 16506,
+                  "block": 1427
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 17311,
+                  "block": 1427,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetColorwayNameW(unsigned int index)",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Get the colorway name for the colorway index\n/// @param index: colorway index to get the name\n/// @return the colorway name for the colorway index",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 16516,
+                    "block": 1428
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 17321,
+                    "block": 1428,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param index: colorway index to get the name"
+          ],
+          "return_docs_raw": [
+            "@return the colorway name for the colorway index"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetCurrentAnimationFrame",
+      "qualified_name": "utility_api.GetCurrentAnimationFrame",
+      "module": "utility_api",
+      "symbol": "GetCurrentAnimationFrame",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetCurrentAnimationFrame#0e5ab02e44a80884",
+          "signature_normalized": "def GetCurrentAnimationFrame() -> double",
+          "signature_raw": "def GetCurrentAnimationFrame() -> double",
+          "parameters": [],
+          "return_raw": "double",
+          "occurrences": [
+            {
+              "signature_raw": "def GetCurrentAnimationFrame() -> double",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief get current animation frame\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 18625,
+                  "block": 1609
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 19519,
+                  "block": 1609,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetCurrentAnimationFrame()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief get current animation frame",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 18633,
+                    "block": 1610
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 19527,
+                    "block": 1610,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetCurrentColorwayIndex",
+      "qualified_name": "utility_api.GetCurrentColorwayIndex",
+      "module": "utility_api",
+      "symbol": "GetCurrentColorwayIndex",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetCurrentColorwayIndex#082ae51295074bb8",
+          "signature_normalized": "def GetCurrentColorwayIndex() -> int",
+          "signature_raw": "def GetCurrentColorwayIndex() -> int",
+          "parameters": [],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "def GetCurrentColorwayIndex() -> int",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Get the current colorway index\n@return The current colorway index.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 16405,
+                  "block": 1417
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 17205,
+                  "block": 1417,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetCurrentColorwayIndex()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Get the current colorway index\n/// @return The current colorway index.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 16414,
+                    "block": 1418
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 17214,
+                    "block": 1418,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return The current colorway index."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "utility_api.GetCustomViewInformation",
+      "qualified_name": "utility_api.GetCustomViewInformation",
+      "module": "utility_api",
+      "symbol": "GetCustomViewInformation",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "utility_api.GetCustomViewInformation#e0c6acc482bc2912",
+          "signature_normalized": "def GetCustomViewInformation() -> str",
+          "signature_raw": "def GetCustomViewInformation() -> str",
+          "parameters": [],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetCustomViewInformation() -> str",
+              "documentation_raw": "\"\"\"\n@ingroup UTILITY_API\n@brief Get the custom view information                          \n{\n\"customViewList\": [\n{\n\"cameraMatrix\": [ // row vector 0, 1, 2 of \"local to world camera matrix\"\n1.0,\n0.000166,\n-0.001024,\n0.352125,\n0.0,\n0.987069,\n0.160306,\n2592.8,\n0.001039,\n-0.160306,\n0.987068,\n7973.05\n],\n\"fov\": 40.0\n}\n]\n}                               \n@return Json stream including the data of Custom View such as Camera Matrix, FOV, and so on.\n\"\"\"",
+              "section": "UTILITY_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 16558,
+                  "block": 1431
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 17365,
+                  "block": 1431,
+                  "anchor": "utility-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetCustomViewInformation()",
+                "documentation_raw": "/// @ingroup UTILITY_API\n/// @brief Get the custom view information                              \n/// {\n/// \"customViewList\": [\n/// {\n/// \"cameraMatrix\": [ // row vector 0, 1, 2 of \"local to world camera matrix\"\n/// 1.0,\n/// 0.000166,\n/// -0.001024,\n/// 0.352125,\n/// 0.0,\n/// 0.987069,\n/// 0.160306,\n/// 2592.8,\n/// 0.001039,\n/// -0.160306,\n/// 0.987068,\n/// 7973.05\n/// ],\n/// \"fov\": 40.0\n/// }\n/// ]\n/// }                           \n/// @return Json stream including the data of Custom View such as Camera Matrix, FOV, and so on.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 16588,
+                    "block": 1432
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 17395,
+                    "block": 1432,
+                    "anchor": "utility-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return Json stream including the data of Custom View such as Camera Matrix, FOV, and so on."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    }
+  ]
+}

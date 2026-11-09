@@ -1,0 +1,2165 @@
+{
+  "rows": [
+    {
+      "id": "gui_api.AddButton#47fa25e75a26726c",
+      "module": "gui_api",
+      "symbol": "AddButton",
+      "qualified_name": "gui_api.AddButton",
+      "overload": "gui_api.AddButton#47fa25e75a26726c",
+      "signature": "gui_api.AddButton(parentHandle: int, text: str, onClick: Callable[[], None]) -> int",
+      "domain": "gui",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "gui_api_reference.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/gui_api_reference.rst.txt",
+          "sha256": "707245798c3351e85ad883f4b343ba9cd9f422b7b13a302db9f23c9ba3d5f53b",
+          "line": 241,
+          "block": 17
+        },
+        {
+          "source_id": "gui_api_reference.html",
+          "url": "https://developer.clo3d.com/gui_api_reference.html",
+          "sha256": "8b34f236abc73263e13c5899c93ab08278c1d5f506e2d4b4de3b1f0cd62c3b53",
+          "line": 335,
+          "block": 17,
+          "anchor": "text-and-buttons"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "gui_api.AddButton",
+      "documentation_issues": [],
+      "review_gates": [
+        "external-global-lifecycle"
+      ]
+    },
+    {
+      "id": "gui_api.AddCheckBox#75dc3dfee1d33eb9",
+      "module": "gui_api",
+      "symbol": "AddCheckBox",
+      "qualified_name": "gui_api.AddCheckBox",
+      "overload": "gui_api.AddCheckBox#75dc3dfee1d33eb9",
+      "signature": "gui_api.AddCheckBox(parentHandle: int, text: str, checked: bool = false, onChanged: Callable[[bool], None] = None) -> int",
+      "domain": "gui",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "gui_api_reference.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/gui_api_reference.rst.txt",
+          "sha256": "707245798c3351e85ad883f4b343ba9cd9f422b7b13a302db9f23c9ba3d5f53b",
+          "line": 300,
+          "block": 21
+        },
+        {
+          "source_id": "gui_api_reference.html",
+          "url": "https://developer.clo3d.com/gui_api_reference.html",
+          "sha256": "8b34f236abc73263e13c5899c93ab08278c1d5f506e2d4b4de3b1f0cd62c3b53",
+          "line": 390,
+          "block": 21,
+          "anchor": "input-widgets"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "gui_api.AddCheckBox",
+      "documentation_issues": [],
+      "review_gates": [
+        "external-global-lifecycle"
+      ]
+    },
+    {
+      "id": "gui_api.AddDropdown#22d9babc4cd6349f",
+      "module": "gui_api",
+      "symbol": "AddDropdown",
+      "qualified_name": "gui_api.AddDropdown",
+      "overload": "gui_api.AddDropdown#22d9babc4cd6349f",
+      "signature": "gui_api.AddDropdown(parentHandle: int, options: list[str], defaultIndex: int = 0, onChanged: Callable[[int], None] = None) -> int",
+      "domain": "gui",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "gui_api_reference.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/gui_api_reference.rst.txt",
+          "sha256": "707245798c3351e85ad883f4b343ba9cd9f422b7b13a302db9f23c9ba3d5f53b",
+          "line": 315,
+          "block": 22
+        },
+        {
+          "source_id": "gui_api_reference.html",
+          "url": "https://developer.clo3d.com/gui_api_reference.html",
+          "sha256": "8b34f236abc73263e13c5899c93ab08278c1d5f506e2d4b4de3b1f0cd62c3b53",
+          "line": 404,
+          "block": 22,
+          "anchor": "input-widgets"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "gui_api.AddDropdown",
+      "documentation_issues": [],
+      "review_gates": [
+        "external-global-lifecycle"
+      ]
+    },
+    {
+      "id": "gui_api.AddGroup#ddc241798a095326",
+      "module": "gui_api",
+      "symbol": "AddGroup",
+      "qualified_name": "gui_api.AddGroup",
+      "overload": "gui_api.AddGroup#ddc241798a095326",
+      "signature": "gui_api.AddGroup(parentHandle: int, title: str) -> int",
+      "domain": "gui",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "gui_api_reference.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/gui_api_reference.rst.txt",
+          "sha256": "707245798c3351e85ad883f4b343ba9cd9f422b7b13a302db9f23c9ba3d5f53b",
+          "line": 200,
+          "block": 14
+        },
+        {
+          "source_id": "gui_api_reference.html",
+          "url": "https://developer.clo3d.com/gui_api_reference.html",
+          "sha256": "8b34f236abc73263e13c5899c93ab08278c1d5f506e2d4b4de3b1f0cd62c3b53",
+          "line": 297,
+          "block": 14,
+          "anchor": "layout-containers"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "gui_api.AddGroup",
+      "documentation_issues": [],
+      "review_gates": [
+        "external-global-lifecycle"
+      ]
+    },
+    {
+      "id": "gui_api.AddImage#f2351c59edd3a400",
+      "module": "gui_api",
+      "symbol": "AddImage",
+      "qualified_name": "gui_api.AddImage",
+      "overload": "gui_api.AddImage#f2351c59edd3a400",
+      "signature": "gui_api.AddImage(parentHandle: int, imageFilePath: str, maxWidth: int = 0, maxHeight: int = 0) -> int",
+      "domain": "gui",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "gui_api_reference.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/gui_api_reference.rst.txt",
+          "sha256": "707245798c3351e85ad883f4b343ba9cd9f422b7b13a302db9f23c9ba3d5f53b",
+          "line": 412,
+          "block": 28
+        },
+        {
+          "source_id": "gui_api_reference.html",
+          "url": "https://developer.clo3d.com/gui_api_reference.html",
+          "sha256": "8b34f236abc73263e13c5899c93ab08278c1d5f506e2d4b4de3b1f0cd62c3b53",
+          "line": 495,
+          "block": 28,
+          "anchor": "lists-tables-images-and-progress"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "gui_api.AddImage",
+      "documentation_issues": [],
+      "review_gates": [
+        "external-global-lifecycle"
+      ]
+    },
+    {
+      "id": "gui_api.AddLabel#20a3c529dd191145",
+      "module": "gui_api",
+      "symbol": "AddLabel",
+      "qualified_name": "gui_api.AddLabel",
+      "overload": "gui_api.AddLabel#20a3c529dd191145",
+      "signature": "gui_api.AddLabel(parentHandle: int, text: str) -> int",
+      "domain": "gui",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "gui_api_reference.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/gui_api_reference.rst.txt",
+          "sha256": "707245798c3351e85ad883f4b343ba9cd9f422b7b13a302db9f23c9ba3d5f53b",
+          "line": 228,
+          "block": 16
+        },
+        {
+          "source_id": "gui_api_reference.html",
+          "url": "https://developer.clo3d.com/gui_api_reference.html",
+          "sha256": "8b34f236abc73263e13c5899c93ab08278c1d5f506e2d4b4de3b1f0cd62c3b53",
+          "line": 323,
+          "block": 16,
+          "anchor": "text-and-buttons"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "gui_api.AddLabel",
+      "documentation_issues": [],
+      "review_gates": [
+        "external-global-lifecycle"
+      ]
+    },
+    {
+      "id": "gui_api.AddList#f0db4c681985eeb7",
+      "module": "gui_api",
+      "symbol": "AddList",
+      "qualified_name": "gui_api.AddList",
+      "overload": "gui_api.AddList#f0db4c681985eeb7",
+      "signature": "gui_api.AddList(parentHandle: int, items: list[str], defaultIndex: int = -1, onSelected: Callable[[int], None] = None, onDoubleClicked: Callable[[int], None] = None) -> int",
+      "domain": "gui",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "gui_api_reference.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/gui_api_reference.rst.txt",
+          "sha256": "707245798c3351e85ad883f4b343ba9cd9f422b7b13a302db9f23c9ba3d5f53b",
+          "line": 381,
+          "block": 26
+        },
+        {
+          "source_id": "gui_api_reference.html",
+          "url": "https://developer.clo3d.com/gui_api_reference.html",
+          "sha256": "8b34f236abc73263e13c5899c93ab08278c1d5f506e2d4b4de3b1f0cd62c3b53",
+          "line": 466,
+          "block": 26,
+          "anchor": "lists-tables-images-and-progress"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "gui_api.AddList",
+      "documentation_issues": [],
+      "review_gates": [
+        "external-global-lifecycle"
+      ]
+    },
+    {
+      "id": "gui_api.AddMenu#35a640753c91a782",
+      "module": "gui_api",
+      "symbol": "AddMenu",
+      "qualified_name": "gui_api.AddMenu",
+      "overload": "gui_api.AddMenu#35a640753c91a782",
+      "signature": "gui_api.AddMenu(windowHandle: int, title: str) -> int",
+      "domain": "gui",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "gui_api_reference.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/gui_api_reference.rst.txt",
+          "sha256": "707245798c3351e85ad883f4b343ba9cd9f422b7b13a302db9f23c9ba3d5f53b",
+          "line": 443,
+          "block": 30
+        },
+        {
+          "source_id": "gui_api_reference.html",
+          "url": "https://developer.clo3d.com/gui_api_reference.html",
+          "sha256": "8b34f236abc73263e13c5899c93ab08278c1d5f506e2d4b4de3b1f0cd62c3b53",
+          "line": 524,
+          "block": 30,
+          "anchor": "menus"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "gui_api.AddMenu",
+      "documentation_issues": [],
+      "review_gates": [
+        "external-global-lifecycle"
+      ]
+    },
+    {
+      "id": "gui_api.AddMenuItem#371f4d314e6c4001",
+      "module": "gui_api",
+      "symbol": "AddMenuItem",
+      "qualified_name": "gui_api.AddMenuItem",
+      "overload": "gui_api.AddMenuItem#371f4d314e6c4001",
+      "signature": "gui_api.AddMenuItem(menuHandle: int, text: str, onClick: Callable[[], None]) -> int",
+      "domain": "gui",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "gui_api_reference.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/gui_api_reference.rst.txt",
+          "sha256": "707245798c3351e85ad883f4b343ba9cd9f422b7b13a302db9f23c9ba3d5f53b",
+          "line": 456,
+          "block": 31
+        },
+        {
+          "source_id": "gui_api_reference.html",
+          "url": "https://developer.clo3d.com/gui_api_reference.html",
+          "sha256": "8b34f236abc73263e13c5899c93ab08278c1d5f506e2d4b4de3b1f0cd62c3b53",
+          "line": 536,
+          "block": 31,
+          "anchor": "menus"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "gui_api.AddMenuItem",
+      "documentation_issues": [],
+      "review_gates": [
+        "external-global-lifecycle"
+      ]
+    },
+    {
+      "id": "gui_api.AddNumberInput#7f6db1e72480085b",
+      "module": "gui_api",
+      "symbol": "AddNumberInput",
+      "qualified_name": "gui_api.AddNumberInput",
+      "overload": "gui_api.AddNumberInput#7f6db1e72480085b",
+      "signature": "gui_api.AddNumberInput(parentHandle: int, defaultValue: float = 0.0, minimum: float = -1000000.0, maximum: float = 1000000.0, decimals: int = 2, onChanged: Callable[[float], None] = None) -> int",
+      "domain": "gui",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "gui_api_reference.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/gui_api_reference.rst.txt",
+          "sha256": "707245798c3351e85ad883f4b343ba9cd9f422b7b13a302db9f23c9ba3d5f53b",
+          "line": 345,
+          "block": 24
+        },
+        {
+          "source_id": "gui_api_reference.html",
+          "url": "https://developer.clo3d.com/gui_api_reference.html",
+          "sha256": "8b34f236abc73263e13c5899c93ab08278c1d5f506e2d4b4de3b1f0cd62c3b53",
+          "line": 432,
+          "block": 24,
+          "anchor": "input-widgets"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "gui_api.AddNumberInput",
+      "documentation_issues": [],
+      "review_gates": [
+        "external-global-lifecycle"
+      ]
+    },
+    {
+      "id": "gui_api.AddProgressBar#94b8e94686dc3009",
+      "module": "gui_api",
+      "symbol": "AddProgressBar",
+      "qualified_name": "gui_api.AddProgressBar",
+      "overload": "gui_api.AddProgressBar#94b8e94686dc3009",
+      "signature": "gui_api.AddProgressBar(parentHandle: int, value: int = 0) -> int",
+      "domain": "gui",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "gui_api_reference.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/gui_api_reference.rst.txt",
+          "sha256": "707245798c3351e85ad883f4b343ba9cd9f422b7b13a302db9f23c9ba3d5f53b",
+          "line": 427,
+          "block": 29
+        },
+        {
+          "source_id": "gui_api_reference.html",
+          "url": "https://developer.clo3d.com/gui_api_reference.html",
+          "sha256": "8b34f236abc73263e13c5899c93ab08278c1d5f506e2d4b4de3b1f0cd62c3b53",
+          "line": 509,
+          "block": 29,
+          "anchor": "lists-tables-images-and-progress"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "gui_api.AddProgressBar",
+      "documentation_issues": [],
+      "review_gates": [
+        "external-global-lifecycle"
+      ]
+    },
+    {
+      "id": "gui_api.AddRadioGroup#e5cb5195b887fa5a",
+      "module": "gui_api",
+      "symbol": "AddRadioGroup",
+      "qualified_name": "gui_api.AddRadioGroup",
+      "overload": "gui_api.AddRadioGroup#e5cb5195b887fa5a",
+      "signature": "gui_api.AddRadioGroup(parentHandle: int, options: list[str], defaultIndex: int = 0, onChanged: Callable[[int], None] = None) -> int",
+      "domain": "gui",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "gui_api_reference.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/gui_api_reference.rst.txt",
+          "sha256": "707245798c3351e85ad883f4b343ba9cd9f422b7b13a302db9f23c9ba3d5f53b",
+          "line": 330,
+          "block": 23
+        },
+        {
+          "source_id": "gui_api_reference.html",
+          "url": "https://developer.clo3d.com/gui_api_reference.html",
+          "sha256": "8b34f236abc73263e13c5899c93ab08278c1d5f506e2d4b4de3b1f0cd62c3b53",
+          "line": 418,
+          "block": 23,
+          "anchor": "input-widgets"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "gui_api.AddRadioGroup",
+      "documentation_issues": [],
+      "review_gates": [
+        "external-global-lifecycle"
+      ]
+    },
+    {
+      "id": "gui_api.AddRow#c4229dc8cf12ab69",
+      "module": "gui_api",
+      "symbol": "AddRow",
+      "qualified_name": "gui_api.AddRow",
+      "overload": "gui_api.AddRow#c4229dc8cf12ab69",
+      "signature": "gui_api.AddRow(parentHandle: int) -> int",
+      "domain": "gui",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "gui_api_reference.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/gui_api_reference.rst.txt",
+          "sha256": "707245798c3351e85ad883f4b343ba9cd9f422b7b13a302db9f23c9ba3d5f53b",
+          "line": 188,
+          "block": 13
+        },
+        {
+          "source_id": "gui_api_reference.html",
+          "url": "https://developer.clo3d.com/gui_api_reference.html",
+          "sha256": "8b34f236abc73263e13c5899c93ab08278c1d5f506e2d4b4de3b1f0cd62c3b53",
+          "line": 286,
+          "block": 13,
+          "anchor": "layout-containers"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "gui_api.AddRow",
+      "documentation_issues": [],
+      "review_gates": [
+        "external-global-lifecycle"
+      ]
+    },
+    {
+      "id": "gui_api.AddSeparator#ea2f059c6a50ed2e",
+      "module": "gui_api",
+      "symbol": "AddSeparator",
+      "qualified_name": "gui_api.AddSeparator",
+      "overload": "gui_api.AddSeparator#ea2f059c6a50ed2e",
+      "signature": "gui_api.AddSeparator(parentHandle: int) -> int",
+      "domain": "gui",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "gui_api_reference.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/gui_api_reference.rst.txt",
+          "sha256": "707245798c3351e85ad883f4b343ba9cd9f422b7b13a302db9f23c9ba3d5f53b",
+          "line": 213,
+          "block": 15
+        },
+        {
+          "source_id": "gui_api_reference.html",
+          "url": "https://developer.clo3d.com/gui_api_reference.html",
+          "sha256": "8b34f236abc73263e13c5899c93ab08278c1d5f506e2d4b4de3b1f0cd62c3b53",
+          "line": 309,
+          "block": 15,
+          "anchor": "layout-containers"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "gui_api.AddSeparator",
+      "documentation_issues": [],
+      "review_gates": [
+        "external-global-lifecycle"
+      ]
+    },
+    {
+      "id": "gui_api.AddSlider#29809e4651f22299",
+      "module": "gui_api",
+      "symbol": "AddSlider",
+      "qualified_name": "gui_api.AddSlider",
+      "overload": "gui_api.AddSlider#29809e4651f22299",
+      "signature": "gui_api.AddSlider(parentHandle: int, defaultValue: int = 0, minimum: int = 0, maximum: int = 100, onChanged: Callable[[int], None] = None) -> int",
+      "domain": "gui",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "gui_api_reference.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/gui_api_reference.rst.txt",
+          "sha256": "707245798c3351e85ad883f4b343ba9cd9f422b7b13a302db9f23c9ba3d5f53b",
+          "line": 362,
+          "block": 25
+        },
+        {
+          "source_id": "gui_api_reference.html",
+          "url": "https://developer.clo3d.com/gui_api_reference.html",
+          "sha256": "8b34f236abc73263e13c5899c93ab08278c1d5f506e2d4b4de3b1f0cd62c3b53",
+          "line": 448,
+          "block": 25,
+          "anchor": "input-widgets"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "gui_api.AddSlider",
+      "documentation_issues": [],
+      "review_gates": [
+        "external-global-lifecycle"
+      ]
+    },
+    {
+      "id": "gui_api.AddTable#098f3afff8f14a6a",
+      "module": "gui_api",
+      "symbol": "AddTable",
+      "qualified_name": "gui_api.AddTable",
+      "overload": "gui_api.AddTable#098f3afff8f14a6a",
+      "signature": "gui_api.AddTable(parentHandle: int, columns: list[str], rows: list[list[str]], onSelected: Callable[[int], None] = None) -> int",
+      "domain": "gui",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "gui_api_reference.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/gui_api_reference.rst.txt",
+          "sha256": "707245798c3351e85ad883f4b343ba9cd9f422b7b13a302db9f23c9ba3d5f53b",
+          "line": 397,
+          "block": 27
+        },
+        {
+          "source_id": "gui_api_reference.html",
+          "url": "https://developer.clo3d.com/gui_api_reference.html",
+          "sha256": "8b34f236abc73263e13c5899c93ab08278c1d5f506e2d4b4de3b1f0cd62c3b53",
+          "line": 481,
+          "block": 27,
+          "anchor": "lists-tables-images-and-progress"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "gui_api.AddTable",
+      "documentation_issues": [],
+      "review_gates": [
+        "external-global-lifecycle"
+      ]
+    },
+    {
+      "id": "gui_api.AddTextArea#d5bfbacb48b57b58",
+      "module": "gui_api",
+      "symbol": "AddTextArea",
+      "qualified_name": "gui_api.AddTextArea",
+      "overload": "gui_api.AddTextArea#d5bfbacb48b57b58",
+      "signature": "gui_api.AddTextArea(parentHandle: int, text: str = \"\", readOnly: bool = false) -> int",
+      "domain": "gui",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "gui_api_reference.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/gui_api_reference.rst.txt",
+          "sha256": "707245798c3351e85ad883f4b343ba9cd9f422b7b13a302db9f23c9ba3d5f53b",
+          "line": 286,
+          "block": 20
+        },
+        {
+          "source_id": "gui_api_reference.html",
+          "url": "https://developer.clo3d.com/gui_api_reference.html",
+          "sha256": "8b34f236abc73263e13c5899c93ab08278c1d5f506e2d4b4de3b1f0cd62c3b53",
+          "line": 377,
+          "block": 20,
+          "anchor": "input-widgets"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "gui_api.AddTextArea",
+      "documentation_issues": [],
+      "review_gates": [
+        "external-global-lifecycle"
+      ]
+    },
+    {
+      "id": "gui_api.AddTextInput#fd316cdb62f908ea",
+      "module": "gui_api",
+      "symbol": "AddTextInput",
+      "qualified_name": "gui_api.AddTextInput",
+      "overload": "gui_api.AddTextInput#fd316cdb62f908ea",
+      "signature": "gui_api.AddTextInput(parentHandle: int, defaultValue: str = \"\", placeholder: str = \"\", onChanged: Callable[[str], None] = None) -> int",
+      "domain": "gui",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "gui_api_reference.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/gui_api_reference.rst.txt",
+          "sha256": "707245798c3351e85ad883f4b343ba9cd9f422b7b13a302db9f23c9ba3d5f53b",
+          "line": 271,
+          "block": 19
+        },
+        {
+          "source_id": "gui_api_reference.html",
+          "url": "https://developer.clo3d.com/gui_api_reference.html",
+          "sha256": "8b34f236abc73263e13c5899c93ab08278c1d5f506e2d4b4de3b1f0cd62c3b53",
+          "line": 363,
+          "block": 19,
+          "anchor": "input-widgets"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "gui_api.AddTextInput",
+      "documentation_issues": [],
+      "review_gates": [
+        "external-global-lifecycle"
+      ]
+    },
+    {
+      "id": "gui_api.AskChoice#746a463ad93a0c86",
+      "module": "gui_api",
+      "symbol": "AskChoice",
+      "qualified_name": "gui_api.AskChoice",
+      "overload": "gui_api.AskChoice#746a463ad93a0c86",
+      "signature": "gui_api.AskChoice(title: str, label: str, options: list[str], defaultIndex: int = 0) -> ApiTypes.CloApiGuiChoiceResult",
+      "domain": "gui",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "gui_api_reference.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/gui_api_reference.rst.txt",
+          "sha256": "707245798c3351e85ad883f4b343ba9cd9f422b7b13a302db9f23c9ba3d5f53b",
+          "line": 64,
+          "block": 4
+        },
+        {
+          "source_id": "gui_api_reference.html",
+          "url": "https://developer.clo3d.com/gui_api_reference.html",
+          "sha256": "8b34f236abc73263e13c5899c93ab08278c1d5f506e2d4b4de3b1f0cd62c3b53",
+          "line": 172,
+          "block": 4,
+          "anchor": "modal-dialogs"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [
+        {
+          "name": "CloApiGuiChoiceResult",
+          "basis": "annotation",
+          "status": "resolved",
+          "type_id": "type:CloApiGuiChoiceResult"
+        },
+        {
+          "name": "CloApiGuiChoiceResult",
+          "basis": "documentation_mention",
+          "status": "resolved",
+          "type_id": "type:CloApiGuiChoiceResult"
+        }
+      ],
+      "official_record_id": "gui_api.AskChoice",
+      "documentation_issues": [],
+      "review_gates": [
+        "binding-types",
+        "external-global-lifecycle"
+      ]
+    },
+    {
+      "id": "gui_api.AskConfirm#861cdd4611fb6fa6",
+      "module": "gui_api",
+      "symbol": "AskConfirm",
+      "qualified_name": "gui_api.AskConfirm",
+      "overload": "gui_api.AskConfirm#861cdd4611fb6fa6",
+      "signature": "gui_api.AskConfirm(title: str, message: str, okLabel: str = \"OK\", cancelLabel: str = \"Cancel\") -> bool",
+      "domain": "gui",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "gui_api_reference.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/gui_api_reference.rst.txt",
+          "sha256": "707245798c3351e85ad883f4b343ba9cd9f422b7b13a302db9f23c9ba3d5f53b",
+          "line": 34,
+          "block": 2
+        },
+        {
+          "source_id": "gui_api_reference.html",
+          "url": "https://developer.clo3d.com/gui_api_reference.html",
+          "sha256": "8b34f236abc73263e13c5899c93ab08278c1d5f506e2d4b4de3b1f0cd62c3b53",
+          "line": 144,
+          "block": 2,
+          "anchor": "modal-dialogs"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "gui_api.AskConfirm",
+      "documentation_issues": [],
+      "review_gates": [
+        "external-global-lifecycle"
+      ]
+    },
+    {
+      "id": "gui_api.AskForm#5e2b367b361b8fef",
+      "module": "gui_api",
+      "symbol": "AskForm",
+      "qualified_name": "gui_api.AskForm",
+      "overload": "gui_api.AskForm#5e2b367b361b8fef",
+      "signature": "gui_api.AskForm(title: str, fields: list[ApiTypes.CloApiGuiFormField]) -> ApiTypes.CloApiGuiFormResult",
+      "domain": "gui",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "gui_api_reference.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/gui_api_reference.rst.txt",
+          "sha256": "707245798c3351e85ad883f4b343ba9cd9f422b7b13a302db9f23c9ba3d5f53b",
+          "line": 94,
+          "block": 6
+        },
+        {
+          "source_id": "gui_api_reference.html",
+          "url": "https://developer.clo3d.com/gui_api_reference.html",
+          "sha256": "8b34f236abc73263e13c5899c93ab08278c1d5f506e2d4b4de3b1f0cd62c3b53",
+          "line": 200,
+          "block": 6,
+          "anchor": "modal-dialogs"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [
+        {
+          "name": "CloApiGuiFormField",
+          "basis": "annotation",
+          "status": "resolved",
+          "type_id": "type:CloApiGuiFormField"
+        },
+        {
+          "name": "CloApiGuiFormField",
+          "basis": "documentation_mention",
+          "status": "resolved",
+          "type_id": "type:CloApiGuiFormField"
+        },
+        {
+          "name": "CloApiGuiFormResult",
+          "basis": "annotation",
+          "status": "resolved",
+          "type_id": "type:CloApiGuiFormResult"
+        },
+        {
+          "name": "CloApiGuiFormResult",
+          "basis": "documentation_mention",
+          "status": "resolved",
+          "type_id": "type:CloApiGuiFormResult"
+        }
+      ],
+      "official_record_id": "gui_api.AskForm",
+      "documentation_issues": [],
+      "review_gates": [
+        "binding-types",
+        "external-global-lifecycle"
+      ]
+    },
+    {
+      "id": "gui_api.AskMultiChoice#59b98787d5056160",
+      "module": "gui_api",
+      "symbol": "AskMultiChoice",
+      "qualified_name": "gui_api.AskMultiChoice",
+      "overload": "gui_api.AskMultiChoice#59b98787d5056160",
+      "signature": "gui_api.AskMultiChoice(title: str, label: str, options: list[str], defaultIndices: list[int] = []) -> ApiTypes.CloApiGuiChoiceResult",
+      "domain": "gui",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "gui_api_reference.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/gui_api_reference.rst.txt",
+          "sha256": "707245798c3351e85ad883f4b343ba9cd9f422b7b13a302db9f23c9ba3d5f53b",
+          "line": 79,
+          "block": 5
+        },
+        {
+          "source_id": "gui_api_reference.html",
+          "url": "https://developer.clo3d.com/gui_api_reference.html",
+          "sha256": "8b34f236abc73263e13c5899c93ab08278c1d5f506e2d4b4de3b1f0cd62c3b53",
+          "line": 186,
+          "block": 5,
+          "anchor": "modal-dialogs"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [
+        {
+          "name": "CloApiGuiChoiceResult",
+          "basis": "annotation",
+          "status": "resolved",
+          "type_id": "type:CloApiGuiChoiceResult"
+        },
+        {
+          "name": "CloApiGuiChoiceResult",
+          "basis": "documentation_mention",
+          "status": "resolved",
+          "type_id": "type:CloApiGuiChoiceResult"
+        }
+      ],
+      "official_record_id": "gui_api.AskMultiChoice",
+      "documentation_issues": [],
+      "review_gates": [
+        "binding-types",
+        "external-global-lifecycle"
+      ]
+    },
+    {
+      "id": "gui_api.AskText#43de5e5047eb96a8",
+      "module": "gui_api",
+      "symbol": "AskText",
+      "qualified_name": "gui_api.AskText",
+      "overload": "gui_api.AskText#43de5e5047eb96a8",
+      "signature": "gui_api.AskText(title: str, label: str, defaultValue: str = \"\", placeholder: str = \"\") -> ApiTypes.CloApiGuiTextResult",
+      "domain": "gui",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "gui_api_reference.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/gui_api_reference.rst.txt",
+          "sha256": "707245798c3351e85ad883f4b343ba9cd9f422b7b13a302db9f23c9ba3d5f53b",
+          "line": 49,
+          "block": 3
+        },
+        {
+          "source_id": "gui_api_reference.html",
+          "url": "https://developer.clo3d.com/gui_api_reference.html",
+          "sha256": "8b34f236abc73263e13c5899c93ab08278c1d5f506e2d4b4de3b1f0cd62c3b53",
+          "line": 158,
+          "block": 3,
+          "anchor": "modal-dialogs"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [
+        {
+          "name": "CloApiGuiTextResult",
+          "basis": "annotation",
+          "status": "resolved",
+          "type_id": "type:CloApiGuiTextResult"
+        },
+        {
+          "name": "CloApiGuiTextResult",
+          "basis": "documentation_mention",
+          "status": "resolved",
+          "type_id": "type:CloApiGuiTextResult"
+        }
+      ],
+      "official_record_id": "gui_api.AskText",
+      "documentation_issues": [],
+      "review_gates": [
+        "binding-types",
+        "external-global-lifecycle"
+      ]
+    },
+    {
+      "id": "gui_api.CloseAllWindows#b4ea8da02e437e22",
+      "module": "gui_api",
+      "symbol": "CloseAllWindows",
+      "qualified_name": "gui_api.CloseAllWindows",
+      "overload": "gui_api.CloseAllWindows#b4ea8da02e437e22",
+      "signature": "gui_api.CloseAllWindows() -> int",
+      "domain": "gui",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "gui_api_reference.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/gui_api_reference.rst.txt",
+          "sha256": "707245798c3351e85ad883f4b343ba9cd9f422b7b13a302db9f23c9ba3d5f53b",
+          "line": 162,
+          "block": 11
+        },
+        {
+          "source_id": "gui_api_reference.html",
+          "url": "https://developer.clo3d.com/gui_api_reference.html",
+          "sha256": "8b34f236abc73263e13c5899c93ab08278c1d5f506e2d4b4de3b1f0cd62c3b53",
+          "line": 263,
+          "block": 11,
+          "anchor": "windows-and-dock-panels"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "gui_api.CloseAllWindows",
+      "documentation_issues": [],
+      "review_gates": [
+        "external-global-lifecycle"
+      ]
+    },
+    {
+      "id": "gui_api.CloseWindow#ce9594ad2801434c",
+      "module": "gui_api",
+      "symbol": "CloseWindow",
+      "qualified_name": "gui_api.CloseWindow",
+      "overload": "gui_api.CloseWindow#ce9594ad2801434c",
+      "signature": "gui_api.CloseWindow(windowHandle: int) -> bool",
+      "domain": "gui",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "gui_api_reference.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/gui_api_reference.rst.txt",
+          "sha256": "707245798c3351e85ad883f4b343ba9cd9f422b7b13a302db9f23c9ba3d5f53b",
+          "line": 150,
+          "block": 10
+        },
+        {
+          "source_id": "gui_api_reference.html",
+          "url": "https://developer.clo3d.com/gui_api_reference.html",
+          "sha256": "8b34f236abc73263e13c5899c93ab08278c1d5f506e2d4b4de3b1f0cd62c3b53",
+          "line": 252,
+          "block": 10,
+          "anchor": "windows-and-dock-panels"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "gui_api.CloseWindow",
+      "documentation_issues": [],
+      "review_gates": [
+        "external-global-lifecycle"
+      ]
+    },
+    {
+      "id": "gui_api.CreateDockPanel#557e8cc2f95afa01",
+      "module": "gui_api",
+      "symbol": "CreateDockPanel",
+      "qualified_name": "gui_api.CreateDockPanel",
+      "overload": "gui_api.CreateDockPanel#557e8cc2f95afa01",
+      "signature": "gui_api.CreateDockPanel(title: str, side: str = \"right\", name: str = \"\") -> int",
+      "domain": "gui",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "gui_api_reference.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/gui_api_reference.rst.txt",
+          "sha256": "707245798c3351e85ad883f4b343ba9cd9f422b7b13a302db9f23c9ba3d5f53b",
+          "line": 124,
+          "block": 8
+        },
+        {
+          "source_id": "gui_api_reference.html",
+          "url": "https://developer.clo3d.com/gui_api_reference.html",
+          "sha256": "8b34f236abc73263e13c5899c93ab08278c1d5f506e2d4b4de3b1f0cd62c3b53",
+          "line": 228,
+          "block": 8,
+          "anchor": "windows-and-dock-panels"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "gui_api.CreateDockPanel",
+      "documentation_issues": [],
+      "review_gates": [
+        "external-global-lifecycle"
+      ]
+    },
+    {
+      "id": "gui_api.CreateToolWindow#26c980e27c5b5740",
+      "module": "gui_api",
+      "symbol": "CreateToolWindow",
+      "qualified_name": "gui_api.CreateToolWindow",
+      "overload": "gui_api.CreateToolWindow#26c980e27c5b5740",
+      "signature": "gui_api.CreateToolWindow(title: str, width: int = 400, height: int = 300) -> int",
+      "domain": "gui",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "gui_api_reference.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/gui_api_reference.rst.txt",
+          "sha256": "707245798c3351e85ad883f4b343ba9cd9f422b7b13a302db9f23c9ba3d5f53b",
+          "line": 110,
+          "block": 7
+        },
+        {
+          "source_id": "gui_api_reference.html",
+          "url": "https://developer.clo3d.com/gui_api_reference.html",
+          "sha256": "8b34f236abc73263e13c5899c93ab08278c1d5f506e2d4b4de3b1f0cd62c3b53",
+          "line": 215,
+          "block": 7,
+          "anchor": "windows-and-dock-panels"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "gui_api.CreateToolWindow",
+      "documentation_issues": [],
+      "review_gates": [
+        "external-global-lifecycle"
+      ]
+    },
+    {
+      "id": "gui_api.GetWidgetSelectedIndex#d26578d2c4d87c74",
+      "module": "gui_api",
+      "symbol": "GetWidgetSelectedIndex",
+      "qualified_name": "gui_api.GetWidgetSelectedIndex",
+      "overload": "gui_api.GetWidgetSelectedIndex#d26578d2c4d87c74",
+      "signature": "gui_api.GetWidgetSelectedIndex(handle: int) -> int",
+      "domain": "gui",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "gui_api_reference.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/gui_api_reference.rst.txt",
+          "sha256": "707245798c3351e85ad883f4b343ba9cd9f422b7b13a302db9f23c9ba3d5f53b",
+          "line": 524,
+          "block": 36
+        },
+        {
+          "source_id": "gui_api_reference.html",
+          "url": "https://developer.clo3d.com/gui_api_reference.html",
+          "sha256": "8b34f236abc73263e13c5899c93ab08278c1d5f506e2d4b4de3b1f0cd62c3b53",
+          "line": 599,
+          "block": 36,
+          "anchor": "reading-and-changing-widgets"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "gui_api.GetWidgetSelectedIndex",
+      "documentation_issues": [],
+      "review_gates": [
+        "external-global-lifecycle"
+      ]
+    },
+    {
+      "id": "gui_api.GetWidgetValue#5191beafe97ff04e",
+      "module": "gui_api",
+      "symbol": "GetWidgetValue",
+      "qualified_name": "gui_api.GetWidgetValue",
+      "overload": "gui_api.GetWidgetValue#5191beafe97ff04e",
+      "signature": "gui_api.GetWidgetValue(handle: int) -> str",
+      "domain": "gui",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "gui_api_reference.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/gui_api_reference.rst.txt",
+          "sha256": "707245798c3351e85ad883f4b343ba9cd9f422b7b13a302db9f23c9ba3d5f53b",
+          "line": 499,
+          "block": 34
+        },
+        {
+          "source_id": "gui_api_reference.html",
+          "url": "https://developer.clo3d.com/gui_api_reference.html",
+          "sha256": "8b34f236abc73263e13c5899c93ab08278c1d5f506e2d4b4de3b1f0cd62c3b53",
+          "line": 576,
+          "block": 34,
+          "anchor": "reading-and-changing-widgets"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "gui_api.GetWidgetValue",
+      "documentation_issues": [],
+      "review_gates": [
+        "external-global-lifecycle"
+      ]
+    },
+    {
+      "id": "gui_api.IsGuiAvailable#954a8c41be0ef7a1",
+      "module": "gui_api",
+      "symbol": "IsGuiAvailable",
+      "qualified_name": "gui_api.IsGuiAvailable",
+      "overload": "gui_api.IsGuiAvailable#954a8c41be0ef7a1",
+      "signature": "gui_api.IsGuiAvailable() -> bool",
+      "domain": "gui",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "gui_api_reference.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/gui_api_reference.rst.txt",
+          "sha256": "707245798c3351e85ad883f4b343ba9cd9f422b7b13a302db9f23c9ba3d5f53b",
+          "line": 21,
+          "block": 1
+        },
+        {
+          "source_id": "gui_api_reference.html",
+          "url": "https://developer.clo3d.com/gui_api_reference.html",
+          "sha256": "8b34f236abc73263e13c5899c93ab08278c1d5f506e2d4b4de3b1f0cd62c3b53",
+          "line": 133,
+          "block": 1,
+          "anchor": "availability"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "gui_api.IsGuiAvailable",
+      "documentation_issues": [],
+      "review_gates": [
+        "external-global-lifecycle"
+      ]
+    },
+    {
+      "id": "gui_api.SetTableRows#ca79e9cf35a09997",
+      "module": "gui_api",
+      "symbol": "SetTableRows",
+      "qualified_name": "gui_api.SetTableRows",
+      "overload": "gui_api.SetTableRows#ca79e9cf35a09997",
+      "signature": "gui_api.SetTableRows(handle: int, rows: list[list[str]]) -> bool",
+      "domain": "gui",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "gui_api_reference.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/gui_api_reference.rst.txt",
+          "sha256": "707245798c3351e85ad883f4b343ba9cd9f422b7b13a302db9f23c9ba3d5f53b",
+          "line": 562,
+          "block": 39
+        },
+        {
+          "source_id": "gui_api_reference.html",
+          "url": "https://developer.clo3d.com/gui_api_reference.html",
+          "sha256": "8b34f236abc73263e13c5899c93ab08278c1d5f506e2d4b4de3b1f0cd62c3b53",
+          "line": 634,
+          "block": 39,
+          "anchor": "reading-and-changing-widgets"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [
+        {
+          "name": "CloApiGuiChoiceResult",
+          "basis": "documentation_mention",
+          "status": "resolved",
+          "type_id": "type:CloApiGuiChoiceResult"
+        },
+        {
+          "name": "CloApiGuiFormField",
+          "basis": "documentation_mention",
+          "status": "resolved",
+          "type_id": "type:CloApiGuiFormField"
+        },
+        {
+          "name": "CloApiGuiFormResult",
+          "basis": "documentation_mention",
+          "status": "resolved",
+          "type_id": "type:CloApiGuiFormResult"
+        },
+        {
+          "name": "CloApiGuiTextResult",
+          "basis": "documentation_mention",
+          "status": "resolved",
+          "type_id": "type:CloApiGuiTextResult"
+        }
+      ],
+      "official_record_id": "gui_api.SetTableRows",
+      "documentation_issues": [],
+      "review_gates": [
+        "binding-types",
+        "external-global-lifecycle"
+      ]
+    },
+    {
+      "id": "gui_api.SetWidgetEnabled#59383b92f72c303d",
+      "module": "gui_api",
+      "symbol": "SetWidgetEnabled",
+      "qualified_name": "gui_api.SetWidgetEnabled",
+      "overload": "gui_api.SetWidgetEnabled#59383b92f72c303d",
+      "signature": "gui_api.SetWidgetEnabled(handle: int, enabled: bool) -> bool",
+      "domain": "gui",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "gui_api_reference.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/gui_api_reference.rst.txt",
+          "sha256": "707245798c3351e85ad883f4b343ba9cd9f422b7b13a302db9f23c9ba3d5f53b",
+          "line": 473,
+          "block": 32
+        },
+        {
+          "source_id": "gui_api_reference.html",
+          "url": "https://developer.clo3d.com/gui_api_reference.html",
+          "sha256": "8b34f236abc73263e13c5899c93ab08278c1d5f506e2d4b4de3b1f0cd62c3b53",
+          "line": 552,
+          "block": 32,
+          "anchor": "reading-and-changing-widgets"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "gui_api.SetWidgetEnabled",
+      "documentation_issues": [],
+      "review_gates": [
+        "external-global-lifecycle"
+      ]
+    },
+    {
+      "id": "gui_api.SetWidgetItems#f9c92129f200c8f1",
+      "module": "gui_api",
+      "symbol": "SetWidgetItems",
+      "qualified_name": "gui_api.SetWidgetItems",
+      "overload": "gui_api.SetWidgetItems#f9c92129f200c8f1",
+      "signature": "gui_api.SetWidgetItems(handle: int, items: list[str]) -> bool",
+      "domain": "gui",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "gui_api_reference.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/gui_api_reference.rst.txt",
+          "sha256": "707245798c3351e85ad883f4b343ba9cd9f422b7b13a302db9f23c9ba3d5f53b",
+          "line": 549,
+          "block": 38
+        },
+        {
+          "source_id": "gui_api_reference.html",
+          "url": "https://developer.clo3d.com/gui_api_reference.html",
+          "sha256": "8b34f236abc73263e13c5899c93ab08278c1d5f506e2d4b4de3b1f0cd62c3b53",
+          "line": 622,
+          "block": 38,
+          "anchor": "reading-and-changing-widgets"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "gui_api.SetWidgetItems",
+      "documentation_issues": [],
+      "review_gates": [
+        "external-global-lifecycle"
+      ]
+    },
+    {
+      "id": "gui_api.SetWidgetSelectedIndex#73a119c1a72333c7",
+      "module": "gui_api",
+      "symbol": "SetWidgetSelectedIndex",
+      "qualified_name": "gui_api.SetWidgetSelectedIndex",
+      "overload": "gui_api.SetWidgetSelectedIndex#73a119c1a72333c7",
+      "signature": "gui_api.SetWidgetSelectedIndex(handle: int, index: int) -> bool",
+      "domain": "gui",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "gui_api_reference.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/gui_api_reference.rst.txt",
+          "sha256": "707245798c3351e85ad883f4b343ba9cd9f422b7b13a302db9f23c9ba3d5f53b",
+          "line": 536,
+          "block": 37
+        },
+        {
+          "source_id": "gui_api_reference.html",
+          "url": "https://developer.clo3d.com/gui_api_reference.html",
+          "sha256": "8b34f236abc73263e13c5899c93ab08278c1d5f506e2d4b4de3b1f0cd62c3b53",
+          "line": 610,
+          "block": 37,
+          "anchor": "reading-and-changing-widgets"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "gui_api.SetWidgetSelectedIndex",
+      "documentation_issues": [],
+      "review_gates": [
+        "external-global-lifecycle"
+      ]
+    },
+    {
+      "id": "gui_api.SetWidgetText#ef4512cd19933a33",
+      "module": "gui_api",
+      "symbol": "SetWidgetText",
+      "qualified_name": "gui_api.SetWidgetText",
+      "overload": "gui_api.SetWidgetText#ef4512cd19933a33",
+      "signature": "gui_api.SetWidgetText(handle: int, text: str) -> bool",
+      "domain": "gui",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "gui_api_reference.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/gui_api_reference.rst.txt",
+          "sha256": "707245798c3351e85ad883f4b343ba9cd9f422b7b13a302db9f23c9ba3d5f53b",
+          "line": 255,
+          "block": 18
+        },
+        {
+          "source_id": "gui_api_reference.html",
+          "url": "https://developer.clo3d.com/gui_api_reference.html",
+          "sha256": "8b34f236abc73263e13c5899c93ab08278c1d5f506e2d4b4de3b1f0cd62c3b53",
+          "line": 348,
+          "block": 18,
+          "anchor": "text-and-buttons"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "gui_api.SetWidgetText",
+      "documentation_issues": [],
+      "review_gates": [
+        "external-global-lifecycle"
+      ]
+    },
+    {
+      "id": "gui_api.SetWidgetValue#c99d01215e044229",
+      "module": "gui_api",
+      "symbol": "SetWidgetValue",
+      "qualified_name": "gui_api.SetWidgetValue",
+      "overload": "gui_api.SetWidgetValue#c99d01215e044229",
+      "signature": "gui_api.SetWidgetValue(handle: int, value: str) -> bool",
+      "domain": "gui",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "gui_api_reference.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/gui_api_reference.rst.txt",
+          "sha256": "707245798c3351e85ad883f4b343ba9cd9f422b7b13a302db9f23c9ba3d5f53b",
+          "line": 511,
+          "block": 35
+        },
+        {
+          "source_id": "gui_api_reference.html",
+          "url": "https://developer.clo3d.com/gui_api_reference.html",
+          "sha256": "8b34f236abc73263e13c5899c93ab08278c1d5f506e2d4b4de3b1f0cd62c3b53",
+          "line": 587,
+          "block": 35,
+          "anchor": "reading-and-changing-widgets"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "gui_api.SetWidgetValue",
+      "documentation_issues": [],
+      "review_gates": [
+        "external-global-lifecycle"
+      ]
+    },
+    {
+      "id": "gui_api.SetWidgetVisible#8c75c66949b4fab3",
+      "module": "gui_api",
+      "symbol": "SetWidgetVisible",
+      "qualified_name": "gui_api.SetWidgetVisible",
+      "overload": "gui_api.SetWidgetVisible#8c75c66949b4fab3",
+      "signature": "gui_api.SetWidgetVisible(handle: int, visible: bool) -> bool",
+      "domain": "gui",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "gui_api_reference.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/gui_api_reference.rst.txt",
+          "sha256": "707245798c3351e85ad883f4b343ba9cd9f422b7b13a302db9f23c9ba3d5f53b",
+          "line": 486,
+          "block": 33
+        },
+        {
+          "source_id": "gui_api_reference.html",
+          "url": "https://developer.clo3d.com/gui_api_reference.html",
+          "sha256": "8b34f236abc73263e13c5899c93ab08278c1d5f506e2d4b4de3b1f0cd62c3b53",
+          "line": 564,
+          "block": 33,
+          "anchor": "reading-and-changing-widgets"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "gui_api.SetWidgetVisible",
+      "documentation_issues": [],
+      "review_gates": [
+        "external-global-lifecycle"
+      ]
+    },
+    {
+      "id": "gui_api.SetWindowCloseCallback#4d97502886678de5",
+      "module": "gui_api",
+      "symbol": "SetWindowCloseCallback",
+      "qualified_name": "gui_api.SetWindowCloseCallback",
+      "overload": "gui_api.SetWindowCloseCallback#4d97502886678de5",
+      "signature": "gui_api.SetWindowCloseCallback(windowHandle: int, onClose: Callable[[], None]) -> bool",
+      "domain": "gui",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "gui_api_reference.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/gui_api_reference.rst.txt",
+          "sha256": "707245798c3351e85ad883f4b343ba9cd9f422b7b13a302db9f23c9ba3d5f53b",
+          "line": 172,
+          "block": 12
+        },
+        {
+          "source_id": "gui_api_reference.html",
+          "url": "https://developer.clo3d.com/gui_api_reference.html",
+          "sha256": "8b34f236abc73263e13c5899c93ab08278c1d5f506e2d4b4de3b1f0cd62c3b53",
+          "line": 271,
+          "block": 12,
+          "anchor": "windows-and-dock-panels"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "gui_api.SetWindowCloseCallback",
+      "documentation_issues": [],
+      "review_gates": [
+        "external-global-lifecycle"
+      ]
+    },
+    {
+      "id": "gui_api.ShowWindow#0e87343d739440fd",
+      "module": "gui_api",
+      "symbol": "ShowWindow",
+      "qualified_name": "gui_api.ShowWindow",
+      "overload": "gui_api.ShowWindow#0e87343d739440fd",
+      "signature": "gui_api.ShowWindow(windowHandle: int) -> bool",
+      "domain": "gui",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "gui_api_reference.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/gui_api_reference.rst.txt",
+          "sha256": "707245798c3351e85ad883f4b343ba9cd9f422b7b13a302db9f23c9ba3d5f53b",
+          "line": 138,
+          "block": 9
+        },
+        {
+          "source_id": "gui_api_reference.html",
+          "url": "https://developer.clo3d.com/gui_api_reference.html",
+          "sha256": "8b34f236abc73263e13c5899c93ab08278c1d5f506e2d4b4de3b1f0cd62c3b53",
+          "line": 241,
+          "block": 9,
+          "anchor": "windows-and-dock-panels"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [],
+      "official_record_id": "gui_api.ShowWindow",
+      "documentation_issues": [],
+      "review_gates": [
+        "external-global-lifecycle"
+      ]
+    }
+  ]
+}

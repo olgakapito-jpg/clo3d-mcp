@@ -1,0 +1,3264 @@
+{
+  "kind": "methods",
+  "records": [
+    {
+      "id": "export_api.ExportOBJW",
+      "qualified_name": "export_api.ExportOBJW",
+      "module": "export_api",
+      "symbol": "ExportOBJW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportOBJW#e6c759affc992ae3",
+          "signature_normalized": "def ExportOBJW(_filePath : str, _options : ImportExportOption) -> list[str]",
+          "signature_raw": "def ExportOBJW(_filePath : str, _options : ImportExportOption) -> list[str]",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_options : ImportExportOption",
+              "name": "_options",
+              "annotation_raw": "ImportExportOption"
+            }
+          ],
+          "return_raw": "list[str]",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportOBJW(_filePath : str, _options : ImportExportOption) -> list[str]",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export OBJ file\n@param _filePath: output file path\n@param options: If \"options\" is given, it exports OBJ according to options, not allowing user for selecting options in Export Dialog.\n@return Output file paths. It outputs the file paths of an OBJ file and multiple MTL files for colorways. If the value \"bSaveInZip\" in ImportExportOption is true, it outputs a file path of a zipped file. If an error occurs, return empty wstring. If filePath parameter is not given, output files will be created in CLO temporary folder.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 242,
+                  "block": 23
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 356,
+                  "block": 23,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportOBJW(const wstring& _filePath, const Marvelous::ImportExportOption& _options)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export OBJ file\n/// @param _filePath: output file path\n/// @param options: If \"options\" is given, it exports OBJ according to options, not allowing user for selecting options in Export Dialog.\n/// @return Output file paths. It outputs the file paths of an OBJ file and multiple MTL files for colorways. If the value \"bSaveInZip\" in ImportExportOption is true, it outputs a file path of a zipped file. If an error occurs, return empty wstring. If filePath parameter is not given, output files will be created in CLO temporary folder.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 253,
+                    "block": 24
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 367,
+                    "block": 24,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "ImportExportOption",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:ImportExportOption"
+            },
+            {
+              "name": "ImportExportOption",
+              "basis": "documentation_mention",
+              "status": "resolved",
+              "type_id": "type:ImportExportOption"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param _filePath: output file path",
+            "@param options: If \"options\" is given, it exports OBJ according to options, not allowing user for selecting options in Export Dialog."
+          ],
+          "return_docs_raw": [
+            "@return Output file paths. It outputs the file paths of an OBJ file and multiple MTL files for colorways. If the value \"bSaveInZip\" in ImportExportOption is true, it outputs a file path of a zipped file. If an error occurs, return empty wstring. If filePath parameter is not given, output files will be created in CLO temporary folder."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportPOM",
+      "qualified_name": "export_api.ExportPOM",
+      "module": "export_api",
+      "symbol": "ExportPOM",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportPOM#6bb9516b474d8b04",
+          "signature_normalized": "def ExportPOM() -> str",
+          "signature_raw": "def ExportPOM() -> str",
+          "parameters": [],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportPOM() -> str",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export POM\n@return Output file path;output file will be created in CLO temporary folder. If an error occurs, return empty string.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 1682,
+                  "block": 159
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 1864,
+                  "block": 159,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportPOM()",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export POM\n/// @return Output file path;output file will be created in CLO temporary folder. If an error occurs, return empty string.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 1691,
+                    "block": 160
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 1873,
+                    "block": 160,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return Output file path;output file will be created in CLO temporary folder. If an error occurs, return empty string."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "export_api.ExportPOM#760fad61156dfb57",
+          "signature_normalized": "def ExportPOM(_filePath : str) -> str",
+          "signature_raw": "def ExportPOM(_filePath : str) -> str",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportPOM(_filePath : str) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export POM\n@param _filePath: output file path\n@return Output file path. If an error occurs, return empty string.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 1701,
+                  "block": 161
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 1884,
+                  "block": 161,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportPOM(const string& _filePath)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export POM\n/// @param _filePath: output file path\n/// @return Output file path. If an error occurs, return empty string.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 1711,
+                    "block": 162
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 1894,
+                    "block": 162,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath: output file path"
+          ],
+          "return_docs_raw": [
+            "@return Output file path. If an error occurs, return empty string."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "export_api.ExportPOM#e6ed174dbd876449",
+          "signature_normalized": "def ExportPOM(_bInclude3DLength : bool) -> str",
+          "signature_raw": "def ExportPOM(_bInclude3DLength : bool) -> str",
+          "parameters": [
+            {
+              "raw": "_bInclude3DLength : bool",
+              "name": "_bInclude3DLength",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportPOM(_bInclude3DLength : bool) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export POM\n@param _bInclude3DLength: true: include 3D info, false: exclude 3D info\n@return Output file path;output file will be created in CLO temporary folder. If an error occurs, return empty string.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 1743,
+                  "block": 165
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 1928,
+                  "block": 165,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportPOM(bool _bInclude3DLength)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export POM\n/// @param _bInclude3DLength: true: include 3D info, false: exclude 3D info\n/// @return Output file path;output file will be created in CLO temporary folder. If an error occurs, return empty string.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 1753,
+                    "block": 166
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 1938,
+                    "block": 166,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _bInclude3DLength: true: include 3D info, false: exclude 3D info"
+          ],
+          "return_docs_raw": [
+            "@return Output file path;output file will be created in CLO temporary folder. If an error occurs, return empty string."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "export_api.ExportPOM#38aa7cf52f81d2ff",
+          "signature_normalized": "def ExportPOM(_bInclude3DLength : bool, _filePath : str) -> str",
+          "signature_raw": "def ExportPOM(_bInclude3DLength : bool, _filePath : str) -> str",
+          "parameters": [
+            {
+              "raw": "_bInclude3DLength : bool",
+              "name": "_bInclude3DLength",
+              "annotation_raw": "bool"
+            },
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportPOM(_bInclude3DLength : bool, _filePath : str) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export POM\n@param _bInclude3DLength: true: include 3D info, false: exclude 3D info\n@param _filePath: output file path\n@return Output file path. If an error occurs, return empty string.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 1764,
+                  "block": 167
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 1950,
+                  "block": 167,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportPOM(bool _bInclude3DLength, const string& _filePath)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export POM\n/// @param _bInclude3DLength: true: include 3D info, false: exclude 3D info\n/// @param _filePath: output file path\n/// @return Output file path. If an error occurs, return empty string.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 1775,
+                    "block": 168
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 1961,
+                    "block": 168,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _bInclude3DLength: true: include 3D info, false: exclude 3D info",
+            "@param _filePath: output file path"
+          ],
+          "return_docs_raw": [
+            "@return Output file path. If an error occurs, return empty string."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportPOMW",
+      "qualified_name": "export_api.ExportPOMW",
+      "module": "export_api",
+      "symbol": "ExportPOMW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportPOMW#a32424cad3cc15bc",
+          "signature_normalized": "def ExportPOMW(_filePath : str) -> str",
+          "signature_raw": "def ExportPOMW(_filePath : str) -> str",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportPOMW(_filePath : str) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export POM\n@param _filePath: output file path\n@return Output file path. If an error occurs, return empty wstring.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 1722,
+                  "block": 163
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 1906,
+                  "block": 163,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportPOMW(const wstring& _filePath)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export POM\n/// @param _filePath: output file path\n/// @return Output file path. If an error occurs, return empty wstring.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 1732,
+                    "block": 164
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 1916,
+                    "block": 164,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath: output file path"
+          ],
+          "return_docs_raw": [
+            "@return Output file path. If an error occurs, return empty wstring."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "export_api.ExportPOMW#bd993571c787538a",
+          "signature_normalized": "def ExportPOMW(_bInclude3DLength : bool, _filePath : str) -> str",
+          "signature_raw": "def ExportPOMW(_bInclude3DLength : bool, _filePath : str) -> str",
+          "parameters": [
+            {
+              "raw": "_bInclude3DLength : bool",
+              "name": "_bInclude3DLength",
+              "annotation_raw": "bool"
+            },
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportPOMW(_bInclude3DLength : bool, _filePath : str) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export POM\n@param _bInclude3DLength: true: include 3D info, false: exclude 3D info\n@param _filePath: output file path\n@return Output file path. If an error occurs, return empty wstring.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 1787,
+                  "block": 169
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 1974,
+                  "block": 169,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportPOMW(bool _bInclude3DLength, const wstring& _filePath)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export POM\n/// @param _bInclude3DLength: true: include 3D info, false: exclude 3D info\n/// @param _filePath: output file path\n/// @return Output file path. If an error occurs, return empty wstring.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 1798,
+                    "block": 170
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 1985,
+                    "block": 170,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _bInclude3DLength: true: include 3D info, false: exclude 3D info",
+            "@param _filePath: output file path"
+          ],
+          "return_docs_raw": [
+            "@return Output file path. If an error occurs, return empty wstring."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportPose",
+      "qualified_name": "export_api.ExportPose",
+      "module": "export_api",
+      "symbol": "ExportPose",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportPose#36f46178265958f0",
+          "signature_normalized": "def ExportPose() -> str",
+          "signature_raw": "def ExportPose() -> str",
+          "parameters": [],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportPose() -> str",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export Pose file in the CLO temporary folder\n@return Output file path. If an error occurs, return empty string. Output files will be created in CLO temporary folder.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 2042,
+                  "block": 191
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 2240,
+                  "block": 191,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportPose()",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export Pose file in the CLO temporary folder\n/// @return Output file path. If an error occurs, return empty string. Output files will be created in CLO temporary folder.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 2051,
+                    "block": 192
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 2249,
+                    "block": 192,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return Output file path. If an error occurs, return empty string. Output files will be created in CLO temporary folder."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "export_api.ExportPose#dd6c9c276ce63a51",
+          "signature_normalized": "def ExportPose(_filePath : str) -> str",
+          "signature_raw": "def ExportPose(_filePath : str) -> str",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportPose(_filePath : str) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export Pose file\n@param string _filePath : target file path in ASCII\n@return Output file path. If an error occurs, return empty string.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 2061,
+                  "block": 193
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 2260,
+                  "block": 193,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportPose(const string& _filePath)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export Pose file\n/// @param string _filePath : target file path in ASCII\n/// @return Output file path. If an error occurs, return empty string.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 2071,
+                    "block": 194
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 2270,
+                    "block": 194,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param string _filePath : target file path in ASCII"
+          ],
+          "return_docs_raw": [
+            "@return Output file path. If an error occurs, return empty string."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportPoseW",
+      "qualified_name": "export_api.ExportPoseW",
+      "module": "export_api",
+      "symbol": "ExportPoseW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportPoseW#490e72bd7851dae3",
+          "signature_normalized": "def ExportPoseW(_filePath : str) -> str",
+          "signature_raw": "def ExportPoseW(_filePath : str) -> str",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportPoseW(_filePath : str) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export Pose file\n@param wstring _filePath : target file path in UNICODE\n@return Output file path. If an error occurs, return empty wstring.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 2082,
+                  "block": 195
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 2282,
+                  "block": 195,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportPoseW(const wstring& _filePath)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export Pose file\n/// @param wstring _filePath : target file path in UNICODE\n/// @return Output file path. If an error occurs, return empty wstring.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 2092,
+                    "block": 196
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 2292,
+                    "block": 196,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param wstring _filePath : target file path in UNICODE"
+          ],
+          "return_docs_raw": [
+            "@return Output file path. If an error occurs, return empty wstring."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportRenderingImage",
+      "qualified_name": "export_api.ExportRenderingImage",
+      "module": "export_api",
+      "symbol": "ExportRenderingImage",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportRenderingImage#139f34c570a44e97",
+          "signature_normalized": "def ExportRenderingImage(_filePath : str, _bRenderAllColorways : bool, _startIndex : int) -> list[ list [ str ] ]",
+          "signature_raw": "def ExportRenderingImage(_filePath : str, _bRenderAllColorways : bool, _startIndex : int) -> list[ list [ str ] ]",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_bRenderAllColorways : bool",
+              "name": "_bRenderAllColorways",
+              "annotation_raw": "bool"
+            },
+            {
+              "raw": "_startIndex : int",
+              "name": "_startIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "list[ list [ str ] ]",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportRenderingImage(_filePath : str, _bRenderAllColorways : bool, _startIndex : int) -> list[ list [ str ] ]",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export Rendering Image.\n@param _filePath: output file path\n@param _bRenderAllColorways: If true, output the images for all colorways. Otherwise, it returns the images for the current colorway specified by CLO user.\n@param _startIndex : Specifies the starting index for turntable rendering.\n@return Return the list of the path of output files per colorway.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 747,
+                  "block": 69
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 884,
+                  "block": 69,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportRenderingImage(const string& _filePath, bool _bRenderAllColorways)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export Rendering Image.\n/// @param _filePath: output file path\n/// @param _bRenderAllColorways: If true, output the images for all colorways. Otherwise, it returns the images for the current colorway specified by CLO user.\n/// @param _startIndex : Specifies the starting index for turntable rendering.\n/// @return Return the list of the path of output files per colorway.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 759,
+                    "block": 70
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 896,
+                    "block": 70,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath: output file path",
+            "@param _bRenderAllColorways: If true, output the images for all colorways. Otherwise, it returns the images for the current colorway specified by CLO user.",
+            "@param _startIndex : Specifies the starting index for turntable rendering."
+          ],
+          "return_docs_raw": [
+            "@return Return the list of the path of output files per colorway."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "export_api.ExportRenderingImage#e60749e6f3530c2c",
+          "signature_normalized": "def ExportRenderingImage(_filePath : str, _startIndex : int) -> list[ list [ str ] ]",
+          "signature_raw": "def ExportRenderingImage(_filePath : str, _startIndex : int) -> list[ list [ str ] ]",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_startIndex : int",
+              "name": "_startIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "list[ list [ str ] ]",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportRenderingImage(_filePath : str, _startIndex : int) -> list[ list [ str ] ]",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export Rendering Image.\n@param _filePath: output file path\n@param _startIndex : Specifies the starting index for turntable rendering.\n@return Return the list of the path of output files per colorway.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 772,
+                  "block": 71
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 910,
+                  "block": 71,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportRenderingImage(const string& _filePath)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export Rendering Image.\n/// @param _filePath: output file path\n/// @param _startIndex : Specifies the starting index for turntable rendering.\n/// @return Return the list of the path of output files per colorway.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 783,
+                    "block": 72
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 921,
+                    "block": 72,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath: output file path",
+            "@param _startIndex : Specifies the starting index for turntable rendering."
+          ],
+          "return_docs_raw": [
+            "@return Return the list of the path of output files per colorway."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "export_api.ExportRenderingImage#1d29c752fb034d60",
+          "signature_normalized": "def ExportRenderingImage(_bRenderAllColorways : bool, _startIndex : int) -> list[ list [ str ] ]",
+          "signature_raw": "def ExportRenderingImage(_bRenderAllColorways : bool, _startIndex : int) -> list[ list [ str ] ]",
+          "parameters": [
+            {
+              "raw": "_bRenderAllColorways : bool",
+              "name": "_bRenderAllColorways",
+              "annotation_raw": "bool"
+            },
+            {
+              "raw": "_startIndex : int",
+              "name": "_startIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "list[ list [ str ] ]",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportRenderingImage(_bRenderAllColorways : bool, _startIndex : int) -> list[ list [ str ] ]",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export Rendering Image.\n@param _bRenderAllColorways: If true, output the images for all colorways. Otherwise, it returns the images for the current colorway specified by CLO user.\n@param _startIndex : Specifies the starting index for turntable rendering.\n@return Return the list of the path of output files per colorway. \n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 795,
+                  "block": 73
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 934,
+                  "block": 73,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportRenderingImage(bool _bRenderAllColorways)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export Rendering Image.\n/// @param _bRenderAllColorways: If true, output the images for all colorways. Otherwise, it returns the images for the current colorway specified by CLO user.\n/// @param _startIndex : Specifies the starting index for turntable rendering.\n/// @return Return the list of the path of output files per colorway.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 806,
+                    "block": 74
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 945,
+                    "block": 74,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _bRenderAllColorways: If true, output the images for all colorways. Otherwise, it returns the images for the current colorway specified by CLO user.",
+            "@param _startIndex : Specifies the starting index for turntable rendering."
+          ],
+          "return_docs_raw": [
+            "@return Return the list of the path of output files per colorway. "
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportRenderingImageForCustomView",
+      "qualified_name": "export_api.ExportRenderingImageForCustomView",
+      "module": "export_api",
+      "symbol": "ExportRenderingImageForCustomView",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportRenderingImageForCustomView#9d9c54c5b63b15f5",
+          "signature_normalized": "def ExportRenderingImageForCustomView(_filePath : str, _customViewIndex : int, _colorwayIndex : int) -> str",
+          "signature_raw": "def ExportRenderingImageForCustomView(_filePath : str, _customViewIndex : int, _colorwayIndex : int) -> str",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_customViewIndex : int",
+              "name": "_customViewIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportRenderingImageForCustomView(_filePath : str, _customViewIndex : int, _colorwayIndex : int) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Renders and exports exactly ONE Custom View - addressed by its index in the project's Custom View\nlist - for exactly ONE colorway. No other configured output view of the project is rendered and no\nother file is written.\n@param _filePath: output image path including the extension (.png / .jpg), e.g. \"C:/out/front.png\".\n@param _customViewIndex: Custom View index, 0 to (number of Custom Views - 1). See GetCustomViewInformation().\n@param _colorwayIndex: colorway index (0 to n-1). -1, or any out-of-range index, uses the current colorway.\n@return The written image path, or an empty string on failure - index out of range, no Custom View exists,\nno colorway, a render already in progress, or a build without the V-Ray renderer. Nothing is\nrendered and no file is written in any of those cases.\n@note The image is written to _filePath exactly as given - unlike ExportRenderingImage, the Custom View\nname is NOT appended to the file name. The returned path is still the authoritative one.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 2605,
+                  "block": 241
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 2828,
+                  "block": 241,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportRenderingImageForCustomView(const std::string& _filePath, int _customViewIndex, int _colorwayIndex)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Renders and exports exactly ONE Custom View - addressed by its index in the project's Custom View\n/// list - for exactly ONE colorway. No other configured output view of the project is rendered and no\n/// other file is written.\n/// @param _filePath: output image path including the extension (.png / .jpg), e.g. \"C:/out/front.png\".\n/// @param _customViewIndex: Custom View index, 0 to (number of Custom Views - 1). See GetCustomViewInformation().\n/// @param _colorwayIndex: colorway index (0 to n-1). -1, or any out-of-range index, uses the current colorway.\n/// @return The written image path, or an empty string on failure - index out of range, no Custom View exists,\n/// no colorway, a render already in progress, or a build without the V-Ray renderer. Nothing is\n/// rendered and no file is written in any of those cases.\n/// @note The image is written to _filePath exactly as given - unlike ExportRenderingImage, the Custom View\n/// name is NOT appended to the file name. The returned path is still the authoritative one.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 2623,
+                    "block": 242
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 2846,
+                    "block": 242,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath: output image path including the extension (.png / .jpg), e.g. \"C:/out/front.png\".",
+            "@param _customViewIndex: Custom View index, 0 to (number of Custom Views - 1). See GetCustomViewInformation().",
+            "@param _colorwayIndex: colorway index (0 to n-1). -1, or any out-of-range index, uses the current colorway."
+          ],
+          "return_docs_raw": [
+            "@return The written image path, or an empty string on failure - index out of range, no Custom View exists,"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "export_api.ExportRenderingImageForCustomView#c18cc448d4bf7ec3",
+          "signature_normalized": "def ExportRenderingImageForCustomView(_filePath : str, _customViewName : str, _colorwayIndex : int) -> str",
+          "signature_raw": "def ExportRenderingImageForCustomView(_filePath : str, _customViewName : str, _colorwayIndex : int) -> str",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_customViewName : str",
+              "name": "_customViewName",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportRenderingImageForCustomView(_filePath : str, _customViewName : str, _colorwayIndex : int) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Overload of ExportRenderingImageForCustomView that addresses the Custom View by NAME instead of by\nindex. The first view whose name matches exactly (case-sensitive) is rendered; everything else is\nidentical to the index overload.\n@param _filePath: output image path including the extension (.png / .jpg).\n@param _customViewName: Custom View name as reported by GetCustomViewInformation(), e.g. \"Custom_View_2\".\n@param _colorwayIndex: colorway index (0 to n-1). -1, or any out-of-range index, uses the current colorway.\n@return The written image path, or an empty string when no Custom View carries that name (or on render failure).\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 2642,
+                  "block": 243
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 2866,
+                  "block": 243,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportRenderingImageForCustomView(const std::string& _filePath, const std::string& _customViewName, int _colorwayIndex)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Overload of ExportRenderingImageForCustomView that addresses the Custom View by NAME instead of by\n/// index. The first view whose name matches exactly (case-sensitive) is rendered; everything else is\n/// identical to the index overload.\n/// @param _filePath: output image path including the extension (.png / .jpg).\n/// @param _customViewName: Custom View name as reported by GetCustomViewInformation(), e.g. \"Custom_View_2\".\n/// @param _colorwayIndex: colorway index (0 to n-1). -1, or any out-of-range index, uses the current colorway.\n/// @return The written image path, or an empty string when no Custom View carries that name (or on render failure).",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 2656,
+                    "block": 244
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 2880,
+                    "block": 244,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath: output image path including the extension (.png / .jpg).",
+            "@param _customViewName: Custom View name as reported by GetCustomViewInformation(), e.g. \"Custom_View_2\".",
+            "@param _colorwayIndex: colorway index (0 to n-1). -1, or any out-of-range index, uses the current colorway."
+          ],
+          "return_docs_raw": [
+            "@return The written image path, or an empty string when no Custom View carries that name (or on render failure)."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportRenderingImageForZcmrFile",
+      "qualified_name": "export_api.ExportRenderingImageForZcmrFile",
+      "module": "export_api",
+      "symbol": "ExportRenderingImageForZcmrFile",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportRenderingImageForZcmrFile#c6cf472afd1c7225",
+          "signature_normalized": "def ExportRenderingImageForZcmrFile(_filePath : str, _zcmrFilePath : str, _colorwayIndex : int) -> str",
+          "signature_raw": "def ExportRenderingImageForZcmrFile(_filePath : str, _zcmrFilePath : str, _colorwayIndex : int) -> str",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_zcmrFilePath : str",
+              "name": "_zcmrFilePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportRenderingImageForZcmrFile(_filePath : str, _zcmrFilePath : str, _colorwayIndex : int) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Renders and exports one view taken from an external .zcmr camera file, for exactly ONE colorway.\nThe .zcmr does not have to correspond to any Custom View saved in the project, so this also works on\na project that has no Custom Views at all. As with ExportRenderingImageForCustomView, no other\nconfigured output view is rendered and no other file is written.\n@param _filePath: output image path including the extension (.png / .jpg).\n@param _zcmrFilePath: path to the .zcmr camera file.\n@param _colorwayIndex: colorway index (0 to n-1). -1, or any out-of-range index, uses the current colorway.\n@return The written image path, or an empty string when the .zcmr is missing or unreadable (or on render failure).\n@note The .zcmr is loaded AS a Custom View so that its saved display state (.cds) is applied exactly as it\nwould be for a view already in the project - rendering a view from its .zcmr therefore matches\nrendering the same view by index or name. The temporary view is removed before returning, leaving the\nproject's Custom View list unchanged.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 2671,
+                  "block": 245
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 2896,
+                  "block": 245,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportRenderingImageForZcmrFile(const std::string& _filePath, const std::string& _zcmrFilePath, int _colorwayIndex)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Renders and exports one view taken from an external .zcmr camera file, for exactly ONE colorway.\n/// The .zcmr does not have to correspond to any Custom View saved in the project, so this also works on\n/// a project that has no Custom Views at all. As with ExportRenderingImageForCustomView, no other\n/// configured output view is rendered and no other file is written.\n/// @param _filePath: output image path including the extension (.png / .jpg).\n/// @param _zcmrFilePath: path to the .zcmr camera file.\n/// @param _colorwayIndex: colorway index (0 to n-1). -1, or any out-of-range index, uses the current colorway.\n/// @return The written image path, or an empty string when the .zcmr is missing or unreadable (or on render failure).\n/// @note The .zcmr is loaded AS a Custom View so that its saved display state (.cds) is applied exactly as it\n/// would be for a view already in the project - rendering a view from its .zcmr therefore matches\n/// rendering the same view by index or name. The temporary view is removed before returning, leaving the\n/// project's Custom View list unchanged.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 2690,
+                    "block": 246
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 2915,
+                    "block": 246,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath: output image path including the extension (.png / .jpg).",
+            "@param _zcmrFilePath: path to the .zcmr camera file.",
+            "@param _colorwayIndex: colorway index (0 to n-1). -1, or any out-of-range index, uses the current colorway."
+          ],
+          "return_docs_raw": [
+            "@return The written image path, or an empty string when the .zcmr is missing or unreadable (or on render failure)."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportRenderingImageW",
+      "qualified_name": "export_api.ExportRenderingImageW",
+      "module": "export_api",
+      "symbol": "ExportRenderingImageW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportRenderingImageW#964b316b68dc7067",
+          "signature_normalized": "def ExportRenderingImageW(_filePath : str, _bRenderAllColorways : bool, _startIndex : int) -> list[ list [ str ] ]",
+          "signature_raw": "def ExportRenderingImageW(_filePath : str, _bRenderAllColorways : bool, _startIndex : int) -> list[ list [ str ] ]",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_bRenderAllColorways : bool",
+              "name": "_bRenderAllColorways",
+              "annotation_raw": "bool"
+            },
+            {
+              "raw": "_startIndex : int",
+              "name": "_startIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "list[ list [ str ] ]",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportRenderingImageW(_filePath : str, _bRenderAllColorways : bool, _startIndex : int) -> list[ list [ str ] ]",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export Rendering Image.\n@param _filePath: output file path\n@param _bRenderAllColorways: If true, output the images for all colorways. Otherwise, it returns the images for the current colorway specified by CLO user.\n@param _startIndex : Specifies the starting index for turntable rendering.\n@return Return the list of the path of output files per colorway. \n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 818,
+                  "block": 75
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 958,
+                  "block": 75,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportRenderingImageW(const wstring& _filePath, bool _bRenderAllColorways)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export Rendering Image.\n/// @param _filePath: output file path\n/// @param _bRenderAllColorways: If true, output the images for all colorways. Otherwise, it returns the images for the current colorway specified by CLO user.\n/// @param _startIndex : Specifies the starting index for turntable rendering.\n/// @return Return the list of the path of output files per colorway.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 830,
+                    "block": 76
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 970,
+                    "block": 76,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath: output file path",
+            "@param _bRenderAllColorways: If true, output the images for all colorways. Otherwise, it returns the images for the current colorway specified by CLO user.",
+            "@param _startIndex : Specifies the starting index for turntable rendering."
+          ],
+          "return_docs_raw": [
+            "@return Return the list of the path of output files per colorway. "
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportSingleColorwayRenderingImage",
+      "qualified_name": "export_api.ExportSingleColorwayRenderingImage",
+      "module": "export_api",
+      "symbol": "ExportSingleColorwayRenderingImage",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportSingleColorwayRenderingImage#5e9ef93ac1bef446",
+          "signature_normalized": "def ExportSingleColorwayRenderingImage(_filePath : str, _colorwayIndex : int, _startIndex : int) -> list [ str ]",
+          "signature_raw": "def ExportSingleColorwayRenderingImage(_filePath : str, _colorwayIndex : int, _startIndex : int) -> list [ str ]",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_startIndex : int",
+              "name": "_startIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "list [ str ]",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportSingleColorwayRenderingImage(_filePath : str, _colorwayIndex : int, _startIndex : int) -> list [ str ]",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export Rendering Image for the colorway\n@param _filePath: output file path\n@param _colorwayIndex: colorway index to render the image\n@param _startIndex : Specifies the starting index for turntable rendering.\n@return Return the list of the path of output files\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 843,
+                  "block": 77
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 984,
+                  "block": 77,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportSingleColorwayRenderingImage(const string& _filePath, unsigned int _colorwayIndex)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export Rendering Image for the colorway\n/// @param _filePath: output file path\n/// @param _colorwayIndex: colorway index to render the image\n/// @param _startIndex : Specifies the starting index for turntable rendering.\n/// @return Return the list of the path of output files",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 855,
+                    "block": 78
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 996,
+                    "block": 78,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath: output file path",
+            "@param _colorwayIndex: colorway index to render the image",
+            "@param _startIndex : Specifies the starting index for turntable rendering."
+          ],
+          "return_docs_raw": [
+            "@return Return the list of the path of output files"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "export_api.ExportSingleColorwayRenderingImage#0025f76c9ebd39ae",
+          "signature_normalized": "def ExportSingleColorwayRenderingImage(_colorwayIndex : int, _startIndex : int) -> list [ str ]",
+          "signature_raw": "def ExportSingleColorwayRenderingImage(_colorwayIndex : int, _startIndex : int) -> list [ str ]",
+          "parameters": [
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_startIndex : int",
+              "name": "_startIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "list [ str ]",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportSingleColorwayRenderingImage(_colorwayIndex : int, _startIndex : int) -> list [ str ]",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export Rendering Image for the colorway\n@param _colorwayIndex: colorway index to render the image\n@param _startIndex : Specifies the starting index for turntable rendering.\n@return Return the list of the path of output files; output files will be created in CLO temporary folder.              \n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 868,
+                  "block": 79
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 1010,
+                  "block": 79,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportSingleColorwayRenderingImage(unsigned int _colorwayIndex)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export Rendering Image for the colorway\n/// @param _colorwayIndex: colorway index to render the image\n/// @param _startIndex : Specifies the starting index for turntable rendering.\n/// @return Return the list of the path of output files; output files will be created in CLO temporary folder.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 879,
+                    "block": 80
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 1021,
+                    "block": 80,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _colorwayIndex: colorway index to render the image",
+            "@param _startIndex : Specifies the starting index for turntable rendering."
+          ],
+          "return_docs_raw": [
+            "@return Return the list of the path of output files; output files will be created in CLO temporary folder.              "
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportSingleColorwayRenderingImageW",
+      "qualified_name": "export_api.ExportSingleColorwayRenderingImageW",
+      "module": "export_api",
+      "symbol": "ExportSingleColorwayRenderingImageW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportSingleColorwayRenderingImageW#12c0223489f26ce9",
+          "signature_normalized": "def ExportSingleColorwayRenderingImageW(_filePath : str, _colorwayIndex : int, _startIndex : int) -> list [ str ]",
+          "signature_raw": "def ExportSingleColorwayRenderingImageW(_filePath : str, _colorwayIndex : int, _startIndex : int) -> list [ str ]",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_startIndex : int",
+              "name": "_startIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "list [ str ]",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportSingleColorwayRenderingImageW(_filePath : str, _colorwayIndex : int, _startIndex : int) -> list [ str ]",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export Rendering Image for the colorway\n@param _filePath: output file path\n@param _colorwayIndex: colorway index to render the image\n/// @param _startIndex : Specifies the starting index for turntable rendering.\n@return Return the list of the path of output files             \n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 891,
+                  "block": 81
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 1034,
+                  "block": 81,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportSingleColorwayRenderingImageW(const wstring& _filePath, unsigned int _colorwayIndex)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export Rendering Image for the colorway\n/// @param _filePath: output file path\n/// @param _colorwayIndex: colorway index to render the image\n/// /// @param _startIndex : Specifies the starting index for turntable rendering.\n/// @return Return the list of the path of output files",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 903,
+                    "block": 82
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 1046,
+                    "block": 82,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath: output file path",
+            "@param _colorwayIndex: colorway index to render the image"
+          ],
+          "return_docs_raw": [
+            "@return Return the list of the path of output files             "
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportSnapshot2D",
+      "qualified_name": "export_api.ExportSnapshot2D",
+      "module": "export_api",
+      "symbol": "ExportSnapshot2D",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportSnapshot2D#530fe61a2dad904e",
+          "signature_normalized": "def ExportSnapshot2D(_filePath : str, SnapShotMode : int) -> list[str]",
+          "signature_raw": "def ExportSnapshot2D(_filePath : str, SnapShotMode : int) -> list[str]",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "SnapShotMode : int",
+              "name": "SnapShotMode",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "list[str]",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportSnapshot2D(_filePath : str, SnapShotMode : int) -> list[str]",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Captures and exports a snapshot of the 2D Window.\n@param _filePath: The file path where the snapshot image will be saved (including file name and extension).\n@param SnapShotMode: Specifies the capture mode (0: Captures the 2D Window in Simulation Mode, 1: Captures the 2D Window in Print Layout Mode).\n@return A list of the exported image file paths. Returns an empty vector if an error occurs.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 2559,
+                  "block": 237
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 2780,
+                  "block": 237,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportSnapshot2D(const std::string& _filePath, int SnapShotMode)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Captures and exports a snapshot of the 2D Window.\n/// @param _filePath: The file path where the snapshot image will be saved (including file name and extension).\n/// @param SnapShotMode: Specifies the capture mode (0: Captures the 2D Window in Simulation Mode, 1: Captures the 2D Window in Print Layout Mode).\n/// @return A list of the exported image file paths. Returns an empty vector if an error occurs.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 2570,
+                    "block": 238
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 2791,
+                    "block": 238,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath: The file path where the snapshot image will be saved (including file name and extension).",
+            "@param SnapShotMode: Specifies the capture mode (0: Captures the 2D Window in Simulation Mode, 1: Captures the 2D Window in Print Layout Mode)."
+          ],
+          "return_docs_raw": [
+            "@return A list of the exported image file paths. Returns an empty vector if an error occurs."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportSnapshot3D",
+      "qualified_name": "export_api.ExportSnapshot3D",
+      "module": "export_api",
+      "symbol": "ExportSnapshot3D",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportSnapshot3D#5caf6a2e008ab268",
+          "signature_normalized": "def ExportSnapshot3D(_filePath : str) -> list[ list [ str ] ]",
+          "signature_raw": "def ExportSnapshot3D(_filePath : str) -> list[ list [ str ] ]",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "list[ list [ str ] ]",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportSnapshot3D(_filePath : str) -> list[ list [ str ] ]",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export snapshot images. This function displays the same dialog as CLO so that users can configure the snapshots. If user turns on the option \"Save Separate Images\", then series of images will be saved with the name followed by the postfix \"_01\", \"_02\", ...\n@param _filePath: output file path to save the screenshot\n@return Return the list of the path of output files per colorway. The first item of each array is the file path of the unified image. If filePath parameter is not given, output files will be created in CLO temporary folder.         \n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 632,
+                  "block": 59
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 764,
+                  "block": 59,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportSnapshot3D(const string& _filePath)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export snapshot images. This function displays the same dialog as CLO so that users can configure the snapshots. If user turns on the option \"Save Separate Images\", then series of images will be saved with the name followed by the postfix \"_01\", \"_02\", ...\n/// @param _filePath: output file path to save the screenshot\n/// @return Return the list of the path of output files per colorway. The first item of each array is the file path of the unified image. If filePath parameter is not given, output files will be created in CLO temporary folder.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 642,
+                    "block": 60
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 774,
+                    "block": 60,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath: output file path to save the screenshot"
+          ],
+          "return_docs_raw": [
+            "@return Return the list of the path of output files per colorway. The first item of each array is the file path of the unified image. If filePath parameter is not given, output files will be created in CLO temporary folder.         "
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "export_api.ExportSnapshot3D#accfb043eae60ce1",
+          "signature_normalized": "def ExportSnapshot3D() -> list[ list [ str ] ]",
+          "signature_raw": "def ExportSnapshot3D() -> list[ list [ str ] ]",
+          "parameters": [],
+          "return_raw": "list[ list [ str ] ]",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportSnapshot3D() -> list[ list [ str ] ]",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export snapshot images. This function displays the same dialog as CLO so that users can configure the snapshots. If user turns on the option \"Save Separate Images\", then series of images will be saved with the name followed by the postfix \"_01\", \"_02\", ...                         \n@return Return the list of the path of output files per colorway. The first item of each array is the file path of the unified image. If filePath parameter is not given, output files will be created in CLO temporary folder.         \n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 653,
+                  "block": 61
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 786,
+                  "block": 61,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportSnapshot3D()",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export snapshot images. This function displays the same dialog as CLO so that users can configure the snapshots. If user turns on the option \"Save Separate Images\", then series of images will be saved with the name followed by the postfix \"_01\", \"_02\", ...                             \n/// @return Return the list of the path of output files per colorway. The first item of each array is the file path of the unified image. If filePath parameter is not given, output files will be created in CLO temporary folder.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 662,
+                    "block": 62
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 795,
+                    "block": 62,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return Return the list of the path of output files per colorway. The first item of each array is the file path of the unified image. If filePath parameter is not given, output files will be created in CLO temporary folder.         "
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportSnapshot3DW",
+      "qualified_name": "export_api.ExportSnapshot3DW",
+      "module": "export_api",
+      "symbol": "ExportSnapshot3DW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportSnapshot3DW#dee1f1ffe3c610ed",
+          "signature_normalized": "def ExportSnapshot3DW(_filePath : str) -> list[ list [ str ] ]",
+          "signature_raw": "def ExportSnapshot3DW(_filePath : str) -> list[ list [ str ] ]",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "list[ list [ str ] ]",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportSnapshot3DW(_filePath : str) -> list[ list [ str ] ]",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export snapshot images. This function displays the same dialog as CLO so that users can configure the snapshots. If user turns on the option \"Save Separate Images\", then series of images will be saved with the name followed by the postfix \"_01\", \"_02\", ...\n@param _filePath: output file path to save the screenshot\n@return Return the list of the path of output files per colorway. The first item of each array is the file path of the unified image. If filePath parameter is not given, output files will be created in CLO temporary folder.         \n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 672,
+                  "block": 63
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 806,
+                  "block": 63,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportSnapshot3DW(const wstring& _filePath)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export snapshot images. This function displays the same dialog as CLO so that users can configure the snapshots. If user turns on the option \"Save Separate Images\", then series of images will be saved with the name followed by the postfix \"_01\", \"_02\", ...\n/// @param _filePath: output file path to save the screenshot\n/// @return Return the list of the path of output files per colorway. The first item of each array is the file path of the unified image. If filePath parameter is not given, output files will be created in CLO temporary folder.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 682,
+                    "block": 64
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 816,
+                    "block": 64,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath: output file path to save the screenshot"
+          ],
+          "return_docs_raw": [
+            "@return Return the list of the path of output files per colorway. The first item of each array is the file path of the unified image. If filePath parameter is not given, output files will be created in CLO temporary folder.         "
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportStdViewImage",
+      "qualified_name": "export_api.ExportStdViewImage",
+      "module": "export_api",
+      "symbol": "ExportStdViewImage",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportStdViewImage#2ce7c75f152758d9",
+          "signature_normalized": "def ExportStdViewImage(_viewIndex : int, _outputFolderPath : str, _colorwayIndex : int, _width : int, _height : int) -> str",
+          "signature_raw": "def ExportStdViewImage(_viewIndex : int, _outputFolderPath : str, _colorwayIndex : int, _width : int, _height : int) -> str",
+          "parameters": [
+            {
+              "raw": "_viewIndex : int",
+              "name": "_viewIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_outputFolderPath : str",
+              "name": "_outputFolderPath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_width : int",
+              "name": "_width",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_height : int",
+              "name": "_height",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportStdViewImage(_viewIndex : int, _outputFolderPath : str, _colorwayIndex : int, _width : int, _height : int) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief ExportStdViewImage : Exports The Image based on the given Standard image view index for selected colorway.\n@param : \n@return Output file path along with the selected colorway name. If an error occurs, return error message string. \n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 2235,
+                  "block": 209
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 2442,
+                  "block": 209,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportStdViewImage(int _viewIndex, const std::string& _outputFolderPath, int _colorwayIndex, int _width, int _height)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief ExportStdViewImage : Exports The Image based on the given Standard image view index for selected colorway.\n/// @param : \n/// @return Output file path along with the selected colorway name. If an error occurs, return error message string.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 2245,
+                    "block": 210
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 2452,
+                    "block": 210,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param : "
+          ],
+          "return_docs_raw": [
+            "@return Output file path along with the selected colorway name. If an error occurs, return error message string. "
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "export_api.ExportStdViewImage#b0dc5b52561ec70e",
+          "signature_normalized": "def ExportStdViewImage(_viewIndex : int, _outputFolderPath : str, _colorwayIndex : int, _width : int, _height : int, _bFitAllObjects : bool) -> str",
+          "signature_raw": "def ExportStdViewImage(_viewIndex : int, _outputFolderPath : str, _colorwayIndex : int, _width : int, _height : int, _bFitAllObjects : bool) -> str",
+          "parameters": [
+            {
+              "raw": "_viewIndex : int",
+              "name": "_viewIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_outputFolderPath : str",
+              "name": "_outputFolderPath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_width : int",
+              "name": "_width",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_height : int",
+              "name": "_height",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_bFitAllObjects : bool",
+              "name": "_bFitAllObjects",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportStdViewImage(_viewIndex : int, _outputFolderPath : str, _colorwayIndex : int, _width : int, _height : int, _bFitAllObjects : bool) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief ExportStdViewImage : Exports the image for the given standard view index with a framing choice. By default (and in the 5-argument overload) the camera is fitted to the garment patterns only; pass _bFitAllObjects=true to fit the whole scene including the avatar. Standard view indexes: 0=Bottom, 1=FrontRight, 2=Front, 3=FrontLeft, 4=Right, 5=Top, 6=Left, 7=Custom, 8=Back.\n@param _viewIndex: standard view index (0=Bottom, 1=FrontRight, 2=Front, 3=FrontLeft, 4=Right, 5=Top, 6=Left, 7=Custom, 8=Back)\n@param _outputFolderPath: output file path including the image extension\n@param _colorwayIndex: colorway index to export\n@param _width: image width for the snapshot\n@param _height: image height for the snapshot\n@param _bFitAllObjects: true = frame the whole scene (avatar + garment); false = frame the garment patterns only (same as the 5-argument overload)\n@return Output file path along with the selected colorway name. If an error occurs, return error message string.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 2256,
+                  "block": 211
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 2464,
+                  "block": 211,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportStdViewImage(int _viewIndex, const std::string& _outputFolderPath, int _colorwayIndex, int _width, int _height, bool _bFitAllObjects)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief ExportStdViewImage : Exports the image for the given standard view index with a framing choice. By default (and in the 5-argument overload) the camera is fitted to the garment patterns only; pass _bFitAllObjects=true to fit the whole scene including the avatar. Standard view indexes: 0=Bottom, 1=FrontRight, 2=Front, 3=FrontLeft, 4=Right, 5=Top, 6=Left, 7=Custom, 8=Back.\n/// @param _viewIndex: standard view index (0=Bottom, 1=FrontRight, 2=Front, 3=FrontLeft, 4=Right, 5=Top, 6=Left, 7=Custom, 8=Back)\n/// @param _outputFolderPath: output file path including the image extension\n/// @param _colorwayIndex: colorway index to export\n/// @param _width: image width for the snapshot\n/// @param _height: image height for the snapshot\n/// @param _bFitAllObjects: true = frame the whole scene (avatar + garment); false = frame the garment patterns only (same as the 5-argument overload)\n/// @return Output file path along with the selected colorway name. If an error occurs, return error message string.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 2271,
+                    "block": 212
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 2479,
+                    "block": 212,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _viewIndex: standard view index (0=Bottom, 1=FrontRight, 2=Front, 3=FrontLeft, 4=Right, 5=Top, 6=Left, 7=Custom, 8=Back)",
+            "@param _outputFolderPath: output file path including the image extension",
+            "@param _colorwayIndex: colorway index to export",
+            "@param _width: image width for the snapshot",
+            "@param _height: image height for the snapshot",
+            "@param _bFitAllObjects: true = frame the whole scene (avatar + garment); false = frame the garment patterns only (same as the 5-argument overload)"
+          ],
+          "return_docs_raw": [
+            "@return Output file path along with the selected colorway name. If an error occurs, return error message string."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportStdViewImageForAllColorways",
+      "qualified_name": "export_api.ExportStdViewImageForAllColorways",
+      "module": "export_api",
+      "symbol": "ExportStdViewImageForAllColorways",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportStdViewImageForAllColorways#e78d4877d069e37a",
+          "signature_normalized": "def ExportStdViewImageForAllColorways(_viewIndex : int, _outputFolderPath : str, _width : int, _height : int) -> str",
+          "signature_raw": "def ExportStdViewImageForAllColorways(_viewIndex : int, _outputFolderPath : str, _width : int, _height : int) -> str",
+          "parameters": [
+            {
+              "raw": "_viewIndex : int",
+              "name": "_viewIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_outputFolderPath : str",
+              "name": "_outputFolderPath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_width : int",
+              "name": "_width",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_height : int",
+              "name": "_height",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportStdViewImageForAllColorways(_viewIndex : int, _outputFolderPath : str, _width : int, _height : int) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief ExportStdViewImageForAllColorways : Exports The Image based on the given Standard image view index for all Colorways.\n@param : \n@return Output file paths along with the colorway names. If an error occurs, return error message string. \n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 2287,
+                  "block": 213
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 2496,
+                  "block": 213,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportStdViewImageForAllColorways(int _viewIndex, const std::string& _outputFolderPath, int _width, int _height)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief ExportStdViewImageForAllColorways : Exports The Image based on the given Standard image view index for all Colorways.\n/// @param : \n/// @return Output file paths along with the colorway names. If an error occurs, return error message string.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 2297,
+                    "block": 214
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 2506,
+                    "block": 214,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param : "
+          ],
+          "return_docs_raw": [
+            "@return Output file paths along with the colorway names. If an error occurs, return error message string. "
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportTechPack",
+      "qualified_name": "export_api.ExportTechPack",
+      "module": "export_api",
+      "symbol": "ExportTechPack",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportTechPack#08785cf3820a8430",
+          "signature_normalized": "def ExportTechPack(_filePath : str, _exportOption : ExportTechpackOption) -> None",
+          "signature_raw": "def ExportTechPack(_filePath : str, _exportOption : ExportTechpackOption) -> None",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_exportOption : ExportTechpackOption",
+              "name": "_exportOption",
+              "annotation_raw": "ExportTechpackOption"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportTechPack(_filePath : str, _exportOption : ExportTechpackOption) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export Tech Pack data in json file and associated image files.\n@param _filePath: output filepath; the filePath Should be given in \"*.json\" format\n@param _exportOption: options to export techpack(.json) file\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 445,
+                  "block": 41
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 568,
+                  "block": 41,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportTechPack(const string& _filePath, const Marvelous::ExportTechpackOption& _exportOption)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export Tech Pack data in json file and associated image files.\n/// @param _filePath: output filepath; the filePath Should be given in \"*.json\" format\n/// @param _exportOption: options to export techpack(.json) file",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 455,
+                    "block": 42
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 578,
+                    "block": 42,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "ExportTechpackOption",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:ExportTechpackOption"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param _filePath: output filepath; the filePath Should be given in \"*.json\" format",
+            "@param _exportOption: options to export techpack(.json) file"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportTechPackToStream",
+      "qualified_name": "export_api.ExportTechPackToStream",
+      "module": "export_api",
+      "symbol": "ExportTechPackToStream",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportTechPackToStream#f0a556e19574aef2",
+          "signature_normalized": "def ExportTechPackToStream(_outputImageFolderPath : str) -> str",
+          "signature_raw": "def ExportTechPackToStream(_outputImageFolderPath : str) -> str",
+          "parameters": [
+            {
+              "raw": "_outputImageFolderPath : str",
+              "name": "_outputImageFolderPath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportTechPackToStream(_outputImageFolderPath : str) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export Tech Pack data in string and associated image files.\n@param _outputImageFolderPath: get output folder path where the image files are located by ExportTechpack\n@return Output stream for JSON data with the output folder path at the first line. If an error occurs, return empty string.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 487,
+                  "block": 45
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 612,
+                  "block": 45,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportTechPackToStream(string& _outputImageFolderPath)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export Tech Pack data in string and associated image files.\n/// @param _outputImageFolderPath: get output folder path where the image files are located by ExportTechpack\n/// @return Output stream for JSON data with the output folder path at the first line. If an error occurs, return empty string.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 497,
+                    "block": 46
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 622,
+                    "block": 46,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _outputImageFolderPath: get output folder path where the image files are located by ExportTechpack"
+          ],
+          "return_docs_raw": [
+            "@return Output stream for JSON data with the output folder path at the first line. If an error occurs, return empty string."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportTechPackToStreamW",
+      "qualified_name": "export_api.ExportTechPackToStreamW",
+      "module": "export_api",
+      "symbol": "ExportTechPackToStreamW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportTechPackToStreamW#18497726ed78098b",
+          "signature_normalized": "def ExportTechPackToStreamW(_outputImageFolderPath : str) -> str",
+          "signature_raw": "def ExportTechPackToStreamW(_outputImageFolderPath : str) -> str",
+          "parameters": [
+            {
+              "raw": "_outputImageFolderPath : str",
+              "name": "_outputImageFolderPath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportTechPackToStreamW(_outputImageFolderPath : str) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export Tech Pack data in string and associated image files.\n@param _outputImageFolderPath: get output folder path where the image files are located by ExportTechpack\n@return Output stream for JSON data with the output folder path at the first line. If an error occurs, return empty wstring.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 508,
+                  "block": 47
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 634,
+                  "block": 47,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportTechPackToStreamW(wstring& _outputImageFolderPath)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export Tech Pack data in string and associated image files.\n/// @param _outputImageFolderPath: get output folder path where the image files are located by ExportTechpack\n/// @return Output stream for JSON data with the output folder path at the first line. If an error occurs, return empty wstring.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 518,
+                    "block": 48
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 644,
+                    "block": 48,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _outputImageFolderPath: get output folder path where the image files are located by ExportTechpack"
+          ],
+          "return_docs_raw": [
+            "@return Output stream for JSON data with the output folder path at the first line. If an error occurs, return empty wstring."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportTechPackW",
+      "qualified_name": "export_api.ExportTechPackW",
+      "module": "export_api",
+      "symbol": "ExportTechPackW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportTechPackW#c4f9c422ca67b5cf",
+          "signature_normalized": "def ExportTechPackW(_filepath : str, _exportOption : ExportTechpackOption) -> None",
+          "signature_raw": "def ExportTechPackW(_filepath : str, _exportOption : ExportTechpackOption) -> None",
+          "parameters": [
+            {
+              "raw": "_filepath : str",
+              "name": "_filepath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_exportOption : ExportTechpackOption",
+              "name": "_exportOption",
+              "annotation_raw": "ExportTechpackOption"
+            }
+          ],
+          "return_raw": "None",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportTechPackW(_filepath : str, _exportOption : ExportTechpackOption) -> None",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export Tech Pack data in json file and associated image files.\n@param _filePath: output filepath; the filePath Should be given in \"*.json\" format\n@param _exportOption: options to export techpack(.json) file\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 466,
+                  "block": 43
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 590,
+                  "block": 43,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportTechPackW(const wstring& _filepath, const Marvelous::ExportTechpackOption& _exportOption)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export Tech Pack data in json file and associated image files.\n/// @param _filePath: output filepath; the filePath Should be given in \"*.json\" format\n/// @param _exportOption: options to export techpack(.json) file",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 476,
+                    "block": 44
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 600,
+                    "block": 44,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "ExportTechpackOption",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:ExportTechpackOption"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param _filePath: output filepath; the filePath Should be given in \"*.json\" format",
+            "@param _exportOption: options to export techpack(.json) file"
+          ],
+          "return_docs_raw": [],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportThumbnail2D",
+      "qualified_name": "export_api.ExportThumbnail2D",
+      "module": "export_api",
+      "symbol": "ExportThumbnail2D",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportThumbnail2D#6ab265bff49edaf2",
+          "signature_normalized": "def ExportThumbnail2D(_filePath : str) -> str",
+          "signature_raw": "def ExportThumbnail2D(_filePath : str) -> str",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportThumbnail2D(_filePath : str) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Capture the 2D window exactly as it is displayed (current camera, zoom and view size) and save it as an image. Unlike ExportSnapshot2D it does not enter the snapshot mode and does not re-frame the patterns, so the image matches what the user sees.\n@param _filePath: output file path to save the screenshot (PNG or JPEG chosen by the extension)\n@return Output file path. If an error occurs, return empty string. Needs the 2D window, so it returns an empty string in headless mode.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 590,
+                  "block": 55
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 720,
+                  "block": 55,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportThumbnail2D(const std::string& _filePath)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Capture the 2D window exactly as it is displayed (current camera, zoom and view size) and save it as an image. Unlike ExportSnapshot2D it does not enter the snapshot mode and does not re-frame the patterns, so the image matches what the user sees.\n/// @param _filePath: output file path to save the screenshot (PNG or JPEG chosen by the extension)\n/// @return Output file path. If an error occurs, return empty string. Needs the 2D window, so it returns an empty string in headless mode.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 600,
+                    "block": 56
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 730,
+                    "block": 56,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath: output file path to save the screenshot (PNG or JPEG chosen by the extension)"
+          ],
+          "return_docs_raw": [
+            "@return Output file path. If an error occurs, return empty string. Needs the 2D window, so it returns an empty string in headless mode."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportThumbnail3D",
+      "qualified_name": "export_api.ExportThumbnail3D",
+      "module": "export_api",
+      "symbol": "ExportThumbnail3D",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportThumbnail3D#4b7eaed205ca5b50",
+          "signature_normalized": "def ExportThumbnail3D() -> str",
+          "signature_raw": "def ExportThumbnail3D() -> str",
+          "parameters": [],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportThumbnail3D() -> str",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export thumbnail of the current scene\n@return Output file path: output files will be created in CLO temporary folder.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 529,
+                  "block": 49
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 656,
+                  "block": 49,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportThumbnail3D()",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export thumbnail of the current scene\n/// @return Output file path: output files will be created in CLO temporary folder.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 538,
+                    "block": 50
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 665,
+                    "block": 50,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return Output file path: output files will be created in CLO temporary folder."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "export_api.ExportThumbnail3D#15e9b5d9ba170687",
+          "signature_normalized": "def ExportThumbnail3D(_filePath : str) -> str",
+          "signature_raw": "def ExportThumbnail3D(_filePath : str) -> str",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportThumbnail3D(_filePath : str) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export thumbnail of the current scene in the 3D Windows\n@param _filePath: output file path to save the screenshot\n@return Output file path. If an error occurs, return empty string. \n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 548,
+                  "block": 51
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 676,
+                  "block": 51,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportThumbnail3D(const string& _filePath)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export thumbnail of the current scene in the 3D Windows\n/// @param _filePath: output file path to save the screenshot\n/// @return Output file path. If an error occurs, return empty string.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 558,
+                    "block": 52
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 686,
+                    "block": 52,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath: output file path to save the screenshot"
+          ],
+          "return_docs_raw": [
+            "@return Output file path. If an error occurs, return empty string. "
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportThumbnail3DByColorwayIndex",
+      "qualified_name": "export_api.ExportThumbnail3DByColorwayIndex",
+      "module": "export_api",
+      "symbol": "ExportThumbnail3DByColorwayIndex",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportThumbnail3DByColorwayIndex#d1f206fc428ea0e3",
+          "signature_normalized": "def ExportThumbnail3DByColorwayIndex(_colorwayIndex : int) -> str",
+          "signature_raw": "def ExportThumbnail3DByColorwayIndex(_colorwayIndex : int) -> str",
+          "parameters": [
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportThumbnail3DByColorwayIndex(_colorwayIndex : int) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export thumbnail of the current scene\n@param _colorwayIndex: colorway index to render the image\n@return Output file path: output files will be created in CLO temporary folder.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 1894,
+                  "block": 179
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 2086,
+                  "block": 179,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportThumbnail3DByColorwayIndex(unsigned int _colorwayIndex)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export thumbnail of the current scene\n/// @param _colorwayIndex: colorway index to render the image\n/// @return Output file path: output files will be created in CLO temporary folder.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 1904,
+                    "block": 180
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 2096,
+                    "block": 180,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _colorwayIndex: colorway index to render the image"
+          ],
+          "return_docs_raw": [
+            "@return Output file path: output files will be created in CLO temporary folder."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "export_api.ExportThumbnail3DByColorwayIndex#b2ec0861caaca4f4",
+          "signature_normalized": "def ExportThumbnail3DByColorwayIndex(_filePath : str, _colorwayIndex : int) -> str",
+          "signature_raw": "def ExportThumbnail3DByColorwayIndex(_filePath : str, _colorwayIndex : int) -> str",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportThumbnail3DByColorwayIndex(_filePath : str, _colorwayIndex : int) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export thumbnail of the current scene in the 3D Windows\n@param _filePath: output file path to save the screenshot\n@param _colorwayIndex: colorway index to render the image\n@return Output file path. If an error occurs, return empty string. \n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 1915,
+                  "block": 181
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 2108,
+                  "block": 181,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportThumbnail3DByColorwayIndex(const string& _filePath, unsigned int _colorwayIndex)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export thumbnail of the current scene in the 3D Windows\n/// @param _filePath: output file path to save the screenshot\n/// @param _colorwayIndex: colorway index to render the image\n/// @return Output file path. If an error occurs, return empty string.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 1926,
+                    "block": 182
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 2119,
+                    "block": 182,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath: output file path to save the screenshot",
+            "@param _colorwayIndex: colorway index to render the image"
+          ],
+          "return_docs_raw": [
+            "@return Output file path. If an error occurs, return empty string. "
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportThumbnail3DW",
+      "qualified_name": "export_api.ExportThumbnail3DW",
+      "module": "export_api",
+      "symbol": "ExportThumbnail3DW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportThumbnail3DW#1cec3ac04edaf326",
+          "signature_normalized": "def ExportThumbnail3DW(_filePath : str) -> str",
+          "signature_raw": "def ExportThumbnail3DW(_filePath : str) -> str",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportThumbnail3DW(_filePath : str) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export thumbnail of the current scene in the 3D Windows\n@param _filePath: output file path to save the screenshot\n@return Output file path. If an error occurs, return empty wstring.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 569,
+                  "block": 53
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 698,
+                  "block": 53,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportThumbnail3DW(const wstring& _filePath)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export thumbnail of the current scene in the 3D Windows\n/// @param _filePath: output file path to save the screenshot\n/// @return Output file path. If an error occurs, return empty wstring.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 579,
+                    "block": 54
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 708,
+                    "block": 54,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath: output file path to save the screenshot"
+          ],
+          "return_docs_raw": [
+            "@return Output file path. If an error occurs, return empty wstring."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportThumbnail3DWByColorwayIndexW",
+      "qualified_name": "export_api.ExportThumbnail3DWByColorwayIndexW",
+      "module": "export_api",
+      "symbol": "ExportThumbnail3DWByColorwayIndexW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportThumbnail3DWByColorwayIndexW#3769746ff43a954d",
+          "signature_normalized": "def ExportThumbnail3DWByColorwayIndexW(_filePath : str, _colorwayIndex : int) -> str",
+          "signature_raw": "def ExportThumbnail3DWByColorwayIndexW(_filePath : str, _colorwayIndex : int) -> str",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportThumbnail3DWByColorwayIndexW(_filePath : str, _colorwayIndex : int) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export thumbnail of the current scene in the 3D Windows\n@param _filePath: output file path to save the screenshot\n@param _colorwayIndex: colorway index to render the image\n@return Output file path. If an error occurs, return empty wstring. \n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 1938,
+                  "block": 183
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 2132,
+                  "block": 183,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportThumbnail3DByColorwayIndexW(const wstring& _filePath, unsigned int _colorwayIndex)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export thumbnail of the current scene in the 3D Windows\n/// @param _filePath: output file path to save the screenshot\n/// @param _colorwayIndex: colorway index to render the image\n/// @return Output file path. If an error occurs, return empty wstring.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 1949,
+                    "block": 184
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 2143,
+                    "block": 184,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath: output file path to save the screenshot",
+            "@param _colorwayIndex: colorway index to render the image"
+          ],
+          "return_docs_raw": [
+            "@return Output file path. If an error occurs, return empty wstring. "
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportTopStitchStyle",
+      "qualified_name": "export_api.ExportTopStitchStyle",
+      "module": "export_api",
+      "symbol": "ExportTopStitchStyle",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportTopStitchStyle#460f83d6626624da",
+          "signature_normalized": "def ExportTopStitchStyle(_filePath : str, _topStitchIndex : int) -> str",
+          "signature_raw": "def ExportTopStitchStyle(_filePath : str, _topStitchIndex : int) -> str",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_topStitchIndex : int",
+              "name": "_topStitchIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportTopStitchStyle(_filePath : str, _topStitchIndex : int) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export topstitch style file\n@param _filePath: the output file path to export topstitch style\n@param _topStitchIndex: topstitch style index to export topstitch style\n@return Output file path list. If an error occurs, return empty string.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 2582,
+                  "block": 239
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 2804,
+                  "block": 239,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportTopStitchStyle(const std::string& _filePath, unsigned int _topStitchIndex)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export topstitch style file\n/// @param _filePath: the output file path to export topstitch style\n/// @param _topStitchIndex: topstitch style index to export topstitch style\n/// @return Output file path list. If an error occurs, return empty string.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 2593,
+                    "block": 240
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 2815,
+                    "block": 240,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath: the output file path to export topstitch style",
+            "@param _topStitchIndex: topstitch style index to export topstitch style"
+          ],
+          "return_docs_raw": [
+            "@return Output file path list. If an error occurs, return empty string."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportTrim",
+      "qualified_name": "export_api.ExportTrim",
+      "module": "export_api",
+      "symbol": "ExportTrim",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportTrim#9d21a2fa054ba0fa",
+          "signature_normalized": "def ExportTrim(_filePath : str, _trimStyleIndex : int) -> str",
+          "signature_raw": "def ExportTrim(_filePath : str, _trimStyleIndex : int) -> str",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_trimStyleIndex : int",
+              "name": "_trimStyleIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportTrim(_filePath : str, _trimStyleIndex : int) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export trim file\n@param _filePath: the output file path to export trim\n@param _trimStyleIndex: trimstyle index to export trim style\n@return Output file path list. If an error occurs, return empty string. \n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 2212,
+                  "block": 207
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 2418,
+                  "block": 207,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportTrim(const std::string& _filePath, unsigned int _trimStyleIndex)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export trim file\n/// @param _filePath: the output file path to export trim\n/// @param _trimStyleIndex: trimstyle index to export trim style\n/// @return Output file path list. If an error occurs, return empty string.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 2223,
+                    "block": 208
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 2429,
+                    "block": 208,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath: the output file path to export trim",
+            "@param _trimStyleIndex: trimstyle index to export trim style"
+          ],
+          "return_docs_raw": [
+            "@return Output file path list. If an error occurs, return empty string. "
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportTurntableImages",
+      "qualified_name": "export_api.ExportTurntableImages",
+      "module": "export_api",
+      "symbol": "ExportTurntableImages",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportTurntableImages#a96019f353506127",
+          "signature_normalized": "def ExportTurntableImages(_numberOfImages : int) -> list[str]",
+          "signature_raw": "def ExportTurntableImages(_numberOfImages : int) -> list[str]",
+          "parameters": [
+            {
+              "raw": "_numberOfImages : int",
+              "name": "_numberOfImages",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "list[str]",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportTurntableImages(_numberOfImages : int) -> list[str]",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export turntable images for current colorway.\n@param _numberOfImages: the number of images in 360 turn table. The turn table will turn by (360 / _numberOfImages) per an image each by each.\n@return Output file path list; output files will be created in CLO temporary folder. If an error occurs, return empty string.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 1561,
+                  "block": 149
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 1738,
+                  "block": 149,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportTurntableImages(int _numberOfImages)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export turntable images for current colorway.\n/// @param _numberOfImages: the number of images in 360 turn table. The turn table will turn by (360 / _numberOfImages) per an image each by each.\n/// @return Output file path list; output files will be created in CLO temporary folder. If an error occurs, return empty string.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 1571,
+                    "block": 150
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 1748,
+                    "block": 150,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _numberOfImages: the number of images in 360 turn table. The turn table will turn by (360 / _numberOfImages) per an image each by each."
+          ],
+          "return_docs_raw": [
+            "@return Output file path list; output files will be created in CLO temporary folder. If an error occurs, return empty string."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "export_api.ExportTurntableImages#ee72444547fefad0",
+          "signature_normalized": "def ExportTurntableImages(_filePath : str, _numberOfImages : int, _width : int, _height : int, _startIndex : int) -> list[str]",
+          "signature_raw": "def ExportTurntableImages(_filePath : str, _numberOfImages : int, _width : int, _height : int, _startIndex : int) -> list[str]",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_numberOfImages : int",
+              "name": "_numberOfImages",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_width : int",
+              "name": "_width",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_height : int",
+              "name": "_height",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_startIndex : int",
+              "name": "_startIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "list[str]",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportTurntableImages(_filePath : str, _numberOfImages : int, _width : int, _height : int, _startIndex : int) -> list[str]",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export turntable images for current colorway.\n@param _filePath: the output file path to export the turntable snapshots\n@param _numberOfImages: the number of images in 360 turn table. The turn table will turn by (360 / _numberOfImages) per an image each by each.\n@param _width: image width for the snapshots\n@param _height: image height for the snapshots\n@param _startIndex: specifies the starting index position of the turntable.\n@return Output file path list. If an error occurs, return empty string.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 1582,
+                  "block": 151
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 1760,
+                  "block": 151,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportTurntableImages(const string& _filePath, int _numberOfImages, int _width = 2500, int _height = 2500, int _startIndex = 0)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export turntable images for current colorway.\n/// @param _filePath: the output file path to export the turntable snapshots\n/// @param _numberOfImages: the number of images in 360 turn table. The turn table will turn by (360 / _numberOfImages) per an image each by each.\n/// @param _width: image width for the snapshots\n/// @param _height: image height for the snapshots\n/// @param _startIndex: specifies the starting index position of the turntable.\n/// @return Output file path list. If an error occurs, return empty string.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 1596,
+                    "block": 152
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 1774,
+                    "block": 152,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath: the output file path to export the turntable snapshots",
+            "@param _numberOfImages: the number of images in 360 turn table. The turn table will turn by (360 / _numberOfImages) per an image each by each.",
+            "@param _width: image width for the snapshots",
+            "@param _height: image height for the snapshots",
+            "@param _startIndex: specifies the starting index position of the turntable."
+          ],
+          "return_docs_raw": [
+            "@return Output file path list. If an error occurs, return empty string."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportTurntableImagesByColorwayIndex",
+      "qualified_name": "export_api.ExportTurntableImagesByColorwayIndex",
+      "module": "export_api",
+      "symbol": "ExportTurntableImagesByColorwayIndex",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportTurntableImagesByColorwayIndex#1a8c8b683410d624",
+          "signature_normalized": "def ExportTurntableImagesByColorwayIndex(_numberOfImages : int, _colorwayIndex : int) -> list[str]",
+          "signature_raw": "def ExportTurntableImagesByColorwayIndex(_numberOfImages : int, _colorwayIndex : int) -> list[str]",
+          "parameters": [
+            {
+              "raw": "_numberOfImages : int",
+              "name": "_numberOfImages",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "list[str]",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportTurntableImagesByColorwayIndex(_numberOfImages : int, _colorwayIndex : int) -> list[str]",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export turntable images for colorway.\n@param _numberOfImages: the number of images in 360 turn table. The turn table will turn by (360 / _numberOfImages) per an image each by each.\n@param _colorwayIndex: colorway index to render the image\n@return Output file path list; output files will be created in CLO temporary folder. If an error occurs, return empty string.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 1961,
+                  "block": 185
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 2156,
+                  "block": 185,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportTurntableImagesByColorwayIndex(int _numberOfImages, unsigned int _colorwayIndex)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export turntable images for colorway.\n/// @param _numberOfImages: the number of images in 360 turn table. The turn table will turn by (360 / _numberOfImages) per an image each by each.\n/// @param _colorwayIndex: colorway index to render the image\n/// @return Output file path list; output files will be created in CLO temporary folder. If an error occurs, return empty string.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 1972,
+                    "block": 186
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 2167,
+                    "block": 186,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _numberOfImages: the number of images in 360 turn table. The turn table will turn by (360 / _numberOfImages) per an image each by each.",
+            "@param _colorwayIndex: colorway index to render the image"
+          ],
+          "return_docs_raw": [
+            "@return Output file path list; output files will be created in CLO temporary folder. If an error occurs, return empty string."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "export_api.ExportTurntableImagesByColorwayIndex#ae0c287bc9bed61e",
+          "signature_normalized": "def ExportTurntableImagesByColorwayIndex(_filePath : str, _numberOfImages : int, _colorwayIndex : int, _width : int, _height : int) -> list[str]",
+          "signature_raw": "def ExportTurntableImagesByColorwayIndex(_filePath : str, _numberOfImages : int, _colorwayIndex : int, _width : int, _height : int) -> list[str]",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_numberOfImages : int",
+              "name": "_numberOfImages",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_width : int",
+              "name": "_width",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_height : int",
+              "name": "_height",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "list[str]",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportTurntableImagesByColorwayIndex(_filePath : str, _numberOfImages : int, _colorwayIndex : int, _width : int, _height : int) -> list[str]",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export turntable images for colorway.\n@param _filePath: the output file path to export the turntable snapshots\n@param _numberOfImages: the number of images in 360 turn table. The turn table will turn by (360 / _numberOfImages) per an image each by each.\n@param _colorwayIndex: colorway index to render the image\n@param _width: image width for the snapshots\n@param _height: image height for the snapshots\n@return Output file path list. If an error occurs, return empty string. \n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 1984,
+                  "block": 187
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 2180,
+                  "block": 187,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportTurntableImagesByColorwayIndex(const string& _filePath, int _numberOfImages, unsigned int _colorwayIndex, int _width = 2500, int _height = 2500)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export turntable images for colorway.\n/// @param _filePath: the output file path to export the turntable snapshots\n/// @param _numberOfImages: the number of images in 360 turn table. The turn table will turn by (360 / _numberOfImages) per an image each by each.\n/// @param _colorwayIndex: colorway index to render the image\n/// @param _width: image width for the snapshots\n/// @param _height: image height for the snapshots\n/// @return Output file path list. If an error occurs, return empty string.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 1998,
+                    "block": 188
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 2194,
+                    "block": 188,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath: the output file path to export the turntable snapshots",
+            "@param _numberOfImages: the number of images in 360 turn table. The turn table will turn by (360 / _numberOfImages) per an image each by each.",
+            "@param _colorwayIndex: colorway index to render the image",
+            "@param _width: image width for the snapshots",
+            "@param _height: image height for the snapshots"
+          ],
+          "return_docs_raw": [
+            "@return Output file path list. If an error occurs, return empty string. "
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    }
+  ]
+}

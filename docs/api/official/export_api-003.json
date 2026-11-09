@@ -1,0 +1,2174 @@
+{
+  "kind": "methods",
+  "records": [
+    {
+      "id": "export_api.ExportTurntableImagesByColorwayIndexW",
+      "qualified_name": "export_api.ExportTurntableImagesByColorwayIndexW",
+      "module": "export_api",
+      "symbol": "ExportTurntableImagesByColorwayIndexW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportTurntableImagesByColorwayIndexW#6126ea896629118c",
+          "signature_normalized": "def ExportTurntableImagesByColorwayIndexW(_filePath : str, _numberOfImages : int, _colorwayIndex : int, _width : int, _height : int) -> list[str]",
+          "signature_raw": "def ExportTurntableImagesByColorwayIndexW(_filePath : str, _numberOfImages : int, _colorwayIndex : int, _width : int, _height : int) -> list[str]",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_numberOfImages : int",
+              "name": "_numberOfImages",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_colorwayIndex : int",
+              "name": "_colorwayIndex",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_width : int",
+              "name": "_width",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_height : int",
+              "name": "_height",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "list[str]",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportTurntableImagesByColorwayIndexW(_filePath : str, _numberOfImages : int, _colorwayIndex : int, _width : int, _height : int) -> list[str]",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export turntable images for colorway.\n@param _filePath: the output file path to export the turntable snapshots\n@param _numberOfImages: the number of images in 360 turn table. The turn table will turn by (360 / _numberOfImages) per an image each by each.\n@param _colorwayIndex: colorway index to render the image\n@param _width: image width for the snapshots\n@param _height: image height for the snapshots\n@return Output file path list. If an error occurs, return empty string. \n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 2013,
+                  "block": 189
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 2210,
+                  "block": 189,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportTurntableImagesByColorwayIndexW(const wstring& _filePath, int _numberOfImages, unsigned int _colorwayIndex, int _width = 2500, int _height = 2500)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export turntable images for colorway.\n/// @param _filePath: the output file path to export the turntable snapshots\n/// @param _numberOfImages: the number of images in 360 turn table. The turn table will turn by (360 / _numberOfImages) per an image each by each.\n/// @param _colorwayIndex: colorway index to render the image\n/// @param _width: image width for the snapshots\n/// @param _height: image height for the snapshots\n/// @return Output file path list. If an error occurs, return empty string.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 2027,
+                    "block": 190
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 2224,
+                    "block": 190,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath: the output file path to export the turntable snapshots",
+            "@param _numberOfImages: the number of images in 360 turn table. The turn table will turn by (360 / _numberOfImages) per an image each by each.",
+            "@param _colorwayIndex: colorway index to render the image",
+            "@param _width: image width for the snapshots",
+            "@param _height: image height for the snapshots"
+          ],
+          "return_docs_raw": [
+            "@return Output file path list. If an error occurs, return empty string. "
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportTurntableImagesW",
+      "qualified_name": "export_api.ExportTurntableImagesW",
+      "module": "export_api",
+      "symbol": "ExportTurntableImagesW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportTurntableImagesW#25c4868cfa90693f",
+          "signature_normalized": "def ExportTurntableImagesW(_filePath : str, _numberOfImages : int, _width : int, _height : int, _startIndex : int) -> list[str]",
+          "signature_raw": "def ExportTurntableImagesW(_filePath : str, _numberOfImages : int, _width : int, _height : int, _startIndex : int) -> list[str]",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_numberOfImages : int",
+              "name": "_numberOfImages",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_width : int",
+              "name": "_width",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_height : int",
+              "name": "_height",
+              "annotation_raw": "int"
+            },
+            {
+              "raw": "_startIndex : int",
+              "name": "_startIndex",
+              "annotation_raw": "int"
+            }
+          ],
+          "return_raw": "list[str]",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportTurntableImagesW(_filePath : str, _numberOfImages : int, _width : int, _height : int, _startIndex : int) -> list[str]",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export turntable images for current colorway.\n@param _filePath: the output file path to export the turntable snapshots\n@param _numberOfImages: the number of images in 360 turn table. The turn table will turn by (360 / _numberOfImages) per an image each by each.\n@param _width: image width for the snapshots\n@param _height: image height for the snapshots\n@param _startIndex: specifies the starting index position of the turntable.\n@return Output file path list. If an error occurs, return empty string.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 1611,
+                  "block": 153
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 1790,
+                  "block": 153,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportTurntableImagesW(const wstring& _filePath, int _numberOfImages, int _width = 2500, int _height = 2500, int _startIndex = 0)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export turntable images for current colorway.\n/// @param _filePath: the output file path to export the turntable snapshots\n/// @param _numberOfImages: the number of images in 360 turn table. The turn table will turn by (360 / _numberOfImages) per an image each by each.\n/// @param _width: image width for the snapshots\n/// @param _height: image height for the snapshots\n/// @param _startIndex: specifies the starting index position of the turntable.\n/// @return Output file path list. If an error occurs, return empty string.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 1625,
+                    "block": 154
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 1804,
+                    "block": 154,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath: the output file path to export the turntable snapshots",
+            "@param _numberOfImages: the number of images in 360 turn table. The turn table will turn by (360 / _numberOfImages) per an image each by each.",
+            "@param _width: image width for the snapshots",
+            "@param _height: image height for the snapshots",
+            "@param _startIndex: specifies the starting index position of the turntable."
+          ],
+          "return_docs_raw": [
+            "@return Output file path list. If an error occurs, return empty string."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportTurntableVideo",
+      "qualified_name": "export_api.ExportTurntableVideo",
+      "module": "export_api",
+      "symbol": "ExportTurntableVideo",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportTurntableVideo#44eada6f0787ae61",
+          "signature_normalized": "def ExportTurntableVideo() -> str",
+          "signature_raw": "def ExportTurntableVideo() -> str",
+          "parameters": [],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportTurntableVideo() -> str",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export turntable video. This function requires XVid Mpeg-4 codec installed on user's computer.\n@return Output file path; output files will be created in CLO temporary folder. If an error occurs, return empty string.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 1224,
+                  "block": 115
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 1384,
+                  "block": 115,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportTurntableVideo()",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export turntable video. This function requires XVid Mpeg-4 codec installed on user's computer.\n/// @return Output file path; output files will be created in CLO temporary folder. If an error occurs, return empty string.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 1233,
+                    "block": 116
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 1393,
+                    "block": 116,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return Output file path; output files will be created in CLO temporary folder. If an error occurs, return empty string."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "export_api.ExportTurntableVideo#8a2d2b7e18b5ec7e",
+          "signature_normalized": "def ExportTurntableVideo(_filePath : str) -> str",
+          "signature_raw": "def ExportTurntableVideo(_filePath : str) -> str",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportTurntableVideo(_filePath : str) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export turntable video. This function requires XVid Mpeg-4 codec installed on user's computer.\n@param _filePath \n@return Output file path; output files will be created in CLO temporary folder. If an error occurs, return empty string.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 1243,
+                  "block": 117
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 1404,
+                  "block": 117,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportTurntableVideo(const string& _filePath)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export turntable video. This function requires XVid Mpeg-4 codec installed on user's computer.\n/// @param _filePath \n/// @return Output file path; output files will be created in CLO temporary folder. If an error occurs, return empty string.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 1253,
+                    "block": 118
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 1414,
+                    "block": 118,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath "
+          ],
+          "return_docs_raw": [
+            "@return Output file path; output files will be created in CLO temporary folder. If an error occurs, return empty string."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportTurntableVideoW",
+      "qualified_name": "export_api.ExportTurntableVideoW",
+      "module": "export_api",
+      "symbol": "ExportTurntableVideoW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportTurntableVideoW#842fa75fea94c49c",
+          "signature_normalized": "def ExportTurntableVideoW(_filePath : str) -> str",
+          "signature_raw": "def ExportTurntableVideoW(_filePath : str) -> str",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportTurntableVideoW(_filePath : str) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export turntable video. This function requires XVid Mpeg-4 codec installed on user's computer.\n@return Output file path; output files will be created in CLO temporary folder. If an error occurs, return empty string. \n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 1264,
+                  "block": 119
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 1426,
+                  "block": 119,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportTurntableVideoW(const wstring& _filePath)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export turntable video. This function requires XVid Mpeg-4 codec installed on user's computer.\n/// @return Output file path; output files will be created in CLO temporary folder. If an error occurs, return empty string.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 1273,
+                    "block": 120
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 1435,
+                    "block": 120,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return Output file path; output files will be created in CLO temporary folder. If an error occurs, return empty string. "
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportUSD",
+      "qualified_name": "export_api.ExportUSD",
+      "module": "export_api",
+      "symbol": "ExportUSD",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportUSD#4f1912d862abd409",
+          "signature_normalized": "def ExportUSD(_options : ImportExportOption, _usdOptions : ExportUSDOption) -> list[str]",
+          "signature_raw": "def ExportUSD(_options : ImportExportOption, _usdOptions : ExportUSDOption) -> list[str]",
+          "parameters": [
+            {
+              "raw": "_options : ImportExportOption",
+              "name": "_options",
+              "annotation_raw": "ImportExportOption"
+            },
+            {
+              "raw": "_usdOptions : ExportUSDOption",
+              "name": "_usdOptions",
+              "annotation_raw": "ExportUSDOption"
+            }
+          ],
+          "return_raw": "list[str]",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportUSD(_options : ImportExportOption, _usdOptions : ExportUSDOption) -> list[str]",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export USD file\n@param _options: It exports USD according to options, not allowing user for selecting options in Export Dialog.\n@param _usdOptions: USD-specific export options.\n@return Output file paths. Output files will be created in CLO temporary folder.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 2442,
+                  "block": 227
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 2658,
+                  "block": 227,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportUSD(const Marvelous::ImportExportOption& _options, const Marvelous::ExportUSDOption& _usdOptions)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export USD file\n/// @param _options: It exports USD according to options, not allowing user for selecting options in Export Dialog.\n/// @param _usdOptions: USD-specific export options.\n/// @return Output file paths. Output files will be created in CLO temporary folder.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 2453,
+                    "block": 228
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 2669,
+                    "block": 228,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "ExportUSDOption",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:ExportUSDOption"
+            },
+            {
+              "name": "ImportExportOption",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:ImportExportOption"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param _options: It exports USD according to options, not allowing user for selecting options in Export Dialog.",
+            "@param _usdOptions: USD-specific export options."
+          ],
+          "return_docs_raw": [
+            "@return Output file paths. Output files will be created in CLO temporary folder."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "export_api.ExportUSD#8ef46332055e587f",
+          "signature_normalized": "def ExportUSD(_filePath : str, _options : ImportExportOption, _usdOptions : ExportUSDOption) -> list[str]",
+          "signature_raw": "def ExportUSD(_filePath : str, _options : ImportExportOption, _usdOptions : ExportUSDOption) -> list[str]",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_options : ImportExportOption",
+              "name": "_options",
+              "annotation_raw": "ImportExportOption"
+            },
+            {
+              "raw": "_usdOptions : ExportUSDOption",
+              "name": "_usdOptions",
+              "annotation_raw": "ExportUSDOption"
+            }
+          ],
+          "return_raw": "list[str]",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportUSD(_filePath : str, _options : ImportExportOption, _usdOptions : ExportUSDOption) -> list[str]",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export USD file\n@param _filePath: target file path in ASCII\n@param _options: It exports USD according to options, not allowing user for selecting options in Export Dialog.\n@param _usdOptions: USD-specific export options.\n@return Output file paths.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 2465,
+                  "block": 229
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 2682,
+                  "block": 229,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportUSD(const string& _filePath, const Marvelous::ImportExportOption& _options, const Marvelous::ExportUSDOption& _usdOptions)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export USD file\n/// @param _filePath: target file path in ASCII\n/// @param _options: It exports USD according to options, not allowing user for selecting options in Export Dialog.\n/// @param _usdOptions: USD-specific export options.\n/// @return Output file paths.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 2477,
+                    "block": 230
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 2694,
+                    "block": 230,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "ExportUSDOption",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:ExportUSDOption"
+            },
+            {
+              "name": "ImportExportOption",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:ImportExportOption"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param _filePath: target file path in ASCII",
+            "@param _options: It exports USD according to options, not allowing user for selecting options in Export Dialog.",
+            "@param _usdOptions: USD-specific export options."
+          ],
+          "return_docs_raw": [
+            "@return Output file paths."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportUSDW",
+      "qualified_name": "export_api.ExportUSDW",
+      "module": "export_api",
+      "symbol": "ExportUSDW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportUSDW#35fe21ddcdeddac6",
+          "signature_normalized": "def ExportUSDW(_filePath : str, _options : ImportExportOption, _usdOptions : ExportUSDOption) -> list[str]",
+          "signature_raw": "def ExportUSDW(_filePath : str, _options : ImportExportOption, _usdOptions : ExportUSDOption) -> list[str]",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_options : ImportExportOption",
+              "name": "_options",
+              "annotation_raw": "ImportExportOption"
+            },
+            {
+              "raw": "_usdOptions : ExportUSDOption",
+              "name": "_usdOptions",
+              "annotation_raw": "ExportUSDOption"
+            }
+          ],
+          "return_raw": "list[str]",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportUSDW(_filePath : str, _options : ImportExportOption, _usdOptions : ExportUSDOption) -> list[str]",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export USD file\n@param _filePath: target file path in UNICODE\n@param _options: It exports USD according to options, not allowing user for selecting options in Export Dialog.\n@param _usdOptions: USD-specific export options.\n@return Output file paths.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 2490,
+                  "block": 231
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 2708,
+                  "block": 231,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportUSDW(const wstring& _filePath, const Marvelous::ImportExportOption& _options, const Marvelous::ExportUSDOption& _usdOptions)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export USD file\n/// @param _filePath: target file path in UNICODE\n/// @param _options: It exports USD according to options, not allowing user for selecting options in Export Dialog.\n/// @param _usdOptions: USD-specific export options.\n/// @return Output file paths.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 2502,
+                    "block": 232
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 2720,
+                    "block": 232,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [
+            {
+              "name": "ExportUSDOption",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:ExportUSDOption"
+            },
+            {
+              "name": "ImportExportOption",
+              "basis": "annotation",
+              "status": "resolved",
+              "type_id": "type:ImportExportOption"
+            }
+          ],
+          "parameter_docs_raw": [
+            "@param _filePath: target file path in UNICODE",
+            "@param _options: It exports USD according to options, not allowing user for selecting options in Export Dialog.",
+            "@param _usdOptions: USD-specific export options."
+          ],
+          "return_docs_raw": [
+            "@return Output file paths."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportZCMR",
+      "qualified_name": "export_api.ExportZCMR",
+      "module": "export_api",
+      "symbol": "ExportZCMR",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportZCMR#331ed9796e31267d",
+          "signature_normalized": "def ExportZCMR(_folderPath : str) -> list[str]",
+          "signature_raw": "def ExportZCMR(_folderPath : str) -> list[str]",
+          "parameters": [
+            {
+              "raw": "_folderPath : str",
+              "name": "_folderPath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "list[str]",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportZCMR(_folderPath : str) -> list[str]",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export ZCMR files                \n@param _folderPath: folder path to store the output files\n@return Output file path list. If an error occurs, return empty string.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 2515,
+                  "block": 233
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 2734,
+                  "block": 233,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportZCMR(const std::string& _folderPath)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export ZCMR files            \n/// @param _folderPath: folder path to store the output files\n/// @return Output file path list. If an error occurs, return empty string.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 2525,
+                    "block": 234
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 2744,
+                    "block": 234,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _folderPath: folder path to store the output files"
+          ],
+          "return_docs_raw": [
+            "@return Output file path list. If an error occurs, return empty string."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportZPac",
+      "qualified_name": "export_api.ExportZPac",
+      "module": "export_api",
+      "symbol": "ExportZPac",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportZPac#4a8f2058919ea0a0",
+          "signature_normalized": "def ExportZPac() -> str",
+          "signature_raw": "def ExportZPac() -> str",
+          "parameters": [],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportZPac() -> str",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export ZPac file in the CLO temporary folder\n@return Output file path. If an error occurs, return empty string. If filePath parameter is not given, output files will be created in CLO temporary folder.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 9,
+                  "block": 1
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 112,
+                  "block": 1,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportZPac()",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export ZPac file in the CLO temporary folder\n/// @return Output file path. If an error occurs, return empty string. If filePath parameter is not given, output files will be created in CLO temporary folder.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 18,
+                    "block": 2
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 121,
+                    "block": 2,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return Output file path. If an error occurs, return empty string. If filePath parameter is not given, output files will be created in CLO temporary folder."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "export_api.ExportZPac#0497448ec01e25e1",
+          "signature_normalized": "def ExportZPac(_filePath : str) -> str",
+          "signature_raw": "def ExportZPac(_filePath : str) -> str",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportZPac(_filePath : str) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export ZPac file\n@param string _filePath : target file path in ASCII\n@return Output file path. If an error occurs, return empty string. If filePath parameter is not given, output files will be created in CLO temporary folder.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 28,
+                  "block": 3
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 132,
+                  "block": 3,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportZPac(const string& _filePath)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export ZPac file\n/// @param string _filePath : target file path in ASCII\n/// @return Output file path. If an error occurs, return empty string. If filePath parameter is not given, output files will be created in CLO temporary folder.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 38,
+                    "block": 4
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 142,
+                    "block": 4,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param string _filePath : target file path in ASCII"
+          ],
+          "return_docs_raw": [
+            "@return Output file path. If an error occurs, return empty string. If filePath parameter is not given, output files will be created in CLO temporary folder."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportZPacW",
+      "qualified_name": "export_api.ExportZPacW",
+      "module": "export_api",
+      "symbol": "ExportZPacW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportZPacW#10da0e53a1a5d33d",
+          "signature_normalized": "def ExportZPacW(_filePath : str) -> str",
+          "signature_raw": "def ExportZPacW(_filePath : str) -> str",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportZPacW(_filePath : str) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export ZPac file\n@param wstring _filePath : target file path in UNICODE\n@return Output file path. If an error occurs, return empty string. If filePath parameter is not given, output files will be created in CLO temporary folder.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 49,
+                  "block": 5
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 154,
+                  "block": 5,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportZPacW(const wstring& _filePath)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export ZPac file\n/// @param wstring _filePath : target file path in UNICODE\n/// @return Output file path. If an error occurs, return empty string. If filePath parameter is not given, output files will be created in CLO temporary folder.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 59,
+                    "block": 6
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 164,
+                    "block": 6,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param wstring _filePath : target file path in UNICODE"
+          ],
+          "return_docs_raw": [
+            "@return Output file path. If an error occurs, return empty string. If filePath parameter is not given, output files will be created in CLO temporary folder."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportZPrj",
+      "qualified_name": "export_api.ExportZPrj",
+      "module": "export_api",
+      "symbol": "ExportZPrj",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportZPrj#93dc029ff5dae542",
+          "signature_normalized": "def ExportZPrj() -> str",
+          "signature_raw": "def ExportZPrj() -> str",
+          "parameters": [],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportZPrj() -> str",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export ZPrj file \n@return Output file path; output files will be created in CLO temporary folder.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 70,
+                  "block": 7
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 176,
+                  "block": 7,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportZPrj()",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export ZPrj file \n/// @return Output file path; output files will be created in CLO temporary folder.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 79,
+                    "block": 8
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 185,
+                    "block": 8,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return Output file path; output files will be created in CLO temporary folder."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "export_api.ExportZPrj#06f0fae323a1b8e3",
+          "signature_normalized": "def ExportZPrj(_filePath : str) -> str",
+          "signature_raw": "def ExportZPrj(_filePath : str) -> str",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportZPrj(_filePath : str) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export ZPrj file \n@param _filePath: output file path\n@return Output file path. If an error occurs, return empty string.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 89,
+                  "block": 9
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 196,
+                  "block": 9,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportZPrj(const string& _filePath)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export ZPrj file \n/// @param _filePath: output file path\n/// @return Output file path. If an error occurs, return empty string.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 99,
+                    "block": 10
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 206,
+                    "block": 10,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath: output file path"
+          ],
+          "return_docs_raw": [
+            "@return Output file path. If an error occurs, return empty string."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        },
+        {
+          "id": "export_api.ExportZPrj#e4901409274c53bc",
+          "signature_normalized": "def ExportZPrj(_filePath : str, _bCreateThumbnail : bool) -> str",
+          "signature_raw": "def ExportZPrj(_filePath : str, _bCreateThumbnail : bool) -> str",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_bCreateThumbnail : bool",
+              "name": "_bCreateThumbnail",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportZPrj(_filePath : str, _bCreateThumbnail : bool) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export ZPrj file \n@param _filePath: output file path\n@param _bCreateThumbnail: if _bCreateThumbnail is true, 'png' file will be created along 'zprj' file.\n@return Output file path. If an error occurs, return empty string.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 110,
+                  "block": 11
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 218,
+                  "block": 11,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportZPrj(const string& _filePath, bool _bCreateThumbnail)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export ZPrj file \n/// @param _filePath: output file path\n/// @param _bCreateThumbnail: if _bCreateThumbnail is true, 'png' file will be created along 'zprj' file.\n/// @return Output file path. If an error occurs, return empty string.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 121,
+                    "block": 12
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 229,
+                    "block": 12,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath: output file path",
+            "@param _bCreateThumbnail: if _bCreateThumbnail is true, 'png' file will be created along 'zprj' file."
+          ],
+          "return_docs_raw": [
+            "@return Output file path. If an error occurs, return empty string."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.ExportZPrjW",
+      "qualified_name": "export_api.ExportZPrjW",
+      "module": "export_api",
+      "symbol": "ExportZPrjW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.ExportZPrjW#7a2b8e5f5a461412",
+          "signature_normalized": "def ExportZPrjW(_filePath : str, _bCreateThumbnail : bool) -> str",
+          "signature_raw": "def ExportZPrjW(_filePath : str, _bCreateThumbnail : bool) -> str",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_bCreateThumbnail : bool",
+              "name": "_bCreateThumbnail",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def ExportZPrjW(_filePath : str, _bCreateThumbnail : bool) -> str",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Export ZPrj file \n@param _filePath: output file path\n@param _bCreateThumbnail: if _bCreateThumbnail is true, 'png' file will be created along 'zprj' file.\n@return Output file path. If an error occurs, return empty wstring.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 133,
+                  "block": 13
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 242,
+                  "block": 13,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "ExportZPrjW(const wstring& _filePath, bool _bCreateThumbnail)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Export ZPrj file \n/// @param _filePath: output file path\n/// @param _bCreateThumbnail: if _bCreateThumbnail is true, 'png' file will be created along 'zprj' file.\n/// @return Output file path. If an error occurs, return empty wstring.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 144,
+                    "block": 14
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 253,
+                    "block": 14,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath: output file path",
+            "@param _bCreateThumbnail: if _bCreateThumbnail is true, 'png' file will be created along 'zprj' file."
+          ],
+          "return_docs_raw": [
+            "@return Output file path. If an error occurs, return empty wstring."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.GenerateZcmrFrom3DWindow",
+      "qualified_name": "export_api.GenerateZcmrFrom3DWindow",
+      "module": "export_api",
+      "symbol": "GenerateZcmrFrom3DWindow",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.GenerateZcmrFrom3DWindow#fb2786f7532bbf1f",
+          "signature_normalized": "def GenerateZcmrFrom3DWindow(_filePath : str, _addToList : bool) -> list[str]",
+          "signature_raw": "def GenerateZcmrFrom3DWindow(_filePath : str, _addToList : bool) -> list[str]",
+          "parameters": [
+            {
+              "raw": "_filePath : str",
+              "name": "_filePath",
+              "annotation_raw": "str"
+            },
+            {
+              "raw": "_addToList : bool",
+              "name": "_addToList",
+              "annotation_raw": "bool"
+            }
+          ],
+          "return_raw": "list[str]",
+          "occurrences": [
+            {
+              "signature_raw": "def GenerateZcmrFrom3DWindow(_filePath : str, _addToList : bool) -> list[str]",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Load and export custom view from 3D window\n@param _filePath: file path to export the custom view from 3D window\n@param _addToList: true to add the custom view to the existing Custom View list, false to not add\n@return Output file path list. If an error occurs, return empty string.\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 2536,
+                  "block": 235
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 2756,
+                  "block": 235,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GenerateZcmrFrom3DWindow(const std::string& _filePath, bool _addToList)",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Load and export custom view from 3D window\n/// @param _filePath: file path to export the custom view from 3D window\n/// @param _addToList: true to add the custom view to the existing Custom View list, false to not add\n/// @return Output file path list. If an error occurs, return empty string.",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 2547,
+                    "block": 236
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 2767,
+                    "block": 236,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [
+            "@param _filePath: file path to export the custom view from 3D window",
+            "@param _addToList: true to add the custom view to the existing Custom View list, false to not add"
+          ],
+          "return_docs_raw": [
+            "@return Output file path list. If an error occurs, return empty string."
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.GetAvatarCount",
+      "qualified_name": "export_api.GetAvatarCount",
+      "module": "export_api",
+      "symbol": "GetAvatarCount",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.GetAvatarCount#32458f44fb66cd8c",
+          "signature_normalized": "def GetAvatarCount() -> int",
+          "signature_raw": "def GetAvatarCount() -> int",
+          "parameters": [],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "def GetAvatarCount() -> int",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Get the number of avatars loaded in CLO\n@return total count of avatars                          \n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 1485,
+                  "block": 141
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 1658,
+                  "block": 141,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetAvatarCount()",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Get the number of avatars loaded in CLO\n/// @return total count of avatars",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 1494,
+                    "block": 142
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 1667,
+                    "block": 142,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return total count of avatars                          "
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.GetAvatarGenderList",
+      "qualified_name": "export_api.GetAvatarGenderList",
+      "module": "export_api",
+      "symbol": "GetAvatarGenderList",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.GetAvatarGenderList#a879a1f7730ff5f7",
+          "signature_normalized": "def GetAvatarGenderList() -> list[int]",
+          "signature_raw": "def GetAvatarGenderList() -> list[int]",
+          "parameters": [],
+          "return_raw": "list[int]",
+          "occurrences": [
+            {
+              "signature_raw": "def GetAvatarGenderList() -> list[int]",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Get all the genders of avatars loaded in CLO repectively\n@return the list of gender of all avatars. 0 : male, 1 : female, -1: unknown\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 1542,
+                  "block": 147
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 1718,
+                  "block": 147,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetAvatarGenderList()",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Get all the genders of avatars loaded in CLO repectively\n/// @return the list of gender of all avatars. 0 : male, 1 : female, -1: unknown",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 1551,
+                    "block": 148
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 1727,
+                    "block": 148,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return the list of gender of all avatars. 0 : male, 1 : female, -1: unknown"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.GetAvatarNameList",
+      "qualified_name": "export_api.GetAvatarNameList",
+      "module": "export_api",
+      "symbol": "GetAvatarNameList",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.GetAvatarNameList#b96822598f0861db",
+          "signature_normalized": "def GetAvatarNameList() -> list[str]",
+          "signature_raw": "def GetAvatarNameList() -> list[str]",
+          "parameters": [],
+          "return_raw": "list[str]",
+          "occurrences": [
+            {
+              "signature_raw": "def GetAvatarNameList() -> list[str]",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Get all the names of avatars loaded in CLO\n@return the list of name of all avatars\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 1504,
+                  "block": 143
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 1678,
+                  "block": 143,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetAvatarNameList()",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Get all the names of avatars loaded in CLO\n/// @return the list of name of all avatars",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 1513,
+                    "block": 144
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 1687,
+                    "block": 144,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return the list of name of all avatars"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.GetAvatarNameListW",
+      "qualified_name": "export_api.GetAvatarNameListW",
+      "module": "export_api",
+      "symbol": "GetAvatarNameListW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.GetAvatarNameListW#6282dcaf4404a7a2",
+          "signature_normalized": "def GetAvatarNameListW() -> list[str]",
+          "signature_raw": "def GetAvatarNameListW() -> list[str]",
+          "parameters": [],
+          "return_raw": "list[str]",
+          "occurrences": [
+            {
+              "signature_raw": "def GetAvatarNameListW() -> list[str]",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Get all the names of avatars loaded in CLO\n@return the list of name of all avatars\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 1523,
+                  "block": 145
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 1698,
+                  "block": 145,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetAvatarNameListW()",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Get all the names of avatars loaded in CLO\n/// @return the list of name of all avatars",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 1532,
+                    "block": 146
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 1707,
+                    "block": 146,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return the list of name of all avatars"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.GetColorwayCount",
+      "qualified_name": "export_api.GetColorwayCount",
+      "module": "export_api",
+      "symbol": "GetColorwayCount",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.GetColorwayCount#bf256085ea6b51aa",
+          "signature_normalized": "def GetColorwayCount() -> int",
+          "signature_raw": "def GetColorwayCount() -> int",
+          "parameters": [],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "def GetColorwayCount() -> int",
+              "documentation_raw": "\"\"\"\n///////////////////////////////////////////////////////////////////\n///////////////////////////////////////////////////////////////////\n@ingroup EXPORT_API\n@brief Get the number of colorways in the current garment loaded in CLO\n@return total count of colorways                                \n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 1405,
+                  "block": 133
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 1574,
+                  "block": 133,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetColorwayCount()",
+                "documentation_raw": "/// ///////////////////////////////////////////////////////////////////\n/// ///////////////////////////////////////////////////////////////////\n/// @ingroup EXPORT_API\n/// @brief Get the number of colorways in the current garment loaded in CLO\n/// @return total count of colorways",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 1416,
+                    "block": 134
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 1585,
+                    "block": 134,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return total count of colorways                                "
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.GetColorwayNameList",
+      "qualified_name": "export_api.GetColorwayNameList",
+      "module": "export_api",
+      "symbol": "GetColorwayNameList",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.GetColorwayNameList#7f220ed9dc2f8b3b",
+          "signature_normalized": "def GetColorwayNameList() -> list[str]",
+          "signature_raw": "def GetColorwayNameList() -> list[str]",
+          "parameters": [],
+          "return_raw": "list[str]",
+          "occurrences": [
+            {
+              "signature_raw": "def GetColorwayNameList() -> list[str]",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Get all the colorway names for the current garment \n@return the list of name of all colorways\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 1447,
+                  "block": 137
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 1618,
+                  "block": 137,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetColorwayNameList()",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Get all the colorway names for the current garment \n/// @return the list of name of all colorways",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 1456,
+                    "block": 138
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 1627,
+                    "block": 138,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return the list of name of all colorways"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.GetColorwayNameListW",
+      "qualified_name": "export_api.GetColorwayNameListW",
+      "module": "export_api",
+      "symbol": "GetColorwayNameListW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.GetColorwayNameListW#0bbaaad4130a8f76",
+          "signature_normalized": "def GetColorwayNameListW() -> list[str]",
+          "signature_raw": "def GetColorwayNameListW() -> list[str]",
+          "parameters": [],
+          "return_raw": "list[str]",
+          "occurrences": [
+            {
+              "signature_raw": "def GetColorwayNameListW() -> list[str]",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Get all the colorway names for the current garment \n@return the list of name of all colorways\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 1466,
+                  "block": 139
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 1638,
+                  "block": 139,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetColorwayNameListW()",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Get all the colorway names for the current garment \n/// @return the list of name of all colorways",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 1475,
+                    "block": 140
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 1647,
+                    "block": 140,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return the list of name of all colorways"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.GetCurrentColorwayIndex",
+      "qualified_name": "export_api.GetCurrentColorwayIndex",
+      "module": "export_api",
+      "symbol": "GetCurrentColorwayIndex",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.GetCurrentColorwayIndex#082ae51295074bb8",
+          "signature_normalized": "def GetCurrentColorwayIndex() -> int",
+          "signature_raw": "def GetCurrentColorwayIndex() -> int",
+          "parameters": [],
+          "return_raw": "int",
+          "occurrences": [
+            {
+              "signature_raw": "def GetCurrentColorwayIndex() -> int",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Get the index of the current colorway in CLO\n@return the current colorway index\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 1428,
+                  "block": 135
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 1598,
+                  "block": 135,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetCurrentColorwayIndex()",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Get the index of the current colorway in CLO\n/// @return the current colorway index",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 1437,
+                    "block": 136
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 1607,
+                    "block": 136,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return the current colorway index"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.GetCurrentRenderImagePaths",
+      "qualified_name": "export_api.GetCurrentRenderImagePaths",
+      "module": "export_api",
+      "symbol": "GetCurrentRenderImagePaths",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.GetCurrentRenderImagePaths#f9a591a6094c7406",
+          "signature_normalized": "def GetCurrentRenderImagePaths() -> list [ str ]",
+          "signature_raw": "def GetCurrentRenderImagePaths() -> list [ str ]",
+          "parameters": [],
+          "return_raw": "list [ str ]",
+          "occurrences": [
+            {
+              "signature_raw": "def GetCurrentRenderImagePaths() -> list [ str ]",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Current Render Image paths\n@return all current renderded image files paths per colorways\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 954,
+                  "block": 87
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 1100,
+                  "block": 87,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetCurrentRenderImagePaths()",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Current Render Image paths\n/// @return all current renderded image files paths per colorways",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 963,
+                    "block": 88
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 1109,
+                    "block": 88,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return all current renderded image files paths per colorways"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.GetCurrentRenderImagePathsW",
+      "qualified_name": "export_api.GetCurrentRenderImagePathsW",
+      "module": "export_api",
+      "symbol": "GetCurrentRenderImagePathsW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.GetCurrentRenderImagePathsW#41eb3f4097989b74",
+          "signature_normalized": "def GetCurrentRenderImagePathsW() -> list [ str ]",
+          "signature_raw": "def GetCurrentRenderImagePathsW() -> list [ str ]",
+          "parameters": [],
+          "return_raw": "list [ str ]",
+          "occurrences": [
+            {
+              "signature_raw": "def GetCurrentRenderImagePathsW() -> list [ str ]",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Current Render Image paths\n@return all current renderded image files paths per colorways\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 973,
+                  "block": 89
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 1120,
+                  "block": 89,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetCurrentRenderImagePathsW()",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Current Render Image paths\n/// @return all current renderded image files paths per colorways",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 982,
+                    "block": 90
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 1129,
+                    "block": 90,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return all current renderded image files paths per colorways"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.GetFileNameOnRenderingProperty",
+      "qualified_name": "export_api.GetFileNameOnRenderingProperty",
+      "module": "export_api",
+      "symbol": "GetFileNameOnRenderingProperty",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.GetFileNameOnRenderingProperty#299903225f603a86",
+          "signature_normalized": "def GetFileNameOnRenderingProperty() -> str",
+          "signature_raw": "def GetFileNameOnRenderingProperty() -> str",
+          "parameters": [],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetFileNameOnRenderingProperty() -> str",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@return the output file names set on the Rendering Property in CLO\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 992,
+                  "block": 91
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 1140,
+                  "block": 91,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetFileNameOnRenderingProperty()",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @return the output file names set on the Rendering Property in CLO",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 1000,
+                    "block": 92
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 1148,
+                    "block": 92,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return the output file names set on the Rendering Property in CLO"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.GetFileNameOnRenderingPropertyW",
+      "qualified_name": "export_api.GetFileNameOnRenderingPropertyW",
+      "module": "export_api",
+      "symbol": "GetFileNameOnRenderingPropertyW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.GetFileNameOnRenderingPropertyW#bccdc9fec798d340",
+          "signature_normalized": "def GetFileNameOnRenderingPropertyW() -> str",
+          "signature_raw": "def GetFileNameOnRenderingPropertyW() -> str",
+          "parameters": [],
+          "return_raw": "str",
+          "occurrences": [
+            {
+              "signature_raw": "def GetFileNameOnRenderingPropertyW() -> str",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@return the output file names set on the Rendering Property in CLO\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 1009,
+                  "block": 93
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 1158,
+                  "block": 93,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetFileNameOnRenderingPropertyW()",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @return the output file names set on the Rendering Property in CLO",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 1017,
+                    "block": 94
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 1166,
+                    "block": 94,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return the output file names set on the Rendering Property in CLO"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.GetTotalRenderImagePaths",
+      "qualified_name": "export_api.GetTotalRenderImagePaths",
+      "module": "export_api",
+      "symbol": "GetTotalRenderImagePaths",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.GetTotalRenderImagePaths#d7b899a9463fe31a",
+          "signature_normalized": "def GetTotalRenderImagePaths() -> list [ str ]",
+          "signature_raw": "def GetTotalRenderImagePaths() -> list [ str ]",
+          "parameters": [],
+          "return_raw": "list [ str ]",
+          "occurrences": [
+            {
+              "signature_raw": "def GetTotalRenderImagePaths() -> list [ str ]",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Get File name list for all the exported rendering images\n@return all the rendered image file paths\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 916,
+                  "block": 83
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 1060,
+                  "block": 83,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetTotalRenderImagePaths()",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Get File name list for all the exported rendering images\n/// @return all the rendered image file paths",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 925,
+                    "block": 84
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 1069,
+                    "block": 84,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return all the rendered image file paths"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    },
+    {
+      "id": "export_api.GetTotalRenderImagePathsW",
+      "qualified_name": "export_api.GetTotalRenderImagePathsW",
+      "module": "export_api",
+      "symbol": "GetTotalRenderImagePathsW",
+      "classification": "documented_python",
+      "semantic_contract_status": "not_checked",
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "declarations": [
+        {
+          "id": "export_api.GetTotalRenderImagePathsW#199364d12eddeebe",
+          "signature_normalized": "def GetTotalRenderImagePathsW() -> list [ str ]",
+          "signature_raw": "def GetTotalRenderImagePathsW() -> list [ str ]",
+          "parameters": [],
+          "return_raw": "list [ str ]",
+          "occurrences": [
+            {
+              "signature_raw": "def GetTotalRenderImagePathsW() -> list [ str ]",
+              "documentation_raw": "\"\"\"\n@ingroup EXPORT_API\n@brief Get File name list for all the exported rendering images\n@return all the rendered image file paths\n\"\"\"",
+              "section": "EXPORT_API",
+              "sources": [
+                {
+                  "source_id": "list.rst.txt",
+                  "line": 935,
+                  "block": 85
+                },
+                {
+                  "source_id": "list.html",
+                  "line": 1080,
+                  "block": 85,
+                  "anchor": "export-api"
+                }
+              ],
+              "cpp": {
+                "signature_raw": "GetTotalRenderImagePathsW()",
+                "documentation_raw": "/// @ingroup EXPORT_API\n/// @brief Get File name list for all the exported rendering images\n/// @return all the rendered image file paths",
+                "sources": [
+                  {
+                    "source_id": "list.rst.txt",
+                    "line": 944,
+                    "block": 86
+                  },
+                  {
+                    "source_id": "list.html",
+                    "line": 1089,
+                    "block": 86,
+                    "anchor": "export-api"
+                  }
+                ],
+                "classification": "paired_cpp_documentation_not_binding_evidence"
+              }
+            }
+          ],
+          "type_references": [],
+          "parameter_docs_raw": [],
+          "return_docs_raw": [
+            "@return all the rendered image file paths"
+          ],
+          "documentation_issues": [],
+          "contract_status": "documented_not_runtime_checked"
+        }
+      ]
+    }
+  ]
+}

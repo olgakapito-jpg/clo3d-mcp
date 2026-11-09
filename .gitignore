@@ -64,6 +64,8 @@ htmlcov/
 *.zpac
 *.zfab
 tests/_scratch_out/
+# User-approved acceptance exports/reports; never source, fixtures or IPC.
+/acceptance-output/
 
 # Studio material never enters this repo (tests/test_no_assets.py refuses it even if forced):
 # garments, avatars and twins, patterns, scans, renders, textures.
