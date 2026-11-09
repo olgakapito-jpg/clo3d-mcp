@@ -87,6 +87,8 @@ def test_http_sdk_initialize_list_concurrent_calls_and_busy_status(monkeypatch):
                     info = await client.call_tool("get_session_info")
                     assert info.structuredContent["session_id"] == "s"
                     assert info.structuredContent["clo_pid"] == 123
+                    assert info.structuredContent["server_build"] == module.BUILD
+                    assert "executor_build" in info.structuredContent
                     mutation = asyncio.create_task(client.call_tool("create_test_rectangle"))
                     await bounded_until(lambda: svc.queue.status()["waiting"] == 1)
                     job = svc.queue.dispatch()
@@ -338,9 +340,16 @@ def test_pattern_package_real_http_validates_raw_arguments_and_runs_stateful_exe
                     assert tools["delete_pattern"].annotations.destructiveHint
                     assert not tools["move_pattern_relative"].annotations.idempotentHint
                     for command, args in [
+                        ("ping", {"extra": 1}),
+                        ("get_pattern_count", {"extra": 1}),
+                        ("transport_status", {"extra": 1}),
+                        ("get_session_info", {"extra": 1}),
+                        ("create_test_rectangle", {"extra": 1}),
                         ("get_pattern_list", {"extra": 1}),
                         ("get_pattern_geometry", {"pattern_index": True}),
                         ("get_pattern_geometry", {"pattern_index": "0"}),
+                        ("get_pattern_lines", {"pattern_index": 0, "expected_name": "panel", "extra": 1}),
+                        ("get_pattern_lines", {"pattern_index": True, "expected_name": "panel"}),
                         ("create_pattern", {"points": "[[0,0],[10,0],[0,10]]", "name": "a"}),
                         ("create_pattern", {"points": [[0, 0], [10, 0], [0, True]], "name": "a"}),
                     ]:

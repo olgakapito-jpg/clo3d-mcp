@@ -80,7 +80,7 @@ def test_current_scope_has_real_tool_names_and_does_not_claim_overload_acceptanc
     inventory = {node.name for node in ast.walk(tree) if isinstance(node, ast.AsyncFunctionDef)
                  and any(isinstance(dec, ast.Call) and isinstance(dec.func, ast.Attribute)
                          and dec.func.attr == "tool" for dec in node.decorator_list)}
-    assert len(inventory) == 18
+    assert len(inventory) == 20
     symbols = set()
     for operation in data["operations"]:
         assert operation["symbol"] not in symbols
@@ -106,6 +106,33 @@ def test_review_gates_have_unique_ids_evidence_and_unblocking_criteria():
             assert (ROOT / path).is_file(), path
         for symbol in gate["symbols"]:
             assert symbol.count(".") == 1
+
+
+def test_line_review_keeps_both_length_overloads_unimplemented_and_not_outline_fallback():
+    gates = json.loads((ROOT / "docs/api/review_gates.json").read_text(encoding="utf-8"))["gates"]
+    gate = next(g for g in gates if g["id"] == "line-read-contract")
+    assert set(gate["symbols"]) == {"pattern_api.GetPatternLineInfo", "pattern_api.GetLineLength"}
+    assert "docs/CLO_LINE_API_CONTRACT_REVIEW.md" in gate["references"]
+    _, rows = builder.load_coverage(ROOT / "docs/api/clo_api_coverage.json")
+    selected = [r for r in rows if r["qualified_name"] in gate["symbols"]]
+    assert {r["id"] for r in selected} == {
+        "pattern_api.GetPatternLineInfo#45ddc71808d7eb67",
+        "pattern_api.GetLineLength#1ae661ba75ad2f5a",
+        "pattern_api.GetLineLength#3bc2ab838bd1591f",
+    }
+    for item in selected:
+        assert "line-read-contract" in item["review_gates"]
+        assert item["implementation"] == "planned"
+        assert item["verification"] == "not_tested"
+        assert item["overload_coverage"] == "not_established"
+        if item["qualified_name"] == "pattern_api.GetPatternLineInfo":
+            assert item["current_operation"]["tools"] == ["get_pattern_lines"]
+        else:
+            assert item["current_operation"] is None
+    source = (ROOT / "src/clo3d_mcp/pattern_api.py").read_text(encoding="utf-8")
+    tree = ast.parse(source)
+    assert not any(isinstance(n, ast.Attribute) and n.attr == "GetLineLength"
+                   for n in ast.walk(tree))
 
 
 def test_join_preserves_every_declaration_and_does_not_merge_same_symbol_overloads():
@@ -193,7 +220,7 @@ def test_committed_full_join_reproduces_offline_and_preserves_inventory():
     assert len({row["qualified_name"] for row in rows}) == 890
     assert manifest["counts"]["donor_tools"] == 170
     assert manifest["counts"]["local_legacy_tools"] == 47
-    assert manifest["counts"]["current_tools"] == 18
+    assert manifest["counts"]["current_tools"] == 20
     assert {row["id"] for row in rows} == {dec["id"] for method in official["methods"] for dec in method["declarations"]}
     assert all(row["verification"] == "not_tested" and row["implementation"] == "planned" for row in rows)
     extras = {entry["qualified_name"] for entry in manifest["nonofficial_entries"]}

@@ -303,7 +303,10 @@ def test_p2_profile_selects_only_queue_child_and_preserves_explicit_pid(monkeypa
 
 
 def load_plugin(name):
-    path = Path(__file__).resolve().parents[1] / "plugin" / name
+    root = Path(__file__).resolve().parents[1]
+    path = root / "plugin" / name
+    if not path.is_file():
+        path = root / "diagnostics" / name
     spec = importlib.util.spec_from_file_location("queue_test_launcher", path)
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)

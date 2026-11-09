@@ -23,7 +23,8 @@ MUTATIONS = {"create_pattern", "set_pattern_name", "copy_pattern_with_offset",
 DIAGNOSTIC = "create_test_rectangle"
 CURRENT = EXTERNAL | MUTATIONS | {DIAGNOSTIC, "ping", "get_pattern_count", "list_clo_api",
                                  "describe_clo_api", "get_pattern_list", "get_pattern_geometry",
-                                  "get_fabric_list", "get_avatars", "get_pattern_fabric"}
+                                  "get_fabric_list", "get_avatars", "get_pattern_fabric", "get_pattern_outline",
+                                  "get_pattern_lines"}
 EFFECTS = {"read", "scene_mutation", "diagnostic_mutation", "filesystem_write",
            "external_effect", "global_mutation", "unknown"}
 BLOCKERS = {"tool_unavailable", "capability_missing", "not_ready", "unsupported_geometry",
@@ -115,7 +116,7 @@ CONTRACT = contract_module()
 def inventory(root=ROOT):
     """AST only: decorators, public args, literal command mapping and capabilities.
 
-    Deliberately fails closed when the current18 registration shape changes.
+    Deliberately fails closed when the current20 registration shape changes.
     Does not inspect legacy server.py or claim a currently running profile.
     """
     tree = ast.parse((root / "src/clo3d_mcp/transport_server.py").read_text(encoding="utf-8"))
@@ -139,7 +140,7 @@ def inventory(root=ROOT):
         tools[node.name] = {"args": [a.arg for a in node.args.args],
                             "effect": "scene_mutation" if node.name in MUTATIONS else
                             "diagnostic_mutation" if node.name == DIAGNOSTIC else "read"}
-    require(set(tools) == CURRENT and len(tools) == 18, "current18_inventory_drift")
+    require(set(tools) == CURRENT, "current_inventory_drift")
     # Evaluate only a tiny AST list-expression grammar, never source execution.
     constants = {"PATTERN_COMMANDS": list(CONTRACT.PATTERN_COMMANDS)}
 
@@ -161,14 +162,20 @@ def inventory(root=ROOT):
                 constants[name] = literal(node.value)
     require(set(constants.get("PATTERN_CAPABILITIES", [])) == CURRENT - EXTERNAL, "capability_inventory_drift")
     profiles = {
-        "current18": {"tools": sorted(tools), "capabilities": constants["PATTERN_CAPABILITIES"]},
-        "current16": {"tools": sorted(CURRENT - {"get_pattern_fabric", "assign_pattern_fabric"}),
+        "current20": {"tools": sorted(tools), "capabilities": constants["PATTERN_CAPABILITIES"]},
+        "current19": {"tools": sorted(CURRENT - {"get_pattern_lines"}),
                       "capabilities": [c for c in constants["PATTERN_CAPABILITIES"]
-                                       if c not in {"get_pattern_fabric", "assign_pattern_fabric"}]},
+                                       if c != "get_pattern_lines"]},
+        "current18": {"tools": sorted(CURRENT - {"get_pattern_lines", "get_pattern_outline"}),
+                      "capabilities": [c for c in constants["PATTERN_CAPABILITIES"]
+                                       if c not in {"get_pattern_lines", "get_pattern_outline"}]},
+        "current16": {"tools": sorted(CURRENT - {"get_pattern_lines", "get_pattern_fabric", "assign_pattern_fabric", "get_pattern_outline"}),
+                      "capabilities": [c for c in constants["PATTERN_CAPABILITIES"]
+                                        if c not in {"get_pattern_lines", "get_pattern_fabric", "assign_pattern_fabric", "get_pattern_outline"}]},
         # Historical selection fixtures keep their exact old capabilities.
-        "current14": {"tools": sorted(CURRENT - {"get_fabric_list", "get_avatars", "get_pattern_fabric", "assign_pattern_fabric"}),
+        "current14": {"tools": sorted(CURRENT - {"get_pattern_lines", "get_fabric_list", "get_avatars", "get_pattern_fabric", "assign_pattern_fabric", "get_pattern_outline"}),
                       "capabilities": [c for c in constants["PATTERN_CAPABILITIES"]
-                                       if c not in {"get_fabric_list", "get_avatars", "get_pattern_fabric", "assign_pattern_fabric"}]},
+                                        if c not in {"get_pattern_lines", "get_fabric_list", "get_avatars", "get_pattern_fabric", "assign_pattern_fabric", "get_pattern_outline"}]},
         "diagnostic5": {"tools": sorted(EXTERNAL | set(constants["SERVICE_CAPABILITIES"])),
                         "capabilities": constants["SERVICE_CAPABILITIES"]},
     }
@@ -330,7 +337,7 @@ def validate_submission(submission, inv, case=None, profile="current16", scope="
             require(listed, "missing_fresh_list")
             if is_trace:
                 require(args["pattern_index"] < len(names), "stale_target")
-        if tool == "get_pattern_fabric":
+        if tool in ("get_pattern_fabric", "get_pattern_outline"):
             require(listed, "missing_fresh_list")
             if is_trace:
                 idx = args["pattern_index"]
@@ -426,6 +433,10 @@ def validate_submission(submission, inv, case=None, profile="current16", scope="
             fabrics = result["fabrics"]
             fabric_list_seen = True
             mappings = {}
+        elif tool == "get_pattern_outline":
+            idx = args["pattern_index"]
+            require(result["pattern_index"] == idx and result["pattern_name"] == names[idx],
+                    "outline_identity_mismatch")
         elif tool == "get_pattern_fabric":
             idx = args["pattern_index"]
             require(result["pattern_index"] == idx and result["pattern_name"] == names[idx],

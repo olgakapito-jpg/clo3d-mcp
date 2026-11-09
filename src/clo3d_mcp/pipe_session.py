@@ -4,6 +4,7 @@ import hashlib
 import hmac
 import os
 
+from clo3d_mcp import BUILD
 from clo3d_mcp.protocol import CAPABILITIES, SERVICE_CAPABILITIES, PATTERN_CAPABILITIES, ProtocolError, message, validate
 from clo3d_mcp.pattern_contract import PATTERN_COMMANDS, ERROR_CODES, CommandError, validate_result
 
@@ -55,7 +56,7 @@ class Executor:
             raise ProtocolError("Pipe server PID mismatch")
         self.state = "handshake"
         return message("HELLO", self.session_id, pid=os.getpid(),
-                       capabilities=list(self.capabilities),
+                       capabilities=list(self.capabilities), build=BUILD,
                        proof=proof(self.key, "client", self.session_id, os.getpid()))
 
     def disconnected(self):

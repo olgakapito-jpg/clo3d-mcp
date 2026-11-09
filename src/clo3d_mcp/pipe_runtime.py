@@ -6,6 +6,7 @@ import secrets
 import subprocess
 import time
 
+from clo3d_mcp import BUILD
 from clo3d_mcp.pipe_session import Executor
 from clo3d_mcp.child_python import command
 from clo3d_mcp.protocol import ProtocolError
@@ -77,7 +78,7 @@ class PipeProbe:
             pipe_cleanup_pending=self.pipe is not None,
             timer_cleanup_pending=self.timer_id is not None,
             child_exit_code=self.exit_code, error=self.error,
-            service_ready=self.service_ready,
+            service_ready=self.service_ready, build=BUILD,
         )
 
     def start(self, python, root):

@@ -16,7 +16,7 @@ SERVICE_CAPABILITIES = CAPABILITIES + ["create_test_rectangle"]
 PATTERN_CAPABILITIES = SERVICE_CAPABILITIES + PATTERN_COMMANDS
 IDENTIFIER = re.compile(r"[A-Za-z0-9_-]{1,128}\Z")
 KINDS = {
-    "HELLO": {"pid", "proof", "capabilities"},
+    "HELLO": {"pid", "proof", "capabilities", "build"},
     "HELLO_ACK": {"pid", "proof", "capabilities"},
     "READY": set(),
     "JOB": {"job_id", "command", "params"},

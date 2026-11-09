@@ -1,7 +1,8 @@
-"""Show the modeless Start/Stop panel inside CLO; never starts a server on open.
+"""Show the CLO-native Start/Stop dock panel; never starts a server on open.
 
+Uses gui_api (documented main-thread callbacks, window survives the script).
 If Script Editor omits __file__, set ROOT to the project directory locally.
-Close hides the panel, not the server. Run again to show the same window.
+Closing the window does not stop the server; run this file again to show it.
 """
 
 ROOT = None
@@ -9,6 +10,7 @@ ROOT = None
 
 def main():
     import builtins
+    import importlib
     import importlib.util
     from pathlib import Path
     import sys
@@ -34,14 +36,14 @@ def main():
         spec.loader.exec_module(module)
         return module
 
-    timer_module = load("clo_mcp_panel_thread_check", root / "plugin/clo3d_mcp_probe.py")
-    timer = timer_module.WindowsTimer()
-    if timer.visible_window_threads() != {timer.thread_id()}:
-        raise RuntimeError("Panel must run on the verified CLO UI thread")
     source = str(root / "src")
     if source not in sys.path:
         sys.path.insert(0, source)
-    from clo3d_mcp.control_panel import PanelController, WindowsPanel
+    # Panel code may have been edited since the last Run; drop only its module.
+    sys.modules.pop("clo3d_mcp.control_panel", None)
+    importlib.invalidate_caches()
+    import gui_api
+    from clo3d_mcp.control_panel import GuiPanel, PanelController
 
     def start_server():
         launcher = load("clo_mcp_panel_launcher", root / "plugin/clo3d_mcp_start.py")
@@ -49,9 +51,9 @@ def main():
         launcher.main()  # propagates failure to panel; never import legacy listener
 
     controller = PanelController(lambda: getattr(builtins, "_clo3d_mcp_service", None),
-                                 start_server, timer.thread_id)
-    panel = WindowsPanel(controller)
-    # Retain BEFORE native registration: failure/queued messages must not free WNDPROC.
+                                 start_server)
+    panel = GuiPanel(gui_api, controller)
+    # Retain BEFORE native registration: callbacks must not be freed by GC.
     builtins._clo3d_mcp_panel = {"version": 1, "root": str(root), "panel": panel}
     panel.create()
     panel.show()
@@ -61,4 +63,4 @@ if __name__ == "__main__":
     try:
         main()
     except Exception as exc:
-        print("[CLO MCP] PANEL_FAILED %s; check ROOT/UI thread or restart CLO" % type(exc).__name__)
+        print("[CLO MCP] PANEL_FAILED %s; check gui_api/ROOT or restart CLO" % type(exc).__name__)

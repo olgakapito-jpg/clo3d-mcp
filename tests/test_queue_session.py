@@ -20,6 +20,8 @@ def pair():
 
 def test_authenticated_sequential_executor_bridge():
     queue, server, executor = pair()
+    from clo3d_mcp import BUILD
+    assert server.executor_build == BUILD
     ids = [queue.submit(command) for command in ("ping", "get_pattern_count", "ping")]
     for job_id in ids:
         job = server.dispatch()

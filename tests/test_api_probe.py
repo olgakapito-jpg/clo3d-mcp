@@ -11,7 +11,7 @@ import pytest
 
 
 SPEC = importlib.util.spec_from_file_location(
-    "a0_api_probe", Path(__file__).parents[1] / "plugin" / "clo3d_mcp_api_probe.py")
+    "a0_api_probe", Path(__file__).parents[1] / "diagnostics" / "clo3d_mcp_api_probe.py")
 probe = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(probe)
 

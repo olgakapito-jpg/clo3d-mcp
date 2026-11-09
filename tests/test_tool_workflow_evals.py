@@ -31,9 +31,16 @@ def trace(inv):
     return evaluation.synthetic_examples(inv)[0]
 
 
-def test_current18_inventory_ast_without_server_imports(inv):
-    assert len(inv["tools"]) == 18
-    assert set(inv["profiles"]["current18"]["capabilities"]) == evaluation.CURRENT - evaluation.EXTERNAL
+def test_current20_inventory_ast_without_server_imports(inv):
+    assert len(inv["tools"]) == 20
+    assert set(inv["profiles"]["current20"]["capabilities"]) == evaluation.CURRENT - evaluation.EXTERNAL
+    for size in (14, 16, 18):
+        assert len(inv["profiles"]["current" + str(size)]["tools"]) == size
+        assert "get_pattern_outline" not in inv["profiles"]["current" + str(size)]["tools"]
+        assert "get_pattern_lines" not in inv["profiles"]["current" + str(size)]["tools"]
+    assert len(inv["profiles"]["current19"]["tools"]) == 19
+    assert "get_pattern_outline" in inv["profiles"]["current19"]["tools"]
+    assert "get_pattern_lines" not in inv["profiles"]["current19"]["tools"]
     assert len(inv["profiles"]["diagnostic5"]["tools"]) == 5
     assert evaluation.EXTERNAL.isdisjoint(inv["profiles"]["current16"]["capabilities"])
     assert inv["tools"]["copy_pattern_with_offset"]["args"] == ["pattern_index", "expected_name", "name", "dx", "dy"]
@@ -44,6 +51,57 @@ assert not any(n.startswith(('mcp', 'uvicorn', 'clo3d_mcp.transport_server',
     'clo3d_mcp.server', 'clo3d_mcp.pipe_runtime')) for n in sys.modules)
 """
     subprocess.run([sys.executable, "-c", code], cwd=ROOT, check=True, timeout=20)
+
+
+def outline_trace(inv):
+    sid = "synthetic-outline"
+    def step(tool, args, result):
+        return {"tool": tool, "args": args, "result": result, "session": sid}
+    return {"kind": "trace", "execution": "serial", "decision": "complete", "blockers": [],
+            "steps": [
+                step("get_session_info", {}, {"session_id": sid, "ready": True, "connected": True,
+                     "quarantined": False, "error": None,
+                     "capabilities": list(inv["profiles"]["current19"]["capabilities"])}),
+                step("get_pattern_list", {}, {"ok": True, "pattern_count": 1,
+                     "patterns": [{"index": 0, "name": "panel"}]}),
+                step("get_pattern_outline", {"pattern_index": 0, "expected_name": "panel"},
+                     {"ok": True, "pattern_index": 0, "pattern_name": "panel", "point_count": 4,
+                      "points_mm": [[0, 0], [120, 0], [120, 80], [0, 80]], "units": "mm",
+                      "coordinate_frame": "bbox_top_left_y_down"})]}
+
+
+def test_outline_workflow_read_only_selection_and_cross_domain(inv, data):
+    case = next(c for c in data["cases"] if c["id"] == "outline_endpoints")
+    trace = outline_trace(inv)
+    evaluation.validate_submission(trace, inv, case)
+    trace["steps"].append({"tool": "get_pattern_fabric",
+        "args": {"pattern_index": 0, "expected_name": "panel"}, "session": "synthetic-outline",
+        "result": {"ok": True, "pattern_index": 0, "pattern_name": "panel",
+                   "fabric_index": 0, "fabric_name": "cotton"}})
+    evaluation.validate_submission(trace, inv, profile="current19", scope="read_only")
+
+
+@pytest.mark.parametrize("fault", ["missing_list", "stale_name", "identity", "frame", "after_error", "capability"])
+def test_outline_workflow_stops_missing_stale_schema_or_error(inv, data, fault):
+    case = next(c for c in data["cases"] if c["id"] == "outline_endpoints")
+    trace = outline_trace(inv)
+    if fault == "missing_list":
+        del trace["steps"][1]
+    elif fault == "stale_name":
+        trace["steps"][2]["args"]["expected_name"] = "old"
+    elif fault == "identity":
+        trace["steps"][2]["result"]["pattern_name"] = "other"
+    elif fault == "capability":
+        trace["steps"][0]["result"]["capabilities"].remove("get_pattern_outline")
+    else:
+        next_step = deepcopy(trace["steps"][2])
+        if fault == "frame":
+            trace["steps"][2]["result"]["coordinate_frame"] = "global2D"
+        else:
+            trace["steps"][2]["result"] = {"ok": False, "error": "inventory_changed"}
+        trace["steps"].append(next_step)
+    with pytest.raises(evaluation.EvaluationError):
+        evaluation.validate_submission(trace, inv, case)
 
 
 def fabric_trace(inv):
@@ -139,8 +197,8 @@ def test_dataset_valid_bounded_russian_and_all_tools_covered(inv, data):
     lambda d: d["cases"][0]["fixture"].update(ready=1),
     lambda d: d["cases"][0]["fixture"].update(patterns=["panel", "panel"]),
     lambda d: d["cases"][0]["required_args"].update(transport_status={"extra": 1}),
-    lambda d: d["cases"][3]["required_args"]["get_pattern_geometry"].update(pattern_index=True),
-    lambda d: d["cases"][3]["required_args"]["get_pattern_geometry"].update(pattern_index=256),
+    lambda d: next(c for c in d["cases"] if c["id"] == "list_area")["required_args"]["get_pattern_geometry"].update(pattern_index=True),
+    lambda d: next(c for c in d["cases"] if c["id"] == "list_area")["required_args"]["get_pattern_geometry"].update(pattern_index=256),
     lambda d: d["unavailable_tools"].append("ping"),
     lambda d: d["cases"][0].update(profile="legacy47"),
     lambda d: d["cases"][0].update(required_args={"ping": {}}),
@@ -302,7 +360,7 @@ def test_fixture_and_scope_and_diagnostic_guards(inv, data, trace):
 def test_cli_check_and_self_test(capsys):
     assert evaluation.main(["--check", "--self-test"]) == 0
     result = json.loads(capsys.readouterr().out)
-    assert result["cases"] >= 20 and result["tools"] == 18
+    assert result["cases"] >= 20 and result["tools"] == 20
     assert result["self_test"] == {"valid_accepted": 2, "invalid_rejected": 6}
     assert "not_llm" in result["evidence"]
 

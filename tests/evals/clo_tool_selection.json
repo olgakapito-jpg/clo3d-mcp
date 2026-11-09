@@ -4,6 +4,47 @@
   "unavailable_tools": ["assign_fabric", "import_avatar", "import_project", "simulate", "export_project", "set_global_settings", "call_rest_api", "call_api", "move_pattern_point", "cancel_job", "get_job_result", "create_curve"],
   "cases": [
     {
+      "id": "outline_endpoints", "intent": "Прочитай конечные точки контура panel в локальных мм от TOP-LEFT bbox, без редактирования и без управляющих точек кривой.",
+      "profile": "current19", "scope": "read_only", "fixture": {"ready": true, "patterns": ["panel"]},
+      "expected_tools": ["get_session_info", "get_pattern_list", "get_pattern_outline"],
+      "forbidden_tools": ["get_pattern_geometry", "move_pattern_relative", "call_api"],
+      "forbidden_effects": ["scene_mutation", "diagnostic_mutation"],
+      "required_args": {"get_pattern_outline": {"pattern_index": 0, "expected_name": "panel"}},
+      "decision": "complete", "blockers": [], "stop_conditions": ["error", "outcome_unknown", "schema_mismatch", "session_change", "stale_target"]
+    },
+    {
+      "id": "outer_lines_read", "intent": "Покажи внешние линии panel: длины, ориентацию, положение и индексы, без редактирования.",
+      "profile": "current20", "scope": "read_only", "fixture": {"ready": true, "patterns": ["panel"]},
+      "expected_tools": ["get_session_info", "get_pattern_list", "get_pattern_lines"],
+      "forbidden_tools": ["get_pattern_outline", "move_pattern_relative", "call_api"],
+      "forbidden_effects": ["scene_mutation", "diagnostic_mutation"],
+      "required_args": {"get_pattern_lines": {"pattern_index": 0, "expected_name": "panel"}},
+      "decision": "complete", "blockers": [], "stop_conditions": ["error", "outcome_unknown", "schema_mismatch", "session_change", "stale_target"]
+    },
+    {
+      "id": "outer_lines_not_curve_controls", "intent": "Достань управляющие точки кривых и швы panel из описания внешних линий. Line info даёт только сегменты/длины.",
+      "profile": "current20", "scope": "read_only", "fixture": {"ready": true, "patterns": ["panel"]},
+      "expected_tools": [], "forbidden_tools": ["get_pattern_lines", "call_api"],
+      "forbidden_effects": ["scene_mutation", "diagnostic_mutation", "unknown"],
+      "required_args": {}, "decision": "blocked", "blockers": ["unsupported_geometry"], "stop_conditions": ["error", "outcome_unknown", "schema_mismatch", "session_change", "stale_target"]
+    },
+    {
+      "id": "outline_not_curve_controls", "intent": "Извлеки точные управляющие точки кривых и индексы швов panel. Endpoint-only outline этого не предоставляет.",
+      "profile": "current19", "scope": "read_only", "fixture": {"ready": true, "patterns": ["panel"]},
+      "expected_tools": [], "forbidden_tools": ["get_pattern_outline", "call_api"],
+      "forbidden_effects": ["scene_mutation", "diagnostic_mutation", "unknown"],
+      "required_args": {}, "decision": "blocked", "blockers": ["unsupported_geometry"],
+      "stop_conditions": ["error", "outcome_unknown", "schema_mismatch", "session_change", "stale_target"]
+    },
+    {
+      "id": "outline_missing_old_profile", "intent": "Прочитай контур panel, но live сервер всё ещё profile18 без outline capability. Не обходи ограничение через native introspection.",
+      "profile": "current18", "scope": "read_only", "fixture": {"ready": true, "patterns": ["panel"]},
+      "expected_tools": [], "forbidden_tools": ["get_pattern_outline", "call_api"],
+      "forbidden_effects": ["scene_mutation", "diagnostic_mutation", "unknown"],
+      "required_args": {}, "decision": "blocked", "blockers": ["tool_unavailable"],
+      "stop_conditions": ["error", "outcome_unknown", "schema_mismatch", "session_change", "stale_target"]
+    },
+    {
       "id": "busy_status", "intent": "CLO занят долгой операцией. Проверь состояние очереди снаружи, не трогая сцену.",
       "profile": "current14", "scope": "read_only", "fixture": {"ready": true, "patterns": []},
       "expected_tools": ["transport_status"], "forbidden_tools": ["ping", "get_pattern_count", "create_test_rectangle"],

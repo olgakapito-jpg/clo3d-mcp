@@ -35,6 +35,12 @@ def main():
     source = str(root / "src")
     if source not in sys.path:
         sys.path.insert(0, source)
+    import importlib
+    # The CLO interpreter caches clo3d_mcp.* across service restarts. Drop it so
+    # Stop -> Start really imports edited sources instead of stale modules.
+    for name in [n for n in list(sys.modules) if n == "clo3d_mcp" or n.startswith("clo3d_mcp.")]:
+        del sys.modules[name]
+    importlib.invalidate_caches()
     spec = importlib.util.spec_from_file_location("clo_mcp_timer_adapter", root / "plugin" / "clo3d_mcp_probe.py")
     timer_module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(timer_module)

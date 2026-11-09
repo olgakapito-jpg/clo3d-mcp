@@ -18,6 +18,7 @@ class QueueSession:
         self.client_pid = client_pid
         self.state = "disconnected"
         self.capabilities = list(capabilities)
+        self.executor_build = None
 
     def connect(self, observed_pid):
         if self.state != "disconnected" or observed_pid != self.client_pid:
@@ -29,6 +30,7 @@ class QueueSession:
             validate(frame, self.queue.session_id)
             if self.state == "hello":
                 authenticate(frame, self.key, "HELLO", self.queue.session_id, self.client_pid, self.capabilities)
+                self.executor_build = frame["build"]
                 self.queue.on_connected()
                 self.state = "active"
                 return [message("HELLO_ACK", self.queue.session_id, pid=os.getpid(),

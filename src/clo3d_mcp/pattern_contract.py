@@ -1,8 +1,9 @@
 """Bounded first pattern package. Stdlib only, shared by HTTP/queue/CLO.
 
 Not a generic API dispatcher. Coordinates are millimetres; polygons are simple
-straight outlines only. Includes bounded fabric/avatar inventories, not editing
-those objects. Curves, sewing and simulation are not enabled.
+straight outlines only on creation. Outline reads expose boundary endpoints,
+not curve controls. Includes bounded fabric/avatar inventories and pattern fabric
+assignment, not material editing. Sewing and simulation are not enabled.
 """
 
 import math
@@ -14,6 +15,7 @@ PATTERN_COMMANDS = [
     "move_pattern_relative", "delete_pattern",
     "get_fabric_list", "get_avatars",
     "get_pattern_fabric", "assign_pattern_fabric",
+    "get_pattern_outline", "get_pattern_lines",
 ]
 API_MODULES = ("pattern_api", "export_api", "fabric_api", "import_api", "utility_api")
 ERROR_CODES = ("api_unavailable", "stale_pattern", "scene_change_unverified", "invalid_parameters",
@@ -22,6 +24,9 @@ MAX_PATTERNS = 256
 MAX_FABRICS = 256
 MAX_AVATARS = 64
 MAX_COORDINATE = 100000.0
+MAX_OUTLINE_POINTS = 512
+MAX_LINES = 512
+MAX_LINE_JSON_BYTES = 65536
 
 
 class CommandError(ValueError):
@@ -101,6 +106,8 @@ def validate_params(command, params):
         "delete_pattern": {"pattern_index", "expected_name"},
         "get_fabric_list": set(), "get_avatars": set(),
         "get_pattern_fabric": {"pattern_index", "expected_name"},
+        "get_pattern_outline": {"pattern_index", "expected_name"},
+        "get_pattern_lines": {"pattern_index", "expected_name"},
         "assign_pattern_fabric": {"pattern_index", "expected_name", "fabric_index",
                                   "expected_fabric_name", "expected_current_fabric_index"},
     }
@@ -165,6 +172,46 @@ def inventory_name(value):
             and all(ord(c) >= 32 and not 0xD800 <= ord(c) <= 0xDFFF for c in value))
 
 
+def outline_points(value):
+    """Native boundary endpoints, not a polygon validator or curve tessellation."""
+    return (type(value) is list and 1 <= len(value) <= MAX_OUTLINE_POINTS
+            and all(type(p) is list and len(p) == 2 and all(number(v) for v in p)
+                    for p in value))
+
+
+def line_token(value):
+    """Lowercase native token; location list is documented as non-exhaustive."""
+    return (type(value) is str and 1 <= len(value) <= 32
+            and all("a" <= c <= "z" or c == "-" for c in value))
+
+
+def point2(value):
+    return (isinstance(value, dict) and set(value) == {"x", "y"}
+            and all(number(v) for v in value.values()))
+
+
+def bounding_box(value):
+    return (isinstance(value, dict)
+            and set(value) == {"min_x", "min_y", "max_x", "max_y", "width", "height"}
+            and all(number(v) for v in value.values())
+            and value["max_x"] >= value["min_x"] and value["max_y"] >= value["min_y"]
+            and value["width"] >= 0 and value["height"] >= 0)
+
+
+def line_info(value):
+    """One documented line record; no inferred arc/chord or closure semantics."""
+    return (isinstance(value, dict)
+            and set(value) == {"line_index", "length_mm", "orientation", "location",
+                               "start_mm", "end_mm", "mid_mm", "mid_norm"}
+            and type(value["line_index"]) is int and 0 <= value["line_index"] < MAX_LINES
+            and number(value["length_mm"]) and value["length_mm"] >= 0
+            and value["orientation"] in ("horizontal", "vertical", "diagonal")
+            and line_token(value["location"])
+            and point2(value["start_mm"]) and point2(value["end_mm"]) and point2(value["mid_mm"])
+            and point2(value["mid_norm"])
+            and all(0 <= v <= 1 for v in value["mid_norm"].values()))
+
+
 def inventory_result(value, kind, maximum):
     count, items = value.get(kind + "_count"), value.get(kind + "s")
     return (type(count) is int and 0 <= count <= maximum and type(items) is list
@@ -200,6 +247,28 @@ def validate_result(command, result):
                          for i, v in enumerate(result["patterns"])))
     elif command == "get_pattern_geometry":
         valid = keys == {"pattern"} and geometry(result["pattern"])
+    elif command == "get_pattern_outline":
+        valid = (keys == {"pattern_index", "pattern_name", "point_count", "points_mm",
+                          "coordinate_frame", "units"}
+                 and index(result["pattern_index"]) and name(result["pattern_name"])
+                 and outline_points(result["points_mm"])
+                 and type(result["point_count"]) is int
+                 and result["point_count"] == len(result["points_mm"])
+                 and result["coordinate_frame"] == "bbox_top_left_y_down"
+                 and result["units"] == "mm")
+    elif command == "get_pattern_lines":
+        lines = result.get("lines")
+        valid = (keys == {"pattern_index", "pattern_name", "line_count", "bounding_box_mm",
+                          "lines", "coordinate_frame", "units"}
+                 and index(result["pattern_index"]) and name(result["pattern_name"])
+                 and type(result["line_count"]) is int
+                 and 1 <= result["line_count"] <= MAX_LINES
+                 and isinstance(lines, list) and result["line_count"] == len(lines)
+                 and all(line_info(v) for v in lines)
+                 and len({v["line_index"] for v in lines}) == len(lines)
+                 and bounding_box(result["bounding_box_mm"])
+                 and result["coordinate_frame"] == "api_2d_mm"
+                 and result["units"] == "mm")
     elif command == "get_fabric_list":
         valid = (keys == {"fabric_count", "fabrics"}
                  and inventory_result(result, "fabric", MAX_FABRICS))

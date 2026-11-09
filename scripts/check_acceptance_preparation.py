@@ -113,7 +113,7 @@ def main(argv=None):
     if not args.all_source:
         paths = [name for name in paths if name.startswith(("docs/api/", "tests/evals/"))
                  or name in {"docs/CLO_COMPREHENSIVE_CHECK.md", "docs/CLO_ACCEPTANCE_PACKAGES.md", "docs/DOMAIN_BATCH_CHECK.md", "docs/CLO_API_PROBE_CHECK.md", "docs/CLO_TOOL_EVALUATION.md"}
-                 or name.startswith(("scripts/build_", "scripts/check_acceptance", "scripts/prepare_acceptance", "scripts/verify_domains", "scripts/evaluate_tool", "plugin/clo3d_mcp_api_probe"))]
+                 or name.startswith(("scripts/build_", "scripts/check_acceptance", "scripts/prepare_acceptance", "scripts/verify_domains", "scripts/evaluate_tool", "diagnostics/clo3d_mcp"))]
     faults = audit(ROOT, paths)
     registered = inventory((ROOT / "src/clo3d_mcp/transport_server.py").read_text(encoding="utf-8"))
     cards = re.findall(r"^## \d+\. (\w+)$", (ROOT / "docs/CLO_MCP_TOOLS.md").read_text(encoding="utf-8"), re.M)

@@ -13,7 +13,7 @@ def main():
         root = Path(__file__).resolve().parent.parent
     else:
         raise RuntimeError("CLO omitted __file__; set ROOT to the project directory")
-    spec = importlib.util.spec_from_file_location("clo_p2_launcher", root / "plugin" / "clo3d_mcp_pipe_probe.py")
+    spec = importlib.util.spec_from_file_location("clo_p2_launcher", root / "diagnostics" / "clo3d_mcp_pipe_probe.py")
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     module.ROOT = str(root)

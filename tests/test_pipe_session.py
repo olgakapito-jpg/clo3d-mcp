@@ -17,8 +17,10 @@ def ack(key=KEY, pid=SERVER_PID):
 
 
 def test_handshake_pid_key_role_and_session():
+    from clo3d_mcp import BUILD
     executor = Executor(SID, KEY, SERVER_PID, lambda: 5)
     hello = executor.connected(SERVER_PID)
+    assert hello["build"] == BUILD
     authenticate(hello, KEY, "HELLO", SID, os.getpid())
     for frame in (ack(b"z" * 32), ack(pid=124), message("READY", SID)):
         with pytest.raises(ProtocolError):

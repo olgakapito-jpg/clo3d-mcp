@@ -14,6 +14,7 @@ from mcp.server.transport_security import TransportSecuritySettings
 from mcp.types import CallToolResult, TextContent, ToolAnnotations
 import uvicorn
 
+from clo3d_mcp import BUILD
 from clo3d_mcp.async_jobs import AsyncJobQueue
 from clo3d_mcp.jobs import QueueError
 from clo3d_mcp.protocol import SERVICE_CAPABILITIES, PATTERN_CAPABILITIES, ProtocolError, message
@@ -32,10 +33,18 @@ def tool_error(code):
                           content=[TextContent(type="text", text=json.dumps(data))])
 
 
+# Tools without parameters: the raw payload must be exactly {} (or omitted).
+# PATTERN_COMMANDS get the same exact-key check through validate_params.
+NO_ARG_COMMANDS = frozenset({"ping", "get_pattern_count", "transport_status",
+                             "get_session_info", "create_test_rectangle"})
+
+
 class SessionMCP(FastMCP):
     async def call_tool(self, name, arguments):
         # Official SDK 1.26 defaults to ignoring extra arguments and pre-parses
-        # JSON strings. Validate the RAW pattern payload before either happens.
+        # JSON strings. Validate the RAW payload before either happens.
+        if name in NO_ARG_COMMANDS and arguments not in (None, {}):
+            return tool_error("invalid_parameters")
         if name in PATTERN_COMMANDS:
             try:
                 validate_params(name, arguments)
@@ -63,6 +72,7 @@ class Service:
         queue = self.queue.status()
         return dict(queue, http_serving=self.http_serving,
                     executor_verified=self.executor_verified,
+                    executor_build=self.session.executor_build,
                     ready=self.http_serving and self.executor_verified and self.ready_acknowledged
                     and queue["connected"] and not queue["closed"]
                     and not queue["quarantined"] and not self.stop_requested,
@@ -96,32 +106,48 @@ def build_mcp(service):
 
     @mcp.tool(annotations=read)
     async def ping() -> dict[str, Any]:
-        """Round trip through FIFO to the CLO UI executor, not an HTTP health ping."""
+        """Round trip through FIFO to the CLO UI executor, not an HTTP health ping.
+
+        Returns pong:true only after the executor handled it. Read-only; an
+        unknown outcome is never retried automatically.
+        """
         return await service.call("ping")
 
     @mcp.tool(annotations=read)
     async def get_pattern_count() -> dict[str, Any]:
-        """Read the number of pattern pieces through the sequential CLO executor."""
+        """Read the number of pattern pieces through the sequential CLO executor.
+
+        Read-only, bounded to 256 pieces. Indices are positional, not durable IDs.
+        """
         return await service.call("get_pattern_count")
 
     @mcp.tool(annotations=read)
     async def transport_status() -> dict[str, Any]:
-        """External queue/HTTP state; responds even while a CLO API call is busy."""
+        """External queue/HTTP state; responds even while a CLO API call is busy.
+
+        Describes transport readiness only, never whether a specific scene
+        command completed.
+        """
         return service.status()
 
     @mcp.tool(annotations=read)
     async def get_session_info() -> dict[str, Any]:
-        """CLO session identity and readiness (not the MCP HTTP session identity)."""
+        """CLO session identity and readiness (not the MCP HTTP session identity).
+
+        Returns CLO/server PIDs and the executor capability list. A session
+        change invalidates cached pattern indices.
+        """
         return dict(service.status(), clo_pid=service.client_pid, server_pid=os.getpid(),
-                    capabilities=list(service.capabilities))
+                    server_build=BUILD, capabilities=list(service.capabilities))
 
     @mcp.tool(annotations=ToolAnnotations(readOnlyHint=False, destructiveHint=False,
                                         idempotentHint=False, openWorldHint=False))
     async def create_test_rectangle() -> dict[str, Any]:
         """Add ONE fixed 100 x 100 mm diagnostic square at the 2D origin.
 
-        Mutates the disposable scene; no arbitrary geometry/exec. Never retry
-        automatically after a timeout, disconnect or unknown outcome.
+        Mutates the disposable scene; no arbitrary geometry/exec. Returns
+        count/geometry readback; ok:false or a timeout may still follow a scene
+        effect, so never retry automatically.
         """
         return await service.call("create_test_rectangle")
 
@@ -214,8 +240,54 @@ def add_pattern_tools(mcp, service, read):
 
     @mcp.tool(annotations=read)
     async def get_pattern_geometry(pattern_index: StrictInt) -> dict[str, Any]:
-        """Read 2D position in mm, area in mm2 and bounding box from CLO."""
+        """Read 2D position in mm, area in mm2 and bounding box from CLO.
+
+        Read-only, positional index0-255 from a fresh list. Position is the
+        observed piece centre, not topology or full detail geometry.
+        """
         return await service.call("get_pattern_geometry", {"pattern_index": pattern_index})
+
+    @mcp.tool(annotations=read)
+    async def get_pattern_outline(pattern_index: StrictInt, expected_name: StrictStr) -> dict[str, Any]:
+        """Read ONE uniquely named pattern's boundary segment endpoints, not curve controls.
+
+        Required real-pattern-list index0-255 and exact unique expected_name1-128
+        from fresh get_pattern_list. Returns pattern_index/name,point_count1-512,
+        points_mm[[x,y]],units=mm,coordinate_frame=bbox_top_left_y_down: origin at
+        bounding-box TOP-LEFT, Y down, NOT global2D. Finite coordinates +/-100000mm.
+        Native traversal order preserved; no closure/lineIndex correspondence,
+        tessellation, sewing or internal lines. Up to256patterns, two endpoint reads
+        and three list checks, not atomic identity or full geometry validation.
+        Known limitation on CLO2026.1.336: every tested target returned
+        invalid_native_result (own fixture empty at native level; two existing
+        pieces rejected by the adapter), cause unestablished.
+        Read-only; stale_pattern/inventory_changed/invalid_native_result/command_error:
+        stop, no automatic retry/fallback; inspect readiness and fresh list separately.
+        """
+        return await service.call("get_pattern_outline", {
+            "pattern_index": pattern_index, "expected_name": expected_name})
+
+    @mcp.tool(annotations=read)
+    async def get_pattern_lines(pattern_index: StrictInt, expected_name: StrictStr) -> dict[str, Any]:
+        """Inspect ONE uniquely named pattern's outer lines without changing the scene.
+
+        Required fresh real-pattern-list index0-255 and exact unique
+        expected_name1-128 from get_pattern_list. Returns line_count,
+        bounding_box_mm and one record per native outer line: line_index,
+        length_mm, orientation, location, start_mm/end_mm/mid_mm and mid_norm
+        (0..1 inside the bounding box). Coordinates are native 2D millimetres;
+        on the tested fixture they matched create/geometry absolute API
+        coordinates, not bbox-local, while Y direction and frame after
+        move/rotate are not yet established. Lengths are native line lengths in
+        mm; curve arc-vs-chord semantics are not established. Do not infer
+        closure, seam/lineIndex topology, tessellation or graded points, and do
+        not use this as an outline fallback. Bounded one native line-info read
+        plus list/count checks, 1-512 lines, not an atomic identity.
+        stale_pattern/inventory_changed/invalid_native_result/command_error:
+        stop, no automatic retry or fallback.
+        """
+        return await service.call("get_pattern_lines", {
+            "pattern_index": pattern_index, "expected_name": expected_name})
 
     @mcp.tool(annotations=mutation)
     async def create_pattern(points: list[list[StrictInt | StrictFloat]], name: StrictStr) -> dict[str, Any]:
