@@ -8,7 +8,7 @@
     "adapter": "src/clo3d_mcp/pattern_api.py",
     "registrar": "src/clo3d_mcp/transport_server.py",
     "launcher": "plugin/clo3d_mcp_start.py",
-    "tests": ["tests/test_pattern_api.py", "tests/test_verify_patterns.py"],
+    "tests": ["tests/test_pattern_api.py", "tests/test_verify_patterns.py", "tests/test_inventory_api.py"],
     "real_acceptance": "docs/PATTERN_API_CHECK.md"
   },
   "operations": [
@@ -21,7 +21,13 @@
     {"symbol": "pattern_api.SetPatternPieceName", "tools": ["set_pattern_name", "create_pattern", "copy_pattern_with_offset"], "call_arity": 2, "scope": "Unique name and fresh index/expected-name guard; create/copy plus naming is not atomic.", "role": "mutation"},
     {"symbol": "pattern_api.CopyPatternPieceMove", "tools": ["copy_pattern_with_offset"], "call_arity": 3, "scope": "Relative 2D mm displacement; count/name/area/position readback; no complete topology/sewing guarantee.", "role": "mutation"},
     {"symbol": "pattern_api.SetPatternPieceMove", "tools": ["move_pattern_relative"], "call_arity": 3, "scope": "Whole-piece relative 2D movement, not individual points or 3D placement.", "role": "mutation"},
-    {"symbol": "pattern_api.DeletePatternPiece", "tools": ["delete_pattern"], "call_arity": 1, "scope": "One uniquely named piece, verified remaining name order; indices invalidate; no relationship restoration guarantee.", "role": "mutation"}
+    {"symbol": "pattern_api.DeletePatternPiece", "tools": ["delete_pattern"], "call_arity": 1, "scope": "One uniquely named piece, verified remaining name order; indices invalidate; no relationship restoration guarantee.", "role": "mutation"},
+    {"symbol": "fabric_api.GetFabricCount", "tools": ["get_fabric_list"], "call_arity": 1, "scope": "Object Browser project count: explicit bool keyword _bCurrentColorway=False;3 reads. Count4 GUI/UI confirmed by user; additional5cycles+final inventories stable, limited gate accepted. No fallback.", "role": "read"},
+    {"symbol": "fabric_api.GetFabricName", "tools": ["get_fabric_list"], "call_arity": 1, "scope": "Single zero-based Object Browser fabric index,2name passes; real indices0-3/names confirmed against GUI by user; additional5cycles+final stable. No colorway selector or assignment acceptance.", "role": "read"},
+    {"symbol": "export_api.GetAvatarCount", "tools": ["get_avatars"], "call_arity": 0, "scope": "Bounded0-64,3reads; empty and loaded count1 observed, no pose/geometry acceptance.", "role": "read"},
+    {"symbol": "export_api.GetAvatarNameList", "tools": ["get_avatars"], "call_arity": 0, "scope": "Exact list[str],2reads; index order from native list. Empty and1name observed, no coercion/fallback or persistent IDs.", "role": "read"},
+    {"symbol": "fabric_api.GetFabricIndexForPattern", "tools": ["get_pattern_fabric", "assign_pattern_fabric"], "call_arity": 1, "scope": "Single pattern index -> Object Browser fabric index,no sentinel/fallback. Real stable5 mappings,own0->1->3 reads/final preservation,read-only runner2passes5 PASS,user UI confirmed. B05C copy/rename/move/independent mapping/index shift PASS. Temporary appearance not assessed. docs/CLO_FABRIC_ASSIGNMENT_CHECK.md.", "role": "read"},
+    {"symbol": "fabric_api.AssignFabricToPattern", "tools": ["assign_pattern_fabric"], "call_arity": 3, "scope": "Object Browser fabric,unique pattern,fixed option1;real own0->1->3/preservation5/planned delete PASS,user UI confirmed. B05C independent source/copy assignments and assignment after lower-delete index shift PASS. No full appearance/material/options2/3/colorway management acceptance,no retry/rollback.", "role": "mutation"}
   ],
   "infrastructure_tools": ["get_session_info", "transport_status", "ping", "list_clo_api", "describe_clo_api"],
   "overload_policy": "Arity matching is a candidate mapping only. Full official overload coverage remains not_established until argument semantics, types and acceptance scope are explicitly reviewed."

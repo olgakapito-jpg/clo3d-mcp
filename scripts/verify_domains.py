@@ -21,27 +21,36 @@ CURRENT_TOOLS = frozenset((
     "create_test_rectangle", "list_clo_api", "describe_clo_api",
     "get_pattern_list", "get_pattern_geometry", "create_pattern",
     "set_pattern_name", "copy_pattern_with_offset", "move_pattern_relative",
-    "delete_pattern",
+    "delete_pattern", "get_fabric_list", "get_avatars",
+    "get_pattern_fabric", "assign_pattern_fabric",
 ))
 MODULES = ("pattern_api", "export_api", "fabric_api", "import_api", "utility_api")
 DESCRIPTIONS = {
     "fabric_api": ["GetFabricCount", "GetFabricName"],
-    "utility_api": ["GetAvatarCount", "GetAvatarNameList"],
+    "export_api": ["GetCurrentColorwayIndex", "GetAvatarCount", "GetAvatarNameList"],
 }
 BASE = frozenset(("get_session_info", "transport_status"))
 SCENARIOS = {
+    "fabric-avatar-inventory": {
+        "tools": BASE | {"get_fabric_list", "get_avatars"},
+        "mutations": 0, "steps": 12, "dependencies": [],
+    },
     "scene-inspection": {
         "tools": BASE | {"get_pattern_list", "get_pattern_geometry"},
         "mutations": 0, "steps": 15, "dependencies": [],
+    },
+    "pattern-fabric-inspection": {
+        "tools": BASE | {"get_pattern_list", "get_fabric_list", "get_pattern_fabric"},
+        "mutations": 0, "steps": 28, "dependencies": [],
     },
     "current-pattern-fixture": {
         "tools": BASE | {"get_pattern_list", "get_pattern_geometry", "create_pattern"},
         "mutations": 1, "steps": 11, "dependencies": ["explicit one-piece scene permission"],
     },
     "fabric-assignment-future": {
-        "tools": BASE | {"get_fabric_list", "get_fabric_for_pattern", "assign_fabric_to_pattern"},
+        "tools": BASE | {"get_fabric_list", "get_pattern_fabric", "assign_pattern_fabric"},
         "mutations": 1, "steps": 12,
-        "dependencies": ["A0/A1/A2 contracts and integration", "chosen unique pattern and fabric",
+        "dependencies": ["mutating client execution recipe and visual acceptance", "chosen unique pattern and fabric",
                          "current-pattern-fixture is optional, never automatic"],
     },
     "avatar-import-future": {
@@ -158,6 +167,8 @@ def dry_run(scenario=None, allow_mutations=False, asset=None, limits=Limits()):
         if plan["mutations"] and not allow_mutations:
             blockers.append("explicit_mutation_permission_required")
         steps = 7 + 2 * limits.objects if name == "scene-inspection" else plan["steps"]
+        if name == "pattern-fabric-inspection":
+            steps = 12 + 4 * limits.objects  # includes online initialize
         if steps > limits.steps or plan["mutations"] > limits.mutations:
             blockers.append("plan_exceeds_limits")
         selected = asset_state(asset) if name == "avatar-import-future" else "not_required"
@@ -317,10 +328,12 @@ class Runner:
                 expected = {"points", "name"}
             if name == "describe_clo_api":
                 expected = {"module", "functions"}
+            if name == "get_pattern_fabric":
+                expected = {"pattern_index", "expected_name"}
             if set(schema.get("properties", {})) != expected or set(schema.get("required", [])) != expected:
                 raise Halt("unsupported", "tool_schema_changed")
             expected_types = {"pattern_index": "integer", "points": "array", "name": "string",
-                              "module": "string", "functions": "array"}
+                              "module": "string", "functions": "array", "expected_name": "string"}
             if any(not isinstance(schema["properties"][key], dict)
                    or schema["properties"][key].get("type") != expected_types[key] for key in expected):
                 raise Halt("unsupported", "tool_schema_changed")
@@ -374,6 +387,66 @@ class Runner:
             raise Halt("unknown", "fixture_scene_list_mismatch")
         self.summary.update(fixture_left_in_scene=True, fixture_index=target["index"])
 
+    async def inventories(self):
+        before = {}
+        for command in ("get_fabric_list", "get_avatars"):
+            await self.guard()
+            before[command] = await self.call(command)
+        for command in ("get_fabric_list", "get_avatars"):
+            await self.guard()
+            if await self.call(command) != before[command]:
+                raise Halt("failed", "inventory_changed_between_calls")
+        await self.guard()
+        self.summary.update(
+            fabric_count=before["get_fabric_list"]["fabric_count"],
+            avatar_count=before["get_avatars"]["avatar_count"],
+            nonempty_fabric_checked=bool(before["get_fabric_list"]["fabric_count"]),
+            nonempty_avatar_checked=bool(before["get_avatars"]["avatar_count"]),
+        )
+
+    async def pattern_fabrics(self):
+        """Two serial mapping passes, bounded targets; no assignment or cleanup."""
+        await self.guard()
+        patterns = await self.call("get_pattern_list")
+        if patterns["pattern_count"] > self.limits.objects:
+            raise Halt("blocked", "object_bound")
+        names = [p["name"] for p in patterns["patterns"]]
+        if len(set(names)) != len(names):
+            raise Halt("blocked", "ambiguous_pattern_names")
+        await self.guard()
+        fabrics = await self.call("get_fabric_list")
+        baseline = []
+        for cycle in range(2):
+            observed = []
+            for target in patterns["patterns"]:
+                await self.guard()
+                value = await self.call("get_pattern_fabric", {
+                    "pattern_index": target["index"], "expected_name": target["name"]})
+                f = value["fabric_index"]
+                if (value["pattern_index"] != target["index"]
+                        or value["pattern_name"] != target["name"]
+                        or f >= fabrics["fabric_count"]
+                        or value["fabric_name"] != fabrics["fabrics"][f]["name"]):
+                    raise Halt("failed", "fabric_mapping_identity")
+                if cycle == 1 and value != baseline[len(observed)]:
+                    raise Halt("failed", "fabric_mapping_changed")
+                observed.append(value)
+            if cycle == 0:
+                baseline = observed
+            elif observed != baseline:
+                raise Halt("failed", "fabric_mapping_changed")
+        await self.guard()
+        if await self.call("get_pattern_list") != patterns:
+            raise Halt("failed", "scene_list_changed")
+        await self.guard()
+        if await self.call("get_fabric_list") != fabrics:
+            raise Halt("failed", "inventory_changed_between_calls")
+        await self.guard()
+        self.summary.update(pattern_count=patterns["pattern_count"],
+                            fabric_count=fabrics["fabric_count"],
+                            mapping_objects_checked=len(baseline), mapping_passes=2,
+                            nonempty_mapping_checked=bool(baseline))
+
     async def execute(self, mode, scenario=None, allow_mutations=False, asset=None):
         state, code = "failed", "invalid_mode"
         try:
@@ -403,9 +476,15 @@ class Runner:
                     self.summary[module] = {name: {"available": d["available"], "doc_chars": len(d["doc"])}
                                             for name, d in docs["functions"].items()}
                 state, code = "completed", "discovery_is_not_native_acceptance"
+            elif scenario == "fabric-avatar-inventory":
+                await self.inventories()
+                state, code = "verified", "bounded_inventory_observations_only"
             elif scenario == "scene-inspection":
                 await self.inspect()
                 state, code = "verified", "bounded_scene_observations_only"
+            elif scenario == "pattern-fabric-inspection":
+                await self.pattern_fabrics()
+                state, code = "verified", "bounded_fabric_mapping_observations_only"
             else:
                 await self.fixture()
                 state, code = "verified", "one_fixture_readback_only"

@@ -1,7 +1,8 @@
 """Bounded first pattern package. Stdlib only, shared by HTTP/queue/CLO.
 
 Not a generic API dispatcher. Coordinates are millimetres; polygons are simple
-straight outlines only. Curves, sewing, avatars and simulation are not enabled.
+straight outlines only. Includes bounded fabric/avatar inventories, not editing
+those objects. Curves, sewing and simulation are not enabled.
 """
 
 import math
@@ -11,10 +12,15 @@ PATTERN_COMMANDS = [
     "list_clo_api", "describe_clo_api", "get_pattern_list", "get_pattern_geometry",
     "create_pattern", "set_pattern_name", "copy_pattern_with_offset",
     "move_pattern_relative", "delete_pattern",
+    "get_fabric_list", "get_avatars",
+    "get_pattern_fabric", "assign_pattern_fabric",
 ]
 API_MODULES = ("pattern_api", "export_api", "fabric_api", "import_api", "utility_api")
-ERROR_CODES = ("api_unavailable", "stale_pattern", "scene_change_unverified", "invalid_parameters")
+ERROR_CODES = ("api_unavailable", "stale_pattern", "scene_change_unverified", "invalid_parameters",
+               "inventory_limit", "inventory_changed", "invalid_native_result", "stale_fabric")
 MAX_PATTERNS = 256
+MAX_FABRICS = 256
+MAX_AVATARS = 64
 MAX_COORDINATE = 100000.0
 
 
@@ -93,12 +99,18 @@ def validate_params(command, params):
         "copy_pattern_with_offset": {"pattern_index", "expected_name", "name", "dx", "dy"},
         "move_pattern_relative": {"pattern_index", "expected_name", "dx", "dy"},
         "delete_pattern": {"pattern_index", "expected_name"},
+        "get_fabric_list": set(), "get_avatars": set(),
+        "get_pattern_fabric": {"pattern_index", "expected_name"},
+        "assign_pattern_fabric": {"pattern_index", "expected_name", "fabric_index",
+                                  "expected_fabric_name", "expected_current_fabric_index"},
     }
     valid = command in fields and set(params) == fields[command]
     if valid:
         for key, value in params.items():
-            if key == "pattern_index":
+            if key in ("pattern_index", "fabric_index", "expected_current_fabric_index"):
                 valid = index(value)
+            elif key == "expected_fabric_name":
+                valid = inventory_name(value)
             elif key in ("name", "expected_name"):
                 valid = name(value)
             elif key in ("dx", "dy"):
@@ -144,7 +156,22 @@ def geometry(value):
             and isinstance(value["position_mm"], list) and len(value["position_mm"]) == 2
             and all(number(v) for v in value["position_mm"])
             and number(value["area_mm2"], 1e16) and value["area_mm2"] >= 0
-            and value["bounding_box"] is not None and json_value(value["bounding_box"]))
+             and value["bounding_box"] is not None and json_value(value["bounding_box"]))
+
+
+def inventory_name(value):
+    """Preserve empty/duplicate names; neither is a durable object identifier."""
+    return (type(value) is str and len(value) <= 256
+            and all(ord(c) >= 32 and not 0xD800 <= ord(c) <= 0xDFFF for c in value))
+
+
+def inventory_result(value, kind, maximum):
+    count, items = value.get(kind + "_count"), value.get(kind + "s")
+    return (type(count) is int and 0 <= count <= maximum and type(items) is list
+            and count == len(items)
+            and all(type(item) is dict and set(item) == {"index", "name"}
+                    and type(item["index"]) is int and item["index"] == i
+                    and inventory_name(item["name"]) for i, item in enumerate(items)))
 
 
 def validate_result(command, result):
@@ -173,6 +200,21 @@ def validate_result(command, result):
                          for i, v in enumerate(result["patterns"])))
     elif command == "get_pattern_geometry":
         valid = keys == {"pattern"} and geometry(result["pattern"])
+    elif command == "get_fabric_list":
+        valid = (keys == {"fabric_count", "fabrics"}
+                 and inventory_result(result, "fabric", MAX_FABRICS))
+    elif command == "get_avatars":
+        valid = keys == {"avatar_count", "avatars"} and inventory_result(result, "avatar", MAX_AVATARS)
+    elif command in ("get_pattern_fabric", "assign_pattern_fabric"):
+        required = {"pattern_index", "pattern_name", "fabric_index", "fabric_name"}
+        if command == "assign_pattern_fabric":
+            required |= {"verified", "previous_fabric_index", "executor_ms"}
+        valid = (keys == required and index(result["pattern_index"])
+                 and name(result["pattern_name"]) and index(result["fabric_index"])
+                 and inventory_name(result["fabric_name"]))
+        if valid and command == "assign_pattern_fabric":
+            valid = (result["verified"] is True and index(result["previous_fabric_index"])
+                     and number(result["executor_ms"], 1e12) and result["executor_ms"] >= 0)
     elif command in ("create_pattern", "copy_pattern_with_offset", "set_pattern_name", "move_pattern_relative"):
         valid = (keys == {"verified", "pattern_count", "pattern", "executor_ms"}
                  and result["verified"] is True and geometry(result["pattern"])

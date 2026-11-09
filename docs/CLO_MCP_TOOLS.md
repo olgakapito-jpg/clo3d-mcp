@@ -1,15 +1,19 @@
 # Каталог действующих CLO MCP tools
 
 2026-11-09. Источник: `src/clo3d_mcp/transport_server.py`, `pattern_contract.py`,
-`pattern_api.py`, `jobs.py`, `pipe_session.py`, launcher. **14 tools** при
-включённом принятом pattern profile; не каталог legacy47 и не будущий full API.
+`pattern_api.py`, `inventory_api.py`, `jobs.py`, `pipe_session.py`, launcher.
+**18 tools** в исходном и подтверждённом live расширенном profile после restart.
+Relationship tools17–18: limited real API/readback PASS, UI подтверждён пользователем;
+внешний вид временной детали отдельно не зафиксирован. Исходные14 приняты ранее,
+inventory real scope частичный (см. `CLO_INVENTORY_CHECK.md`). Не legacy47/full API.
 Этот документ не обновляет runtime descriptions сам по себе.
 
 ## Общие контракты
 
 - В примерах JSON ниже — synthetic args, не команда выполнить вызов. Индексы
   и expected_name брать из свежего списка реальной сцены, не копировать index0.
-- Девять pattern-команд проверяют exact keys raw HTTP payload, очередь и executor.
+- Девять pattern-команд, два inventory reads и две relationship-команды проверяют exact keys raw HTTP payload,
+  очередь и executor.
   Числа strict int/float без bool, NaN/Infinity; имена1–128 Unicode code points
   с ord≥32, без surrogates. Это не полная Unicode-category проверка: пробельные
   имена, DEL и некоторые невидимые символы сейчас допускаются; выбирать осмысленные
@@ -40,7 +44,7 @@
 - После успешного RESULT сервер ждёт до 2 секунд READY именно своего job,
   прежде чем вернуть success. Это освобождение слота, не глобальная idle-гарантия:
   другой клиент может уже поставить/выполнять работу. Client idle/session guards
-  остаются обязательны. Args, success schemas и число14 tools не меняются.
+  остаются обязательны. Release-wait не меняет command-specific success schemas.
 - `executor_release_timeout` / `executor_release_unavailable`: RESULT уже получен,
   но READY не подтверждён в срок либо связь потеряна. `isError=true`, `ok=false`,
   `scene_may_have_changed=true` консервативно даже для reads. STOP зависимых действий,
@@ -218,11 +222,82 @@ Wrong expected/duplicate name → stale_pattern, no automatic retry.
 Composition W3 planned cleanup только own objects, затем fresh list; два delete
 не gather и не использовать старый второй index. После ошибки — W4, не cleanup.
 
+## 15. get_fabric_list
+
+**Когда:** bounded список Fabric из Object Browser текущего проекта, без colorway.
+Args строго `{}`, extras invalid до enqueue. Result
+`{ok:true,fabric_count,fabrics:[{index,name}]}`; zero-based
+Object Browser indices, fabrics≤256, names0–256chars без control<32/
+surrogates; empty/duplicates сохранены. Три count reads и два прохода имён
+перепроверяются, но snapshot не atomic, indices не durable IDs.
+Source: fabric_api.GetFabricCount(_bCurrentColorway=False) с явным bool keyword,
+GetFabricName(int ObjectBrowserIndex), без default/int/colorway fallback. Нет setters/imports/
+assignments. При limit/changed/invalid result STOP, не partial success/retry.
+Valid `{}`; invalid `{"limit":10}` или `{"colorway_index":0}` — такой selection
+не реализован. Composition: info/guard → pattern list → guard → fabric list;
+это не подтверждает assignment к деталям. Не выбирать для «примени ткань».
+**Ограниченный real gate ACCEPTED:** два одинаковых списка count4/names,
+пользователь подтвердил4ткани в GUI и нормальный UI. Затем5read-only cross-domain
+cycles+final lists PASS, counts4/1/5,geometry5,status idle/error=null. Не assignment.
+Прежний colorway prototype снят до приёмки; один внешний
+worker restart не reload embedded modules. Runbook — `CLO_INVENTORY_CHECK.md`.
+
+## 16. get_avatars
+
+**Когда:** количество и имена загруженных аватаров, не import/pose/geometry.
+Args строго `{}`. Result `{ok:true,avatar_count,avatars:[{index,name}]}`;
+≤64, indices zero-based в порядке export_api.GetAvatarNameList, не persistent ID.
+Имена0–256chars без control<32/surrogates, duplicate/empty names допустимы.
+Source: export_api.GetAvatarCount()/GetAvatarNameList(),3count+2list reads.
+Повторные count/list должны совпасть, не гарантия atomic scene snapshot.
+No setters/imports/hidden recovery. Errors limit/changed/invalid result → STOP,
+не retry/fallback или auto-import. Valid `{}`; invalid `{"avatar_index":0}`
+(target getter отсутствует). Composition: info/guard → avatars → guard → pattern
+list; не делать вывод о fit/pose/attachments. Real empty и count1/name path
+получены; geometry/visual acceptance pending. Полная карточка/overload IDs/tests/
+cross-domain recipe — `CLO_INVENTORY_CHECK.md`.
+
+## 17. get_pattern_fabric
+
+Читает Object Browser fabric index/name одной uniquely named детали. Required
+`pattern_index` strict0–255, `expected_name` exact1–128chars из fresh list.
+Result `{ok:true,pattern_index,pattern_name,fabric_index,fabric_name}`; fabric
+name0–256chars. До/после snapshots, repeated mapping, no sentinel/fallback.
+Read-only, не assignment/import. stale/changed/invalid/error → STOP/no retry.
+Valid `{pattern_index:0,expected_name:"front"}` synthetic; bool index/extra
+colorway invalid до enqueue. Composition list → read → guard → assign. Anti:
+не использовать для «измени материал». Real: stable mappings5, independent
+readback0→1→3 тестовой детали и preservation после planned delete PASS; UI подтверждён.
+B05C: copy inheritance/rename/move/independent assignments/lower-delete index shift
+и fresh-index assignment PASS в отдельном fixture; не полная topology/material гарантия.
+Полный source/limits/errors/runbook — `CLO_FABRIC_ASSIGNMENT_CHECK.md`.
+
+## 18. assign_pattern_fabric
+
+Назначает одну имеющуюся Object Browser ткань одной uniquely named детали,
+native option1 фиксирован, без colorway management/linking/face selection.
+Required `{pattern_index,expected_name,fabric_index,expected_fabric_name,
+expected_current_fabric_index}`; strict indices0–255, pattern name1–128/fabric
+name0–256 exact+unique; current из fresh read. Result `{ok:true,verified:true,
+pattern_index,pattern_name,fabric_index,fabric_name,previous_fabric_index,executor_ms}`.
+До setter guards/readback preflight; после все mappings кроме target unchanged,
+lists/target name/position/area/bbox проверены. Не atomic/full material proof.
+Valid synthetic `{pattern_index:0,expected_name:"front",fabric_index:1,
+expected_fabric_name:"jersey",expected_current_fabric_index:0}`. Bool/missing/
+extra assign_option invalid. Не import. После входа error/False → potential effect,
+STOP/no automatic retry/rollback/cleanup. Recipe read→assign→independent read.
+Limited real API/readback PASS на собственной детали0→1→3 с preservation5,
+плановым delete и final checks; UI подтверждён пользователем. B05C additional
+composition/index shift PASS,temporary appearance не оценена. До256patterns/fabrics,
+max4123native reads в UI callback. Full card — `CLO_FABRIC_ASSIGNMENT_CHECK.md`.
+
 ## Ошибки и безопасные действия
 
 - invalid_parameters: проверить schema/bounds/extras, не пробовать наугад.
 - api_unavailable: описать binding, сверить docs/build; не native fallback.
 - stale_pattern: остановить старый план, fresh list/geometry; имя не ID.
+- stale_fabric: до setter сменилось имя/index/unique fabric либо current mapping;
+  остановить план, отдельно fresh inventories/mapping, не automatic retry.
 - scene_change_unverified: эффект мог быть; stop mutations, separate read-only
   сверка. Иногда возникает и при invalid preflight snapshot — код консервативен.
 - command_error: native exception sanitised; diagnostic square мог изменить

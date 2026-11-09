@@ -2300,7 +2300,14 @@
       "units": "not_checked",
       "implementation": "planned",
       "overload_coverage": "not_established",
-      "current_operation": null,
+      "current_operation": {
+        "symbol": "export_api.GetAvatarCount",
+        "tools": [
+          "get_avatars"
+        ],
+        "call_arity": 0,
+        "scope_reference": "docs/api/current_operation_scope.json"
+      },
       "donor_tools": [
         "align_avatar_and_garment",
         "arrange_pattern",
@@ -2417,7 +2424,14 @@
       "units": "not_checked",
       "implementation": "planned",
       "overload_coverage": "not_established",
-      "current_operation": null,
+      "current_operation": {
+        "symbol": "export_api.GetAvatarNameList",
+        "tools": [
+          "get_avatars"
+        ],
+        "call_arity": 0,
+        "scope_reference": "docs/api/current_operation_scope.json"
+      },
       "donor_tools": [
         "get_avatars"
       ],

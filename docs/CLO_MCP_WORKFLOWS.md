@@ -39,6 +39,33 @@ job, не ожидание global idle. Чужую работу нельзя с�
 List limit256 не снимается диагностическим count. Mismatch → остановить обход.
 **Anti-example:** HTTP отвечает → «CLO наверняка выполняет native API».
 
+### W1b. Отдельные inventories тканей и аватаров
+
+Source и live profile18 подтверждены после fresh restart. Новые recipes list →
+get_pattern_fabric(expected name) → guard → assign_pattern_fabric(expected
+pattern/fabric names/current index) → independent read, только если18 реально
+published/capabilities ready. Нет native fallback при16. Full B05 runbook:
+`CLO_FABRIC_ASSIGNMENT_CHECK.md`: direct API/readback PASS на своей детали,
+UI подтверждён пользователем,temporary appearance не оценена. B05C: source
+assign→copy→independent fabric read→rename/move→read→copy assign→read all→
+delete lower source→fresh list/new index→read→assign new index→planned own delete
+real PASS;fixture-specific inheritance не гарантия произвольной copy semantics.
+Read-only runner `pattern-fabric-inspection` real PASS:
+2passes5mappings,final lists/status,32RPC/0mutations; local tests отдельно.
+
+Inventory-only recipe был введён в profile16. Info/guard → get_pattern_list → guard →
+get_fabric_list → guard → get_avatars. Это отдельные counts/names snapshots,
+не pattern↔fabric assignment, не качество fit/pose/geometry. `get_fabric_list`
+возвращает Fabric проекта с Object Browser indices, без colorway API/фильтра.
+Limits256fabrics/64avatars; extras/pagination invalid. При changed/limit/error STOP,
+не fallback/import/switch colorway. Прежний colorway prototype снят после
+count0 при3видимых тканях. В свежем CLO Object Browser дважды вернул4одинаковых
+count/names, status idle/error=null; пользователь подтвердил GUI/UI — limited gate
+ACCEPTED. Дополнительные5read-only cycles+final inventories/geometry5 PASS.
+Аватар count1/name реально прочитан. Полные cards/next gate:
+`CLO_INVENTORY_CHECK.md`; внешний bounded runner имеет scenario
+`fabric-avatar-inventory`, но не диагностирует совпадение с GUI автоматически.
+
 ## W2. Исследовать API перед проектированием tool
 
 **Tools:** list_clo_api → describe_clo_api → official docs вне CLO.

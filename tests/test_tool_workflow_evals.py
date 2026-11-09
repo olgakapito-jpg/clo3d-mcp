@@ -31,11 +31,11 @@ def trace(inv):
     return evaluation.synthetic_examples(inv)[0]
 
 
-def test_current14_inventory_ast_without_server_imports(inv):
-    assert len(inv["tools"]) == 14
-    assert set(inv["profiles"]["current14"]["capabilities"]) == evaluation.CURRENT - evaluation.EXTERNAL
+def test_current18_inventory_ast_without_server_imports(inv):
+    assert len(inv["tools"]) == 18
+    assert set(inv["profiles"]["current18"]["capabilities"]) == evaluation.CURRENT - evaluation.EXTERNAL
     assert len(inv["profiles"]["diagnostic5"]["tools"]) == 5
-    assert evaluation.EXTERNAL.isdisjoint(inv["profiles"]["current14"]["capabilities"])
+    assert evaluation.EXTERNAL.isdisjoint(inv["profiles"]["current16"]["capabilities"])
     assert inv["tools"]["copy_pattern_with_offset"]["args"] == ["pattern_index", "expected_name", "name", "dx", "dy"]
     code = """
 import runpy, sys
@@ -44,6 +44,61 @@ assert not any(n.startswith(('mcp', 'uvicorn', 'clo3d_mcp.transport_server',
     'clo3d_mcp.server', 'clo3d_mcp.pipe_runtime')) for n in sys.modules)
 """
     subprocess.run([sys.executable, "-c", code], cwd=ROOT, check=True, timeout=20)
+
+
+def fabric_trace(inv):
+    sid = "synthetic-fabric"
+    def step(tool, args, result):
+        return {"tool": tool, "args": args, "session": sid, "result": result}
+    mapping = {"ok": True, "pattern_index": 0, "pattern_name": "front",
+               "fabric_index": 0, "fabric_name": "cotton"}
+    assign_args = {"pattern_index": 0, "expected_name": "front", "fabric_index": 1,
+                   "expected_fabric_name": "jersey", "expected_current_fabric_index": 0}
+    assigned = {**mapping, "fabric_index": 1, "fabric_name": "jersey",
+                "verified": True, "previous_fabric_index": 0, "executor_ms": 1.0}
+    return {"kind": "trace", "execution": "serial", "decision": "complete", "blockers": [],
+            "steps": [
+                step("get_session_info", {}, {"session_id": sid, "ready": True,
+                     "connected": True, "quarantined": False, "error": None,
+                     "capabilities": inv["profiles"]["current18"]["capabilities"]}),
+                step("get_pattern_list", {}, {"ok": True, "pattern_count": 1,
+                     "patterns": [{"index": 0, "name": "front"}]}),
+                step("get_fabric_list", {}, {"ok": True, "fabric_count": 2,
+                     "fabrics": [{"index": 0, "name": "cotton"}, {"index": 1, "name": "jersey"}]}),
+                step("get_pattern_fabric", {"pattern_index": 0, "expected_name": "front"}, mapping),
+                step("assign_pattern_fabric", assign_args, assigned),
+                step("get_pattern_fabric", {"pattern_index": 0, "expected_name": "front"},
+                     {**mapping, "fabric_index": 1, "fabric_name": "jersey"}),
+                step("transport_status", {}, {"session_id": sid, "ready": True,
+                     "connected": True, "quarantined": False, "error": None})]}
+
+
+def test_fabric_assignment_trace_requires_independent_mapping_readback(inv, data):
+    case = next(c for c in data["cases"] if c["id"] == "pattern_fabric_assign")
+    trace = fabric_trace(inv)
+    evaluation.validate_submission(trace, inv, case)
+    del trace["steps"][5]
+    with pytest.raises(evaluation.EvaluationError, match="unfinished_readback"):
+        evaluation.validate_submission(trace, inv, case)
+
+
+@pytest.mark.parametrize("fault", ["mapping", "target", "readback", "missing_fabrics", "after_error"])
+def test_fabric_trace_rejects_stale_missing_and_post_error_calls(inv, data, fault):
+    case = next(c for c in data["cases"] if c["id"] == "pattern_fabric_assign")
+    trace = fabric_trace(inv)
+    if fault == "mapping":
+        trace["steps"][4]["args"]["expected_current_fabric_index"] = 1
+    elif fault == "target":
+        trace["steps"][4]["args"]["expected_fabric_name"] = "other"
+    elif fault == "readback":
+        trace["steps"][5]["result"]["fabric_index"] = 0
+    elif fault == "missing_fabrics":
+        del trace["steps"][2]
+    else:
+        trace["steps"][4]["result"] = {"ok": False, "error": "scene_change_unverified",
+                                               "scene_may_have_changed": True}
+    with pytest.raises(evaluation.EvaluationError):
+        evaluation.validate_submission(trace, inv, case)
 
 
 def test_inventory_rejects_mapping_and_registration_drift(tmp_path):
@@ -247,7 +302,7 @@ def test_fixture_and_scope_and_diagnostic_guards(inv, data, trace):
 def test_cli_check_and_self_test(capsys):
     assert evaluation.main(["--check", "--self-test"]) == 0
     result = json.loads(capsys.readouterr().out)
-    assert result["cases"] >= 20 and result["tools"] == 14
+    assert result["cases"] >= 20 and result["tools"] == 18
     assert result["self_test"] == {"valid_accepted": 2, "invalid_rejected": 6}
     assert "not_llm" in result["evidence"]
 

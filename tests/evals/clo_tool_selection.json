@@ -217,6 +217,43 @@
       "expected_tools": [], "forbidden_tools": ["delete_pattern"], "forbidden_effects": ["scene_mutation", "diagnostic_mutation"],
       "required_args": {}, "decision": "clarify", "blockers": ["ambiguous_target"],
       "stop_conditions": ["error", "outcome_unknown", "schema_mismatch", "session_change", "stale_target"]
+    },
+    {
+      "id": "fabric_inventory", "intent": "Покажи Fabric из Object Browser проекта без colorway, назначения и импорта.",
+      "profile": "current16", "scope": "read_only", "fixture": {"ready": true, "patterns": []},
+      "expected_tools": ["get_session_info", "get_fabric_list"], "forbidden_tools": ["assign_fabric", "call_api"],
+      "forbidden_effects": ["scene_mutation", "filesystem_write", "external_effect"],
+      "required_args": {"get_fabric_list": {}}, "decision": "complete", "blockers": [],
+      "stop_conditions": ["error", "outcome_unknown", "schema_mismatch", "session_change", "stale_target"]
+    },
+    {
+      "id": "avatar_inventory", "intent": "Какие аватары загружены? Нужны только имена, не поза, импорт или геометрия.",
+      "profile": "current16", "scope": "read_only", "fixture": {"ready": true, "patterns": []},
+      "expected_tools": ["get_session_info", "get_avatars"], "forbidden_tools": ["import_avatar", "call_api"],
+      "forbidden_effects": ["scene_mutation", "filesystem_write", "external_effect"],
+      "required_args": {"get_avatars": {}}, "decision": "complete", "blockers": [],
+      "stop_conditions": ["error", "outcome_unknown", "schema_mismatch", "session_change", "stale_target"]
+    },
+    {
+      "id": "pattern_fabric_read", "intent": "Прочитай ткань детали front index0, не меняй назначение.",
+      "profile": "current18", "scope": "read_only", "fixture": {"ready": true, "patterns": ["front"]},
+      "expected_tools": ["get_session_info", "get_pattern_list", "get_pattern_fabric"],
+      "forbidden_tools": ["assign_pattern_fabric", "call_api"],
+      "forbidden_effects": ["scene_mutation", "filesystem_write", "external_effect"],
+      "required_args": {"get_pattern_fabric": {"pattern_index": 0, "expected_name": "front"}},
+      "decision": "complete", "blockers": [],
+      "stop_conditions": ["error", "outcome_unknown", "schema_mismatch", "session_change", "stale_target"]
+    },
+    {
+      "id": "pattern_fabric_assign", "intent": "На тестовой front index0 замени текущую ткань0 на jersey index1 с readback, без colorway management.",
+      "profile": "current18", "scope": "scene", "fixture": {"ready": true, "patterns": ["front"]},
+      "expected_tools": ["get_session_info", "get_pattern_list", "get_fabric_list", "get_pattern_fabric", "assign_pattern_fabric", "transport_status"],
+      "forbidden_tools": ["call_api", "import_project"],
+      "forbidden_effects": ["filesystem_write", "external_effect", "global_mutation"],
+      "required_args": {"get_pattern_fabric": {"pattern_index": 0, "expected_name": "front"},
+                        "assign_pattern_fabric": {"pattern_index": 0, "expected_name": "front", "fabric_index": 1, "expected_fabric_name": "jersey", "expected_current_fabric_index": 0}},
+      "decision": "complete", "blockers": [],
+      "stop_conditions": ["error", "outcome_unknown", "schema_mismatch", "session_change", "stale_target"]
     }
   ]
 }

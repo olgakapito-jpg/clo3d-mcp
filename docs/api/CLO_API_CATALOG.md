@@ -12,7 +12,7 @@ Target только **CLO2026.1.336**, SDK11.0.1. Это offline source specific
 - Отдельные документированные types/options: **77**; дополнительные
   interfaces: **6**. Не прибавляются к implemented tools.
 - Donor tools: **170**, local legacy: **47**,
-  current enabled tools: **14**, current native-operation scopes: **10**.
+  current enabled tools: **18**, current native-operation scopes: **16**.
 - Исторические docstring observations: **43** names;
   это presence/callability на уровне symbol, не точная проверка overload.
 - Official names со static donor mapping: **332**;
@@ -43,9 +43,11 @@ locations и provenance — в `clo_source_mappings.json`. Это ссылки �
 пакета. Лексический domain/owner — только planning bucket, не semantic evidence.
 Даже `Get*`/`*Stream` не означает безопасный read. Все официальные per-overload
 implementation пока planned, verification not_tested; это намеренно не выводится
-из количества refs. Уже принятые ограниченные10 native operations и14 tools
-не потеряны: их actual scope/evidence живёт в `current_operation_scope.json` и
-source mappings, не объявляется полным покрытием официальных перегрузок.
+из количества refs. Исходные принятые10 pattern native operations и14 tools
+не потеряны. Текущий инвентарь дополнен read-only inventories с частичным real
+evidence и открытым fabric mismatch: actual scope/evidence живёт в
+`current_operation_scope.json`, `../CLO_INVENTORY_CHECK.md` и source mappings,
+не объявляется полным покрытием официальных перегрузок.
 
 Наличие docstring поднимает только symbol-level runtime presence/callability;
 типы и конкретная overload semantics остаются отдельным gate. Type reference

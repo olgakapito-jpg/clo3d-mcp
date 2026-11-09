@@ -1,5 +1,31 @@
 # Bounded domain acceptance prep — A5
 
+**B05 local update:** source18 содержит get_pattern_fabric/assign_pattern_fabric,
+live18 после fresh CLO restart. Direct real assignment API/readback PASS,UI
+подтверждён;temporary appearance не оценена. B05C composition/index shift PASS.
+`pattern-fabric-inspection` read-only runner реализован и real PASS:
+5objects/4fabrics/2passes,32RPC/0mutations. Object bound(default4,max16),budget
+12+4*max_objects включая initialize. dry-run `fabric-assignment-future` не имеет
+missing tools в source, но остаётся BLOCKED: client execution recipe не реализован
+для mutating assignment, а не для read-only inspection. Нельзя считать наличие wrappers разрешением
+автозапуска mutating runner. Direct serial acceptance runbook:
+`CLO_FABRIC_ASSIGNMENT_CHECK.md`.
+
+**Обновление inventory-пакета:** расширенный profile16 содержит get_fabric_list
+и get_avatars; scene mutations/import/assignment tools не добавлены. Новый
+scenario `fabric-avatar-inventory` — read-only,12steps с initialize,0mutations.
+Discover теперь проверяет avatar getters в export_api (не utility_api).
+Исторические sections ниже с inventory14 сохранены как журнал прошлых runs.
+Real старого prototype: empty paths; после user assets avatar count1/name получен,
+pattern list count5. Пользователь исключил colorway из текущего scope: нужен
+Fabric Object Browser. Colorway prototype (count0 при3видимых тканях) снят до
+приёмки, его count-only probe больше не нужен. Новый read использует явный bool
+keyword False и single-index name; в свежем CLO count4/names дважды совпали,
+GUI/UI подтверждены пользователем — limited gate ACCEPTED. Дополнительный direct
+MCP batch5cycles+final lists4/1/5/geometry5 PASS17.159с,mutations0; это не запуск
+runner scenario. Нет fallback. Точные contracts/evidence/
+следующий real шаг — `CLO_INVENTORY_CHECK.md`.
+
 Цель: подготовить совместную приёмку **CLO2026.1.336**, а не заявить покрытие
 всего API. Новый внешний клиент: `scripts/verify_domains.py`. Текущий baseline —
 14 опубликованных tools из `CLO_MCP_TOOLS.md`. Ни runtime, ни launcher, ни
@@ -233,7 +259,7 @@ helper unavailable, unrelated. Панель: запуск пользовател
 hide/reopen/Stop→Start/new session/UI responsiveness отдельно ещё не приняты.
 Standalone metadata/type probe B01 не запускался, новых bindings не подтверждено.
 
-## Исправление RESULT → READY — local, real gate pending
+## Исправление RESULT → READY — реализация и локальная проверка
 
 Внешний `Service.call` использует `AsyncJobQueue.call(release_timeout=2.0)`:
 после successful outcome ждёт release event точного job_id. `on_ready` освобождает
@@ -255,3 +281,50 @@ completed и отдельный scene-inspection verified, без фоновой
 disconnect, close, cancellation и immediate native error. Service test проверяет
 responsive status и неизменный success result. Source/coverage regeneration и
 `--check` PASS; all-source audit191 PASS. Новых real calls после изменения нет.
+
+## Новый совместный real прогон после Stop → Start — 2026-11-09
+
+После commit `842c1e8` пользователь подтвердил остановку и новый запуск внешнего
+MCP через `plugin/clo3d_mcp_panel.py`. Внешний вид панели не менялся; embedded
+executor для этого исправления не обновлялся. Выполнены два новых самостоятельных
+read-only сценария, не resume прежних failed/blocked runs:
+
+1. `uv run --frozen python scripts/verify_domains.py discover` — exit0,
+   `completed/discovery_is_not_native_acceptance`, run_id
+   `811b35ca75934b10a9c57528a1d0dc7f`, 9 RPC steps, 0 mutations.
+   Inventory14, без missing/extra tools; info/status/list и два describe verified.
+   Callable counts pattern217/export92/fabric135/import39/utility366.
+   `fabric_api.GetFabricCount/GetFabricName` available=true; конкретные имена
+   `utility_api.GetAvatarCount/GetAvatarNameList` available=false. Это metadata,
+   не вызовы fabric/avatar getters и не вывод об отсутствии аватара в сцене.
+2. `uv run --frozen python scripts/verify_domains.py run --scenario scene-inspection`
+   — exit0, `verified/bounded_scene_observations_only`, run_id
+   `a773d122384c4659b22e7486728aab68`, 7 RPC steps, 0 mutations.
+   Два стабильных списка и промежуточные guards verified, pattern_count=0,
+   geometry_objects_checked=0. Геометрия непустой сцены **не проверена**.
+
+Короткий real gate исправления RESULT → READY пройден для CLO2026.1.336:
+прежние schema/idle-guard failures в этих двух новых runs не повторились.
+Это не stress, не проверка всех timing/fault cases и не приёмка новых доменов.
+Assets не читались/не загружались, сцена не менялась. Полная приёмка панели
+(hide/reopen, responsiveness, clean exit и новая session identity) отдельно
+не доказана. Следующий gate — один ручной B01 static metadata probe
+`plugin/clo3d_mcp_api_probe.py`: pattern_api / type=None / cursor=0.
+
+### Прямой MCP после включения пользователем — 2026-11-09
+
+Пользователь включил MCP в клиенте и разрешил самостоятельные проверки.
+Каталог прямых tools содержит те же14 операций. `get_session_info` подтвердил
+ready/connected, idle, error=None, без quarantine. Затем последовательные
+`list_clo_api` → `transport_status` → `describe_clo_api` дали дополнительное
+metadata evidence: **`export_api.GetAvatarCount`** доступен с doc
+`GetAvatarCount() -> int`, **`export_api.GetAvatarNameList`** — с doc
+`GetAvatarNameList() -> List[str]`. Сами getters не вызывались, count/имена
+аватаров не прочитаны. Предыдущее отсутствие этих имён в utility_api не относится
+к export_api и не является отсутствием API вообще. Mutations=0.
+
+Включение MCP не добавило B01 probe: list/describe ограничены пятью modules;
+ApiTypes/gui_api, class own-member inspection и запуск Python scripts не входят
+в опубликованный контракт. Для полного B01 по-прежнему нужен ручной standalone
+probe либо отдельно спроектированное узкое расширение; generic exec/import
+как обход не применяется. Автозапуск/перезапуск CLO worker этим прогоном не проверен.

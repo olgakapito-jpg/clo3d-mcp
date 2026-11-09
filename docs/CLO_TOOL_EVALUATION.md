@@ -8,7 +8,7 @@
 
 - `scripts/evaluate_tool_workflows.py`: stdlib CLI, AST inventory, строгий dataset
   validator и deterministic validator предоставленных plans/traces.
-- `tests/evals/clo_tool_selection.json`: 30 русских намерений с ожидаемыми и
+- `tests/evals/clo_tool_selection.json`: 34 русских намерения с ожидаемыми и
   запрещёнными выборами, аргументами, effects, blockers и stop conditions.
 - `tests/test_tool_workflow_evals.py`: synthetic positive/negative проверки.
 
@@ -19,13 +19,13 @@ python scripts/evaluate_tool_workflows.py --check --self-test
 uv run --frozen --with pytest pytest -q tests/test_tool_workflow_evals.py
 ```
 
-`--check` сверяет dataset с AST **исходного** `transport_server.py`: 14 decorated
+`--check` сверяет dataset с AST **исходного** `transport_server.py`: 18 decorated
 tools, обязательные параметры и literal mappings `service.call`. Capabilities
 получает ограниченным AST-разбором list/concatenation в `protocol.py`, без exec.
 Внешние `get_session_info`/`transport_status` — tools, но не executor capabilities.
-Есть два source-derived профиля: `current14` и `diagnostic5`. Это не запрос
+Есть текущий `current18`, исторические `current16`/`current14` и `diagnostic5`. Это не запрос
 `tools/list` работающего сервера и не доказательство включённого live profile.
-При дрейфе current14 или неожиданной AST форме runner отказывает, а не подбирает
+При дрейфе current18 или неожиданной AST форме runner отказывает, а не подбирает
 новый контракт автоматически.
 
 `--self-test` проверяет два корректных trace (move и два serial delete с
@@ -43,7 +43,7 @@ Exact top-level keys: `schema_version:1`,
 
 - `id`: уникальный lowercase ASCII identifier, максимум 64 символа.
 - `intent`: русский естественный запрос (10–2000 символов).
-- `profile`: `current14` либо `diagnostic5`; `scope`: `read_only`, `scene` либо
+- `profile`: `current18`, исторические `current16`/`current14` либо `diagnostic5`; `scope`: `read_only`, `scene` либо
   `diagnostic`. Diagnostic square нельзя выбирать для production scope.
 - `fixture`: `{ready:<strict bool>,patterns:[<unique synthetic names>]}`.
   Это исходное ожидаемое состояние, не данные настоящей сцены. Первый status

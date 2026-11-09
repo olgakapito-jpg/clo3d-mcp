@@ -403,7 +403,14 @@
       "units": "not_checked",
       "implementation": "planned",
       "overload_coverage": "not_established",
-      "current_operation": null,
+      "current_operation": {
+        "symbol": "fabric_api.AssignFabricToPattern",
+        "tools": [
+          "assign_pattern_fabric"
+        ],
+        "call_arity": 3,
+        "scope_reference": "docs/api/current_operation_scope.json"
+      },
       "donor_tools": [
         "assign_fabric_to_pattern"
       ],
@@ -460,7 +467,14 @@
       "units": "not_checked",
       "implementation": "planned",
       "overload_coverage": "not_established",
-      "current_operation": null,
+      "current_operation": {
+        "symbol": "fabric_api.AssignFabricToPattern",
+        "tools": [
+          "assign_pattern_fabric"
+        ],
+        "call_arity": 3,
+        "scope_reference": "docs/api/current_operation_scope.json"
+      },
       "donor_tools": [
         "assign_fabric_to_pattern"
       ],

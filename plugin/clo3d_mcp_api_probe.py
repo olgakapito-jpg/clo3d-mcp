@@ -1,7 +1,8 @@
 """A0: bounded static metadata, not a native API test or an MCP tool.
 
 Run explicitly in CLO Script Editor. Importing this file does not run a probe.
-No native imports, object construction, API calls, callbacks, files or IPC.
+Default batch imports ApiTypes once, traverses module pages and discovered classes.
+No object construction, scene API calls, callbacks, files or IPC.
 Only exact stdlib structural accessors are used; user descriptors are not read.
 See docs/CLO_API_PROBE_CHECK.md before running or sharing the output.
 """
@@ -10,12 +11,15 @@ import json
 import math
 import re
 import sys
+import time
 import types
 
 
-# Edit only these three selections for one explicit Script Editor run.
-SELECT_MODULE = "pattern_api"
-SELECT_TYPE = None
+# Default: one bounded ApiTypes module + discovered class traversal, no edits.
+RUN_BATCH = True
+# Used only when RUN_BATCH=False.
+SELECT_MODULE = "ApiTypes"
+SELECT_TYPE = "ExportDxfOption"
 SELECT_CURSOR = 0
 
 ALLOWED_MODULES = (
@@ -28,6 +32,11 @@ MAX_DOC_CHARS = 512
 MAX_NAME_CHARS = 128
 MAX_SIGNATURE_PARAMETERS = 32
 MAX_REPORT_BYTES = 24576
+BATCH_MAX_PAGES = 256
+BATCH_MAX_TYPES = 128
+BATCH_MAX_ENTRIES = 4096
+BATCH_MAX_BYTES = 524288
+BATCH_MAX_SECONDS = 5.0
 
 # These are the known CPython structural descriptors, not descriptors obtained
 # from an inspected class/metaclass. type.__getattribute__(cls, '__dict__')
@@ -201,8 +210,7 @@ def _encode(report):
                       sort_keys=True, indent=2)
 
 
-def collect_metadata(module_name=SELECT_MODULE, type_name=SELECT_TYPE,
-                     cursor=SELECT_CURSOR):
+def collect_metadata(module_name="pattern_api", type_name=None, cursor=0):
     """Inspect one loaded allowlisted module or one own-class-member page.
 
     cursor is a raw dictionary position, NOT a public-name index. Continue only
@@ -269,8 +277,7 @@ def collect_metadata(module_name=SELECT_MODULE, type_name=SELECT_TYPE,
     return report
 
 
-def render_metadata(module_name=SELECT_MODULE, type_name=SELECT_TYPE,
-                    cursor=SELECT_CURSOR):
+def render_metadata(module_name="pattern_api", type_name=None, cursor=0):
     """Return one bounded ASCII JSON document; errors contain no exception text."""
     try:
         report = collect_metadata(module_name, type_name, cursor)
@@ -284,5 +291,145 @@ def render_metadata(module_name=SELECT_MODULE, type_name=SELECT_TYPE,
                         "next_action": "stop_and_review_no_dynamic_fallback"})
 
 
+def _namespace_stamp(namespace):
+    # Structural identities only; never compare/coerce inspected objects.
+    result = []
+    for index, (key, value) in enumerate(namespace.items()):
+        if index >= MAX_NAMESPACE_SCAN:
+            break
+        result.append((id(key), id(value)))
+    return tuple(result)
+
+
+def render_batch_metadata():
+    """Bounded module pages then own members of discovered top-level classes.
+
+    No recursive class descent, constructions, descriptor access or imports.
+    Deadline is cooperative: cannot interrupt import/native structural access.
+    """
+    started = time.monotonic()
+    report = {"schema": "clo_api_static_batch_v1", "module": "ApiTypes",
+              "evidence": "metadata_only_not_native_test", "status": "partial",
+              "complete": False, "pages": [], "classes_discovered": [],
+              "classes_completed": 0, "entries_collected": 0,
+              "limits": {"pages": BATCH_MAX_PAGES, "types": BATCH_MAX_TYPES,
+                         "entries": BATCH_MAX_ENTRIES, "report_bytes": BATCH_MAX_BYTES,
+                         "cooperative_seconds": BATCH_MAX_SECONDS,
+                         "namespace_scan": MAX_NAMESPACE_SCAN,
+                         "page_size": PAGE_SIZE, "doc_chars": MAX_DOC_CHARS}}
+
+    def encode():
+        return json.dumps(report, ensure_ascii=True, allow_nan=False,
+                          sort_keys=True, separators=(",", ":"))
+
+    selected_type, cursor = None, 0
+    try:
+        if type(sys.modules) is not dict:
+            report["stop_reason"] = "unsupported_module_registry"
+            return encode()
+        module = dict.get(sys.modules, "ApiTypes")
+        if type(module) is not types.ModuleType:
+            report["stop_reason"] = "not_loaded_or_unsupported_module"
+            return encode()
+        module_namespace = _MODULE_DICT.__get__(module)
+        module_stamp = _namespace_stamp(module_namespace)
+        targets = []
+        target_index = -1
+        namespace = module_namespace
+        stamp = module_stamp
+        while True:
+            report["next_selection"] = {"type": selected_type, "cursor": cursor}
+            if time.monotonic() - started >= BATCH_MAX_SECONDS:
+                report["stop_reason"] = "time_limit"
+                break
+            if len(report["pages"]) >= BATCH_MAX_PAGES:
+                report["stop_reason"] = "page_limit"
+                break
+            if (dict.get(sys.modules, "ApiTypes") is not module
+                    or _namespace_stamp(module_namespace) != module_stamp
+                    or _namespace_stamp(namespace) != stamp):
+                report["stop_reason"] = "namespace_changed"
+                break
+            page = collect_metadata("ApiTypes", selected_type, cursor)
+            if (_namespace_stamp(module_namespace) != module_stamp
+                    or _namespace_stamp(namespace) != stamp
+                    or dict.get(sys.modules, "ApiTypes") is not module):
+                report["stop_reason"] = "namespace_changed"
+                break
+            if page["status"] != "metadata_only":
+                report["stop_reason"] = page["status"]
+                break
+            if time.monotonic() - started >= BATCH_MAX_SECONDS:
+                report["stop_reason"] = "time_limit"
+                break
+            count = len(page["entries"])
+            if report["entries_collected"] + count > BATCH_MAX_ENTRIES:
+                report["stop_reason"] = "entry_limit"
+                break
+            report["pages"].append(page)
+            # Reserve space for stop metadata and discovered class names.
+            if len(encode().encode("ascii")) > BATCH_MAX_BYTES - 32768:
+                report["pages"].pop()
+                report["stop_reason"] = "byte_limit"
+                break
+            report["entries_collected"] += count
+            if selected_type is None:
+                for entry in page["entries"]:
+                    if entry["kind"] == "class":
+                        if len(targets) >= BATCH_MAX_TYPES:
+                            report["stop_reason"] = "type_limit"
+                            return encode()
+                        name = entry["name"]
+                        targets.append((name, _field(module_namespace, name)))
+                        report["classes_discovered"].append(name)
+            next_cursor = page["next_cursor"]
+            if next_cursor is not None:
+                if type(next_cursor) is not int or not cursor < next_cursor < MAX_NAMESPACE_SCAN:
+                    report["stop_reason"] = "invalid_continuation"
+                    break
+                cursor = next_cursor
+                continue
+            if page["truncated"]:
+                report["stop_reason"] = page.get("stop_reason", "namespace_scan_limit")
+                break
+            if selected_type is not None:
+                report["classes_completed"] += 1
+            target_index += 1
+            if target_index >= len(targets):
+                report.update(status="metadata_only", complete=True, stop_reason="completed",
+                              next_selection=None)
+                break
+            selected_type, value = targets[target_index]
+            namespace = _class_namespace(value)
+            stamp = _namespace_stamp(namespace)
+            cursor = 0
+    except Exception:
+        report.update(status="metadata_error", stop_reason="metadata_error")
+    text = encode()
+    if len(text.encode("ascii")) > BATCH_MAX_BYTES:
+        return _encode({"schema": "clo_api_static_batch_v1", "status": "report_byte_limit",
+                        "complete": False})
+    return text
+
+
+def run_selected_probe(*, batch=False):
+    """Explicit approved ApiTypes import + static probe in one Script Editor run.
+
+    Not a missing-module fallback: no dynamic import target, reload or retry.
+    Other selections retain the loaded-module-only contract.
+    """
+    if batch or SELECT_MODULE == "ApiTypes":
+        try:
+            import ApiTypes
+        except Exception:
+            return _encode({"schema": "clo_api_static_probe_v1",
+                            "module": "ApiTypes", "status": "import_failed",
+                            "evidence": "metadata_only_not_native_test",
+                            "next_action": "stop_and_review_no_retry"})
+    if batch:
+        return render_batch_metadata()
+    return render_metadata(SELECT_MODULE, SELECT_TYPE, SELECT_CURSOR)
+
+
 if __name__ == "__main__":
-    print(render_metadata())
+    print(run_selected_probe(batch=RUN_BATCH))

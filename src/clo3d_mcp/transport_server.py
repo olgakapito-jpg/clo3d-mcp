@@ -154,6 +154,65 @@ def add_pattern_tools(mcp, service, read):
         return await service.call("get_pattern_list", {})
 
     @mcp.tool(annotations=read)
+    async def get_fabric_list() -> dict[str, Any]:
+        """Read project Fabric indices/names from Object Browser; at most 256 fabrics.
+
+        No arguments. Returns fabric_count and fabrics[{index,name}]. No colorway
+        filter or selection. Indices are zero-based Object Browser indices, not
+        durable IDs. Checks repeated count/names, not an atomic
+        snapshot. Empty/duplicate names are preserved; no assignment or materials.
+        inventory_limit/changed/invalid_native_result: stop, no automatic retry;
+        do not use a partial list. Never import assets or switch colorway to recover.
+        """
+        return await service.call("get_fabric_list", {})
+
+    @mcp.tool(annotations=read)
+    async def get_avatars() -> dict[str, Any]:
+        """Read loaded avatar indices/names in GetAvatarNameList order; at most 64.
+
+        No arguments. Returns avatar_count and avatars[{index,name}], zero-based
+        transient indices, not durable IDs. Checks repeated count/name lists, not
+        geometry, pose, sizing or an atomic snapshot. Empty/duplicate names remain.
+        No import or scene change. inventory_limit/changed/invalid_native_result:
+        stop, no automatic retry or fallback; never import an avatar to recover.
+        """
+        return await service.call("get_avatars", {})
+
+    @mcp.tool(annotations=read)
+    async def get_pattern_fabric(pattern_index: StrictInt, expected_name: str) -> dict[str, Any]:
+        """Read ONE uniquely named pattern's assigned Object Browser fabric index/name.
+
+        Required pattern_index0-255 and exact expected_name1-128chars from fresh list.
+        Returns pattern_index,pattern_name,fabric_index,fabric_name (no colorway).
+        Up to256patterns/256fabrics; repeated mapping/list checks, not atomic IDs.
+        No assignment/import. stale_pattern/inventory_changed/invalid_native_result:
+        stop, no automatic retry/fallback; no undocumented unassigned sentinel.
+        """
+        return await service.call("get_pattern_fabric", {
+            "pattern_index": pattern_index, "expected_name": expected_name})
+
+    @mcp.tool(annotations=ToolAnnotations(readOnlyHint=False, destructiveHint=True,
+                                        idempotentHint=False, openWorldHint=False))
+    async def assign_pattern_fabric(pattern_index: StrictInt, expected_name: str,
+                                    fabric_index: StrictInt, expected_fabric_name: str,
+                                    expected_current_fabric_index: StrictInt) -> dict[str, Any]:
+        """Assign ONE Object Browser fabric to ONE uniquely named pattern; verify readback.
+
+        Required indices0-255, exact unique pattern name1-128chars/fabric name0-256,
+        expected_current_fabric_index from fresh get_pattern_fabric. Fixed native
+        option1 (current application context only), no colorway selection/linking.
+        Returns verified,pattern_index/name,fabric_index/name,previous_fabric_index,
+        executor_ms. Checks all <=256 pattern mappings unchanged except target,
+        fabric/name lists and target position/area/bbox. Not atomic or full material
+        validation. stale_fabric/pattern stop before setter; post-entry errors may
+        follow effect: no automatic retry, rollback or cleanup, even on False/error.
+        """
+        return await service.call("assign_pattern_fabric", {
+            "pattern_index": pattern_index, "expected_name": expected_name,
+            "fabric_index": fabric_index, "expected_fabric_name": expected_fabric_name,
+            "expected_current_fabric_index": expected_current_fabric_index})
+
+    @mcp.tool(annotations=read)
     async def get_pattern_geometry(pattern_index: StrictInt) -> dict[str, Any]:
         """Read 2D position in mm, area in mm2 and bounding box from CLO."""
         return await service.call("get_pattern_geometry", {"pattern_index": pattern_index})

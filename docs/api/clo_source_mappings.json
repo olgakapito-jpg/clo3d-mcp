@@ -188,6 +188,18 @@
   "local": {
     "sources": [
       {
+        "path": "docs/CLO_FABRIC_ASSIGNMENT_CHECK.md",
+        "sha256": "98a448073db8d7bac7c4a4531a4baa3b87738b3da48e5aaca5a61f32ca155a59",
+        "bytes": 20662,
+        "lines": 258
+      },
+      {
+        "path": "docs/CLO_INVENTORY_CHECK.md",
+        "sha256": "be5d4d5a27cf6f963f9a7c9088da6b0bcfc7f27a2774ceff37f3dea878b20da6",
+        "bytes": 15290,
+        "lines": 184
+      },
+      {
         "path": "docs/P3_MCP_CHECK.md",
         "sha256": "f18207e0381762f83c2906496fd6344b4de7532c5c539d58edb2a3bf21cd0f81",
         "bytes": 14853,
@@ -212,16 +224,28 @@
         "lines": 71
       },
       {
+        "path": "src/clo3d_mcp/fabric_assignment_api.py",
+        "sha256": "9f20f68f7cbc204cb0dc6b603d10e9f446b590dc0a7970ddc05405562fed5a94",
+        "bytes": 5372,
+        "lines": 115
+      },
+      {
+        "path": "src/clo3d_mcp/inventory_api.py",
+        "sha256": "f4fc463c3b0a7bab3cfb45a20370081e8586d5a2a6b5fa23589ae027a1b2ff6d",
+        "bytes": 3863,
+        "lines": 86
+      },
+      {
         "path": "src/clo3d_mcp/pattern_api.py",
-        "sha256": "cb62a5596457f87553c6251568c45ca59d505f1dcdfa081877921877476d3008",
-        "bytes": 11845,
-        "lines": 235
+        "sha256": "6bdad79a6e01d01a619c3d03c133d290667963810976e6b0b74b3363a622a6a9",
+        "bytes": 12308,
+        "lines": 243
       },
       {
         "path": "src/clo3d_mcp/pattern_contract.py",
-        "sha256": "e0eee940d2bb24267b32071aabc85a84b329c2b7b181a8c0e6d1b1a36f10895a",
-        "bytes": 8546,
-        "lines": 192
+        "sha256": "e68f48b476c62a9f287cc757cbdd02dfe9d1670462afe14e37aeec3b9be94796",
+        "bytes": 11020,
+        "lines": 234
       },
       {
         "path": "src/clo3d_mcp/pipe_runtime.py",
@@ -249,9 +273,21 @@
       },
       {
         "path": "src/clo3d_mcp/transport_server.py",
-        "sha256": "cb17a0b5526c5695ba5f14ecbce17785806f0984f9b164d6a7a2d11f8d5c1841",
-        "bytes": 16295,
-        "lines": 347
+        "sha256": "21bc57045507d12359a3f84a3a6f093d7903adbba96da665438d76a164597d36",
+        "bytes": 19948,
+        "lines": 406
+      },
+      {
+        "path": "tests/test_fabric_assignment_api.py",
+        "sha256": "939f382e392446cd1801aebe094f87dc210957a5429c3df1944a222f583abcee",
+        "bytes": 18981,
+        "lines": 429
+      },
+      {
+        "path": "tests/test_inventory_api.py",
+        "sha256": "fae844f2e7d73c16f9dc605ab07e7081b971bfe4f17e0c8b759f46a48fc035ee",
+        "bytes": 12576,
+        "lines": 295
       },
       {
         "path": "tests/test_pattern_api.py",
@@ -337,12 +373,12 @@
       ]
     },
     "current": {
-      "profile_note": "14 only with pattern_package enabled; 5 base tools otherwise. Static declarations, not a live tools/list response.",
+      "profile_note": "18 only with pattern_package enabled; 5 base tools otherwise. Static declarations, not a live tools/list response.",
       "tools_shards": [
         {
           "path": "mappings/current_tools_01.json",
-          "sha256": "561d947f5bdc08df68a2ce3f9521f0383be69521456555b122ccc64cc5110be7",
-          "entries": 14
+          "sha256": "c673d756e2ca5d686afb5617df9d301e8c1d4d3dd7b6f0f31f2e6c55b1be3a34",
+          "entries": 18
         }
       ]
     }
@@ -364,14 +400,14 @@
       "list_extensions",
       "ping"
     ],
-    "current_tools": 14
+    "current_tools": 18
   },
   "limitations": [
     "Static AST evidence only. No donor/local inspected module import, no CLO call, restart, mutation or SDK execution.",
     "Native ids are module.symbol. No inferred official overload, binding/type availability, error semantics, units or contract acceptance.",
     "Helper reachability is a conservative syntactic graph including conditional/fallback paths, not proof that a call occurs. One shortest evidence path per helper; callable references remain distinct from direct calls.",
     "getattr/dynamic module/type lookup and strings are reported as unresolved expressions, never expanded into guessed native calls. Arbitrary alias/dataflow, closures, decorators and reflection are not evaluated.",
-    "Current14 command-to-native selection is explicitly reviewed metadata tied to AST callsite evidence; references may be shared preflight/readback/conditional sites and are not an execution trace.",
+    "Current18 command-to-native selection is explicitly reviewed metadata tied to AST callsite evidence; references may be shared preflight/readback/conditional sites and are not an execution trace.",
     "Exact descriptions are source docstrings (ast.get_docstring clean=True), signatures are ast.unparse-normalized Python declarations, not generated MCP JSON schemas or live tools/list.",
     "Test function references establish traceability only, not execution/pass status or complete scenario coverage. Historical acceptance remains limited to cited documents and no new real CLO gate is closed.",
     "Official coverage join and reconciliation of removed names/types are separate; raw donor symbol matches are not coverage percentages."

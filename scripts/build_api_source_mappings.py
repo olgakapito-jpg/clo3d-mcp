@@ -39,6 +39,10 @@ LOCAL_INPUTS = (
     "src/clo3d_mcp/pipe_runtime.py", "src/clo3d_mcp/pipe_session.py", "src/clo3d_mcp/protocol.py", "docs/PATTERN_API_CHECK.md",
     "docs/P3_MCP_CHECK.md", "tests/test_pattern_api.py", "tests/test_verify_patterns.py",
     "tests/test_transport_server.py", "tests/test_service_executor.py",
+    "src/clo3d_mcp/inventory_api.py", "tests/test_inventory_api.py",
+    "docs/CLO_INVENTORY_CHECK.md",
+    "src/clo3d_mcp/fabric_assignment_api.py", "tests/test_fabric_assignment_api.py",
+    "docs/CLO_FABRIC_ASSIGNMENT_CHECK.md",
 )
 
 
@@ -339,33 +343,66 @@ def evidence_functions(source, names):
 def current_inventory(files):
     server = Source("src/clo3d_mcp/transport_server.py", files["src/clo3d_mcp/transport_server.py"])
     adapter = Source("src/clo3d_mcp/pattern_api.py", files["src/clo3d_mcp/pattern_api.py"])
+    inventory_adapter = Source("src/clo3d_mcp/inventory_api.py", files["src/clo3d_mcp/inventory_api.py"])
+    assignment_adapter = Source("src/clo3d_mcp/fabric_assignment_api.py", files["src/clo3d_mcp/fabric_assignment_api.py"])
     launcher = Source("plugin/clo3d_mcp_start.py", files["plugin/clo3d_mcp_start.py"])
     contract = Source("src/clo3d_mcp/pattern_contract.py", files["src/clo3d_mcp/pattern_contract.py"])
     protocol = Source("src/clo3d_mcp/protocol.py", files["src/clo3d_mcp/protocol.py"])
     executor = Source("src/clo3d_mcp/pipe_session.py", files["src/clo3d_mcp/pipe_session.py"])
     tools = server.tools()
-    all_refs = [ref for source in (adapter, launcher) for name in source.functions
+    all_refs = [ref for source in (adapter, launcher, inventory_adapter, assignment_adapter) for name in source.functions
                 for ref in source.facts(name)["native_references"]]
     for tool in tools:
         name = tool["name"]
         primary = ["pattern_api." + n for n in CURRENT_PRIMARY.get(name, [])]
+        inventory_tool = name in ("get_fabric_list", "get_avatars")
+        assignment_tool = name in ("get_pattern_fabric", "assign_pattern_fabric")
+        domain_tool = inventory_tool or assignment_tool
+        if inventory_tool:
+            primary = (["fabric_api.GetFabricCount", "fabric_api.GetFabricName"]
+                       if name == "get_fabric_list" else
+                       ["export_api.GetAvatarCount", "export_api.GetAvatarNameList"])
         if name == "create_test_rectangle":
             primary = ["pattern_api.CreatePatternWithPoints"]
+        if assignment_tool:
+            primary = (["fabric_api.AssignFabricToPattern"] if name == "assign_pattern_fabric"
+                       else ["fabric_api.GetFabricIndexForPattern"])
         supporting = ["pattern_api." + n for n in GEOMETRY_IDS] if name in PATTERN_TOOLS and name not in ("list_clo_api", "describe_clo_api", "get_pattern_list") else []
         if name == "create_test_rectangle":
             supporting = ["pattern_api.GetPatternCount"]
+        if assignment_tool:
+            supporting = ["pattern_api.GetPatternCount", "pattern_api.GetPatternPieceName",
+                          "fabric_api.GetFabricCount", "fabric_api.GetFabricName"]
+            if name == "assign_pattern_fabric":
+                supporting += ["fabric_api.GetFabricIndexForPattern"] + ["pattern_api." + n for n in GEOMETRY_IDS]
         tool["primary_native_ids"] = primary
-        tool["primary_native_role"] = "effect" if name in ("create_pattern", "set_pattern_name", "copy_pattern_with_offset", "move_pattern_relative", "delete_pattern", "create_test_rectangle") else "read_or_introspection"
+        tool["primary_native_role"] = "effect" if name in ("create_pattern", "set_pattern_name", "copy_pattern_with_offset", "move_pattern_relative", "delete_pattern", "create_test_rectangle", "assign_pattern_fabric") else "read_or_introspection"
         tool["supporting_native_ids"] = sorted(set(supporting) - set(primary))
         tool["native_ids"] = sorted(set(primary + supporting))
         tool["native_reference_evidence"] = [{**ref, "role": "primary_effect_or_read" if ref["id"] in primary else "preflight_or_readback"} for ref in all_refs if ref["id"] in tool["native_ids"]]
         tool["mapping_method"] = "reviewed_command_branch_selection_plus_AST_reference_locations; not_execution_trace"
-        tool["profile"] = "pattern_package" if name in PATTERN_TOOLS else "base_service"
-        tool["contract_evidence"] = evidence_functions(contract, [n for n in ("validate_params", "validate_result") if n in contract.functions]) if name in PATTERN_TOOLS else evidence_functions(server, ["build_mcp"])
-        if name not in ("transport_status", "get_session_info") and name not in PATTERN_TOOLS:
+        tool["profile"] = "pattern_package" if name in PATTERN_TOOLS or domain_tool else "base_service"
+        tool["contract_evidence"] = evidence_functions(contract, [n for n in ("validate_params", "validate_result") if n in contract.functions]) if name in PATTERN_TOOLS or domain_tool else evidence_functions(server, ["build_mcp"])
+        if name not in ("transport_status", "get_session_info") and name not in PATTERN_TOOLS and not domain_tool:
             tool["contract_evidence"] += evidence_functions(protocol, ["validate"]) + evidence_functions(executor, ["Executor.receive"])
-        tool["contract_scope"] = "strict raw command params/results via pattern_contract" if name in PATTERN_TOOLS else "base tool declaration/protocol/executor result checks; not pattern-command raw exact-key parity"
-        if name in PATTERN_TOOLS:
+        tool["contract_scope"] = "strict raw command params/results via pattern_contract" if name in PATTERN_TOOLS or domain_tool else "base tool declaration/protocol/executor result checks; not pattern-command raw exact-key parity"
+        if assignment_tool:
+            selected = ["FabricAssignmentAPI.__call__", "FabricAssignmentAPI._require",
+                        "FabricAssignmentAPI._snapshot", "FabricAssignmentAPI._target",
+                        "FabricAssignmentAPI._index",
+                        "FabricAssignmentAPI.assign" if name == "assign_pattern_fabric" else "FabricAssignmentAPI.read"]
+            tool["adapter_evidence"] = evidence_functions(assignment_adapter, selected)
+            tool["adapter_evidence"] += evidence_functions(inventory_adapter, ["InventoryAPI._fabrics"])
+            tool["adapter_evidence"] += evidence_functions(adapter, ["PatternAPI._list"])
+            if name == "assign_pattern_fabric":
+                tool["adapter_evidence"] += evidence_functions(adapter, ["PatternAPI._geometry"])
+        elif inventory_tool:
+            selected = ["InventoryAPI.__call__", "InventoryAPI._require", "InventoryAPI._count",
+                        "InventoryAPI._fabrics" if name == "get_fabric_list" else "InventoryAPI._avatars"]
+            if name == "get_fabric_list":
+                selected += ["InventoryAPI._name"]
+            tool["adapter_evidence"] = evidence_functions(inventory_adapter, selected)
+        elif name in PATTERN_TOOLS:
             selected = ["PatternAPI.__call__"]
             if name in ("get_pattern_list", "get_pattern_geometry"):
                 selected += ["PatternAPI._list" if name == "get_pattern_list" else "PatternAPI._geometry"]
@@ -400,9 +437,25 @@ def current_inventory(files):
             "performed_by_this_builder": False,
         }
         tool["contract_acceptance"] = "existing_limited_evidence_not_full_official_overload_or_build_acceptance"
-    if len(tools) != 14:
-        raise ValueError("Expected 14 current tools with pattern profile")
-    return {"tools": tools, "profile_note": "14 only with pattern_package enabled; 5 base tools otherwise. Static declarations, not a live tools/list response."}
+        if inventory_tool:
+            tool["acceptance"] = {
+                "status": "partial_real_inventory_evidence",
+                "reference": "docs/CLO_INVENTORY_CHECK.md",
+                "scope": ("Empty list plus one loaded avatar observed; no geometry/pose/import acceptance."
+                          if name == "get_avatars" else
+                          "Object Browser bool count keyword False and single-index name: count4/names GUI/UI confirmed by user; limited gate accepted. Extra5read-only cross-domain cycles plus final inventories stable4/1/5,geometry5,final idle/error=null. No assignment acceptance; old colorway prototype retired."),
+                "performed_by_this_builder": False,
+            }
+            tool["contract_acceptance"] = "local_contract_only_not_full_real_acceptance"
+        if assignment_tool:
+            tool["acceptance"] = {"status": "limited_real_assignment_readback_ui_confirmed",
+                                  "reference": "docs/CLO_FABRIC_ASSIGNMENT_CHECK.md",
+                                  "scope": "User-reported CLO2026.1.336,live18. Own rectangle0->1->3/independent reads/preservation5/planned delete PASS;user confirmed normal UI. B05C copy inherited fabric2,rename/move preserved,independent copy assignment,lower-delete index6->5 and new-index assignment PASS;final5mappings/geometry preserved. Read-only runner2passes5 PASS. Temporary appearance/full material/import/cross-context not accepted.",
+                                  "performed_by_this_builder": False}
+            tool["contract_acceptance"] = "local_and_limited_real_readback_ui_confirmed_not_full_material_acceptance"
+    if len(tools) != 18:
+        raise ValueError("Expected 18 current tools with pattern profile")
+    return {"tools": tools, "profile_note": "18 only with pattern_package enabled; 5 base tools otherwise. Static declarations, not a live tools/list response."}
 
 
 def local_inventory(root):
@@ -450,7 +503,7 @@ LIMITATIONS = [
     "Native ids are module.symbol. No inferred official overload, binding/type availability, error semantics, units or contract acceptance.",
     "Helper reachability is a conservative syntactic graph including conditional/fallback paths, not proof that a call occurs. One shortest evidence path per helper; callable references remain distinct from direct calls.",
     "getattr/dynamic module/type lookup and strings are reported as unresolved expressions, never expanded into guessed native calls. Arbitrary alias/dataflow, closures, decorators and reflection are not evaluated.",
-    "Current14 command-to-native selection is explicitly reviewed metadata tied to AST callsite evidence; references may be shared preflight/readback/conditional sites and are not an execution trace.",
+    "Current18 command-to-native selection is explicitly reviewed metadata tied to AST callsite evidence; references may be shared preflight/readback/conditional sites and are not an execution trace.",
     "Exact descriptions are source docstrings (ast.get_docstring clean=True), signatures are ast.unparse-normalized Python declarations, not generated MCP JSON schemas or live tools/list.",
     "Test function references establish traceability only, not execution/pass status or complete scenario coverage. Historical acceptance remains limited to cited documents and no new real CLO gate is closed.",
     "Official coverage join and reconciliation of removed names/types are separate; raw donor symbol matches are not coverage percentages.",
@@ -487,7 +540,7 @@ def validate_snapshot(snapshot):
             native = sorted({n for command in tool["handler_commands"] for n in handlers[command]["native_ids"]})
             if native != tool["native_ids"]:
                 raise ValueError("Inconsistent handler/native join")
-    if len(snapshot["local"]["current"]["tools"]) != 14:
+    if len(snapshot["local"]["current"]["tools"]) not in (14, 16, 18):
         raise ValueError("Wrong current tool count")
     sources = {s["path"]: s for s in donor["sources"]}
     if set(sources) != set(DONOR_FILES):
@@ -624,7 +677,7 @@ def render_report(snapshot):
               "Основной JSON — индекс; списки хранятся в `mappings/*.json` shards <=180000 bytes, каждый с SHA-256/count. `load_mappings(path)` возвращает full structure и flat aliases `donor_tools`, `local_legacy_tools`, `current_tools`, `source_refs` для coordinator join.",
               "`donor.tools` содержит все170 имён, exact source descriptions, нормализованные Python signatures/parameters, literal routes, handler_commands, native_ids и явные name_aliases.",
               "`donor.handlers` содержит все172 registry commands, handler/registry line ranges, qualified references и helper chains. `local.legacy` — отдельные47 tools/47 registry commands и DEV extras вне registry.",
-              "`local.current.tools` — отдельные14 tools: profile, contract/adapter/test evidence, primary/supporting native ids и ограниченная historical acceptance. `shared_native_alias_candidates`/`current_replacement_limits` явно отделяют aliases от ограниченных замен.",
+              "`local.current.tools` — отдельные18 tools: profile, contract/adapter/test evidence, primary/supporting native ids и раздельная local/partial/historical acceptance. `shared_native_alias_candidates`/`current_replacement_limits` явно отделяют aliases от ограниченных замен.",
               "`sources` содержит SHA-256 исходных bytes, lengths, pinned raw/browse URLs (донор), Git blob SHA-1 и local relative paths. При donor rebuild bytes сверяются с blob IDs pinned tree; local bytes не нормализуются по CRLF, при смене line endings пересобрать.",
               "`normalized_sha256` защищает целостность нормализованных donor facts (не криптографическая подпись). Offline-проверка не доказывает соответствие недоступному raw source: для этого нужен pinned refresh/cache rebuild.",
               "`references.kind=direct_call` означает AST Call.func; `callable_reference` — ссылка на функцию/тип, не direct invocation. `invoked_via` фиксирует передачу callable аргумента helper-параметру и место его вызова.",
@@ -642,7 +695,7 @@ def render_report(snapshot):
             lines.append(f"- `{alias['tool_name']}` → wire `{alias['wire_command']}` → `{alias['handler_function']}` (routing only).")
     lines += ["", "`open_file` / `import_file` и `add_fabric` / `import_fabric` имеют общие native names, но это не автоматически эквивалентные контракты. `list_extensions` не имеет native handler.",
               "Legacy copy_pattern/CopyPatternPiecePos не объявлен эквивалентом current copy_pattern_with_offset/CopyPatternPieceMove; create_pattern current покрывает только simple straight polygons.",
-              "", "## Current14 и граница приёмки", ""]
+              "", "## Current18 и граница приёмки", ""]
     for tool in snapshot["local"]["current"]["tools"]:
         lines.append(f"- `{tool['name']}` ({tool['profile']}): " + (", ".join(f"`{n}`" for n in tool["primary_native_ids"]) or "нет фиксированного native вызова") + f"; evidence `{tool['acceptance']['reference']}`.")
     lines += ["", "PATTERN_API_CHECK.md: исторический CLO2026.1, simple polygon и load10, <=2 тестовых деталей, <=256 всего; count/name/position/area/bbox и пользовательское visual/UI подтверждение. Точный patch build не зафиксирован.",

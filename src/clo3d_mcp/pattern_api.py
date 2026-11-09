@@ -11,12 +11,16 @@ from clo3d_mcp.pattern_contract import (
     API_MODULES, MAX_PATTERNS, CommandError, number,
     validate_params, validate_result,
 )
+from clo3d_mcp.inventory_api import InventoryAPI
+from clo3d_mcp.fabric_assignment_api import FabricAssignmentAPI
 
 
 class PatternAPI:
     def __init__(self, modules):
         self.modules = dict(modules)
         self.pattern = self.modules["pattern_api"]
+        self.inventory = InventoryAPI(self.modules)
+        self.fabric_assignment = FabricAssignmentAPI(self)
 
     def _require(self, *names):
         if any(not callable(getattr(self.pattern, n, None)) for n in names):
@@ -112,6 +116,10 @@ class PatternAPI:
 
     def __call__(self, command, params):
         validate_params(command, params)
+        if command in ("get_fabric_list", "get_avatars"):
+            return self.inventory(command, params)
+        if command in ("get_pattern_fabric", "assign_pattern_fabric"):
+            return self.fabric_assignment(command, params)
         started = time.monotonic()
         if command == "list_clo_api":
             result = {"modules": {n: sorted(k for k in dir(self.modules.get(n))

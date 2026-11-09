@@ -10,11 +10,11 @@
     },
     {
       "path": "clo_source_mappings.json",
-      "sha256": "e4efce4b74c2fe1ca02371a5237347ab6498df283e7c49712816d7722e3cd108"
+      "sha256": "af825272d9ca32a4c8233b40a732c19454d09fb0e9533073bb81cebbaa46f463"
     },
     {
       "path": "current_operation_scope.json",
-      "sha256": "2f70bdb63f8ed9d5322c9667ee369240d71a90096002ac9677572007496deb5e"
+      "sha256": "936019de2f80f4f6a5f28369b277b8f184216071124bcc9266c04005e8f7f7f2"
     },
     {
       "path": "review_gates.json",
@@ -29,8 +29,8 @@
     "additional_interfaces": 6,
     "donor_tools": 170,
     "local_legacy_tools": 47,
-    "current_tools": 14,
-    "current_native_operations": 10,
+    "current_tools": 18,
+    "current_native_operations": 16,
     "historical_docstring_names": 43,
     "nonofficial_mapping_names": 4,
     "official_names_with_donor_reference": 332,
@@ -61,17 +61,17 @@
     },
     {
       "path": "coverage/export_api-02.json",
-      "sha256": "ff55f94e988d6e61cde98d65350d9034be4dcc341fea4c837f94820ee8510877",
+      "sha256": "74a2d822ef7c15f1a2698b164073f11d4a2e2ea0e344ca1379128b2906fad6e0",
       "count": 56
     },
     {
       "path": "coverage/fabric_api-01.json",
-      "sha256": "a705f5b197ccef51bce06a94d2290102bc429c3ff9e6930a3ee05990575336fa",
+      "sha256": "41d8b4a9d0cecda69e639fca983983bacb156e3691a4ca6223e9f2a927f440c8",
       "count": 68
     },
     {
       "path": "coverage/fabric_api-02.json",
-      "sha256": "0317cda4e36a5f672731d807234296948b31502fd7c467ccdd8fd8d1925f2d19",
+      "sha256": "595de5169694c3e3ce706f136d459203d97068d342a945032f8ea719393298b1",
       "count": 68
     },
     {

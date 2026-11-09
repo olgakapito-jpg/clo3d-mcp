@@ -368,7 +368,7 @@ def test_errors_do_not_reveal_exception_text(monkeypatch):
     assert "private" not in text and "secret" not in text
 
 
-def test_no_native_import_option_or_unbounded_disclosure():
+def test_only_explicit_apitypes_entrypoint_import_no_dynamic_import_or_disclosure():
     source = Path(SPEC.origin).read_text(encoding="utf-8")
     tree = ast.parse(source)
     imports = []
@@ -380,6 +380,187 @@ def test_no_native_import_option_or_unbounded_disclosure():
             imports.append(node.module)
         if isinstance(node, ast.Call) and isinstance(node.func, ast.Name):
             assert node.func.id not in forbidden_calls
-    assert set(imports) == {"json", "math", "re", "sys", "types"}
+    assert set(imports) == {"json", "math", "re", "sys", "time", "types", "ApiTypes"}
+    native_imports = [node for node in ast.walk(tree) if isinstance(node, ast.Import)
+                      and any(alias.name == "ApiTypes" for alias in node.names)]
+    entrypoint = next(node for node in tree.body if isinstance(node, ast.FunctionDef)
+                      and node.name == "run_selected_probe")
+    assert len(native_imports) == 1 and native_imports[0] in list(ast.walk(entrypoint))
     assert "sys.modules.items(" not in source
     assert "sys.modules.keys(" not in source
+
+
+def test_selected_apitypes_import_and_probe_share_run(monkeypatch):
+    import builtins
+
+    original_import = builtins.__import__
+    calls = []
+    value = types.ModuleType("ApiTypes")
+    value.EXAMPLE = 1
+    monkeypatch.delitem(sys.modules, "ApiTypes", raising=False)
+    monkeypatch.setattr(probe, "SELECT_MODULE", "ApiTypes")
+    monkeypatch.setattr(probe, "SELECT_TYPE", None)
+    monkeypatch.setattr(probe, "SELECT_CURSOR", 0)
+
+    def import_once(name, *args, **kwargs):
+        if name == "ApiTypes":
+            calls.append(name)
+            monkeypatch.setitem(sys.modules, name, value)
+            return value
+        return original_import(name, *args, **kwargs)
+
+    monkeypatch.setattr(builtins, "__import__", import_once)
+    report = json.loads(probe.run_selected_probe())
+    assert calls == ["ApiTypes"]
+    assert report["status"] == "metadata_only" and report["module"] == "ApiTypes"
+    assert "EXAMPLE" in entries(report)
+
+
+def test_selected_import_failure_stops_without_probe_or_secret(monkeypatch):
+    import builtins
+
+    original_import = builtins.__import__
+    calls = []
+    monkeypatch.setattr(probe, "SELECT_MODULE", "ApiTypes")
+
+    def broken(name, *args, **kwargs):
+        if name == "ApiTypes":
+            calls.append(name)
+            raise ImportError("C:/private token=secret")
+        return original_import(name, *args, **kwargs)
+
+    def no_probe(*args):
+        pytest.fail("probe must not follow import failure")
+
+    monkeypatch.setattr(builtins, "__import__", broken)
+    monkeypatch.setattr(probe, "render_metadata", no_probe)
+    text = probe.run_selected_probe()
+    assert calls == ["ApiTypes"]
+    assert json.loads(text)["status"] == "import_failed"
+    assert "private" not in text and "secret" not in text
+
+
+def test_other_selection_does_not_import_apitypes(module, monkeypatch):
+    monkeypatch.delitem(sys.modules, "ApiTypes", raising=False)
+    monkeypatch.setattr(probe, "SELECT_MODULE", "pattern_api")
+    monkeypatch.setattr(probe, "SELECT_TYPE", None)
+    monkeypatch.setattr(probe, "SELECT_CURSOR", 0)
+    assert json.loads(probe.run_selected_probe())["status"] == "metadata_only"
+    assert "ApiTypes" not in sys.modules
+
+
+@pytest.fixture
+def batch_module(monkeypatch):
+    value = types.ModuleType("ApiTypes")
+    monkeypatch.setitem(sys.modules, "ApiTypes", value)
+    return value
+
+
+def test_batch_traverses_module_and_class_pages_without_constructing(batch_module):
+    class Options:
+        def __new__(cls):
+            raise AssertionError("constructor")
+
+        @property
+        def Property(self):
+            raise AssertionError("descriptor")
+
+    for index in range(30):
+        setattr(Options, "Field" + str(index), property(lambda self: 1 / 0))
+        setattr(batch_module, "CONSTANT" + str(index), index)
+    batch_module.Options = Options
+    report = json.loads(probe.render_batch_metadata())
+    assert report["complete"] and report["stop_reason"] == "completed"
+    assert report["classes_discovered"] == ["Options"]
+    assert report["classes_completed"] == 1
+    pages = report["pages"]
+    assert len([p for p in pages if p["selected_type"] is None]) == 3
+    class_pages = [p for p in pages if p["selected_type"] == "Options"]
+    assert len(class_pages) == 3
+    members = {e["name"]: e for p in class_pages for e in p["entries"]}
+    assert members["Property"]["metadata"] == "not_followed"
+    assert "__new__" not in members
+    assert report["entries_collected"] == sum(len(p["entries"]) for p in pages)
+
+
+@pytest.mark.parametrize("limit,reason", [
+    ("BATCH_MAX_PAGES", "page_limit"), ("BATCH_MAX_TYPES", "type_limit"),
+    ("BATCH_MAX_ENTRIES", "entry_limit"),
+])
+def test_batch_limits_explicit_partial(batch_module, monkeypatch, limit, reason):
+    batch_module.Options = type("Options", (), {})
+    monkeypatch.setattr(probe, limit, 0)
+    report = json.loads(probe.render_batch_metadata())
+    assert not report["complete"] and report["status"] == "partial"
+    assert report["stop_reason"] == reason
+
+
+def test_batch_byte_bound_and_cooperative_time_bound(batch_module, monkeypatch):
+    batch_module.ONE = 1
+    monkeypatch.setattr(probe, "BATCH_MAX_BYTES", 33000)
+    for index in range(30):
+        function = lambda: None
+        function.__doc__ = "description " * 100
+        setattr(batch_module, "Function" + str(index), function)
+    text = probe.render_batch_metadata()
+    report = json.loads(text)
+    assert len(text.encode("ascii")) <= 33000
+    assert report["stop_reason"] == "byte_limit" and not report["complete"]
+    ticks = iter([0.0, 6.0])
+    monkeypatch.setattr(probe.time, "monotonic", lambda: next(ticks))
+    report = json.loads(probe.render_batch_metadata())
+    assert report["stop_reason"] == "time_limit" and not report["pages"]
+
+
+@pytest.mark.parametrize("fault", ["namespace", "exception", "cursor", "scan"])
+def test_batch_stops_at_first_fault_no_next_page(batch_module, monkeypatch, fault):
+    batch_module.ONE = 1
+    original = probe.collect_metadata
+    calls = []
+
+    def altered(*args):
+        calls.append(args)
+        page = original(*args)
+        if fault == "namespace":
+            batch_module.TWO = 2
+        elif fault == "exception":
+            raise RuntimeError("C:/private token=secret")
+        elif fault == "cursor":
+            page["next_cursor"] = 0
+        else:
+            page.update(truncated=True, next_cursor=None, stop_reason="namespace_scan_limit")
+        return page
+
+    monkeypatch.setattr(probe, "collect_metadata", altered)
+    text = probe.render_batch_metadata()
+    report = json.loads(text)
+    assert len(calls) == 1 and not report["complete"]
+    assert report["stop_reason"] == {"namespace": "namespace_changed",
+                                     "exception": "metadata_error",
+                                     "cursor": "invalid_continuation",
+                                     "scan": "namespace_scan_limit"}[fault]
+    assert "private" not in text and "secret" not in text
+
+
+def test_batch_missing_module_no_import_or_fallback(monkeypatch):
+    monkeypatch.delitem(sys.modules, "ApiTypes", raising=False)
+    report = json.loads(probe.render_batch_metadata())
+    assert not report["complete"]
+    assert report["stop_reason"] == "not_loaded_or_unsupported_module"
+
+
+def test_batch_entrypoint_import_once_then_traversal(monkeypatch, batch_module):
+    import builtins
+
+    original_import = builtins.__import__
+    calls = []
+
+    def observed(name, *args, **kwargs):
+        if name == "ApiTypes":
+            calls.append(name)
+        return original_import(name, *args, **kwargs)
+
+    monkeypatch.setattr(builtins, "__import__", observed)
+    report = json.loads(probe.run_selected_probe(batch=True))
+    assert calls == ["ApiTypes"]
+    assert report["schema"] == "clo_api_static_batch_v1" and report["complete"]

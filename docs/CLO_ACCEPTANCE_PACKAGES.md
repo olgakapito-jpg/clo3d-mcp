@@ -1,5 +1,26 @@
 # Пакеты доменной приёмки W0–W8
 
+**B05a/B05b (локальное имя fabric-пакета, не B05 avatar roadmap ниже):** source/live18
+включает чтение связи detail→Object Browser fabric и назначение одной ткани одной
+детали. Fresh restart выполнен; real API/readback PASS: own piece0→1→3,original5
+mappings/geometry preserved,planned own delete/final checks. UI подтверждён;
+temporary appearance отдельно не оценена. B05C composition/index shift PASS.
+Read-only runner pattern-fabric-inspection real PASS,2passes5mappings/0mutations.
+Local contracts/fault tests отдельно
+от native acceptance, `CLO_FABRIC_ASSIGNMENT_CHECK.md`. Импорт/pose/material editing
+не включены. Исторические утверждения ниже о недоступных assignments теперь
+относятся к прежнему16profile, не к новому local source.
+
+**Текущее уточнение B03/B04:** реализованы два bounded inventory reads в profile16
+(исходные14 + get_fabric_list/get_avatars). Nonempty avatar count1/name получен;
+Fabric по уточнению пользователя — только Object Browser, без colorway.
+Прежний colorway prototype (0 при3тканях) снят до приёмки; новый bool-False count
+и single-index name real gate ACCEPTED на4тканях с GUI/UI confirmation. Дополнительно
+5read-only cycles+final inventories4/1/5 и geometry5 PASS. Assignments,
+import/pose/material editing не реализованы. Подробности и следующий read-only
+inventory gate — `CLO_INVENTORY_CHECK.md`. Ниже current14/blocked domains —
+исходный roadmap, не отмена нового ограниченного подпакета и не его полная приёмка.
+
 Дата подготовки: 2026-11-09. **Только CLO2026.1.336 / SDK11.0.1**; другая
 сборка — BLOCKED до пересмотра контрактов. Это предложенные критерии и fixtures,
 не журнал PASS и не разрешение исполнять native API. Сейчас real CLO calls,

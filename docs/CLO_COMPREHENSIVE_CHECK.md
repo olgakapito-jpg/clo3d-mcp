@@ -5,7 +5,47 @@
 или приняты.** Реальная проверка выполняется совместно короткими пакетами,
 после перезапуска CLO пользователем. Автономных real-CLO прогонов на этом этапе нет.
 
+## Текущий подпакет B03/B04: read-only inventories
+
+Расширенный profile содержит16 tools: исходные14 и get_fabric_list/get_avatars.
+Реально прочитаны один загруженный аватар (count/name) и5 деталей кроя;
+после чтений same-session ready/idle,error=null. Assignments/pose/geometry этим
+подпакетом не проверены, пользовательская сцена не менялась агентом.
+
+**Уточнение scope:** пользователь исключил colorway, нужен Fabric Object Browser.
+Прежний prototype (count0 при3видимых тканях) снят до приёмки; причина0 не доказана.
+Новый контракт: bool count keyword False + single-index name, без colorway_index.
+В свежем CLO через `_start` два одинаковых native списка count4/names успешно
+прочитаны, final same-session ready/idle,error=null; пользователь подтвердил
+4ткани GUI/нормальный UI/нет замеченных сбоев: ограниченный gate ACCEPTED.
+Дополнительный активный read-only пакет PASS:5cycles+final inventories4/1/5,
+geometry5,23native-tool reads/24status,17.159с,p95=758мс,max766мс,mutations0.
+Прежний запуск после только Stop→Start дал unknown и завершение MCP; причина
+не доказана. Stop→Start не reload embedded sys.modules, прежняя инструкция
+исправлена. Панель необязательна, пользователь предпочитает `_start`/`_stop`.
+Count-comparison probe больше не требуется. Критерии/остановка:
+`CLO_INVENTORY_CHECK.md`. Это не повтор принятых P0–P3/load gates.
+
+Локально новый Object Browser контракт: focused228PASS; full780passed/1skip
+(real symlink unavailable). Старые232/784 относятся к colorway prototype.
+Source audit отдельно BLOCKED посторонним `opencode.json.openchamber.backup`;
+файл и config не менять ради прохождения guard. Исторические инструкции ниже
+с14 tools описывают исходный сеанс, не актуальный полный inventory.
+
 ## Что именно проверяем раздельно
+
+Следующий B05a/B05b локально добавляет get_pattern_fabric/assign_pattern_fabric
+(source/live profile18). После fresh restart real getter5mappings/2passes и
+setter на своей детали0→1→3 PASS; independent readbacks/preservation5 и planned
+own delete/final checks PASS. Read-only mapping runner PASS. UI подтверждён;
+temporary appearance не оценена. B05C copy/material/rename/move/lower-delete
+index shift/fresh-index assignment PASS;final originals5preserved.
+Preflight names/current mapping и post-setter mappings
+всех деталей/target geometry; option1 фиксирован, не colorway management.
+Fresh-process blocker снят; embedded модули не hot-reload. Критерии, лимиты,
+tests и preservation scope:
+`CLO_FABRIC_ASSIGNMENT_CHECK.md`. Это не автоматический assignment существующему
+пользовательскому крою и не повод менять протокол/перезапускать процесс агентом.
 
 1. **Полнота спецификации:** source/version/hash, все обнаруженные объявления,
    перегрузки, типы и интерфейсы учтены; никакой потерянный метод не скрыт
@@ -141,3 +181,45 @@ SHA-256. Отдельные negative tests проверяют изменение
 Коммитов/push нет. Следующий gate — совместные B00/readiness, B01 metadata/type
 probe и B02 scene reads после перезапуска пользователем; новые домены остаются
 BLOCKED до контрактов, реализации и отдельной real acceptance.
+
+## Последующие изменения и совместная real проверка — 2026-11-09
+
+Приведённый выше итог680/skip1 относится к подготовке A0. После неё по запросу
+пользователя сохранены локальные commits `7164043` (каталог/подготовка),
+`edb7fad` (Win32-панель/предложение контроллера), `842c1e8` (bounded correlated
+RESULT → READY). Push не выполнялся. Последняя полная suite исправления:
+**708 passed, 1 skipped**, 42.90 с; skip — real symlink unavailable.
+
+После подтверждённого пользователем Stop → Start через панель два новых real
+read-only runs прошли: discovery completed (9 RPC steps, inventory14) и
+scene-inspection verified (7 RPC steps, два стабильных списка, count0).
+В обоих 0 mutations; geometry reads0, assets не загружались. Точные run IDs,
+команды, metadata findings и пределы доказательства — `DOMAIN_BATCH_CHECK.md`.
+Прежний RESULT → READY blocker закрыт только в scope короткого real gate,
+не stress/всех faults. Пустая сцена не закрывает geometry acceptance B02.
+
+Следующий совместный шаг B01 — один запуск `plugin/clo3d_mcp_api_probe.py`
+в CLO с pattern_api / type=None / cursor=0, затем просмотр JSON. Gate ещё pending;
+types/options/overloads/native semantics и новые домены не считаются принятыми.
+Полная приёмка панели остаётся частичной; macOS GUI и внешний supervisor — только
+предложение `CLO_MCP_CONTROLLER_PLAN.md`, не реализованная поддержка.
+
+Позднее пользователь прислал первую B01 страницу: pattern_api/type=None/cursor0,
+12 builtin callables, docstrings присутствуют, next_cursor17/page_limit.
+Metadata-only gate подтверждён для этой страницы; native calls и types/options
+не приняты. Подробности — `CLO_API_PROBE_CHECK.md`. Следующий шаг — ApiTypes
+module-only/cursor0 без import/constructor; not_loaded не означает absent.
+
+Последующее B01 обновление: пользователь явно согласовал import ApiTypes перед
+probe; исправленный entrypoint import+probe в одном Run real проверен. Получены
+14 module-only страниц ApiTypes вплоть до cursor162/next_cursor=null/truncatedfalse:
+158 filtered entries (73 class,85 opaque). Это конец filtered traversal, не
+atomic/full native-type acceptance. Constructors/fields/defaults/enum values
+не проверены. Последующий автоматический batch получен в пользовательском
+result.json: complete=true,103 страницы,73 класса,736 entries. У73 классов
+совпали все550 разрешённых фильтром documented member names; ExportDxfOption
+11/11 property names найден. CleanedPathResult исключён PATH-фильтром;
+CLO_API_UNIT/HttpMethodType/RenderColorwayType не найдены в own module inventory
+(кандидаты различия экспонирования, не глобальная missing-functionality оценка).
+Повторный общий probe не нужен. Constructors/defaults/export execution остаются
+pending. Подробности и SHA256 evidence — `CLO_API_PROBE_CHECK.md`.

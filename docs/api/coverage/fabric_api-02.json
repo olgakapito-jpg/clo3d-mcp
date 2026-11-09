@@ -39,7 +39,14 @@
       "units": "not_checked",
       "implementation": "planned",
       "overload_coverage": "not_established",
-      "current_operation": null,
+      "current_operation": {
+        "symbol": "fabric_api.GetFabricCount",
+        "tools": [
+          "get_fabric_list"
+        ],
+        "call_arity": 1,
+        "scope_reference": "docs/api/current_operation_scope.json"
+      },
       "donor_tools": [
         "duplicate_fabric",
         "get_fabric_count",
@@ -101,7 +108,14 @@
       "units": "not_checked",
       "implementation": "planned",
       "overload_coverage": "not_established",
-      "current_operation": null,
+      "current_operation": {
+        "symbol": "fabric_api.GetFabricCount",
+        "tools": [
+          "get_fabric_list"
+        ],
+        "call_arity": 1,
+        "scope_reference": "docs/api/current_operation_scope.json"
+      },
       "donor_tools": [
         "duplicate_fabric",
         "get_fabric_count",
@@ -269,7 +283,15 @@
       "units": "not_checked",
       "implementation": "planned",
       "overload_coverage": "not_established",
-      "current_operation": null,
+      "current_operation": {
+        "symbol": "fabric_api.GetFabricIndexForPattern",
+        "tools": [
+          "get_pattern_fabric",
+          "assign_pattern_fabric"
+        ],
+        "call_arity": 1,
+        "scope_reference": "docs/api/current_operation_scope.json"
+      },
       "donor_tools": [
         "get_fabric_for_pattern"
       ],
@@ -326,7 +348,15 @@
       "units": "not_checked",
       "implementation": "planned",
       "overload_coverage": "not_established",
-      "current_operation": null,
+      "current_operation": {
+        "symbol": "fabric_api.GetFabricIndexForPattern",
+        "tools": [
+          "get_pattern_fabric",
+          "assign_pattern_fabric"
+        ],
+        "call_arity": 1,
+        "scope_reference": "docs/api/current_operation_scope.json"
+      },
       "donor_tools": [
         "get_fabric_for_pattern"
       ],
@@ -1107,7 +1137,14 @@
       "units": "not_checked",
       "implementation": "planned",
       "overload_coverage": "not_established",
-      "current_operation": null,
+      "current_operation": {
+        "symbol": "fabric_api.GetFabricName",
+        "tools": [
+          "get_fabric_list"
+        ],
+        "call_arity": 1,
+        "scope_reference": "docs/api/current_operation_scope.json"
+      },
       "donor_tools": [
         "get_fabric_details"
       ],
@@ -1162,7 +1199,14 @@
       "units": "not_checked",
       "implementation": "planned",
       "overload_coverage": "not_established",
-      "current_operation": null,
+      "current_operation": {
+        "symbol": "fabric_api.GetFabricName",
+        "tools": [
+          "get_fabric_list"
+        ],
+        "call_arity": 1,
+        "scope_reference": "docs/api/current_operation_scope.json"
+      },
       "donor_tools": [
         "get_fabric_details"
       ],

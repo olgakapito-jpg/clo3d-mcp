@@ -39,7 +39,24 @@ tool загрузить `clo-mcp-tool-design`.
 - Плановая очистка своих объектов допустима только отдельными успешными шагами
   с fresh target guards и в разрешённом scope, не как recovery по умолчанию.
 - Описывать actual result, remaining uncertainty и next action. Не объявлять
-  готовой одежду по count/имени/площади; ткани/швы/simulation ещё не опубликованы.
+  готовой одежду по count/имени/площади. Расширенный profile16 включает только
+  get_fabric_list/get_avatars reads (не assignment/import). Fabric indices —
+  Object Browser, без colorway selection/filter. Новый контракт заменил снятый
+  colorway prototype; два real count4/names reads в свежем CLO успешны,
+  GUI/UI подтверждены пользователем;5serial cross-domain read cycles/geometry5
+  PASS. Это не assignment/pose acceptance. Worker restart не reload embedded modules:
+  ../../../docs/CLO_INVENTORY_CHECK.md. Не менять overload автоматически.
+  Source/live profile18 добавляет get_pattern_fabric/assign_pattern_fabric;
+  после fresh restart limited real API/readback PASS: own piece0→1→3,independent
+  mappings/geometry preservation5,planned own delete. User UI confirmed;
+  temporary appearance не оценена. B05C copy inheritance/rename/move/independent
+  assignment/lower-delete index shift/fresh-index assignment real PASS;
+  не общая material/sewing гарантия copy. После delete всегда fresh list.
+  Read-only runner pattern-fabric-inspection real PASS,2passes5mappings,0mutations.
+  Всё равно сверять actual discovery/capabilities. Assign только после
+  fresh names/current mapping, один effect→independent readback; post-entry
+  error/False не retry/rollback/cleanup. Full contract:
+  ../../../docs/CLO_FABRIC_ASSIGNMENT_CHECK.md. Sewing/simulation недоступны.
 
 ## Создание будущего доменного skill
 

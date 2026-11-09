@@ -111,7 +111,7 @@ def test_snapshot_normalized_integrity_inventory_and_local_rebuild(snapshot):
     assert snapshot["counts"]["shared_donor_legacy_tool_names"] == 44
     assert snapshot["counts"]["legacy_tools"] == 47
     assert snapshot["counts"]["legacy_handlers"] == 47
-    assert snapshot["counts"]["current_tools"] == 14
+    assert snapshot["counts"]["current_tools"] == 18
     assert {t["name"] for t in snapshot["donor"]["tools"] if not t["native_ids"]} == {
         "list_clo_api", "describe_clo_api", "find_api_types"}
 
@@ -135,7 +135,7 @@ def test_local_aliases_and_dev_extras_are_explicit(snapshot):
 
 def test_current_inventory_is_separate_and_acceptance_is_limited(snapshot):
     tools = {t["name"]: t for t in snapshot["local"]["current"]["tools"]}
-    assert len(tools) == 14
+    assert len(tools) == 18
     assert tools["copy_pattern_with_offset"]["primary_native_ids"] == [
         "pattern_api.CopyPatternPieceMove", "pattern_api.SetPatternPieceName"]
     assert "pattern_api.CopyPatternPiecePos" not in tools["copy_pattern_with_offset"]["native_ids"]
@@ -151,6 +151,10 @@ def test_current_inventory_is_separate_and_acceptance_is_limited(snapshot):
         assert tool["test_evidence"]
     assert tools["create_test_rectangle"]["primary_native_ids"] == ["pattern_api.CreatePatternWithPoints"]
     assert tools["create_test_rectangle"]["supporting_native_ids"] == ["pattern_api.GetPatternCount"]
+    for name in ("get_pattern_fabric", "assign_pattern_fabric"):
+        assert tools[name]["acceptance"]["status"] == "limited_real_assignment_readback_ui_confirmed"
+        assert "user confirmed normal UI" in tools[name]["acceptance"]["scope"]
+        assert tools[name]["acceptance"]["reference"] == "docs/CLO_FABRIC_ASSIGNMENT_CHECK.md"
 
 
 def test_offline_default_does_not_fetch(monkeypatch):
@@ -164,7 +168,7 @@ def test_loader_interface_and_small_artifacts(snapshot):
     loaded = mapping.load_mappings(ROOT / mapping.SNAPSHOT)
     assert len(loaded["donor_tools"]) == 170
     assert len(loaded["local_legacy_tools"]) == 47
-    assert len(loaded["current_tools"]) == 14
+    assert len(loaded["current_tools"]) == 18
     assert loaded["source_refs"]["donor"]
     for path, text in mapping.artifacts(snapshot).items():
         assert len(text.encode("utf-8")) <= 200000, path

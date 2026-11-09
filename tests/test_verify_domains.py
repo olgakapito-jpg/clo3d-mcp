@@ -38,6 +38,7 @@ def tools():
         fields = ({"pattern_index": {"type": "integer"}} if name == "get_pattern_geometry"
                   else {"points": {"type": "array"}, "name": {"type": "string"}} if name == "create_pattern"
                   else {"module": {"type": "string"}, "functions": {"type": "array"}} if name == "describe_clo_api"
+                  else {"pattern_index": {"type": "integer"}, "expected_name": {"type": "string"}} if name == "get_pattern_fabric"
                   else {})
         result.append(types.Tool(name=name, inputSchema={"type": "object", "properties": fields,
                                                         "required": list(fields)}))
@@ -76,7 +77,17 @@ class Fake:
             target = dict(index=len(self.pieces), name=args["name"])
             self.pieces.append(target)
             value = dict(ok=True, verified=True, pattern_count=len(self.pieces),
-                         pattern=geometry(target["index"], target["name"]), executor_ms=1.2)
+                          pattern=geometry(target["index"], target["name"]), executor_ms=1.2)
+        elif name == "get_fabric_list":
+            value = dict(ok=True, fabric_count=1,
+                         fabrics=[dict(index=0, name="PRIVATE_FABRIC")])
+        elif name == "get_avatars":
+            value = dict(ok=True, avatar_count=1,
+                          avatars=[dict(index=0, name="PRIVATE_AVATAR")])
+        elif name == "get_pattern_fabric":
+            target = self.pieces[args["pattern_index"]]
+            value = dict(ok=True, pattern_index=target["index"], pattern_name=target["name"],
+                         fabric_index=0, fabric_name="PRIVATE_FABRIC")
         elif name == "list_clo_api":
             value = dict(ok=True, modules={m: list(vd.DESCRIPTIONS.get(m, [])) for m in vd.MODULES})
         elif name == "describe_clo_api":
@@ -109,7 +120,8 @@ def test_dry_run_has_zero_network_import_or_native_and_honest_blockers(monkeypat
     assert plans["scene-inspection"]["state"] == "completed"
     assert plans["current-pattern-fixture"]["state"] == "blocked"
     assert plans["avatar-import-future"]["asset"] == "missing"
-    assert plans["fabric-assignment-future"]["missing_tools"]
+    assert not plans["fabric-assignment-future"]["missing_tools"]
+    assert "domain_contract_and_runner_not_integrated" in plans["fabric-assignment-future"]["blockers"]
 
 
 def test_future_and_permission_failure_before_network(monkeypatch, capsys):
@@ -137,6 +149,134 @@ def test_discover_is_bounded_read_only_not_native_execution():
         observed = run(failed, "discover", None)
         assert observed["state"] == "unknown"
         assert failed.calls == client.calls[:step] and failed.mutation_count == 0
+
+
+def test_inventory_readonly_runner_and_fault_at_every_step():
+    client = Fake()
+    report = run(client, scenario="fabric-avatar-inventory")
+    assert report["state"] == "verified" and report["rpc_steps"] == 11
+    assert report["summary"]["nonempty_fabric_checked"] is True
+    assert report["summary"]["nonempty_avatar_checked"] is True
+    assert "PRIVATE" not in vd.report_text(report, 16384)
+    for step in range(1, len(client.calls) + 1):
+        failed = Fake(fault=step)
+        observed = run(failed, scenario="fabric-avatar-inventory")
+        assert observed["state"] == "unknown"
+        assert failed.calls == client.calls[:step] and failed.mutation_count == 0
+
+
+def test_inventory_runner_changed_list_stops_without_following_calls():
+    def transform(name, reply, step):
+        if step == 8:
+            assert name == "get_fabric_list"
+            reply.structuredContent["fabrics"][0]["name"] = "changed"
+        return reply
+    client = Fake(transform=transform)
+    report = run(client, scenario="fabric-avatar-inventory")
+    assert report["state"] == "failed" and len(client.calls) == 8
+    assert report["code"] == "inventory_changed_between_calls"
+
+
+@pytest.mark.parametrize("initial", [0, 2, 4])
+def test_pattern_fabric_inspection_serial_readonly_fault_at_every_step(initial):
+    client = Fake(initial=initial)
+    report = run(client, scenario="pattern-fabric-inspection")
+    assert report["state"] == "verified" and report["mutation_submissions"] == 0
+    assert report["rpc_steps"] == 11 + 4 * initial
+    assert report["summary"]["mapping_objects_checked"] == initial
+    assert report["summary"]["mapping_passes"] == 2
+    assert report["summary"]["nonempty_mapping_checked"] == bool(initial)
+    assert "PRIVATE" not in vd.report_text(report, 16384)
+    assert set(client.calls) <= {"tools/list", *vd.BASE, "get_pattern_list",
+                                  "get_fabric_list", "get_pattern_fabric"}
+    for step in range(1, len(client.calls) + 1):
+        failed = Fake(initial=initial, fault=step)
+        observed = run(failed, scenario="pattern-fabric-inspection")
+        assert observed["state"] == "unknown"
+        assert failed.calls == client.calls[:step] and failed.mutation_count == 0
+
+
+@pytest.mark.parametrize("fault,code", [
+    ("identity", "fabric_mapping_identity"), ("name", "fabric_mapping_identity"),
+    ("fabric", "fabric_mapping_identity"), ("bool", "invalid_command_schema"),
+    ("changed", "fabric_mapping_changed"), ("list", "scene_list_changed"),
+    ("inventory", "inventory_changed_between_calls"), ("duplicate", "ambiguous_pattern_names"),
+    ("session", "session_changed"), ("error", "tool_error"),
+])
+def test_pattern_fabric_runner_stops_on_mismatch_without_following_call(fault, code):
+    seen = {}
+    def transform(name, reply, step):
+        if name == "tools/list":
+            return reply
+        seen[name] = seen.get(name, 0) + 1
+        value = reply.structuredContent
+        if name == "get_pattern_fabric":
+            if fault == "identity":
+                value["pattern_index"] = 1
+            elif fault == "name":
+                value["pattern_name"] = "wrong"
+            elif fault == "fabric":
+                value["fabric_name"] = "wrong"
+            elif fault == "bool":
+                value["fabric_index"] = True
+            elif fault == "error":
+                return types.CallToolResult(isError=True, content=[],
+                                            structuredContent={"ok": False, "error": "stale_pattern"})
+            elif fault == "changed" and seen[name] == 3:
+                value.update(fabric_index=1, fabric_name="second")
+        if name == "get_pattern_list":
+            if fault == "duplicate":
+                value["patterns"][1]["name"] = value["patterns"][0]["name"]
+            elif fault == "list" and seen[name] == 2:
+                value["patterns"][1]["name"] = "changed"
+        if name == "get_fabric_list":
+            value.update(fabric_count=2, fabrics=[dict(index=0, name="PRIVATE_FABRIC"),
+                                                dict(index=1, name="second")])
+            if fault == "inventory" and seen[name] == 2:
+                value["fabrics"][1]["name"] = "changed"
+        if name == "transport_status" and fault == "session":
+            value["session_id"] = "changed"
+        return reply
+    client = Fake(initial=2, transform=transform)
+    report = run(client, scenario="pattern-fabric-inspection")
+    assert report["code"] == code and client.mutation_count == 0
+    assert report["state"] != "verified"
+    # No reads or cleanup after the precise failing step.
+    assert report["rpc_steps"] == len(client.calls)
+    expected_steps = {"duplicate": 4, "session": 3, "changed": 12,
+                      "list": 16, "inventory": 18}
+    assert len(client.calls) == expected_steps.get(fault, 8)
+
+
+def test_mapping_runner_requires_live_mapping_schema_and_capability_before_native_reads():
+    for fault in ("missing_tool", "schema", "capability"):
+        client = Fake(initial=2)
+        if fault == "missing_tool":
+            client.listing.tools = [t for t in client.listing.tools if t.name != "get_pattern_fabric"]
+        elif fault == "schema":
+            target = next(t for t in client.listing.tools if t.name == "get_pattern_fabric")
+            target.inputSchema["properties"]["expected_name"]["type"] = "integer"
+        else:
+            def transform(name, result, step):
+                if name == "get_session_info":
+                    result.structuredContent["capabilities"].remove("get_pattern_fabric")
+                return result
+            client.transform = transform
+        report = run(client, scenario="pattern-fabric-inspection")
+        assert report["state"] in ("blocked", "unsupported")
+        assert set(client.calls) <= {"tools/list", "get_session_info"}
+
+
+def test_mapping_runner_bounds_before_mapping_reads_and_without_network(monkeypatch, capsys):
+    client = Fake(initial=5)
+    assert run(client, scenario="pattern-fabric-inspection")["code"] == "object_bound"
+    assert "get_pattern_fabric" not in client.calls
+    async def forbidden(*args):
+        raise AssertionError("offline preflight must block")
+    monkeypatch.setattr(vd, "online", forbidden)
+    assert vd.main(["run", "--scenario", "pattern-fabric-inspection", "--max-steps", "27"]) == 2
+    report = json.loads(capsys.readouterr().out)
+    assert report["state"] == "blocked"
 
 
 @pytest.mark.parametrize("scenario,initial,allowed", [("scene-inspection", 2, False), ("current-pattern-fixture", 0, True)])
@@ -418,7 +558,7 @@ def test_json_client_initializes_inventory_single_post_no_get_or_delete():
             client = vd.JsonMCPClient(http, vd.Limits())
             runner = vd.Runner(client)
             await runner.rpc("initialize", client.initialize)
-            assert len((await client.list_tools()).tools) == 14
+            assert len((await client.list_tools()).tools) == 18
     asyncio.run(scenario())
     assert [r.method for r in requests] == ["POST"] * 3
     assert "Mcp-Session-Id" in requests[-1].headers
@@ -434,6 +574,7 @@ def test_current_server_generated_inventory_schema_matches_client_without_server
         assert {t.name for t in published} == vd.CURRENT_TOOLS
         for mode, name, allowed in (("discover", None, False),
                                     ("run", "scene-inspection", False),
+                                    ("run", "pattern-fabric-inspection", False),
                                     ("run", "current-pattern-fixture", True)):
             client = Fake()
             client.listing = types.ListToolsResult(tools=published)

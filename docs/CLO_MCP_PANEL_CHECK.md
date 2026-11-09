@@ -27,7 +27,7 @@
 Ограничение runtime — 16 удерживаемых поколений за жизнь CLO — не изменено.
 Изменения runtime source требуют свежего CLO, Stop/Start не hot-reload модулей.
 
-## Короткая реальная приёмка — pending
+## Короткая реальная приёмка — частичная, оставшиеся критерии pending
 
 Длительность около минуты, без изменений сцены и без повторения P0–P3/load tests:
 
@@ -47,7 +47,8 @@
 Запасной способ остановки: `plugin/clo3d_mcp_stop.py` в том же CLO.
 
 Локальные fake-controller и isolated real-Win32 window tests не доказывают
-совместимость окна с host message dispatch CLO. Реальная приёмка пока не выполнена.
+совместимость окна с host message dispatch CLO. Фактический частичный результат
+приведён ниже; весь checklist пока не закрыт.
 
 ## Локальные результаты — 2026-11-09
 
@@ -62,3 +63,17 @@
 Transport/runtime state machine и dependencies не изменены. Новые файлы:
 `src/clo3d_mcp/control_panel.py`, `plugin/clo3d_mcp_panel.py`,
 `tests/test_control_panel.py`; README дополнен инструкцией. Commit/push нет.
+
+## Частичный real результат — 2026-11-09
+
+Позднее панель сохранена commit `edb7fad`, без push. Пользователь подтвердил
+запуск панели, остановку MCP и новый запуск через ту же панель. После обновления
+внешнего MCP (`842c1e8`) новые read-only discovery и scene-inspection прошли:
+inventory14, readiness/idle guards valid, два списка count0, mutations0.
+Подробности — `DOMAIN_BATCH_CHECK.md`. Вид панели намеренно остался прежним.
+
+Это подтверждает пользовательский путь запуска/Stop → Start и доступность MCP
+после него, но не весь UI/lifecycle checklist. Hide/reopen, отзывчивость после
+закрытия редактора, точные FINISHED/exit0/cleanup flags и сравнение новой session
+identity в этом прогоне отдельно не зафиксированы. Эти критерии остаются pending;
+не выдавать isolated Win32 tests за их real-CLO подтверждение.

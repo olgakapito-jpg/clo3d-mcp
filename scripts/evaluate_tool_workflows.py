@@ -19,10 +19,11 @@ DATASET = ROOT / "tests/evals/clo_tool_selection.json"
 MAX_BYTES = 200000
 EXTERNAL = {"get_session_info", "transport_status"}
 MUTATIONS = {"create_pattern", "set_pattern_name", "copy_pattern_with_offset",
-             "move_pattern_relative", "delete_pattern"}
+             "move_pattern_relative", "delete_pattern", "assign_pattern_fabric"}
 DIAGNOSTIC = "create_test_rectangle"
 CURRENT = EXTERNAL | MUTATIONS | {DIAGNOSTIC, "ping", "get_pattern_count", "list_clo_api",
-                                "describe_clo_api", "get_pattern_list", "get_pattern_geometry"}
+                                 "describe_clo_api", "get_pattern_list", "get_pattern_geometry",
+                                  "get_fabric_list", "get_avatars", "get_pattern_fabric"}
 EFFECTS = {"read", "scene_mutation", "diagnostic_mutation", "filesystem_write",
            "external_effect", "global_mutation", "unknown"}
 BLOCKERS = {"tool_unavailable", "capability_missing", "not_ready", "unsupported_geometry",
@@ -114,7 +115,7 @@ CONTRACT = contract_module()
 def inventory(root=ROOT):
     """AST only: decorators, public args, literal command mapping and capabilities.
 
-    Deliberately fails closed when the current14 registration shape changes.
+    Deliberately fails closed when the current18 registration shape changes.
     Does not inspect legacy server.py or claim a currently running profile.
     """
     tree = ast.parse((root / "src/clo3d_mcp/transport_server.py").read_text(encoding="utf-8"))
@@ -138,7 +139,7 @@ def inventory(root=ROOT):
         tools[node.name] = {"args": [a.arg for a in node.args.args],
                             "effect": "scene_mutation" if node.name in MUTATIONS else
                             "diagnostic_mutation" if node.name == DIAGNOSTIC else "read"}
-    require(set(tools) == CURRENT and len(tools) == 14, "current14_inventory_drift")
+    require(set(tools) == CURRENT and len(tools) == 18, "current18_inventory_drift")
     # Evaluate only a tiny AST list-expression grammar, never source execution.
     constants = {"PATTERN_COMMANDS": list(CONTRACT.PATTERN_COMMANDS)}
 
@@ -160,7 +161,14 @@ def inventory(root=ROOT):
                 constants[name] = literal(node.value)
     require(set(constants.get("PATTERN_CAPABILITIES", [])) == CURRENT - EXTERNAL, "capability_inventory_drift")
     profiles = {
-        "current14": {"tools": sorted(tools), "capabilities": constants["PATTERN_CAPABILITIES"]},
+        "current18": {"tools": sorted(tools), "capabilities": constants["PATTERN_CAPABILITIES"]},
+        "current16": {"tools": sorted(CURRENT - {"get_pattern_fabric", "assign_pattern_fabric"}),
+                      "capabilities": [c for c in constants["PATTERN_CAPABILITIES"]
+                                       if c not in {"get_pattern_fabric", "assign_pattern_fabric"}]},
+        # Historical selection fixtures keep their exact old capabilities.
+        "current14": {"tools": sorted(CURRENT - {"get_fabric_list", "get_avatars", "get_pattern_fabric", "assign_pattern_fabric"}),
+                      "capabilities": [c for c in constants["PATTERN_CAPABILITIES"]
+                                       if c not in {"get_fabric_list", "get_avatars", "get_pattern_fabric", "assign_pattern_fabric"}]},
         "diagnostic5": {"tools": sorted(EXTERNAL | set(constants["SERVICE_CAPABILITIES"])),
                         "capabilities": constants["SERVICE_CAPABILITIES"]},
     }
@@ -265,7 +273,7 @@ def same_geometry(a, b):
             and all(close(x, y) for x, y in zip(a["position_mm"], b["position_mm"])))
 
 
-def validate_submission(submission, inv, case=None, profile="current14", scope="scene"):
+def validate_submission(submission, inv, case=None, profile="current16", scope="scene"):
     """Check supplied static plan or serial synthetic observations, never execute.
 
     Plan checks cannot establish result schemas, identity or real-world effects.
@@ -286,6 +294,8 @@ def validate_submission(submission, inv, case=None, profile="current14", scope="
     ready = False
     session_seen = preflight = listed = counted = False
     names, geometries = None, {}
+    fabrics, mappings = None, {}
+    fabric_list_seen = False
     count = None
     fixture_list_seen = fixture_status_seen = False
     pending = None
@@ -320,6 +330,21 @@ def validate_submission(submission, inv, case=None, profile="current14", scope="
             require(listed, "missing_fresh_list")
             if is_trace:
                 require(args["pattern_index"] < len(names), "stale_target")
+        if tool == "get_pattern_fabric":
+            require(listed, "missing_fresh_list")
+            if is_trace:
+                idx = args["pattern_index"]
+                require(idx < len(names) and names[idx] == args["expected_name"]
+                        and names.count(args["expected_name"]) == 1, "stale_target")
+        if tool == "assign_pattern_fabric":
+            require(fabric_list_seen, "missing_fabric_list")
+            if is_trace:
+                idx, f = args["pattern_index"], args["fabric_index"]
+                require(idx in mappings and mappings[idx]["fabric_index"] == args["expected_current_fabric_index"],
+                        "missing_or_stale_fabric_mapping")
+                require(f < len(fabrics) and fabrics[f]["name"] == args["expected_fabric_name"]
+                        and sum(v["name"] == args["expected_fabric_name"] for v in fabrics) == 1,
+                        "stale_fabric_target")
         if mutation:
             require(preflight and (counted if tool == DIAGNOSTIC else listed), "missing_mutation_preflight")
             if is_trace and tool != DIAGNOSTIC:
@@ -327,7 +352,7 @@ def validate_submission(submission, inv, case=None, profile="current14", scope="
                     idx = args["pattern_index"]
                     require(idx < len(names) and names[idx] == args["expected_name"]
                             and names.count(args["expected_name"]) == 1, "stale_target")
-                    if tool != "delete_pattern":
+                    if tool not in {"delete_pattern", "assign_pattern_fabric"}:
                         require(idx in geometries, "missing_pre_geometry")
                 if "name" in args:
                     require(args["name"] not in names or (tool == "set_pattern_name"
@@ -339,13 +364,16 @@ def validate_submission(submission, inv, case=None, profile="current14", scope="
                 preflight = True
             if tool == "get_pattern_list":
                 listed = True
+            if tool == "get_fabric_list":
+                fabric_list_seen = True
             if tool == "get_pattern_count":
                 counted = True
             if pending and tool == pending["tool"]:
                 pending = None
             if mutation:
                 pending = {"tool": "get_pattern_count" if tool == DIAGNOSTIC else
-                           "get_pattern_list" if tool == "delete_pattern" else "get_pattern_geometry"}
+                           "get_pattern_list" if tool == "delete_pattern" else
+                           "get_pattern_fabric" if tool == "assign_pattern_fabric" else "get_pattern_geometry"}
                 preflight = False
                 listed = tool not in {"delete_pattern", "create_pattern", "copy_pattern_with_offset"}
                 # New indices cannot be proven in a static plan, but list/readback order can.
@@ -359,7 +387,8 @@ def validate_submission(submission, inv, case=None, profile="current14", scope="
             require(result["ok"] is False and result["error"] in {
                 "command_error", "invalid_parameters", "stale_pattern", "api_unavailable", "outcome_unknown",
                 "scene_change_unverified", "queue_full", "queue_timeout", "executor_unavailable", "disconnect",
-                "client_timeout", "waiter_limit"}, "error_schema")
+                "client_timeout", "waiter_limit", "inventory_limit", "inventory_changed",
+                "invalid_native_result", "stale_fabric", "executor_release_timeout", "executor_release_unavailable"}, "error_schema")
             require("isError" not in result or result["isError"] is True, "error_schema")
             require("scene_may_have_changed" not in result or result["scene_may_have_changed"] is True, "error_schema")
             stopped = "outcome_unknown" if result["error"] in {"outcome_unknown", "disconnect", "client_timeout"} else "error"
@@ -392,7 +421,25 @@ def validate_submission(submission, inv, case=None, profile="current14", scope="
             if pending:
                 require(observed == pending["names"], "readback_mismatch")
                 pending = None
-            names, count, listed, geometries = observed, len(observed), True, {}
+            names, count, listed, geometries, mappings = observed, len(observed), True, {}, {}
+        elif tool == "get_fabric_list":
+            fabrics = result["fabrics"]
+            fabric_list_seen = True
+            mappings = {}
+        elif tool == "get_pattern_fabric":
+            idx = args["pattern_index"]
+            require(result["pattern_index"] == idx and result["pattern_name"] == names[idx],
+                    "fabric_mapping_identity")
+            if fabrics is not None:
+                f = result["fabric_index"]
+                require(f < len(fabrics) and fabrics[f]["name"] == result["fabric_name"],
+                        "fabric_mapping_identity")
+            if pending:
+                require(all(result[k] == pending["mapping"][k] for k in
+                            ("pattern_index", "pattern_name", "fabric_index", "fabric_name")),
+                        "readback_mismatch")
+                pending = None
+            mappings[idx] = result
         elif tool == "get_pattern_count":
             if pending:
                 require(result["pattern_count"] == pending["count"], "readback_mismatch")
@@ -411,6 +458,14 @@ def validate_submission(submission, inv, case=None, profile="current14", scope="
             if tool == DIAGNOSTIC:
                 require(result["pattern_count"] == count + 1, "mutation_invariant")
                 pending = {"tool": "get_pattern_count", "count": count + 1}
+            elif tool == "assign_pattern_fabric":
+                require(result["pattern_index"] == args["pattern_index"]
+                        and result["pattern_name"] == args["expected_name"]
+                        and result["fabric_index"] == args["fabric_index"]
+                        and result["fabric_name"] == args["expected_fabric_name"]
+                        and result["previous_fabric_index"] == args["expected_current_fabric_index"],
+                        "mutation_invariant")
+                pending = {"tool": "get_pattern_fabric", "mapping": result}
             elif tool == "delete_pattern":
                 require(result["deleted_name"] == args["expected_name"]
                         and result["pattern_count"] == len(names) - 1, "mutation_invariant")
@@ -524,7 +579,7 @@ def self_test(inv):
 
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--check", action="store_true", help="Validate dataset and AST current14 inventory")
+    parser.add_argument("--check", action="store_true", help="Validate dataset and AST current16 inventory")
     parser.add_argument("--self-test", action="store_true", help="Validate synthetic positive/negative traces")
     parser.add_argument("--dataset", type=Path, default=DATASET)
     parser.add_argument("--submission", type=Path, help="Supplied sanitized synthetic plan/trace JSON")
