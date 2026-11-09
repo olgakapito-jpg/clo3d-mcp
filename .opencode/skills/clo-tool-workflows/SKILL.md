@@ -39,24 +39,47 @@ tool загрузить `clo-mcp-tool-design`.
 - Плановая очистка своих объектов допустима только отдельными успешными шагами
   с fresh target guards и в разрешённом scope, не как recovery по умолчанию.
 - Описывать actual result, remaining uncertainty и next action. Не объявлять
-  готовой одежду по count/имени/площади. Расширенный profile16 включает только
-  get_fabric_list/get_avatars reads (не assignment/import). Fabric indices —
-  Object Browser, без colorway selection/filter. Новый контракт заменил снятый
-  colorway prototype; два real count4/names reads в свежем CLO успешны,
-  GUI/UI подтверждены пользователем;5serial cross-domain read cycles/geometry5
-  PASS. Это не assignment/pose acceptance. Worker restart не reload embedded modules:
-  ../../../docs/CLO_INVENTORY_CHECK.md. Не менять overload автоматически.
-  Source/live profile18 добавляет get_pattern_fabric/assign_pattern_fabric;
-  после fresh restart limited real API/readback PASS: own piece0→1→3,independent
-  mappings/geometry preservation5,planned own delete. User UI confirmed;
-  temporary appearance не оценена. B05C copy inheritance/rename/move/independent
-  assignment/lower-delete index shift/fresh-index assignment real PASS;
-  не общая material/sewing гарантия copy. После delete всегда fresh list.
-  Read-only runner pattern-fabric-inspection real PASS,2passes5mappings,0mutations.
-  Всё равно сверять actual discovery/capabilities. Assign только после
-  fresh names/current mapping, один effect→independent readback; post-entry
-  error/False не retry/rollback/cleanup. Full contract:
-  ../../../docs/CLO_FABRIC_ASSIGNMENT_CHECK.md. Sewing/simulation недоступны.
+  готовой одежду по count/имени/площади.
+
+## Текущий profile: что реально опубликовано
+
+Номер профиля — исторический ярлык; перед сценарием сверять live
+`get_session_info` capabilities и discovery, а не число из этого текста.
+Source/live, принятые ранее подпакеты:
+
+- Диагностика (1–7): info/status/ping, count, test rectangle,
+  list/describe API. Introspection не исполняет описанные методы.
+- Лекала (8–14): list, geometry, create, rename, copy, move, delete.
+- Inventory (15–16): `get_fabric_list`/`get_avatars` — только read-only.
+  Fabric indices — Object Browser, без colorway selection/filter; два real
+  count4/names reads и 5 serial cross-domain cycles PASS, GUI подтверждён
+  пользователем. Это не assignment/pose acceptance.
+- Relationship (17–18): `get_pattern_fabric`/`assign_pattern_fabric`.
+  Limited real API/readback PASS: own piece0→1→3, независимые mappings/geometry
+  сохранены, плановое удаление; B05C copy inheritance/rename/move/independent
+  assignment/index shift PASS. UI подтверждён, временный вид материала отдельно
+  не оценён — не общая material/sewing гарантия copy. После delete всегда fresh
+  list. Assign только после fresh names/current mapping, один effect →
+  независимый readback; post-entry error/False не retry/rollback/cleanup.
+  Контракт: `../../../docs/CLO_FABRIC_ASSIGNMENT_CHECK.md`.
+- Outline (19): `get_pattern_outline` read-only, required fresh index/unique
+  expected_name,1–512endpoints, mm от bbox TOP-LEFT/Ydown, не global2D/curve
+  controls/lineIndex. **Документированное ограничение**: invalid_native_result
+  на own fixture, native `[]`, и тот же отказ на двух существующих деталях;
+  причина неизвестна. `[]` — не success и не повод на bbox/line fallback;
+  marker одноразового probe не сбрасывать. Деталь `MCP_B06_outline_03cc0407`
+  оставлена как есть. `../../../docs/CLO_OUTLINE_CHECK.md`.
+- Линии (20): `get_pattern_lines` read-only, required fresh index/unique
+  expected_name, один native read; `status="success"`,4 lines, absolute API-mm
+  frame на тестовом прямоугольнике; длины 4/4 совпали с `GetLineLength`
+  (delta0.0). Кривые/failure/frame после move/rotate не заявлены; не outline
+  fallback. `../../../docs/CLO_LINE_API_CONTRACT_REVIEW.md`.
+
+Worker restart не перезагружает embedded modules: `CLO_INVENTORY_CHECK.md`.
+Не менять overload и не добавлять fallback автоматически. Sewing/simulation/
+import/export/pose остаются недоступны. Composition: list→outline→check;
+cross-domain list→outline→`get_pattern_fabric` с тем же fresh target,
+независимые наблюдения, не garment validation.
 
 ## Создание будущего доменного skill
 

@@ -1,5 +1,20 @@
 # Bounded domain acceptance prep — A5
 
+**B06 source/live19:** read-only `get_pattern_outline`. First own rectangle read
+invalid_native_result; user one-shot native [] для own target5; причина
+неизвестна. Различающий read-only опыт на двух существующих деталях (`"2"`,`"3"`)
+тоже invalid_native_result → проблема не только в программно созданной детали;
+это документированное ограничение, не открытый blocker набора. No
+retry/move/delete/fallback; own fixture5 remains. `CLO_OUTLINE_CHECK.md`. Этот
+runner сверяет inventory20 исходников, не добавляет outline scenario и не
+разрешает native fallback.
+
+**B07 lines:** tool20 `get_pattern_lines` реализован (one `GetPatternLineInfo`,
+strict bounded JSON, list/count guards). Real: own fixture success,4lines0–3,
+absolute API-mm frame; отдельный length-probe 4/4 с delta0.0. Кривые/failure/
+frame после move/rotate не проверены; outline fallback запрещён.
+`CLO_LINE_API_CONTRACT_REVIEW.md`; eval39cases/20tools.
+
 **B05 local update:** source18 содержит get_pattern_fabric/assign_pattern_fabric,
 live18 после fresh CLO restart. Direct real assignment API/readback PASS,UI
 подтверждён;temporary appearance не оценена. B05C composition/index shift PASS.
@@ -309,7 +324,7 @@ read-only сценария, не resume прежних failed/blocked runs:
 Assets не читались/не загружались, сцена не менялась. Полная приёмка панели
 (hide/reopen, responsiveness, clean exit и новая session identity) отдельно
 не доказана. Следующий gate — один ручной B01 static metadata probe
-`plugin/clo3d_mcp_api_probe.py`: pattern_api / type=None / cursor=0.
+`diagnostics/clo3d_mcp_api_probe.py`: pattern_api / type=None / cursor=0.
 
 ### Прямой MCP после включения пользователем — 2026-11-09
 

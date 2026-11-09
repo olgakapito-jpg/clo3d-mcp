@@ -2,25 +2,42 @@
 
 2026-11-09. Источник: `src/clo3d_mcp/transport_server.py`, `pattern_contract.py`,
 `pattern_api.py`, `inventory_api.py`, `jobs.py`, `pipe_session.py`, launcher.
-**18 tools** в исходном и подтверждённом live расширенном profile после restart.
+**Текущий набор** в исходном и live расширенном profile после пользовательского restart.
+Line info: `get_pattern_lines` (#20) реализован на observed `status=success` схеме,
+один native read на деталь, длины согласованы с `GetLineLength` 4/4 на тестовом
+прямоугольнике; кривые/failure/frame после move/rotate не заявлены.
+Outline: real gate BLOCKED и затем документированное ограничение — invalid_native_result
+для own fixture, native `[]`, и тот же отказ на двух существующих деталях;
+schema не ослаблена, не retry. Подробности: `CLO_OUTLINE_CHECK.md`.
 Relationship tools17–18: limited real API/readback PASS, UI подтверждён пользователем;
 внешний вид временной детали отдельно не зафиксирован. Исходные14 приняты ранее,
 inventory real scope частичный (см. `CLO_INVENTORY_CHECK.md`). Не legacy47/full API.
 Этот документ не обновляет runtime descriptions сам по себе.
 
+API линий проверен отдельно: `CLO_LINE_API_CONTRACT_REVIEW.md`. `GetPatternLineInfo`
+опубликован как tool20 `get_pattern_lines`; обе `GetLineLength` остаются
+внутренней проверкой и не являются MCP tools. Один real one-shot
+`GetPatternLineInfo` на own120×80 детали вернул `status="success"`,4 lines,
+только documented fields; координаты — absolute API-mm frame, не bbox-local.
+Length-correspondence выполнен:4/4 2-аргументных `GetLineLength` по returned
+indices0–3 дали120/80/120/80 с delta0.0 и multiset match. Это единичные сэмплы:
+кривые, failure и frame после move/rotate остаются отдельными gates.
+
 ## Общие контракты
 
 - В примерах JSON ниже — synthetic args, не команда выполнить вызов. Индексы
   и expected_name брать из свежего списка реальной сцены, не копировать index0.
-- Девять pattern-команд, два inventory reads и две relationship-команды проверяют exact keys raw HTTP payload,
+- Все pattern-команды (включая outline и lines), два inventory reads и две relationship-команды проверяют exact keys raw HTTP payload,
   очередь и executor.
   Числа strict int/float без bool, NaN/Infinity; имена1–128 Unicode code points
   с ord≥32, без surrogates. Это не полная Unicode-category проверка: пробельные
   имена, DEL и некоторые невидимые символы сейчас допускаются; выбирать осмысленные
   видимые имена. Координаты/смещения |v|≤100000мм;
   `pattern_index` strict int0–255. Фактическое наличие — отдельная проверка.
-  Для исходных пяти diagnostic tools raw exact-key validation пока не такая
-  же строгая: не утверждать обратного, передавать `{}`.
+  Пять tools без аргументов (`ping`, `get_pattern_count`, `transport_status`,
+  `get_session_info`, `create_test_rectangle`) теперь тоже проверяют raw payload:
+  допускается только `{}` или отсутствие аргументов, extras → `invalid_parameters`
+  до queue/native.
 - Queue calls success: `ok:true` + поля команды. `transport_status` и
   `get_session_info` возвращают status dict **без обязательного ok**.
 - Error tool result: `isError:true`, structured `{ok:false,error:<code>}`;
@@ -66,13 +83,16 @@ inventory real scope частичный (см. `CLO_INVENTORY_CHECK.md`). Не l
 
 **Когда:** старт сценария, identity/capability/readiness. **Не:** версия CLO,
 имя проекта, прогресс native вызова. Args `{}`. Возвращает status + clo_pid,
-server_pid, capabilities и CLO session_id (не HTTP session ID).
-Capabilities — executor commands: два внешних status tools в этот список не
-обязаны входить. Выбирать реально опубликованные tools и профиль совместно.
-Read-only внешний snapshot, не доказывает текущий callback response.
-Пример: `{}` → сохранить session_id, проверить ready/error/quarantine.
-Invalid choice: для измерения roundtrip нужен ping, не повтор info в цикле.
-Composition: W1/W3; до mutation статус перепроверить, но guard не atomic.
+server_pid, capabilities, `server_build`, `executor_build` и CLO session_id (не
+HTTP session ID). Builds —12hex SHA-256 исходников; совпали = Stop→Start загрузил
+текущий код, разные = stale embedded `sys.modules` (перезапустить Start; script
+Editor открывать с диска). Capabilities — executor commands: два внешних status
+tools в этот список не обязаны входить. Выбирать реально опубликованные tools и
+профиль совместно. Read-only внешний snapshot, не доказывает текущий callback
+response. Пример: `{}` → сохранить session_id, проверить ready/error/quarantine,
+сверить builds. Invalid choice: для измерения roundtrip нужен ping, не повтор
+info в цикле. Composition: W1/W3; до mutation статус перепроверить, но guard не
+atomic.
 No-call: при ready=false не переходить к create, даже если capabilities есть.
 
 ## 2. transport_status
@@ -290,6 +310,82 @@ Limited real API/readback PASS на собственной детали0→1→3
 плановым delete и final checks; UI подтверждён пользователем. B05C additional
 composition/index shift PASS,temporary appearance не оценена. До256patterns/fabrics,
 max4123native reads в UI callback. Full card — `CLO_FABRIC_ASSIGNMENT_CHECK.md`.
+
+## 19. get_pattern_outline
+
+**Source/live19, документированное ограничение (было BLOCKED)**, read-only. Читает конечные точки boundary сегментов
+одной uniquely named детали. Native source:
+`pattern_api.GetPatternOutlinePoints#8b6d1cfeb17b2fc2`, one real-pattern-list index.
+Presence/docstring подтверждены в CLO2026.1.336; первое MCP чтение собственной
+детали отклонено как invalid_native_result. Отдельный ручной one-shot пользователя
+подтвердил native exact list `[]` для существующей uniquely named детали index5;
+причина пустоты неизвестна. Различающий read-only опыт на двух существующих
+деталях (`"2"`,`"3"`) тоже вернул invalid_native_result, то есть проблема не
+ограничена программно созданной деталью. Публичный adapter не различает
+empty/layout/bounds. Не повторять, не считать пустой контур успехом, не делать
+bbox/line fallback; точечный fix требует отдельного adapter-изменения и restart.
+
+Required `pattern_index`: strict int0–255, `expected_name`: exact1–128chars из
+fresh `get_pattern_list`, уникальное имя. Extra keys/bool/string-index/missing
+fields → invalid_parameters до queue/native. Никаких optional flags/пагинации.
+
+Result `{ok:true,pattern_index,pattern_name,point_count,points_mm,units:"mm",
+coordinate_frame:"bbox_top_left_y_down"}`. `point_count`1–512, `points_mm` —
+native ordered list `[x,y]`, finite numeric ±100000мм. Координаты от **верхнего
+левого угла bounding box**, Y вниз; **не global2D** и не position_mm reference.
+Curve controls исключены native API; closure/duplicates/order сохраняются без
+нормализации. Не выводить winding, tessellation, segment/lineIndex correspondence,
+внутренние линии/швы или возможность восстановить curved shape/площадь.
+
+Unique stale guard до getter; два exact endpoint reads с тремя list/count checks,
+до256patterns. Максимум2outline+768name+6count native calls; read-only, но native
+call может задержать UI. Не atomic snapshot/устойчивый ID или full geometry proof.
+Пустой/слишком большой/неправильный native result отклоняется, не обрезается.
+
+Errors: stale_pattern — fresh list отдельно; inventory_changed — данные между
+reads/list checks изменились; invalid_native_result — unsupported layout/bounds;
+api_unavailable — binding отсутствует; command_error — sanitised native exception.
+При любом error/unknown **STOP, без automatic retry/fallback**; readiness/status
+и bounded fresh list можно проверить отдельно, не продолжая старый сценарий.
+
+Valid synthetic: `{"pattern_index":0,"expected_name":"panel"}`.
+Invalid/no-call: `{"pattern_index":true,"expected_name":"panel"}` или extra
+`line_index`/`include_controls`: raw validation до dispatch. Domain composition:
+session/capability → fresh list → outline → schema/name/frame check. Cross-domain:
+fresh list → outline → `get_pattern_fabric` с тем же fresh target → независимая
+инспекция endpoints и назначения (не material/3D validation).
+Anti-selection: для площади/позиции — `get_pattern_geometry`; для управляющих
+точек кривых/швов/индексов сегментов доступного tool пока нет, не generic call.
+Реальная приёмка/stop/failure criteria: `CLO_OUTLINE_CHECK.md`.
+
+## 20. get_pattern_lines
+
+**Source read-only, один real schema+length сэмпл.** Внешние линии одной uniquely
+named детали по `pattern_api.GetPatternLineInfo#45ddc71808d7eb67`, RealPatternList
+index. Не outline fallback и не заменяет `get_pattern_outline`.
+
+Required `pattern_index` strict int0–255, `expected_name` exact1–128 из fresh
+`get_pattern_list`, уникальное. Result
+`{ok:true,pattern_index,pattern_name,line_count,bounding_box_mm:{min_x,min_y,max_x,max_y,width,height},lines:[{line_index,length_mm,orientation,location,start_mm,end_mm,mid_mm,mid_norm}],units:"mm",coordinate_frame:"api_2d_mm"}`.
+`line_count`1–512 == len(lines); `line_index` уникальны0–511, native order
+сохраняется; `mid_norm`0–1 внутри bbox. Координаты — native 2D мм; на тестовом
+прямоугольнике совпали с absolute create/geometry frame (не bbox-local), но
+направление Y и frame после move/rotate отдельно не установлены. `length_mm` —
+native длина линии в мм; arc-vs-chord на кривых не установлен. Не выводить
+closure, tessellation, seam/lineIndex topology или graded points.
+
+Один native line-info read плюс list/count checks, до256patterns; не atomic
+snapshot и не durable identity. Строгий bounded JSON: exact str≤64KiB, depth16,
+duplicate keys/NaN/Infinity rejected, documented fields only. Errors:
+stale_pattern, inventory_changed, invalid_native_result, api_unavailable,
+command_error. При любом error/unknown STOP, без retry и без fallback на outline.
+
+Valid synthetic: `{"pattern_index":0,"expected_name":"panel"}`.
+Invalid/no-call: bool/string index, extra keys, несовпадающее/неуникальное имя.
+Composition: session → fresh list → lines → независимое чтение geometry тем же
+fresh target; cross-domain → `get_pattern_fabric`. Anti-selection: конечные точки
+контура — `get_pattern_outline` (limited), управляющие точки кривых/швов — tool нет.
+Evidence: `CLO_LINE_API_CONTRACT_REVIEW.md`.
 
 ## Ошибки и безопасные действия
 

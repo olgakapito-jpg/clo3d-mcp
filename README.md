@@ -44,22 +44,23 @@ Python-пакет декларирует 3.10+, но новый runtime пров
 чужой сервер не завершается. После изменения runtime-модулей открыть свежий CLO,
 не перезагружать модули с сохранёнными native callbacks на месте.
 
-### Окно с кнопками Старт / Стоп
+### Панель Старт / Стоп (gui_api)
 
 Вместо отдельных start/stop scripts можно открыть в Script Editor
 `plugin/clo3d_mcp_panel.py` и нажать Run. Если `__file__` отсутствует, задать
-`ROOT` в начале этого скрипта. Затем закрыть редактор: небольшое немодальное
-окно показывает состояние и позволяет нажать **Старт** / **Стоп**.
-Для перезапуска дождаться **Остановлен**, затем нажать **Старт**.
-Крестик только скрывает окно, сервер продолжает работать; повторный Run
-показывает тот же экземпляр. Нет дополнительных зависимостей или Qt.
-Лимит 16 запусков за жизнь CLO сохраняется; обновлённые runtime-модули требуют
-свежего CLO. Реальная совместимость панели с CLO пока ожидает проверки:
+`ROOT` в начале этого скрипта. Появится dock panel CLO (fallback — tool window)
+с кнопками **Старт**, **Стоп**, **Обновить** и статусом. Периодического callback
+в gui_api нет, поэтому статус обновляется после действий и по **Обновить**.
+Закрытие панели не останавливает сервер; повторный Run показывает её снова.
+Нет Win32/Qt и дополнительных зависимостей.
+Лимит 16 запусков за жизнь CLO сохраняется; launcher очищает кеш runtime-модулей
+на Stop→Start, но сам panel/launcher нужно запускать из свежего файла. Реальная
+GUI-приёмка панели ожидает проверки:
 [инструкция и критерии](docs/CLO_MCP_PANEL_CHECK.md).
 
 Перенос формы на macOS и управление restart из ассистента — отдельное
 [предложение controller/supervisor](docs/CLO_MCP_CONTROLLER_PLAN.md), не включённая
-поддержка. Предпочтительный UI — штатный CLO `gui_api`; transport/runtime macOS
+поддержка. UI теперь штатный CLO `gui_api` (dock panel); transport/runtime macOS
 требуют самостоятельной реализации и реальной приёмки.
 
 ## Текущий проект OpenCode / OpenChamber
@@ -101,12 +102,22 @@ ECONNREFUSED нормально. Глобальные настройки про�
   `copy_pattern_with_offset`, `move_pattern_relative`, `delete_pattern`.
   Строгие параметры, stale-index guard и readback; native compatibility ещё
   проверяется по [отдельной инструкции](docs/PATTERN_API_CHECK.md).
+- Inventory: `get_fabric_list`, `get_avatars` — read-only Object Browser
+  (fabric indices без colorway). Это не assignment/pose.
+- Relationship: `get_pattern_fabric`, `assign_pattern_fabric` — limited real
+  API/readback PASS; assign только после fresh list/current mapping, один
+  effect и независимый readback.
+- Outline: `get_pattern_outline` — read-only, real gate **BLOCKED**: native `[]`
+  для существующей детали; не retry, не success и не bbox/line fallback.
+- Lines: `get_pattern_lines` — read-only внешние линии (lineIndex, length_mm,
+  orientation, location, start/end/mid, mid_norm), один native read; кривые и
+  frame после move/rotate отдельно не заявлены.
 
 Новый путь не загружает extensions и не публикует legacy-команды импорта,
 экспорта, симуляции или exec. Параметризованное создание ограничено простым
 прямолинейным многоугольником до 64 точек; кривые/отверстия пока не подключены.
 
-Описание каждого текущего инструмента: [каталог 14 tools](docs/CLO_MCP_TOOLS.md).
+Описание каждого текущего инструмента: [каталог текущих tools](docs/CLO_MCP_TOOLS.md).
 Выбор и совместное использование: [рецепты](docs/CLO_MCP_WORKFLOWS.md).
 Для разработки следующих пакетов: [стандарт описаний](docs/CLO_MCP_TOOL_AUTHORING.md)
 и [локальные skills и шаблоны](docs/AGENT_WORKFLOW.md). Эти документы сами по себе
@@ -119,6 +130,19 @@ ECONNREFUSED нормально. Глобальные настройки про�
 оба cleanup_pending=False и error=None. Повторный stop выводит отчёт.
 После обычного закрытия CLO его MCP завершается сам по pinned process handle.
 Управляется только принадлежащий сеансу child, не процессы по имени/порту.
+
+## Версия и кеш embedded Python
+
+- `clo3d_mcp.BUILD` — 12 hex SHA-256 от исходников пакета. `get_session_info`
+  отдаёт `server_build` (внешний процесс) и `executor_build` (интерпретатор CLO).
+- Совпали → Stop→Start действительно загрузил текущие исходники. Разные → во
+  встроенном Python остались stale `sys.modules`; запустите Start ещё раз
+  (лаунчер очищает `clo3d_mcp.*` и `importlib.invalidate_caches` перед импортом),
+  при необходимости — полный restart CLO.
+- Launcher чистит кеш только при запуске из свежего файла: Script Editor нужно
+  переоткрыть с диска, иначе выполнится старый буфер. Изменения самого launcher,
+  CLO C++/API-модулей и `.pyc` не лечатся очисткой `sys.modules` — нужен новый Run
+  или restart CLO.
 
 ## Гарантии и ограничения
 

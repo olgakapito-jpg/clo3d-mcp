@@ -10,15 +10,15 @@
     },
     {
       "path": "clo_source_mappings.json",
-      "sha256": "af825272d9ca32a4c8233b40a732c19454d09fb0e9533073bb81cebbaa46f463"
+      "sha256": "0ea31b920733e6425c4231eaf56e26469d83baa576c51de0b951806380250e8d"
     },
     {
       "path": "current_operation_scope.json",
-      "sha256": "936019de2f80f4f6a5f28369b277b8f184216071124bcc9266c04005e8f7f7f2"
+      "sha256": "1acb0cb8e487ebde24e0a616c1596034eaf92b1ff32f9479781eee4537ddcf91"
     },
     {
       "path": "review_gates.json",
-      "sha256": "e2757798041c40f83a36a362b79e93dc1c748869555de397775a9a1a1d142d54"
+      "sha256": "3f877e9f4c2aa96ca2ec8bae5ac96db2a3541c3393e1ea068eaafae48f55cfcb"
     }
   ],
   "runtime_evidence": "docs/CLO_API_RUNTIME_EVIDENCE.md",
@@ -29,8 +29,8 @@
     "additional_interfaces": 6,
     "donor_tools": 170,
     "local_legacy_tools": 47,
-    "current_tools": 18,
-    "current_native_operations": 16,
+    "current_tools": 20,
+    "current_native_operations": 18,
     "historical_docstring_names": 43,
     "nonofficial_mapping_names": 4,
     "official_names_with_donor_reference": 332,
@@ -106,18 +106,18 @@
     },
     {
       "path": "coverage/pattern_api-02.json",
-      "sha256": "9d10ffaf64114057ccde118e8486d30ede6d245ee32d5934b98311c4f95c69f9",
-      "count": 67
+      "sha256": "945365d44e2b33e599d7cb3e1e24872c91f3e09444b0e1dcaa0c0a8d2024ab24",
+      "count": 66
     },
     {
       "path": "coverage/pattern_api-03.json",
-      "sha256": "54f6be4b0e058d42cdc1aec35f8f9050ba9aa72e576f3b21806924d22b3dda6b",
+      "sha256": "eee322431841400f76d7cab1e2119b92dc9bb248ff2a3cc540d0ce63f55b854c",
       "count": 67
     },
     {
       "path": "coverage/pattern_api-04.json",
-      "sha256": "2c6f24f07edd836b234f54c71b53dc948fa76796234dd8d02102537a0b2682e6",
-      "count": 33
+      "sha256": "9d41d382c914b9a24d1ec9a104ab3907d3cb1d5c317bfdd3caba5cab2c6c049d",
+      "count": 34
     },
     {
       "path": "coverage/rest_api-01.json",

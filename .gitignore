@@ -66,6 +66,11 @@ htmlcov/
 tests/_scratch_out/
 # User-approved acceptance exports/reports; never source, fixtures or IPC.
 /acceptance-output/
+# Local CLO scratch projects and lock files; never committed.
+/projects/
+# Local tool artifacts: client config backup and one-off probe output.
+/opencode.json.openchamber.backup
+/result.json
 
 # Studio material never enters this repo (tests/test_no_assets.py refuses it even if forced):
 # garments, avatars and twins, patterns, scans, renders, textures.

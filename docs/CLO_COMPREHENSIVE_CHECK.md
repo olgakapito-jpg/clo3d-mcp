@@ -198,7 +198,7 @@ scene-inspection verified (7 RPC steps, два стабильных списка
 Прежний RESULT → READY blocker закрыт только в scope короткого real gate,
 не stress/всех faults. Пустая сцена не закрывает geometry acceptance B02.
 
-Следующий совместный шаг B01 — один запуск `plugin/clo3d_mcp_api_probe.py`
+Следующий совместный шаг B01 — один запуск `diagnostics/clo3d_mcp_api_probe.py`
 в CLO с pattern_api / type=None / cursor=0, затем просмотр JSON. Gate ещё pending;
 types/options/overloads/native semantics и новые домены не считаются принятыми.
 Полная приёмка панели остаётся частичной; macOS GUI и внешний supervisor — только

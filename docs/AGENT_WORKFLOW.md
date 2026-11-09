@@ -58,7 +58,7 @@ Python/FastMCP 1.26.0 и CLO-bound transport. Первоначально соз�
 ## Сопровождение
 
 Стандарт описаний: [CLO_MCP_TOOL_AUTHORING.md](CLO_MCP_TOOL_AUTHORING.md).
-Текущий набор: [14 tool cards](CLO_MCP_TOOLS.md),
+Текущий набор: [карточки текущих tools](CLO_MCP_TOOLS.md),
 совместное применение: [workflow recipes](CLO_MCP_WORKFLOWS.md).
 Заготовки карточек и доменного skill находятся в `templates/` двух новых навыков;
 это не отдельные установленные skills и не новые MCP tools.

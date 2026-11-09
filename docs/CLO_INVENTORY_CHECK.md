@@ -132,7 +132,7 @@ semantic assertions проверяют Object Browser и отсутствие co
 Mappings/coverage rebuild+check, dry-run и diff-check PASS. Source audit199files
 по-прежнему blocked только посторонним backup/config extension, guard не ослаблен.
 
-Colorway count-comparison `plugin/clo3d_mcp_fabric_probe.py` больше не требуется;
+Colorway count-comparison `diagnostics/clo3d_mcp_fabric_probe.py` больше не требуется;
 не запускать ради текущего scope. Файл сохранён как историческая диагностика.
 Live describe повторно подтвердил bool keyword `_bCurrentColorway` и single-index
 name overload. Metadata само по себе не acceptance; native evidence ниже.

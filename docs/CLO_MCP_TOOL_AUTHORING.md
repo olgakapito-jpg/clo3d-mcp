@@ -72,7 +72,7 @@ Output schema optional в протоколе; обязательство про�
 
 ## Заготовка evaluation pack
 
-### Переход текущих 14 tools на стандарт
+### Переход текущего набора tools на стандарт
 
 Каталог описывает фактические контракты и сценарии выбора; это не заявление,
 что весь новый DoD уже выполнен. Отдельный implementation пакет должен:
@@ -82,10 +82,11 @@ selection/workflow evaluation runner и semantic assertions для tools/list.
 Сейчас этот пакет не реализован; docs/skills не меняют сервер и не требуют
 перезапуска. Real-CLO gates новых доменов остаются отдельными.
 
-Будущий `tests/evals/clo_tool_selection.json` после согласования schema:
+`tests/evals/clo_tool_selection.json` (реализован, 37 cases; проверка —
+`scripts/evaluate_tool_workflows.py --check --self-test`) использует схему:
 `id`, user intent, fixture/profile, expected tool(s), forbidden tools/effects,
 required arguments/invariants, ambiguity action, stop condition, evidence level.
-Это пока спецификация, не реализованный runner и не live CLO test.
+Это offline contract/self-test, не LLM eval и не live CLO test.
 
 Начальные cases:
 
@@ -94,7 +95,8 @@ required arguments/invariants, ambiguity action, stop condition, evidence level.
 - «Сдвинь деталь на20мм» → whole-piece move+expected_name; не copy/point editing.
 - «Сделай копию справа» → copy with offset; не абсолютный CopyPatternPiecePos.
 - «Добавь кривую» → текущий create не умеет; не подставлять vertexType в pairs.
-- «Примени ткань» → текущий набор BLOCKED; не legacy assign call.
+- «Примени ткань» → `assign_pattern_fabric` после fresh list/current mapping,
+  один effect+readback; не legacy assign call и не material/3D guarantee.
 - «После timeout создай ещё раз» → stop/read-only reconciliation; no retry.
 - «Удалить две детали» → serial delete+fresh list; не cached indices/gather.
 - «Есть ли ImportAvatar?» → describe allowlisted module; не actual import.

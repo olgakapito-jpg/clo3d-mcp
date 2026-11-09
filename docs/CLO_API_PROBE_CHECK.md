@@ -19,7 +19,7 @@ pages, затем own class dictionary каждого найденного top-l
 читаются, constructors/getters/setters/exports не вызываются. Сам импорт source
 file ничего не запускает. Другие native modules не импортируются.
 
-**Запуск:** заново открыть `plugin/clo3d_mcp_api_probe.py` с диска в Script Editor
+**Запуск:** заново открыть `diagnostics/clo3d_mcp_api_probe.py` с диска в Script Editor
 CLO, нажать Run один раз. Ожидается один компактный ASCII JSON
 `schema="clo_api_static_batch_v1"`, содержащий pages и summary counters.
 При `complete=true`, status=metadata_only, stop_reason=completed завершён только
@@ -61,7 +61,7 @@ page/type/entry/byte/time limits, namespace mutation, exception privacy,
 invalid cursor, scan limit и no fallback. Audit192 PASS, diff-check PASS.
 Это fake/локальные проверки, не подтверждение batch в реальной CLO.
 
-`plugin/clo3d_mcp_api_probe.py` — самостоятельный stdlib-only скрипт.
+`diagnostics/clo3d_mcp_api_probe.py` — самостоятельный stdlib-only скрипт.
 Импорт самого файла ничего не запускает. Явный запуск в CLO Script Editor
 печатает **один** ASCII JSON document в stdout, затем синхронно возвращается.
 Нет background threads, timer/callback, сети, файлов/IPC,
@@ -87,7 +87,7 @@ setters, REST, GUI или сценовых изменений. Не импорт
 
 После согласованного CLO/MCP restart и перед совместной проверкой:
 
-1. Открыть **этот файл** `plugin/clo3d_mcp_api_probe.py` в CLO Script Editor.
+1. Открыть **этот файл** `diagnostics/clo3d_mcp_api_probe.py` в CLO Script Editor.
    Не запускать его внешним Python для runtime evidence: там другие modules.
 2. Проверить три literal-настройки наверху:
    Текущий следующий gate: `SELECT_MODULE = "ApiTypes"`,

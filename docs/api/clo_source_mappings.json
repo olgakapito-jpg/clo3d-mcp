@@ -195,9 +195,15 @@
       },
       {
         "path": "docs/CLO_INVENTORY_CHECK.md",
-        "sha256": "be5d4d5a27cf6f963f9a7c9088da6b0bcfc7f27a2774ceff37f3dea878b20da6",
-        "bytes": 15290,
+        "sha256": "e48524f0c1fb9ed02240c81fa093776d375a3f387ba2bacbc2dd13012a4f4ab6",
+        "bytes": 15295,
         "lines": 184
+      },
+      {
+        "path": "docs/CLO_OUTLINE_CHECK.md",
+        "sha256": "18a5e0db008d3e243102cc9a21f120ffc88e6fe36e91f061f9a33f3f8a23edab",
+        "bytes": 19452,
+        "lines": 233
       },
       {
         "path": "docs/P3_MCP_CHECK.md",
@@ -219,9 +225,9 @@
       },
       {
         "path": "plugin/clo3d_mcp_start.py",
-        "sha256": "70b98b2b5d0d495299f10e07002ba8fd3939c5adf001829a375e227e5da684dc",
-        "bytes": 3096,
-        "lines": 71
+        "sha256": "9791fa8486bb5e4b5858b4026a354a0accc8c1cb16939e443e23af5bc27b2e94",
+        "bytes": 3436,
+        "lines": 77
       },
       {
         "path": "src/clo3d_mcp/fabric_assignment_api.py",
@@ -237,32 +243,32 @@
       },
       {
         "path": "src/clo3d_mcp/pattern_api.py",
-        "sha256": "6bdad79a6e01d01a619c3d03c133d290667963810976e6b0b74b3363a622a6a9",
-        "bytes": 12308,
-        "lines": 243
+        "sha256": "319c14fd2f2c18c47002ad36864efade3c48e6cdc2bf4ff8526a3ecd74da2126",
+        "bytes": 20351,
+        "lines": 408
       },
       {
         "path": "src/clo3d_mcp/pattern_contract.py",
-        "sha256": "e68f48b476c62a9f287cc757cbdd02dfe9d1670462afe14e37aeec3b9be94796",
-        "bytes": 11020,
-        "lines": 234
+        "sha256": "a61ff7567abafdfe8142eadf57081d458ba1106e285a07dd4e253ca23461980d",
+        "bytes": 14573,
+        "lines": 303
       },
       {
         "path": "src/clo3d_mcp/pipe_runtime.py",
-        "sha256": "bc88c6817e776539d35a57994e3664eb9d89a992f4a3909f02b8fb7283863ea3",
-        "bytes": 16018,
-        "lines": 346
+        "sha256": "5ef9d44e85bd1eac61f04ae7147883d6d89ac57df2a07ad9059bc5c56637f8e1",
+        "bytes": 16059,
+        "lines": 347
       },
       {
         "path": "src/clo3d_mcp/pipe_session.py",
-        "sha256": "b5b6b8f710053c520550b5f15fab198ae52d9191ad14ae8737c4eb4a599581df",
-        "bytes": 6298,
-        "lines": 131
+        "sha256": "6c728b2b7694fa8d30ace4c247ffffeee37c434848a018d1af63747a7bd1e58d",
+        "bytes": 6339,
+        "lines": 132
       },
       {
         "path": "src/clo3d_mcp/protocol.py",
-        "sha256": "cc5fae44fcc8b1039d85cf4767cacfd1daa97ea35cff052e729f11fcd038e02e",
-        "bytes": 6572,
+        "sha256": "7b98eafdd87829b4f4298f2fd3155819992e14536008efc7568189c97ce74f29",
+        "bytes": 6581,
         "lines": 162
       },
       {
@@ -273,20 +279,20 @@
       },
       {
         "path": "src/clo3d_mcp/transport_server.py",
-        "sha256": "21bc57045507d12359a3f84a3a6f093d7903adbba96da665438d76a164597d36",
-        "bytes": 19948,
-        "lines": 406
+        "sha256": "23cdff006b82161cf02fe3814f3d95ad0cc14ad903da5d309266b8c3c3c2d74b",
+        "bytes": 23903,
+        "lines": 478
       },
       {
         "path": "tests/test_fabric_assignment_api.py",
-        "sha256": "939f382e392446cd1801aebe094f87dc210957a5429c3df1944a222f583abcee",
-        "bytes": 18981,
+        "sha256": "95ff5c82510d228d972670b9178dadd85d837bf7210454e6bac14dde6803e96b",
+        "bytes": 19410,
         "lines": 429
       },
       {
         "path": "tests/test_inventory_api.py",
-        "sha256": "fae844f2e7d73c16f9dc605ab07e7081b971bfe4f17e0c8b759f46a48fc035ee",
-        "bytes": 12576,
+        "sha256": "9a91a1ab0e491ff5077f061d19f9242a141b300033f1e1c4188063afb9bea73b",
+        "bytes": 12876,
         "lines": 295
       },
       {
@@ -296,6 +302,12 @@
         "lines": 250
       },
       {
+        "path": "tests/test_pattern_outline.py",
+        "sha256": "821bf7b6f3dd12055200c982f3cbfc34f54919b928bd98cce170a303e2609eab",
+        "bytes": 10237,
+        "lines": 269
+      },
+      {
         "path": "tests/test_service_executor.py",
         "sha256": "38b7fc441c0fc8fb89f6ff8a4808f1d5256101a3e59da86a219a72ffc6b33c4c",
         "bytes": 3068,
@@ -303,9 +315,9 @@
       },
       {
         "path": "tests/test_transport_server.py",
-        "sha256": "5f73e597d576e6f63efb38a9a299d59e031ba0a795d65a77fb8061cc8d7f736e",
-        "bytes": 17900,
-        "lines": 364
+        "sha256": "67f18424fccd42ce643d5220f759992b398795b6f4e1d260144a09ae0163daf2",
+        "bytes": 18551,
+        "lines": 373
       },
       {
         "path": "tests/test_verify_patterns.py",
@@ -373,12 +385,12 @@
       ]
     },
     "current": {
-      "profile_note": "18 only with pattern_package enabled; 5 base tools otherwise. Static declarations, not a live tools/list response.",
+      "profile_note": "20 only with pattern_package enabled; 5 base tools otherwise. Static declarations, not a live tools/list response. Fresh live19 observed; outline limited by invalid_native_result; lines single schema/length sample.",
       "tools_shards": [
         {
           "path": "mappings/current_tools_01.json",
-          "sha256": "c673d756e2ca5d686afb5617df9d301e8c1d4d3dd7b6f0f31f2e6c55b1be3a34",
-          "entries": 18
+          "sha256": "871aee84009e4c784f336a248dcab16e587edfdc48382370a7b6d580c34a9937",
+          "entries": 20
         }
       ]
     }
@@ -400,14 +412,14 @@
       "list_extensions",
       "ping"
     ],
-    "current_tools": 18
+    "current_tools": 20
   },
   "limitations": [
     "Static AST evidence only. No donor/local inspected module import, no CLO call, restart, mutation or SDK execution.",
     "Native ids are module.symbol. No inferred official overload, binding/type availability, error semantics, units or contract acceptance.",
     "Helper reachability is a conservative syntactic graph including conditional/fallback paths, not proof that a call occurs. One shortest evidence path per helper; callable references remain distinct from direct calls.",
     "getattr/dynamic module/type lookup and strings are reported as unresolved expressions, never expanded into guessed native calls. Arbitrary alias/dataflow, closures, decorators and reflection are not evaluated.",
-    "Current18 command-to-native selection is explicitly reviewed metadata tied to AST callsite evidence; references may be shared preflight/readback/conditional sites and are not an execution trace.",
+    "Current command-to-native selection is explicitly reviewed metadata tied to AST callsite evidence; references may be shared preflight/readback/conditional sites and are not an execution trace.",
     "Exact descriptions are source docstrings (ast.get_docstring clean=True), signatures are ast.unparse-normalized Python declarations, not generated MCP JSON schemas or live tools/list.",
     "Test function references establish traceability only, not execution/pass status or complete scenario coverage. Historical acceptance remains limited to cited documents and no new real CLO gate is closed.",
     "Official coverage join and reconciliation of removed names/types are separate; raw donor symbol matches are not coverage percentages."

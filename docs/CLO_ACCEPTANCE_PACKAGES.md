@@ -1,5 +1,12 @@
 # Пакеты доменной приёмки W0–W8
 
+**B06 outline:** source/live19 после user restart;first own rectangle outline
+invalid_native_result → real BLOCKED,не PASS. Manual one-shot пользователя подтвердил
+native [] для existing own unique detail5;причина неизвестна,no retry/move/
+delete/existing reads. Own fixture index5 remains;original5geometry/mappings exact
+fresh baseline до manual probe. Evidence/next gate: `CLO_OUTLINE_CHECK.md`.
+Endpoints в bbox-local мм,не curves/lineIndex/sewing.
+
 **B05a/B05b (локальное имя fabric-пакета, не B05 avatar roadmap ниже):** source/live18
 включает чтение связи detail→Object Browser fabric и назначение одной ткани одной
 детали. Fresh restart выполнен; real API/readback PASS: own piece0→1→3,original5
@@ -35,7 +42,10 @@ restart/stop и загрузка ассетов **не выполняются**.
 
 ## 1. Что уже доступно, что заблокировано
 
-Текущий принятый pattern profile публикует **14 tools**:
+Текущий принятый pattern profile публиковал **14 tools**; текущий source/live добавляет
+inventory15-16, relationship17-18, read-only outline19 (documented limitation) и
+read-only lines20 (один schema/length сэмпл, кривые/frame открыты).
+Исторический набор этого раздела:
 
 ```text
 get_session_info       transport_status          ping

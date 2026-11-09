@@ -1,7 +1,8 @@
 # Переносимая форма и управление перезапуском MCP
 
-Статус 2026-11-09: предложение, **не реализация macOS или remote restart**.
-Текущий согласованный runtime остаётся Windows / один CLO / Named Pipe.
+Статус 2026-11-09: форма Start/Stop перенесена на `gui_api` (dock panel),
+реальная GUI-приёмка pending. Controller/supervisor и macOS transport —
+по-прежнему предложение, не реализация.
 
 ## Общая форма Windows / macOS
 

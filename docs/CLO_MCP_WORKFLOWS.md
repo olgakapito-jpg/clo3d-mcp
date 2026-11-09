@@ -5,6 +5,33 @@
 pattern сценарии описаны в `PATTERN_API_CHECK.md`; здесь их не повторяем.
 Примеры — synthetic, actual targets брать из fresh reads.
 
+## B06: read-only outline, source/live19 / real BLOCKED
+
+После user restart discovery19 PASS,first own rectangle outline invalid_native_result.
+Отдельный ручной one-shot: native [] для own existing unique target index5;
+причина пустоты неизвестна,no retry/move/delete/existing reads. Own fixture index5 remains,
+original5geometry/mappings preserved by separate readonly reconciliation.
+Diagnostic выполнен пользователем (`CLO_OUTLINE_CHECK.md`),не acceptance/schema fallback.
+Рецепт ниже не возобновлять до отдельного плана,устраняющего blocker.
+
+Только после actual discovery/capability19 и fresh CLO: ready/session → fresh
+list → `get_pattern_outline({pattern_index,expected_name})` → schema/index/name/
+frame check. Endpoints в мм bbox TOP-LEFT/Ydown,не global2D/curve controls/lineIndex.
+Cross-domain: fresh list → outline → `get_pattern_fabric` с тем же fresh unique
+target → проверить оба observations; не выводить material/3D/sewing validation.
+На stale/changed/invalid/unknown stop,не automatic retry/fallback. Старый profile18
+не поддерживает outline; не generic native call. Real gate `CLO_OUTLINE_CHECK.md`,
+local fake traces в `tests/test_tool_workflow_evals.py`.
+
+## Линии: read-only рецепт (tool20)
+
+`get_pattern_lines` опубликован: fresh list → `get_pattern_lines({pattern_index,
+expected_name})` → проверить line_count/уникальность line_index/finite mm; при
+необходимости отдельно `get_pattern_geometry` с тем же fresh target. Не вызывать
+lines вместо пустого outline, не подставлять 3-аргументную `GetLineLength`, не
+выводить curve controls/швы/closure и не заявлять frame после move/rotate.
+`CLO_LINE_API_CONTRACT_REVIEW.md`.
+
 ## Общий порядок
 
 Намерение/scope → реальный profile/session → fresh reads → preflight → одна

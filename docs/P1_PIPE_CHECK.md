@@ -18,7 +18,7 @@ Gate P1 закрыт для проверенной среды CLO; повтор�
 
 ## Что запускается
 
-`plugin/clo3d_mcp_pipe_probe.py` использует проверенный P0 Win32 timer adapter,
+`diagnostics/clo3d_mcp_pipe_probe.py` использует проверенный P0 Win32 timer adapter,
 но не запускает P0 и не импортирует legacy listener. Внешний Python создаёт
 локальный Named Pipe с DACL текущего пользователя и запретом удалённых клиентов.
 Случайный секрет передаётся через окружение, проверяются HMAC и реальные PID
@@ -35,7 +35,7 @@ Gate P1 закрыт для проверенной среды CLO; повтор�
 
 ## Запуск в CLO
 
-- В том же проверенном CLO откройте `plugin/clo3d_mcp_pipe_probe.py`
+- В том же проверенном CLO откройте `diagnostics/clo3d_mcp_pipe_probe.py`
   в Script Editor и выполните один раз. Внешняя `.venv` уже подготовлена;
   устанавливать что-либо во встроенный Python не нужно.
 - Если CLO сообщает, что нет `__file__`, укажите абсолютный каталог проекта
@@ -77,7 +77,7 @@ error: None
 
 ## Остановка и отчёт
 
-В любой момент выполните `plugin/clo3d_mcp_pipe_probe_stop.py` в CLO.
+В любой момент выполните `diagnostics/clo3d_mcp_pipe_probe_stop.py` в CLO.
 Он останавливает только текущий P1 и его дочерний процесс, не CLO и не чужие
 процессы. При pending I/O очистка продолжается следующими callback без ожидания
 в UI. Поэтому первый STOP_STATUS может ещё показывать `stopping`.

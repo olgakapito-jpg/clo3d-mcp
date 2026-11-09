@@ -12,14 +12,21 @@
 - The CLO scene is explicitly disposable: diagnostic scene changes need no
   checkpoints. This does NOT authorize deleting unrelated files, killing
   unrelated processes, publishing, or resetting repository changes.
-- P0 (a viable in-CLO callback) must pass real CLO testing before proceeding
-  with the runtime-dependent implementation. Do not silently bypass this gate.
+- Real-CLO acceptance gates are explicit and separate from mocks. P0 callback,
+  P1 pipe, P2 queue and P3 MCP are accepted; do not re-run accepted packages
+  without a new reason or present fakes/docs as their acceptance.
 
 ## Repository map and known traps
 
 - `plugin/clo3d_mcp_plugin.py`: existing API handlers plus legacy file listener.
 - `src/clo3d_mcp/server.py`: existing MCP tools; `connection.py`: legacy file IPC.
 - `src/clo3d_mcp/extensions.py`: optional extension loader, not needed for MVP.
+- `diagnostics/clo3d_mcp_*_probe.py`: manual one-shot diagnostics the user runs
+  in Script Editor; not MCP tools and not pytest tests. `plugin/clo3d_mcp_probe.py`
+  stays in `plugin/` because the launcher imports it as the Win32 timer adapter.
+  Never reset their builtins one-shot markers or auto-run them on the user's behalf.
+- Local scratch is gitignored and never committed: `projects/` (CLO scenes),
+  `acceptance-output/`, `result.json`, `opencode.json.openchamber.backup`.
 - `tests/`: mock/contract checks, NOT evidence of real CLO compatibility.
 - The existing listener is disabled by default on Windows. README is not proof
   it works. Importing the plugin with real CLO modules can invoke auto-start.
@@ -54,6 +61,10 @@ if unavailable, read its `SKILL.md` directly. Do not load unrelated skills.
   changes or automatically clean up the scene after error/unknown outcome.
 - A workflow recipe is not an atomic composite tool. Test selection/composition
   in fake evaluations; real CLO runs remain explicit acceptance gates.
+- Keep documentation lean: one living status/check doc per package plus the tool
+  cards. Do not mirror code details, tool counts or historical run logs, and do
+  not make docs a prerequisite for code and tests. Update only docs the change
+  actually contradicts; prefer code docstrings and tests over new documents.
 
 ## Engineering invariants
 
@@ -61,8 +72,16 @@ if unavailable, read its `SKILL.md` directly. Do not load unrelated skills.
   background thread or successful SetTimer return is not proof of safety.
 - No blocking pipe operations, sleeps, network requests or dependency installs
   in UI callbacks. A long synchronous CLO API call can still block the UI.
+- One-shot native diagnostics: one run per verified session, a distinct builtins
+  marker per attempt, no marker reset and no third attempt. A failed/unknown
+  result stops further native reads instead of falling back to another getter.
+  The agent sends no MCP scene calls while the user runs one.
 - Modules imported inside CLO must not depend on MCP, uvicorn or external venv
   packages. Inspect embedded Python version/modules instead of assuming them.
+- Embedded Python caches `clo3d_mcp.*` across service starts; the launcher purges
+  it and invalidates import caches. Claim new embedded code as live only when
+  `get_session_info` shows equal `server_build` and `executor_build`; a mismatch
+  means stale modules, not a successful restart.
 - Keep `mcp.server.fastmcp.FastMCP` from the official SDK. Read `uv.lock` and
   installed signatures before using examples; do not mix it with `fastmcp`
   or examples for SDK v2. No unrequested dependency upgrades.
@@ -79,8 +98,9 @@ if unavailable, read its `SKILL.md` directly. Do not load unrelated skills.
 
 ## Verification and delivery
 
-- Baseline command: `uv run --frozen --with pytest pytest -q` (88 tests passed
-  before transport work; the count is historical, not a permanent assertion).
+- Baseline command: `uv run --frozen --with pytest pytest -q`. The test count
+  grows with each package; run it and report the actual result, never quote an
+  old number as a current guarantee.
 - Run focused tests for the change, then the full suite. Report failures and
   skips honestly; do not weaken tests to hide regressions.
 - Add deterministic tests for framing, queue and shutdown. Real Windows pipe
