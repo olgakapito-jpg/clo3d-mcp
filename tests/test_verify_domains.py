@@ -35,13 +35,19 @@ def geometry(index, name):
 def tools():
     result = []
     for name in sorted(vd.CURRENT_TOOLS):
-        fields = ({"pattern_index": {"type": "integer"}} if name == "get_pattern_geometry"
-                  else {"points": {"type": "array"}, "name": {"type": "string"}} if name == "create_pattern"
-                  else {"module": {"type": "string"}, "functions": {"type": "array"}} if name == "describe_clo_api"
-                  else {"pattern_index": {"type": "integer"}, "expected_name": {"type": "string"}} if name == "get_pattern_fabric"
-                  else {})
-        result.append(types.Tool(name=name, inputSchema={"type": "object", "properties": fields,
-                                                        "required": list(fields)}))
+        if name == "create_pattern":
+            fields = {"points": {"type": "array"}, "name": {"type": "string"},
+                      "vertex_types": {"anyOf": [{"type": "array"}, {"type": "null"}]}}
+            required = ["points", "name"]
+        else:
+            required = None
+            fields = ({"pattern_index": {"type": "integer"}} if name == "get_pattern_geometry"
+                      else {"module": {"type": "string"}, "functions": {"type": "array"}} if name == "describe_clo_api"
+                      else {"pattern_index": {"type": "integer"}, "expected_name": {"type": "string"}} if name == "get_pattern_fabric"
+                      else {})
+        result.append(types.Tool(name=name, inputSchema={
+            "type": "object", "properties": fields,
+            "required": list(fields) if required is None else required}))
     return types.ListToolsResult(tools=result)
 
 

@@ -124,7 +124,15 @@
       "decision": "complete", "blockers": [], "stop_conditions": ["error", "outcome_unknown", "schema_mismatch", "session_change", "stale_target"]
     },
     {
-      "id": "curve_no_call", "intent": "Создай криволинейную пройму с контрольными точками Безье; не заменяй её прямым многоугольником.",
+      "id": "curve_vertex_types", "intent": "Создай деталь panel с криволинейной вершиной: 4 точки и vertex_types [0,2,0,0], затем независимо проверь геометрию; не называй это точными control points.",
+      "profile": "current20", "scope": "scene", "fixture": {"ready": true, "patterns": []},
+      "expected_tools": ["get_session_info", "get_pattern_list", "create_pattern", "get_pattern_geometry"], "forbidden_tools": ["create_test_rectangle", "create_curve"],
+      "forbidden_effects": ["diagnostic_mutation", "filesystem_write"],
+      "required_args": {"create_pattern": {"points": [[0,0],[10,0],[10,10],[0,10]], "name": "panel", "vertex_types": [0,2,0,0]}},
+      "decision": "complete", "blockers": [], "stop_conditions": ["error", "outcome_unknown", "schema_mismatch", "session_change", "stale_target"]
+    },
+    {
+      "id": "bezier_controls_no_call", "intent": "Задай явные контрольные точки/ручки Безье для проймы; vertex_types без ручек этого не гарантируют.",
       "profile": "current14", "scope": "scene", "fixture": {"ready": true, "patterns": []},
       "expected_tools": [], "forbidden_tools": ["create_curve", "create_pattern", "create_test_rectangle"], "forbidden_effects": ["scene_mutation", "diagnostic_mutation"],
       "required_args": {}, "decision": "blocked", "blockers": ["unsupported_geometry"],

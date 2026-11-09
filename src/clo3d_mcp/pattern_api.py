@@ -324,8 +324,12 @@ class PatternAPI:
             # geometry records before mutating, when the scene isn't empty.
             if before["patterns"]:
                 self._geometry(0)
+            types = p.get("vertex_types")
+            if types is None:
+                types = [0] * len(p["points"])
             mutate = lambda: self.pattern.CreatePatternWithPoints(
-                [(float(x), float(y), 0) for x, y in p["points"]])
+                [(float(x), float(y), int(t))
+                 for (x, y), t in zip(p["points"], types)])
         else:
             i = self._target(p)
             old = self._geometry(i)
@@ -398,11 +402,14 @@ class PatternAPI:
                     or not self._near(old["area_mm2"], new["area_mm2"])):
                 raise ValueError()
             if command == "create_pattern":
-                points = p["points"]
-                area = abs(sum(a[0] * b[1] - b[0] * a[1]
-                               for a, b in zip(points, points[1:] + points[:1]))) / 2
-                if not self._near(area, new["area_mm2"]):
-                    raise ValueError()
+                types = p.get("vertex_types")
+                straight = types is None or all(t == 0 for t in types)
+                if straight:
+                    points = p["points"]
+                    area = abs(sum(a[0] * b[1] - b[0] * a[1]
+                                   for a, b in zip(points, points[1:] + points[:1]))) / 2
+                    if not self._near(area, new["area_mm2"]):
+                        raise ValueError()
             return {"verified": True, "pattern_count": final_list["pattern_count"], "pattern": new}
         except Exception:
             raise CommandError("scene_change_unverified") from None

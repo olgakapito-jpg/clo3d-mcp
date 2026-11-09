@@ -22,6 +22,7 @@ class FakePatterns:
         self.mutations = []
         self.fail_after_create = False
         self.ignore_move = False
+        self.last_points = None
 
     def GetPatternCount(self):
         return len(self.pieces)
@@ -39,10 +40,14 @@ class FakePatterns:
         return self.pieces[i]["box"]
 
     def CreatePatternWithPoints(self, points):
-        assert all(type(x) is float and type(y) is float and t == 0 for x, y, t in points)
+        assert all(type(x) is float and type(y) is float and t in (0, 2, 3)
+                   for x, y, t in points)
+        self.last_points = list(points)
         area = abs(sum(a[0] * b[1] - b[0] * a[1]
                        for a, b in zip(points, points[1:] + points[:1]))) / 2
-        self.pieces.append({"name": "Pattern", "position": [0.0, 0.0], "area": area,
+        curved = any(t != 0 for _, _, t in points)
+        self.pieces.append({"name": "Pattern", "position": [0.0, 0.0],
+                            "area": area * 0.8 if curved else area,
                             "box": [0.0, 0.0, 120.0, 80.0]})
         self.mutations.append("create")
         if self.fail_after_create:
@@ -95,6 +100,15 @@ def test_full_mutation_readback_and_shifted_index_guard():
     assert native.mutations == calls
 
 
+def test_create_pattern_curve_vertex_types_are_converted_and_verified():
+    native, api = adapter()
+    created = api("create_pattern", {"points": POINTS, "name": "curved",
+                                     "vertex_types": [0, 2, 0, 3]})
+    assert created["verified"] and created["pattern"]["name"] == "curved"
+    assert [t for _, _, t in native.last_points] == [0, 2, 0, 3]
+    assert all(type(x) is float and type(y) is float for x, y, _ in native.last_points)
+
+
 @pytest.mark.parametrize("command,params", [
     ("get_pattern_geometry", {"pattern_index": True}),
     ("get_pattern_geometry", {"pattern_index": "0"}),
@@ -105,6 +119,10 @@ def test_full_mutation_readback_and_shifted_index_guard():
     ("create_pattern", {"points": "[]", "name": "a"}),
     ("create_pattern", {"points": POINTS, "name": "\ud800"}),
     ("create_pattern", {"points": POINTS, "name": "a\n"}),
+    ("create_pattern", {"points": POINTS, "name": "a", "vertex_types": [0, 2]}),
+    ("create_pattern", {"points": POINTS, "name": "a", "vertex_types": [0, 1, 0, 0]}),
+    ("create_pattern", {"points": POINTS, "name": "a", "vertex_types": [True, 0, 0, 0]}),
+    ("create_pattern", {"points": POINTS, "name": "a", "vertex_types": [0, 2, 0, 0.0]}),
     ("move_pattern_relative", {"pattern_index": 0, "expected_name": "a", "dx": float("nan"), "dy": 0}),
     ("move_pattern_relative", {"pattern_index": 0, "expected_name": "a", "dx": True, "dy": 0}),
     ("move_pattern_relative", {"pattern_index": 0, "expected_name": "a", "dx": 100001, "dy": 0}),

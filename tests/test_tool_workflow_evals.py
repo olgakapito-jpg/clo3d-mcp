@@ -332,7 +332,7 @@ def test_plan_is_not_trace_evidence(inv, trace):
 
 
 def test_no_call_case_and_decision_and_required_args(inv, data, trace):
-    case = next(c for c in data["cases"] if c["id"] == "curve_no_call")
+    case = next(c for c in data["cases"] if c["id"] == "bezier_controls_no_call")
     no_call = {"kind": "plan", "execution": "serial", "steps": [], "decision": "blocked", "blockers": ["unsupported_geometry"]}
     assert evaluation.validate_submission(no_call, inv, case)["accepted"]
     no_call["steps"] = [{"tool": "transport_status", "args": {}}]

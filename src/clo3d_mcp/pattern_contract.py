@@ -111,8 +111,13 @@ def validate_params(command, params):
         "assign_pattern_fabric": {"pattern_index", "expected_name", "fabric_index",
                                   "expected_fabric_name", "expected_current_fabric_index"},
     }
-    valid = command in fields and set(params) == fields[command]
+    optional = {"create_pattern": {"vertex_types"}}
+    valid = (command in fields
+             and fields[command] <= set(params) <= fields[command] | optional.get(command, set()))
     if valid:
+        curve_types = params.get("vertex_types")
+        curved = (isinstance(curve_types, list)
+                  and any(type(t) is int and t in (2, 3) for t in curve_types))
         for key, value in params.items():
             if key in ("pattern_index", "fabric_index", "expected_current_fabric_index"):
                 valid = index(value)
@@ -120,10 +125,19 @@ def validate_params(command, params):
                 valid = inventory_name(value)
             elif key in ("name", "expected_name"):
                 valid = name(value)
+            elif key == "vertex_types":
+                valid = (isinstance(value, list) and 3 <= len(value) <= 64
+                         and all(type(v) is int and v in (0, 2, 3) for v in value)
+                         and len(value) == len(params.get("points", [])))
             elif key in ("dx", "dy"):
                 valid = number(value)
             elif key == "points":
-                valid = polygon(value)
+                if curved:
+                    valid = (isinstance(value, list) and 3 <= len(value) <= 64
+                             and all(isinstance(point, list) and len(point) == 2
+                                     and all(number(v) for v in point) for point in value))
+                else:
+                    valid = polygon(value)
             elif key == "module":
                 valid = value in API_MODULES
             elif key == "functions":

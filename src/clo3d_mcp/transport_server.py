@@ -290,13 +290,20 @@ def add_pattern_tools(mcp, service, read):
             "pattern_index": pattern_index, "expected_name": expected_name})
 
     @mcp.tool(annotations=mutation)
-    async def create_pattern(points: list[list[StrictInt | StrictFloat]], name: StrictStr) -> dict[str, Any]:
-        """Create ONE simple straight polygon, 3-64 [x,y] points in mm, unique name.
+    async def create_pattern(points: list[list[StrictInt | StrictFloat]], name: StrictStr,
+                             vertex_types: list[StrictInt] | None = None) -> dict[str, Any]:
+        """Create ONE closed pattern from 3-64 [x,y] points in mm with a unique name.
 
-        No curves/holes/self-intersection. Verifies count/name/area using CLO.
-        No automatic retry or rollback, even if the verification fails.
+        Optional vertex_types (same length; 0 straight, 2 spline, 3 Bezier) is
+        passed to the native CreatePatternWithPoints. Without it every point is
+        straight and self-intersection is rejected. Curve shape/control-point
+        semantics and area consistency remain provisional until real evidence.
+        Verifies count/name/area. No automatic retry or rollback on failure.
         """
-        return await service.call("create_pattern", {"points": points, "name": name})
+        params = {"points": points, "name": name}
+        if vertex_types is not None:
+            params["vertex_types"] = vertex_types
+        return await service.call("create_pattern", params)
 
     @mcp.tool(annotations=mutation)
     async def set_pattern_name(pattern_index: StrictInt, expected_name: StrictStr,

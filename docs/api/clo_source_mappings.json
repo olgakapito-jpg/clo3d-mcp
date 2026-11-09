@@ -243,15 +243,15 @@
       },
       {
         "path": "src/clo3d_mcp/pattern_api.py",
-        "sha256": "319c14fd2f2c18c47002ad36864efade3c48e6cdc2bf4ff8526a3ecd74da2126",
-        "bytes": 20351,
-        "lines": 408
+        "sha256": "1cc47c89ecaa1ee7a4e10e3d2e6bd459efc9ef475a7441cc9abeb917c1896828",
+        "bytes": 20675,
+        "lines": 415
       },
       {
         "path": "src/clo3d_mcp/pattern_contract.py",
-        "sha256": "a61ff7567abafdfe8142eadf57081d458ba1106e285a07dd4e253ca23461980d",
-        "bytes": 14573,
-        "lines": 303
+        "sha256": "da142a4ca787004e9b43c1553fc02add2d2911d1e9099489149a043f3ddc770c",
+        "bytes": 15444,
+        "lines": 317
       },
       {
         "path": "src/clo3d_mcp/pipe_runtime.py",
@@ -279,9 +279,9 @@
       },
       {
         "path": "src/clo3d_mcp/transport_server.py",
-        "sha256": "23cdff006b82161cf02fe3814f3d95ad0cc14ad903da5d309266b8c3c3c2d74b",
-        "bytes": 23903,
-        "lines": 478
+        "sha256": "32fc410cc01399d41897466b4556cbe3652b60aa8e62da44eaceae1cab980210",
+        "bytes": 24331,
+        "lines": 485
       },
       {
         "path": "tests/test_fabric_assignment_api.py",
@@ -297,9 +297,9 @@
       },
       {
         "path": "tests/test_pattern_api.py",
-        "sha256": "d4f816faa2d73e1726dd3fec92c90ffd6ac798d99e6a12d9bbb76f226cfcdaa2",
-        "bytes": 10941,
-        "lines": 250
+        "sha256": "d68b9d5e1840375c70e07d7a092186545db838430a46c9bad53f53a063e670f4",
+        "bytes": 11963,
+        "lines": 268
       },
       {
         "path": "tests/test_pattern_outline.py",
@@ -315,9 +315,9 @@
       },
       {
         "path": "tests/test_transport_server.py",
-        "sha256": "67f18424fccd42ce643d5220f759992b398795b6f4e1d260144a09ae0163daf2",
-        "bytes": 18551,
-        "lines": 373
+        "sha256": "1cfe3db98d8293b3a16c39eaa0e5dad2205242008661ea5b940c7907aae69b12",
+        "bytes": 18658,
+        "lines": 374
       },
       {
         "path": "tests/test_verify_patterns.py",
@@ -389,7 +389,7 @@
       "tools_shards": [
         {
           "path": "mappings/current_tools_01.json",
-          "sha256": "871aee84009e4c784f336a248dcab16e587edfdc48382370a7b6d580c34a9937",
+          "sha256": "544914f9f6aae809033c7d18e53ad7b925a23c376202e02177b63f89e8cfbc80",
           "entries": 20
         }
       ]

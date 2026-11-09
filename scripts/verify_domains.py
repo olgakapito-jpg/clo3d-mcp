@@ -326,17 +326,26 @@ class Runner:
                 raise Halt("failed", "invalid_tool_schema")
             expected = {"pattern_index"} if name == "get_pattern_geometry" else set()
             if name == "create_pattern":
-                expected = {"points", "name"}
+                expected = {"points", "name", "vertex_types"}
             if name == "describe_clo_api":
                 expected = {"module", "functions"}
             if name == "get_pattern_fabric":
                 expected = {"pattern_index", "expected_name"}
-            if set(schema.get("properties", {})) != expected or set(schema.get("required", [])) != expected:
+            required_props = expected - ({"vertex_types"} if name == "create_pattern" else set())
+            if set(schema.get("properties", {})) != expected or set(schema.get("required", [])) != required_props:
                 raise Halt("unsupported", "tool_schema_changed")
             expected_types = {"pattern_index": "integer", "points": "array", "name": "string",
-                              "module": "string", "functions": "array", "expected_name": "string"}
+                              "module": "string", "functions": "array", "expected_name": "string",
+                              "vertex_types": "array"}
+            def matches_type(prop, expected_type):
+                if prop.get("type") == expected_type:
+                    return True
+                return (expected_type == "array"
+                        and any(option.get("type") == "array" for option in prop.get("anyOf", [])))
+
             if any(not isinstance(schema["properties"][key], dict)
-                   or schema["properties"][key].get("type") != expected_types[key] for key in expected):
+                   or not matches_type(schema["properties"][key], expected_types[key])
+                   for key in expected):
                 raise Halt("unsupported", "tool_schema_changed")
 
     async def inspect(self):

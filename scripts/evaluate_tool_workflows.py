@@ -130,14 +130,20 @@ def inventory(root=ROOT):
         if not decorated:
             continue
         require(node.name not in tools, "duplicate_registration")
-        require(not node.args.defaults and not node.args.kwonlyargs and not node.args.vararg
+        require(not node.args.kwonlyargs and not node.args.vararg
                 and not node.args.kwarg, "unsupported_signature")
+        defaults = len(node.args.defaults)
+        require(all(isinstance(d, ast.Constant) and d.value is None for d in node.args.defaults),
+                "unsupported_default")
+        names = [a.arg for a in node.args.args]
+        required = names[:len(names) - defaults] if defaults else names
+        optional = names[len(required):]
         commands = [n.args[0].value for n in ast.walk(node)
                     if isinstance(n, ast.Call) and isinstance(n.func, ast.Attribute)
                     and isinstance(n.func.value, ast.Name) and n.func.value.id == "service"
                     and n.func.attr == "call" and n.args and isinstance(n.args[0], ast.Constant)]
         require(commands == ([] if node.name in EXTERNAL else [node.name]), "command_mapping_drift")
-        tools[node.name] = {"args": [a.arg for a in node.args.args],
+        tools[node.name] = {"args": required, "optional_args": optional,
                             "effect": "scene_mutation" if node.name in MUTATIONS else
                             "diagnostic_mutation" if node.name == DIAGNOSTIC else "read"}
     require(set(tools) == CURRENT, "current_inventory_drift")
@@ -184,7 +190,9 @@ def inventory(root=ROOT):
 
 def validate_args(tool, args, inv):
     require(tool in inv["tools"], "unknown_tool")
-    fields(args, inv["tools"][tool]["args"])
+    spec = inv["tools"][tool]
+    require(set(spec["args"]) <= set(args) <= set(spec["args"]) | set(spec.get("optional_args", [])),
+            "invalid_fields")
     if tool in CONTRACT.PATTERN_COMMANDS:
         try:
             CONTRACT.validate_params(tool, args)

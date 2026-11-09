@@ -313,15 +313,15 @@
         "path": "src/clo3d_mcp/pattern_contract.py",
         "lines": [
           95,
-          138
+          152
         ]
       },
       {
         "function": "validate_result",
         "path": "src/clo3d_mcp/pattern_contract.py",
         "lines": [
-          224,
-          303
+          238,
+          317
         ]
       }
     ],
@@ -531,8 +531,8 @@
     "function": "add_pattern_tools.copy_pattern_with_offset",
     "path": "src/clo3d_mcp/transport_server.py",
     "lines": [
-      309,
-      317
+      316,
+      324
     ],
     "signature": "copy_pattern_with_offset(pattern_index: StrictInt, expected_name: StrictStr, name: StrictStr, dx: StrictInt | StrictFloat, dy: StrictInt | StrictFloat) -> dict[str, Any]",
     "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
@@ -579,8 +579,8 @@
         "command": "copy_pattern_with_offset",
         "path": "src/clo3d_mcp/transport_server.py",
         "lines": [
-          316,
-          317
+          323,
+          324
         ]
       }
     ],
@@ -679,8 +679,8 @@
         "expression": "self.pattern.SetPatternPieceName(i, p['name'])",
         "path": "src/clo3d_mcp/pattern_api.py",
         "lines": [
-          335,
-          335
+          339,
+          339
         ],
         "role": "primary_effect_or_read"
       },
@@ -690,8 +690,8 @@
         "expression": "self.pattern.CopyPatternPieceMove(i, float(p['dx']), float(p['dy']))",
         "path": "src/clo3d_mcp/pattern_api.py",
         "lines": [
-          348,
-          348
+          352,
+          352
         ],
         "role": "primary_effect_or_read"
       },
@@ -701,8 +701,8 @@
         "expression": "self.pattern.SetPatternPieceName(i, p['name'])",
         "path": "src/clo3d_mcp/pattern_api.py",
         "lines": [
-          370,
-          370
+          374,
+          374
         ],
         "role": "primary_effect_or_read"
       },
@@ -748,15 +748,15 @@
         "path": "src/clo3d_mcp/pattern_contract.py",
         "lines": [
           95,
-          138
+          152
         ]
       },
       {
         "function": "validate_result",
         "path": "src/clo3d_mcp/pattern_contract.py",
         "lines": [
-          224,
-          303
+          238,
+          317
         ]
       }
     ],
@@ -775,7 +775,7 @@
         "path": "src/clo3d_mcp/pattern_api.py",
         "lines": [
           313,
-          408
+          415
         ]
       },
       {
@@ -808,8 +808,8 @@
         "function": "test_full_mutation_readback_and_shifted_index_guard",
         "path": "tests/test_pattern_api.py",
         "lines": [
-          77,
-          95
+          82,
+          100
         ],
         "kind": "syntactic_test_reference_not_test_result"
       },
@@ -836,9 +836,9 @@
     "path": "src/clo3d_mcp/transport_server.py",
     "lines": [
       293,
-      299
+      306
     ],
-    "signature": "create_pattern(points: list[list[StrictInt | StrictFloat]], name: StrictStr) -> dict[str, Any]",
+    "signature": "create_pattern(points: list[list[StrictInt | StrictFloat]], name: StrictStr, vertex_types: list[StrictInt] | None=None) -> dict[str, Any]",
     "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
     "parameters": [
       {
@@ -854,16 +854,23 @@
         "annotation": "StrictStr",
         "required": true,
         "default": null
+      },
+      {
+        "name": "vertex_types",
+        "kind": "positional_or_keyword",
+        "annotation": "list[StrictInt] | None",
+        "required": false,
+        "default": "None"
       }
     ],
-    "description": "Create ONE simple straight polygon, 3-64 [x,y] points in mm, unique name.\n\nNo curves/holes/self-intersection. Verifies count/name/area using CLO.\nNo automatic retry or rollback, even if the verification fails.",
+    "description": "Create ONE closed pattern from 3-64 [x,y] points in mm with a unique name.\n\nOptional vertex_types (same length; 0 straight, 2 spline, 3 Bezier) is\npassed to the native CreatePatternWithPoints. Without it every point is\nstraight and self-intersection is rejected. Curve shape/control-point\nsemantics and area consistency remain provisional until real evidence.\nVerifies count/name/area. No automatic retry or rollback on failure.",
     "routes": [
       {
         "command": "create_pattern",
         "path": "src/clo3d_mcp/transport_server.py",
         "lines": [
-          299,
-          299
+          306,
+          306
         ]
       }
     ],
@@ -959,11 +966,11 @@
       {
         "id": "pattern_api.CreatePatternWithPoints",
         "kind": "direct_call",
-        "expression": "self.pattern.CreatePatternWithPoints([(float(x), float(y), 0) for x, y in p['points']])",
+        "expression": "self.pattern.CreatePatternWithPoints([(float(x), float(y), int(t)) for (x, y), t in zip(p['points'], types)])",
         "path": "src/clo3d_mcp/pattern_api.py",
         "lines": [
-          327,
-          327
+          330,
+          330
         ],
         "role": "primary_effect_or_read"
       },
@@ -973,8 +980,8 @@
         "expression": "self.pattern.SetPatternPieceName(i, p['name'])",
         "path": "src/clo3d_mcp/pattern_api.py",
         "lines": [
-          335,
-          335
+          339,
+          339
         ],
         "role": "primary_effect_or_read"
       },
@@ -984,8 +991,8 @@
         "expression": "self.pattern.SetPatternPieceName(i, p['name'])",
         "path": "src/clo3d_mcp/pattern_api.py",
         "lines": [
-          370,
-          370
+          374,
+          374
         ],
         "role": "primary_effect_or_read"
       },
@@ -1042,15 +1049,15 @@
         "path": "src/clo3d_mcp/pattern_contract.py",
         "lines": [
           95,
-          138
+          152
         ]
       },
       {
         "function": "validate_result",
         "path": "src/clo3d_mcp/pattern_contract.py",
         "lines": [
-          224,
-          303
+          238,
+          317
         ]
       }
     ],
@@ -1069,7 +1076,7 @@
         "path": "src/clo3d_mcp/pattern_api.py",
         "lines": [
           313,
-          408
+          415
         ]
       },
       {
@@ -1111,8 +1118,17 @@
         "function": "test_full_mutation_readback_and_shifted_index_guard",
         "path": "tests/test_pattern_api.py",
         "lines": [
-          77,
-          95
+          82,
+          100
+        ],
+        "kind": "syntactic_test_reference_not_test_result"
+      },
+      {
+        "function": "test_create_pattern_curve_vertex_types_are_converted_and_verified",
+        "path": "tests/test_pattern_api.py",
+        "lines": [
+          103,
+          109
         ],
         "kind": "syntactic_test_reference_not_test_result"
       },
@@ -1120,8 +1136,8 @@
         "function": "test_bad_parameters_rejected_before_api_and_queue",
         "path": "tests/test_pattern_api.py",
         "lines": [
-          115,
-          123
+          133,
+          141
         ],
         "kind": "syntactic_test_reference_not_test_result"
       },
@@ -1129,8 +1145,8 @@
         "function": "test_invalid_polygons",
         "path": "tests/test_pattern_api.py",
         "lines": [
-          133,
-          135
+          151,
+          153
         ],
         "kind": "syntactic_test_reference_not_test_result"
       },
@@ -1138,8 +1154,8 @@
         "function": "test_unknown_native_methods_refused_before_mutation",
         "path": "tests/test_pattern_api.py",
         "lines": [
-          138,
-          143
+          156,
+          161
         ],
         "kind": "syntactic_test_reference_not_test_result"
       },
@@ -1147,8 +1163,8 @@
         "function": "test_native_side_effect_then_exception_explicit_and_no_rollback_or_retry",
         "path": "tests/test_pattern_api.py",
         "lines": [
-          146,
-          151
+          164,
+          169
         ],
         "kind": "syntactic_test_reference_not_test_result"
       },
@@ -1156,8 +1172,8 @@
         "function": "test_silent_setter_failure_is_not_success",
         "path": "tests/test_pattern_api.py",
         "lines": [
-          154,
-          160
+          172,
+          178
         ],
         "kind": "syntactic_test_reference_not_test_result"
       },
@@ -1165,8 +1181,8 @@
         "function": "test_duplicate_names_and_stale_index_refused_before_setter",
         "path": "tests/test_pattern_api.py",
         "lines": [
-          163,
-          172
+          181,
+          190
         ],
         "kind": "syntactic_test_reference_not_test_result"
       },
@@ -1174,8 +1190,8 @@
         "function": "test_queue_copies_params_and_rejects_wrong_result_shape",
         "path": "tests/test_pattern_api.py",
         "lines": [
-          185,
-          197
+          203,
+          215
         ],
         "kind": "syntactic_test_reference_not_test_result"
       },
@@ -1183,8 +1199,8 @@
         "function": "test_parameterized_mutation_dedup_after_error_and_reconnect",
         "path": "tests/test_pattern_api.py",
         "lines": [
-          200,
-          215
+          218,
+          233
         ],
         "kind": "syntactic_test_reference_not_test_result"
       },
@@ -1192,8 +1208,8 @@
         "function": "test_value_record_geometry_conversion_and_unknown_shape",
         "path": "tests/test_pattern_api.py",
         "lines": [
-          218,
-          228
+          236,
+          246
         ],
         "kind": "syntactic_test_reference_not_test_result"
       },
@@ -1201,8 +1217,8 @@
         "function": "test_native_box_string_dictionary_preserved_without_guessing_numeric_layout",
         "path": "tests/test_pattern_api.py",
         "lines": [
-          231,
-          241
+          249,
+          259
         ],
         "kind": "syntactic_test_reference_not_test_result"
       },
@@ -1211,7 +1227,7 @@
         "path": "tests/test_transport_server.py",
         "lines": [
           306,
-          373
+          374
         ],
         "kind": "syntactic_test_reference_not_test_result"
       }
@@ -1272,11 +1288,11 @@
       {
         "id": "pattern_api.CreatePatternWithPoints",
         "kind": "direct_call",
-        "expression": "self.pattern.CreatePatternWithPoints([(float(x), float(y), 0) for x, y in p['points']])",
+        "expression": "self.pattern.CreatePatternWithPoints([(float(x), float(y), int(t)) for (x, y), t in zip(p['points'], types)])",
         "path": "src/clo3d_mcp/pattern_api.py",
         "lines": [
-          327,
-          327
+          330,
+          330
         ],
         "role": "primary_effect_or_read"
       },
@@ -1422,7 +1438,7 @@
         "path": "tests/test_transport_server.py",
         "lines": [
           306,
-          373
+          374
         ],
         "kind": "syntactic_test_reference_not_test_result"
       }
@@ -1439,8 +1455,8 @@
     "function": "add_pattern_tools.delete_pattern",
     "path": "src/clo3d_mcp/transport_server.py",
     "lines": [
-      330,
-      336
+      337,
+      343
     ],
     "signature": "delete_pattern(pattern_index: StrictInt, expected_name: StrictStr) -> dict[str, Any]",
     "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
@@ -1466,8 +1482,8 @@
         "command": "delete_pattern",
         "path": "src/clo3d_mcp/transport_server.py",
         "lines": [
-          335,
-          336
+          342,
+          343
         ]
       }
     ],
@@ -1564,8 +1580,8 @@
         "expression": "self.pattern.DeletePatternPiece(i)",
         "path": "src/clo3d_mcp/pattern_api.py",
         "lines": [
-          351,
-          351
+          355,
+          355
         ],
         "role": "primary_effect_or_read"
       },
@@ -1611,15 +1627,15 @@
         "path": "src/clo3d_mcp/pattern_contract.py",
         "lines": [
           95,
-          138
+          152
         ]
       },
       {
         "function": "validate_result",
         "path": "src/clo3d_mcp/pattern_contract.py",
         "lines": [
-          224,
-          303
+          238,
+          317
         ]
       }
     ],
@@ -1638,7 +1654,7 @@
         "path": "src/clo3d_mcp/pattern_api.py",
         "lines": [
           313,
-          408
+          415
         ]
       },
       {
@@ -1680,8 +1696,8 @@
         "function": "test_full_mutation_readback_and_shifted_index_guard",
         "path": "tests/test_pattern_api.py",
         "lines": [
-          77,
-          95
+          82,
+          100
         ],
         "kind": "syntactic_test_reference_not_test_result"
       },
@@ -1689,8 +1705,8 @@
         "function": "test_duplicate_names_and_stale_index_refused_before_setter",
         "path": "tests/test_pattern_api.py",
         "lines": [
-          163,
-          172
+          181,
+          190
         ],
         "kind": "syntactic_test_reference_not_test_result"
       },
@@ -1699,7 +1715,7 @@
         "path": "tests/test_transport_server.py",
         "lines": [
           306,
-          373
+          374
         ],
         "kind": "syntactic_test_reference_not_test_result"
       },
@@ -1771,15 +1787,15 @@
         "path": "src/clo3d_mcp/pattern_contract.py",
         "lines": [
           95,
-          138
+          152
         ]
       },
       {
         "function": "validate_result",
         "path": "src/clo3d_mcp/pattern_contract.py",
         "lines": [
-          224,
-          303
+          238,
+          317
         ]
       }
     ],
@@ -1799,8 +1815,8 @@
         "function": "test_bad_parameters_rejected_before_api_and_queue",
         "path": "tests/test_pattern_api.py",
         "lines": [
-          115,
-          123
+          133,
+          141
         ],
         "kind": "syntactic_test_reference_not_test_result"
       },
@@ -1808,8 +1824,8 @@
         "function": "test_introspection_does_not_call_functions_and_reports_absence",
         "path": "tests/test_pattern_api.py",
         "lines": [
-          175,
-          182
+          193,
+          200
         ],
         "kind": "syntactic_test_reference_not_test_result"
       }
@@ -1919,15 +1935,15 @@
         "path": "src/clo3d_mcp/pattern_contract.py",
         "lines": [
           95,
-          138
+          152
         ]
       },
       {
         "function": "validate_result",
         "path": "src/clo3d_mcp/pattern_contract.py",
         "lines": [
-          224,
-          303
+          238,
+          317
         ]
       }
     ],
@@ -2172,15 +2188,15 @@
         "path": "src/clo3d_mcp/pattern_contract.py",
         "lines": [
           95,
-          138
+          152
         ]
       },
       {
         "function": "validate_result",
         "path": "src/clo3d_mcp/pattern_contract.py",
         "lines": [
-          224,
-          303
+          238,
+          317
         ]
       }
     ],
@@ -2518,7 +2534,7 @@
         "path": "tests/test_transport_server.py",
         "lines": [
           306,
-          373
+          374
         ],
         "kind": "syntactic_test_reference_not_test_result"
       }
@@ -2771,15 +2787,15 @@
         "path": "src/clo3d_mcp/pattern_contract.py",
         "lines": [
           95,
-          138
+          152
         ]
       },
       {
         "function": "validate_result",
         "path": "src/clo3d_mcp/pattern_contract.py",
         "lines": [
-          224,
-          303
+          238,
+          317
         ]
       }
     ],
@@ -3115,15 +3131,15 @@
         "path": "src/clo3d_mcp/pattern_contract.py",
         "lines": [
           95,
-          138
+          152
         ]
       },
       {
         "function": "validate_result",
         "path": "src/clo3d_mcp/pattern_contract.py",
         "lines": [
-          224,
-          303
+          238,
+          317
         ]
       }
     ],
@@ -3151,8 +3167,8 @@
         "function": "test_full_mutation_readback_and_shifted_index_guard",
         "path": "tests/test_pattern_api.py",
         "lines": [
-          77,
-          95
+          82,
+          100
         ],
         "kind": "syntactic_test_reference_not_test_result"
       },
@@ -3160,8 +3176,8 @@
         "function": "test_bad_parameters_rejected_before_api_and_queue",
         "path": "tests/test_pattern_api.py",
         "lines": [
-          115,
-          123
+          133,
+          141
         ],
         "kind": "syntactic_test_reference_not_test_result"
       },
@@ -3169,8 +3185,8 @@
         "function": "test_value_record_geometry_conversion_and_unknown_shape",
         "path": "tests/test_pattern_api.py",
         "lines": [
-          218,
-          228
+          236,
+          246
         ],
         "kind": "syntactic_test_reference_not_test_result"
       },
@@ -3178,8 +3194,8 @@
         "function": "test_native_box_string_dictionary_preserved_without_guessing_numeric_layout",
         "path": "tests/test_pattern_api.py",
         "lines": [
-          231,
-          241
+          249,
+          259
         ],
         "kind": "syntactic_test_reference_not_test_result"
       },
@@ -3188,7 +3204,7 @@
         "path": "tests/test_transport_server.py",
         "lines": [
           306,
-          373
+          374
         ],
         "kind": "syntactic_test_reference_not_test_result"
       }
@@ -3338,15 +3354,15 @@
         "path": "src/clo3d_mcp/pattern_contract.py",
         "lines": [
           95,
-          138
+          152
         ]
       },
       {
         "function": "validate_result",
         "path": "src/clo3d_mcp/pattern_contract.py",
         "lines": [
-          224,
-          303
+          238,
+          317
         ]
       }
     ],
@@ -3365,7 +3381,7 @@
         "path": "src/clo3d_mcp/pattern_api.py",
         "lines": [
           313,
-          408
+          415
         ]
       },
       {
@@ -3399,7 +3415,7 @@
         "path": "tests/test_transport_server.py",
         "lines": [
           306,
-          373
+          374
         ],
         "kind": "syntactic_test_reference_not_test_result"
       }
@@ -3520,15 +3536,15 @@
         "path": "src/clo3d_mcp/pattern_contract.py",
         "lines": [
           95,
-          138
+          152
         ]
       },
       {
         "function": "validate_result",
         "path": "src/clo3d_mcp/pattern_contract.py",
         "lines": [
-          224,
-          303
+          238,
+          317
         ]
       }
     ],
@@ -3556,8 +3572,8 @@
         "function": "test_bad_parameters_rejected_before_api_and_queue",
         "path": "tests/test_pattern_api.py",
         "lines": [
-          115,
-          123
+          133,
+          141
         ],
         "kind": "syntactic_test_reference_not_test_result"
       },
@@ -3566,7 +3582,7 @@
         "path": "tests/test_transport_server.py",
         "lines": [
           306,
-          373
+          374
         ],
         "kind": "syntactic_test_reference_not_test_result"
       }
@@ -3727,15 +3743,15 @@
         "path": "src/clo3d_mcp/pattern_contract.py",
         "lines": [
           95,
-          138
+          152
         ]
       },
       {
         "function": "validate_result",
         "path": "src/clo3d_mcp/pattern_contract.py",
         "lines": [
-          224,
-          303
+          238,
+          317
         ]
       }
     ],
@@ -3849,7 +3865,7 @@
         "path": "tests/test_transport_server.py",
         "lines": [
           306,
-          373
+          374
         ],
         "kind": "syntactic_test_reference_not_test_result"
       }
@@ -3897,15 +3913,15 @@
         "path": "src/clo3d_mcp/pattern_contract.py",
         "lines": [
           95,
-          138
+          152
         ]
       },
       {
         "function": "validate_result",
         "path": "src/clo3d_mcp/pattern_contract.py",
         "lines": [
-          224,
-          303
+          238,
+          317
         ]
       }
     ],
@@ -3925,8 +3941,8 @@
         "function": "test_introspection_does_not_call_functions_and_reports_absence",
         "path": "tests/test_pattern_api.py",
         "lines": [
-          175,
-          182
+          193,
+          200
         ],
         "kind": "syntactic_test_reference_not_test_result"
       }
@@ -3943,8 +3959,8 @@
     "function": "add_pattern_tools.move_pattern_relative",
     "path": "src/clo3d_mcp/transport_server.py",
     "lines": [
-      320,
-      327
+      327,
+      334
     ],
     "signature": "move_pattern_relative(pattern_index: StrictInt, expected_name: StrictStr, dx: StrictInt | StrictFloat, dy: StrictInt | StrictFloat) -> dict[str, Any]",
     "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
@@ -3984,8 +4000,8 @@
         "command": "move_pattern_relative",
         "path": "src/clo3d_mcp/transport_server.py",
         "lines": [
-          326,
-          327
+          333,
+          334
         ]
       }
     ],
@@ -4082,8 +4098,8 @@
         "expression": "self.pattern.SetPatternPieceMove(i, float(p['dx']), float(p['dy']))",
         "path": "src/clo3d_mcp/pattern_api.py",
         "lines": [
-          340,
-          340
+          344,
+          344
         ],
         "role": "primary_effect_or_read"
       },
@@ -4129,15 +4145,15 @@
         "path": "src/clo3d_mcp/pattern_contract.py",
         "lines": [
           95,
-          138
+          152
         ]
       },
       {
         "function": "validate_result",
         "path": "src/clo3d_mcp/pattern_contract.py",
         "lines": [
-          224,
-          303
+          238,
+          317
         ]
       }
     ],
@@ -4156,7 +4172,7 @@
         "path": "src/clo3d_mcp/pattern_api.py",
         "lines": [
           313,
-          408
+          415
         ]
       },
       {
@@ -4189,8 +4205,8 @@
         "function": "test_full_mutation_readback_and_shifted_index_guard",
         "path": "tests/test_pattern_api.py",
         "lines": [
-          77,
-          95
+          82,
+          100
         ],
         "kind": "syntactic_test_reference_not_test_result"
       },
@@ -4198,8 +4214,8 @@
         "function": "test_bad_parameters_rejected_before_api_and_queue",
         "path": "tests/test_pattern_api.py",
         "lines": [
-          115,
-          123
+          133,
+          141
         ],
         "kind": "syntactic_test_reference_not_test_result"
       },
@@ -4207,8 +4223,8 @@
         "function": "test_silent_setter_failure_is_not_success",
         "path": "tests/test_pattern_api.py",
         "lines": [
-          154,
-          160
+          172,
+          178
         ],
         "kind": "syntactic_test_reference_not_test_result"
       },
@@ -4217,7 +4233,7 @@
         "path": "tests/test_transport_server.py",
         "lines": [
           306,
-          373
+          374
         ],
         "kind": "syntactic_test_reference_not_test_result"
       }
@@ -4382,7 +4398,7 @@
         "path": "tests/test_transport_server.py",
         "lines": [
           306,
-          373
+          374
         ],
         "kind": "syntactic_test_reference_not_test_result"
       }
@@ -4399,8 +4415,8 @@
     "function": "add_pattern_tools.set_pattern_name",
     "path": "src/clo3d_mcp/transport_server.py",
     "lines": [
-      302,
-      306
+      309,
+      313
     ],
     "signature": "set_pattern_name(pattern_index: StrictInt, expected_name: StrictStr, name: StrictStr) -> dict[str, Any]",
     "signature_source": "ast_normalized_python_declaration_not_MCP_JSON_schema",
@@ -4433,8 +4449,8 @@
         "command": "set_pattern_name",
         "path": "src/clo3d_mcp/transport_server.py",
         "lines": [
-          305,
-          306
+          312,
+          313
         ]
       }
     ],
@@ -4531,8 +4547,8 @@
         "expression": "self.pattern.SetPatternPieceName(i, p['name'])",
         "path": "src/clo3d_mcp/pattern_api.py",
         "lines": [
-          335,
-          335
+          339,
+          339
         ],
         "role": "primary_effect_or_read"
       },
@@ -4542,8 +4558,8 @@
         "expression": "self.pattern.SetPatternPieceName(i, p['name'])",
         "path": "src/clo3d_mcp/pattern_api.py",
         "lines": [
-          370,
-          370
+          374,
+          374
         ],
         "role": "primary_effect_or_read"
       },
@@ -4589,15 +4605,15 @@
         "path": "src/clo3d_mcp/pattern_contract.py",
         "lines": [
           95,
-          138
+          152
         ]
       },
       {
         "function": "validate_result",
         "path": "src/clo3d_mcp/pattern_contract.py",
         "lines": [
-          224,
-          303
+          238,
+          317
         ]
       }
     ],
@@ -4616,7 +4632,7 @@
         "path": "src/clo3d_mcp/pattern_api.py",
         "lines": [
           313,
-          408
+          415
         ]
       },
       {
@@ -4649,8 +4665,8 @@
         "function": "test_full_mutation_readback_and_shifted_index_guard",
         "path": "tests/test_pattern_api.py",
         "lines": [
-          77,
-          95
+          82,
+          100
         ],
         "kind": "syntactic_test_reference_not_test_result"
       }
@@ -4728,7 +4744,7 @@
         "path": "tests/test_transport_server.py",
         "lines": [
           306,
-          373
+          374
         ],
         "kind": "syntactic_test_reference_not_test_result"
       }

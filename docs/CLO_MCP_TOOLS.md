@@ -182,17 +182,22 @@ Composition W1, независимый readback W3. Не использоват�
 
 ## 10. create_pattern
 
-**Когда:** одна новая simple straight polygon деталь с уникальным именем.
-Args `points`:3–64 пары[x,y]мм, `name`:bounded unique name. Контур замыкается
-неявно: не повторять первую точку в конце. Shoelace area должна быть ≥0.01 мм²;
-adjacent cross products |cross|≥1e-8, без самопересечений. Пример:
-`{"points":[[0,0],[120,0],[100,80],[0,60]],"name":"sample_panel"}`.
-Invalid: самопересечение, duplicate vertices, adjacent collinear edges,
-тройка[x,y,type], holes/curves. Имя уже занято/нет места → отказ до creation.
-CreatePatternWithPoints+SetPatternPieceName; проверяются count+1, порядок/имена остальных,
-новое имя, площадь shoelace с допуском. Не гарантируется точное совпадение всех
-vertices/3D placement/sewing. Setter/readback failure → scene_change_unverified.
-Composition W3: returned pattern.index/name → fresh readback → далее copy/move.
+**Когда:** одна новая деталь с уникальным именем — прямая или с curve-вершинами.
+Args `points`:3–64 пары[x,y]мм, `name`:bounded unique name, optional
+`vertex_types`:ровно len(points) значений 0/2/3 (0 straight, 2 spline, 3 Bezier).
+Без `vertex_types` действует прежняя polygon-валидация: неявное замыкание,
+Shoelace area ≥0.01 мм², adjacent |cross|≥1e-8, без самопересечений. С curve types
+проверяются только типы/bounds: self-intersection и форма кривой не валидируются,
+native curve/control semantics предварительные. Пример прямой:
+`{"points":[[0,0],[120,0],[100,80],[0,60]],"name":"sample_panel"}`; curve:
+`{"points":[[0,0],[120,0],[100,80],[0,60]],"name":"curve_panel","vertex_types":[0,2,0,0]}`.
+Invalid: неверная длина/тип vertex_types, bool/1/4, самопересечение только для
+straight, holes. Имя занято/нет места → отказ до creation.
+CreatePatternWithPoints+SetPatternPieceName; проверяются count+1, порядок/имена,
+новое имя; для straight — площадь с допуском, для curve площадь читается, но
+polygon-shoelace equality не применяется. Не гарантируется curve fidelity,
+3D placement/sewing. Setter/readback failure → scene_change_unverified.
+Composition W3: returned pattern.index/name → fresh readback → copy/move.
 Не вызывать diagnostic square для параметризованной формы.
 
 ## 11. set_pattern_name

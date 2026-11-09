@@ -10,11 +10,11 @@
     },
     {
       "path": "clo_source_mappings.json",
-      "sha256": "ecf0d769cfbf5a0283829d678de953bd521dc8a195f34138d729d65656c64f8b"
+      "sha256": "9327a01f05d010fa3fb27f5645e77f218da8dbc28c5445d441cea5a411e1381e"
     },
     {
       "path": "current_operation_scope.json",
-      "sha256": "a7564a7e2ccc23a9c5291060d7600e306904bd8cc297435f0a5e461b58368342"
+      "sha256": "942324afca98a5f85f48f0f57d2b1ed2f811f479d6ddc20b55c5e7071010ce38"
     },
     {
       "path": "review_gates.json",
