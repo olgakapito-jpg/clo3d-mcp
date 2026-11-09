@@ -200,6 +200,16 @@ polygon-shoelace equality не применяется. Не гарантируе
 Composition W3: returned pattern.index/name → fresh readback → copy/move.
 Не вызывать diagnostic square для параметризованной формы.
 
+Real curve gate 2026-11-09 (own pieces, затем planned delete): straight
+120×80 → area9600, bbox120×80,4 линии120/80/120/80. Один spline-vertex
+`[0,2,0,0]` → area10940.8838, bbox126.16×93.85,3 линии; curved segment
+206.96мм (arc). Один Bezier-vertex `[0,3,0,0]` → area7633.6606, bbox120×80,
+3 линии; curved segment160.32мм. Все vertex types2 сразу (`[2,2,2,2]`) native
+отклонил: count не изменился, adapter вернул консервативный
+scene_change_unverified без повтора. Вывод: VertexType работает, но допустимость
+конкретной раскладки control-точек нужно проверять; curve semantics остаются
+provisional.
+
 ## 11. set_pattern_name
 
 **Когда:** переименовать одну uniquely named деталь. Args
