@@ -56,6 +56,22 @@ ReDrape v2 прошёл native (flags applied, return None), но визуаль
 По нему выберем индексы front/back/sleeve и сделаем bounded `set_arrangement`
 tool с readback `get_arrangement` + UI.
 
+## Arrange probe: SetArrangement + ReDrape
+
+`diagnostics/clo3d_mcp_arrange_probe.py` назначает own-деталям реальные
+arrangement points и делает один ReDrape:
+
+- MCP_3D_TEST → 59 Body_Front_Center_1
+- MCP_SEAM_A → 60 Body_Front_Center_2
+- MCP_SEAM_B → 43 Body_Back_Center_2
+- MCP_SEAM_C → 6 Arm_Front_1_L
+- MCP_SEAM_D → 0 Arm_Back_1_L
+
+Пять `SetArrangement` + readback имени + один ReDrape с ApiTypes option/flags.
+One-shot, no retry; exception на assign/redrape → STOP. Effect visual-only; если
+детали встали на аватар — оформляем `set_arrangement` tool и повторяем ReDrape
+через отдельный tool.
+
 ## Следующие шаги
 
 1. Визуально проверить, как A–D/MCP_3D_TEST стоят на аватаре (плоско/пересечения).
