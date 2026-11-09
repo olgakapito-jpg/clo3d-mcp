@@ -76,10 +76,23 @@ Source/live, принятые ранее подпакеты:
   — dominant-axis; move/restore подтвердил translation invariance. Rotation,
   failure и дочерние формы открыты; не outline fallback.
   `../../../docs/CLO_LINE_API_CONTRACT_REVIEW.md`.
+- Швы (21): `add_seamline_pair` — whole outer line pair, 6-arg overload,
+  lineIndex из lines, strict bool directions; live seam_count+1, линии/geometry
+  неизменны. Partial/child/merge/topstitch не входят.
+  `../../../docs/CLO_SEAMLINING_CHECK.md`.
+- Аватар (22): `import_avatar` — absolute `.avt`≤128MiB через live
+  `ImportFile(path)` (ImportAvatar требует недоступный ImportExportOption);
+  live count0→1. Pose/measurement/fit не входят.
+- Arrangement (23–24): `get_arrangement` читает preset/offsets/orientation/type
+  (native strings, units native_unspecified); `set_arrangement` назначает
+  library point и делает ReDrape через `ApiTypes.ImportExportOption` flags.
+  2D и 3D позиции независимы; одинаковый arrangement не значит видимость.
+  Live: Body_Front/Back/Arm points посадили детали, UI подтверждён.
+  `../../../docs/CLO_FIT_CHECK.md`.
 
 Worker restart не перезагружает embedded modules: `CLO_INVENTORY_CHECK.md`.
-Не менять overload и не добавлять fallback автоматически. Sewing/simulation/
-import/export/pose остаются недоступны. Composition: list→outline→check;
+Не менять overload и не добавлять fallback автоматически. Simulation/import
+project/pose/export остаются недоступны. Composition: list→outline→check;
 cross-domain list→outline→`get_pattern_fabric` с тем же fresh target,
 независимые наблюдения, не garment validation.
 

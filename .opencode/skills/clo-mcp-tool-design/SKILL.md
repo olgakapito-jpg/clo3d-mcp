@@ -61,3 +61,16 @@ partial effects, readback и failure outcome. Не объявлять atomic tra
 Присутствие callable, завершение вызова, проверенный эффект и полная real-CLO
 приёмка — разные утверждения. Не изобретать completed/verified поля, которых
 нет в текущей схеме; новые поля требуют реализации и тестов.
+
+## Добавление tool: обязательные места
+
+Один новый tool меняет несколько реестров; обновлять их вместе:
+- `pattern_contract.py`: command, exact params, result validator;
+- adapter + `transport_server.py` registration and annotations;
+- named tool sets/profiles в `evaluate_tool_workflows.py`, `verify_domains.py`,
+  `build_api_source_mappings.py` (никаких голых чисел);
+- eval dataset case и expected profile `currentN`;
+- `docs/CLO_MCP_TOOLS.md`, `current_operation_scope.json`, README/skill;
+- новый test-файл добавить в `LOCAL_INPUTS` builder, иначе `test_evidence`
+  пустой и source-mapping check падает;
+- regenerate mappings/coverage, full suite, один bounded real gate.

@@ -30,6 +30,13 @@ from repository root. Load the runtime/pipe/MCP skill relevant to the failure.
 - Real CLO checks: actual callback/thread, API reads and diagnostic mutation,
   responsive UI, repeat launch, modal UI and process exit. Mocks cannot pass this gate.
 
+For one-shot native probes, require: verified service/idle/thread guards,
+one native call budget, a one-shot builtins marker, sanitized JSON with `stage`
+and `error_type`, and no retry. If the effect has no getter (drape, simulation,
+UI layout), mark evidence visual-only and ask the user to confirm the view; a
+camera/zoom miss is not evidence that the object is absent. Probe bugs fixed
+before any native entry get a distinct v2 marker, never a reset.
+
 Use synchronization events and bounded timeouts instead of scheduler-dependent
 sleeps. Stress runs have a request/time limit and a stop mechanism.
 

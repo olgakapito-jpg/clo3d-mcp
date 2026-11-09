@@ -27,6 +27,11 @@
   Never reset their builtins one-shot markers or auto-run them on the user's behalf.
 - Local scratch is gitignored and never committed: `projects/` (CLO scenes),
   `acceptance-output/`, `result.json`, `opencode.json.openchamber.backup`.
+- 2D coordinates and 3D placement are independent. A piece outside the current
+  3D camera is not missing; verify arrangement/zoom before conclusions.
+  Arrangement offsets are native strings and stay `native_unspecified`.
+- Some native option records live in `ApiTypes`, not `export_api`. Check live
+  availability and construct them only inside embedded Python adapter code.
 - `tests/`: mock/contract checks, NOT evidence of real CLO compatibility.
 - The existing listener is disabled by default on Windows. README is not proof
   it works. Importing the plugin with real CLO modules can invoke auto-start.

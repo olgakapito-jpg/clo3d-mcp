@@ -48,6 +48,25 @@ Read repository `AGENTS.md` and the relevant phase of
   available without silently introducing log files.
 - Probe cleanup independently before adding MCP or Named Pipe dependencies.
 
+## Native option types and diagnostic probes
+
+- Option records may live in `ApiTypes` (for example
+  `ApiTypes.ImportExportOption`), not in `export_api`. `describe_clo_api`/live
+  `hasattr` can show an `Export*Option` factory unavailable while the documented
+  type still constructs inside embedded Python. Check both before concluding a
+  native operation is blocked; never substitute a fake option or a different
+  overload silently.
+- Adapter code runs inside CLO and may import a CLO module (e.g. `ApiTypes`);
+  external server code must not. Keep imports inside the adapter call and map
+  failure to `api_unavailable`.
+- One-shot probe conventions: verified service/thread guards, marker before
+  native entry, `stage` and sanitized `error_type`, no retry, no raw native text.
+  If a probe bug is fixed before any native call, use a distinct v2 marker and
+  say so; never reset the old marker.
+- If the native effect has no objective getter (drape/simulation), label evidence
+  visual-only and ask the user to confirm the 3D result; absence from the visible
+  camera does not mean absence from the scene.
+
 ## P0 acceptance gate
 
 Provide the user a diagnostic `.py` and a documented stop action. Verify:
