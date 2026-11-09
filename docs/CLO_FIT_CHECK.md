@@ -32,6 +32,17 @@ Point`, offsets50/50/50, orientation180, typeCurved). **Все пять видн
 Предыдущая гипотеза про необходимость simulation для видимости **опровергнута**;
 simulate probe не нужен и не запускался.
 
+## ReDrape через ApiTypes.ImportExportOption
+
+`utility_api.ReDrape3DArrangement` требует `Marvelous::ImportExportOption`.
+`export_api.ImportExportOption/NewImportExportOption` в live недоступны, но тип
+документирован как `ApiTypes.ImportExportOption` с полями
+`bAddArrangementPoints`, `bAutoCreateFittingSuit`, `bMoveGarment`.
+`diagnostics/clo3d_mcp_redrape_probe.py` создаёт option через `ApiTypes`,
+ставит эти флаги (если есть), вызывает ReDrape один раз и печатает counts.
+One-shot, avatar>=1, visual-only evidence; при option/construct/API exception —
+STOP. После Run пользователь смотрит 3D: появились ли детали на аватаре.
+
 ## Следующие шаги
 
 1. Визуально проверить, как A–D/MCP_3D_TEST стоят на аватаре (плоско/пересечения).

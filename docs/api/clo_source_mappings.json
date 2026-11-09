@@ -195,9 +195,9 @@
       },
       {
         "path": "docs/CLO_FIT_CHECK.md",
-        "sha256": "d6b666834b156e67812d7bc965ad65575c749e5e002d3295ec11163fa9d9ec88",
-        "bytes": 2662,
-        "lines": 42
+        "sha256": "1226fb996e8ccaf1376e18dea3570f77efe143c49c40d2ac0e11602744fd1fe6",
+        "bytes": 3457,
+        "lines": 53
       },
       {
         "path": "docs/CLO_INVENTORY_CHECK.md",
