@@ -432,6 +432,21 @@ Valid synthetic: `{"pattern_a_index":0,"expected_name_a":"panel","line_a_index":
 read seam count/connectivity отдельно. Anti-selection: partial seam/merge/curve
 editing — не этот tool. Evidence: `CLO_SEAMLINING_CHECK.md`.
 
+## 22. import_avatar
+
+**Source, .avt avatar import.** Один `import_api.ImportAvatar(file_path,
+ImportExportOption)`. Child/pose/measurement/project/import-other-format не
+входят. Required absolute `.avt` path <=128MiB; путь не эхоится/не логируется.
+Preflight проверяет файл/размер; native option создаётся через
+`export_api.ImportExportOption()` (fallback `NewImportExportOption`); один call;
+readback требует native true и avatar count +1. Result
+`{ok:true,verified:true,avatar_count}`; false/exception/count mismatch →
+`invalid_native_result`/`scene_change_unverified`, без retry/fallback.
+`.avac`/ImportFile маршрут не используется. Pose/fit/measurements — отдельные
+пакеты; visual/3D не гарантируется. Valid synthetic:
+`{"file_path":"C:\\assets\\mannequin.avt"}`. Anti-selection: `.avac` или pose
+файл — не этот tool. Real gate pending.
+
 ## Ошибки и безопасные действия
 
 - invalid_parameters: проверить schema/bounds/extras, не пробовать наугад.

@@ -10,11 +10,11 @@
     },
     {
       "path": "clo_source_mappings.json",
-      "sha256": "f282609564679489740f3d62ad52ee62853f86c2eb4e28a0dd26d3485b374443"
+      "sha256": "485a0b4e717ea54e0d128de50f74bb58e9ef793d8f36135d21bde0c45f2cb471"
     },
     {
       "path": "current_operation_scope.json",
-      "sha256": "6f6a48875fc42a0a293bdef2daff7e905b48208647d7b36c08e9686db3250f9f"
+      "sha256": "26ca83e22e78a57d41f9428f6350e8dcbd5b47d8976701fb021bbc6d9050a9d2"
     },
     {
       "path": "review_gates.json",
@@ -29,8 +29,8 @@
     "additional_interfaces": 6,
     "donor_tools": 170,
     "local_legacy_tools": 47,
-    "current_tools": 21,
-    "current_native_operations": 19,
+    "current_tools": 22,
+    "current_native_operations": 20,
     "historical_docstring_names": 43,
     "nonofficial_mapping_names": 4,
     "official_names_with_donor_reference": 332,
@@ -96,7 +96,7 @@
     },
     {
       "path": "coverage/import_api-01.json",
-      "sha256": "09c9e868abe803f24c932f3d9e35283e5829fa2156a7e2268da67d1156d05ad5",
+      "sha256": "2a89c7caa96d99d1c5f21445f024b79ece97ec5f4fa9ce3fd91c04e0ce06276b",
       "count": 42
     },
     {

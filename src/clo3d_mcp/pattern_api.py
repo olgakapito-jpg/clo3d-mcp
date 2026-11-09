@@ -6,10 +6,11 @@ verified UI executor. A setter plus readback is not an atomic transaction.
 
 import json
 import math
+import os
 import time
 
 from clo3d_mcp.pattern_contract import (
-    API_MODULES, MAX_LINE_JSON_BYTES, MAX_LINES, MAX_PATTERNS, CommandError, number,
+    API_MODULES, MAX_AVATARS, MAX_LINE_JSON_BYTES, MAX_LINES, MAX_PATTERNS, CommandError, number,
     outline_points, validate_params, validate_result,
 )
 from clo3d_mcp.inventory_api import InventoryAPI
@@ -330,6 +331,37 @@ class PatternAPI:
                 raise CommandError("scene_change_unverified")
         return {"verified": True, "seam_count": seams_after}
 
+    def _import_avatar(self, p):
+        """Import one .avt avatar; verify count+1, no filename echo or retry."""
+        imp, exp = self.modules.get("import_api"), self.modules.get("export_api")
+        if not callable(getattr(imp, "ImportAvatar", None)) or not callable(
+                getattr(exp, "GetAvatarCount", None)):
+            raise CommandError("api_unavailable")
+        path = p["file_path"]
+        try:
+            if not os.path.isfile(path) or not 0 < os.path.getsize(path) <= 134217728:
+                raise CommandError("invalid_parameters")
+        except OSError:
+            raise CommandError("invalid_parameters") from None
+        before = exp.GetAvatarCount()
+        if type(before) is not int or not 0 <= before < MAX_AVATARS:
+            raise CommandError("invalid_native_result")
+        factory = getattr(exp, "ImportExportOption", None)
+        try:
+            option = factory() if callable(factory) else exp.NewImportExportOption()
+        except Exception:
+            raise CommandError("api_unavailable") from None
+        try:
+            imported = imp.ImportAvatar(path, option)
+        except Exception:
+            raise CommandError("scene_change_unverified") from None
+        if type(imported) is not bool or imported is not True:
+            raise CommandError("invalid_native_result")
+        after = exp.GetAvatarCount()
+        if type(after) is not int or after != before + 1:
+            raise CommandError("scene_change_unverified")
+        return {"verified": True, "avatar_count": after}
+
     @staticmethod
     def _near(a, b):
         return math.isclose(a, b, rel_tol=1e-5, abs_tol=0.05)
@@ -363,6 +395,8 @@ class PatternAPI:
             result = self._lines(params)
         elif command == "add_seamline_pair":
             result = self._seam(params)
+        elif command == "import_avatar":
+            result = self._import_avatar(params)
         else:
             result = self._mutate(command, params)
             # Includes preflight, native setter(s) AND verification reads, not

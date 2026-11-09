@@ -7,6 +7,7 @@ assignment, not material editing. Sewing and simulation are not enabled.
 """
 
 import math
+import os
 
 
 PATTERN_COMMANDS = [
@@ -16,7 +17,7 @@ PATTERN_COMMANDS = [
     "get_fabric_list", "get_avatars",
     "get_pattern_fabric", "assign_pattern_fabric",
     "get_pattern_outline", "get_pattern_lines",
-    "add_seamline_pair",
+    "add_seamline_pair", "import_avatar",
 ]
 API_MODULES = ("pattern_api", "export_api", "fabric_api", "import_api", "utility_api")
 ERROR_CODES = ("api_unavailable", "stale_pattern", "scene_change_unverified", "invalid_parameters",
@@ -112,6 +113,7 @@ def validate_params(command, params):
         "add_seamline_pair": {"pattern_a_index", "expected_name_a", "line_a_index",
                               "pattern_b_index", "expected_name_b", "line_b_index",
                               "direction_a", "direction_b"},
+        "import_avatar": {"file_path"},
         "assign_pattern_fabric": {"pattern_index", "expected_name", "fabric_index",
                                   "expected_fabric_name", "expected_current_fabric_index"},
     }
@@ -138,6 +140,11 @@ def validate_params(command, params):
                          and len(value) == len(params.get("points", [])))
             elif key in ("dx", "dy"):
                 valid = number(value)
+            elif key == "file_path":
+                valid = (isinstance(value, str) and 1 <= len(value) <= 260
+                         and value.lower().endswith(".avt") and os.path.isabs(value)
+                         and all(ord(c) >= 32 and not 0xD800 <= ord(c) <= 0xDFFF
+                                 for c in value))
             elif key == "points":
                 if curved:
                     valid = (isinstance(value, list) and 3 <= len(value) <= 64
@@ -294,6 +301,11 @@ def validate_result(command, result):
         valid = (keys == {"verified", "seam_count"}
                  and result["verified"] is True
                  and type(result["seam_count"]) is int and result["seam_count"] >= 0)
+    elif command == "import_avatar":
+        valid = (keys == {"verified", "avatar_count"}
+                 and result["verified"] is True
+                 and type(result["avatar_count"]) is int
+                 and 0 <= result["avatar_count"] <= MAX_AVATARS)
     elif command == "get_fabric_list":
         valid = (keys == {"fabric_count", "fabrics"}
                  and inventory_result(result, "fabric", MAX_FABRICS))

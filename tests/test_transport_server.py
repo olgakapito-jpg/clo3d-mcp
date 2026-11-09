@@ -357,6 +357,8 @@ def test_pattern_package_real_http_validates_raw_arguments_and_runs_stateful_exe
                                                "line_a_index": 0, "pattern_b_index": 1,
                                                "expected_name_b": "b", "line_b_index": 0,
                                                "direction_a": 1, "direction_b": True}),
+                        ("import_avatar", {"file_path": "relative.avt"}),
+                        ("import_avatar", {"file_path": "C:\\x.avt", "extra": 1}),
                     ]:
                         reply = await client.call_tool(command, args)
                         assert reply.isError, command

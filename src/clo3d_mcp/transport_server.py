@@ -311,6 +311,16 @@ def add_pattern_tools(mcp, service, read):
             "direction_a": direction_a, "direction_b": direction_b})
 
     @mcp.tool(annotations=mutation)
+    async def import_avatar(file_path: StrictStr) -> dict[str, Any]:
+        """Import ONE local .avt avatar through CLO's ImportAvatar, then verify count.
+
+        Requires an absolute existing .avt path <=128MiB; the path is used only
+        for this call and is not echoed. Verifies native true and avatar count +1;
+        no auto retry, fallback to another importer, pose/measurement or 3D fit.
+        """
+        return await service.call("import_avatar", {"file_path": file_path})
+
+    @mcp.tool(annotations=mutation)
     async def create_pattern(points: list[list[StrictInt | StrictFloat]], name: StrictStr,
                              vertex_types: list[StrictInt] | None = None) -> dict[str, Any]:
         """Create ONE closed pattern from 3-64 [x,y] points in mm with a unique name.

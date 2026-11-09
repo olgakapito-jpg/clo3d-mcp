@@ -275,7 +275,14 @@
       "units": "not_checked",
       "implementation": "planned",
       "overload_coverage": "not_established",
-      "current_operation": null,
+      "current_operation": {
+        "symbol": "import_api.ImportAvatar",
+        "tools": [
+          "import_avatar"
+        ],
+        "call_arity": 2,
+        "scope_reference": "docs/api/current_operation_scope.json"
+      },
       "donor_tools": [],
       "legacy_tools": [],
       "verification": "not_tested",

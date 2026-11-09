@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "evidence": "synthetic_contract_not_llm_or_live",
-  "unavailable_tools": ["assign_fabric", "import_avatar", "import_project", "simulate", "export_project", "set_global_settings", "call_rest_api", "call_api", "move_pattern_point", "cancel_job", "get_job_result", "create_curve", "merge_sewn_patterns", "delete_seamline_pair"],
+  "unavailable_tools": ["assign_fabric", "import_project", "import_pose", "import_avatar_measurement", "simulate", "export_project", "set_global_settings", "call_rest_api", "call_api", "move_pattern_point", "cancel_job", "get_job_result", "create_curve", "merge_sewn_patterns", "delete_seamline_pair"],
   "cases": [
     {
       "id": "outline_endpoints", "intent": "Прочитай конечные точки контура panel в локальных мм от TOP-LEFT bbox, без редактирования и без управляющих точек кривой.",
@@ -35,6 +35,15 @@
       "forbidden_tools": ["merge_sewn_patterns", "delete_seamline_pair", "call_api"],
       "forbidden_effects": ["diagnostic_mutation", "filesystem_write"],
       "required_args": {"add_seamline_pair": {"pattern_a_index": 0, "expected_name_a": "panel", "line_a_index": 0, "pattern_b_index": 1, "expected_name_b": "back", "line_b_index": 0, "direction_a": true, "direction_b": true}},
+      "decision": "complete", "blockers": [], "stop_conditions": ["error", "outcome_unknown", "schema_mismatch", "session_change", "stale_target"]
+    },
+    {
+      "id": "avatar_import", "intent": "Импортируй локальный .avt манекен и проверь avatar count/name; без pose, measurement и fit.",
+      "profile": "current22", "scope": "scene", "fixture": {"ready": true, "patterns": []},
+      "expected_tools": ["get_session_info", "get_avatars", "import_avatar"],
+      "forbidden_tools": ["import_pose", "import_project", "call_api"],
+      "forbidden_effects": ["diagnostic_mutation", "filesystem_write"],
+      "required_args": {},
       "decision": "complete", "blockers": [], "stop_conditions": ["error", "outcome_unknown", "schema_mismatch", "session_change", "stale_target"]
     },
     {
