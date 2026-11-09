@@ -43,6 +43,19 @@ simulate probe не нужен и не запускался.
 One-shot, avatar>=1, visual-only evidence; при option/construct/API exception —
 STOP. После Run пользователь смотрит 3D: появились ли детали на аватаре.
 
+## Дальше: SetArrangement indices
+
+ReDrape v2 прошёл native (flags applied, return None), но визуально ничего не
+изменил: вероятно, ReDrape только пересчитывает уже назначенный arrangement, а
+детали стоят на `Arrangement Point`. Нужно назначить реальные points через
+`SetArrangement(patternIndex, arrangementIndex)`, индекс брать из 110-элементной
+библиотеки.
+
+`diagnostics/clo3d_mcp_arrangement_list_probe.py` читает `GetArrangementList` и
+печатает до110 записей: preset name/type/offset/orientation (read-only, one-shot).
+По нему выберем индексы front/back/sleeve и сделаем bounded `set_arrangement`
+tool с readback `get_arrangement` + UI.
+
 ## Следующие шаги
 
 1. Визуально проверить, как A–D/MCP_3D_TEST стоят на аватаре (плоско/пересечения).
