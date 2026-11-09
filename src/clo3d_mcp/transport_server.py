@@ -26,7 +26,7 @@ from clo3d_mcp.transport.winprocess import ProcessHandle
 
 def tool_error(code):
     data = {"ok": False, "error": code}
-    if code in ("scene_change_unverified", "outcome_unknown"):
+    if code in ("scene_change_unverified", "outcome_unknown", "executor_release_timeout", "executor_release_unavailable"):
         data["scene_may_have_changed"] = True
     return CallToolResult(isError=True, structuredContent=data,
                           content=[TextContent(type="text", text=json.dumps(data))])
@@ -74,7 +74,9 @@ class Service:
                 raise QueueError("executor_unavailable")
             if params is not None:
                 validate_params(command, params)
-            return {"ok": True, **(await self.queue.call(command, params=params))}
+            # RESULT is not READY. Observe release of exactly our completed job,
+            # outside CLO's UI callback, before returning a composable success.
+            return {"ok": True, **(await self.queue.call(command, params=params, release_timeout=2.0))}
         except (QueueError, CommandError, ProtocolError) as exc:
             code = exc.code if isinstance(exc, (QueueError, CommandError)) else "invalid_parameters"
             return tool_error(code)

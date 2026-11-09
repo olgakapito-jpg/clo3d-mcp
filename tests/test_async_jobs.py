@@ -158,3 +158,73 @@ def test_cancelled_observer_storage_bounded_and_no_completion_leak():
         queue.close()
         assert not queue.waiters
     asyncio.run(scenario())
+
+
+def test_release_wait_is_correlated_not_global_idle_or_next_job():
+    async def scenario():
+        queue = connected()
+        task = asyncio.create_task(queue.call("ping", release_timeout=2))
+        await turn()
+        first = queue.dispatch()["job_id"]
+        queue.receive(result(first))
+        await turn()
+        await turn()
+        assert not task.done() and queue.status()["active_state"] == "succeeded"
+        assert queue.status()["waiters"] == 1
+        second = queue.submit("ping")
+        queue.on_ready()
+        assert queue.dispatch()["job_id"] == second
+        assert await task == {"pong": True}
+        assert queue.status()["active_id"] == second
+        assert not queue.release_waiters
+    asyncio.run(scenario())
+
+
+@pytest.mark.parametrize("event", ["timeout", "disconnect", "close", "cancel"])
+def test_release_failure_never_replays_or_releases_unconfirmed_slot(event):
+    async def scenario():
+        queue = connected()
+        task = asyncio.create_task(queue.call("ping", release_timeout=0.01 if event == "timeout" else 2))
+        await turn()
+        job = queue.dispatch()["job_id"]
+        queue.receive(result(job))
+        await turn()
+        await turn()
+        if event == "disconnect":
+            queue.on_disconnect()
+        elif event == "close":
+            queue.close()
+        elif event == "cancel":
+            task.cancel()
+        error = asyncio.CancelledError if event == "cancel" else QueueError
+        with pytest.raises(error) as observed:
+            await task
+        if event != "cancel":
+            assert observed.value.code == ("executor_release_timeout" if event == "timeout"
+                                           else "executor_release_unavailable")
+        assert queue.queue.sequence == 1 and not queue.release_waiters
+        assert queue.lookup("s", job).state == "succeeded"
+        if event in ("timeout", "cancel"):
+            assert queue.status()["active_id"] == job and queue.dispatch() is None
+            queue.on_ready()
+            assert queue.status()["active_id"] is None
+    asyncio.run(scenario())
+
+
+def test_release_already_received_before_wait_and_error_never_waits():
+    async def scenario():
+        queue = connected()
+        task = asyncio.create_task(queue.call("ping", release_timeout=2))
+        await turn()
+        job = queue.dispatch()["job_id"]
+        queue.receive(result(job))
+        queue.on_ready()
+        assert await task == {"pong": True}
+        task = asyncio.create_task(queue.call("ping", release_timeout=2))
+        await turn()
+        job = queue.dispatch()["job_id"]
+        queue.receive(message("ERROR", "s", job_id=job, code="command_error"))
+        with pytest.raises(QueueError, match="command_error"):
+            await task
+        assert not queue.release_waiters and queue.status()["active_id"] == job
+    asyncio.run(scenario())

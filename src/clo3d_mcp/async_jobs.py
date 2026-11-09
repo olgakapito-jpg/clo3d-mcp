@@ -18,6 +18,7 @@ class AsyncJobQueue:
         self.waiter_limit = waiter_limit
         self.waiters = {}
         self.waiter_count = 0
+        self.release_waiters = {}
         self.queue = JobQueue(session_id, outcome_callback=self._notify, **kwargs)
 
     @property
@@ -42,10 +43,23 @@ class AsyncJobQueue:
         self._change("on_connected")
 
     def on_ready(self):
+        job_id = self.queue.active_id
         self._change("on_ready")
+        if job_id is not None and self.queue.active_id != job_id:
+            self._release(job_id, True)
+
+    def _release(self, job_id, ready):
+        future = self.release_waiters.pop(job_id, None)
+        if future is not None and not future.done():
+            future.set_result(ready)
+
+    def _release_unavailable(self):
+        for job_id in tuple(self.release_waiters):
+            self._release(job_id, False)
 
     def on_disconnect(self):
         self._change("on_disconnect")
+        self._release_unavailable()
 
     def dispatch(self):
         return self._change("dispatch")
@@ -58,9 +72,10 @@ class AsyncJobQueue:
 
     def close(self):
         self._change("close")
+        self._release_unavailable()
 
     def status(self):
-        return dict(self.queue.status(), waiters=self.waiter_count)
+        return dict(self.queue.status(), waiters=self.waiter_count + len(self.release_waiters))
 
     def lookup(self, session_id, job_id):
         return self.queue.lookup(session_id, job_id)
@@ -85,10 +100,40 @@ class AsyncJobQueue:
         finally:
             self.waiter_count -= 1
 
-    async def call(self, command, **kwargs):
+    async def wait_released(self, job_id, timeout):
+        """Observe this completed job's READY, never global idle or another job.
+
+        Only call() owns this observer; no public lookup/poll/replay endpoint.
+        A timeout does not cancel execution, release the slot or resend work.
+        """
+        if self.queue.closed or not self.queue.connected or self.queue.quarantined:
+            raise QueueError("executor_release_unavailable")
+        if self.queue.active_id != job_id:
+            return  # already retired by its READY; another client may own the slot
+        future = asyncio.get_running_loop().create_future()
+        self.release_waiters[job_id] = future
+        try:
+            try:
+                ready = await asyncio.wait_for(asyncio.shield(future), timeout)
+            except TimeoutError:
+                raise QueueError("executor_release_timeout") from None
+            if not ready:
+                raise QueueError("executor_release_unavailable")
+        finally:
+            if self.release_waiters.get(job_id) is future:
+                del self.release_waiters[job_id]
+            if not future.done():
+                future.cancel()
+
+    async def call(self, command, *, release_timeout=None, **kwargs):
+        if release_timeout is not None:
+            JobQueue._duration(release_timeout)
         job_id = self.submit(command, **kwargs)
         try:
-            return (await self.wait(self.session_id, job_id)).unwrap()
+            result = (await self.wait(self.session_id, job_id)).unwrap()
+            if release_timeout is not None:
+                await self.wait_released(job_id, release_timeout)
+            return result
         except asyncio.CancelledError:
             self._cancel_owned(job_id)
             raise

@@ -167,6 +167,33 @@ def test_sdk_security_and_only_official_framework():
     assert security.allowed_origins == []
 
 
+def test_service_success_waits_for_own_ready_without_blocking_status():
+    async def scenario():
+        svc = service(8765)
+        svc.queue.on_connected()
+        svc.queue.on_ready()
+        svc.http_serving = svc.executor_verified = svc.ready_acknowledged = True
+        task = asyncio.create_task(svc.call("get_pattern_count"))
+        await bounded_until(lambda: svc.queue.status()["waiting"] == 1)
+        job = svc.queue.dispatch()["job_id"]
+        svc.queue.receive(message("RESULT", "s", job_id=job, result={"pattern_count": 0}))
+        await bounded_until(lambda: bool(svc.queue.release_waiters))
+        assert not task.done()
+        assert svc.status()["active_state"] == "succeeded" and svc.status()["waiters"] == 1
+        svc.queue.on_ready()
+        assert await task == {"ok": True, "pattern_count": 0}
+        assert svc.status()["active_id"] is None and svc.status()["waiters"] == 0
+    asyncio.run(scenario())
+
+
+def test_release_errors_are_explicit_and_conservative_for_possible_scene_effects():
+    from clo3d_mcp.transport_server import tool_error
+    for code in ("executor_release_timeout", "executor_release_unavailable"):
+        reply = tool_error(code)
+        assert reply.isError
+        assert reply.structuredContent == {"ok": False, "error": code, "scene_may_have_changed": True}
+
+
 def test_missing_readiness_ack_is_bounded_and_never_dispatches_client_job(monkeypatch):
     import clo3d_mcp.transport_server as module
 
