@@ -23,11 +23,20 @@ name `Female_Mannequin_final_v11_Aforsize_03`; path не эхоился.
 Ожидаемый JSON `clo_arrangement_probe_v1`: `count`, `list_length`,
 `pieces[i].arrangement.keys/fields`.
 
+## 3D visibility: уточнено 2026-11-09
+
+Пять деталей (A–D seam + MCP_3D_TEST) имеют одинаковый arrangement (`Arrangement
+Point`, offsets50/50/50, orientation180, typeCurved). **Все пять видны в 3D.**
+Первые четыре были за пределами экрана; пользователь увидел их после zoom-out.
+Значит 2D-координата и 3D-положение независимы, а сшитость не скрывает детали.
+Предыдущая гипотеза про необходимость simulation для видимости **опровергнута**;
+simulate probe не нужен и не запускался.
+
 ## Следующие шаги
 
-1. Probe → определить arrangement state и поля.
-2. Если позиции/ориентации читаемы и settable — bounded tool(s)
-   `get_arrangement`/`set_arrangement_position`; проверка readback.
-3. Drape: либо найти доступный option/фактический вызов, либо UI-only gate
-   (честно visual-only), без обещаний fit/3D acceptance.
+1. Визуально проверить, как A–D/MCP_3D_TEST стоят на аватаре (плоско/пересечения).
+2. `get_arrangement` уже реализован (23 tools); при необходимости
+   `set_arrangement_position`/`orientation` с readback.
+3. Drape/посадка: ReDrape упирается в недоступный ImportExportOption; либо
+   найти доступный option, либо UI-only gate (честно visual-only).
 4. Sewing/seams к аватару уже возможны через lineIndex; simulation отдельно.
