@@ -445,7 +445,8 @@ Child/pose/measurement/project/import-other-format не входят. Required a
 `.avac`/ImportAVAC маршрут не используется. Pose/fit/measurements — отдельные
 пакеты; visual/3D не гарантируется. Valid synthetic:
 `{"file_path":"C:\\assets\\mannequin.avt"}`. Anti-selection: `.avac` или pose
-файл — не этот tool. Real gate pending.
+файл — не этот tool. Live gate: Mannequin avt → count0→1, name
+`Female_Mannequin_final_v11_Aforsize_03`; path не эхоился.
 
 ## Ошибки и безопасные действия
 
