@@ -275,14 +275,7 @@
       "units": "not_checked",
       "implementation": "planned",
       "overload_coverage": "not_established",
-      "current_operation": {
-        "symbol": "import_api.ImportAvatar",
-        "tools": [
-          "import_avatar"
-        ],
-        "call_arity": 2,
-        "scope_reference": "docs/api/current_operation_scope.json"
-      },
+      "current_operation": null,
       "donor_tools": [],
       "legacy_tools": [],
       "verification": "not_tested",
@@ -747,7 +740,14 @@
       "units": "not_checked",
       "implementation": "planned",
       "overload_coverage": "not_established",
-      "current_operation": null,
+      "current_operation": {
+        "symbol": "import_api.ImportFile",
+        "tools": [
+          "import_avatar"
+        ],
+        "call_arity": 1,
+        "scope_reference": "docs/api/current_operation_scope.json"
+      },
       "donor_tools": [
         "import_file",
         "open_file"
@@ -807,7 +807,14 @@
       "units": "not_checked",
       "implementation": "planned",
       "overload_coverage": "not_established",
-      "current_operation": null,
+      "current_operation": {
+        "symbol": "import_api.ImportFile",
+        "tools": [
+          "import_avatar"
+        ],
+        "call_arity": 1,
+        "scope_reference": "docs/api/current_operation_scope.json"
+      },
       "donor_tools": [
         "import_file",
         "open_file"

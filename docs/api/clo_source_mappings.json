@@ -243,9 +243,9 @@
       },
       {
         "path": "src/clo3d_mcp/pattern_api.py",
-        "sha256": "2c8086cba0f2cbe8257c82b35132a916d15ed448fe2eb76e089b0c51389dc570",
-        "bytes": 25795,
-        "lines": 510
+        "sha256": "f27505ecdb21f76cd88afe8d52e8fa7ffa15c9e2b941e50f44797835476f5b01",
+        "bytes": 25542,
+        "lines": 505
       },
       {
         "path": "src/clo3d_mcp/pattern_contract.py",
@@ -389,7 +389,7 @@
       "tools_shards": [
         {
           "path": "mappings/current_tools_01.json",
-          "sha256": "9dceffcbedbbc8f033973e6ddc3373f7a583005d65fe6d2c442a97ead9150b20",
+          "sha256": "97c4996a61d4658a2c41009ff7284db08b38f944bfcf275ff9d844d3cc8ed682",
           "entries": 22
         }
       ]

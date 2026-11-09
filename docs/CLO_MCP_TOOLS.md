@@ -434,15 +434,15 @@ editing — не этот tool. Evidence: `CLO_SEAMLINING_CHECK.md`.
 
 ## 22. import_avatar
 
-**Source, .avt avatar import.** Один `import_api.ImportAvatar(file_path,
-ImportExportOption)`. Child/pose/measurement/project/import-other-format не
-входят. Required absolute `.avt` path <=128MiB; путь не эхоится/не логируется.
-Preflight проверяет файл/размер; native option создаётся через
-`export_api.ImportExportOption()` (fallback `NewImportExportOption`); один call;
-readback требует native true и avatar count +1. Result
+**Source, .avt avatar import.** Один `import_api.ImportFile(file_path)`; live
+binding `ImportFile(str)->bool` доступен, а `ImportAvatar` требует
+`ImportExportOption`, которого в этой сборке нет (describe available=false).
+Child/pose/measurement/project/import-other-format не входят. Required absolute
+`.avt` path <=128MiB; путь не эхоится/не логируется. Preflight проверяет
+файл/размер; один call; readback требует native true и avatar count +1. Result
 `{ok:true,verified:true,avatar_count}`; false/exception/count mismatch →
 `invalid_native_result`/`scene_change_unverified`, без retry/fallback.
-`.avac`/ImportFile маршрут не используется. Pose/fit/measurements — отдельные
+`.avac`/ImportAVAC маршрут не используется. Pose/fit/measurements — отдельные
 пакеты; visual/3D не гарантируется. Valid synthetic:
 `{"file_path":"C:\\assets\\mannequin.avt"}`. Anti-selection: `.avac` или pose
 файл — не этот tool. Real gate pending.

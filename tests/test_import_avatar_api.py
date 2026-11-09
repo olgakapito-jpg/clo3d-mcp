@@ -14,8 +14,8 @@ class ImportAPI:
         self.fail = fail
         self.calls = []
 
-    def ImportAvatar(self, path, option):
-        self.calls.append((path, option))
+    def ImportFile(self, path):
+        self.calls.append(path)
         if self.fail:
             raise RuntimeError("private path")
         return self.value
@@ -50,18 +50,17 @@ def params(tmp_path):
     return {"file_path": str(path)}
 
 
-def test_import_avatar_success_count_and_option(tmp_path):
+def test_import_avatar_success_count_and_call(tmp_path):
     imp, exp = ImportAPI(), ExportAPI()
     result = api(imp, exp)("import_avatar", params(tmp_path))
     assert result == {"verified": True, "avatar_count": 1}
-    assert len(imp.calls) == 1 and imp.calls[0][1] == "option"
-    assert exp.option_calls == 1
+    assert len(imp.calls) == 1 and imp.calls[0].endswith("avatar.avt")
 
 
-def test_import_avatar_new_option_factory_fallback(tmp_path):
+def test_import_avatar_missing_option_factory_is_irrelevant(tmp_path):
     exp = ExportAPI()
     exp.ImportExportOption = None
-    exp.NewImportExportOption = lambda: "new-option"
+    exp.NewImportExportOption = None
     result = api(ImportAPI(), exp)("import_avatar", params(tmp_path))
     assert result["verified"] is True
 
@@ -101,7 +100,7 @@ def test_import_avatar_contract_rejects_bad_paths(file_path):
 
 def test_import_avatar_missing_binding():
     imp = ImportAPI()
-    imp.ImportAvatar = None
+    imp.ImportFile = None
     with pytest.raises(CommandError, match="api_unavailable"):
         api(imp, ExportAPI())._import_avatar({"file_path": "C:/none.avt"})
 

@@ -329,7 +329,7 @@ CURRENT_PRIMARY = {
     "get_pattern_outline": ["GetPatternOutlinePoints"],
     "get_pattern_lines": ["GetPatternLineInfo"],
     "add_seamline_pair": ["AddSeamlinePairGroup"],
-    "import_avatar": ["ImportAvatar"],
+    "import_avatar": ["ImportFile"],
     "create_pattern": ["CreatePatternWithPoints", "SetPatternPieceName"],
     "set_pattern_name": ["SetPatternPieceName"],
     "copy_pattern_with_offset": ["CopyPatternPieceMove", "SetPatternPieceName"],
@@ -386,7 +386,7 @@ def current_inventory(files):
                           "pattern_api.GetPatternLineInfo", "pattern_api.GetPatternPieceArea",
                           "pattern_api.GetBoundingBoxOfPattern", "pattern_api.GetSeamlinePairGroupCount"]
         if name == "import_avatar":
-            primary = ["import_api.ImportAvatar"]
+            primary = ["import_api.ImportFile"]
             supporting = ["export_api.GetAvatarCount"]
         if name == "create_test_rectangle":
             supporting = ["pattern_api.GetPatternCount"]

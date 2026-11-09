@@ -332,9 +332,9 @@ class PatternAPI:
         return {"verified": True, "seam_count": seams_after}
 
     def _import_avatar(self, p):
-        """Import one .avt avatar; verify count+1, no filename echo or retry."""
+        """Import one .avt avatar via ImportFile; verify count+1, no path echo."""
         imp, exp = self.modules.get("import_api"), self.modules.get("export_api")
-        if not callable(getattr(imp, "ImportAvatar", None)) or not callable(
+        if not callable(getattr(imp, "ImportFile", None)) or not callable(
                 getattr(exp, "GetAvatarCount", None)):
             raise CommandError("api_unavailable")
         path = p["file_path"]
@@ -346,13 +346,8 @@ class PatternAPI:
         before = exp.GetAvatarCount()
         if type(before) is not int or not 0 <= before < MAX_AVATARS:
             raise CommandError("invalid_native_result")
-        factory = getattr(exp, "ImportExportOption", None)
         try:
-            option = factory() if callable(factory) else exp.NewImportExportOption()
-        except Exception:
-            raise CommandError("api_unavailable") from None
-        try:
-            imported = imp.ImportAvatar(path, option)
+            imported = imp.ImportFile(path)
         except Exception:
             raise CommandError("scene_change_unverified") from None
         if type(imported) is not bool or imported is not True:

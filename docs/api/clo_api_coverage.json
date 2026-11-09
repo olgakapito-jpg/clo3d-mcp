@@ -10,11 +10,11 @@
     },
     {
       "path": "clo_source_mappings.json",
-      "sha256": "485a0b4e717ea54e0d128de50f74bb58e9ef793d8f36135d21bde0c45f2cb471"
+      "sha256": "50f2f852621542d1c5df5b7ee9769ef3ec3d8a1ec90bb77c86a5e6ddf1bd30ed"
     },
     {
       "path": "current_operation_scope.json",
-      "sha256": "26ca83e22e78a57d41f9428f6350e8dcbd5b47d8976701fb021bbc6d9050a9d2"
+      "sha256": "0548baf8f7e5268804fb5a71d270dded4b23c6180f7834bf4ad8758cc0341fe4"
     },
     {
       "path": "review_gates.json",
@@ -96,7 +96,7 @@
     },
     {
       "path": "coverage/import_api-01.json",
-      "sha256": "2a89c7caa96d99d1c5f21445f024b79ece97ec5f4fa9ce3fd91c04e0ce06276b",
+      "sha256": "32dc719e64ce980c11351d6abca0246da77207c1efc423499fbc8f72022b8e23",
       "count": 42
     },
     {

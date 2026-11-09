@@ -76,7 +76,7 @@ Legacy copy_pattern/CopyPatternPiecePos не объявлен эквивален
 - `get_pattern_list` (pattern_package): `pattern_api.GetPatternCount`, `pattern_api.GetPatternPieceName`; evidence `docs/PATTERN_API_CHECK.md`.
 - `get_pattern_outline` (pattern_package): `pattern_api.GetPatternOutlinePoints`; evidence `docs/CLO_OUTLINE_CHECK.md`.
 - `get_session_info` (base_service): нет фиксированного native вызова; evidence `docs/P3_MCP_CHECK.md`.
-- `import_avatar` (pattern_package): `import_api.ImportAvatar`; evidence `docs/PATTERN_API_CHECK.md`.
+- `import_avatar` (pattern_package): `import_api.ImportFile`; evidence `docs/PATTERN_API_CHECK.md`.
 - `list_clo_api` (pattern_package): нет фиксированного native вызова; evidence `docs/PATTERN_API_CHECK.md`.
 - `move_pattern_relative` (pattern_package): `pattern_api.SetPatternPieceMove`; evidence `docs/PATTERN_API_CHECK.md`.
 - `ping` (base_service): нет фиксированного native вызова; evidence `docs/P3_MCP_CHECK.md`.

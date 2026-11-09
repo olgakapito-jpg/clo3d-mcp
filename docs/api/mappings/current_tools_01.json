@@ -271,16 +271,16 @@
         "function": "PatternAPI.__call__",
         "path": "src/clo3d_mcp/pattern_api.py",
         "lines": [
-          369,
-          406
+          364,
+          401
         ]
       },
       {
         "function": "PatternAPI._mutate",
         "path": "src/clo3d_mcp/pattern_api.py",
         "lines": [
-          408,
-          510
+          403,
+          505
         ]
       },
       {
@@ -1006,8 +1006,8 @@
         "expression": "self.pattern.SetPatternPieceName(i, p['name'])",
         "path": "src/clo3d_mcp/pattern_api.py",
         "lines": [
-          434,
-          434
+          429,
+          429
         ],
         "role": "primary_effect_or_read"
       },
@@ -1017,8 +1017,8 @@
         "expression": "self.pattern.CopyPatternPieceMove(i, float(p['dx']), float(p['dy']))",
         "path": "src/clo3d_mcp/pattern_api.py",
         "lines": [
-          447,
-          447
+          442,
+          442
         ],
         "role": "primary_effect_or_read"
       },
@@ -1028,8 +1028,8 @@
         "expression": "self.pattern.SetPatternPieceName(i, p['name'])",
         "path": "src/clo3d_mcp/pattern_api.py",
         "lines": [
-          469,
-          469
+          464,
+          464
         ],
         "role": "primary_effect_or_read"
       },
@@ -1093,16 +1093,16 @@
         "function": "PatternAPI.__call__",
         "path": "src/clo3d_mcp/pattern_api.py",
         "lines": [
-          369,
-          406
+          364,
+          401
         ]
       },
       {
         "function": "PatternAPI._mutate",
         "path": "src/clo3d_mcp/pattern_api.py",
         "lines": [
-          408,
-          510
+          403,
+          505
         ]
       },
       {
@@ -1296,8 +1296,8 @@
         "expression": "self.pattern.CreatePatternWithPoints([(float(x), float(y), int(t)) for (x, y), t in zip(p['points'], types)])",
         "path": "src/clo3d_mcp/pattern_api.py",
         "lines": [
-          425,
-          425
+          420,
+          420
         ],
         "role": "primary_effect_or_read"
       },
@@ -1307,8 +1307,8 @@
         "expression": "self.pattern.SetPatternPieceName(i, p['name'])",
         "path": "src/clo3d_mcp/pattern_api.py",
         "lines": [
-          434,
-          434
+          429,
+          429
         ],
         "role": "primary_effect_or_read"
       },
@@ -1318,8 +1318,8 @@
         "expression": "self.pattern.SetPatternPieceName(i, p['name'])",
         "path": "src/clo3d_mcp/pattern_api.py",
         "lines": [
-          469,
-          469
+          464,
+          464
         ],
         "role": "primary_effect_or_read"
       },
@@ -1394,16 +1394,16 @@
         "function": "PatternAPI.__call__",
         "path": "src/clo3d_mcp/pattern_api.py",
         "lines": [
-          369,
-          406
+          364,
+          401
         ]
       },
       {
         "function": "PatternAPI._mutate",
         "path": "src/clo3d_mcp/pattern_api.py",
         "lines": [
-          408,
-          510
+          403,
+          505
         ]
       },
       {
@@ -1618,8 +1618,8 @@
         "expression": "self.pattern.CreatePatternWithPoints([(float(x), float(y), int(t)) for (x, y), t in zip(p['points'], types)])",
         "path": "src/clo3d_mcp/pattern_api.py",
         "lines": [
-          425,
-          425
+          420,
+          420
         ],
         "role": "primary_effect_or_read"
       },
@@ -1907,8 +1907,8 @@
         "expression": "self.pattern.DeletePatternPiece(i)",
         "path": "src/clo3d_mcp/pattern_api.py",
         "lines": [
-          450,
-          450
+          445,
+          445
         ],
         "role": "primary_effect_or_read"
       },
@@ -1972,16 +1972,16 @@
         "function": "PatternAPI.__call__",
         "path": "src/clo3d_mcp/pattern_api.py",
         "lines": [
-          369,
-          406
+          364,
+          401
         ]
       },
       {
         "function": "PatternAPI._mutate",
         "path": "src/clo3d_mcp/pattern_api.py",
         "lines": [
-          408,
-          510
+          403,
+          505
         ]
       },
       {
@@ -2132,8 +2132,8 @@
         "function": "PatternAPI.__call__",
         "path": "src/clo3d_mcp/pattern_api.py",
         "lines": [
-          369,
-          406
+          364,
+          401
         ]
       }
     ],
@@ -3476,8 +3476,8 @@
         "function": "PatternAPI.__call__",
         "path": "src/clo3d_mcp/pattern_api.py",
         "lines": [
-          369,
-          406
+          364,
+          401
         ]
       },
       {
@@ -3710,16 +3710,16 @@
         "function": "PatternAPI.__call__",
         "path": "src/clo3d_mcp/pattern_api.py",
         "lines": [
-          369,
-          406
+          364,
+          401
         ]
       },
       {
         "function": "PatternAPI._mutate",
         "path": "src/clo3d_mcp/pattern_api.py",
         "lines": [
-          408,
-          510
+          403,
+          505
         ]
       },
       {
@@ -3892,8 +3892,8 @@
         "function": "PatternAPI.__call__",
         "path": "src/clo3d_mcp/pattern_api.py",
         "lines": [
-          369,
-          406
+          364,
+          401
         ]
       },
       {
@@ -4099,8 +4099,8 @@
         "function": "PatternAPI.__call__",
         "path": "src/clo3d_mcp/pattern_api.py",
         "lines": [
-          369,
-          406
+          364,
+          401
         ]
       },
       {
@@ -4247,7 +4247,7 @@
     ],
     "contract_acceptance": "existing_limited_evidence_not_full_official_overload_or_build_acceptance",
     "primary_native_ids": [
-      "import_api.ImportAvatar"
+      "import_api.ImportFile"
     ],
     "primary_native_role": "effect",
     "supporting_native_ids": [
@@ -4255,7 +4255,7 @@
     ],
     "native_ids": [
       "export_api.GetAvatarCount",
-      "import_api.ImportAvatar"
+      "import_api.ImportFile"
     ],
     "native_reference_evidence": [
       {
@@ -4318,16 +4318,16 @@
         "function": "PatternAPI.__call__",
         "path": "src/clo3d_mcp/pattern_api.py",
         "lines": [
-          369,
-          406
+          364,
+          401
         ]
       },
       {
         "function": "PatternAPI._mutate",
         "path": "src/clo3d_mcp/pattern_api.py",
         "lines": [
-          408,
-          510
+          403,
+          505
         ]
       },
       {
@@ -4427,8 +4427,8 @@
         "function": "PatternAPI.__call__",
         "path": "src/clo3d_mcp/pattern_api.py",
         "lines": [
-          369,
-          406
+          364,
+          401
         ]
       }
     ],
@@ -4594,8 +4594,8 @@
         "expression": "self.pattern.SetPatternPieceMove(i, float(p['dx']), float(p['dy']))",
         "path": "src/clo3d_mcp/pattern_api.py",
         "lines": [
-          439,
-          439
+          434,
+          434
         ],
         "role": "primary_effect_or_read"
       },
@@ -4659,16 +4659,16 @@
         "function": "PatternAPI.__call__",
         "path": "src/clo3d_mcp/pattern_api.py",
         "lines": [
-          369,
-          406
+          364,
+          401
         ]
       },
       {
         "function": "PatternAPI._mutate",
         "path": "src/clo3d_mcp/pattern_api.py",
         "lines": [
-          408,
-          510
+          403,
+          505
         ]
       },
       {
@@ -5043,8 +5043,8 @@
         "expression": "self.pattern.SetPatternPieceName(i, p['name'])",
         "path": "src/clo3d_mcp/pattern_api.py",
         "lines": [
-          434,
-          434
+          429,
+          429
         ],
         "role": "primary_effect_or_read"
       },
@@ -5054,8 +5054,8 @@
         "expression": "self.pattern.SetPatternPieceName(i, p['name'])",
         "path": "src/clo3d_mcp/pattern_api.py",
         "lines": [
-          469,
-          469
+          464,
+          464
         ],
         "role": "primary_effect_or_read"
       },
@@ -5119,16 +5119,16 @@
         "function": "PatternAPI.__call__",
         "path": "src/clo3d_mcp/pattern_api.py",
         "lines": [
-          369,
-          406
+          364,
+          401
         ]
       },
       {
         "function": "PatternAPI._mutate",
         "path": "src/clo3d_mcp/pattern_api.py",
         "lines": [
-          408,
-          510
+          403,
+          505
         ]
       },
       {
