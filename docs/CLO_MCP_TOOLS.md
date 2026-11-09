@@ -448,6 +448,20 @@ Child/pose/measurement/project/import-other-format не входят. Required a
 файл — не этот tool. Live gate: Mannequin avt → count0→1, name
 `Female_Mannequin_final_v11_Aforsize_03`; path не эхоился.
 
+## 23. get_arrangement
+
+**Source, read-only.** `GetArrangementList()` для длины библиотеки и
+`GetArrangementOfPattern(i)` для каждой детали. Native dict содержит строки:
+`ArrangementName`, `ArrangementOffsetX/Y/Z`, `ArrangementOrientation`,
+`ArrangementType`; tool парсит numeric strings в finite numbers и возвращает
+`pattern_index/name`, `arrangement_name`, `offset{x,y,z}`, `orientation`,
+`type`, `arrangement_library_count`, `units:"native_unspecified"`. Units/degrees
+не заявлены; 3D fit не проверяется. Read-only, list drift → inventory_changed,
+bad shape/numeric → invalid_native_result, без retry. Set/arrangement/drape tools
+не входят. Live probe: count4, library110, все поля строки. Valid synthetic: `{}`.
+Composition: fresh list → get_arrangement → при необходимости будущие setters.
+Anti-selection: «поставь на аватар/сделай посадку» — не этот tool.
+
 ## Ошибки и безопасные действия
 
 - invalid_parameters: проверить schema/bounds/extras, не пробовать наугад.

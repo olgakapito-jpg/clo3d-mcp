@@ -22,7 +22,7 @@ LICENSE/NOTICE: pinned URLs и SHA-256 в JSON; NOTICE указывает upstre
 - `shared_donor_legacy_tool_names`: `44`
 - `donor_only_tool_names`: `126`
 - `legacy_only_tool_names`: `['import_dxf', 'list_extensions', 'ping']`
-- `current_tools`: `22`
+- `current_tools`: `23`
 
 ## Схема и доказательства
 
@@ -67,6 +67,7 @@ Legacy copy_pattern/CopyPatternPiecePos не объявлен эквивален
 - `create_test_rectangle` (base_service): `pattern_api.CreatePatternWithPoints`; evidence `docs/P3_MCP_CHECK.md`.
 - `delete_pattern` (pattern_package): `pattern_api.DeletePatternPiece`; evidence `docs/PATTERN_API_CHECK.md`.
 - `describe_clo_api` (pattern_package): нет фиксированного native вызова; evidence `docs/PATTERN_API_CHECK.md`.
+- `get_arrangement` (pattern_package): `pattern_api.GetArrangementList`, `pattern_api.GetArrangementOfPattern`; evidence `docs/PATTERN_API_CHECK.md`.
 - `get_avatars` (pattern_package): `export_api.GetAvatarCount`, `export_api.GetAvatarNameList`; evidence `docs/CLO_INVENTORY_CHECK.md`.
 - `get_fabric_list` (pattern_package): `fabric_api.GetFabricCount`, `fabric_api.GetFabricName`; evidence `docs/CLO_INVENTORY_CHECK.md`.
 - `get_pattern_count` (base_service): `pattern_api.GetPatternCount`; evidence `docs/P3_MCP_CHECK.md`.

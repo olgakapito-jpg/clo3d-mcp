@@ -44,6 +44,10 @@ LOCAL_INPUTS = (
     "src/clo3d_mcp/fabric_assignment_api.py", "tests/test_fabric_assignment_api.py",
     "docs/CLO_FABRIC_ASSIGNMENT_CHECK.md",
     "tests/test_pattern_outline.py", "docs/CLO_OUTLINE_CHECK.md",
+    "tests/test_pattern_lines.py", "tests/test_seam_api.py",
+    "tests/test_import_avatar_api.py", "tests/test_arrangement_api.py",
+    "docs/CLO_LINE_API_CONTRACT_REVIEW.md", "docs/CLO_SEAMLINING_CHECK.md",
+    "docs/CLO_FIT_CHECK.md",
 )
 
 
@@ -330,6 +334,7 @@ CURRENT_PRIMARY = {
     "get_pattern_lines": ["GetPatternLineInfo"],
     "add_seamline_pair": ["AddSeamlinePairGroup"],
     "import_avatar": ["ImportFile"],
+    "get_arrangement": ["GetArrangementList", "GetArrangementOfPattern"],
     "create_pattern": ["CreatePatternWithPoints", "SetPatternPieceName"],
     "set_pattern_name": ["SetPatternPieceName"],
     "copy_pattern_with_offset": ["CopyPatternPieceMove", "SetPatternPieceName"],
@@ -337,7 +342,7 @@ CURRENT_PRIMARY = {
     "delete_pattern": ["DeletePatternPiece"],
 }
 PATTERN_TOOLS = frozenset(("list_clo_api", "describe_clo_api", "get_pattern_list", "get_pattern_geometry",
-                           "create_pattern", "set_pattern_name", "copy_pattern_with_offset", "move_pattern_relative", "delete_pattern", "get_pattern_outline", "get_pattern_lines", "add_seamline_pair", "import_avatar"))
+                           "create_pattern", "set_pattern_name", "copy_pattern_with_offset", "move_pattern_relative", "delete_pattern", "get_pattern_outline", "get_pattern_lines", "get_arrangement", "add_seamline_pair", "import_avatar"))
 DOMAIN_TOOLS = frozenset(("get_fabric_list", "get_avatars",
                           "get_pattern_fabric", "assign_pattern_fabric"))
 BASE_SERVICE_TOOLS = frozenset(("ping", "get_pattern_count", "transport_status",
@@ -388,6 +393,8 @@ def current_inventory(files):
         if name == "import_avatar":
             primary = ["import_api.ImportFile"]
             supporting = ["export_api.GetAvatarCount"]
+        if name == "get_arrangement":
+            supporting = ["pattern_api.GetPatternCount", "pattern_api.GetPatternPieceName"]
         if name == "create_test_rectangle":
             supporting = ["pattern_api.GetPatternCount"]
         if assignment_tool:

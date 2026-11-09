@@ -564,7 +564,7 @@ def test_json_client_initializes_inventory_single_post_no_get_or_delete():
             client = vd.JsonMCPClient(http, vd.Limits())
             runner = vd.Runner(client)
             await runner.rpc("initialize", client.initialize)
-            assert len((await client.list_tools()).tools) == 22
+            assert len((await client.list_tools()).tools) == 23
     asyncio.run(scenario())
     assert [r.method for r in requests] == ["POST"] * 3
     assert "Mcp-Session-Id" in requests[-1].headers

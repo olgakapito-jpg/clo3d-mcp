@@ -47,6 +47,15 @@
       "decision": "complete", "blockers": [], "stop_conditions": ["error", "outcome_unknown", "schema_mismatch", "session_change", "stale_target"]
     },
     {
+      "id": "arrangement_read", "intent": "Прочитай arrangement текущих деталей: пресет, offsets и orientation; ничего не меняй и не запускай drape.",
+      "profile": "current23", "scope": "read_only", "fixture": {"ready": true, "patterns": ["panel"]},
+      "expected_tools": ["get_session_info", "get_pattern_list", "get_arrangement"],
+      "forbidden_tools": ["move_pattern_relative", "delete_pattern", "call_api"],
+      "forbidden_effects": ["scene_mutation", "diagnostic_mutation", "unknown"],
+      "required_args": {},
+      "decision": "complete", "blockers": [], "stop_conditions": ["error", "outcome_unknown", "schema_mismatch", "session_change", "stale_target"]
+    },
+    {
       "id": "outline_not_curve_controls", "intent": "Извлеки точные управляющие точки кривых и индексы швов panel. Endpoint-only outline этого не предоставляет.",
       "profile": "current19", "scope": "read_only", "fixture": {"ready": true, "patterns": ["panel"]},
       "expected_tools": [], "forbidden_tools": ["get_pattern_outline", "call_api"],

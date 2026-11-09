@@ -194,16 +194,34 @@
         "lines": 258
       },
       {
+        "path": "docs/CLO_FIT_CHECK.md",
+        "sha256": "7a075280cb84418198160db1da99054036d2ec5348cec0b25341e8204a1e7ebc",
+        "bytes": 1872,
+        "lines": 33
+      },
+      {
         "path": "docs/CLO_INVENTORY_CHECK.md",
         "sha256": "e48524f0c1fb9ed02240c81fa093776d375a3f387ba2bacbc2dd13012a4f4ab6",
         "bytes": 15295,
         "lines": 184
       },
       {
+        "path": "docs/CLO_LINE_API_CONTRACT_REVIEW.md",
+        "sha256": "f377488885f026d1327437e8906cc67d1cb5d69ceb0c74640f446c07e7037c81",
+        "bytes": 34775,
+        "lines": 445
+      },
+      {
         "path": "docs/CLO_OUTLINE_CHECK.md",
         "sha256": "18a5e0db008d3e243102cc9a21f120ffc88e6fe36e91f061f9a33f3f8a23edab",
         "bytes": 19452,
         "lines": 233
+      },
+      {
+        "path": "docs/CLO_SEAMLINING_CHECK.md",
+        "sha256": "5e2d1675b3f4866187332cc0e538ff23a4a801bec9feb6dad83d5862b21d2e76",
+        "bytes": 4706,
+        "lines": 80
       },
       {
         "path": "docs/P3_MCP_CHECK.md",
@@ -243,15 +261,15 @@
       },
       {
         "path": "src/clo3d_mcp/pattern_api.py",
-        "sha256": "f27505ecdb21f76cd88afe8d52e8fa7ffa15c9e2b941e50f44797835476f5b01",
-        "bytes": 25542,
-        "lines": 505
+        "sha256": "85e333fa41338019351a7a59dc98035c6ea4297ca9b1588d79812839791a9d65",
+        "bytes": 28067,
+        "lines": 551
       },
       {
         "path": "src/clo3d_mcp/pattern_contract.py",
-        "sha256": "262864a4c3e361bf0939f42a352c25a0859268c6585cf1d2d73f6dc24ea5ee6c",
-        "bytes": 16812,
-        "lines": 340
+        "sha256": "53d942f461ec0651ffe8e74b19ab6b0bb9b4c22d40a1d022969bdd6e39325d8a",
+        "bytes": 18317,
+        "lines": 363
       },
       {
         "path": "src/clo3d_mcp/pipe_runtime.py",
@@ -279,19 +297,31 @@
       },
       {
         "path": "src/clo3d_mcp/transport_server.py",
-        "sha256": "6c51d8fe0368ec5f79c2e49a2292b65ac6eeee48cfd7df594e82bcc61fb8983b",
-        "bytes": 26295,
-        "lines": 516
+        "sha256": "27895763407a1941cb3071c6dc1ec7a170fbdd9b8432a8e6132cb70bf1670a02",
+        "bytes": 26927,
+        "lines": 528
+      },
+      {
+        "path": "tests/test_arrangement_api.py",
+        "sha256": "572e6ad90d1dea47005a75ddd22844ff55617088a3999d96283971cdf627073e",
+        "bytes": 3572,
+        "lines": 92
       },
       {
         "path": "tests/test_fabric_assignment_api.py",
-        "sha256": "d3b694b7e2dffec4e13972f407dbab6d3868b6a838c29600a8d977e3936d859d",
+        "sha256": "2bbb070d083b56e9caca79b17acb3c07be4e59f7aa031c20079be7d47ec5f692",
         "bytes": 19410,
         "lines": 429
       },
       {
+        "path": "tests/test_import_avatar_api.py",
+        "sha256": "cfc7302019748441343f1981fc165d5d727e7a1a71adaa55bff08487302beed2",
+        "bytes": 4016,
+        "lines": 115
+      },
+      {
         "path": "tests/test_inventory_api.py",
-        "sha256": "caf0e668bf1e9f715b1f1bc2cc3a9ceb8e7ba3f7c04d326ab283288383a3f4ba",
+        "sha256": "ca45493991c525039b4904080434c2b884477ac41d9606f579231addf7968429",
         "bytes": 12876,
         "lines": 295
       },
@@ -302,10 +332,22 @@
         "lines": 268
       },
       {
+        "path": "tests/test_pattern_lines.py",
+        "sha256": "ae4bc4d391c9f29e6ed3b2652037b28e10ad6dbf94534fbfb1b2321fd3faf7ae",
+        "bytes": 9371,
+        "lines": 222
+      },
+      {
         "path": "tests/test_pattern_outline.py",
-        "sha256": "f6a13578686f92ed08036dbef09fa954cd707a47b25380915221d2ad796c988d",
+        "sha256": "e0d34a9a2a0a9cd9a99fe13bd17d892165ea528ee51f5ae3fcd679a6f888115a",
         "bytes": 10506,
         "lines": 269
+      },
+      {
+        "path": "tests/test_seam_api.py",
+        "sha256": "ce46ac904fb1fa75b0063c1320884b78c62464b31db442248f0dbedddc684624",
+        "bytes": 5766,
+        "lines": 156
       },
       {
         "path": "tests/test_service_executor.py",
@@ -389,8 +431,8 @@
       "tools_shards": [
         {
           "path": "mappings/current_tools_01.json",
-          "sha256": "97c4996a61d4658a2c41009ff7284db08b38f944bfcf275ff9d844d3cc8ed682",
-          "entries": 22
+          "sha256": "98bc8a7161a6ae0e9248ad6405368284c0b2303a3a066e4de09324a3c9efe949",
+          "entries": 23
         }
       ]
     }
@@ -412,7 +454,7 @@
       "list_extensions",
       "ping"
     ],
-    "current_tools": 22
+    "current_tools": 23
   },
   "limitations": [
     "Static AST evidence only. No donor/local inspected module import, no CLO call, restart, mutation or SDK execution.",

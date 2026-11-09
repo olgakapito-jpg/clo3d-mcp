@@ -23,7 +23,7 @@ CURRENT_TOOLS = frozenset((
     "set_pattern_name", "copy_pattern_with_offset", "move_pattern_relative",
     "delete_pattern", "get_fabric_list", "get_avatars",
     "get_pattern_fabric", "assign_pattern_fabric",
-    "get_pattern_outline", "get_pattern_lines",
+    "get_pattern_outline", "get_pattern_lines", "get_arrangement",
     "add_seamline_pair", "import_avatar",
 ))
 MODULES = ("pattern_api", "export_api", "fabric_api", "import_api", "utility_api")

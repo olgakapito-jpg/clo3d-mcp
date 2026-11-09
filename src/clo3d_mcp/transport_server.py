@@ -289,6 +289,18 @@ def add_pattern_tools(mcp, service, read):
         return await service.call("get_pattern_lines", {
             "pattern_index": pattern_index, "expected_name": expected_name})
 
+    @mcp.tool(annotations=read)
+    async def get_arrangement() -> dict[str, Any]:
+        """Read every pattern's current arrangement preset, offsets and orientation.
+
+        Read-only. Returns pattern_index/name, arrangement name/type, native
+        string offsets parsed as finite numbers and orientation; units are NOT
+        established (native_unspecified), so do not call them mm/degrees or claim
+        3D fit. Empty arrangement lists are not fit acceptance; no setters,
+        drape or simulation are called. stale/inventory drift stops without retry.
+        """
+        return await service.call("get_arrangement")
+
     @mcp.tool(annotations=mutation)
     async def add_seamline_pair(pattern_a_index: StrictInt, expected_name_a: StrictStr,
                                 line_a_index: StrictInt, pattern_b_index: StrictInt,

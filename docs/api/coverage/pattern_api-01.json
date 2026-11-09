@@ -2327,7 +2327,14 @@
       "units": "not_checked",
       "implementation": "planned",
       "overload_coverage": "not_established",
-      "current_operation": null,
+      "current_operation": {
+        "symbol": "pattern_api.GetArrangementList",
+        "tools": [
+          "get_arrangement"
+        ],
+        "call_arity": 0,
+        "scope_reference": "docs/api/current_operation_scope.json"
+      },
       "donor_tools": [
         "get_arrangement_list"
       ],
@@ -2382,7 +2389,14 @@
       "units": "not_checked",
       "implementation": "planned",
       "overload_coverage": "not_established",
-      "current_operation": null,
+      "current_operation": {
+        "symbol": "pattern_api.GetArrangementOfPattern",
+        "tools": [
+          "get_arrangement"
+        ],
+        "call_arity": 1,
+        "scope_reference": "docs/api/current_operation_scope.json"
+      },
       "donor_tools": [
         "get_pattern_arrangements"
       ],
@@ -2435,7 +2449,14 @@
       "units": "not_checked",
       "implementation": "planned",
       "overload_coverage": "not_established",
-      "current_operation": null,
+      "current_operation": {
+        "symbol": "pattern_api.GetArrangementOfPattern",
+        "tools": [
+          "get_arrangement"
+        ],
+        "call_arity": 1,
+        "scope_reference": "docs/api/current_operation_scope.json"
+      },
       "donor_tools": [
         "get_pattern_arrangements"
       ],
@@ -2488,7 +2509,14 @@
       "units": "not_checked",
       "implementation": "planned",
       "overload_coverage": "not_established",
-      "current_operation": null,
+      "current_operation": {
+        "symbol": "pattern_api.GetArrangementOfPattern",
+        "tools": [
+          "get_arrangement"
+        ],
+        "call_arity": 1,
+        "scope_reference": "docs/api/current_operation_scope.json"
+      },
       "donor_tools": [
         "get_pattern_arrangements"
       ],

@@ -7,6 +7,7 @@ verified UI executor. A setter plus readback is not an atomic transaction.
 import json
 import math
 import os
+import re
 import time
 
 from clo3d_mcp.pattern_contract import (
@@ -357,6 +358,49 @@ class PatternAPI:
             raise CommandError("scene_change_unverified")
         return {"verified": True, "avatar_count": after}
 
+    def _arrangements(self):
+        """Read every piece's current arrangement; numeric text stays un-united."""
+        self._require("GetPatternCount", "GetPatternPieceName",
+                      "GetArrangementList", "GetArrangementOfPattern")
+        before = self._list()
+        library = self.pattern.GetArrangementList()
+        if type(library) is not list or len(library) > 4096:
+            raise CommandError("invalid_native_result")
+
+        def numeric(text):
+            if type(text) is not str or not re.fullmatch(r"-?\d+(\.\d+)?", text):
+                raise CommandError("invalid_native_result")
+            value = float(text)
+            if not math.isfinite(value) or abs(value) > 1e16:
+                raise CommandError("invalid_native_result")
+            return value
+
+        pieces = []
+        for i, item in enumerate(before["patterns"]):
+            value = self.pattern.GetArrangementOfPattern(i)
+            if type(value) is not dict or set(value) != {
+                    "ArrangementName", "ArrangementOffsetX", "ArrangementOffsetY",
+                    "ArrangementOffsetZ", "ArrangementOrientation", "ArrangementType"}:
+                raise CommandError("invalid_native_result")
+            name = value["ArrangementName"]
+            kind = value["ArrangementType"]
+            if (type(name) is not str or len(name) > 128
+                    or not all(ord(c) >= 32 and not 0xD800 <= ord(c) <= 0xDFFF for c in name)
+                    or type(kind) is not str or not 1 <= len(kind) <= 32
+                    or not all(ord(c) >= 32 and not 0xD800 <= ord(c) <= 0xDFFF for c in kind)):
+                raise CommandError("invalid_native_result")
+            pieces.append({"pattern_index": i, "pattern_name": item["name"],
+                           "arrangement_name": name,
+                           "offset": {"x": numeric(value["ArrangementOffsetX"]),
+                                      "y": numeric(value["ArrangementOffsetY"]),
+                                      "z": numeric(value["ArrangementOffsetZ"])},
+                           "orientation": numeric(value["ArrangementOrientation"]),
+                           "type": kind})
+        if self._list() != before:
+            raise CommandError("inventory_changed")
+        return {"pattern_count": len(pieces), "arrangement_library_count": len(library),
+                "pieces": pieces, "units": "native_unspecified"}
+
     @staticmethod
     def _near(a, b):
         return math.isclose(a, b, rel_tol=1e-5, abs_tol=0.05)
@@ -392,6 +436,8 @@ class PatternAPI:
             result = self._seam(params)
         elif command == "import_avatar":
             result = self._import_avatar(params)
+        elif command == "get_arrangement":
+            result = self._arrangements()
         else:
             result = self._mutate(command, params)
             # Includes preflight, native setter(s) AND verification reads, not
