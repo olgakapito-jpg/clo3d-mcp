@@ -304,7 +304,14 @@
       "units": "not_checked",
       "implementation": "planned",
       "overload_coverage": "not_established",
-      "current_operation": null,
+      "current_operation": {
+        "symbol": "export_api.ExportStdViewImage",
+        "tools": [
+          "export_view_image"
+        ],
+        "call_arity": 6,
+        "scope_reference": "docs/api/current_operation_scope.json"
+      },
       "donor_tools": [
         "export_view_image"
       ],
@@ -357,7 +364,14 @@
       "units": "not_checked",
       "implementation": "planned",
       "overload_coverage": "not_established",
-      "current_operation": null,
+      "current_operation": {
+        "symbol": "export_api.ExportStdViewImage",
+        "tools": [
+          "export_view_image"
+        ],
+        "call_arity": 6,
+        "scope_reference": "docs/api/current_operation_scope.json"
+      },
       "donor_tools": [
         "export_view_image"
       ],
@@ -693,7 +707,14 @@
       "units": "not_checked",
       "implementation": "planned",
       "overload_coverage": "not_established",
-      "current_operation": null,
+      "current_operation": {
+        "symbol": "export_api.ExportThumbnail2D",
+        "tools": [
+          "export_snapshot_2d"
+        ],
+        "call_arity": 1,
+        "scope_reference": "docs/api/current_operation_scope.json"
+      },
       "donor_tools": [],
       "legacy_tools": [],
       "verification": "not_tested",
@@ -744,7 +765,14 @@
       "units": "not_checked",
       "implementation": "planned",
       "overload_coverage": "not_established",
-      "current_operation": null,
+      "current_operation": {
+        "symbol": "export_api.ExportThumbnail3D",
+        "tools": [
+          "get_3d_screenshot"
+        ],
+        "call_arity": 1,
+        "scope_reference": "docs/api/current_operation_scope.json"
+      },
       "donor_tools": [
         "export_thumbnail"
       ],
@@ -799,7 +827,14 @@
       "units": "not_checked",
       "implementation": "planned",
       "overload_coverage": "not_established",
-      "current_operation": null,
+      "current_operation": {
+        "symbol": "export_api.ExportThumbnail3D",
+        "tools": [
+          "get_3d_screenshot"
+        ],
+        "call_arity": 1,
+        "scope_reference": "docs/api/current_operation_scope.json"
+      },
       "donor_tools": [
         "export_thumbnail"
       ],
@@ -2694,7 +2729,14 @@
       "units": "not_checked",
       "implementation": "planned",
       "overload_coverage": "not_established",
-      "current_operation": null,
+      "current_operation": {
+        "symbol": "export_api.GetCurrentColorwayIndex",
+        "tools": [
+          "export_view_image"
+        ],
+        "call_arity": 0,
+        "scope_reference": "docs/api/current_operation_scope.json"
+      },
       "donor_tools": [],
       "legacy_tools": [],
       "verification": "not_tested",

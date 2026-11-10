@@ -2223,7 +2223,14 @@
       "units": "not_checked",
       "implementation": "planned",
       "overload_coverage": "not_established",
-      "current_operation": null,
+      "current_operation": {
+        "symbol": "pattern_api.GetAllPatternToAvatarMeasures",
+        "tools": [
+          "get_pattern_avatar_attachments"
+        ],
+        "call_arity": 0,
+        "scope_reference": "docs/api/current_operation_scope.json"
+      },
       "donor_tools": [],
       "legacy_tools": [],
       "verification": "not_tested",
@@ -2330,7 +2337,8 @@
       "current_operation": {
         "symbol": "pattern_api.GetArrangementList",
         "tools": [
-          "get_arrangement"
+          "get_arrangement",
+          "get_arrangement_list"
         ],
         "call_arity": 0,
         "scope_reference": "docs/api/current_operation_scope.json"

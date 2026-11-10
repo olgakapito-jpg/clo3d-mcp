@@ -195,9 +195,9 @@
       },
       {
         "path": "docs/CLO_FIT_CHECK.md",
-        "sha256": "f769fb06ce20df13584784b9e1b875433c0968c0181c7cc18cb68127a531f53f",
-        "bytes": 5025,
-        "lines": 82
+        "sha256": "8e5bde2c74e236700d8aed3afdc604d22150197516547758f03ccf3a5d23ca02",
+        "bytes": 8738,
+        "lines": 132
       },
       {
         "path": "docs/CLO_INVENTORY_CHECK.md",
@@ -219,9 +219,9 @@
       },
       {
         "path": "docs/CLO_SEAMLINING_CHECK.md",
-        "sha256": "5e2d1675b3f4866187332cc0e538ff23a4a801bec9feb6dad83d5862b21d2e76",
-        "bytes": 4706,
-        "lines": 80
+        "sha256": "4bb1e236e28dd52e9f526797ad6755429d1034fb0653d8573c78ece325c21a6d",
+        "bytes": 8002,
+        "lines": 126
       },
       {
         "path": "docs/P3_MCP_CHECK.md",
@@ -261,15 +261,15 @@
       },
       {
         "path": "src/clo3d_mcp/pattern_api.py",
-        "sha256": "b4f4384de9e37fc087d924e37c5fdbdd6388aad4cfcd4545456cbea9e2762d60",
-        "bytes": 31475,
-        "lines": 619
+        "sha256": "f0b06edf03757a87cd3e14b67c216b345f79557783af8f2cd1eb6ede159ce0ff",
+        "bytes": 68426,
+        "lines": 1332
       },
       {
         "path": "src/clo3d_mcp/pattern_contract.py",
-        "sha256": "d1f7ee933589c2d8b9b74c4e485bc12d870f7e015f9c3dfa3c64ea94ca062212",
-        "bytes": 19286,
-        "lines": 377
+        "sha256": "ed120a902aa366abcba903a1a12fcfcce43770d299a5d5d03d6559f3d1ce94a0",
+        "bytes": 35518,
+        "lines": 638
       },
       {
         "path": "src/clo3d_mcp/pipe_runtime.py",
@@ -297,9 +297,9 @@
       },
       {
         "path": "src/clo3d_mcp/transport_server.py",
-        "sha256": "86fef774bee449b9828802d0f6359ba09a38e8fd61d9921a092884343aba7c47",
-        "bytes": 27935,
-        "lines": 545
+        "sha256": "88bd3558fab507d4229f8fb5ef227327afcdfc1226b3a98b52e3ba73894bcc68",
+        "bytes": 43574,
+        "lines": 840
       },
       {
         "path": "tests/test_arrangement_api.py",
@@ -308,8 +308,20 @@
         "lines": 92
       },
       {
+        "path": "tests/test_basic_tools_api.py",
+        "sha256": "d4d79c26095845a0e1d1a7ea1ab24f855209a4dda716efcc66203d9e1fec8b47",
+        "bytes": 8948,
+        "lines": 220
+      },
+      {
+        "path": "tests/test_extended_basic_api.py",
+        "sha256": "edce00ccc8665b809188226f2054b064eac11ebf10765ea507e0c5fe199bde7e",
+        "bytes": 8637,
+        "lines": 221
+      },
+      {
         "path": "tests/test_fabric_assignment_api.py",
-        "sha256": "ec2d7158fc292a578aa459ecc288dff32c90f4d86d864e240807935ce962b1bd",
+        "sha256": "2f5bd0f5783cb33b373edc5b6e9f8e4e74a5f0caa3b63abbd3f12a6e9e81612d",
         "bytes": 19410,
         "lines": 429
       },
@@ -321,7 +333,7 @@
       },
       {
         "path": "tests/test_inventory_api.py",
-        "sha256": "f16ca383d8a8cb647c82d9bb4fb620ed470140ff9137780a734ee4c4b58bb13c",
+        "sha256": "d6789cbbf73fcaaffe7b8de8b0b17565a58ed3fcdf89632c38d846920f36317d",
         "bytes": 12876,
         "lines": 295
       },
@@ -339,9 +351,15 @@
       },
       {
         "path": "tests/test_pattern_outline.py",
-        "sha256": "a0df58583ddedcad11d2ea2516e8cd12a7cdd631d8dbf4a27973c9f6fd45f125",
+        "sha256": "b3fe14d14a3c2aa41f8b013d7db9eb9f5ddb4b6baf864399586af7718dd0ed5e",
         "bytes": 10506,
         "lines": 269
+      },
+      {
+        "path": "tests/test_screenshot_tool.py",
+        "sha256": "158abd130a763bcd730d892d4894764a8768a63f3071a7028ce4521343bce58d",
+        "bytes": 2587,
+        "lines": 75
       },
       {
         "path": "tests/test_seam_api.py",
@@ -360,6 +378,18 @@
         "sha256": "83fe6e4f4b72166efb18367c334707c79b26adafbdaf8cebf6e7df466fada713",
         "bytes": 5053,
         "lines": 138
+      },
+      {
+        "path": "tests/test_set_arrangement_orientation_api.py",
+        "sha256": "7c06db16d3c03061aea1cf030529ef1c995e46cda19aba7705029db010b77e40",
+        "bytes": 5547,
+        "lines": 142
+      },
+      {
+        "path": "tests/test_set_arrangement_position_api.py",
+        "sha256": "f678c29d667e1d6b18832db04e8a22006d05d59cf510c575fc054515fbe3cea8",
+        "bytes": 5557,
+        "lines": 142
       },
       {
         "path": "tests/test_transport_server.py",
@@ -437,8 +467,13 @@
       "tools_shards": [
         {
           "path": "mappings/current_tools_01.json",
-          "sha256": "3484ac835166bfa6131eaea4ba12aaf7f3190d58a074c5e69e1c2af119d0cc1e",
-          "entries": 24
+          "sha256": "60023839a494c1f792526d138e3878e374942d9b5e95ea6f77665d27a6d5b7f1",
+          "entries": 25
+        },
+        {
+          "path": "mappings/current_tools_02.json",
+          "sha256": "7f93c284e0eba211ce5be74952bc230cb364e8ac6c28eb55f25b3d720f984ad9",
+          "entries": 19
         }
       ]
     }
@@ -460,7 +495,7 @@
       "list_extensions",
       "ping"
     ],
-    "current_tools": 24
+    "current_tools": 44
   },
   "limitations": [
     "Static AST evidence only. No donor/local inspected module import, no CLO call, restart, mutation or SDK execution.",

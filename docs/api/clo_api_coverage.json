@@ -10,11 +10,11 @@
     },
     {
       "path": "clo_source_mappings.json",
-      "sha256": "b81342c7fcac690c3749437460e539137cf33d29d9c2d6d50c36337799158e89"
+      "sha256": "ffbc74ebf0565ee7e928337db580d6a1fd4c9a48b6c3217fb056d00e1d4b7a4d"
     },
     {
       "path": "current_operation_scope.json",
-      "sha256": "4efc57fce980eaca2bbda3abbcf82bad9e33f8614f5651f6d9e583145633ca22"
+      "sha256": "c768e75238a9dc1a0f314b843fe71fb8c06c0fe6bda2e4b15d5946ebb94b34a2"
     },
     {
       "path": "review_gates.json",
@@ -29,8 +29,8 @@
     "additional_interfaces": 6,
     "donor_tools": 170,
     "local_legacy_tools": 47,
-    "current_tools": 24,
-    "current_native_operations": 23,
+    "current_tools": 44,
+    "current_native_operations": 52,
     "historical_docstring_names": 43,
     "nonofficial_mapping_names": 4,
     "official_names_with_donor_reference": 332,
@@ -61,7 +61,7 @@
     },
     {
       "path": "coverage/export_api-02.json",
-      "sha256": "74a2d822ef7c15f1a2698b164073f11d4a2e2ea0e344ca1379128b2906fad6e0",
+      "sha256": "e5c3d959ed43a73b60ab8add6007847b5cea2aca77e73675f47a9f6cffe0a82c",
       "count": 56
     },
     {
@@ -96,28 +96,28 @@
     },
     {
       "path": "coverage/import_api-01.json",
-      "sha256": "32dc719e64ce980c11351d6abca0246da77207c1efc423499fbc8f72022b8e23",
+      "sha256": "7da3ba2fef5d8062c55c5416cad7f9713d2d6c01c5e503115f6d4e1133a21213",
       "count": 42
     },
     {
       "path": "coverage/pattern_api-01.json",
-      "sha256": "ff72a4e18552dbfc9a74068532b66e0b211650804a89d995e8bf659ebb0f4d5e",
+      "sha256": "10bd90edf6245d844fea7e059098825835fc82104dc6c4ba5cb95920c781184c",
       "count": 65
     },
     {
       "path": "coverage/pattern_api-02.json",
-      "sha256": "16434d0a1cee5ff5f06ff79f33f3aea63816f512d7e026437582a60b51b72ec2",
-      "count": 66
+      "sha256": "0596c0b389249d02e73180454d4021bb85caca9d56b5c8b2f6520e4268ccc47a",
+      "count": 65
     },
     {
       "path": "coverage/pattern_api-03.json",
-      "sha256": "b640e5bf9a4855d4bbc0f197dd326fb2ec6119541b86cd0170feb759fb4d371e",
+      "sha256": "661311ad0324da54ef3ca6320f5c3aca690168463f72d5a5caba33dbd7578851",
       "count": 66
     },
     {
       "path": "coverage/pattern_api-04.json",
-      "sha256": "0a67fa7616208b0e870c60b024dd662250db3afa8b8eadffb2585ef2c7a7d0e0",
-      "count": 36
+      "sha256": "3fe8c3276153d6e7b293c125d6fc68873fe8f2f54297ce5a207895ee59c872d8",
+      "count": 37
     },
     {
       "path": "coverage/rest_api-01.json",
@@ -126,7 +126,7 @@
     },
     {
       "path": "coverage/utility_api-01.json",
-      "sha256": "c5229c6c6f3e00db224f3b7359153534b18dc33b8331fb55112bd8f3b8182a10",
+      "sha256": "7dd2a46f31b1601d6eae59b6703a1012a058de2bc6b0a08e8636d7b7ba8b09ea",
       "count": 67
     },
     {
@@ -141,23 +141,23 @@
     },
     {
       "path": "coverage/utility_api-04.json",
-      "sha256": "35f641f82e7b3c9b0ccd6b04af58887abdf3a3eb72b141423ca7aa67b097d2ba",
-      "count": 67
+      "sha256": "24a96d0bceb4d6547eb4163102da48bb003963e7b0c5bbfe2f1b9ec11eb3213a",
+      "count": 66
     },
     {
       "path": "coverage/utility_api-05.json",
-      "sha256": "8362ba1ca89d67b30ad081816ca8b14a08ec5fed75159851f5a3b5e829951789",
+      "sha256": "e576ba099e875d398301f4de8bb269ed271aa4ab977eafa173f7b7c591328318",
       "count": 65
     },
     {
       "path": "coverage/utility_api-06.json",
-      "sha256": "5a54681dd87018f403dccdfe4157d0689d98621e1507a1a22c71774d4e4697e2",
+      "sha256": "21c4708d05b03d423cb024266c1706cded28ecf2ac4f99ef1f428b9a8bead3ae",
       "count": 67
     },
     {
       "path": "coverage/utility_api-07.json",
-      "sha256": "2bd68c4dd0f8a1aab6cf5eae65fb9b26226896b5860ece5204669b212398caa5",
-      "count": 8
+      "sha256": "9c422155a6e5dd72c804240576fc8a3bb2e7b5baaa1702cfa13cfeaebb7b62b0",
+      "count": 9
     }
   ],
   "nonofficial_entries": [

@@ -96,6 +96,29 @@ class PatternAPI:
         return result
 
     @staticmethod
+    def _numeric_text(text):
+        if type(text) is not str or not re.fullmatch(r"-?\d+(\.\d+)?", text):
+            raise CommandError("invalid_native_result")
+        value = float(text)
+        if not math.isfinite(value) or abs(value) > 1e16:
+            raise CommandError("invalid_native_result")
+        return value
+
+    @classmethod
+    def _arrangement_record(cls, value):
+        keys = ("ArrangementName", "ArrangementOffsetX", "ArrangementOffsetY",
+                "ArrangementOffsetZ", "ArrangementOrientation", "ArrangementType")
+        if type(value) is not dict or not set(keys) <= set(value):
+            raise CommandError("invalid_native_result")
+        if (type(value["ArrangementName"]) is not str
+                or type(value["ArrangementType"]) is not str):
+            raise CommandError("invalid_native_result")
+        for key in ("ArrangementOffsetX", "ArrangementOffsetY",
+                    "ArrangementOffsetZ", "ArrangementOrientation"):
+            cls._numeric_text(value[key])
+        return value
+
+    @staticmethod
     def _position(value):
         if isinstance(value, (tuple, list)) and len(value) == 2:
             output = list(value)
@@ -401,6 +424,21 @@ class PatternAPI:
         return {"pattern_count": len(pieces), "arrangement_library_count": len(library),
                 "pieces": pieces, "units": "native_unspecified"}
 
+    def _drape_option(self):
+        """Construct the native ReDrape option once, before any scene mutation."""
+        try:
+            import ApiTypes
+            option = ApiTypes.ImportExportOption()
+        except Exception:
+            raise CommandError("api_unavailable") from None
+        for flag in ("bAddArrangementPoints", "bAutoCreateFittingSuit", "bMoveGarment"):
+            if hasattr(option, flag):
+                try:
+                    setattr(option, flag, True)
+                except Exception:
+                    pass
+        return option
+
     def _set_arrangement(self, p):
         """Assign one avatar arrangement point, then ReDrape; assignment is verified."""
         self._require("GetPatternCount", "GetPatternPieceName", "GetArrangementList",
@@ -422,19 +460,7 @@ class PatternAPI:
                 "ArrangementOffsetZ", "ArrangementOrientation", "ArrangementType")
         if type(entry) is not dict or not all(type(entry.get(k)) is str for k in keys):
             raise CommandError("invalid_native_result")
-        try:
-            import ApiTypes
-            option = ApiTypes.ImportExportOption()
-        except Exception:
-            raise CommandError("api_unavailable") from None
-        flags = []
-        for flag in ("bAddArrangementPoints", "bAutoCreateFittingSuit", "bMoveGarment"):
-            if hasattr(option, flag):
-                try:
-                    setattr(option, flag, True)
-                    flags.append(flag)
-                except Exception:
-                    pass
+        option = self._drape_option()
         try:
             self.pattern.SetArrangement(i, arrangement_index)
         except Exception:
@@ -466,6 +492,653 @@ class PatternAPI:
                 "orientation": numeric(entry["ArrangementOrientation"]),
                 "type": entry["ArrangementType"], "units": "native_unspecified",
                 "redrape": True}
+
+    def _set_arrangement_orientation(self, p):
+        """Set one arranged piece's integer orientation, ReDrape; verify readback."""
+        self._require("GetPatternCount", "GetPatternPieceName",
+                      "GetArrangementOfPattern", "SetArrangementOrientation")
+        before = self._list()
+        i, expected = p["pattern_index"], p["expected_name"]
+        items = before["patterns"]
+        if (i >= len(items) or items[i]["name"] != expected
+                or sum(v["name"] == expected for v in items) != 1):
+            raise CommandError("stale_pattern")
+        keys = ("ArrangementName", "ArrangementOffsetX", "ArrangementOffsetY",
+                "ArrangementOffsetZ", "ArrangementOrientation", "ArrangementType")
+        baseline = self.pattern.GetArrangementOfPattern(i)
+        if type(baseline) is not dict or set(baseline) != set(keys):
+            raise CommandError("invalid_native_result")
+
+        def numeric(text):
+            if type(text) is not str or not re.fullmatch(r"-?\d+(\.\d+)?", text):
+                raise CommandError("invalid_native_result")
+            number_value = float(text)
+            if not math.isfinite(number_value) or abs(number_value) > 1e16:
+                raise CommandError("invalid_native_result")
+            return number_value
+
+        for key in ("ArrangementOffsetX", "ArrangementOffsetY", "ArrangementOffsetZ"):
+            numeric(baseline[key])
+        numeric(baseline["ArrangementOrientation"])
+        if (type(baseline["ArrangementName"]) is not str
+                or type(baseline["ArrangementType"]) is not str):
+            raise CommandError("invalid_native_result")
+        option = self._drape_option()
+        try:
+            self.pattern.SetArrangementOrientation(i, p["orientation"])
+        except Exception:
+            raise CommandError("scene_change_unverified") from None
+        value = self.pattern.GetArrangementOfPattern(i)
+        unchanged = ("ArrangementName", "ArrangementOffsetX", "ArrangementOffsetY",
+                     "ArrangementOffsetZ", "ArrangementType")
+        if (type(value) is not dict or set(value) != set(keys)
+                or any(value.get(key) != baseline[key] for key in unchanged)
+                or numeric(value["ArrangementOrientation"]) != p["orientation"]):
+            raise CommandError("scene_change_unverified")
+        try:
+            self.modules["utility_api"].ReDrape3DArrangement(option)
+        except Exception:
+            raise CommandError("scene_change_unverified") from None
+        final = self.pattern.GetArrangementOfPattern(i)
+        if type(final) is not dict or set(final) != set(keys):
+            raise CommandError("scene_change_unverified")
+        orientation = numeric(final["ArrangementOrientation"])
+        if orientation != p["orientation"]:
+            raise CommandError("scene_change_unverified")
+        if self._list() != before:
+            raise CommandError("inventory_changed")
+        return {"verified": True, "pattern_index": i, "pattern_name": expected,
+                "arrangement_name": baseline["ArrangementName"],
+                "offset": {"x": numeric(baseline["ArrangementOffsetX"]),
+                           "y": numeric(baseline["ArrangementOffsetY"]),
+                           "z": numeric(baseline["ArrangementOffsetZ"])},
+                "orientation": orientation,
+                "type": baseline["ArrangementType"], "units": "native_unspecified",
+                "redrape": True}
+
+    def _set_arrangement_position(self, p):
+        """Set one arranged piece's native x/y/z offsets, ReDrape; verify readback."""
+        self._require("GetPatternCount", "GetPatternPieceName",
+                      "GetArrangementOfPattern", "SetArrangementPosition")
+        before = self._list()
+        i, expected = p["pattern_index"], p["expected_name"]
+        items = before["patterns"]
+        if (i >= len(items) or items[i]["name"] != expected
+                or sum(v["name"] == expected for v in items) != 1):
+            raise CommandError("stale_pattern")
+        keys = ("ArrangementName", "ArrangementOffsetX", "ArrangementOffsetY",
+                "ArrangementOffsetZ", "ArrangementOrientation", "ArrangementType")
+        baseline = self.pattern.GetArrangementOfPattern(i)
+        if type(baseline) is not dict or set(baseline) != set(keys):
+            raise CommandError("invalid_native_result")
+
+        def numeric(text):
+            if type(text) is not str or not re.fullmatch(r"-?\d+(\.\d+)?", text):
+                raise CommandError("invalid_native_result")
+            number_value = float(text)
+            if not math.isfinite(number_value) or abs(number_value) > 1e16:
+                raise CommandError("invalid_native_result")
+            return number_value
+
+        for key in ("ArrangementOffsetX", "ArrangementOffsetY", "ArrangementOffsetZ"):
+            numeric(baseline[key])
+        numeric(baseline["ArrangementOrientation"])
+        if (type(baseline["ArrangementName"]) is not str
+                or type(baseline["ArrangementType"]) is not str):
+            raise CommandError("invalid_native_result")
+        requested = (p["position_x"], p["position_y"], p["offset"])
+        option = self._drape_option()
+        try:
+            self.pattern.SetArrangementPosition(i, *requested)
+        except Exception:
+            raise CommandError("scene_change_unverified") from None
+
+        def positions(value):
+            if type(value) is not dict or set(value) != set(keys):
+                raise CommandError("scene_change_unverified")
+            try:
+                return (numeric(value["ArrangementOffsetX"]),
+                        numeric(value["ArrangementOffsetY"]),
+                        numeric(value["ArrangementOffsetZ"]))
+            except CommandError:
+                raise CommandError("scene_change_unverified") from None
+
+        def unchanged(value):
+            return (value["ArrangementName"] == baseline["ArrangementName"]
+                    and value["ArrangementOrientation"] == baseline["ArrangementOrientation"]
+                    and value["ArrangementType"] == baseline["ArrangementType"])
+
+        value = self.pattern.GetArrangementOfPattern(i)
+        if positions(value) != requested or not unchanged(value):
+            raise CommandError("scene_change_unverified")
+        try:
+            self.modules["utility_api"].ReDrape3DArrangement(option)
+        except Exception:
+            raise CommandError("scene_change_unverified") from None
+        final = self.pattern.GetArrangementOfPattern(i)
+        if positions(final) != requested or not unchanged(final):
+            raise CommandError("scene_change_unverified")
+        if self._list() != before:
+            raise CommandError("inventory_changed")
+        return {"verified": True, "pattern_index": i, "pattern_name": expected,
+                "arrangement_name": baseline["ArrangementName"],
+                "offset": {"x": float(requested[0]), "y": float(requested[1]),
+                           "z": float(requested[2])},
+                "orientation": numeric(baseline["ArrangementOrientation"]),
+                "type": baseline["ArrangementType"], "units": "native_unspecified",
+                "redrape": True}
+
+    def _screenshot(self, p):
+        """Capture the current 3D window to a caller-generated PNG path."""
+        export = self.modules.get("export_api")
+        if not callable(getattr(export, "ExportThumbnail3D", None)):
+            raise CommandError("api_unavailable")
+        path = p["output_path"]
+        try:
+            native = export.ExportThumbnail3D(path)
+        except Exception:
+            raise CommandError("scene_change_unverified") from None
+        try:
+            same = (type(native) is str and native
+                    and os.path.normcase(os.path.abspath(native))
+                    == os.path.normcase(os.path.abspath(path)))
+            size = os.path.getsize(path) if os.path.isfile(path) else 0
+        except OSError:
+            raise CommandError("invalid_native_result") from None
+        if not same or not 0 < size <= 16777216:
+            raise CommandError("invalid_native_result")
+        return {"verified": True, "bytes": size}
+
+    def _arrangement_library(self):
+        """Read the avatar arrangement-point library with names and presets."""
+        self._require("GetArrangementList")
+        library = self.pattern.GetArrangementList()
+        if type(library) is not list or len(library) > 4096:
+            raise CommandError("invalid_native_result")
+        points = []
+        for i, entry in enumerate(library):
+            value = self._arrangement_record(entry)
+            points.append({"index": i, "name": value["ArrangementName"],
+                           "type": value["ArrangementType"],
+                           "offset": {"x": self._numeric_text(value["ArrangementOffsetX"]),
+                                      "y": self._numeric_text(value["ArrangementOffsetY"]),
+                                      "z": self._numeric_text(value["ArrangementOffsetZ"])},
+                           "orientation": self._numeric_text(value["ArrangementOrientation"])})
+        return {"library_count": len(points), "points": points,
+                "units": "native_unspecified"}
+
+    def _seamlines(self):
+        """Read seam group count/names and per-pattern group membership."""
+        self._require("GetPatternCount", "GetPatternPieceName",
+                      "GetSeamlinePairGroupCount", "GetSeamlinePairGroupName",
+                      "GetSeamlinePairGroupListInPattern")
+        before = self._list()
+        count = self.pattern.GetSeamlinePairGroupCount()
+        if type(count) is not int or not 0 <= count <= 4096:
+            raise CommandError("invalid_native_result")
+        groups = []
+        for i in range(count):
+            group_name = self.pattern.GetSeamlinePairGroupName(i)
+            if (type(group_name) is not str or not 1 <= len(group_name) <= 256
+                    or any(ord(c) < 32 or 0xD800 <= ord(c) <= 0xDFFF
+                           for c in group_name)):
+                raise CommandError("invalid_native_result")
+            groups.append({"index": i, "name": group_name})
+        patterns = []
+        for item in before["patterns"]:
+            indices = self.pattern.GetSeamlinePairGroupListInPattern(item["index"])
+            if (type(indices) is not list or len(indices) > count
+                    or any(type(v) is not int or not 0 <= v < count for v in indices)):
+                raise CommandError("invalid_native_result")
+            patterns.append({"pattern_index": item["index"],
+                             "pattern_name": item["name"],
+                             "group_indices": indices,
+                             "group_names": [groups[v]["name"] for v in indices]})
+        if self._list() != before:
+            raise CommandError("inventory_changed")
+        return {"seam_count": count, "pattern_count": before["pattern_count"],
+                "groups": groups, "patterns": patterns}
+
+    @staticmethod
+    def _field(value, key):
+        if isinstance(value, dict):
+            return value.get(key)
+        return getattr(value, key, None)
+
+    def _avatar_measurements(self, p):
+        """Read one avatar's measurement names, types and lengths."""
+        export = self.modules.get("export_api")
+        utility = self.modules.get("utility_api")
+        for name in ("GetAvatarCount", "GetAvatarNameList"):
+            if not callable(getattr(export, name, None)):
+                raise CommandError("api_unavailable")
+        if not callable(getattr(utility, "GetAvatarMeasurements", None)):
+            raise CommandError("api_unavailable")
+        index = p["avatar_index"]
+        count = export.GetAvatarCount()
+        names = export.GetAvatarNameList()
+        if (type(count) is not int or not 0 <= count <= MAX_AVATARS
+                or type(names) is not list or len(names) != count):
+            raise CommandError("invalid_native_result")
+        if index >= count:
+            raise CommandError("invalid_parameters")
+        avatar_name = names[index]
+        if (type(avatar_name) is not str or not 1 <= len(avatar_name) <= 128):
+            raise CommandError("invalid_native_result")
+        values = utility.GetAvatarMeasurements(index)
+        if type(values) is not list or len(values) > 512:
+            raise CommandError("invalid_native_result")
+        measurements = []
+        for value in values:
+            measure_name = self._field(value, "measurementName")
+            measure_type = self._field(value, "measurementType")
+            unit = self._field(value, "unit")
+            if (type(measure_name) is not str or not 1 <= len(measure_name) <= 256
+                    or type(measure_type) is not str or not 1 <= len(measure_type) <= 32
+                    or type(unit) is not str or not 1 <= len(unit) <= 8):
+                raise CommandError("invalid_native_result")
+            numbers = [self._field(value, key) for key in
+                       ("value", "basicLength", "surfaceLength")]
+            if not all(number(v) for v in numbers):
+                raise CommandError("invalid_native_result")
+            measurements.append({"name": measure_name, "type": measure_type,
+                                 "value": float(numbers[0]),
+                                 "basic_length": float(numbers[1]),
+                                 "surface_length": float(numbers[2]),
+                                 "unit": unit})
+        return {"avatar_index": index, "avatar_name": avatar_name,
+                "measurement_count": len(measurements),
+                "measurements": measurements, "units": "native_display_unit"}
+
+    def _attachments(self):
+        """Read every pattern-to-avatar-measure attachment and the pin count."""
+        self._require("GetAllPatternToAvatarMeasures", "GetPinListSize")
+        values = self.pattern.GetAllPatternToAvatarMeasures()
+        pin_count = self.pattern.GetPinListSize()
+        if type(values) is not list or len(values) > 1024:
+            raise CommandError("invalid_native_result")
+        if type(pin_count) is not int or not 0 <= pin_count <= 65536:
+            raise CommandError("invalid_native_result")
+        pairs = []
+        for item in values:
+            if type(item) not in (tuple, list) or len(item) != 2:
+                raise CommandError("invalid_native_result")
+            pattern_name, avatar_measure = item
+            if (type(pattern_name) is not str or not 1 <= len(pattern_name) <= 256
+                    or type(avatar_measure) is not str
+                    or not 1 <= len(avatar_measure) <= 256):
+                raise CommandError("invalid_native_result")
+            pairs.append({"pattern_name": pattern_name,
+                          "avatar_measure": avatar_measure})
+        return {"pair_count": len(pairs), "pin_count": pin_count, "pairs": pairs}
+
+    def _set_arrangement_shape_style(self, p):
+        """Set Flat/Curved arrangement style and verify the readback type."""
+        self._require("GetPatternCount", "GetPatternPieceName",
+                      "SetArrangementShapeStyle", "GetArrangementOfPattern")
+        before = self._list()
+        i, expected = p["pattern_index"], p["expected_name"]
+        items = before["patterns"]
+        if (i >= len(items) or items[i]["name"] != expected
+                or sum(v["name"] == expected for v in items) != 1):
+            raise CommandError("stale_pattern")
+        baseline = self._arrangement_record(self.pattern.GetArrangementOfPattern(i))
+        style = p["style"]
+        try:
+            self.pattern.SetArrangementShapeStyle(i, style)
+        except Exception:
+            raise CommandError("scene_change_unverified") from None
+        value = self._arrangement_record(self.pattern.GetArrangementOfPattern(i))
+        if value["ArrangementType"] != style:
+            raise CommandError("scene_change_unverified")
+        if any(value[key] != baseline[key] for key in
+               ("ArrangementName", "ArrangementOffsetX", "ArrangementOffsetY",
+                "ArrangementOffsetZ", "ArrangementOrientation")):
+            raise CommandError("scene_change_unverified")
+        if self._list() != before:
+            raise CommandError("inventory_changed")
+        return {"verified": True, "pattern_index": i, "pattern_name": expected,
+                "arrangement_name": baseline["ArrangementName"],
+                "offset": {"x": self._numeric_text(baseline["ArrangementOffsetX"]),
+                           "y": self._numeric_text(baseline["ArrangementOffsetY"]),
+                           "z": self._numeric_text(baseline["ArrangementOffsetZ"])},
+                "orientation": self._numeric_text(baseline["ArrangementOrientation"]),
+                "type": value["ArrangementType"], "units": "native_unspecified"}
+
+    def _set_edge_to_avatar_measure(self, p):
+        """Attach/detach one pattern edge to an avatar measure and read back."""
+        self._require("GetPatternCount", "GetPatternPieceName",
+                      "SetPatternEdgeToAvatarMeasure",
+                      "GetPatternEdgeToAvatarMeasureAttachment")
+        before = self._list()
+        i, expected = p["pattern_index"], p["expected_name"]
+        items = before["patterns"]
+        if (i >= len(items) or items[i]["name"] != expected
+                or sum(v["name"] == expected for v in items) != 1):
+            raise CommandError("stale_pattern")
+        lines = self._lines({"pattern_index": i, "expected_name": expected})
+        line_index = p["line_index"]
+        if line_index >= lines["line_count"]:
+            raise CommandError("invalid_parameters")
+        measure = p["avatar_measure"]
+        attach = p["attach"]
+        try:
+            result = self.pattern.SetPatternEdgeToAvatarMeasure(
+                i, line_index, measure, attach)
+        except Exception:
+            raise CommandError("scene_change_unverified") from None
+        if type(result) is not bool:
+            raise CommandError("invalid_native_result")
+        if result is not True:
+            raise CommandError("scene_change_unverified")
+        raw = self.pattern.GetPatternEdgeToAvatarMeasureAttachment(i, measure)
+        value = _line_json(raw)
+        if set(value) != {"is_attached", "line_index"}:
+            raise CommandError("invalid_native_result")
+        attached, index_after = value["is_attached"], value["line_index"]
+        if type(attached) is not bool or type(index_after) is not int:
+            raise CommandError("invalid_native_result")
+        if attach:
+            if attached is not True or index_after != line_index:
+                raise CommandError("scene_change_unverified")
+        elif attached is not False or index_after != -1:
+            raise CommandError("scene_change_unverified")
+        if self._list() != before:
+            raise CommandError("inventory_changed")
+        return {"verified": True, "pattern_index": i, "pattern_name": expected,
+                "line_index": line_index, "avatar_measure": measure,
+                "attached": attach}
+
+    def _simulate(self, p):
+        """Run one bounded cloth simulation and verify the scene list."""
+        self._require("GetPatternCount", "GetPatternPieceName")
+        export = self.modules.get("export_api")
+        utility = self.modules.get("utility_api")
+        if not callable(getattr(export, "GetAvatarCount", None)):
+            raise CommandError("api_unavailable")
+        if not callable(getattr(utility, "Simulate", None)):
+            raise CommandError("api_unavailable")
+        before = self._list()
+        avatars = export.GetAvatarCount()
+        if type(avatars) is not int or not 0 <= avatars <= MAX_AVATARS:
+            raise CommandError("invalid_native_result")
+        if avatars < 1:
+            raise CommandError("invalid_parameters")
+        steps = p["steps"]
+        started = time.monotonic()
+        try:
+            result = utility.Simulate(steps)
+        except Exception:
+            raise CommandError("scene_change_unverified") from None
+        elapsed = round((time.monotonic() - started) * 1000, 3)
+        if type(result) is not bool:
+            raise CommandError("invalid_native_result")
+        if result is not True:
+            raise CommandError("scene_change_unverified")
+        if self._list() != before:
+            raise CommandError("inventory_changed")
+        return {"verified": True, "steps": steps,
+                "pattern_count": before["pattern_count"],
+                "avatar_count": avatars, "elapsed_ms": elapsed}
+
+    @staticmethod
+    def _image_file_result(requested, native):
+        """Validate an image in the requested directory; native text may be descriptive."""
+        candidates = []
+        if type(native) is str and native:
+            candidates.append(native)
+        candidates.append(requested)
+        for candidate in candidates:
+            try:
+                same_dir = (os.path.normcase(os.path.dirname(os.path.abspath(candidate)))
+                            == os.path.normcase(os.path.dirname(os.path.abspath(requested))))
+                size = os.path.getsize(candidate) if os.path.isfile(candidate) else 0
+            except OSError:
+                continue
+            file_name = os.path.basename(candidate)
+            if (same_dir and 0 < size <= 16777216
+                    and 1 <= len(file_name) <= 128
+                    and "/" not in file_name and "\\" not in file_name):
+                return {"file_name": file_name, "bytes": size}
+        raise CommandError("invalid_native_result")
+
+    def _export_view_image(self, p):
+        """Render one standard 3D view to a caller-generated image path."""
+        export = self.modules.get("export_api")
+        for name in ("ExportStdViewImage", "GetCurrentColorwayIndex"):
+            if not callable(getattr(export, name, None)):
+                raise CommandError("api_unavailable")
+        colorway = export.GetCurrentColorwayIndex()
+        if type(colorway) is not int or colorway < 0:
+            colorway = 0
+        view, width, height = p["view"], p["width"], p["height"]
+        path = p["output_path"]
+        try:
+            native = export.ExportStdViewImage(
+                view, path, colorway, width, height, p["fit_all_objects"])
+        except TypeError:
+            # The 5-argument overload frames the garment only and is the donor-tested form.
+            try:
+                native = export.ExportStdViewImage(
+                    view, path, colorway, width, height)
+            except Exception:
+                raise CommandError("scene_change_unverified") from None
+        except Exception:
+            raise CommandError("scene_change_unverified") from None
+        result = self._image_file_result(path, native)
+        return {"verified": True, "view": view, "width": width,
+                "height": height, **result}
+
+    def _export_snapshot_2d(self, p):
+        """Capture the current 2D window to a caller-generated image path."""
+        export = self.modules.get("export_api")
+        if not callable(getattr(export, "ExportThumbnail2D", None)):
+            raise CommandError("api_unavailable")
+        path = p["output_path"]
+        try:
+            native = export.ExportThumbnail2D(path)
+        except Exception:
+            raise CommandError("scene_change_unverified") from None
+        result = self._image_file_result(path, native)
+        return {"verified": True, **result}
+
+    def _set_camera_view(self, p):
+        """Set one standard 3D camera view, optionally zoom-to-fit."""
+        utility = self.modules.get("utility_api")
+        for name in ("SetCamViewPoint", "Refresh3DWindow"):
+            if not callable(getattr(utility, name, None)):
+                raise CommandError("api_unavailable")
+        if p["zoom_to_fit"] and not callable(getattr(utility, "SetZoomView", None)):
+            raise CommandError("api_unavailable")
+        try:
+            utility.SetCamViewPoint(p["view"])
+            if p["zoom_to_fit"]:
+                utility.SetZoomView()
+            utility.Refresh3DWindow()
+        except Exception:
+            raise CommandError("command_error") from None
+        return {"verified": True, "view": p["view"],
+                "zoom_to_fit": p["zoom_to_fit"]}
+
+    def _reset_cloth_arrangement(self):
+        """Restore the cloth shape to its loaded state."""
+        utility = self.modules.get("utility_api")
+        if not callable(getattr(utility, "ResetClothArrangement", None)):
+            raise CommandError("api_unavailable")
+        before = self._list()
+        try:
+            utility.ResetClothArrangement()
+        except Exception:
+            raise CommandError("scene_change_unverified") from None
+        if self._list() != before:
+            raise CommandError("inventory_changed")
+        return {"verified": True, "pattern_count": before["pattern_count"]}
+
+    def _import_avatar_measurements(self, p):
+        """Apply a measurement CSV to the single current avatar and verify count growth."""
+        export = self.modules.get("export_api")
+        importer = self.modules.get("import_api")
+        utility = self.modules.get("utility_api")
+        for name in ("GetAvatarCount",):
+            if not callable(getattr(export, name, None)):
+                raise CommandError("api_unavailable")
+        if not callable(getattr(importer, "ImportMeasurement", None)):
+            raise CommandError("api_unavailable")
+        if not callable(getattr(utility, "GetAvatarMeasurements", None)):
+            raise CommandError("api_unavailable")
+        count = export.GetAvatarCount()
+        if type(count) is not int or count != 1:
+            raise CommandError("invalid_parameters")
+        path = p["csv_path"]
+        try:
+            if not os.path.isfile(path) or not 0 < os.path.getsize(path) <= 16777216:
+                raise CommandError("invalid_parameters")
+        except OSError:
+            raise CommandError("invalid_parameters") from None
+        before_values = utility.GetAvatarMeasurements(0)
+        if type(before_values) is not list or len(before_values) > 512:
+            raise CommandError("invalid_native_result")
+        before = len(before_values)
+        try:
+            imported = importer.ImportMeasurement(path)
+        except Exception:
+            raise CommandError("scene_change_unverified") from None
+        if type(imported) is not bool:
+            raise CommandError("invalid_native_result")
+        if imported is not True:
+            raise CommandError("scene_change_unverified")
+        after_values = utility.GetAvatarMeasurements(0)
+        if type(after_values) is not list or len(after_values) > 512:
+            raise CommandError("scene_change_unverified")
+        after = len(after_values)
+        if after <= before:
+            raise CommandError("scene_change_unverified")
+        return {"verified": True, "avatar_index": 0, "before_count": before,
+                "after_count": after, "added": after - before}
+
+    def _pattern_body_details(self):
+        """Read the native body-region/semantic JSON document."""
+        self._require("GetPatternOnBodyDetails")
+        data = _line_json(self.pattern.GetPatternOnBodyDetails())
+        if set(data) != {"upperBody", "lowerBody"}:
+            raise CommandError("invalid_native_result")
+        if type(data["upperBody"]) is not list or type(data["lowerBody"]) is not list:
+            raise CommandError("invalid_native_result")
+        return data
+
+    def _pattern_details(self, p):
+        """Read grain direction, category and classification for one piece."""
+        self._require("GetPatternCount", "GetPatternPieceName",
+                      "GetPatternPieceGrainDirection", "GetPatternPieceCategory",
+                      "GetPatternPieceClassification")
+        before = self._list()
+        i, expected = p["pattern_index"], p["expected_name"]
+        items = before["patterns"]
+        if (i >= len(items) or items[i]["name"] != expected
+                or sum(v["name"] == expected for v in items) != 1):
+            raise CommandError("stale_pattern")
+        grain = self.pattern.GetPatternPieceGrainDirection(i)
+        category = self.pattern.GetPatternPieceCategory(i)
+        classification = self.pattern.GetPatternPieceClassification(i)
+        if (not number(grain) or type(category) is not int
+                or not -1 <= category <= 999
+                or type(classification) is not str or not 0 <= len(classification) <= 256):
+            raise CommandError("invalid_native_result")
+        if self._list() != before:
+            raise CommandError("inventory_changed")
+        return {"pattern_index": i, "pattern_name": expected,
+                "grain_direction": float(grain), "category": category,
+                "classification": classification}
+
+    def _set_pattern_grain_direction(self, p):
+        """Set one piece's grain direction and verify readback plus geometry."""
+        self._require("GetPatternCount", "GetPatternPieceName",
+                      "GetPatternPieceGrainDirection",
+                      "SetPatternPieceGrainDirection")
+        before = self._list()
+        i, expected = p["pattern_index"], p["expected_name"]
+        items = before["patterns"]
+        if (i >= len(items) or items[i]["name"] != expected
+                or sum(v["name"] == expected for v in items) != 1):
+            raise CommandError("stale_pattern")
+        geometry_before = self._geometry(i)
+        degrees = p["degrees"]
+        try:
+            self.pattern.SetPatternPieceGrainDirection(i, degrees)
+        except Exception:
+            raise CommandError("scene_change_unverified") from None
+        value = self.pattern.GetPatternPieceGrainDirection(i)
+        if not number(value):
+            raise CommandError("invalid_native_result")
+        if not math.isclose((float(value) - degrees) % 360, 0.0,
+                            rel_tol=0, abs_tol=1e-3):
+            raise CommandError("scene_change_unverified")
+        geometry_after = self._geometry(i)
+        if (not math.isclose(geometry_before["area_mm2"], geometry_after["area_mm2"],
+                             rel_tol=1e-5, abs_tol=0.05)
+                or any(not math.isclose(a, b, rel_tol=1e-5, abs_tol=0.05)
+                       for a, b in zip(geometry_before["position_mm"],
+                                       geometry_after["position_mm"]))):
+            raise CommandError("scene_change_unverified")
+        if self._list() != before:
+            raise CommandError("inventory_changed")
+        return {"verified": True, "pattern_index": i, "pattern_name": expected,
+                "grain_direction": float(value)}
+
+    def _mesh_counts(self, p):
+        """Read native mesh face/vertex text by mesh type."""
+        self._require("GetPatternCount", "GetPatternPieceName", "GetMeshCountByType")
+        before = self._list()
+        i, expected = p["pattern_index"], p["expected_name"]
+        items = before["patterns"]
+        if (i >= len(items) or items[i]["name"] != expected
+                or sum(v["name"] == expected for v in items) != 1):
+            raise CommandError("stale_pattern")
+        value = self.pattern.GetMeshCountByType(i)
+        if type(value) is not dict or len(value) > 16:
+            raise CommandError("invalid_native_result")
+        meshes = []
+        for mesh_type, raw in value.items():
+            if (type(mesh_type) is not str or not 1 <= len(mesh_type) <= 64
+                    or type(raw) is not str or not 1 <= len(raw) <= 64):
+                raise CommandError("invalid_native_result")
+            meshes.append({"type": mesh_type, "value": raw})
+        if self._list() != before:
+            raise CommandError("inventory_changed")
+        return {"pattern_index": i, "pattern_name": expected, "meshes": meshes}
+
+    def _set_particle_distance(self, p):
+        """Set one piece's simulation mesh size and verify readback."""
+        self._require("GetPatternCount", "GetPatternPieceName",
+                      "GetParticleDistanceOfPattern", "SetParticleDistanceOfPattern")
+        before = self._list()
+        i, expected = p["pattern_index"], p["expected_name"]
+        items = before["patterns"]
+        if (i >= len(items) or items[i]["name"] != expected
+                or sum(v["name"] == expected for v in items) != 1):
+            raise CommandError("stale_pattern")
+        geometry_before = self._geometry(i)
+        distance = p["distance"]
+        try:
+            self.pattern.SetParticleDistanceOfPattern(i, distance)
+        except Exception:
+            raise CommandError("scene_change_unverified") from None
+        value = self.pattern.GetParticleDistanceOfPattern(i)
+        if not number(value):
+            raise CommandError("invalid_native_result")
+        if not math.isclose(float(value), distance, rel_tol=1e-5, abs_tol=1e-3):
+            raise CommandError("scene_change_unverified")
+        geometry_after = self._geometry(i)
+        if (not math.isclose(geometry_before["area_mm2"], geometry_after["area_mm2"],
+                             rel_tol=1e-5, abs_tol=0.05)
+                or any(not math.isclose(a, b, rel_tol=1e-5, abs_tol=0.05)
+                       for a, b in zip(geometry_before["position_mm"],
+                                       geometry_after["position_mm"]))):
+            raise CommandError("scene_change_unverified")
+        if self._list() != before:
+            raise CommandError("inventory_changed")
+        return {"verified": True, "pattern_index": i, "pattern_name": expected,
+                "distance": float(value)}
 
     @staticmethod
     def _near(a, b):
@@ -506,6 +1179,46 @@ class PatternAPI:
             result = self._arrangements()
         elif command == "set_arrangement":
             result = self._set_arrangement(params)
+        elif command == "set_arrangement_orientation":
+            result = self._set_arrangement_orientation(params)
+        elif command == "set_arrangement_position":
+            result = self._set_arrangement_position(params)
+        elif command == "get_3d_screenshot":
+            result = self._screenshot(params)
+        elif command == "get_arrangement_list":
+            result = self._arrangement_library()
+        elif command == "get_seamline_pairs":
+            result = self._seamlines()
+        elif command == "get_avatar_measurements":
+            result = self._avatar_measurements(params)
+        elif command == "get_pattern_avatar_attachments":
+            result = self._attachments()
+        elif command == "set_arrangement_shape_style":
+            result = self._set_arrangement_shape_style(params)
+        elif command == "set_pattern_edge_to_avatar_measure":
+            result = self._set_edge_to_avatar_measure(params)
+        elif command == "simulate":
+            result = self._simulate(params)
+        elif command == "export_view_image":
+            result = self._export_view_image(params)
+        elif command == "export_snapshot_2d":
+            result = self._export_snapshot_2d(params)
+        elif command == "set_camera_view":
+            result = self._set_camera_view(params)
+        elif command == "reset_cloth_arrangement":
+            result = self._reset_cloth_arrangement()
+        elif command == "import_avatar_measurements":
+            result = self._import_avatar_measurements(params)
+        elif command == "get_pattern_body_details":
+            result = self._pattern_body_details()
+        elif command == "get_pattern_details":
+            result = self._pattern_details(params)
+        elif command == "set_pattern_grain_direction":
+            result = self._set_pattern_grain_direction(params)
+        elif command == "get_mesh_counts":
+            result = self._mesh_counts(params)
+        elif command == "set_particle_distance":
+            result = self._set_particle_distance(params)
         else:
             result = self._mutate(command, params)
             # Includes preflight, native setter(s) AND verification reads, not

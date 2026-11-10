@@ -80,7 +80,7 @@ def test_current_scope_has_real_tool_names_and_does_not_claim_overload_acceptanc
     inventory = {node.name for node in ast.walk(tree) if isinstance(node, ast.AsyncFunctionDef)
                  and any(isinstance(dec, ast.Call) and isinstance(dec.func, ast.Attribute)
                          and dec.func.attr == "tool" for dec in node.decorator_list)}
-    assert len(inventory) == 24
+    assert len(inventory) == 44
     symbols = set()
     for operation in data["operations"]:
         assert operation["symbol"] not in symbols
@@ -220,7 +220,7 @@ def test_committed_full_join_reproduces_offline_and_preserves_inventory():
     assert len({row["qualified_name"] for row in rows}) == 890
     assert manifest["counts"]["donor_tools"] == 170
     assert manifest["counts"]["local_legacy_tools"] == 47
-    assert manifest["counts"]["current_tools"] == 24
+    assert manifest["counts"]["current_tools"] == 44
     assert {row["id"] for row in rows} == {dec["id"] for method in official["methods"] for dec in method["declarations"]}
     assert all(row["verification"] == "not_tested" and row["implementation"] == "planned" for row in rows)
     extras = {entry["qualified_name"] for entry in manifest["nonofficial_entries"]}

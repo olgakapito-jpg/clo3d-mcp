@@ -83,9 +83,14 @@ Source/live, принятые ранее подпакеты:
 - Аватар (22): `import_avatar` — absolute `.avt`≤128MiB через live
   `ImportFile(path)` (ImportAvatar требует недоступный ImportExportOption);
   live count0→1. Pose/measurement/fit не входят.
-- Arrangement (23–24): `get_arrangement` читает preset/offsets/orientation/type
+- Arrangement (23–26): `get_arrangement` читает preset/offsets/orientation/type
   (native strings, units native_unspecified); `set_arrangement` назначает
-  library point и делает ReDrape через `ApiTypes.ImportExportOption` flags.
+  library point и делает ReDrape через `ApiTypes.ImportExportOption` flags;
+  `set_arrangement_orientation` задаёт целое orientation 0..359 уже назначенной
+  детали и проверяет readback после ReDrape; live visual gate показал, что поле
+  само по себе не переставляет деталь в 3D (units/axis native не установлены);
+  `set_arrangement_position` задаёт целые offsets 0..100 — это смещение, не
+  поворот; live visual gate тоже без движения, поле не двигает 3D.
   2D и 3D позиции независимы; одинаковый arrangement не значит видимость.
   Live: Body_Front/Back/Arm points посадили детали, UI подтверждён.
   `../../../docs/CLO_FIT_CHECK.md`.

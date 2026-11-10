@@ -24,6 +24,14 @@ CURRENT_TOOLS = frozenset((
     "delete_pattern", "get_fabric_list", "get_avatars",
     "get_pattern_fabric", "assign_pattern_fabric",
     "get_pattern_outline", "get_pattern_lines", "get_arrangement", "set_arrangement",
+    "set_arrangement_orientation", "set_arrangement_position",
+    "get_3d_screenshot", "get_arrangement_list", "get_seamline_pairs",
+    "get_avatar_measurements", "get_pattern_avatar_attachments",
+    "set_arrangement_shape_style", "set_pattern_edge_to_avatar_measure",
+    "simulate", "export_view_image", "export_snapshot_2d", "set_camera_view",
+    "reset_cloth_arrangement", "import_avatar_measurements",
+    "get_pattern_body_details", "get_pattern_details",
+    "set_pattern_grain_direction", "get_mesh_counts", "set_particle_distance",
     "add_seamline_pair", "import_avatar",
 ))
 MODULES = ("pattern_api", "export_api", "fabric_api", "import_api", "utility_api")

@@ -121,6 +121,26 @@ ECONNREFUSED нормально. Глобальные настройки про�
   детали; units native_unspecified, set/drape не входят.
 - Fitting: `set_arrangement` — назначить arrangement point одной детали и вызвать
   ReDrape; readback preset, 3D visual-only.
+- Orientation: `set_arrangement_orientation` — целое orientation 0..359 одной
+  назначенной детали, ReDrape и readback после него; units/axis native
+  не заявлены, 3D visual-only, simulation отдельно.
+- Position: `set_arrangement_position` — native `positionX/positionY/offset`,
+  ReDrape и readback; это не свободный 3D-трансформ, визуальный эффект не
+  доказан.
+- Basic reads: `get_arrangement_list`, `get_seamline_pairs`,
+  `get_avatar_measurements`, `get_pattern_avatar_attachments`.
+- Fit: `set_pattern_edge_to_avatar_measure` — Line Pin края к мерке аватара,
+  native cloth solver и readback; `set_arrangement_shape_style` — Flat/Curved.
+- Simulation: `simulate` — 1..300 steps, visual-only, без retry.
+- Screenshot: `get_3d_screenshot` — silent PNG текущего 3D-окна, возвращает
+  MCP image content; без диалога и произвольного пути.
+- Views: `export_view_image` — стандартный front/back/right вид независимо от
+  камеры; `export_snapshot_2d` — текущее 2D-окно; `set_camera_view` — view +
+  zoom-to-fit.
+- Iteration: `reset_cloth_arrangement` — вернуть cloth к загруженной форме;
+  `import_avatar_measurements` — CSV мерок для Line Pin.
+- Pattern data: `get_pattern_body_details`, `get_pattern_details`,
+  `set_pattern_grain_direction`, `get_mesh_counts`, `set_particle_distance`.
 
 Новый путь не загружает extensions и не публикует legacy-команды импорта,
 экспорта, симуляции или exec. Параметризованное создание: до 64 точек, прямые или curve-вершины (0/2/3);

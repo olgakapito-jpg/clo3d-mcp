@@ -414,7 +414,7 @@ def test_protocol_executor_cache_and_official_sdk_metadata():
 
         mcp = build_mcp(Service())
         tools = {t.name: t for t in await mcp.list_tools()}
-        assert len(tools) == 24
+        assert len(tools) == 44
         for command, p in (("get_pattern_fabric", READ), ("assign_pattern_fabric", ASSIGN)):
             tool = tools[command]
             assert set(tool.inputSchema["required"]) == set(p)

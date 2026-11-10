@@ -415,7 +415,14 @@
       "units": "not_checked",
       "implementation": "planned",
       "overload_coverage": "not_established",
-      "current_operation": null,
+      "current_operation": {
+        "symbol": "pattern_api.GetMeshCountByType",
+        "tools": [
+          "get_mesh_counts"
+        ],
+        "call_arity": 1,
+        "scope_reference": "docs/api/current_operation_scope.json"
+      },
       "donor_tools": [
         "get_mesh_counts",
         "set_mesh_type"
@@ -469,7 +476,14 @@
       "units": "not_checked",
       "implementation": "planned",
       "overload_coverage": "not_established",
-      "current_operation": null,
+      "current_operation": {
+        "symbol": "pattern_api.GetMeshCountByType",
+        "tools": [
+          "get_mesh_counts"
+        ],
+        "call_arity": 1,
+        "scope_reference": "docs/api/current_operation_scope.json"
+      },
       "donor_tools": [
         "get_mesh_counts",
         "set_mesh_type"
@@ -676,7 +690,14 @@
       "units": "not_checked",
       "implementation": "planned",
       "overload_coverage": "not_established",
-      "current_operation": null,
+      "current_operation": {
+        "symbol": "pattern_api.GetParticleDistanceOfPattern",
+        "tools": [
+          "set_particle_distance"
+        ],
+        "call_arity": 1,
+        "scope_reference": "docs/api/current_operation_scope.json"
+      },
       "donor_tools": [
         "get_pattern_details"
       ],
@@ -729,7 +750,14 @@
       "units": "not_checked",
       "implementation": "planned",
       "overload_coverage": "not_established",
-      "current_operation": null,
+      "current_operation": {
+        "symbol": "pattern_api.GetParticleDistanceOfPattern",
+        "tools": [
+          "set_particle_distance"
+        ],
+        "call_arity": 1,
+        "scope_reference": "docs/api/current_operation_scope.json"
+      },
       "donor_tools": [
         "get_pattern_details"
       ],
@@ -1423,7 +1451,14 @@
       "units": "not_checked",
       "implementation": "planned",
       "overload_coverage": "not_established",
-      "current_operation": null,
+      "current_operation": {
+        "symbol": "pattern_api.GetPatternEdgeToAvatarMeasureAttachment",
+        "tools": [
+          "set_pattern_edge_to_avatar_measure"
+        ],
+        "call_arity": 2,
+        "scope_reference": "docs/api/current_operation_scope.json"
+      },
       "donor_tools": [],
       "legacy_tools": [],
       "verification": "not_tested",
@@ -2214,7 +2249,14 @@
       "units": "not_checked",
       "implementation": "planned",
       "overload_coverage": "not_established",
-      "current_operation": null,
+      "current_operation": {
+        "symbol": "pattern_api.GetPatternOnBodyDetails",
+        "tools": [
+          "get_pattern_body_details"
+        ],
+        "call_arity": 0,
+        "scope_reference": "docs/api/current_operation_scope.json"
+      },
       "donor_tools": [],
       "legacy_tools": [],
       "verification": "not_tested",
@@ -2385,7 +2427,14 @@
       "units": "not_checked",
       "implementation": "planned",
       "overload_coverage": "not_established",
-      "current_operation": null,
+      "current_operation": {
+        "symbol": "pattern_api.GetPatternPieceCategory",
+        "tools": [
+          "get_pattern_details"
+        ],
+        "call_arity": 1,
+        "scope_reference": "docs/api/current_operation_scope.json"
+      },
       "donor_tools": [
         "get_pattern_details"
       ],
@@ -2438,7 +2487,14 @@
       "units": "not_checked",
       "implementation": "planned",
       "overload_coverage": "not_established",
-      "current_operation": null,
+      "current_operation": {
+        "symbol": "pattern_api.GetPatternPieceClassification",
+        "tools": [
+          "get_pattern_details"
+        ],
+        "call_arity": 1,
+        "scope_reference": "docs/api/current_operation_scope.json"
+      },
       "donor_tools": [
         "get_pattern_details"
       ],
@@ -2544,7 +2600,15 @@
       "units": "not_checked",
       "implementation": "planned",
       "overload_coverage": "not_established",
-      "current_operation": null,
+      "current_operation": {
+        "symbol": "pattern_api.GetPatternPieceGrainDirection",
+        "tools": [
+          "get_pattern_details",
+          "set_pattern_grain_direction"
+        ],
+        "call_arity": 1,
+        "scope_reference": "docs/api/current_operation_scope.json"
+      },
       "donor_tools": [
         "get_pattern_details"
       ],
@@ -3132,7 +3196,14 @@
       "units": "not_checked",
       "implementation": "planned",
       "overload_coverage": "not_established",
-      "current_operation": null,
+      "current_operation": {
+        "symbol": "pattern_api.GetPinListSize",
+        "tools": [
+          "get_pattern_avatar_attachments"
+        ],
+        "call_arity": 0,
+        "scope_reference": "docs/api/current_operation_scope.json"
+      },
       "donor_tools": [
         "get_pin_count",
         "remove_pins"
@@ -3186,7 +3257,14 @@
       "units": "not_checked",
       "implementation": "planned",
       "overload_coverage": "not_established",
-      "current_operation": null,
+      "current_operation": {
+        "symbol": "pattern_api.GetSeamlinePairGroupCount",
+        "tools": [
+          "get_seamline_pairs"
+        ],
+        "call_arity": 0,
+        "scope_reference": "docs/api/current_operation_scope.json"
+      },
       "donor_tools": [
         "get_seam_groups"
       ],
@@ -3343,7 +3421,14 @@
       "units": "not_checked",
       "implementation": "planned",
       "overload_coverage": "not_established",
-      "current_operation": null,
+      "current_operation": {
+        "symbol": "pattern_api.GetSeamlinePairGroupListInPattern",
+        "tools": [
+          "get_seamline_pairs"
+        ],
+        "call_arity": 1,
+        "scope_reference": "docs/api/current_operation_scope.json"
+      },
       "donor_tools": [
         "get_seam_groups"
       ],
@@ -3396,7 +3481,14 @@
       "units": "not_checked",
       "implementation": "planned",
       "overload_coverage": "not_established",
-      "current_operation": null,
+      "current_operation": {
+        "symbol": "pattern_api.GetSeamlinePairGroupName",
+        "tools": [
+          "get_seamline_pairs"
+        ],
+        "call_arity": 1,
+        "scope_reference": "docs/api/current_operation_scope.json"
+      },
       "donor_tools": [
         "get_seam_groups"
       ],
@@ -3458,59 +3550,6 @@
       "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
       "dependencies": [],
       "official_record_id": "pattern_api.GetSeamlinePairGroupNameW",
-      "documentation_issues": [],
-      "review_gates": []
-    },
-    {
-      "id": "pattern_api.GetSelectedPattern#d2683b57d23fbed0",
-      "module": "pattern_api",
-      "symbol": "GetSelectedPattern",
-      "qualified_name": "pattern_api.GetSelectedPattern",
-      "overload": "pattern_api.GetSelectedPattern#d2683b57d23fbed0",
-      "signature": "def GetSelectedPattern() -> list[str]",
-      "domain": "geometry",
-      "owner_task": "A6",
-      "planning_classification": "lexical_bucket_not_semantic_contract",
-      "docs_evidence": [
-        {
-          "source_id": "list.rst.txt",
-          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
-          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
-          "line": 13887,
-          "block": 1237
-        },
-        {
-          "source_id": "list.html",
-          "url": "https://developer.clo3d.com/list.html",
-          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
-          "line": 14601,
-          "block": 1237,
-          "anchor": "pattern-api"
-        }
-      ],
-      "runtime_presence": "not_checked",
-      "binding_status": "not_checked",
-      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
-      "runtime_overload_presence": "not_checked",
-      "runtime_overload_binding": "not_checked",
-      "runtime_evidence": null,
-      "effect": "unknown",
-      "may_open_dialog": "not_checked",
-      "may_block_ui": "not_checked",
-      "units": "not_checked",
-      "implementation": "planned",
-      "overload_coverage": "not_established",
-      "current_operation": null,
-      "donor_tools": [
-        "get_selected_patterns"
-      ],
-      "legacy_tools": [],
-      "verification": "not_tested",
-      "verification_method": "unavailable",
-      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
-      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
-      "dependencies": [],
-      "official_record_id": "pattern_api.GetSelectedPattern",
       "documentation_issues": [],
       "review_gates": []
     }

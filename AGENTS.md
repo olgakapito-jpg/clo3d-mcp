@@ -52,6 +52,10 @@ if unavailable, read its `SKILL.md` directly. Do not load unrelated skills.
   discoverability and composition examples; load before adding/documenting tools.
 - `clo-tool-workflows`: safe tool selection/composition and domain skill
   templates; load before multi-tool CLO work or authoring workflow skills.
+- `clo-sewing`: garment assembly and tube/cylinder closure; load before planning
+  or judging seams between pieces. A two-panel tube needs both side seams.
+- `clo-seamlines`: whole-line seam pair operation, line indices, directions and
+  seam_count verification; load before any `add_seamline_pair` mutation.
 
 ## Tool documentation and workflow quality
 

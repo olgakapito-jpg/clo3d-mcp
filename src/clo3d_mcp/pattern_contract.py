@@ -18,6 +18,14 @@ PATTERN_COMMANDS = [
     "get_pattern_fabric", "assign_pattern_fabric",
     "get_pattern_outline", "get_pattern_lines",
     "add_seamline_pair", "import_avatar", "get_arrangement", "set_arrangement",
+    "set_arrangement_orientation", "set_arrangement_position",
+    "get_3d_screenshot", "get_arrangement_list", "get_seamline_pairs",
+    "get_avatar_measurements", "get_pattern_avatar_attachments",
+    "set_arrangement_shape_style", "set_pattern_edge_to_avatar_measure", "simulate",
+    "export_view_image", "export_snapshot_2d", "set_camera_view",
+    "reset_cloth_arrangement", "import_avatar_measurements",
+    "get_pattern_body_details", "get_pattern_details",
+    "set_pattern_grain_direction", "get_mesh_counts", "set_particle_distance",
 ]
 API_MODULES = ("pattern_api", "export_api", "fabric_api", "import_api", "utility_api")
 ERROR_CODES = ("api_unavailable", "stale_pattern", "scene_change_unverified", "invalid_parameters",
@@ -116,6 +124,29 @@ def validate_params(command, params):
         "import_avatar": {"file_path"},
         "get_arrangement": set(),
         "set_arrangement": {"pattern_index", "expected_name", "arrangement_index"},
+        "set_arrangement_orientation": {"pattern_index", "expected_name", "orientation"},
+        "set_arrangement_position": {"pattern_index", "expected_name",
+                                     "position_x", "position_y", "offset"},
+        "get_3d_screenshot": {"output_path"},
+        "get_arrangement_list": set(),
+        "get_seamline_pairs": set(),
+        "get_avatar_measurements": {"avatar_index"},
+        "get_pattern_avatar_attachments": set(),
+        "set_arrangement_shape_style": {"pattern_index", "expected_name", "style"},
+        "set_pattern_edge_to_avatar_measure": {"pattern_index", "expected_name", "line_index",
+                                               "avatar_measure", "attach"},
+        "simulate": {"steps"},
+        "export_view_image": {"output_path", "view", "width", "height",
+                              "fit_all_objects"},
+        "export_snapshot_2d": {"output_path"},
+        "set_camera_view": {"view", "zoom_to_fit"},
+        "reset_cloth_arrangement": set(),
+        "import_avatar_measurements": {"csv_path"},
+        "get_pattern_body_details": set(),
+        "get_pattern_details": {"pattern_index", "expected_name"},
+        "set_pattern_grain_direction": {"pattern_index", "expected_name", "degrees"},
+        "get_mesh_counts": {"pattern_index", "expected_name"},
+        "set_particle_distance": {"pattern_index", "expected_name", "distance"},
         "assign_pattern_fabric": {"pattern_index", "expected_name", "fabric_index",
                                   "expected_fabric_name", "expected_current_fabric_index"},
     }
@@ -137,6 +168,44 @@ def validate_params(command, params):
                 valid = name(value)
             elif key in ("direction_a", "direction_b"):
                 valid = type(value) is bool
+            elif key == "orientation":
+                valid = type(value) is int and 0 <= value <= 359
+            elif key in ("position_x", "position_y", "offset"):
+                valid = type(value) is int and 0 <= value <= 100
+            elif key == "line_index":
+                valid = type(value) is int and 0 <= value < MAX_LINES
+            elif key == "avatar_index":
+                valid = type(value) is int and 0 <= value < MAX_AVATARS
+            elif key == "steps":
+                valid = type(value) is int and 1 <= value <= 300
+            elif key == "style":
+                valid = value in ("Flat", "Curved")
+            elif key == "avatar_measure":
+                valid = (type(value) is str and 1 <= len(value) <= 256
+                         and all(ord(c) >= 32 and not 0xD800 <= ord(c) <= 0xDFFF
+                                 for c in value))
+            elif key == "attach":
+                valid = type(value) is bool
+            elif key == "output_path":
+                valid = (type(value) is str and 1 <= len(value) <= 260
+                         and value.lower().endswith(".png") and os.path.isabs(value)
+                         and all(ord(c) >= 32 and not 0xD800 <= ord(c) <= 0xDFFF
+                                 for c in value))
+            elif key == "csv_path":
+                valid = (type(value) is str and 1 <= len(value) <= 260
+                         and value.lower().endswith(".csv") and os.path.isabs(value)
+                         and all(ord(c) >= 32 and not 0xD800 <= ord(c) <= 0xDFFF
+                                 for c in value))
+            elif key == "view":
+                valid = type(value) is int and 0 <= value <= 8
+            elif key in ("width", "height"):
+                valid = type(value) is int and 64 <= value <= 2048
+            elif key in ("fit_all_objects", "zoom_to_fit"):
+                valid = type(value) is bool
+            elif key == "degrees":
+                valid = number(value) and 0 <= value <= 359
+            elif key == "distance":
+                valid = number(value) and 1 <= value <= 1000
             elif key == "vertex_types":
                 valid = (isinstance(value, list) and 3 <= len(value) <= 64
                          and all(type(v) is int and v in (0, 2, 3) for v in value)
@@ -309,7 +378,8 @@ def validate_result(command, result):
                  and result["verified"] is True
                  and type(result["avatar_count"]) is int
                  and 0 <= result["avatar_count"] <= MAX_AVATARS)
-    elif command == "set_arrangement":
+    elif command in ("set_arrangement", "set_arrangement_orientation",
+                     "set_arrangement_position"):
         valid = (keys == {"verified", "pattern_index", "pattern_name", "arrangement_name",
                           "offset", "orientation", "type", "units", "redrape"}
                  and result["verified"] is True and result["redrape"] is True
@@ -343,6 +413,197 @@ def validate_result(command, result):
                          and number(item["orientation"])
                          and type(item["type"]) is str and 1 <= len(item["type"]) <= 32
                          for i, item in enumerate(pieces)))
+    elif command == "get_arrangement_list":
+        points = result.get("points")
+        valid = (keys == {"library_count", "points", "units"}
+                 and type(result["library_count"]) is int
+                 and 0 <= result["library_count"] <= 4096
+                 and isinstance(points, list) and len(points) == result["library_count"]
+                 and result["units"] == "native_unspecified"
+                 and all(isinstance(item, dict)
+                         and set(item) == {"index", "name", "type", "offset", "orientation"}
+                         and item["index"] == i and type(item["index"]) is int
+                         and name(item["name"])
+                         and type(item["type"]) is str and 1 <= len(item["type"]) <= 32
+                         and isinstance(item["offset"], dict)
+                         and set(item["offset"]) == {"x", "y", "z"}
+                         and all(number(v) for v in item["offset"].values())
+                         and number(item["orientation"])
+                         for i, item in enumerate(points)))
+    elif command == "get_seamline_pairs":
+        groups = result.get("groups")
+        patterns = result.get("patterns")
+        valid = (keys == {"seam_count", "pattern_count", "groups", "patterns"}
+                 and type(result["seam_count"]) is int and 0 <= result["seam_count"] <= 4096
+                 and type(result["pattern_count"]) is int
+                 and 0 <= result["pattern_count"] <= MAX_PATTERNS
+                 and isinstance(groups, list) and len(groups) == result["seam_count"]
+                 and isinstance(patterns, list) and len(patterns) == result["pattern_count"]
+                 and all(isinstance(item, dict) and set(item) == {"index", "name"}
+                         and item["index"] == i and type(item["index"]) is int
+                         and inventory_name(item["name"])
+                         for i, item in enumerate(groups))
+                 and all(isinstance(item, dict)
+                         and set(item) == {"pattern_index", "pattern_name",
+                                           "group_indices", "group_names"}
+                         and item["pattern_index"] == i and type(item["pattern_index"]) is int
+                         and name(item["pattern_name"])
+                         and isinstance(item["group_indices"], list)
+                         and isinstance(item["group_names"], list)
+                         and len(item["group_indices"]) == len(item["group_names"])
+                         and all(type(v) is int and 0 <= v < result["seam_count"]
+                                 for v in item["group_indices"])
+                         and all(inventory_name(v) for v in item["group_names"])
+                         for i, item in enumerate(patterns)))
+    elif command == "get_avatar_measurements":
+        items = result.get("measurements")
+        valid = (keys == {"avatar_index", "avatar_name", "measurement_count",
+                          "measurements", "units"}
+                 and type(result["avatar_index"]) is int
+                 and 0 <= result["avatar_index"] < MAX_AVATARS
+                 and name(result["avatar_name"])
+                 and type(result["measurement_count"]) is int
+                 and 0 <= result["measurement_count"] <= 512
+                 and isinstance(items, list) and len(items) == result["measurement_count"]
+                 and result["units"] == "native_display_unit"
+                 and all(isinstance(item, dict)
+                         and set(item) == {"name", "type", "value", "basic_length",
+                                           "surface_length", "unit"}
+                         and inventory_name(item["name"])
+                         and type(item["type"]) is str and 1 <= len(item["type"]) <= 32
+                         and all(number(item[k]) for k in ("value", "basic_length", "surface_length"))
+                         and type(item["unit"]) is str and 1 <= len(item["unit"]) <= 8
+                         for item in items))
+    elif command == "get_pattern_avatar_attachments":
+        pairs = result.get("pairs")
+        valid = (keys == {"pair_count", "pin_count", "pairs"}
+                 and type(result["pair_count"]) is int and 0 <= result["pair_count"] <= 1024
+                 and type(result["pin_count"]) is int and 0 <= result["pin_count"] <= 65536
+                 and isinstance(pairs, list) and len(pairs) == result["pair_count"]
+                 and all(isinstance(item, dict)
+                         and set(item) == {"pattern_name", "avatar_measure"}
+                         and inventory_name(item["pattern_name"])
+                         and inventory_name(item["avatar_measure"])
+                         for item in pairs))
+    elif command == "set_arrangement_shape_style":
+        valid = (keys == {"verified", "pattern_index", "pattern_name", "arrangement_name",
+                          "offset", "orientation", "type", "units"}
+                 and result["verified"] is True
+                 and index(result["pattern_index"]) and name(result["pattern_name"])
+                 and inventory_name(result["arrangement_name"])
+                 and isinstance(result["offset"], dict)
+                 and set(result["offset"]) == {"x", "y", "z"}
+                 and all(number(v) for v in result["offset"].values())
+                 and number(result["orientation"])
+                 and result["type"] in ("Flat", "Curved")
+                 and result["units"] == "native_unspecified")
+    elif command == "set_pattern_edge_to_avatar_measure":
+        valid = (keys == {"verified", "pattern_index", "pattern_name", "line_index",
+                          "avatar_measure", "attached"}
+                 and result["verified"] is True
+                 and index(result["pattern_index"]) and name(result["pattern_name"])
+                 and type(result["line_index"]) is int
+                 and 0 <= result["line_index"] < MAX_LINES
+                 and inventory_name(result["avatar_measure"])
+                 and type(result["attached"]) is bool)
+    elif command == "simulate":
+        valid = (keys == {"verified", "steps", "pattern_count", "avatar_count", "elapsed_ms"}
+                 and result["verified"] is True
+                 and type(result["steps"]) is int and 1 <= result["steps"] <= 300
+                 and type(result["pattern_count"]) is int
+                 and 0 <= result["pattern_count"] <= MAX_PATTERNS
+                 and type(result["avatar_count"]) is int
+                 and 0 <= result["avatar_count"] <= MAX_AVATARS
+                 and number(result["elapsed_ms"], 1e12) and result["elapsed_ms"] >= 0)
+    elif command == "get_3d_screenshot":
+        valid = (keys == {"verified", "bytes"}
+                 and result["verified"] is True
+                 and type(result["bytes"]) is int
+                 and 0 < result["bytes"] <= 16777216)
+    elif command == "export_view_image":
+        fname = result.get("file_name")
+        valid = (keys == {"verified", "view", "width", "height", "file_name", "bytes"}
+                 and result["verified"] is True
+                 and type(result["view"]) is int and 0 <= result["view"] <= 8
+                 and type(result["width"]) is int and 64 <= result["width"] <= 2048
+                 and type(result["height"]) is int and 64 <= result["height"] <= 2048
+                 and type(fname) is str and 1 <= len(fname) <= 128
+                 and "/" not in fname and "\\" not in fname
+                 and type(result["bytes"]) is int
+                 and 0 < result["bytes"] <= 16777216)
+    elif command == "export_snapshot_2d":
+        fname = result.get("file_name")
+        valid = (keys == {"verified", "file_name", "bytes"}
+                 and result["verified"] is True
+                 and type(fname) is str and 1 <= len(fname) <= 128
+                 and "/" not in fname and "\\" not in fname
+                 and type(result["bytes"]) is int
+                 and 0 < result["bytes"] <= 16777216)
+    elif command == "set_camera_view":
+        valid = (keys == {"verified", "view", "zoom_to_fit"}
+                 and result["verified"] is True
+                 and type(result["view"]) is int and 0 <= result["view"] <= 8
+                 and type(result["zoom_to_fit"]) is bool)
+    elif command == "reset_cloth_arrangement":
+        valid = (keys == {"verified", "pattern_count"}
+                 and result["verified"] is True
+                 and type(result["pattern_count"]) is int
+                 and 0 <= result["pattern_count"] <= MAX_PATTERNS)
+    elif command == "import_avatar_measurements":
+        valid = (keys == {"verified", "avatar_index", "before_count",
+                          "after_count", "added"}
+                 and result["verified"] is True
+                 and type(result["avatar_index"]) is int
+                 and 0 <= result["avatar_index"] < MAX_AVATARS
+                 and type(result["before_count"]) is int
+                 and type(result["after_count"]) is int
+                 and 0 <= result["before_count"] <= 512
+                 and 0 <= result["after_count"] <= 512
+                 and type(result["added"]) is int
+                 and result["added"] == result["after_count"] - result["before_count"]
+                 and result["added"] > 0)
+    elif command == "get_pattern_body_details":
+        upper, lower = result.get("upperBody"), result.get("lowerBody")
+        body_keys = {"patternName", "patternIndex", "arrangementPosition",
+                     "semanticLabel", "bodyRegion", "patternPosition"}
+        def body_ok(item):
+            return (isinstance(item, dict) and set(item) == body_keys
+                    and type(item["patternIndex"]) is int
+                    and 0 <= item["patternIndex"] < MAX_PATTERNS
+                    and all(type(item[k]) is str and 0 <= len(item[k]) <= 128
+                            for k in body_keys - {"patternIndex"}))
+        valid = (keys == {"upperBody", "lowerBody"}
+                 and isinstance(upper, list) and isinstance(lower, list)
+                 and len(upper) + len(lower) <= MAX_PATTERNS
+                 and all(body_ok(item) for item in upper + lower))
+    elif command == "get_pattern_details":
+        valid = (keys == {"pattern_index", "pattern_name", "grain_direction",
+                          "category", "classification"}
+                 and index(result["pattern_index"]) and name(result["pattern_name"])
+                 and number(result["grain_direction"])
+                 and type(result["category"]) is int and -1 <= result["category"] <= 999
+                 and type(result["classification"]) is str
+                 and 0 <= len(result["classification"]) <= 256)
+    elif command == "set_pattern_grain_direction":
+        valid = (keys == {"verified", "pattern_index", "pattern_name",
+                          "grain_direction"}
+                 and result["verified"] is True
+                 and index(result["pattern_index"]) and name(result["pattern_name"])
+                 and number(result["grain_direction"]))
+    elif command == "get_mesh_counts":
+        meshes = result.get("meshes")
+        valid = (keys == {"pattern_index", "pattern_name", "meshes"}
+                 and index(result["pattern_index"]) and name(result["pattern_name"])
+                 and isinstance(meshes, list) and len(meshes) <= 16
+                 and all(isinstance(item, dict) and set(item) == {"type", "value"}
+                         and type(item["type"]) is str and 1 <= len(item["type"]) <= 64
+                         and type(item["value"]) is str and 1 <= len(item["value"]) <= 64
+                         for item in meshes))
+    elif command == "set_particle_distance":
+        valid = (keys == {"verified", "pattern_index", "pattern_name", "distance"}
+                 and result["verified"] is True
+                 and index(result["pattern_index"]) and name(result["pattern_name"])
+                 and number(result["distance"]) and 1 <= result["distance"] <= 1000)
     elif command == "get_fabric_list":
         valid = (keys == {"fabric_count", "fabrics"}
                  and inventory_result(result, "fabric", MAX_FABRICS))

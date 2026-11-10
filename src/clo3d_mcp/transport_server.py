@@ -4,12 +4,13 @@ import asyncio
 from contextlib import suppress
 import os
 import json
+from pathlib import Path
 import socket
 import time
 from typing import Any
 from pydantic import StrictBool, StrictFloat, StrictInt, StrictStr
 
-from mcp.server.fastmcp import FastMCP
+from mcp.server.fastmcp import FastMCP, Image
 from mcp.server.transport_security import TransportSecuritySettings
 from mcp.types import CallToolResult, TextContent, ToolAnnotations
 import uvicorn
@@ -33,10 +34,29 @@ def tool_error(code):
                           content=[TextContent(type="text", text=json.dumps(data))])
 
 
+def image_content(path):
+    """Return bounded PNG/JPEG MCP content for one validated screenshot file."""
+    try:
+        data = path.read_bytes()
+    except OSError:
+        return tool_error("invalid_native_result")
+    if not 0 < len(data) <= MAX_SCREENSHOT_BYTES:
+        return tool_error("invalid_native_result")
+    if data.startswith(b"\x89PNG\r\n\x1a\n"):
+        return Image(data=data, format="png")
+    if data.startswith(b"\xff\xd8"):
+        return Image(data=data, format="jpeg")
+    return tool_error("invalid_native_result")
+
+
 # Tools without parameters: the raw payload must be exactly {} (or omitted).
 # PATTERN_COMMANDS get the same exact-key check through validate_params.
 NO_ARG_COMMANDS = frozenset({"ping", "get_pattern_count", "transport_status",
-                             "get_session_info", "create_test_rectangle"})
+                             "get_session_info", "create_test_rectangle",
+                             "get_arrangement_list", "get_seamline_pairs",
+                             "get_pattern_avatar_attachments"})
+SCREENSHOT_DIR = Path(__file__).resolve().parents[2] / "acceptance-output" / "screenshots"
+MAX_SCREENSHOT_BYTES = 16777216
 
 
 class SessionMCP(FastMCP):
@@ -45,7 +65,8 @@ class SessionMCP(FastMCP):
         # JSON strings. Validate the RAW payload before either happens.
         if name in NO_ARG_COMMANDS and arguments not in (None, {}):
             return tool_error("invalid_parameters")
-        if name in PATTERN_COMMANDS:
+        server_generated = {"get_3d_screenshot", "export_view_image", "export_snapshot_2d"}
+        if name in PATTERN_COMMANDS and name not in server_generated:
             try:
                 validate_params(name, arguments)
             except CommandError:
@@ -159,6 +180,8 @@ def build_mcp(service):
 def add_pattern_tools(mcp, service, read):
     """Explicit tools only; no registration of arbitrary CLO functions."""
     mutation = ToolAnnotations(readOnlyHint=False, destructiveHint=True,
+                               idempotentHint=False, openWorldHint=False)
+    artifact = ToolAnnotations(readOnlyHint=False, destructiveHint=False,
                                idempotentHint=False, openWorldHint=False)
 
     @mcp.tool(annotations=read)
@@ -317,6 +340,278 @@ def add_pattern_tools(mcp, service, read):
         return await service.call("set_arrangement", {
             "pattern_index": pattern_index, "expected_name": expected_name,
             "arrangement_index": arrangement_index})
+
+    @mcp.tool(annotations=mutation)
+    async def set_arrangement_orientation(pattern_index: StrictInt, expected_name: StrictStr,
+                                          orientation: StrictInt) -> dict[str, Any]:
+        """Set ONE arranged pattern's native orientation value and ReDrape; verify readback.
+
+        Requires a fresh unique name/index and an integer orientation 0..359. The
+        documented 2-argument SetArrangementOrientation is called, then
+        ReDrape3DArrangement with the same ApiTypes.ImportExportOption flags as
+        set_arrangement. Verification requires the readback orientation to equal
+        the request after ReDrape and the arrangement name/offsets/type to stay
+        unchanged; result mirrors set_arrangement. The native value's units and
+        3D axis are not established (units native_unspecified), so fitting remains
+        visual-only; a roll around the attachment point may not remove avatar
+        intersections. No retry/cleanup; errors after the setter may leave the
+        orientation applied.
+        """
+        return await service.call("set_arrangement_orientation", {
+            "pattern_index": pattern_index, "expected_name": expected_name,
+            "orientation": orientation})
+
+    @mcp.tool(annotations=mutation)
+    async def set_arrangement_position(pattern_index: StrictInt, expected_name: StrictStr,
+                                       position_x: StrictInt, position_y: StrictInt,
+                                       offset: StrictInt) -> dict[str, Any]:
+        """Set ONE arranged pattern's native arrangement position and ReDrape.
+
+        Native signature is (patternIndex, positionX, positionY, offset), not
+        world x/y/z. Requires a fresh unique name/index and integers 0..100
+        (observed range; units native_unspecified). Calls SetArrangementPosition,
+        then ReDrape3DArrangement with the ApiTypes flags. Readback offsets must
+        equal the requested triplet and name/orientation/type must stay unchanged.
+        Whether this moves the piece in 3D is visual-only and unproven; it is not
+        a free gizmo transform. No retry/cleanup; errors may leave the state applied.
+        """
+        return await service.call("set_arrangement_position", {
+            "pattern_index": pattern_index, "expected_name": expected_name,
+            "position_x": position_x, "position_y": position_y, "offset": offset})
+
+    @mcp.tool(annotations=read)
+    async def get_arrangement_list() -> dict[str, Any]:
+        """Read the avatar arrangement-point library with names and presets.
+
+        Read-only. Returns index/name/type/offset{x,y,z}/orientation for up to
+        4096 points; offset/orientation units remain native_unspecified. Use the
+        index with set_arrangement. No setter, drape or fit validation.
+        """
+        return await service.call("get_arrangement_list")
+
+    @mcp.tool(annotations=read)
+    async def get_seamline_pairs() -> dict[str, Any]:
+        """Read seam group count/names and per-pattern seam group membership.
+
+        Read-only; up to 4096 groups and 256 patterns. Group names and indices
+        come from native seamline pair groups; membership is read per pattern.
+        No delete/merge/partial-seam inspection; list drift stops without retry.
+        """
+        return await service.call("get_seamline_pairs")
+
+    @mcp.tool(annotations=read)
+    async def get_avatar_measurements(avatar_index: StrictInt) -> dict[str, Any]:
+        """Read one loaded avatar's measurement names, types and lengths.
+
+        Required before attaching a pattern edge to an avatar measure. Read-only;
+        up to 512 measurements. Values use the native display unit reported per
+        measurement; no pose, fit or measurement editing.
+        """
+        return await service.call("get_avatar_measurements", {
+            "avatar_index": avatar_index})
+
+    @mcp.tool(annotations=read)
+    async def get_pattern_avatar_attachments() -> dict[str, Any]:
+        """Read pattern-to-avatar-measure attachments and the scene pin count.
+
+        Read-only; up to 1024 de-duplicated pairs. Pairs are keyed by names, so
+        duplicate pattern names may collapse. No attach/detach; no fit claim.
+        """
+        return await service.call("get_pattern_avatar_attachments")
+
+    @mcp.tool(annotations=mutation)
+    async def set_arrangement_shape_style(pattern_index: StrictInt, expected_name: StrictStr,
+                                          style: StrictStr) -> dict[str, Any]:
+        """Set ONE arranged pattern's native shape style to Flat or Curved.
+
+        Requires a fresh unique name/index. Calls SetArrangementShapeStyle and
+        verifies the arrangement type readback; name/offset/orientation must stay
+        unchanged. Visual drape effect is not established; no ReDrape or retry.
+        Errors after the setter may leave the style applied.
+        """
+        return await service.call("set_arrangement_shape_style", {
+            "pattern_index": pattern_index, "expected_name": expected_name,
+            "style": style})
+
+    @mcp.tool(annotations=mutation)
+    async def set_pattern_edge_to_avatar_measure(pattern_index: StrictInt, expected_name: StrictStr,
+                                                 line_index: StrictInt, avatar_measure: StrictStr,
+                                                 attach: StrictBool) -> dict[str, Any]:
+        """Attach or detach ONE whole pattern edge to an avatar measure (Line Pin).
+
+        Requires a fresh unique name/index, a line index from get_pattern_lines,
+        and a measurement name from get_avatar_measurements. Calls the native
+        boolean setter, which runs the cloth solver afterwards, then verifies the
+        attachment readback. Does not detach other edges; visual fit is separate.
+        No retry; a false/mismatched result stops mutations.
+        """
+        return await service.call("set_pattern_edge_to_avatar_measure", {
+            "pattern_index": pattern_index, "expected_name": expected_name,
+            "line_index": line_index, "avatar_measure": avatar_measure,
+            "attach": attach})
+
+    @mcp.tool(annotations=mutation)
+    async def simulate(steps: StrictInt) -> dict[str, Any]:
+        """Run ONE bounded cloth simulation of 1..300 steps and verify the list.
+
+        Requires a ready avatar and scene. Calls utility_api.Simulate once; the
+        native boolean and unchanged pattern list/names are verified. This is
+        visual-only: it does not prove a physically correct fit, and a client
+        timeout does not cancel the native call. No retry or settings changes.
+        """
+        return await service.call("simulate", {"steps": steps})
+
+    @mcp.tool(annotations=artifact)
+    async def get_3d_screenshot() -> Any:
+        """Capture the current CLO 3D window as a PNG and return the image.
+
+        Writes one bounded file under acceptance-output/screenshots and returns
+        image content, so the caller can inspect the result directly. No dialog,
+        no scene change, no arbitrary output path. Empty/non-image/oversized
+        output is an error; no automatic retry.
+        """
+        SCREENSHOT_DIR.mkdir(parents=True, exist_ok=True)
+        path = SCREENSHOT_DIR / ("3d_%d.png" % time.time_ns())
+        result = await service.call("get_3d_screenshot", {"output_path": str(path)})
+        if isinstance(result, CallToolResult):
+            return result
+        if not isinstance(result, dict) or result.get("ok") is not True:
+            return tool_error("invalid_native_result")
+        return image_content(path)
+
+    @mcp.tool(annotations=artifact)
+    async def export_view_image(view: StrictInt, width: StrictInt, height: StrictInt,
+                                fit_all_objects: StrictBool) -> Any:
+        """Render one standard 3D view and return it as an image.
+
+        View indexes: 0 Bottom, 1 FrontRight, 2 Front, 3 FrontLeft, 4 Right,
+        5 Top, 6 Left, 7 Custom, 8 Back. Writes one bounded file under
+        acceptance-output/screenshots, independent of the current camera; no
+        scene change. Native may append the colorway name to the file name.
+        Empty/non-image/oversized output is an error; no retry.
+        """
+        SCREENSHOT_DIR.mkdir(parents=True, exist_ok=True)
+        path = SCREENSHOT_DIR / ("view_%d_%d.png" % (view, time.time_ns()))
+        result = await service.call("export_view_image", {
+            "output_path": str(path), "view": view, "width": width,
+            "height": height, "fit_all_objects": fit_all_objects})
+        if isinstance(result, CallToolResult):
+            return result
+        file_name = result.get("file_name") if isinstance(result, dict) else None
+        if (not isinstance(file_name, str) or not file_name
+                or Path(file_name).name != file_name):
+            return tool_error("invalid_native_result")
+        return image_content(SCREENSHOT_DIR / file_name)
+
+    @mcp.tool(annotations=artifact)
+    async def export_snapshot_2d() -> Any:
+        """Capture the current 2D pattern window as an image and return it.
+
+        Writes one bounded PNG/JPEG under acceptance-output/screenshots and
+        returns image content. Uses the current 2D camera/zoom exactly as shown;
+        no scene change, no dialog, no arbitrary path, no retry.
+        """
+        SCREENSHOT_DIR.mkdir(parents=True, exist_ok=True)
+        path = SCREENSHOT_DIR / ("view2d_%d.png" % time.time_ns())
+        result = await service.call("export_snapshot_2d", {"output_path": str(path)})
+        if isinstance(result, CallToolResult):
+            return result
+        file_name = result.get("file_name") if isinstance(result, dict) else None
+        if (not isinstance(file_name, str) or not file_name
+                or Path(file_name).name != file_name):
+            return tool_error("invalid_native_result")
+        return image_content(SCREENSHOT_DIR / file_name)
+
+    @mcp.tool(annotations=mutation)
+    async def set_camera_view(view: StrictInt, zoom_to_fit: StrictBool) -> dict[str, Any]:
+        """Set one standard 3D camera view and optionally zoom to fit.
+
+        Uses SetCamViewPoint, optional SetZoomView and Refresh3DWindow. View
+        indexes match export_view_image. Camera-only effect: no scene mutation,
+        no readback of the camera, visual confirmation only. No retry.
+        """
+        return await service.call("set_camera_view", {
+            "view": view, "zoom_to_fit": zoom_to_fit})
+
+    @mcp.tool(annotations=mutation)
+    async def reset_cloth_arrangement() -> dict[str, Any]:
+        """Restore the cloth shape to its state when it was loaded.
+
+        Global cloth reset; discards the current simulation shape. Verifies the
+        pattern list is unchanged; visual result only. No preflight avatar/pose
+        validation, no retry or automatic cleanup.
+        """
+        return await service.call("reset_cloth_arrangement")
+
+    @mcp.tool(annotations=mutation)
+    async def import_avatar_measurements(csv_path: StrictStr) -> dict[str, Any]:
+        """Apply ONE measurement CSV to the single current avatar.
+
+        Requires an absolute existing .csv <=16MiB and exactly one loaded avatar.
+        Uses import_api.ImportMeasurement, then verifies measurement count grew;
+        before/after counts are returned. No path echo, no retry, no pose/fit
+        claim. CSV format is native and not validated by this tool.
+        """
+        return await service.call("import_avatar_measurements", {
+            "csv_path": csv_path})
+
+    @mcp.tool(annotations=read)
+    async def get_pattern_body_details() -> dict[str, Any]:
+        """Read native body-region and semantic labels for all patterns.
+
+        Read-only; parses GetPatternOnBodyDetails into upperBody/lowerBody
+        arrays with patternName/index, arrangementPosition, semanticLabel,
+        bodyRegion and patternPosition. Bounded JSON; no garment/fit validation.
+        """
+        return await service.call("get_pattern_body_details")
+
+    @mcp.tool(annotations=read)
+    async def get_pattern_details(pattern_index: StrictInt, expected_name: StrictStr) -> dict[str, Any]:
+        """Read ONE piece's grain direction, category and classification.
+
+        Required fresh unique index/name. Read-only; grain is native degrees
+        (0 = vertical on the tested build); category/classification are native
+        values, not durable IDs. No geometry or fit claim.
+        """
+        return await service.call("get_pattern_details", {
+            "pattern_index": pattern_index, "expected_name": expected_name})
+
+    @mcp.tool(annotations=mutation)
+    async def set_pattern_grain_direction(pattern_index: StrictInt, expected_name: StrictStr,
+                                          degrees: StrictInt | StrictFloat) -> dict[str, Any]:
+        """Set ONE piece's grain direction in degrees and verify readback.
+
+        Required fresh unique index/name and finite degrees 0..359. Verifies
+        native readback (mod 360) and unchanged area/position/list. No retry;
+        errors after the setter may leave the grain applied.
+        """
+        return await service.call("set_pattern_grain_direction", {
+            "pattern_index": pattern_index, "expected_name": expected_name,
+            "degrees": degrees})
+
+    @mcp.tool(annotations=read)
+    async def get_mesh_counts(pattern_index: StrictInt, expected_name: StrictStr) -> dict[str, Any]:
+        """Read native face/vertex text counts by mesh type for ONE piece.
+
+        Required fresh unique index/name. Read-only; up to 16 typed entries.
+        Values are native text, not parsed faces/vertices; no simulation quality
+        or geometry claim.
+        """
+        return await service.call("get_mesh_counts", {
+            "pattern_index": pattern_index, "expected_name": expected_name})
+
+    @mcp.tool(annotations=mutation)
+    async def set_particle_distance(pattern_index: StrictInt, expected_name: StrictStr,
+                                    distance: StrictInt | StrictFloat) -> dict[str, Any]:
+        """Set ONE piece's simulation mesh size in mm and verify readback.
+
+        Required fresh unique index/name and finite distance 1..1000 mm.
+        Verifies native readback and unchanged area/position/list. Smaller is
+        finer/slower; no simulation run or fit claim. No retry.
+        """
+        return await service.call("set_particle_distance", {
+            "pattern_index": pattern_index, "expected_name": expected_name,
+            "distance": distance})
 
     @mcp.tool(annotations=mutation)
     async def add_seamline_pair(pattern_a_index: StrictInt, expected_name_a: StrictStr,

@@ -20,12 +20,24 @@ MAX_BYTES = 200000
 EXTERNAL = {"get_session_info", "transport_status"}
 MUTATIONS = {"create_pattern", "set_pattern_name", "copy_pattern_with_offset",
              "move_pattern_relative", "delete_pattern", "assign_pattern_fabric",
-             "add_seamline_pair", "import_avatar", "set_arrangement"}
+             "add_seamline_pair", "import_avatar", "set_arrangement",
+             "set_arrangement_orientation", "set_arrangement_position",
+             "set_arrangement_shape_style", "set_pattern_edge_to_avatar_measure",
+             "simulate", "set_camera_view", "reset_cloth_arrangement",
+             "import_avatar_measurements", "set_pattern_grain_direction",
+             "set_particle_distance"}
+ARTIFACTS = {"get_3d_screenshot", "export_view_image", "export_snapshot_2d"}
+SERVER_GENERATED = ARTIFACTS
 DIAGNOSTIC = "create_test_rectangle"
-CURRENT = EXTERNAL | MUTATIONS | {DIAGNOSTIC, "ping", "get_pattern_count", "list_clo_api",
-                                 "describe_clo_api", "get_pattern_list", "get_pattern_geometry",
-                                  "get_fabric_list", "get_avatars", "get_pattern_fabric", "get_pattern_outline",
-                                  "get_pattern_lines", "get_arrangement"}
+CURRENT = EXTERNAL | MUTATIONS | ARTIFACTS | {DIAGNOSTIC, "ping", "get_pattern_count",
+                                 "list_clo_api", "describe_clo_api", "get_pattern_list",
+                                 "get_pattern_geometry", "get_fabric_list", "get_avatars",
+                                 "get_pattern_fabric", "get_pattern_outline",
+                                 "get_pattern_lines", "get_arrangement",
+                                 "get_arrangement_list", "get_seamline_pairs",
+                                 "get_avatar_measurements", "get_pattern_avatar_attachments",
+                                 "get_pattern_body_details", "get_pattern_details",
+                                 "get_mesh_counts"}
 EFFECTS = {"read", "scene_mutation", "diagnostic_mutation", "filesystem_write",
            "external_effect", "global_mutation", "unknown"}
 BLOCKERS = {"tool_unavailable", "capability_missing", "not_ready", "unsupported_geometry",
@@ -117,7 +129,7 @@ CONTRACT = contract_module()
 def inventory(root=ROOT):
     """AST only: decorators, public args, literal command mapping and capabilities.
 
-    Deliberately fails closed when the current24 registration shape changes.
+    Deliberately fails closed when the current44 registration shape changes.
     Does not inspect legacy server.py or claim a currently running profile.
     """
     tree = ast.parse((root / "src/clo3d_mcp/transport_server.py").read_text(encoding="utf-8"))
@@ -145,7 +157,8 @@ def inventory(root=ROOT):
                     and n.func.attr == "call" and n.args and isinstance(n.args[0], ast.Constant)]
         require(commands == ([] if node.name in EXTERNAL else [node.name]), "command_mapping_drift")
         tools[node.name] = {"args": required, "optional_args": optional,
-                            "effect": "scene_mutation" if node.name in MUTATIONS else
+                            "effect": "filesystem_write" if node.name in ARTIFACTS else
+                            "scene_mutation" if node.name in MUTATIONS else
                             "diagnostic_mutation" if node.name == DIAGNOSTIC else "read"}
     require(set(tools) == CURRENT, "current_inventory_drift")
     # Evaluate only a tiny AST list-expression grammar, never source execution.
@@ -168,33 +181,62 @@ def inventory(root=ROOT):
             if name in {"CAPABILITIES", "SERVICE_CAPABILITIES", "PATTERN_CAPABILITIES"}:
                 constants[name] = literal(node.value)
     require(set(constants.get("PATTERN_CAPABILITIES", [])) == CURRENT - EXTERNAL, "capability_inventory_drift")
+    def profile(removed):
+        return {"tools": sorted(CURRENT - removed),
+                "capabilities": [c for c in constants["PATTERN_CAPABILITIES"] if c not in removed]}
+
+    newest = {"export_view_image", "export_snapshot_2d", "set_camera_view",
+              "reset_cloth_arrangement", "import_avatar_measurements",
+              "get_pattern_body_details", "get_pattern_details",
+              "set_pattern_grain_direction", "get_mesh_counts",
+              "set_particle_distance"}
+    previous = {"get_3d_screenshot", "get_arrangement_list", "get_seamline_pairs",
+                "get_avatar_measurements", "get_pattern_avatar_attachments",
+                "set_arrangement_shape_style", "set_pattern_edge_to_avatar_measure",
+                "simulate"}
+    base = newest | previous
     profiles = {
-        "current24": {"tools": sorted(tools), "capabilities": constants["PATTERN_CAPABILITIES"]},
-        "current23": {"tools": sorted(CURRENT - {"set_arrangement"}),
-                      "capabilities": [c for c in constants["PATTERN_CAPABILITIES"]
-                                       if c != "set_arrangement"]},
-        "current22": {"tools": sorted(CURRENT - {"set_arrangement", "get_arrangement"}),
-                      "capabilities": [c for c in constants["PATTERN_CAPABILITIES"]
-                                       if c not in {"set_arrangement", "get_arrangement"}]},
-        "current21": {"tools": sorted(CURRENT - {"set_arrangement", "get_arrangement", "import_avatar"}),
-                      "capabilities": [c for c in constants["PATTERN_CAPABILITIES"]
-                                       if c not in {"set_arrangement", "get_arrangement", "import_avatar"}]},
-        "current20": {"tools": sorted(CURRENT - {"set_arrangement", "get_arrangement", "import_avatar", "add_seamline_pair"}),
-                      "capabilities": [c for c in constants["PATTERN_CAPABILITIES"]
-                                       if c not in {"set_arrangement", "get_arrangement", "import_avatar", "add_seamline_pair"}]},
-        "current19": {"tools": sorted(CURRENT - {"set_arrangement", "get_arrangement", "import_avatar", "add_seamline_pair", "get_pattern_lines"}),
-                      "capabilities": [c for c in constants["PATTERN_CAPABILITIES"]
-                                       if c not in {"set_arrangement", "get_arrangement", "import_avatar", "add_seamline_pair", "get_pattern_lines"}]},
-        "current18": {"tools": sorted(CURRENT - {"set_arrangement", "get_arrangement", "import_avatar", "add_seamline_pair", "get_pattern_lines", "get_pattern_outline"}),
-                      "capabilities": [c for c in constants["PATTERN_CAPABILITIES"]
-                                       if c not in {"set_arrangement", "get_arrangement", "import_avatar", "add_seamline_pair", "get_pattern_lines", "get_pattern_outline"}]},
-        "current16": {"tools": sorted(CURRENT - {"set_arrangement", "get_arrangement", "import_avatar", "add_seamline_pair", "get_pattern_lines", "get_pattern_fabric", "assign_pattern_fabric", "get_pattern_outline"}),
-                      "capabilities": [c for c in constants["PATTERN_CAPABILITIES"]
-                                        if c not in {"set_arrangement", "get_arrangement", "import_avatar", "add_seamline_pair", "get_pattern_lines", "get_pattern_fabric", "assign_pattern_fabric", "get_pattern_outline"}]},
+        "current44": profile(set()),
+        "current34": profile(newest),
+        "current26": profile(base),
+        "current25": profile(base | {"set_arrangement_position"}),
+        "current24": profile(base | {"set_arrangement_position",
+                                     "set_arrangement_orientation"}),
+        "current23": profile(base | {"set_arrangement_position",
+                                     "set_arrangement_orientation", "set_arrangement"}),
+        "current22": profile(base | {"set_arrangement_position",
+                                     "set_arrangement_orientation", "set_arrangement",
+                                     "get_arrangement"}),
+        "current21": profile(base | {"set_arrangement_position",
+                                     "set_arrangement_orientation", "set_arrangement",
+                                     "get_arrangement", "import_avatar"}),
+        "current20": profile(base | {"set_arrangement_position",
+                                     "set_arrangement_orientation", "set_arrangement",
+                                     "get_arrangement", "import_avatar",
+                                     "add_seamline_pair"}),
+        "current19": profile(base | {"set_arrangement_position",
+                                     "set_arrangement_orientation", "set_arrangement",
+                                     "get_arrangement", "import_avatar",
+                                     "add_seamline_pair", "get_pattern_lines"}),
+        "current18": profile(base | {"set_arrangement_position",
+                                     "set_arrangement_orientation", "set_arrangement",
+                                     "get_arrangement", "import_avatar",
+                                     "add_seamline_pair", "get_pattern_lines",
+                                     "get_pattern_outline"}),
+        "current16": profile(base | {"set_arrangement_position",
+                                     "set_arrangement_orientation", "set_arrangement",
+                                     "get_arrangement", "import_avatar",
+                                     "add_seamline_pair", "get_pattern_lines",
+                                     "get_pattern_fabric", "assign_pattern_fabric",
+                                     "get_pattern_outline"}),
         # Historical selection fixtures keep their exact old capabilities.
-        "current14": {"tools": sorted(CURRENT - {"set_arrangement", "get_arrangement", "import_avatar", "add_seamline_pair", "get_pattern_lines", "get_fabric_list", "get_avatars", "get_pattern_fabric", "assign_pattern_fabric", "get_pattern_outline"}),
-                      "capabilities": [c for c in constants["PATTERN_CAPABILITIES"]
-                                        if c not in {"set_arrangement", "get_arrangement", "import_avatar", "add_seamline_pair", "get_pattern_lines", "get_fabric_list", "get_avatars", "get_pattern_fabric", "assign_pattern_fabric", "get_pattern_outline"}]},
+        "current14": profile(base | {"set_arrangement_position",
+                                     "set_arrangement_orientation", "set_arrangement",
+                                     "get_arrangement", "import_avatar",
+                                     "add_seamline_pair", "get_pattern_lines",
+                                     "get_fabric_list", "get_avatars",
+                                     "get_pattern_fabric", "assign_pattern_fabric",
+                                     "get_pattern_outline"}),
         "diagnostic5": {"tools": sorted(EXTERNAL | set(constants["SERVICE_CAPABILITIES"])),
                         "capabilities": constants["SERVICE_CAPABILITIES"]},
     }
@@ -206,7 +248,7 @@ def validate_args(tool, args, inv):
     spec = inv["tools"][tool]
     require(set(spec["args"]) <= set(args) <= set(spec["args"]) | set(spec.get("optional_args", [])),
             "invalid_fields")
-    if tool in CONTRACT.PATTERN_COMMANDS:
+    if tool in CONTRACT.PATTERN_COMMANDS and tool not in SERVER_GENERATED:
         try:
             CONTRACT.validate_params(tool, args)
         except CONTRACT.CommandError:

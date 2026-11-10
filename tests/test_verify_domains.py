@@ -433,10 +433,10 @@ def test_assets_stat_only_no_content_and_never_print_paths(tmp_path, monkeypatch
 def test_output_response_report_and_object_bounds():
     def oversized(name, result, step):
         if name == "get_session_info":
-            result.structuredContent["PRIVATE"] = "secret" * 1000
+            result.structuredContent["PRIVATE"] = "secret" * 4000
         return result
     client = Fake(transform=oversized)
-    report = run(client, limits=vd.Limits(response_bytes=4096))
+    report = run(client, limits=vd.Limits(response_bytes=16384))
     assert report["code"] == "response_bound" and len(client.calls) == 2
     assert vd.report_text({"x": "secret" * 1000}, 2048).find("secret") == -1
     assert len(vd.report_text({"x": "x" * 3000}, 2048)) <= 2048
@@ -564,7 +564,7 @@ def test_json_client_initializes_inventory_single_post_no_get_or_delete():
             client = vd.JsonMCPClient(http, vd.Limits())
             runner = vd.Runner(client)
             await runner.rpc("initialize", client.initialize)
-            assert len((await client.list_tools()).tools) == 24
+            assert len((await client.list_tools()).tools) == 44
     asyncio.run(scenario())
     assert [r.method for r in requests] == ["POST"] * 3
     assert "Mcp-Session-Id" in requests[-1].headers

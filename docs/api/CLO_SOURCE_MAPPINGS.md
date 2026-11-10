@@ -22,14 +22,14 @@ LICENSE/NOTICE: pinned URLs и SHA-256 в JSON; NOTICE указывает upstre
 - `shared_donor_legacy_tool_names`: `44`
 - `donor_only_tool_names`: `126`
 - `legacy_only_tool_names`: `['import_dxf', 'list_extensions', 'ping']`
-- `current_tools`: `24`
+- `current_tools`: `44`
 
 ## Схема и доказательства
 
 Основной JSON — индекс; списки хранятся в `mappings/*.json` shards <=180000 bytes, каждый с SHA-256/count. `load_mappings(path)` возвращает full structure и flat aliases `donor_tools`, `local_legacy_tools`, `current_tools`, `source_refs` для coordinator join.
 `donor.tools` содержит все170 имён, exact source descriptions, нормализованные Python signatures/parameters, literal routes, handler_commands, native_ids и явные name_aliases.
 `donor.handlers` содержит все172 registry commands, handler/registry line ranges, qualified references и helper chains. `local.legacy` — отдельные47 tools/47 registry commands и DEV extras вне registry.
-`local.current.tools` — отдельные19 tools: profile, contract/adapter/test evidence, primary/supporting native ids и раздельная local/partial/historical acceptance. Outline real BLOCKED: user manual one-shot native [] for existing own target;cause unknown,not accepted. `shared_native_alias_candidates`/`current_replacement_limits` явно отделяют aliases от ограниченных замен.
+`local.current.tools` — отдельные26 tools: profile, contract/adapter/test evidence, primary/supporting native ids и раздельная local/partial/historical acceptance. Outline real BLOCKED: user manual one-shot native [] for existing own target;cause unknown,not accepted. `shared_native_alias_candidates`/`current_replacement_limits` явно отделяют aliases от ограниченных замен.
 `sources` содержит SHA-256 исходных bytes, lengths, pinned raw/browse URLs (донор), Git blob SHA-1 и local relative paths. При donor rebuild bytes сверяются с blob IDs pinned tree; local bytes не нормализуются по CRLF, при смене line endings пересобрать.
 `normalized_sha256` защищает целостность нормализованных donor facts (не криптографическая подпись). Offline-проверка не доказывает соответствие недоступному raw source: для этого нужен pinned refresh/cache rebuild.
 `references.kind=direct_call` означает AST Call.func; `callable_reference` — ссылка на функцию/тип, не direct invocation. `invoked_via` фиксирует передачу callable аргумента helper-параметру и место его вызова.
@@ -58,7 +58,7 @@ Unit tests: `uv run --frozen --with pytest pytest -q tests/test_api_source_mappi
 `open_file` / `import_file` и `add_fabric` / `import_fabric` имеют общие native names, но это не автоматически эквивалентные контракты. `list_extensions` не имеет native handler.
 Legacy copy_pattern/CopyPatternPiecePos не объявлен эквивалентом current copy_pattern_with_offset/CopyPatternPieceMove; create_pattern current покрывает только simple straight polygons.
 
-## Current19 и граница приёмки
+## Current26 и граница приёмки
 
 - `add_seamline_pair` (pattern_package): `pattern_api.AddSeamlinePairGroup`; evidence `docs/PATTERN_API_CHECK.md`.
 - `assign_pattern_fabric` (pattern_package): `fabric_api.AssignFabricToPattern`; evidence `docs/CLO_FABRIC_ASSIGNMENT_CHECK.md`.
@@ -67,22 +67,42 @@ Legacy copy_pattern/CopyPatternPiecePos не объявлен эквивален
 - `create_test_rectangle` (base_service): `pattern_api.CreatePatternWithPoints`; evidence `docs/P3_MCP_CHECK.md`.
 - `delete_pattern` (pattern_package): `pattern_api.DeletePatternPiece`; evidence `docs/PATTERN_API_CHECK.md`.
 - `describe_clo_api` (pattern_package): нет фиксированного native вызова; evidence `docs/PATTERN_API_CHECK.md`.
+- `export_snapshot_2d` (pattern_package): `export_api.ExportThumbnail2D`; evidence `docs/CLO_MCP_TOOLS.md`.
+- `export_view_image` (pattern_package): `export_api.ExportStdViewImage`, `export_api.GetCurrentColorwayIndex`; evidence `docs/CLO_MCP_TOOLS.md`.
+- `get_3d_screenshot` (pattern_package): `export_api.ExportThumbnail3D`; evidence `docs/CLO_MCP_TOOLS.md`.
 - `get_arrangement` (pattern_package): `pattern_api.GetArrangementList`, `pattern_api.GetArrangementOfPattern`; evidence `docs/PATTERN_API_CHECK.md`.
+- `get_arrangement_list` (pattern_package): `pattern_api.GetArrangementList`; evidence `docs/CLO_MCP_TOOLS.md`.
+- `get_avatar_measurements` (pattern_package): `utility_api.GetAvatarMeasurements`; evidence `docs/CLO_MCP_TOOLS.md`.
 - `get_avatars` (pattern_package): `export_api.GetAvatarCount`, `export_api.GetAvatarNameList`; evidence `docs/CLO_INVENTORY_CHECK.md`.
 - `get_fabric_list` (pattern_package): `fabric_api.GetFabricCount`, `fabric_api.GetFabricName`; evidence `docs/CLO_INVENTORY_CHECK.md`.
+- `get_mesh_counts` (pattern_package): `pattern_api.GetMeshCountByType`; evidence `docs/CLO_MCP_TOOLS.md`.
+- `get_pattern_avatar_attachments` (pattern_package): `pattern_api.GetAllPatternToAvatarMeasures`, `pattern_api.GetPinListSize`; evidence `docs/CLO_MCP_TOOLS.md`.
+- `get_pattern_body_details` (pattern_package): `pattern_api.GetPatternOnBodyDetails`; evidence `docs/CLO_MCP_TOOLS.md`.
 - `get_pattern_count` (base_service): `pattern_api.GetPatternCount`; evidence `docs/P3_MCP_CHECK.md`.
+- `get_pattern_details` (pattern_package): `pattern_api.GetPatternPieceGrainDirection`, `pattern_api.GetPatternPieceCategory`, `pattern_api.GetPatternPieceClassification`; evidence `docs/CLO_MCP_TOOLS.md`.
 - `get_pattern_fabric` (pattern_package): `fabric_api.GetFabricIndexForPattern`; evidence `docs/CLO_FABRIC_ASSIGNMENT_CHECK.md`.
 - `get_pattern_geometry` (pattern_package): `pattern_api.GetPatternPieceName`, `pattern_api.GetPatternPiecePos`, `pattern_api.GetPatternPieceArea`, `pattern_api.GetBoundingBoxOfPattern`; evidence `docs/PATTERN_API_CHECK.md`.
 - `get_pattern_lines` (pattern_package): `pattern_api.GetPatternLineInfo`; evidence `docs/CLO_LINE_API_CONTRACT_REVIEW.md`.
 - `get_pattern_list` (pattern_package): `pattern_api.GetPatternCount`, `pattern_api.GetPatternPieceName`; evidence `docs/PATTERN_API_CHECK.md`.
 - `get_pattern_outline` (pattern_package): `pattern_api.GetPatternOutlinePoints`; evidence `docs/CLO_OUTLINE_CHECK.md`.
+- `get_seamline_pairs` (pattern_package): `pattern_api.GetSeamlinePairGroupCount`, `pattern_api.GetSeamlinePairGroupName`, `pattern_api.GetSeamlinePairGroupListInPattern`; evidence `docs/CLO_MCP_TOOLS.md`.
 - `get_session_info` (base_service): нет фиксированного native вызова; evidence `docs/P3_MCP_CHECK.md`.
 - `import_avatar` (pattern_package): `import_api.ImportFile`; evidence `docs/PATTERN_API_CHECK.md`.
+- `import_avatar_measurements` (pattern_package): `import_api.ImportMeasurement`; evidence `docs/CLO_MCP_TOOLS.md`.
 - `list_clo_api` (pattern_package): нет фиксированного native вызова; evidence `docs/PATTERN_API_CHECK.md`.
 - `move_pattern_relative` (pattern_package): `pattern_api.SetPatternPieceMove`; evidence `docs/PATTERN_API_CHECK.md`.
 - `ping` (base_service): нет фиксированного native вызова; evidence `docs/P3_MCP_CHECK.md`.
+- `reset_cloth_arrangement` (pattern_package): `utility_api.ResetClothArrangement`; evidence `docs/CLO_MCP_TOOLS.md`.
 - `set_arrangement` (pattern_package): `pattern_api.SetArrangement`, `pattern_api.GetArrangementList`, `pattern_api.GetArrangementOfPattern`; evidence `docs/PATTERN_API_CHECK.md`.
+- `set_arrangement_orientation` (pattern_package): `pattern_api.SetArrangementOrientation`, `pattern_api.GetArrangementOfPattern`; evidence `docs/CLO_FIT_CHECK.md`.
+- `set_arrangement_position` (pattern_package): `pattern_api.SetArrangementPosition`, `pattern_api.GetArrangementOfPattern`; evidence `docs/CLO_FIT_CHECK.md`.
+- `set_arrangement_shape_style` (pattern_package): `pattern_api.SetArrangementShapeStyle`, `pattern_api.GetArrangementOfPattern`; evidence `docs/CLO_MCP_TOOLS.md`.
+- `set_camera_view` (pattern_package): `utility_api.SetCamViewPoint`, `utility_api.SetZoomView`, `utility_api.Refresh3DWindow`; evidence `docs/CLO_MCP_TOOLS.md`.
+- `set_particle_distance` (pattern_package): `pattern_api.SetParticleDistanceOfPattern`, `pattern_api.GetParticleDistanceOfPattern`; evidence `docs/CLO_MCP_TOOLS.md`.
+- `set_pattern_edge_to_avatar_measure` (pattern_package): `pattern_api.SetPatternEdgeToAvatarMeasure`, `pattern_api.GetPatternEdgeToAvatarMeasureAttachment`; evidence `docs/CLO_MCP_TOOLS.md`.
+- `set_pattern_grain_direction` (pattern_package): `pattern_api.SetPatternPieceGrainDirection`, `pattern_api.GetPatternPieceGrainDirection`; evidence `docs/CLO_MCP_TOOLS.md`.
 - `set_pattern_name` (pattern_package): `pattern_api.SetPatternPieceName`; evidence `docs/PATTERN_API_CHECK.md`.
+- `simulate` (pattern_package): `utility_api.Simulate`; evidence `docs/CLO_MCP_TOOLS.md`.
 - `transport_status` (base_service): нет фиксированного native вызова; evidence `docs/P3_MCP_CHECK.md`.
 
 PATTERN_API_CHECK.md: исторический CLO2026.1, simple polygon и load10, <=2 тестовых деталей, <=256 всего; count/name/position/area/bbox и пользовательское visual/UI подтверждение. Точный patch build не зафиксирован.

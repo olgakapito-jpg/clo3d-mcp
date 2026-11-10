@@ -68,6 +68,52 @@ index9/`MCP_SEAM_D` index10 (120×80). Вызов
 - Partial seam, topstitch, buttons, merge — отдельные пакеты.
 - После probe own pieces/seam остаются; удаление — отдельными fresh-list шагами.
 
+## Правильная сборка: два боковых шва
+
+Исторические probe/live gate (`A0↔B0`, `C0↔D0`) проверяли native call и
+`seam_count`, а **не** замкнутость изделия. Один `AddSeamlinePairGroup` — одна
+пара кромок. Для трубы из двух панелей нужны два шва:
+`A.left↔B.left` и `A.right↔B.right`, каждый отдельным вызовом с readback
+`seam_count`+1 и неизменных lines/geometry. `line0↔line0` или
+`bottom↔bottom` трубу не закрывает. `direction_a/b` выбирать по физическим
+концам кромок; `True/True` не универсален. Если второй шов не прошёл —
+«открытая труба, частичная сборка», STOP без retry/cleanup. Замкнутость —
+топология, не посадка и не simulation. Skills: `clo-sewing`, `clo-seamlines`;
+рецепт: `CLO_MCP_WORKFLOWS.md`.
+
+## Live A/B rebuild и два боковых шва 2026-11-10
+
+Build `57a23bf2cfdb`: own `MCP_SEAM_A/B` удалены и созданы заново (120×80,
+прежние 2D-координаты), возвращены на `Body_Front_Center_2`/
+`Body_Back_Center_2`. Свежие lines: left=`line3` (80 мм, top→bottom),
+right=`line1` (80 мм, bottom→top) у обеих.
+
+- `add_seamline_pair(A,3,B,3,true,true)` → verified, `seam_count` 2;
+- `add_seamline_pair(A,1,B,1,true,true)` → verified, `seam_count` 3;
+- lines/geometry обеих не изменились.
+
+**Результат:** оба бока сшиты, но швы **перекрещены** — труба перекручена.
+Пользователь развернул `MCP_SEAM_B` вручную гизмо, после чего 3D выглядит
+правильно. `True/True` на обеих сторонах не является правильным рецептом;
+направления пар и 3D-поворот через API не установлены. Перекрёст виден только
+визуально, `seam_count` его не показывает.
+
+## Read-only проверка швов
+
+`get_seamline_pairs` опубликован: count, имена групп и membership по каждой
+детали через `GetSeamlinePairGroupCount/Name/ListInPattern`. Mutation не нужна
+для проверки; delete/merge/partial/topstitch не входят. Live build
+`aafcfac0323d`: 3 группы; C/D в одной, A/B в двух, MCP_3D_TEST без швов.
+
+## TEE toolchain 2026-11-10
+
+`TEE_FRONT`/`TEE_BACK` 400×300: верхние `line2` прикреплены к user
+`CircumferenceMeasure_283316`; два боковых шва `line3↔line3` и `line1↔line1`
+(`true/true`) → `seam_count=2`, обе детали в обеих группах; readback lines/
+geometry не проверялся после швов отдельно, но mutation вернул verified.
+`get_seamline_pairs` подтвердил 2 группы. Визуально после Fit перекрёста не
+видно, но ткань собрана; fit не принят. Line Pin + simulation удерживают garment.
+
 ## Будущий MCP tool (proposal)
 
 `add_seamline_pair`: strict args `pattern_a_index/expected_name_a/line_a_index,

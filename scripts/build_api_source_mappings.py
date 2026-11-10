@@ -46,7 +46,9 @@ LOCAL_INPUTS = (
     "tests/test_pattern_outline.py", "docs/CLO_OUTLINE_CHECK.md",
     "tests/test_pattern_lines.py", "tests/test_seam_api.py",
     "tests/test_import_avatar_api.py", "tests/test_arrangement_api.py",
-    "tests/test_set_arrangement_api.py",
+    "tests/test_set_arrangement_api.py", "tests/test_set_arrangement_orientation_api.py",
+    "tests/test_set_arrangement_position_api.py", "tests/test_basic_tools_api.py",
+    "tests/test_screenshot_tool.py", "tests/test_extended_basic_api.py",
     "docs/CLO_LINE_API_CONTRACT_REVIEW.md", "docs/CLO_SEAMLINING_CHECK.md",
     "docs/CLO_FIT_CHECK.md",
 )
@@ -337,6 +339,31 @@ CURRENT_PRIMARY = {
     "import_avatar": ["ImportFile"],
     "get_arrangement": ["GetArrangementList", "GetArrangementOfPattern"],
     "set_arrangement": ["SetArrangement", "GetArrangementList", "GetArrangementOfPattern"],
+    "set_arrangement_orientation": ["SetArrangementOrientation", "GetArrangementOfPattern"],
+    "set_arrangement_position": ["SetArrangementPosition", "GetArrangementOfPattern"],
+    "get_3d_screenshot": ["ExportThumbnail3D"],
+    "get_arrangement_list": ["GetArrangementList"],
+    "get_seamline_pairs": ["GetSeamlinePairGroupCount", "GetSeamlinePairGroupName",
+                           "GetSeamlinePairGroupListInPattern"],
+    "get_avatar_measurements": ["GetAvatarMeasurements"],
+    "get_pattern_avatar_attachments": ["GetAllPatternToAvatarMeasures", "GetPinListSize"],
+    "set_arrangement_shape_style": ["SetArrangementShapeStyle", "GetArrangementOfPattern"],
+    "set_pattern_edge_to_avatar_measure": ["SetPatternEdgeToAvatarMeasure",
+                                           "GetPatternEdgeToAvatarMeasureAttachment"],
+    "simulate": ["Simulate"],
+    "export_view_image": ["ExportStdViewImage", "GetCurrentColorwayIndex"],
+    "export_snapshot_2d": ["ExportThumbnail2D"],
+    "set_camera_view": ["SetCamViewPoint", "SetZoomView", "Refresh3DWindow"],
+    "reset_cloth_arrangement": ["ResetClothArrangement"],
+    "import_avatar_measurements": ["ImportMeasurement"],
+    "get_pattern_body_details": ["GetPatternOnBodyDetails"],
+    "get_pattern_details": ["GetPatternPieceGrainDirection", "GetPatternPieceCategory",
+                            "GetPatternPieceClassification"],
+    "set_pattern_grain_direction": ["SetPatternPieceGrainDirection",
+                                    "GetPatternPieceGrainDirection"],
+    "get_mesh_counts": ["GetMeshCountByType"],
+    "set_particle_distance": ["SetParticleDistanceOfPattern",
+                              "GetParticleDistanceOfPattern"],
     "create_pattern": ["CreatePatternWithPoints", "SetPatternPieceName"],
     "set_pattern_name": ["SetPatternPieceName"],
     "copy_pattern_with_offset": ["CopyPatternPieceMove", "SetPatternPieceName"],
@@ -344,7 +371,7 @@ CURRENT_PRIMARY = {
     "delete_pattern": ["DeletePatternPiece"],
 }
 PATTERN_TOOLS = frozenset(("list_clo_api", "describe_clo_api", "get_pattern_list", "get_pattern_geometry",
-                           "create_pattern", "set_pattern_name", "copy_pattern_with_offset", "move_pattern_relative", "delete_pattern", "get_pattern_outline", "get_pattern_lines", "get_arrangement", "set_arrangement", "add_seamline_pair", "import_avatar"))
+                           "create_pattern", "set_pattern_name", "copy_pattern_with_offset", "move_pattern_relative", "delete_pattern", "get_pattern_outline", "get_pattern_lines", "get_arrangement", "set_arrangement", "set_arrangement_orientation", "set_arrangement_position", "get_3d_screenshot", "get_arrangement_list", "get_seamline_pairs", "get_avatar_measurements", "get_pattern_avatar_attachments", "set_arrangement_shape_style", "set_pattern_edge_to_avatar_measure", "simulate", "export_view_image", "export_snapshot_2d", "set_camera_view", "reset_cloth_arrangement", "import_avatar_measurements", "get_pattern_body_details", "get_pattern_details", "set_pattern_grain_direction", "get_mesh_counts", "set_particle_distance", "add_seamline_pair", "import_avatar"))
 DOMAIN_TOOLS = frozenset(("get_fabric_list", "get_avatars",
                           "get_pattern_fabric", "assign_pattern_fabric"))
 BASE_SERVICE_TOOLS = frozenset(("ping", "get_pattern_count", "transport_status",
@@ -380,6 +407,18 @@ def current_inventory(files):
                        ["export_api.GetAvatarCount", "export_api.GetAvatarNameList"])
         if name == "create_test_rectangle":
             primary = ["pattern_api.CreatePatternWithPoints"]
+        if name == "get_3d_screenshot":
+            primary = ["export_api.ExportThumbnail3D"]
+        if name == "get_avatar_measurements":
+            primary = ["utility_api.GetAvatarMeasurements"]
+        if name == "simulate":
+            primary = ["utility_api.Simulate"]
+        if name in ("export_view_image", "export_snapshot_2d"):
+            primary = ["export_api." + n for n in CURRENT_PRIMARY[name]]
+        if name in ("set_camera_view", "reset_cloth_arrangement"):
+            primary = ["utility_api." + n for n in CURRENT_PRIMARY[name]]
+        if name == "import_avatar_measurements":
+            primary = ["import_api.ImportMeasurement"]
         if assignment_tool:
             primary = (["fabric_api.AssignFabricToPattern"] if name == "assign_pattern_fabric"
                        else ["fabric_api.GetFabricIndexForPattern"])
@@ -401,6 +440,33 @@ def current_inventory(files):
             supporting = ["pattern_api.GetPatternCount", "pattern_api.GetPatternPieceName",
                           "pattern_api.GetArrangementList", "pattern_api.GetArrangementOfPattern",
                           "pattern_api.GetPatternPieceArea", "pattern_api.GetBoundingBoxOfPattern"]
+        if name in ("set_arrangement_orientation", "set_arrangement_position",
+                    "set_arrangement_shape_style"):
+            supporting = ["pattern_api.GetPatternCount", "pattern_api.GetPatternPieceName",
+                          "pattern_api.GetArrangementOfPattern"]
+        if name in ("get_arrangement_list", "get_3d_screenshot",
+                    "get_pattern_avatar_attachments"):
+            supporting = []
+        if name == "get_seamline_pairs":
+            supporting = ["pattern_api.GetPatternCount", "pattern_api.GetPatternPieceName"]
+        if name == "get_avatar_measurements":
+            supporting = ["export_api.GetAvatarCount", "export_api.GetAvatarNameList"]
+        if name == "set_pattern_edge_to_avatar_measure":
+            supporting = ["pattern_api.GetPatternCount", "pattern_api.GetPatternPieceName",
+                          "pattern_api.GetPatternLineInfo"]
+        if name == "simulate":
+            supporting = ["pattern_api.GetPatternCount", "pattern_api.GetPatternPieceName",
+                          "export_api.GetAvatarCount"]
+        if name in ("export_view_image", "export_snapshot_2d", "set_camera_view",
+                    "reset_cloth_arrangement", "get_pattern_body_details"):
+            supporting = []
+        if name == "import_avatar_measurements":
+            supporting = ["export_api.GetAvatarCount", "utility_api.GetAvatarMeasurements"]
+        if name in ("get_pattern_details", "get_mesh_counts"):
+            supporting = ["pattern_api.GetPatternCount", "pattern_api.GetPatternPieceName"]
+        if name in ("set_pattern_grain_direction", "set_particle_distance"):
+            supporting = ["pattern_api.GetPatternCount", "pattern_api.GetPatternPieceName"]
+            supporting += ["pattern_api." + n for n in GEOMETRY_IDS]
         if name == "create_test_rectangle":
             supporting = ["pattern_api.GetPatternCount"]
         if assignment_tool:
@@ -409,7 +475,7 @@ def current_inventory(files):
             if name == "assign_pattern_fabric":
                 supporting += ["fabric_api.GetFabricIndexForPattern"] + ["pattern_api." + n for n in GEOMETRY_IDS]
         tool["primary_native_ids"] = primary
-        tool["primary_native_role"] = "effect" if name in ("create_pattern", "set_pattern_name", "copy_pattern_with_offset", "move_pattern_relative", "delete_pattern", "create_test_rectangle", "assign_pattern_fabric", "add_seamline_pair", "import_avatar", "set_arrangement") else "read_or_introspection"
+        tool["primary_native_role"] = "effect" if name in ("create_pattern", "set_pattern_name", "copy_pattern_with_offset", "move_pattern_relative", "delete_pattern", "create_test_rectangle", "assign_pattern_fabric", "add_seamline_pair", "import_avatar", "set_arrangement", "set_arrangement_orientation", "set_arrangement_position", "get_3d_screenshot", "set_arrangement_shape_style", "set_pattern_edge_to_avatar_measure", "simulate", "export_view_image", "export_snapshot_2d", "set_camera_view", "reset_cloth_arrangement", "import_avatar_measurements", "set_pattern_grain_direction", "set_particle_distance") else "read_or_introspection"
         tool["supporting_native_ids"] = sorted(set(supporting) - set(primary))
         tool["native_ids"] = sorted(set(primary + supporting))
         tool["native_reference_evidence"] = [{**ref, "role": "primary_effect_or_read" if ref["id"] in primary else "preflight_or_readback"} for ref in all_refs if ref["id"] in tool["native_ids"]]
@@ -441,6 +507,53 @@ def current_inventory(files):
                 selected += ["PatternAPI._outline", "PatternAPI._list", "PatternAPI._count"]
             elif name in ("get_pattern_list", "get_pattern_geometry"):
                 selected += ["PatternAPI._list" if name == "get_pattern_list" else "PatternAPI._geometry"]
+            elif name in ("set_arrangement", "set_arrangement_orientation",
+                          "set_arrangement_position"):
+                selected += ["PatternAPI._set_arrangement" if name == "set_arrangement"
+                             else "PatternAPI._set_arrangement_orientation"
+                             if name == "set_arrangement_orientation"
+                             else "PatternAPI._set_arrangement_position",
+                             "PatternAPI._drape_option", "PatternAPI._list"]
+            elif name == "get_arrangement_list":
+                selected += ["PatternAPI._arrangement_library", "PatternAPI._arrangement_record"]
+            elif name == "get_seamline_pairs":
+                selected += ["PatternAPI._seamlines", "PatternAPI._list"]
+            elif name == "get_avatar_measurements":
+                selected += ["PatternAPI._avatar_measurements", "PatternAPI._field"]
+            elif name == "get_pattern_avatar_attachments":
+                selected += ["PatternAPI._attachments"]
+            elif name == "get_3d_screenshot":
+                selected += ["PatternAPI._screenshot"]
+            elif name == "set_arrangement_shape_style":
+                selected += ["PatternAPI._set_arrangement_shape_style",
+                             "PatternAPI._arrangement_record", "PatternAPI._list"]
+            elif name == "set_pattern_edge_to_avatar_measure":
+                selected += ["PatternAPI._set_edge_to_avatar_measure",
+                             "PatternAPI._lines", "PatternAPI._list"]
+            elif name == "simulate":
+                selected += ["PatternAPI._simulate", "PatternAPI._list"]
+            elif name in ("export_view_image", "export_snapshot_2d"):
+                selected += ["PatternAPI._export_view_image" if name == "export_view_image"
+                             else "PatternAPI._export_snapshot_2d",
+                             "PatternAPI._image_file_result"]
+            elif name == "set_camera_view":
+                selected += ["PatternAPI._set_camera_view"]
+            elif name == "reset_cloth_arrangement":
+                selected += ["PatternAPI._reset_cloth_arrangement", "PatternAPI._list"]
+            elif name == "import_avatar_measurements":
+                selected += ["PatternAPI._import_avatar_measurements"]
+            elif name == "get_pattern_body_details":
+                selected += ["PatternAPI._pattern_body_details"]
+            elif name == "get_pattern_details":
+                selected += ["PatternAPI._pattern_details", "PatternAPI._list"]
+            elif name == "set_pattern_grain_direction":
+                selected += ["PatternAPI._set_pattern_grain_direction",
+                             "PatternAPI._geometry", "PatternAPI._list"]
+            elif name == "get_mesh_counts":
+                selected += ["PatternAPI._mesh_counts", "PatternAPI._list"]
+            elif name == "set_particle_distance":
+                selected += ["PatternAPI._set_particle_distance",
+                             "PatternAPI._geometry", "PatternAPI._list"]
             elif name not in ("list_clo_api", "describe_clo_api"):
                 selected += ["PatternAPI._mutate", "PatternAPI._target", "PatternAPI._list", "PatternAPI._geometry"]
             tool["adapter_evidence"] = evidence_functions(adapter, selected)
@@ -472,6 +585,21 @@ def current_inventory(files):
             "performed_by_this_builder": False,
         }
         tool["contract_acceptance"] = "existing_limited_evidence_not_full_official_overload_or_build_acceptance"
+        if name in ("get_3d_screenshot", "get_arrangement_list", "get_seamline_pairs",
+                    "get_avatar_measurements", "get_pattern_avatar_attachments",
+                    "set_arrangement_shape_style", "set_pattern_edge_to_avatar_measure",
+                    "simulate", "export_view_image", "export_snapshot_2d",
+                    "set_camera_view", "reset_cloth_arrangement",
+                    "import_avatar_measurements", "get_pattern_body_details",
+                    "get_pattern_details", "set_pattern_grain_direction",
+                    "get_mesh_counts", "set_particle_distance"):
+            tool["acceptance"] = {
+                "status": "local_contract_only_no_real_gate",
+                "reference": "docs/CLO_MCP_TOOLS.md",
+                "scope": "Local adapter/contract/tests only; no real CLO call, visual fit, screenshot bytes, seam-list equality, measurement values or simulation acceptance in this build.",
+                "performed_by_this_builder": False,
+            }
+            tool["contract_acceptance"] = "local_contract_only_not_full_real_acceptance"
         if inventory_tool:
             tool["acceptance"] = {
                 "status": "partial_real_inventory_evidence",
@@ -488,6 +616,18 @@ def current_inventory(files):
                                   "scope": "User-reported CLO2026.1.336,live18. Own rectangle0->1->3/independent reads/preservation5/planned delete PASS;user confirmed normal UI. B05C copy inherited fabric2,rename/move preserved,independent copy assignment,lower-delete index6->5 and new-index assignment PASS;final5mappings/geometry preserved. Read-only runner2passes5 PASS. Temporary appearance/full material/import/cross-context not accepted.",
                                   "performed_by_this_builder": False}
             tool["contract_acceptance"] = "local_and_limited_real_readback_ui_confirmed_not_full_material_acceptance"
+        if name == "set_arrangement_position":
+            tool["acceptance"] = {"status": "limited_real_position_readback_visual_no_change",
+                                  "reference": "docs/CLO_FIT_CHECK.md",
+                                  "scope": "CLO2026.1.336 build 57a23bf2cfdb live: own MCP_SEAM_A offsets 50/75/50->50/75/80 returned verified, post-ReDrape readback exact, name/orientation/type and other four pieces unchanged. User visual check: no 3D change, so offsets alone do not move the piece. Native units unknown; this is not a rotation. No retry/cleanup.",
+                                  "performed_by_this_builder": False}
+            tool["contract_acceptance"] = "local_contract_plus_single_real_readback_not_full_acceptance"
+        if name == "set_arrangement_orientation":
+            tool["acceptance"] = {"status": "limited_real_orientation_readback",
+                                  "reference": "docs/CLO_FIT_CHECK.md",
+                                  "scope": "CLO2026.1.336 build 7e0f73d2c06e live: own MCP_SEAM_A 180->90 returned verified, post-ReDrape GetArrangementOfPattern orientation=90 with name/offset/type and other four pieces unchanged. User visual check: no visible 3D change. The orientation field alone does not reposition the piece on this build; native units/axis remain unestablished. No avatar-fit or simulation acceptance. No retry/cleanup.",
+                                  "performed_by_this_builder": False}
+            tool["contract_acceptance"] = "local_contract_plus_single_real_readback_not_full_acceptance"
         if name == "get_pattern_outline":
             tool["acceptance"] = {"status": "blocked_real_outline_invalid_native_result",
                                   "reference": "docs/CLO_OUTLINE_CHECK.md",
@@ -731,7 +871,7 @@ def render_report(snapshot):
               "Основной JSON — индекс; списки хранятся в `mappings/*.json` shards <=180000 bytes, каждый с SHA-256/count. `load_mappings(path)` возвращает full structure и flat aliases `donor_tools`, `local_legacy_tools`, `current_tools`, `source_refs` для coordinator join.",
               "`donor.tools` содержит все170 имён, exact source descriptions, нормализованные Python signatures/parameters, literal routes, handler_commands, native_ids и явные name_aliases.",
               "`donor.handlers` содержит все172 registry commands, handler/registry line ranges, qualified references и helper chains. `local.legacy` — отдельные47 tools/47 registry commands и DEV extras вне registry.",
-               "`local.current.tools` — отдельные19 tools: profile, contract/adapter/test evidence, primary/supporting native ids и раздельная local/partial/historical acceptance. Outline real BLOCKED: user manual one-shot native [] for existing own target;cause unknown,not accepted. `shared_native_alias_candidates`/`current_replacement_limits` явно отделяют aliases от ограниченных замен.",
+               "`local.current.tools` — отдельные26 tools: profile, contract/adapter/test evidence, primary/supporting native ids и раздельная local/partial/historical acceptance. Outline real BLOCKED: user manual one-shot native [] for existing own target;cause unknown,not accepted. `shared_native_alias_candidates`/`current_replacement_limits` явно отделяют aliases от ограниченных замен.",
               "`sources` содержит SHA-256 исходных bytes, lengths, pinned raw/browse URLs (донор), Git blob SHA-1 и local relative paths. При donor rebuild bytes сверяются с blob IDs pinned tree; local bytes не нормализуются по CRLF, при смене line endings пересобрать.",
               "`normalized_sha256` защищает целостность нормализованных donor facts (не криптографическая подпись). Offline-проверка не доказывает соответствие недоступному raw source: для этого нужен pinned refresh/cache rebuild.",
               "`references.kind=direct_call` означает AST Call.func; `callable_reference` — ссылка на функцию/тип, не direct invocation. `invoked_via` фиксирует передачу callable аргумента helper-параметру и место его вызова.",
@@ -749,7 +889,7 @@ def render_report(snapshot):
             lines.append(f"- `{alias['tool_name']}` → wire `{alias['wire_command']}` → `{alias['handler_function']}` (routing only).")
     lines += ["", "`open_file` / `import_file` и `add_fabric` / `import_fabric` имеют общие native names, но это не автоматически эквивалентные контракты. `list_extensions` не имеет native handler.",
               "Legacy copy_pattern/CopyPatternPiecePos не объявлен эквивалентом current copy_pattern_with_offset/CopyPatternPieceMove; create_pattern current покрывает только simple straight polygons.",
-               "", "## Current19 и граница приёмки", ""]
+               "", "## Current26 и граница приёмки", ""]
     for tool in snapshot["local"]["current"]["tools"]:
         lines.append(f"- `{tool['name']}` ({tool['profile']}): " + (", ".join(f"`{n}`" for n in tool["primary_native_ids"]) or "нет фиксированного native вызова") + f"; evidence `{tool['acceptance']['reference']}`.")
     lines += ["", "PATTERN_API_CHECK.md: исторический CLO2026.1, simple polygon и load10, <=2 тестовых деталей, <=256 всего; count/name/position/area/bbox и пользовательское visual/UI подтверждение. Точный patch build не зафиксирован.",

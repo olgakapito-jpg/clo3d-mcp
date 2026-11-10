@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "evidence": "synthetic_contract_not_llm_or_live",
-  "unavailable_tools": ["assign_fabric", "import_project", "import_pose", "import_avatar_measurement", "simulate", "export_project", "set_global_settings", "call_rest_api", "call_api", "move_pattern_point", "cancel_job", "get_job_result", "create_curve", "merge_sewn_patterns", "delete_seamline_pair"],
+  "unavailable_tools": ["assign_fabric", "import_project", "import_pose", "import_avatar_measurement", "export_project", "set_global_settings", "call_rest_api", "call_api", "move_pattern_point", "cancel_job", "get_job_result", "create_curve", "merge_sewn_patterns", "delete_seamline_pair"],
   "cases": [
     {
       "id": "outline_endpoints", "intent": "Прочитай конечные точки контура panel в локальных мм от TOP-LEFT bbox, без редактирования и без управляющих точек кривой.",
@@ -62,6 +62,60 @@
       "forbidden_tools": ["move_pattern_relative", "delete_pattern", "call_api"],
       "forbidden_effects": ["diagnostic_mutation", "filesystem_write"],
       "required_args": {"set_arrangement": {"pattern_index": 0, "expected_name": "panel", "arrangement_index": 1}},
+      "decision": "complete", "blockers": [], "stop_conditions": ["error", "outcome_unknown", "schema_mismatch", "session_change", "stale_target"]
+    },
+    {
+      "id": "arrangement_orientation", "intent": "Повернуть panel вокруг точки крепления: задать целое orientation 90 и ReDrape, проверить readback orientation и неизменность точки/offsets; не менять arrangement point.",
+      "profile": "current25", "scope": "scene", "fixture": {"ready": true, "patterns": ["panel"]},
+      "expected_tools": ["get_session_info", "get_pattern_list", "get_arrangement", "set_arrangement_orientation"],
+      "forbidden_tools": ["set_arrangement", "move_pattern_relative", "delete_pattern", "call_api"],
+      "forbidden_effects": ["diagnostic_mutation", "filesystem_write"],
+      "required_args": {"set_arrangement_orientation": {"pattern_index": 0, "expected_name": "panel", "orientation": 90}},
+      "decision": "complete", "blockers": [], "stop_conditions": ["error", "outcome_unknown", "schema_mismatch", "session_change", "stale_target"]
+    },
+    {
+      "id": "arrangement_position", "intent": "Сдвинуть panel относительно её точки крепления: задать native offsets 40/70/60 и ReDrape, проверить readback offsets; не менять orientation и arrangement point.",
+      "profile": "current26", "scope": "scene", "fixture": {"ready": true, "patterns": ["panel"]},
+      "expected_tools": ["get_session_info", "get_pattern_list", "get_arrangement", "set_arrangement_position"],
+      "forbidden_tools": ["set_arrangement", "set_arrangement_orientation", "move_pattern_relative", "delete_pattern", "call_api"],
+      "forbidden_effects": ["diagnostic_mutation", "filesystem_write"],
+      "required_args": {"set_arrangement_position": {"pattern_index": 0, "expected_name": "panel", "position_x": 40, "position_y": 70, "offset": 60}},
+      "decision": "complete", "blockers": [], "stop_conditions": ["error", "outcome_unknown", "schema_mismatch", "session_change", "stale_target"]
+    },
+    {
+      "id": "basic_read_tools", "intent": "Прочитать библиотеку arrangement points, швы, мерки аватара и привязки деталей к меркам, ничего не меняя.",
+      "profile": "current34", "scope": "read_only", "fixture": {"ready": true, "patterns": ["panel"]},
+      "expected_tools": ["get_session_info", "get_pattern_list", "get_arrangement_list", "get_seamline_pairs", "get_avatar_measurements", "get_pattern_avatar_attachments"],
+      "forbidden_tools": ["set_arrangement", "set_pattern_edge_to_avatar_measure", "simulate", "call_api"],
+      "forbidden_effects": ["scene_mutation", "diagnostic_mutation", "filesystem_write"],
+      "required_args": {"get_avatar_measurements": {"avatar_index": 0}},
+      "decision": "complete", "blockers": [], "stop_conditions": ["error", "outcome_unknown", "schema_mismatch", "session_change", "stale_target"]
+    },
+    {
+      "id": "fit_pin_simulate_basic", "intent": "Поставить стиль Flat, прикрепить край panel к мерке Bust, выполнить короткую simulation и получить 3D-скриншот для проверки.",
+      "profile": "current34", "scope": "scene", "fixture": {"ready": true, "patterns": ["panel"]},
+      "expected_tools": ["get_session_info", "get_pattern_list", "get_pattern_avatar_attachments", "set_arrangement_shape_style", "set_pattern_edge_to_avatar_measure", "simulate", "get_3d_screenshot"],
+      "forbidden_tools": ["set_arrangement", "delete_pattern", "call_api"],
+      "forbidden_effects": ["diagnostic_mutation", "global_mutation", "external_effect"],
+      "required_args": {"set_arrangement_shape_style": {"pattern_index": 0, "expected_name": "panel", "style": "Flat"}, "set_pattern_edge_to_avatar_measure": {"pattern_index": 0, "expected_name": "panel", "line_index": 0, "avatar_measure": "Bust", "attach": true}, "simulate": {"steps": 60}},
+      "decision": "complete", "blockers": [], "stop_conditions": ["error", "outcome_unknown", "schema_mismatch", "session_change", "stale_target"]
+    },
+    {
+      "id": "view_and_camera_basic", "intent": "Получить стандартный front-вид, 2D-снимок и вернуть камеру в front/zoom-to-fit для самопроверки.",
+      "profile": "current44", "scope": "scene", "fixture": {"ready": true, "patterns": ["panel"]},
+      "expected_tools": ["get_session_info", "export_view_image", "export_snapshot_2d", "set_camera_view"],
+      "forbidden_tools": ["set_arrangement", "delete_pattern", "call_api"],
+      "forbidden_effects": ["diagnostic_mutation", "global_mutation", "external_effect"],
+      "required_args": {"export_view_image": {"view": 2, "width": 800, "height": 600, "fit_all_objects": true}, "set_camera_view": {"view": 2, "zoom_to_fit": true}},
+      "decision": "complete", "blockers": [], "stop_conditions": ["error", "outcome_unknown", "schema_mismatch", "session_change", "stale_target"]
+    },
+    {
+      "id": "fit_data_basic", "intent": "Прочитать body details, grain/category, mesh counts; задать grain 90 и particle distance 20; сбросить cloth shape; импортировать CSV мерок.",
+      "profile": "current44", "scope": "scene", "fixture": {"ready": true, "patterns": ["panel"]},
+      "expected_tools": ["get_session_info", "get_pattern_body_details", "get_pattern_details", "get_mesh_counts", "set_pattern_grain_direction", "set_particle_distance", "reset_cloth_arrangement", "import_avatar_measurements"],
+      "forbidden_tools": ["set_arrangement", "delete_pattern", "call_api"],
+      "forbidden_effects": ["diagnostic_mutation", "global_mutation", "external_effect"],
+      "required_args": {"get_pattern_details": {"pattern_index": 0, "expected_name": "panel"}, "get_mesh_counts": {"pattern_index": 0, "expected_name": "panel"}, "set_pattern_grain_direction": {"pattern_index": 0, "expected_name": "panel", "degrees": 90}, "set_particle_distance": {"pattern_index": 0, "expected_name": "panel", "distance": 20}},
       "decision": "complete", "blockers": [], "stop_conditions": ["error", "outcome_unknown", "schema_mismatch", "session_change", "stale_target"]
     },
     {

@@ -32,6 +32,31 @@ lines вместо пустого outline, не подставлять 3-арг�
 выводить curve controls/швы/closure и не заявлять frame после move/rotate.
 `CLO_LINE_API_CONTRACT_REVIEW.md`.
 
+## Швы: труба из двух панелей — два боковых шва
+
+`add_seamline_pair` — одна пара кромок, не готовое изделие. Для замкнутой
+трубы из A и B: fresh list → `get_pattern_lines` A/B → выбрать левую и правую
+боковые кромки (равная длина, vertical, соответствующие `start_mm`/`end_mm`) →
+guard → `add_seamline_pair(leftA,leftB)` → проверить `verified`, `seam_count`+1 и
+readback линий/geometry → guard → `add_seamline_pair(rightA,rightB)` → тот же
+readback. Один шов оставляет трубу открытой; `bottom↔bottom`, `top↔top` или
+`line0↔line0` по порядку массива — не боковой шов. `direction_a/b` выбирать по
+физическим концам кромок, не предполагать `True/True`. Ошибка на втором шве —
+частичная сборка: STOP, без retry/cleanup. Если после двух швов 3D показывает
+**перекрёст** — труба перекручена: STOP, не добавлять швы; исправить направление
+одной пары или развернуть панель гизмо и заново проверить. `seam_count` перекрёст
+не обнаруживает. Skills: `clo-sewing`, `clo-seamlines`; evidence:
+`CLO_SEAMLINING_CHECK.md`.
+
+## Self-check: 3D screenshot
+
+`get_3d_screenshot({})` — silent PNG текущего 3D-окна, возвращает MCP image
+content; путь генерирует server под `acceptance-output/screenshots/`, диалог
+`ExportSnapshot3D` не используется. Это artifact write, не scene mutation;
+произвольный путь и retry не входят. Смотреть картинку до/после посадки и
+simulation; image не доказывает fit, но показывает explosion/исчезновение/грубые
+пересечения.
+
 ## Общий порядок
 
 Намерение/scope → реальный profile/session → fresh reads → preflight → одна

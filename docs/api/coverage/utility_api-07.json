@@ -1,6 +1,68 @@
 {
   "rows": [
     {
+      "id": "utility_api.UpdateCloStyleForPlugIn#cae4eccb41beaf8f",
+      "module": "utility_api",
+      "symbol": "UpdateCloStyleForPlugIn",
+      "qualified_name": "utility_api.UpdateCloStyleForPlugIn",
+      "overload": "utility_api.UpdateCloStyleForPlugIn#cae4eccb41beaf8f",
+      "signature": "def UpdateCloStyleForPlugIn(_pWidget : QWidget*) -> None",
+      "domain": "service",
+      "owner_task": "A6",
+      "planning_classification": "lexical_bucket_not_semantic_contract",
+      "docs_evidence": [
+        {
+          "source_id": "list.rst.txt",
+          "url": "https://developer.clo3d.com/_sources/list.rst.txt",
+          "sha256": "bbd825dad535c44525b98bdbe358d8129a6fcb300d89c90e7e5297443cf34862",
+          "line": 20411,
+          "block": 1769
+        },
+        {
+          "source_id": "list.html",
+          "url": "https://developer.clo3d.com/list.html",
+          "sha256": "9efa3a05dbb8c8db3fb3dae9eb9b8b578025be17ac9e5e57b86545a7314ba951",
+          "line": 21385,
+          "block": 1769,
+          "anchor": "utility-api"
+        }
+      ],
+      "runtime_presence": "not_checked",
+      "binding_status": "not_checked",
+      "runtime_evidence_scope": "symbol_docstring_only_not_exact_overload",
+      "runtime_overload_presence": "not_checked",
+      "runtime_overload_binding": "not_checked",
+      "runtime_evidence": null,
+      "effect": "unknown",
+      "may_open_dialog": "not_checked",
+      "may_block_ui": "not_checked",
+      "units": "not_checked",
+      "implementation": "planned",
+      "overload_coverage": "not_established",
+      "current_operation": null,
+      "donor_tools": [],
+      "legacy_tools": [],
+      "verification": "not_tested",
+      "verification_method": "unavailable",
+      "acceptance_scope": "No per-overload real acceptance claimed. Current-operation evidence, if linked, has narrower scope.",
+      "blocker_reason": "Native overload, units/options, effect and verification contract need explicit review before publication.",
+      "dependencies": [
+        {
+          "name": "QWidget",
+          "basis": "annotation",
+          "status": "unresolved",
+          "type_id": null
+        }
+      ],
+      "official_record_id": "utility_api.UpdateCloStyleForPlugIn",
+      "documentation_issues": [
+        "unresolved_annotation_type"
+      ],
+      "review_gates": [
+        "binding-types"
+      ]
+    },
+    {
       "id": "utility_api.UpdateCloStyleForPlugIn#7184480fa8dfbdae",
       "module": "utility_api",
       "symbol": "UpdateCloStyleForPlugIn",

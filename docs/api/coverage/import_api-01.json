@@ -1399,7 +1399,14 @@
       "units": "not_checked",
       "implementation": "planned",
       "overload_coverage": "not_established",
-      "current_operation": null,
+      "current_operation": {
+        "symbol": "import_api.ImportMeasurement",
+        "tools": [
+          "import_avatar_measurements"
+        ],
+        "call_arity": 1,
+        "scope_reference": "docs/api/current_operation_scope.json"
+      },
       "donor_tools": [
         "import_avatar_measurements"
       ],

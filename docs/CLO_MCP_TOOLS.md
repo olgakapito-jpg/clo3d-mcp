@@ -426,11 +426,17 @@ readback требует seam count +1 и неизменные line lengths/geome
 Probe 2026-11-09: native return bool true, count16→17, lines/geometry unchanged.
 Live tool gate on build975dcebc4e10: own MCP_SEAM_C/D line0 →
 `{verified:true,seam_count:18}`, readback lines/geometry unchanged.
+Один вызов = **одна пара кромок**, не замкнутое изделие. Для трубы из двух
+панелей нужны два шва: `A.left↔B.left` и `A.right↔B.right`; `line0↔line0`,
+`bottom↔bottom` или один шов трубу не закрывают. Directions выбирать по
+физическим концам кромок, не предполагать `True/True`. Исторический live gate
+(C/D line0) подтвердил native call и seam_count, но не закрытость изделия.
 Valid synthetic: `{"pattern_a_index":0,"expected_name_a":"panel","line_a_index":0,
 "pattern_b_index":1,"expected_name_b":"back","line_b_index":0,
 "direction_a":true,"direction_b":true}`. Composition: fresh list → lines → seam →
 read seam count/connectivity отдельно. Anti-selection: partial seam/merge/curve
-editing — не этот tool. Evidence: `CLO_SEAMLINING_CHECK.md`.
+editing — не этот tool. Skills: `clo-sewing`, `clo-seamlines`.
+Evidence: `CLO_SEAMLINING_CHECK.md`.
 
 ## 22. import_avatar
 
@@ -477,6 +483,222 @@ redrape:true}`. Offset units/degrees не заявлены; 3D fit visual-only; 
 без retry/cleanup. Live probe: Body_Front/Back/Arm points → детали встали на
 аватар (UI подтверждён). Anti-selection: mass-layout всех деталей и simulation —
 отдельные пакеты. Evidence: `CLO_FIT_CHECK.md`.
+
+## 25. set_arrangement_orientation
+
+**Source, fitting orientation.** `SetArrangementOrientation(pattern_index,
+orientation)` — целое `0..359` для уже назначенной точки; затем один
+`ReDrape3DArrangement(ApiTypes.ImportExportOption)` с теми же flags. Required
+fresh index/unique name. Preflight читает текущий `GetArrangementOfPattern`;
+после setter readback обязан вернуть запрошенный orientation и сохранить
+name/offset/type, затем ReDrape и повторный readback orientation; drift списка →
+`inventory_changed`. Result совпадает по схеме с `set_arrangement`:
+`{ok:true,verified:true,pattern_index,pattern_name,arrangement_name,
+offset{x,y,z},orientation,type,units:"native_unspecified",redrape:true}`.
+Native units и ось вращения не установлены; 3D-посадка по-прежнему visual-only,
+roll вокруг точки крепления может не убрать пересечение с аватаром — simulation
+отдельно. Ошибка после setter может оставить orientation, без retry/cleanup.
+Valid synthetic: `{"pattern_index":0,"expected_name":"MCP_SEAM_A","orientation":90}`.
+Invalid: `orientation` 360/True/"90", stale/ambiguous name. Anti-selection: это
+не 3D-gizmo/tilt и не simulation; произвольная ось/позиция не поддерживаются.
+Live readback gate build `7e0f73d2c06e`: MCP_SEAM_A 180→90, verified, post-ReDrape
+orientation 90, остальные детали не изменены. Проверка пользователя: в 3D деталь
+визуально не изменилась — orientation field сам по себе не переставляет деталь на
+этой сборке. Evidence: `CLO_FIT_CHECK.md`.
+
+## 26. set_arrangement_position
+
+**Source, fitting position.** `SetArrangementPosition(pattern_index,
+position_x, position_y, offset)` — native signature `positionX, positionY,
+offset`, не world x/y/z. Целые `0..100` (наблюдаемый диапазон; units
+`native_unspecified`), затем один `ReDrape3DArrangement(ApiTypes.ImportExportOption)`
+с теми же flags. Required fresh index/unique name. Preflight читает текущий
+`GetArrangementOfPattern`; после setter offsets обязаны совпасть с запросом, а
+name/orientation/type — остаться прежними; затем ReDrape и повторный readback
+offsets; drift списка → `inventory_changed`. Result совпадает по схеме с
+`set_arrangement`. Это **не свободный 3D-трансформ**: визуальный эффект не
+доказан и проверяется только глазами. Ошибка после setter может оставить
+состояние, без retry/cleanup. Valid synthetic:
+`{"pattern_index":0,"expected_name":"MCP_SEAM_A","position_x":40,
+"position_y":70,"offset":60}`. Invalid: 101/-1/True/50.0/"50", stale name.
+Live readback gate build `57a23bf2cfdb`: 50/75/50→50/75/80, verified, offsets
+прочитаны точно, но визуально деталь не сдвинулась. Evidence:
+`CLO_FIT_CHECK.md`.
+
+## 27. get_3d_screenshot
+
+**Source, artifact.** `export_api.ExportThumbnail3D(path)` — silent снимок
+текущего 3D-окна в PNG; диалог `ExportSnapshot3D` не используется. Tool сам
+генерирует путь под `acceptance-output/screenshots/`, adapter проверяет, что
+native вернул тот же путь и файл 1..16MiB, внешний server читает bytes и
+возвращает MCP `Image` content. Сцена не меняется, произвольный путь не
+принимается, retry нет. Пустой/non-image/oversized файл → ошибка. Это основной
+self-check инструмент. Live build `aafcfac0323d`: PNG ~129–173KB, MCP image
+content получен, файл под `acceptance-output/screenshots/`. Снимок зависит от
+текущей 3D-камеры: после seam/solver камера может зумиться, нужен ручной Fit/zoom.
+Valid synthetic: `{}`.
+
+## 28. get_arrangement_list
+
+**Source, read-only.** `GetArrangementList()` — до4096 точек: index, name, type,
+offset{x,y,z}, orientation. Числовые native строки парсятся в finite numbers;
+units `native_unspecified`. Индекс использовать в `set_arrangement`; имена не
+считать durable ID. Без setter/drape/fit. Live build `b2f3fce822d6`: PASS,
+`library_count=110`, имена/offsets/orientation читаются; extra `ArrangementIndex`
+в library record игнорируется adapter-ом. Valid synthetic: `{}`.
+
+## 29. get_seamline_pairs
+
+**Source, read-only.** `GetSeamlinePairGroupCount/Name/ListInPattern` — число
+швов, имена групп и membership по каждой детали (до4096 групп/256 деталей).
+Это проверка швов без mutation; `seam_count` больше не единственный источник.
+Delete/merge/partial/topstitch не входят; drift списка → `inventory_changed`.
+Live build `aafcfac0323d`: 3 группы, C/D в одной, A/B в двух, 3D_TEST без швов.
+Valid synthetic: `{}`.
+
+## 30. get_avatar_measurements
+
+**Source, read-only.** `utility_api.GetAvatarMeasurements(avatar_index)` —
+до512 мерок: name/type/value/basic_length/surface_length/unit. Нужен перед
+`set_pattern_edge_to_avatar_measure`; height/linear мерки для pin могут быть
+отклонены native. Не pose/fit/measurement editing. Live build `b2f3fce822d6`:
+Mara вернула 79 мерок (78 `Default` + 1 user `Circumference`); Default-мерки
+Line Pin не поддерживают, user Circumference работает. Valid synthetic:
+`{"avatar_index":0}`.
+
+## 31. get_pattern_avatar_attachments
+
+**Source, read-only.** `GetAllPatternToAvatarMeasures()` + `GetPinListSize()` —
+пары pattern↔avatar measure (до1024, de-duplicated по именам) и число pins.
+Пары keyed by name: одинаковые имена могут схлопнуться. Без attach/detach и
+fit-гарантии. Live build `aafcfac0323d`: `pair_count=0, pin_count=0` на текущей
+сцене. Valid synthetic: `{}`.
+
+## 32. set_arrangement_shape_style
+
+**Source, fitting style.** `SetArrangementShapeStyle(pattern_index, "Flat"|"Curved")`
++ readback `GetArrangementOfPattern`: type должен стать запрошенным, name/offset/
+orientation — не измениться. Без ReDrape; визуальный эффект не установлен.
+Ошибка после setter может оставить style, без retry/cleanup. Valid synthetic:
+`{"pattern_index":0,"expected_name":"panel","style":"Flat"}`. Invalid: style
+`flat`, stale name. Live build `aafcfac0323d`: MCP_SEAM_A → Flat, `verified`,
+readback type Flat; визуально деталь не изменилась.
+
+## 33. set_pattern_edge_to_avatar_measure
+
+**Source, avatar fit.** `SetPatternEdgeToAvatarMeasure(pattern_index, line_index,
+avatar_measure, attach)` — Line Pin одного whole outer edge к мерке аватара;
+docs: native сам запускает cloth solver. Required fresh index/unique name,
+`line_index` из `get_pattern_lines`, мера из `get_avatar_measurements`. Readback
+`GetPatternEdgeToAvatarMeasureAttachment` JSON `{is_attached,line_index}`:
+attach → true и запрошенный line, detach → false/-1. Другие edges не меняются;
+visual fit отдельно; false/mismatch → STOP, без retry. Live build `b2f3fce822d6`:
+attach/detach к user `CircumferenceMeasure_283316` PASS; Default-мерки
+(`CIRCUMFERENCE_Bust`) возвращают false. Valid synthetic:
+`{"pattern_index":0,"expected_name":"panel","line_index":0,
+"avatar_measure":"Bust","attach":true}`.
+
+## 34. simulate
+
+**Source, simulation.** `utility_api.Simulate(steps)` один раз, steps 1..300.
+Preflight: ready session, avatar_count≥1, fresh pattern list. Readback: native
+bool true и неизменный список имён; result `{verified,steps,pattern_count,
+avatar_count,elapsed_ms}`. Это visual-only, не fit acceptance; client timeout не
+отменяет native call; settings не меняются, retry нет. Live build `aafcfac0323d`:
+`steps=60`, `verified`, `elapsed_ms≈922`, 5 patterns/1 avatar; без закрепления
+garment **упал** с торса. Повторный gate с Line Pin: `TEE_FRONT/BACK`, 2 seams,
+`simulate(60)` verified/1110ms; garment остался на торсе, но ткань собрана —
+toolchain PASS, fit не принят. Valid synthetic: `{"steps":60}`.
+Invalid: 0/301/True/"60".
+
+## 35. export_view_image
+
+**Source, artifact.** `ExportStdViewImage(view, output_path, colorway,
+width, height, fit_all_objects)` — стандартный 3D-вид (0 Bottom, 1 FrontRight,
+2 Front, 3 FrontLeft, 4 Right, 5 Top, 6 Left, 7 Custom, 8 Back), не зависит от
+текущей камеры. Tool генерирует путь под `acceptance-output/screenshots/`,
+adapter проверяет, что native вернул файл в той же папке (native может добавить
+colorway к имени), внешний server читает его и возвращает MCP `Image`.
+Width/height 64..2048, файл 1..16MiB, без диалога/произвольного пути/retry.
+Result `{verified,view,width,height,file_name,bytes}`. Live build `8e408f3132a0`:
+PASS, front 800×600; native пишет файл по запрошенному пути, но возвращает
+descriptive colorway-строку, поэтому adapter принимает запрошенный файл в той же
+папке. `set_camera_view` + `get_3d_screenshot` остаются live-view вариантом.
+
+## 36. export_snapshot_2d
+
+**Source, artifact.** `ExportThumbnail2D(output_path)` — текущее 2D-окно как
+есть, без перекадрирования; PNG/JPEG, файл в `acceptance-output/screenshots/`.
+Возвращает MCP `Image`; `{verified,file_name,bytes}`. Не меняет сцену, не
+открывает диалог, путь не принимает. Live build `8e408f3132a0`: PASS, 2D-раскладка
+5 деталей tee.
+
+## 37. set_camera_view
+
+**Source, camera-only.** `SetCamViewPoint(view)` + optional `SetZoomView()` +
+`Refresh3DWindow()`; индексы как у `export_view_image`. `zoom_to_fit` bool.
+Result `{verified,view,zoom_to_fit}`; native не даёт camera readback, эффект
+visual-only. Ошибка native → `command_error`; без retry. Live build
+`8e408f3132a0`: view2 + zoom PASS, front-вид tee.
+
+## 38. reset_cloth_arrangement
+
+**Source, cloth reset.** Один `ResetClothArrangement()`; global: возвращает
+cloth shape к состоянию загрузки, отбрасывая текущую simulation. Preflight —
+fresh pattern list, после вызова список должен совпасть; visual-only. Result
+`{verified,pattern_count}`. Без retry/cleanup. Live pending: на реальном tee не
+запускался, так как сбрасывает текущую cloth-форму.
+
+## 39. import_avatar_measurements
+
+**Source, measurement import.** `ImportMeasurement(csv_path)` применяет CSV к
+текущему аватару; требуется ровно один avatar, absolute `.csv` ≤16MiB.
+Preflight читает count до, после вызова count должен вырасти; result
+`{verified,avatar_index,before_count,after_count,added}`. CSV format native,
+tool его не валидирует; path не эхоится; false/нет роста →
+`scene_change_unverified`, без retry. Live pending: CSV нет; текущая Mara уже
+отдаёт 79 мерок (включая user Circumference), поэтому для Line Pin импорт не
+нужен.
+
+## 40. get_pattern_body_details
+
+**Source, read-only.** `GetPatternOnBodyDetails()` → JSON upperBody/lowerBody;
+каждая запись: patternName/index, arrangementPosition, semanticLabel,
+bodyRegion, patternPosition. Bounded strict JSON; до256 patterns. Помогает
+выбирать arrangement points и понимать bodice/sleeve; не fit validation. Live
+`8e408f3132a0`: tee → sleeve/collar/bodice_front/bodice_back.
+
+## 41. get_pattern_details
+
+**Source, read-only.** `GetPatternPieceGrainDirection/Category/Classification` —
+grain degrees, category int, classification text. Required fresh unique
+index/name. Read-only; category/classification native, не durable ID. Live
+`8e408f3132a0`: tee piece `1` → grain0, category0, classification None.
+
+## 42. set_pattern_grain_direction
+
+**Source, grain.** `SetPatternPieceGrainDirection(index, degrees)` 0..359;
+readback grain (mod360) и неизменные area/position/list. Result
+`{verified,pattern_index,pattern_name,grain_direction}`. Ошибка после setter
+может оставить grain, без retry. Live `ecab8fc77aee`/`8e408f3132a0` на копии
+`MCP_GRAIN_TEST`: 90° readback PASS; копия удалена, реальный tee не изменён.
+
+## 43. get_mesh_counts
+
+**Source, read-only.** `GetMeshCountByType(pattern_index)` — native text
+face/vertex counts by mesh type, до16 entries. Result
+`{pattern_index,pattern_name,meshes:[{type,value}]}`; values не парсятся в
+faces/vertices и не доказывают simulation quality. Live `8e408f3132a0`:
+tee piece `1` → Face Count 3146, Mesh Type Triangle, Vertex Count 1640.
+
+## 44. set_particle_distance
+
+**Source, simulation mesh.** `SetParticleDistanceOfPattern(index, distance)`
+1..1000 mm; readback `GetParticleDistanceOfPattern` и неизменные
+area/position/list. Result `{verified,pattern_index,pattern_name,distance}`.
+Меньше — точнее и медленнее; simulation не запускается, без retry. Live
+`ecab8fc77aee`/`8e408f3132a0` на копии: `scene_change_unverified`; readback не
+совпал, эффект неизвестен. Tool остаётся BLOCKED до отдельного разбора.
 
 ## Ошибки и безопасные действия
 
