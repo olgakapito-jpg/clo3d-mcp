@@ -22,7 +22,7 @@ LICENSE/NOTICE: pinned URLs и SHA-256 в JSON; NOTICE указывает upstre
 - `shared_donor_legacy_tool_names`: `44`
 - `donor_only_tool_names`: `126`
 - `legacy_only_tool_names`: `['import_dxf', 'list_extensions', 'ping']`
-- `current_tools`: `44`
+- `current_tools`: `50`
 
 ## Схема и доказательства
 
@@ -61,12 +61,14 @@ Legacy copy_pattern/CopyPatternPiecePos не объявлен эквивален
 ## Current26 и граница приёмки
 
 - `add_seamline_pair` (pattern_package): `pattern_api.AddSeamlinePairGroup`; evidence `docs/PATTERN_API_CHECK.md`.
+- `add_seamline_pair_partial` (pattern_package): `pattern_api.AddSeamlinePairGroupPartial`; evidence `docs/PATTERN_API_CHECK.md`.
 - `assign_pattern_fabric` (pattern_package): `fabric_api.AssignFabricToPattern`; evidence `docs/CLO_FABRIC_ASSIGNMENT_CHECK.md`.
 - `copy_pattern_with_offset` (pattern_package): `pattern_api.CopyPatternPieceMove`, `pattern_api.SetPatternPieceName`; evidence `docs/PATTERN_API_CHECK.md`.
 - `create_pattern` (pattern_package): `pattern_api.CreatePatternWithPoints`, `pattern_api.SetPatternPieceName`; evidence `docs/PATTERN_API_CHECK.md`.
 - `create_test_rectangle` (base_service): `pattern_api.CreatePatternWithPoints`; evidence `docs/P3_MCP_CHECK.md`.
 - `delete_pattern` (pattern_package): `pattern_api.DeletePatternPiece`; evidence `docs/PATTERN_API_CHECK.md`.
 - `describe_clo_api` (pattern_package): нет фиксированного native вызова; evidence `docs/PATTERN_API_CHECK.md`.
+- `export_pattern_json` (pattern_package): `pattern_api.ExportPatternJSON`; evidence `docs/PATTERN_API_CHECK.md`.
 - `export_snapshot_2d` (pattern_package): `export_api.ExportThumbnail2D`; evidence `docs/CLO_MCP_TOOLS.md`.
 - `export_view_image` (pattern_package): `export_api.ExportStdViewImage`, `export_api.GetCurrentColorwayIndex`; evidence `docs/CLO_MCP_TOOLS.md`.
 - `get_3d_screenshot` (pattern_package): `export_api.ExportThumbnail3D`; evidence `docs/CLO_MCP_TOOLS.md`.
@@ -89,6 +91,10 @@ Legacy copy_pattern/CopyPatternPiecePos не объявлен эквивален
 - `get_session_info` (base_service): нет фиксированного native вызова; evidence `docs/P3_MCP_CHECK.md`.
 - `import_avatar` (pattern_package): `import_api.ImportFile`; evidence `docs/PATTERN_API_CHECK.md`.
 - `import_avatar_measurements` (pattern_package): `import_api.ImportMeasurement`; evidence `docs/CLO_MCP_TOOLS.md`.
+- `import_avatar_size` (pattern_package): `import_api.ImportFile`; evidence `docs/PATTERN_API_CHECK.md`.
+- `import_dxf` (pattern_package): `import_api.ImportDXF`; evidence `docs/PATTERN_API_CHECK.md`.
+- `import_pattern_json` (pattern_package): `pattern_api.ImportPatternJSON`; evidence `docs/PATTERN_API_CHECK.md`.
+- `lesson` (pattern_package): нет фиксированного native вызова; evidence `docs/CLO_MCP_TOOLS.md`.
 - `list_clo_api` (pattern_package): нет фиксированного native вызова; evidence `docs/PATTERN_API_CHECK.md`.
 - `move_pattern_relative` (pattern_package): `pattern_api.SetPatternPieceMove`; evidence `docs/PATTERN_API_CHECK.md`.
 - `ping` (base_service): нет фиксированного native вызова; evidence `docs/P3_MCP_CHECK.md`.

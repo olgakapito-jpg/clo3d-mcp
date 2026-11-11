@@ -355,6 +355,59 @@ class PatternAPI:
                 raise CommandError("scene_change_unverified")
         return {"verified": True, "seam_count": seams_after}
 
+    def _seam_partial(self, p):
+        """One partial seam pair with ratios; native success is int 0, not truthy."""
+        self._require("GetPatternCount", "GetPatternPieceName", "GetPatternLineInfo",
+                      "GetPatternPieceArea", "GetBoundingBoxOfPattern",
+                      "GetSeamlinePairGroupCount", "AddSeamlinePairGroupPartial")
+        before = self._list()
+        a, b = p["pattern_a_index"], p["pattern_b_index"]
+        for index, expected in ((a, p["expected_name_a"]), (b, p["expected_name_b"])):
+            items = before["patterns"]
+            if (index >= len(items) or items[index]["name"] != expected
+                    or sum(v["name"] == expected for v in items) != 1):
+                raise CommandError("stale_pattern")
+        lines_a = self._lines({"pattern_index": a, "expected_name": p["expected_name_a"]})
+        lines_b = self._lines({"pattern_index": b, "expected_name": p["expected_name_b"]})
+        if (p["line_a_index"] >= lines_a["line_count"]
+                or p["line_b_index"] >= lines_b["line_count"]):
+            raise CommandError("invalid_parameters")
+        lengths_a = [item["length_mm"] for item in lines_a["lines"]]
+        lengths_b = [item["length_mm"] for item in lines_b["lines"]]
+        geometry_a, geometry_b = self._geometry(a), self._geometry(b)
+        seams = self.pattern.GetSeamlinePairGroupCount()
+        if type(seams) is not int or seams < 0:
+            raise CommandError("invalid_native_result")
+        try:
+            created = self.pattern.AddSeamlinePairGroupPartial(
+                a, p["line_a_index"], p["start_ratio_a"], p["end_ratio_a"],
+                p["direction_a"],
+                b, p["line_b_index"], p["start_ratio_b"], p["end_ratio_b"],
+                p["direction_b"])
+        except Exception:
+            raise CommandError("scene_change_unverified") from None
+        if type(created) is not int or created != 0:
+            raise CommandError("invalid_native_result")
+        if self._list() != before:
+            raise CommandError("inventory_changed")
+        seams_after = self.pattern.GetSeamlinePairGroupCount()
+        if type(seams_after) is not int or seams_after != seams + 1:
+            raise CommandError("scene_change_unverified")
+        after_a = self._lines({"pattern_index": a, "expected_name": p["expected_name_a"]})
+        after_b = self._lines({"pattern_index": b, "expected_name": p["expected_name_b"]})
+        if ([item["length_mm"] for item in after_a["lines"]] != lengths_a
+                or [item["length_mm"] for item in after_b["lines"]] != lengths_b):
+            raise CommandError("scene_change_unverified")
+        for old, new in ((geometry_a, self._geometry(a)),
+                         (geometry_b, self._geometry(b))):
+            if (old["name"] != new["name"] or old["index"] != new["index"]
+                    or old["bounding_box"] != new["bounding_box"]
+                    or not self._near(old["area_mm2"], new["area_mm2"])
+                    or not all(self._near(x, y) for x, y in
+                               zip(old["position_mm"], new["position_mm"]))):
+                raise CommandError("scene_change_unverified")
+        return {"verified": True, "seam_count": seams_after}
+
     def _import_avatar(self, p):
         """Import one .avt avatar via ImportFile; verify count+1, no path echo."""
         imp, exp = self.modules.get("import_api"), self.modules.get("export_api")
@@ -380,6 +433,148 @@ class PatternAPI:
         if type(after) is not int or after != before + 1:
             raise CommandError("scene_change_unverified")
         return {"verified": True, "avatar_count": after}
+
+    def _import_dxf(self, p):
+        """Append one local DXF through ImportDXF; verify list growth, no path echo."""
+        started = time.monotonic()
+        imp = self.modules.get("import_api")
+        if not callable(getattr(imp, "ImportDXF", None)):
+            raise CommandError("api_unavailable")
+        path = p["file_path"]
+        try:
+            if not os.path.isfile(path) or not 0 < os.path.getsize(path) <= 67108864:
+                raise CommandError("invalid_parameters")
+        except OSError:
+            raise CommandError("invalid_parameters") from None
+        api_types = self.modules.get("ApiTypes")
+        if api_types is None:
+            try:
+                import ApiTypes as api_types
+            except Exception:
+                raise CommandError("api_unavailable") from None
+        factory = getattr(api_types, "ImportDxfOption", None)
+        if not callable(factory):
+            raise CommandError("api_unavailable")
+        try:
+            option = factory()
+        except Exception:
+            raise CommandError("api_unavailable") from None
+        if not hasattr(option, "m_bAppend"):
+            raise CommandError("api_unavailable")
+        option.m_bAppend = True
+        if hasattr(option, "m_bImportNotchTo"):
+            option.m_bImportNotchTo = True
+        if hasattr(option, "m_eNotchImportPlacement"):
+            option.m_eNotchImportPlacement = 2
+        before = self._list()
+        if before["pattern_count"] >= MAX_PATTERNS:
+            raise CommandError("stale_pattern")
+        try:
+            imported = imp.ImportDXF(path, option)
+        except Exception:
+            raise CommandError("scene_change_unverified") from None
+        if type(imported) is not bool or imported is not True:
+            raise CommandError("invalid_native_result")
+        try:
+            after = self._list()
+        except CommandError:
+            raise CommandError("scene_change_unverified") from None
+        delta = after["pattern_count"] - before["pattern_count"]
+        if delta <= 0:
+            raise CommandError("scene_change_unverified")
+        imported_names = [item["name"] for item in after["patterns"][before["pattern_count"]:]]
+        return {
+            "imported": True,
+            "pattern_count_before": before["pattern_count"],
+            "pattern_count_after": after["pattern_count"],
+            "imported_count": delta,
+            "imported_names": imported_names,
+            "executor_ms": round((time.monotonic() - started) * 1000, 3),
+        }
+
+    def _export_pattern_json(self, p):
+        """Write the native pattern JSON artifact; no scene mutation."""
+        self._require("ExportPatternJSON")
+        path = p["output_path"]
+        try:
+            exported = self.pattern.ExportPatternJSON(path)
+        except Exception:
+            raise CommandError("invalid_native_result") from None
+        if type(exported) is not bool or exported is not True:
+            raise CommandError("invalid_native_result")
+        try:
+            size = os.path.getsize(path)
+        except OSError:
+            raise CommandError("invalid_native_result") from None
+        if not 0 < size <= 67108864:
+            raise CommandError("invalid_native_result")
+        return {"verified": True, "file_name": os.path.basename(path), "bytes": size}
+
+    def _import_pattern_json(self, p):
+        """Import one native pattern JSON; the donor contract replaces the scene."""
+        started = time.monotonic()
+        self._require("ImportPatternJSON", "GetPatternCount", "GetPatternPieceName",
+                      "GetSeamlinePairGroupCount")
+        path = p["file_path"]
+        try:
+            if not os.path.isfile(path) or not 0 < os.path.getsize(path) <= 67108864:
+                raise CommandError("invalid_parameters")
+        except OSError:
+            raise CommandError("invalid_parameters") from None
+        before = self._count()
+        try:
+            imported = self.pattern.ImportPatternJSON(path)
+        except Exception:
+            raise CommandError("scene_change_unverified") from None
+        if type(imported) is not bool or imported is not True:
+            raise CommandError("invalid_native_result")
+        try:
+            after = self._list()
+            seam_count = self.pattern.GetSeamlinePairGroupCount()
+        except Exception:
+            raise CommandError("scene_change_unverified") from None
+        if type(seam_count) is not int or not 0 <= seam_count <= 4096:
+            raise CommandError("scene_change_unverified")
+        return {
+            "imported": True,
+            "pattern_count_before": before,
+            "pattern_count_after": after["pattern_count"],
+            "patterns_after": after["patterns"],
+            "seam_count_after": seam_count,
+            "executor_ms": round((time.monotonic() - started) * 1000, 3),
+        }
+
+    def _import_avatar_size(self, p):
+        """Apply one .avs avatar-size file and report measurement count drift."""
+        imp, exp, utility = (self.modules.get("import_api"), self.modules.get("export_api"),
+                             self.modules.get("utility_api"))
+        if not callable(getattr(imp, "ImportFile", None)) or not callable(
+                getattr(exp, "GetAvatarCount", None)) or not callable(
+                getattr(utility, "GetAvatarMeasurements", None)):
+            raise CommandError("api_unavailable")
+        path = p["file_path"]
+        try:
+            if not os.path.isfile(path) or not 0 < os.path.getsize(path) <= 16777216:
+                raise CommandError("invalid_parameters")
+        except OSError:
+            raise CommandError("invalid_parameters") from None
+        count = exp.GetAvatarCount()
+        if type(count) is not int or count < 1:
+            raise CommandError("invalid_parameters")
+        before = utility.GetAvatarMeasurements(0)
+        if type(before) is not list or len(before) > 512:
+            raise CommandError("invalid_native_result")
+        try:
+            applied = imp.ImportFile(path)
+        except Exception:
+            raise CommandError("scene_change_unverified") from None
+        if type(applied) is not bool or applied is not True:
+            raise CommandError("invalid_native_result")
+        after = utility.GetAvatarMeasurements(0)
+        if type(after) is not list or len(after) > 512:
+            raise CommandError("scene_change_unverified")
+        return {"verified": True, "measurement_count_before": len(before),
+                "measurement_count_after": len(after), "added": len(after) - len(before)}
 
     def _arrangements(self):
         """Read every piece's current arrangement; numeric text stays un-united."""
@@ -1173,8 +1368,18 @@ class PatternAPI:
             result = self._lines(params)
         elif command == "add_seamline_pair":
             result = self._seam(params)
+        elif command == "add_seamline_pair_partial":
+            result = self._seam_partial(params)
         elif command == "import_avatar":
             result = self._import_avatar(params)
+        elif command == "import_avatar_size":
+            result = self._import_avatar_size(params)
+        elif command == "import_dxf":
+            result = self._import_dxf(params)
+        elif command == "export_pattern_json":
+            result = self._export_pattern_json(params)
+        elif command == "import_pattern_json":
+            result = self._import_pattern_json(params)
         elif command == "get_arrangement":
             result = self._arrangements()
         elif command == "set_arrangement":

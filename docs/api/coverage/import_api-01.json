@@ -498,7 +498,14 @@
       "units": "not_checked",
       "implementation": "planned",
       "overload_coverage": "not_established",
-      "current_operation": null,
+      "current_operation": {
+        "symbol": "import_api.ImportDXF",
+        "tools": [
+          "import_dxf"
+        ],
+        "call_arity": 2,
+        "scope_reference": "docs/api/current_operation_scope.json"
+      },
       "donor_tools": [],
       "legacy_tools": [
         "import_dxf"
@@ -743,7 +750,8 @@
       "current_operation": {
         "symbol": "import_api.ImportFile",
         "tools": [
-          "import_avatar"
+          "import_avatar",
+          "import_avatar_size"
         ],
         "call_arity": 1,
         "scope_reference": "docs/api/current_operation_scope.json"
@@ -810,7 +818,8 @@
       "current_operation": {
         "symbol": "import_api.ImportFile",
         "tools": [
-          "import_avatar"
+          "import_avatar",
+          "import_avatar_size"
         ],
         "call_arity": 1,
         "scope_reference": "docs/api/current_operation_scope.json"

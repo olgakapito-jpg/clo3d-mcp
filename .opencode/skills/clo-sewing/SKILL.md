@@ -39,6 +39,26 @@ description: Plan and review CLO garment assembly with seamline pairs. Use when 
 5. После каждого вызова — `verified` и `seam_count` +1, затем независимый
    readback линий/geometry. Только потом следующий шов.
 
+## Partial seams и составные кромки
+
+- `add_seamline_pair_partial` соединяет участок линии, а не всю кромку. Ratios
+  **line-relative** (`0 <= start < end <= 1`); `direction` отдельно, descending
+  input native отклоняет. Подробности и формулы — `clo-seamlines`.
+- Кромка, разбитая насечками на несколько `LineList`-линий, — это несколько
+  линий, а не одна. Ручной эталон может хранить один seam group на весь пробег
+  линий (`LineID` первой линии + perimeter-доли). Одним partial-вызовом такой
+  пробег не воспроизводится: декомпозировать на пары отдельных линий по
+  относительным позициям вдоль пробега.
+- Перед dispatch: валидатор интервалов (в пределах линии, без overlap и
+  дубликатов на одной линии) и сверка длин сторон пары. Не передавать
+  `LengthParam` reference-файла напрямую.
+- `export_pattern_json` хранит `LengthParam` как долю **периметра детали**;
+  не путать с входными line-relative ratios.
+- `import_pattern_json` импортирует детали, но в этой сборке не восстанавливает
+  швы (`seam_count_after=0`). Швы добавляются отдельными вызовами.
+- Вытачки и self-seam (пояс в кольцо) — только `add_seamline_pair_partial`:
+  `add_seamline_pair` отклоняет одинаковые детали (`invalid_parameters`).
+
 ## Рецепт: труба из двух панелей
 
 - Preconditions: ready session, fresh list, обе детали с 4 outer lines,
@@ -78,8 +98,9 @@ description: Plan and review CLO garment assembly with seamline pairs. Use when 
 
 ## Stop rules
 
-- stale/invalid/unknown/session change — остановить сборку, не повторять.
+- `stale/invalid/unknown/session change` — остановить сборку, не повторять.
 - Если первый боковой шов прошёл, а второй нет — сообщить «открытая труба,
   частичный шов», не выдавать её за закрытую и не делать retry.
-- Нет MCP tool для удаления или списка seam pairs; не изобретать его.
+- Нет MCP tool для удаления швов; список/участие — `get_seamline_pairs`.
+  Не изобретать delete/merge; сброс — импорт на расходной сцене.
 - Evidence: `docs/CLO_SEAMLINING_CHECK.md`, `docs/CLO_MCP_WORKFLOWS.md`.

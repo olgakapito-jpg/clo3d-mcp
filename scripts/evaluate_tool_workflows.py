@@ -17,16 +17,18 @@ import re
 ROOT = Path(__file__).resolve().parents[1]
 DATASET = ROOT / "tests/evals/clo_tool_selection.json"
 MAX_BYTES = 200000
-EXTERNAL = {"get_session_info", "transport_status"}
+EXTERNAL = {"get_session_info", "transport_status", "lesson"}
 MUTATIONS = {"create_pattern", "set_pattern_name", "copy_pattern_with_offset",
              "move_pattern_relative", "delete_pattern", "assign_pattern_fabric",
-             "add_seamline_pair", "import_avatar", "set_arrangement",
+             "add_seamline_pair", "add_seamline_pair_partial", "import_avatar", "set_arrangement",
              "set_arrangement_orientation", "set_arrangement_position",
              "set_arrangement_shape_style", "set_pattern_edge_to_avatar_measure",
              "simulate", "set_camera_view", "reset_cloth_arrangement",
              "import_avatar_measurements", "set_pattern_grain_direction",
-             "set_particle_distance"}
-ARTIFACTS = {"get_3d_screenshot", "export_view_image", "export_snapshot_2d"}
+             "set_particle_distance", "import_dxf", "import_pattern_json",
+             "import_avatar_size"}
+ARTIFACTS = {"get_3d_screenshot", "export_view_image", "export_snapshot_2d",
+             "export_pattern_json"}
 SERVER_GENERATED = ARTIFACTS
 DIAGNOSTIC = "create_test_rectangle"
 CURRENT = EXTERNAL | MUTATIONS | ARTIFACTS | {DIAGNOSTIC, "ping", "get_pattern_count",
@@ -129,7 +131,7 @@ CONTRACT = contract_module()
 def inventory(root=ROOT):
     """AST only: decorators, public args, literal command mapping and capabilities.
 
-    Deliberately fails closed when the current44 registration shape changes.
+    Deliberately fails closed when the current50 registration shape changes.
     Does not inspect legacy server.py or claim a currently running profile.
     """
     tree = ast.parse((root / "src/clo3d_mcp/transport_server.py").read_text(encoding="utf-8"))
@@ -195,49 +197,51 @@ def inventory(root=ROOT):
                 "set_arrangement_shape_style", "set_pattern_edge_to_avatar_measure",
                 "simulate"}
     base = newest | previous
+    newer = {"lesson", "import_dxf", "export_pattern_json", "import_pattern_json",
+             "add_seamline_pair_partial", "import_avatar_size"}
     profiles = {
-        "current44": profile(set()),
-        "current34": profile(newest),
-        "current26": profile(base),
-        "current25": profile(base | {"set_arrangement_position"}),
-        "current24": profile(base | {"set_arrangement_position",
-                                     "set_arrangement_orientation"}),
-        "current23": profile(base | {"set_arrangement_position",
-                                     "set_arrangement_orientation", "set_arrangement"}),
-        "current22": profile(base | {"set_arrangement_position",
-                                     "set_arrangement_orientation", "set_arrangement",
-                                     "get_arrangement"}),
-        "current21": profile(base | {"set_arrangement_position",
-                                     "set_arrangement_orientation", "set_arrangement",
-                                     "get_arrangement", "import_avatar"}),
-        "current20": profile(base | {"set_arrangement_position",
-                                     "set_arrangement_orientation", "set_arrangement",
-                                     "get_arrangement", "import_avatar",
-                                     "add_seamline_pair"}),
-        "current19": profile(base | {"set_arrangement_position",
-                                     "set_arrangement_orientation", "set_arrangement",
-                                     "get_arrangement", "import_avatar",
-                                     "add_seamline_pair", "get_pattern_lines"}),
-        "current18": profile(base | {"set_arrangement_position",
-                                     "set_arrangement_orientation", "set_arrangement",
-                                     "get_arrangement", "import_avatar",
-                                     "add_seamline_pair", "get_pattern_lines",
-                                     "get_pattern_outline"}),
-        "current16": profile(base | {"set_arrangement_position",
-                                     "set_arrangement_orientation", "set_arrangement",
-                                     "get_arrangement", "import_avatar",
-                                     "add_seamline_pair", "get_pattern_lines",
-                                     "get_pattern_fabric", "assign_pattern_fabric",
-                                     "get_pattern_outline"}),
+        "current50": profile(set()),
+        "current34": profile(newest | newer),
+        "current26": profile(base | newer),
+        "current25": profile(base | newer | {"set_arrangement_position"}),
+        "current24": profile(base | newer | {"set_arrangement_position",
+                                               "set_arrangement_orientation"}),
+        "current23": profile(base | newer | {"set_arrangement_position",
+                                               "set_arrangement_orientation", "set_arrangement"}),
+        "current22": profile(base | newer | {"set_arrangement_position",
+                                               "set_arrangement_orientation", "set_arrangement",
+                                               "get_arrangement"}),
+        "current21": profile(base | newer | {"set_arrangement_position",
+                                               "set_arrangement_orientation", "set_arrangement",
+                                               "get_arrangement", "import_avatar"}),
+        "current20": profile(base | newer | {"set_arrangement_position",
+                                               "set_arrangement_orientation", "set_arrangement",
+                                               "get_arrangement", "import_avatar",
+                                               "add_seamline_pair"}),
+        "current19": profile(base | newer | {"set_arrangement_position",
+                                               "set_arrangement_orientation", "set_arrangement",
+                                               "get_arrangement", "import_avatar",
+                                               "add_seamline_pair", "get_pattern_lines"}),
+        "current18": profile(base | newer | {"set_arrangement_position",
+                                               "set_arrangement_orientation", "set_arrangement",
+                                               "get_arrangement", "import_avatar",
+                                               "add_seamline_pair", "get_pattern_lines",
+                                               "get_pattern_outline"}),
+        "current16": profile(base | newer | {"set_arrangement_position",
+                                               "set_arrangement_orientation", "set_arrangement",
+                                               "get_arrangement", "import_avatar",
+                                               "add_seamline_pair", "get_pattern_lines",
+                                               "get_pattern_fabric", "assign_pattern_fabric",
+                                               "get_pattern_outline"}),
         # Historical selection fixtures keep their exact old capabilities.
-        "current14": profile(base | {"set_arrangement_position",
-                                     "set_arrangement_orientation", "set_arrangement",
-                                     "get_arrangement", "import_avatar",
-                                     "add_seamline_pair", "get_pattern_lines",
-                                     "get_fabric_list", "get_avatars",
-                                     "get_pattern_fabric", "assign_pattern_fabric",
-                                     "get_pattern_outline"}),
-        "diagnostic5": {"tools": sorted(EXTERNAL | set(constants["SERVICE_CAPABILITIES"])),
+        "current14": profile(base | newer | {"set_arrangement_position",
+                                               "set_arrangement_orientation", "set_arrangement",
+                                               "get_arrangement", "import_avatar",
+                                               "add_seamline_pair", "get_pattern_lines",
+                                               "get_fabric_list", "get_avatars",
+                                               "get_pattern_fabric", "assign_pattern_fabric",
+                                               "get_pattern_outline"}),
+        "diagnostic5": {"tools": sorted((EXTERNAL - newer) | set(constants["SERVICE_CAPABILITIES"])),
                         "capabilities": constants["SERVICE_CAPABILITIES"]},
     }
     return {"tools": tools, "profiles": profiles}

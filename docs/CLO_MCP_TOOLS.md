@@ -426,7 +426,9 @@ readback требует seam count +1 и неизменные line lengths/geome
 Probe 2026-11-09: native return bool true, count16→17, lines/geometry unchanged.
 Live tool gate on build975dcebc4e10: own MCP_SEAM_C/D line0 →
 `{verified:true,seam_count:18}`, readback lines/geometry unchanged.
-Один вызов = **одна пара кромок**, не замкнутое изделие. Для трубы из двух
+Один вызов = **одна пара кромок**, и каждая кромка — **одна `LineList`-линия**.
+Multi-segment edge (кромка, разбитая насечками) требует несколько вызовов;
+merge-lines/edge-path API нет. Для трубы из двух
 панелей нужны два шва: `A.left↔B.left` и `A.right↔B.right`; `line0↔line0`,
 `bottom↔bottom` или один шов трубу не закрывают. Directions выбирать по
 физическим концам кромок, не предполагать `True/True`. Исторический live gate
@@ -434,9 +436,11 @@ Live tool gate on build975dcebc4e10: own MCP_SEAM_C/D line0 →
 Valid synthetic: `{"pattern_a_index":0,"expected_name_a":"panel","line_a_index":0,
 "pattern_b_index":1,"expected_name_b":"back","line_b_index":0,
 "direction_a":true,"direction_b":true}`. Composition: fresh list → lines → seam →
-read seam count/connectivity отдельно. Anti-selection: partial seam/merge/curve
-editing — не этот tool. Skills: `clo-sewing`, `clo-seamlines`.
-Evidence: `CLO_SEAMLINING_CHECK.md`.
+read seam count/connectivity отдельно. Одинаковый `pattern_a_index ==
+pattern_b_index` отклоняется (`invalid_parameters`): darts и self-seam
+выполняются через `add_seamline_pair_partial` с ratios 0..1. Anti-selection:
+partial seam/merge/curve editing — не этот tool. Skills: `clo-sewing`,
+`clo-seamlines`. Evidence: `CLO_SEAMLINING_CHECK.md`.
 
 ## 22. import_avatar
 
@@ -699,6 +703,154 @@ area/position/list. Result `{verified,pattern_index,pattern_name,distance}`.
 Меньше — точнее и медленнее; simulation не запускается, без retry. Live
 `ecab8fc77aee`/`8e408f3132a0` на копии: `scene_change_unverified`; readback не
 совпал, эффект неизвестен. Tool остаётся BLOCKED до отдельного разбора.
+
+## 45. lesson
+
+**Source, server-local lesson runner.** Один tool с action
+`list|start|state|check|reset`. Урок — это последовательность шагов с
+инструкциями и read-only проверкой; сам tool **не меняет сцену** и не вызывает
+native mutations. Шаги выполняет клиент существующими tools; `check` только
+читает `get_pattern_list`, `get_seamline_pairs`, `get_arrangement`,
+`get_avatars` (4 bounded native reads) и двигает прогресс при pass.
+
+Args: `action` — strict enum; `lesson_id` — обязателен только для `start`
+(`[a-z0-9][a-z0-9_-]{0,63}`), для остальных actions запрещён. Extras,
+неизвестный action, отсутствующий/лишний `lesson_id` → `invalid_parameters` до
+любого чтения. State хранится в памяти MCP service и теряется при restart; файлов
+и IPC нет.
+
+Result: `{ok,status:"not_started"|"in_progress"|"completed",lesson:{id,title,
+summary}|null,progress:{completed,total},current_step:{index,id,title,
+instructions,tools}|null,last_check}`; `check` добавляет `{passed,evidence,
+message}`. `start` перезапускает урок; `reset` очищает прогресс. Pass двигает
+ровно на один шаг, fail оставляет шаг и не делает cleanup/retry. Ошибки:
+`lesson_not_found`, `lesson_not_started`, `lesson_check_unavailable` (одно из
+четырёх чтений не удалось), `invalid_parameters`.
+
+Valid synthetic: `{"action":"list"}`; `{"action":"start","lesson_id":
+"two_panel_tube"}`; `{"action":"check"}`. Invalid: `{"action":"start"}`;
+`{"action":"state","lesson_id":"two_panel_tube"}`; `{"action":"run"}`.
+Composition: `start` → клиент выполняет scene-шаги → `check` после каждого
+шага → `state` для прогресса. Anti-selection: это не composite scene tool и не
+замена `add_seamline_pair`/`set_arrangement`; при `lesson_check_unavailable`
+STOP, не повторять и не запускать scene mutations «для проверки». Каталог и
+контракт шагов: `docs/CLO_MCP_LESSONS.md`. Local tests only; real CLO gate
+pending.
+
+## 46. import_dxf
+
+**Source, DXF append.** Один `import_api.ImportDXF(path, option)` с
+`ApiTypes.ImportDxfOption`: adapter выставляет `m_bAppend=true`, а при наличии
+полей — `m_bImportNotchTo=true` и `m_eNotchImportPlacement=2`. Это импорт
+**новых деталей в текущую сцену**, не замена проекта и не AAMA-парсер.
+
+Args строго `{"file_path"}`: absolute existing `.dxf` 1..64MiB, 1..260 chars,
+без control/surrogates. Относительный путь, другой extension, extra keys,
+bool/не-строка → `invalid_parameters` до native. Options не принимаются:
+никаких arbitrary `ImportDxfOption` полей.
+
+Result `{imported:true,pattern_count_before,pattern_count_after,imported_count,
+imported_names,executor_ms}`; `imported_count = after-before >0`, names — новый
+хвост списка. Проверка native true и роста списка; path не эхоится. False/no
+growth/mismatch → `invalid_native_result`/`scene_change_unverified`; после
+входа в native ошибка может означать уже выполненный импорт: STOP, без retry,
+rollback или удаления «лишних» деталей.
+
+Valid synthetic: `{"file_path":"C:\\project\\acceptance-output\\trousers_40.dxf"}`.
+Invalid: relative path, `.txt`, extra `options`. Composition: импорт → fresh
+`get_pattern_list` → `get_pattern_lines`/geometry → seams/arrangement. Anti:
+не использовать для `.avt` (есть `import_avatar`), для замены проекта или для
+AAMA-специфичной проверки; native notch/grain semantics не заявлены. Evidence:
+`tests/test_import_dxf_api.py`; real CLO gate pending.
+
+## 47. export_pattern_json
+
+**Source, read-only artifact.** Один `pattern_api.ExportPatternJSON(path)` в
+server-generated путь `acceptance-output/pattern_json/current.json`, native true
+и файл 1..64MiB; result `{verified:true,file_name,bytes,top_level_keys}`.
+Args `{}`; произвольный путь, импорт, scene mutation и retry не входят. Это
+единственный публичный способ увидеть native `SeamLinePairGroupList`/`NotchList`
+и построить line-level seam map; schema не заявлена до реального probe.
+`LengthParam` в export — доля **периметра детали** от начала обхода, не
+line-relative: `export = (prefix_offset + ratio * line_length) / perimeter`.
+Один seam group может покрывать пробег нескольких `LineList`-линий.
+
+Valid: `{}`. Invalid: `{"path":"..."}` или `{"file_path":"..."}` — extra keys.
+Composition: export → чтение ключей → решение о JSON-конвертере или partial
+seams. Anti: не использовать как замену `get_pattern_lines`/`get_seamline_pairs`
+для простых reads; не публиковать содержимое файла как доказательство fit.
+Evidence: `tests/test_pattern_json_api.py`; real schema gate pending.
+
+## 48. import_pattern_json
+
+**Source, destructive JSON import.** Один `pattern_api.ImportPatternJSON(path)`;
+по контракту донора **заменяет сцену**, не append. Args `{file_path}`: absolute
+existing `.json` 1..64MiB. Preflight проверяет файл; затем native call и
+readback `get_pattern_list` + `GetSeamlinePairGroupCount`. Result
+`{imported:true,pattern_count_before,pattern_count_after,patterns_after,
+seam_count_after,executor_ms}`. False/исключение после native → error; scene мог
+измениться. Нет backup, merge, retry, rollback или cleanup.
+
+Valid synthetic: `{"file_path":"C:\\project\\acceptance-output\\pattern_json\\current.json"}`.
+Invalid: `.dxf`, relative path, extra keys. Использовать только на пустой или
+явно расходной сцене; перед импортом сделать `export_pattern_json` текущего
+проекта. Live 2026-11-11: импорт 5 деталей сохранил имена, но
+`seam_count_after=0` — JSON в этой сборке переносит детали, не швы. Anti: не
+запускать поверх сшитого проекта; не считать `seam_count_after`
+доказательством корректности line pairs. Evidence:
+`tests/test_pattern_json_api.py`; real CLO gate: 5-детальный импорт.
+
+## 49. add_seamline_pair_partial
+
+**Source, partial seam.** 10-аргументный
+`pattern_api.AddSeamlinePairGroupPartial`: две whole outer lines, у каждой
+`startRatio`/`endRatio` — **line-relative** доли длины этой линии,
+`0 <= start < end <= 1`, directions strict bool. Descending input native
+отклоняет (`invalid_native_result`) даже если export пары с `direction=false`
+выглядит descending: export хранит старт/end в обратном порядке, но
+физический участок тот же. Ratios применяются буквально, snapping по насечкам
+не выполняется; native success — `int 0`, не truthy. Адаптер требует свежие
+indices/уникальные имена, проверяет line counts, `seam_count +1`, неизменные
+длины линий/geometry/list. Result `{verified:true,seam_count}`. Non-zero/
+exception → error, без retry/cleanup. Child overloads, topstitch, merge/delete,
+seam allowance и качество шва не входят.
+
+`export_pattern_json` пишет `LengthParam` как долю **периметра детали**:
+`export = (prefix_offset(line) + ratio * line_length) / perimeter`, обратно
+`ratio = (export * perimeter - prefix_offset(line)) / line_length`. Для
+`line0` offset=0. Reference-группа может покрывать пробег нескольких линий
+(один `LineID` + perimeter-доли); одним partial-вызовом она не
+воспроизводится — декомпозировать на пары отдельных линий. Не передавать
+reference `LengthParam` напрямую: это даёт сдвиг, наложения и CLO warning
+«abnormal/overlapped seamlines».
+
+Одинаковые `pattern_a_index == pattern_b_index` **допускаются**: darts,
+вытачки и waistband self-seam делаются partial-вызовом с ratios 0..1.
+`add_seamline_pair` такие пары отклоняет.
+
+Valid synthetic: `{"pattern_a_index":0,"expected_name_a":"panel","line_a_index":0,
+"start_ratio_a":0,"end_ratio_a":0.5,"pattern_b_index":1,"expected_name_b":"back",
+"line_b_index":0,"start_ratio_b":0.5,"end_ratio_b":1,"direction_a":true,
+"direction_b":false}`. Invalid: `start_ratio_a >= end_ratio_a` (включая
+descending), ratio 1.1, bool-as-ratio, stale target. Composition: fresh lines →
+проверить физические интервалы → partial seam → readback lines/geometry →
+следующий участок; для multi-line кромки несколько вызовов.
+Anti: whole-line шов — `add_seamline_pair`; удаление/merge/посадка — не этот
+tool. Evidence: `tests/test_seam_api.py`; live calibration 2026-11-11,
+`CLO_SEAMLINING_CHECK.md`.
+
+## 50. import_avatar_size
+
+**Source, avatar size.** Absolute `.avs` 1..16MiB через
+`import_api.ImportFile`; требуется ≥1 avatar. Readback
+`utility_api.GetAvatarMeasurements(0)` до/после; result
+`{verified:true,measurement_count_before,measurement_count_after,added}`.
+`added=0` — валидный observation: `.avs` меняет размер, но не обязан создавать
+measurement set; не выдавать его за успешное появление мерок. False/exception
+после native → error, без retry/cleanup. Native UI может показать подтверждение;
+tool не ждёт ручного подтверждения. Valid:
+`{"file_path":"C:\\...\\Olga.avs"}`. Invalid: `.avt`, relative path, extra keys.
+Anti: для `.avt` — `import_avatar`, для CSV — `import_avatar_measurements`.
 
 ## Ошибки и безопасные действия
 

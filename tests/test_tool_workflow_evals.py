@@ -31,9 +31,9 @@ def trace(inv):
     return evaluation.synthetic_examples(inv)[0]
 
 
-def test_current44_inventory_ast_without_server_imports(inv):
-    assert len(inv["tools"]) == 44
-    assert set(inv["profiles"]["current44"]["capabilities"]) == evaluation.CURRENT - evaluation.EXTERNAL
+def test_current50_inventory_ast_without_server_imports(inv):
+    assert len(inv["tools"]) == 50
+    assert set(inv["profiles"]["current50"]["capabilities"]) == evaluation.CURRENT - evaluation.EXTERNAL
     assert len(inv["profiles"]["current34"]["tools"]) == 34
     assert "export_view_image" not in inv["profiles"]["current34"]["tools"]
     assert "get_3d_screenshot" in inv["profiles"]["current34"]["tools"]
@@ -386,7 +386,7 @@ def test_fixture_and_scope_and_diagnostic_guards(inv, data, trace):
 def test_cli_check_and_self_test(capsys):
     assert evaluation.main(["--check", "--self-test"]) == 0
     result = json.loads(capsys.readouterr().out)
-    assert result["cases"] >= 20 and result["tools"] == 44
+    assert result["cases"] >= 20 and result["tools"] == 50
     assert result["self_test"] == {"valid_accepted": 2, "invalid_rejected": 6}
     assert "not_llm" in result["evidence"]
 

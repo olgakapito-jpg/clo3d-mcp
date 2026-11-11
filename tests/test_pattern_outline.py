@@ -250,7 +250,7 @@ def test_outline_sdk_metadata_and_raw_validation_without_dispatch():
         service = Service()
         mcp = build_mcp(service)
         tools = {t.name: t for t in await mcp.list_tools()}
-        assert len(tools) == 44
+        assert len(tools) == 50
         t = tools[COMMAND]
         assert set(t.inputSchema["required"]) == set(PARAMS)
         assert t.inputSchema["properties"]["pattern_index"]["type"] == "integer"

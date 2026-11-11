@@ -35,7 +35,8 @@ DONOR_FILES = (
 LOCAL_INPUTS = (
     "src/clo3d_mcp/server.py", "plugin/clo3d_mcp_plugin.py",
     "src/clo3d_mcp/transport_server.py", "src/clo3d_mcp/pattern_api.py",
-    "src/clo3d_mcp/pattern_contract.py", "plugin/clo3d_mcp_start.py",
+    "src/clo3d_mcp/lessons.py", "src/clo3d_mcp/pattern_contract.py",
+    "plugin/clo3d_mcp_start.py",
     "src/clo3d_mcp/pipe_runtime.py", "src/clo3d_mcp/pipe_session.py", "src/clo3d_mcp/protocol.py", "docs/PATTERN_API_CHECK.md",
     "docs/P3_MCP_CHECK.md", "tests/test_pattern_api.py", "tests/test_verify_patterns.py",
     "tests/test_transport_server.py", "tests/test_service_executor.py",
@@ -45,6 +46,9 @@ LOCAL_INPUTS = (
     "docs/CLO_FABRIC_ASSIGNMENT_CHECK.md",
     "tests/test_pattern_outline.py", "docs/CLO_OUTLINE_CHECK.md",
     "tests/test_pattern_lines.py", "tests/test_seam_api.py",
+    "tests/test_lessons.py", "tests/test_lesson_tool.py",
+    "tests/test_import_dxf_api.py", "tests/test_pattern_json_api.py",
+    "tests/test_avatar_size_api.py",
     "tests/test_import_avatar_api.py", "tests/test_arrangement_api.py",
     "tests/test_set_arrangement_api.py", "tests/test_set_arrangement_orientation_api.py",
     "tests/test_set_arrangement_position_api.py", "tests/test_basic_tools_api.py",
@@ -336,7 +340,12 @@ CURRENT_PRIMARY = {
     "get_pattern_outline": ["GetPatternOutlinePoints"],
     "get_pattern_lines": ["GetPatternLineInfo"],
     "add_seamline_pair": ["AddSeamlinePairGroup"],
+    "add_seamline_pair_partial": ["AddSeamlinePairGroupPartial"],
     "import_avatar": ["ImportFile"],
+    "import_avatar_size": ["ImportFile"],
+    "import_dxf": ["ImportDXF"],
+    "export_pattern_json": ["ExportPatternJSON"],
+    "import_pattern_json": ["ImportPatternJSON"],
     "get_arrangement": ["GetArrangementList", "GetArrangementOfPattern"],
     "set_arrangement": ["SetArrangement", "GetArrangementList", "GetArrangementOfPattern"],
     "set_arrangement_orientation": ["SetArrangementOrientation", "GetArrangementOfPattern"],
@@ -371,11 +380,12 @@ CURRENT_PRIMARY = {
     "delete_pattern": ["DeletePatternPiece"],
 }
 PATTERN_TOOLS = frozenset(("list_clo_api", "describe_clo_api", "get_pattern_list", "get_pattern_geometry",
-                           "create_pattern", "set_pattern_name", "copy_pattern_with_offset", "move_pattern_relative", "delete_pattern", "get_pattern_outline", "get_pattern_lines", "get_arrangement", "set_arrangement", "set_arrangement_orientation", "set_arrangement_position", "get_3d_screenshot", "get_arrangement_list", "get_seamline_pairs", "get_avatar_measurements", "get_pattern_avatar_attachments", "set_arrangement_shape_style", "set_pattern_edge_to_avatar_measure", "simulate", "export_view_image", "export_snapshot_2d", "set_camera_view", "reset_cloth_arrangement", "import_avatar_measurements", "get_pattern_body_details", "get_pattern_details", "set_pattern_grain_direction", "get_mesh_counts", "set_particle_distance", "add_seamline_pair", "import_avatar"))
+                           "create_pattern", "set_pattern_name", "copy_pattern_with_offset", "move_pattern_relative", "delete_pattern", "get_pattern_outline", "get_pattern_lines", "get_arrangement", "set_arrangement", "set_arrangement_orientation", "set_arrangement_position", "get_3d_screenshot", "get_arrangement_list", "get_seamline_pairs", "get_avatar_measurements", "get_pattern_avatar_attachments", "set_arrangement_shape_style", "set_pattern_edge_to_avatar_measure", "simulate", "export_view_image", "export_snapshot_2d", "set_camera_view", "reset_cloth_arrangement", "import_avatar_measurements", "get_pattern_body_details", "get_pattern_details", "set_pattern_grain_direction", "get_mesh_counts", "set_particle_distance", "add_seamline_pair", "add_seamline_pair_partial", "import_avatar", "import_avatar_size", "import_dxf", "export_pattern_json", "import_pattern_json"))
 DOMAIN_TOOLS = frozenset(("get_fabric_list", "get_avatars",
                           "get_pattern_fabric", "assign_pattern_fabric"))
 BASE_SERVICE_TOOLS = frozenset(("ping", "get_pattern_count", "transport_status",
                                 "get_session_info", "create_test_rectangle"))
+LESSON_TOOLS = frozenset(("lesson",))
 GEOMETRY_IDS = ["GetPatternCount", "GetPatternPieceName", "GetPatternPiecePos", "GetPatternPieceArea", "GetBoundingBoxOfPattern"]
 
 
@@ -388,6 +398,7 @@ def current_inventory(files):
     adapter = Source("src/clo3d_mcp/pattern_api.py", files["src/clo3d_mcp/pattern_api.py"])
     inventory_adapter = Source("src/clo3d_mcp/inventory_api.py", files["src/clo3d_mcp/inventory_api.py"])
     assignment_adapter = Source("src/clo3d_mcp/fabric_assignment_api.py", files["src/clo3d_mcp/fabric_assignment_api.py"])
+    lessons_source = Source("src/clo3d_mcp/lessons.py", files["src/clo3d_mcp/lessons.py"])
     launcher = Source("plugin/clo3d_mcp_start.py", files["plugin/clo3d_mcp_start.py"])
     contract = Source("src/clo3d_mcp/pattern_contract.py", files["src/clo3d_mcp/pattern_contract.py"])
     protocol = Source("src/clo3d_mcp/protocol.py", files["src/clo3d_mcp/protocol.py"])
@@ -427,13 +438,26 @@ def current_inventory(files):
             supporting = ["pattern_api.GetPatternCount", "pattern_api.GetPatternPieceName"]
         if name == "get_pattern_lines":
             supporting = ["pattern_api.GetPatternCount", "pattern_api.GetPatternPieceName"]
-        if name == "add_seamline_pair":
+        if name in ("add_seamline_pair", "add_seamline_pair_partial"):
             supporting = ["pattern_api.GetPatternCount", "pattern_api.GetPatternPieceName",
                           "pattern_api.GetPatternLineInfo", "pattern_api.GetPatternPieceArea",
                           "pattern_api.GetBoundingBoxOfPattern", "pattern_api.GetSeamlinePairGroupCount"]
         if name == "import_avatar":
             primary = ["import_api.ImportFile"]
             supporting = ["export_api.GetAvatarCount"]
+        if name == "import_avatar_size":
+            primary = ["import_api.ImportFile"]
+            supporting = ["utility_api.GetAvatarMeasurements", "export_api.GetAvatarCount"]
+        if name == "import_dxf":
+            primary = ["import_api.ImportDXF"]
+            supporting = ["pattern_api.GetPatternCount", "pattern_api.GetPatternPieceName"]
+        if name == "export_pattern_json":
+            primary = ["pattern_api.ExportPatternJSON"]
+            supporting = ["pattern_api.GetPatternCount", "pattern_api.GetPatternPieceName"]
+        if name == "import_pattern_json":
+            primary = ["pattern_api.ImportPatternJSON"]
+            supporting = ["pattern_api.GetPatternCount", "pattern_api.GetPatternPieceName",
+                          "pattern_api.GetSeamlinePairGroupCount"]
         if name == "get_arrangement":
             supporting = ["pattern_api.GetPatternCount", "pattern_api.GetPatternPieceName"]
         if name == "set_arrangement":
@@ -480,7 +504,8 @@ def current_inventory(files):
         tool["native_ids"] = sorted(set(primary + supporting))
         tool["native_reference_evidence"] = [{**ref, "role": "primary_effect_or_read" if ref["id"] in primary else "preflight_or_readback"} for ref in all_refs if ref["id"] in tool["native_ids"]]
         tool["mapping_method"] = "reviewed_command_branch_selection_plus_AST_reference_locations; not_execution_trace"
-        tool["profile"] = "pattern_package" if name in PATTERN_TOOLS or domain_tool else "base_service"
+        tool["profile"] = ("pattern_package" if name in PATTERN_TOOLS or domain_tool or name == "lesson"
+                           else "base_service")
         tool["contract_evidence"] = evidence_functions(contract, [n for n in ("validate_params", "validate_result") if n in contract.functions]) if name in PATTERN_TOOLS or domain_tool else evidence_functions(server, ["build_mcp"])
         if name not in ("transport_status", "get_session_info") and name not in PATTERN_TOOLS and not domain_tool:
             tool["contract_evidence"] += evidence_functions(protocol, ["validate"]) + evidence_functions(executor, ["Executor.receive"])
@@ -542,6 +567,16 @@ def current_inventory(files):
                 selected += ["PatternAPI._reset_cloth_arrangement", "PatternAPI._list"]
             elif name == "import_avatar_measurements":
                 selected += ["PatternAPI._import_avatar_measurements"]
+            elif name == "import_dxf":
+                selected += ["PatternAPI._import_dxf", "PatternAPI._list"]
+            elif name == "export_pattern_json":
+                selected += ["PatternAPI._export_pattern_json"]
+            elif name == "import_pattern_json":
+                selected += ["PatternAPI._import_pattern_json", "PatternAPI._list"]
+            elif name == "add_seamline_pair_partial":
+                selected += ["PatternAPI._seam_partial", "PatternAPI._lines", "PatternAPI._list"]
+            elif name == "import_avatar_size":
+                selected += ["PatternAPI._import_avatar_size"]
             elif name == "get_pattern_body_details":
                 selected += ["PatternAPI._pattern_body_details"]
             elif name == "get_pattern_details":
@@ -557,6 +592,12 @@ def current_inventory(files):
             elif name not in ("list_clo_api", "describe_clo_api"):
                 selected += ["PatternAPI._mutate", "PatternAPI._target", "PatternAPI._list", "PatternAPI._geometry"]
             tool["adapter_evidence"] = evidence_functions(adapter, selected)
+        elif name == "lesson":
+            selected = ["LessonRunner.start", "LessonRunner.state", "LessonRunner.check"]
+            tool["contract_evidence"] = evidence_functions(lessons_source, selected)
+            tool["adapter_evidence"] = evidence_functions(lessons_source, selected)
+            tool["contract_scope"] = ("server-local lesson state and bounded read-only snapshot checks; "
+                                      "no native mutation, no file, no retry")
         else:
             tool["adapter_evidence"] = evidence_functions(server, ["Service.status"] if name in ("transport_status", "get_session_info") else ["Service.call"])
             if name not in ("transport_status", "get_session_info"):
@@ -592,7 +633,7 @@ def current_inventory(files):
                     "set_camera_view", "reset_cloth_arrangement",
                     "import_avatar_measurements", "get_pattern_body_details",
                     "get_pattern_details", "set_pattern_grain_direction",
-                    "get_mesh_counts", "set_particle_distance"):
+                    "get_mesh_counts", "set_particle_distance", "lesson"):
             tool["acceptance"] = {
                 "status": "local_contract_only_no_real_gate",
                 "reference": "docs/CLO_MCP_TOOLS.md",
@@ -640,7 +681,7 @@ def current_inventory(files):
                                   "scope": "CLO2026.1.336 own120x80 fixture: one GetPatternLineInfo returned status success,4 lines0-3,documented fields only,absolute API-mm coords (not bbox-local);separate 4/4 two-argument GetLineLength delta0.0. Curves/failure/frame after move/rotate not established. Read-only,no outline fallback.",
                                   "performed_by_this_builder": False}
             tool["contract_acceptance"] = "local_contract_plus_single_real_sample_not_full_acceptance"
-    if {tool["name"] for tool in tools} != BASE_SERVICE_TOOLS | PATTERN_TOOLS | DOMAIN_TOOLS:
+    if {tool["name"] for tool in tools} != BASE_SERVICE_TOOLS | PATTERN_TOOLS | DOMAIN_TOOLS | LESSON_TOOLS:
         raise ValueError("Unexpected current tool inventory")
     return {"tools": tools, "profile_note": "20 only with pattern_package enabled; 5 base tools otherwise. Static declarations, not a live tools/list response. Fresh live19 observed; outline limited by invalid_native_result; lines single schema/length sample."}
 

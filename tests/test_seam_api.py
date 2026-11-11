@@ -39,9 +39,17 @@ class Native:
         lengths = [120, 80, 120, 80]
         if self.line_change and self.line_reads > 2:
             lengths = [121, 80, 120, 80]
-        return json.dumps({"status": "success", "lineCount": 4,
-                           "lines": [{"lineIndex": k, "length": v}
-                                     for k, v in enumerate(lengths)]})
+        return json.dumps({
+            "status": "success", "patternIndex": i, "patternName": self.names[i],
+            "lineCount": 4,
+            "boundingBox": {"minX": 0, "minY": 0, "maxX": 120, "maxY": 80,
+                            "width": 120, "height": 80},
+            "lines": [{"lineIndex": k, "length": v, "orientation": "horizontal",
+                       "location": "top", "start": {"x": 0, "y": 0},
+                       "end": {"x": 120, "y": 0}, "mid": {"x": 60, "y": 0},
+                       "midNorm": {"x": 0.5, "y": 0.5}}
+                      for k, v in enumerate(lengths)],
+        })
 
     def GetPatternPiecePos(self, i):
         return [0.0, 0.0] if i == 0 else [200.0, 0.0]
@@ -66,9 +74,25 @@ class Native:
             self.names = ["a", "changed"]
         return self.value
 
+    def AddSeamlinePairGroupPartial(self, *args):
+        self.calls.append(("partial", args))
+        if self.fail:
+            raise RuntimeError("private path")
+        self.seams += self.seam_gain
+        if self.list_change:
+            self.names = ["a", "changed"]
+        return 0
+
 
 def api(native):
     return PatternAPI({"pattern_api": native})
+
+
+PARTIAL = {"pattern_a_index": 0, "expected_name_a": "a", "line_a_index": 0,
+           "start_ratio_a": 0.0, "end_ratio_a": 0.5,
+           "pattern_b_index": 1, "expected_name_b": "b", "line_b_index": 0,
+           "start_ratio_b": 0.5, "end_ratio_b": 1.0,
+           "direction_a": True, "direction_b": False}
 
 
 def test_seam_success_readback_and_exact_native_call():
@@ -76,6 +100,36 @@ def test_seam_success_readback_and_exact_native_call():
     result = api(native)( "add_seamline_pair", PARAMS)
     assert result == {"verified": True, "seam_count": 1}
     assert ("seam", (0, 0, 1, 0, True, True)) in native.calls
+
+
+def test_partial_seam_success_uses_int_zero_and_ratios():
+    native = Native()
+    result = api(native)("add_seamline_pair_partial", PARTIAL)
+    assert result == {"verified": True, "seam_count": 1}
+    assert ("partial", (0, 0, 0.0, 0.5, True, 1, 0, 0.5, 1.0, False)) in native.calls
+
+
+def test_partial_seam_rejects_descending_native_input():
+    # Native returned non-zero for descending input during live calibration.
+    native = Native()
+    with pytest.raises(CommandError) as exc:
+        api(native)("add_seamline_pair_partial",
+                    {**PARTIAL, "start_ratio_b": 1.0, "end_ratio_b": 0.5})
+    assert exc.value.code == "invalid_parameters"
+    assert not [c for c in native.calls if isinstance(c, tuple)]
+
+
+def test_partial_seam_rejects_equal_ratios_and_nonzero():
+    native = Native()
+    with pytest.raises(CommandError) as exc:
+        api(native)("add_seamline_pair_partial", {**PARTIAL, "start_ratio_a": 0.5})
+    assert exc.value.code == "invalid_parameters"
+
+    native = Native()
+    native.AddSeamlinePairGroupPartial = lambda *args: -2
+    with pytest.raises(CommandError) as exc:
+        api(native)("add_seamline_pair_partial", PARTIAL)
+    assert exc.value.code == "invalid_native_result"
 
 
 @pytest.mark.parametrize("native", [Native(value=False), Native(value=1), Native(value="name")])

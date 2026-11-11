@@ -1,8 +1,9 @@
 # Швы (seamline pairs) — контракт и bounded probe
 
-Target: CLO2026.1.336. Статус: **whole-line seam probe и live tool gate пройдены**;
-`add_seamline_pair` опубликован (21 tools), partial/child/merge остаются
-отдельными пакетами. Это отдельный домен, не продолжение построения.
+Target: CLO2026.1.336. Статус: **whole-line и partial seam probe/live gates
+пройдены**; `add_seamline_pair` и `add_seamline_pair_partial` опубликованы.
+Калибровка 2026-11-11 уточнила семантику ratios и reference-плана; см. ниже.
+Это отдельный домен, не продолжение построения.
 
 ## API-факты
 
@@ -21,7 +22,9 @@ Target: CLO2026.1.336. Статус: **whole-line seam probe и live tool gate �
   `GetSeamlinePairGroupListInPattern`;
   `GetPatternGroupsBySeamlineConnectivity(bool,bool)` → JSON groups.
 - `AddSeamlinePairGroupPartial` возвращает `int`, `SEAMLINE_PAIR_SUCCESS=0`;
-  ratios start<end; отдельный следующий пакет.
+  входные ratios **line-relative и ascending** (`start < end`). Export-нутый
+  `LengthParam` — доля **периметра детали**, не line-relative; формула в
+  калибровочном разделе ниже.
 - `MergeSewnPatterns`, `DeleteLine` — destructive, не в первый пакет.
 
 ## Probe
@@ -113,6 +116,89 @@ right=`line1` (80 мм, bottom→top) у обеих.
 geometry не проверялся после швов отдельно, но mutation вернул verified.
 `get_seamline_pairs` подтвердил 2 группы. Визуально после Fit перекрёста не
 видно, но ткань собрана; fit не принят. Line Pin + simulation удерживают garment.
+
+## Калибровка partial seam 2026-11-11
+
+Build `a0ea945638b3` (server==executor). Сцена: `CAL_A/B` 120×80 (perimeter
+400), `CAL_C/D` 200×100 (perimeter 600), каждый seam — отдельная линия,
+чтобы исключить наложения. Все вызовы `add_seamline_pair_partial` вернули
+`verified`, `seam_count` вырос на 1; затем `export_pattern_json`.
+
+| Сторона | Линия / периметр | Вход (line-relative) | Export `LengthParam` |
+| --- | --- | --- | --- |
+| CAL_A/B | line0, 120 / 400 | 0.25–0.75 | 0.075–0.225 |
+| CAL_A/B | line1, 80 / 400 | 0.25–0.75 | 0.350–0.450 |
+| CAL_C/D | line1, 100 / 600 | 0.25–0.75 | 0.375–0.45833 |
+| CAL_C/D | line3, 100 / 600 | 0.0–0.5 | 0.83333–0.91667 |
+| CAL_A/B | line3, 80 / 400, dir=false | 0.30–0.90 | 0.980–0.860 |
+
+Правило:
+
+```text
+export_start = (prefix_offset(line) + r_start * line_length) / perimeter
+r            = (export * perimeter - prefix_offset(line)) / line_length
+```
+
+`prefix_offset` — сумма длин предыдущих линий `LineList` в порядке обхода.
+Для `line0` offset=0, поэтому там `export = r * L / P`; для остальных линий
+это неверно — именно эта ошибка дала сдвинутые и наложенные швы. Обратное
+преобразование восстановило все входные ratios калибровки (7 швов, float
+точность). `direction=false` только меняет порядок export (`fStart`
+соответствует входному `end`), физический интервал тот же.
+
+Descending input `0.9 → 0.3` native отклонил: `invalid_native_result`,
+`seam_count` не изменился. Вход всегда ascending; ориентация — `direction`.
+
+## Reference-проект: 20 groups = 80 segment pairs
+
+`trousers_sewn_reference.json` (ручной проект, 20 seam groups) хранит
+`LengthParam` как perimeter-доли, а каждая сторона группы покрывает
+**непрерывный пробег нескольких линий**. Например группа 0:
+`BACK_L` линии 4→11 (1064.8 мм) ↔ `FRONT_L` линии 27→19 (1064.6 мм).
+Концы пробегов совпадают с границами линий с точностью 0.000 мм; исключение —
+`WAISTBAND line2`, где несколько групп делят одну линию на последовательные
+интервалы (0.024–1.0 в line-relative после преобразования).
+
+Декомпозиция по stitch start (`seam_plan.py`) даёт 91 пару; 11 sub-0.5mm
+slivers на границах отфильтрованы, остаётся **80 dispatchable пар**, 18 из них —
+whole-line. Один сегмент `BACK_R line18` покрыт двумя группами
+(`Sewing_645874` и `Sewing_690044`) — это топология самого эталона; план
+сохраняет его как duplicate-warning, а не молча удаляет. Расхождение длин
+сторон до 20.6 мм (`FRONT_R` 787.25 ↔ `BACK_R` 807.86) — посадка/ease, а не
+ошибка ratios; план распределяет её пропорционально.
+
+Один `add_seamline_pair`/partial-вызов покрывает **только одну** линию
+`LineList`. Проверено на панели из 5 точек: вызов по `line0` сшил 60.8 мм из
+120 мм кромки, export дал `fEnd=0.15144`. API merge-lines/edge-path не
+предоставляет; `DeletePoint` есть нативно, но не опубликован и уничтожил бы
+насечки. Поэтому multi-segment кромка воспроизводится несколькими парами.
+
+`ImportPatternJSON` швы не восстановил: live-импорт 5 деталей дал
+`seam_count_after=0`. Прямая передача reference `LengthParam` в partial tool
+неверна (это не line-relative ratios) и дала CLO-предупреждение
+«abnormal/overlapped seamlines». Рабочий путь — `seam_plan.py`:
+декомпозиция, конвертация perimeter-долей в line-relative, валидатор
+(`0 <= start < end <= 1`, попадание в линию, нет частичных overlap; точный
+duplicate между группами — warning).
+
+## Staged replay 2026-11-11
+
+Build `31c59dbf42a8`. Пустая сцена → `import_pattern_json(trousers_olga_clo.json)`
+(5 деталей, `seam_count=0`). Из `seam_plan_olga.json` применено **80 пар**:
+13 whole-line cross-pattern + 67 partial; 11 sub-0.5mm slivers отфильтрованы.
+
+Порядок и результат: left side 12, right side 12, right inseam 12, left inseam
+10, center front 6, center back 11, darts 4, waistband 12, waistband self 1.
+Каждый вызов `verified`, `seam_count` 0→80, без retry/unknown. Darts и
+waistband self-seam сделаны partial с ratios 0..1: `add_seamline_pair`
+отклоняет одинаковые pattern indices.
+
+Arrangement: `Leg_Front_L`/`Leg_Back_L`/`Leg_Front_R`/`Leg_Back_R` +
+`Body_Waist_L`; waistband orientation 180; `simulate(120)` verified.
+Front/back screenshots показывают собранные брюки без explosion/разрывов и без
+зазора на поясе. Это visual observation, не fit-вердикт; `Body_Back_Waist` и
+поворот 90° давали зазор/складки, а сжатие пояса до 0..1 — collapse; рабочий
+вариант — `Body_Waist_L` + 180.
 
 ## Будущий MCP tool (proposal)
 

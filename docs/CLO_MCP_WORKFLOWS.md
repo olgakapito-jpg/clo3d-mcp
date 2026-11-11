@@ -57,6 +57,51 @@ content; путь генерирует server под `acceptance-output/screensh
 simulation; image не доказывает fit, но показывает explosion/исчезновение/грубые
 пересечения.
 
+## Уроки: guided steps без scene mutations
+
+`lesson` — server-local runner: `list` → `start({lesson_id})` → клиент выполняет
+шаг существующими tools → `check` → `state`. `check` делает только четыре
+read-only чтения (patterns/seams/arrangement/avatars), pass двигает на один шаг,
+fail оставляет шаг без retry/cleanup. `reset` очищает прогресс; state теряется
+при restart. Каталог: `tee_copy_place`, `two_panel_tube`; контракт и ограничения —
+`CLO_MCP_LESSONS.md`. Это не composite scene tool: `lesson` не заменяет
+`copy_pattern_with_offset`, `delete_pattern`, `set_arrangement` или
+`add_seamline_pair`.
+
+## Импорт брюк из прототипа: DXF/JSON и швы
+
+`prototypes/mueller_trousers` выдает `acceptance-output/trousers_<size>.dxf`,
+`.json` и `_clo.json`. Цепочка (не composite tool, каждый шаг отдельный):
+
+1. `import_pattern_json({file_path})` — 5 деталей с именами, `seam_count_after=0`
+   (JSON швы не переносит) или `import_dxf({file_path})` — append, детали
+   `0..4`. Проверить `imported:true` и count.
+2. `get_pattern_list` → имена/индексы; `get_pattern_lines` для каждой детали;
+   `get_pattern_geometry` для area/bbox. DXF standard, не AAMA: проверить
+   насечки/линии и масштаб глазами.
+3. Построить seam plan по кромкам: side/inseam каждой ноги, center front/back,
+   пояс. Кромка, разбитая насечками на несколько `LineList`-линий, — это
+   несколько линий: один seam-вызов покрывает только одну линию; API
+   merge-lines/edge-path нет. Ratios partial — line-relative, ascending
+   `0 <= start < end <= 1`; `direction` отдельно.
+4. До dispatch — `prototypes.mueller_trousers.seam_plan`: разложить
+   reference-группы на per-line пары (91 сырая, 11 slivers <0.5 мм
+   отбрасываются → 80), конвертировать perimeter-доли в line-relative и
+   прогнать валидатор (интервал в линии, no partial overlap; ease и точный
+   дубль сегмента — отдельные предупреждения). Reference-файл (20 groups) не
+   передавать напрямую: это multi-line runs с perimeter-долями.
+5. Порядок: side/inseam 2–4 пары → `verified`/readback/скриншот → center →
+   waistband последним. Darts и waistband self-seam — partial с ratios 0..1
+   (whole-line tool отклоняет одинаковые детали). Один вызов — одна пара;
+   после каждого `seam_count +1`, линии/geometry неизменны.
+6. `set_arrangement` для 5 деталей на аватар; `get_arrangement` readback.
+   Рабочий вариант пояса: `Body_Waist_L`, orientation 180.
+7. `simulate(120)`, `get_3d_screenshot`; fit visual-only. 60 шагов может
+   оставить переходные дыры у crotch — не считать это topology error до
+   повторной симуляции.
+8. При ошибке после импорта или шва — STOP, без retry/cleanup. Импорт и
+   `seam_count` не доказывают посадку или качество лекал.
+
 ## Общий порядок
 
 Намерение/scope → реальный profile/session → fresh reads → preflight → одна

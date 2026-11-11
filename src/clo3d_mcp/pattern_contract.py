@@ -17,7 +17,8 @@ PATTERN_COMMANDS = [
     "get_fabric_list", "get_avatars",
     "get_pattern_fabric", "assign_pattern_fabric",
     "get_pattern_outline", "get_pattern_lines",
-    "add_seamline_pair", "import_avatar", "get_arrangement", "set_arrangement",
+    "add_seamline_pair", "add_seamline_pair_partial", "import_avatar",
+    "get_arrangement", "set_arrangement",
     "set_arrangement_orientation", "set_arrangement_position",
     "get_3d_screenshot", "get_arrangement_list", "get_seamline_pairs",
     "get_avatar_measurements", "get_pattern_avatar_attachments",
@@ -26,6 +27,7 @@ PATTERN_COMMANDS = [
     "reset_cloth_arrangement", "import_avatar_measurements",
     "get_pattern_body_details", "get_pattern_details",
     "set_pattern_grain_direction", "get_mesh_counts", "set_particle_distance",
+    "import_dxf", "export_pattern_json", "import_pattern_json", "import_avatar_size",
 ]
 API_MODULES = ("pattern_api", "export_api", "fabric_api", "import_api", "utility_api")
 ERROR_CODES = ("api_unavailable", "stale_pattern", "scene_change_unverified", "invalid_parameters",
@@ -121,6 +123,11 @@ def validate_params(command, params):
         "add_seamline_pair": {"pattern_a_index", "expected_name_a", "line_a_index",
                               "pattern_b_index", "expected_name_b", "line_b_index",
                               "direction_a", "direction_b"},
+        "add_seamline_pair_partial": {"pattern_a_index", "expected_name_a", "line_a_index",
+                                      "start_ratio_a", "end_ratio_a",
+                                      "pattern_b_index", "expected_name_b", "line_b_index",
+                                      "start_ratio_b", "end_ratio_b",
+                                      "direction_a", "direction_b"},
         "import_avatar": {"file_path"},
         "get_arrangement": set(),
         "set_arrangement": {"pattern_index", "expected_name", "arrangement_index"},
@@ -147,6 +154,10 @@ def validate_params(command, params):
         "set_pattern_grain_direction": {"pattern_index", "expected_name", "degrees"},
         "get_mesh_counts": {"pattern_index", "expected_name"},
         "set_particle_distance": {"pattern_index", "expected_name", "distance"},
+        "import_dxf": {"file_path"},
+        "export_pattern_json": {"output_path"},
+        "import_pattern_json": {"file_path"},
+        "import_avatar_size": {"file_path"},
         "assign_pattern_fabric": {"pattern_index", "expected_name", "fabric_index",
                                   "expected_fabric_name", "expected_current_fabric_index"},
     }
@@ -174,6 +185,8 @@ def validate_params(command, params):
                 valid = type(value) is int and 0 <= value <= 100
             elif key == "line_index":
                 valid = type(value) is int and 0 <= value < MAX_LINES
+            elif key in ("start_ratio_a", "end_ratio_a", "start_ratio_b", "end_ratio_b"):
+                valid = number(value) and 0 <= value <= 1
             elif key == "avatar_index":
                 valid = type(value) is int and 0 <= value < MAX_AVATARS
             elif key == "steps":
@@ -187,8 +200,9 @@ def validate_params(command, params):
             elif key == "attach":
                 valid = type(value) is bool
             elif key == "output_path":
+                suffix = ".json" if command == "export_pattern_json" else ".png"
                 valid = (type(value) is str and 1 <= len(value) <= 260
-                         and value.lower().endswith(".png") and os.path.isabs(value)
+                         and value.lower().endswith(suffix) and os.path.isabs(value)
                          and all(ord(c) >= 32 and not 0xD800 <= ord(c) <= 0xDFFF
                                  for c in value))
             elif key == "csv_path":
@@ -213,8 +227,11 @@ def validate_params(command, params):
             elif key in ("dx", "dy"):
                 valid = number(value)
             elif key == "file_path":
+                suffix = (".dxf" if command == "import_dxf"
+                          else ".json" if command == "import_pattern_json"
+                          else ".avs" if command == "import_avatar_size" else ".avt")
                 valid = (isinstance(value, str) and 1 <= len(value) <= 260
-                         and value.lower().endswith(".avt") and os.path.isabs(value)
+                         and value.lower().endswith(suffix) and os.path.isabs(value)
                          and all(ord(c) >= 32 and not 0xD800 <= ord(c) <= 0xDFFF
                                  for c in value))
             elif key == "points":
@@ -234,6 +251,13 @@ def validate_params(command, params):
             if not valid:
                 break
     if not valid:
+        raise CommandError("invalid_parameters")
+    # Native AddSeamlinePairGroupPartial rejects a descending range even though
+    # the exported LengthParam of a direction=false pair is descending. Input
+    # ratios are always ascending; Direction encodes stitch orientation.
+    if command == "add_seamline_pair_partial" and not (
+            params["start_ratio_a"] < params["end_ratio_a"]
+            and params["start_ratio_b"] < params["end_ratio_b"]):
         raise CommandError("invalid_parameters")
     return params
 
@@ -369,10 +393,55 @@ def validate_result(command, result):
                  and bounding_box(result["bounding_box_mm"])
                  and result["coordinate_frame"] == "api_2d_mm"
                  and result["units"] == "mm")
-    elif command == "add_seamline_pair":
+    elif command in ("add_seamline_pair", "add_seamline_pair_partial"):
         valid = (keys == {"verified", "seam_count"}
                  and result["verified"] is True
                  and type(result["seam_count"]) is int and result["seam_count"] >= 0)
+    elif command == "import_dxf":
+        valid = (keys == {"imported", "pattern_count_before", "pattern_count_after",
+                          "imported_count", "imported_names", "executor_ms"}
+                 and result["imported"] is True
+                 and type(result["pattern_count_before"]) is int
+                 and type(result["pattern_count_after"]) is int
+                 and 0 <= result["pattern_count_before"] <= result["pattern_count_after"] <= MAX_PATTERNS
+                 and type(result["imported_count"]) is int
+                 and result["imported_count"] == result["pattern_count_after"] - result["pattern_count_before"]
+                 and 1 <= result["imported_count"] <= MAX_PATTERNS
+                 and isinstance(result["imported_names"], list)
+                 and len(result["imported_names"]) == result["imported_count"]
+                 and all(name(v) for v in result["imported_names"])
+                 and number(result["executor_ms"], 1e12) and result["executor_ms"] >= 0)
+    elif command == "export_pattern_json":
+        valid = (keys == {"verified", "file_name", "bytes"}
+                 and result["verified"] is True
+                 and type(result["file_name"]) is str and 1 <= len(result["file_name"]) <= 128
+                 and type(result["bytes"]) is int and 1 <= result["bytes"] <= 67108864)
+    elif command == "import_pattern_json":
+        patterns = result.get("patterns_after")
+        valid = (keys == {"imported", "pattern_count_before", "pattern_count_after",
+                          "patterns_after", "seam_count_after", "executor_ms"}
+                 and result["imported"] is True
+                 and type(result["pattern_count_before"]) is int
+                 and type(result["pattern_count_after"]) is int
+                 and 0 <= result["pattern_count_after"] <= MAX_PATTERNS
+                 and isinstance(patterns, list)
+                 and len(patterns) == result["pattern_count_after"]
+                 and all(type(item) is dict and set(item) == {"index", "name"}
+                         and type(item["index"]) is int and item["index"] == i
+                         and name(item["name"]) for i, item in enumerate(patterns))
+                 and type(result["seam_count_after"]) is int
+                 and 0 <= result["seam_count_after"] <= 4096
+                 and number(result["executor_ms"], 1e12) and result["executor_ms"] >= 0)
+    elif command == "import_avatar_size":
+        valid = (keys == {"verified", "measurement_count_before",
+                          "measurement_count_after", "added"}
+                 and result["verified"] is True
+                 and type(result["measurement_count_before"]) is int
+                 and type(result["measurement_count_after"]) is int
+                 and 0 <= result["measurement_count_before"] <= 512
+                 and 0 <= result["measurement_count_after"] <= 512
+                 and type(result["added"]) is int
+                 and result["added"] == result["measurement_count_after"] - result["measurement_count_before"])
     elif command == "import_avatar":
         valid = (keys == {"verified", "avatar_count"}
                  and result["verified"] is True

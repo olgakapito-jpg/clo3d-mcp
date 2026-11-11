@@ -10,11 +10,11 @@
     },
     {
       "path": "clo_source_mappings.json",
-      "sha256": "ffbc74ebf0565ee7e928337db580d6a1fd4c9a48b6c3217fb056d00e1d4b7a4d"
+      "sha256": "17b503b5ad6755e3717b4081cd0e5e61f93268f38b51d678db3e440bb0af099f"
     },
     {
       "path": "current_operation_scope.json",
-      "sha256": "c768e75238a9dc1a0f314b843fe71fb8c06c0fe6bda2e4b15d5946ebb94b34a2"
+      "sha256": "816c5bb1acf17b84d24cd60dcc4165a0ccf8ab77b50315d5e1fbc2fd50888e69"
     },
     {
       "path": "review_gates.json",
@@ -29,8 +29,8 @@
     "additional_interfaces": 6,
     "donor_tools": 170,
     "local_legacy_tools": 47,
-    "current_tools": 44,
-    "current_native_operations": 52,
+    "current_tools": 50,
+    "current_native_operations": 56,
     "historical_docstring_names": 43,
     "nonofficial_mapping_names": 4,
     "official_names_with_donor_reference": 332,
@@ -96,28 +96,28 @@
     },
     {
       "path": "coverage/import_api-01.json",
-      "sha256": "7da3ba2fef5d8062c55c5416cad7f9713d2d6c01c5e503115f6d4e1133a21213",
+      "sha256": "b469fd96f51d69c7f18dcb0184d8eefbd15a7eecf037e6892d5de858407e44a7",
       "count": 42
     },
     {
       "path": "coverage/pattern_api-01.json",
-      "sha256": "10bd90edf6245d844fea7e059098825835fc82104dc6c4ba5cb95920c781184c",
-      "count": 65
+      "sha256": "a753deb16804d2338e90874fe7e10c28db7d672eb7fe93b04aa497203409158c",
+      "count": 64
     },
     {
       "path": "coverage/pattern_api-02.json",
-      "sha256": "0596c0b389249d02e73180454d4021bb85caca9d56b5c8b2f6520e4268ccc47a",
+      "sha256": "bf70be7b82532fd56b0383ece58320981aab397553bc63b49f9fd34084bbc171",
       "count": 65
     },
     {
       "path": "coverage/pattern_api-03.json",
-      "sha256": "661311ad0324da54ef3ca6320f5c3aca690168463f72d5a5caba33dbd7578851",
+      "sha256": "4d9ceb19a9dd9649ff80faeffc115ff9cbfda3eda7a8ca7accb9e1c426a3c3ae",
       "count": 66
     },
     {
       "path": "coverage/pattern_api-04.json",
-      "sha256": "3fe8c3276153d6e7b293c125d6fc68873fe8f2f54297ce5a207895ee59c872d8",
-      "count": 37
+      "sha256": "a7c543eba3bb3d8d1924ce8e854e36c8d700d732294e4b532b964c13f448051e",
+      "count": 38
     },
     {
       "path": "coverage/rest_api-01.json",

@@ -5,7 +5,8 @@
       "clo": {
         "type": "remote",
         "url": "http://127.0.0.1:8765/mcp",
-        "protocol": "legacy"
+        "protocol": "legacy",
+        "disabled": false
       }
     }
   }

@@ -32,7 +32,9 @@ CURRENT_TOOLS = frozenset((
     "reset_cloth_arrangement", "import_avatar_measurements",
     "get_pattern_body_details", "get_pattern_details",
     "set_pattern_grain_direction", "get_mesh_counts", "set_particle_distance",
-    "add_seamline_pair", "import_avatar",
+    "add_seamline_pair", "add_seamline_pair_partial", "import_avatar",
+    "import_avatar_size", "lesson", "import_dxf", "export_pattern_json",
+    "import_pattern_json",
 ))
 MODULES = ("pattern_api", "export_api", "fabric_api", "import_api", "utility_api")
 DESCRIPTIONS = {

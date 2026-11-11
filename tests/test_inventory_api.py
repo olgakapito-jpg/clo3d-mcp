@@ -239,7 +239,7 @@ def test_mcp_metadata_raw_validation_and_success():
 
         mcp = build_mcp(Service())
         tools = {t.name: t for t in await mcp.list_tools()}
-        assert len(tools) == 44
+        assert len(tools) == 50
         for command in ("get_fabric_list", "get_avatars"):
             tool = tools[command]
             assert tool.inputSchema["properties"] == {}

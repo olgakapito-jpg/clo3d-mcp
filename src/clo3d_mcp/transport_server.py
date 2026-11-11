@@ -18,6 +18,7 @@ import uvicorn
 from clo3d_mcp import BUILD
 from clo3d_mcp.async_jobs import AsyncJobQueue
 from clo3d_mcp.jobs import QueueError
+from clo3d_mcp.lessons import LESSON_ID, LessonError, LessonRunner, catalog as lesson_catalog
 from clo3d_mcp.protocol import SERVICE_CAPABILITIES, PATTERN_CAPABILITIES, ProtocolError, message
 from clo3d_mcp.pattern_contract import PATTERN_COMMANDS, CommandError, validate_params
 from clo3d_mcp.queue_session import QueueSession
@@ -54,8 +55,10 @@ def image_content(path):
 NO_ARG_COMMANDS = frozenset({"ping", "get_pattern_count", "transport_status",
                              "get_session_info", "create_test_rectangle",
                              "get_arrangement_list", "get_seamline_pairs",
-                             "get_pattern_avatar_attachments"})
+                             "get_pattern_avatar_attachments", "export_pattern_json"})
+LESSON_ACTIONS = frozenset({"list", "start", "state", "check", "reset"})
 SCREENSHOT_DIR = Path(__file__).resolve().parents[2] / "acceptance-output" / "screenshots"
+PATTERN_JSON_DIR = Path(__file__).resolve().parents[2] / "acceptance-output" / "pattern_json"
 MAX_SCREENSHOT_BYTES = 16777216
 
 
@@ -65,7 +68,20 @@ class SessionMCP(FastMCP):
         # JSON strings. Validate the RAW payload before either happens.
         if name in NO_ARG_COMMANDS and arguments not in (None, {}):
             return tool_error("invalid_parameters")
-        server_generated = {"get_3d_screenshot", "export_view_image", "export_snapshot_2d"}
+        if name == "lesson":
+            if not isinstance(arguments, dict) or arguments.get("action") not in LESSON_ACTIONS:
+                return tool_error("invalid_parameters")
+            action = arguments["action"]
+            if action == "start":
+                lesson_id = arguments.get("lesson_id")
+                if (set(arguments) != {"action", "lesson_id"}
+                        or not isinstance(lesson_id, str)
+                        or not LESSON_ID.fullmatch(lesson_id)):
+                    return tool_error("invalid_parameters")
+            elif set(arguments) != {"action"}:
+                return tool_error("invalid_parameters")
+        server_generated = {"get_3d_screenshot", "export_view_image", "export_snapshot_2d",
+                            "export_pattern_json"}
         if name in PATTERN_COMMANDS and name not in server_generated:
             try:
                 validate_params(name, arguments)
@@ -80,6 +96,7 @@ class Service:
         self.parent, self.port = parent, port
         self.queue = AsyncJobQueue(session_id)
         self.pattern_package = pattern_package
+        self.lessons = LessonRunner()
         self.capabilities = PATTERN_CAPABILITIES if pattern_package else SERVICE_CAPABILITIES
         self.session = QueueSession(self.queue, key, client_pid, self.capabilities)
         self.http_serving = False
@@ -635,6 +652,34 @@ def add_pattern_tools(mcp, service, read):
             "direction_a": direction_a, "direction_b": direction_b})
 
     @mcp.tool(annotations=mutation)
+    async def add_seamline_pair_partial(
+            pattern_a_index: StrictInt, expected_name_a: StrictStr,
+            line_a_index: StrictInt, start_ratio_a: StrictFloat | StrictInt,
+            end_ratio_a: StrictFloat | StrictInt,
+            pattern_b_index: StrictInt, expected_name_b: StrictStr,
+            line_b_index: StrictInt, start_ratio_b: StrictFloat | StrictInt,
+            end_ratio_b: StrictFloat | StrictInt,
+            direction_a: StrictBool, direction_b: StrictBool) -> dict[str, Any]:
+        """Sew sub-segments of two whole outer lines using normalized ratios.
+
+        Required fresh indices/unique names and line indices from
+        get_pattern_lines; ratios are line-relative 0..1 with start < end on
+        each side. Direction=false exports descending ratios but native
+        rejects descending input. Calls
+        AddSeamlinePairGroupPartial; native success is int 0, never bool
+        truthiness. Verifies seam_count +1 and unchanged line lengths/geometry.
+        No automatic retry/cleanup; a non-zero result is an error, not success.
+        """
+        return await service.call("add_seamline_pair_partial", {
+            "pattern_a_index": pattern_a_index, "expected_name_a": expected_name_a,
+            "line_a_index": line_a_index, "start_ratio_a": start_ratio_a,
+            "end_ratio_a": end_ratio_a,
+            "pattern_b_index": pattern_b_index, "expected_name_b": expected_name_b,
+            "line_b_index": line_b_index, "start_ratio_b": start_ratio_b,
+            "end_ratio_b": end_ratio_b,
+            "direction_a": direction_a, "direction_b": direction_b})
+
+    @mcp.tool(annotations=mutation)
     async def import_avatar(file_path: StrictStr) -> dict[str, Any]:
         """Import ONE local .avt avatar through CLO's ImportAvatar, then verify count.
 
@@ -643,6 +688,65 @@ def add_pattern_tools(mcp, service, read):
         no auto retry, fallback to another importer, pose/measurement or 3D fit.
         """
         return await service.call("import_avatar", {"file_path": file_path})
+
+    @mcp.tool(annotations=mutation)
+    async def import_avatar_size(file_path: StrictStr) -> dict[str, Any]:
+        """Apply ONE local .avs avatar-size file to the current avatar.
+
+        Requires an absolute existing .avs <=16MiB and at least one avatar.
+        Calls import_api.ImportFile, then reports GetAvatarMeasurements(0)
+        before/after; a zero added count is possible because .avs is a size
+        file, not a measurement CSV. No retry/cleanup; a failure after the
+        native call may have changed avatar size.
+        """
+        return await service.call("import_avatar_size", {"file_path": file_path})
+
+    @mcp.tool(annotations=mutation)
+    async def import_dxf(file_path: StrictStr) -> dict[str, Any]:
+        """Append ONE local .dxf pattern file and verify the pattern list grows.
+
+        Requires an absolute existing .dxf <=64MiB. The adapter constructs
+        ApiTypes.ImportDxfOption with append=true and notch import enabled when
+        the build exposes those fields. Verifies native true, pattern count
+        increase and returned new names; the path is not echoed. No arbitrary
+        options, auto retry, cleanup or 3D/seam acceptance. A failure after the
+        native call may have changed the scene.
+        """
+        return await service.call("import_dxf", {"file_path": file_path})
+
+    @mcp.tool(annotations=mutation)
+    async def import_pattern_json(file_path: StrictStr) -> dict[str, Any]:
+        """Replace the scene from ONE native CLO pattern JSON and read it back.
+
+        WARNING: the imported contract replaces the current scene, not append.
+        Requires an absolute existing .json <=64MiB; calls
+        pattern_api.ImportPatternJSON, then returns the post-import pattern list
+        and seam group count. No automatic retry, merge, backup or cleanup: a
+        false/mismatched result may still have changed the scene.
+        """
+        return await service.call("import_pattern_json", {"file_path": file_path})
+
+    @mcp.tool(annotations=artifact)
+    async def export_pattern_json() -> dict[str, Any]:
+        """Export the native CLO pattern JSON to a server-generated artifact.
+
+        Read-only scene effect: calls pattern_api.ExportPatternJSON to
+        acceptance-output/pattern_json/current.json, verifies native true and a
+        bounded file, then returns the file name/size and top-level keys. No
+        arbitrary path, no import, no scene mutation or retry.
+        """
+        PATTERN_JSON_DIR.mkdir(parents=True, exist_ok=True)
+        path = PATTERN_JSON_DIR / "current.json"
+        result = await service.call("export_pattern_json", {"output_path": str(path)})
+        if not result.get("ok"):
+            return result
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, ValueError, UnicodeError):
+            return tool_error("invalid_native_result")
+        if not isinstance(data, dict) or not data:
+            return tool_error("invalid_native_result")
+        return {**result, "top_level_keys": sorted(data)[:64]}
 
     @mcp.tool(annotations=mutation)
     async def create_pattern(points: list[list[StrictInt | StrictFloat]], name: StrictStr,
@@ -696,6 +800,37 @@ def add_pattern_tools(mcp, service, read):
         """
         return await service.call("delete_pattern", {"pattern_index": pattern_index,
                                   "expected_name": expected_name})
+
+    @mcp.tool(annotations=ToolAnnotations(readOnlyHint=False, destructiveHint=False,
+                                         idempotentHint=False, openWorldHint=False))
+    async def lesson(action: StrictStr, lesson_id: StrictStr | None = None) -> dict[str, Any]:
+        """Run a guided lesson: list, start, state, check or reset.
+
+        Actions: list returns the catalog; start(lesson_id) starts or restarts one
+        lesson; state returns progress; check performs four bounded read-only reads
+        (get_pattern_list, get_seamline_pairs, get_arrangement, get_avatars), checks
+        the current step and advances only on pass; reset clears this service's
+        lesson. Never mutates the CLO scene and never dispatches a native mutation:
+        scene steps are performed by the caller with the listed tools. State is in
+        memory per MCP service and is lost on restart. A failed check leaves the
+        step unchanged; no retry, rollback or scene cleanup.
+        """
+        try:
+            if action == "list":
+                return {"ok": True, "lessons": lesson_catalog()}
+            if action == "start":
+                if lesson_id is None:
+                    return tool_error("invalid_parameters")
+                return service.lessons.start(lesson_id)
+            if action == "state":
+                return service.lessons.state()
+            if action == "check":
+                return await service.lessons.check(service)
+            if action == "reset":
+                return service.lessons.reset()
+            return tool_error("invalid_parameters")
+        except LessonError as exc:
+            return tool_error(exc.code)
 
 
 async def pipe_loop(service):

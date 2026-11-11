@@ -102,7 +102,7 @@
     },
     {
       "id": "view_and_camera_basic", "intent": "Получить стандартный front-вид, 2D-снимок и вернуть камеру в front/zoom-to-fit для самопроверки.",
-      "profile": "current44", "scope": "scene", "fixture": {"ready": true, "patterns": ["panel"]},
+      "profile": "current50", "scope": "scene", "fixture": {"ready": true, "patterns": ["panel"]},
       "expected_tools": ["get_session_info", "export_view_image", "export_snapshot_2d", "set_camera_view"],
       "forbidden_tools": ["set_arrangement", "delete_pattern", "call_api"],
       "forbidden_effects": ["diagnostic_mutation", "global_mutation", "external_effect"],
@@ -111,7 +111,7 @@
     },
     {
       "id": "fit_data_basic", "intent": "Прочитать body details, grain/category, mesh counts; задать grain 90 и particle distance 20; сбросить cloth shape; импортировать CSV мерок.",
-      "profile": "current44", "scope": "scene", "fixture": {"ready": true, "patterns": ["panel"]},
+      "profile": "current50", "scope": "scene", "fixture": {"ready": true, "patterns": ["panel"]},
       "expected_tools": ["get_session_info", "get_pattern_body_details", "get_pattern_details", "get_mesh_counts", "set_pattern_grain_direction", "set_particle_distance", "reset_cloth_arrangement", "import_avatar_measurements"],
       "forbidden_tools": ["set_arrangement", "delete_pattern", "call_api"],
       "forbidden_effects": ["diagnostic_mutation", "global_mutation", "external_effect"],
@@ -391,6 +391,66 @@
       "forbidden_effects": ["filesystem_write", "external_effect", "global_mutation"],
       "required_args": {"get_pattern_fabric": {"pattern_index": 0, "expected_name": "front"},
                         "assign_pattern_fabric": {"pattern_index": 0, "expected_name": "front", "fabric_index": 1, "expected_fabric_name": "jersey", "expected_current_fabric_index": 0}},
+      "decision": "complete", "blockers": [],
+      "stop_conditions": ["error", "outcome_unknown", "schema_mismatch", "session_change", "stale_target"]
+    },
+    {
+      "id": "lesson_guided_read_only", "intent": "Начни урок two_panel_tube и проверь текущий шаг; урок не меняет сцену и только читает patterns/seams/arrangement/avatars.",
+      "profile": "current50", "scope": "read_only", "fixture": {"ready": true, "patterns": ["LESSON_TUBE_A", "LESSON_TUBE_B"]},
+      "expected_tools": ["lesson"],
+      "forbidden_tools": ["create_pattern", "delete_pattern", "add_seamline_pair", "call_api"],
+      "forbidden_effects": ["scene_mutation", "diagnostic_mutation", "filesystem_write"],
+      "required_args": {"lesson": {"action": "start", "lesson_id": "two_panel_tube"}},
+      "decision": "complete", "blockers": [],
+      "stop_conditions": ["error", "outcome_unknown", "schema_mismatch", "session_change", "stale_target"]
+    },
+    {
+      "id": "import_generated_dxf", "intent": "Импортируй сгенерированный DXF в текущий проект как 5 новых деталей, затем проверь pattern_count; без швов и simulation.",
+      "profile": "current50", "scope": "scene", "fixture": {"ready": true, "patterns": []},
+      "expected_tools": ["get_session_info", "get_pattern_count", "import_dxf"],
+      "forbidden_tools": ["create_pattern", "delete_pattern", "call_api"],
+      "forbidden_effects": ["diagnostic_mutation", "filesystem_write"],
+      "required_args": {},
+      "decision": "complete", "blockers": [],
+      "stop_conditions": ["error", "outcome_unknown", "schema_mismatch", "session_change", "stale_target"]
+    },
+    {
+      "id": "export_pattern_json_readonly", "intent": "Экспортируй native pattern JSON текущего проекта в server-generated artifact и покажи ключи; без импорта и изменения сцены.",
+      "profile": "current50", "scope": "read_only", "fixture": {"ready": true, "patterns": ["panel"]},
+      "expected_tools": ["export_pattern_json"],
+      "forbidden_tools": ["import_pattern_json", "delete_pattern", "call_api"],
+      "forbidden_effects": ["scene_mutation", "diagnostic_mutation", "global_mutation"],
+      "required_args": {},
+      "decision": "complete", "blockers": [],
+      "stop_conditions": ["error", "outcome_unknown", "schema_mismatch", "session_change", "stale_target"]
+    },
+    {
+      "id": "import_pattern_json_replace", "intent": "На пустой/расходной сцене импортируй native pattern JSON и проверь post-import pattern list и seam_count; без merge и без retry.",
+      "profile": "current50", "scope": "scene", "fixture": {"ready": true, "patterns": []},
+      "expected_tools": ["get_session_info", "import_pattern_json"],
+      "forbidden_tools": ["import_dxf", "create_pattern", "call_api"],
+      "forbidden_effects": ["diagnostic_mutation", "filesystem_write"],
+      "required_args": {},
+      "decision": "complete", "blockers": [],
+      "stop_conditions": ["error", "outcome_unknown", "schema_mismatch", "session_change", "stale_target"]
+    },
+    {
+      "id": "seam_partial_ratios", "intent": "Сшей участок кромки panel 0..0.5 с участком back 0.5..1.0 через ratios, затем проверь seam_count +1 и неизменность линий/geometry.",
+      "profile": "current50", "scope": "scene", "fixture": {"ready": true, "patterns": ["panel", "back"]},
+      "expected_tools": ["get_session_info", "get_pattern_list", "get_pattern_lines", "add_seamline_pair_partial"],
+      "forbidden_tools": ["add_seamline_pair", "delete_pattern", "call_api"],
+      "forbidden_effects": ["diagnostic_mutation", "filesystem_write"],
+      "required_args": {"add_seamline_pair_partial": {"pattern_a_index": 0, "expected_name_a": "panel", "line_a_index": 0, "start_ratio_a": 0, "end_ratio_a": 0.5, "pattern_b_index": 1, "expected_name_b": "back", "line_b_index": 0, "start_ratio_b": 0.5, "end_ratio_b": 1, "direction_a": true, "direction_b": false}},
+      "decision": "complete", "blockers": [],
+      "stop_conditions": ["error", "outcome_unknown", "schema_mismatch", "session_change", "stale_target"]
+    },
+    {
+      "id": "avatar_size_measurements", "intent": "Примени .avs размер аватара и покажи, выросли ли мерки; не подменяй нулевой рост успехом.",
+      "profile": "current50", "scope": "scene", "fixture": {"ready": true, "patterns": []},
+      "expected_tools": ["get_session_info", "get_avatars", "import_avatar_size", "get_avatar_measurements"],
+      "forbidden_tools": ["import_avatar", "import_avatar_measurements", "call_api"],
+      "forbidden_effects": ["diagnostic_mutation", "filesystem_write"],
+      "required_args": {},
       "decision": "complete", "blockers": [],
       "stop_conditions": ["error", "outcome_unknown", "schema_mismatch", "session_change", "stale_target"]
     }

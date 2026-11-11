@@ -141,10 +141,24 @@ ECONNREFUSED нормально. Глобальные настройки про�
   `import_avatar_measurements` — CSV мерок для Line Pin.
 - Pattern data: `get_pattern_body_details`, `get_pattern_details`,
   `set_pattern_grain_direction`, `get_mesh_counts`, `set_particle_distance`.
+- Import: `import_dxf` — append one absolute `.dxf` with append/notch options
+  and verify pattern-count growth; no replacement/retry/cleanup.
+- JSON: `export_pattern_json` — read-only native pattern artifact; `import_pattern_json`
+  — destructive scene replacement with post-import list/seam readback.
+- Partial seams: `add_seamline_pair_partial` — sub-segment ratios for multi-line
+  edges, waistband/ease; native success is int 0.
+- Avatar size: `import_avatar_size` — apply `.avs`, report measurement count
+  before/after; zero growth is not success.
+- Lessons: `lesson` — server-local guided steps (`list/start/state/check/reset`),
+  только read-only snapshots и прогресс; scene mutations выполняет клиент,
+  state теряется при restart. Каталог: [уроки](docs/CLO_MCP_LESSONS.md).
 
 Новый путь не загружает extensions и не публикует legacy-команды импорта,
 экспорта, симуляции или exec. Параметризованное создание: до 64 точек, прямые или curve-вершины (0/2/3);
 отверстия не подключены, curve semantics предварительные.
+
+Прототипы вне MCP tool surface: [`prototypes/mueller_trousers`](prototypes/mueller_trousers/README.md) —
+параметрический блок женских брюк по мотивам Мюллер и сын, выдает DXF + JSON.
 
 Описание каждого текущего инструмента: [каталог текущих tools](docs/CLO_MCP_TOOLS.md).
 Выбор и совместное использование: [рецепты](docs/CLO_MCP_WORKFLOWS.md).
