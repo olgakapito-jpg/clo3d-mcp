@@ -88,6 +88,11 @@ ratio  = (export * pattern_perimeter - prefix_offset(line)) / line_length
   длин сторон — посадка/ease (в эталоне до 20.6 мм), его фиксируют, а не
   «исправляют» ratios; точный дубль сегмента между группами — отдельное
   предупреждение.
+- Альтернатива — смоделировать каждую кромку одной `Polyline`-линией
+  (промежуточные точки, концы `Straight`). Тогда один вызов кроет всю кромку.
+  `seam_plan.py --curve-target` даёт 38 пар для такой топологии; `BACK_*`
+  линий 18, `FRONT_*` 15. Цена: насечки теряются как точки, side-кромка
+  удлиняется на ~1.4 мм; длину проверять после импорта.
 
 ## Preflight
 
@@ -128,7 +133,8 @@ ratio  = (export * pattern_perimeter - prefix_offset(line)) / line_length
 ## Порядок для брюк
 
 1. Импорт деталей (`import_pattern_json`), seams=0.
-2. Боковые и шаговые швы (side/inseam) — по 2–4 пары, readback + 3D.
+2. Четыре leg-шва (side/inseam) — по одному whole-line вызову на кромку;
+   readback + 3D после серии.
 3. Центральные швы (center front/back).
 4. Пояс — последним, включая self-seam; именно он чаще даёт abnormal seamlines.
 5. `set_arrangement` для всех деталей: `Leg_Front_L`/`Leg_Back_L`/

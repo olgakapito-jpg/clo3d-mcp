@@ -85,13 +85,12 @@ fail оставляет шаг без retry/cleanup. `reset` очищает пр
    merge-lines/edge-path нет. Ratios partial — line-relative, ascending
    `0 <= start < end <= 1`; `direction` отдельно.
 4. До dispatch — `prototypes.mueller_trousers.seam_plan`: разложить
-   reference-группы на per-line пары (91 сырая, 11 slivers <0.5 мм
-   отбрасываются → 80), конвертировать perimeter-доли в line-relative и
-   прогнать валидатор (интервал в линии, no partial overlap; ease и точный
-   дубль сегмента — отдельные предупреждения). Reference-файл (20 groups) не
-   передавать напрямую: это multi-line runs с perimeter-долями.
-5. Порядок: side/inseam 2–4 пары → `verified`/readback/скриншот → center →
-   waistband последним. Darts и waistband self-seam — partial с ratios 0..1
+   reference-группы на per-line пары и прогнать валидатор; для curve-топологии
+   `--curve-target` даёт **38 пар** (4 leg whole-line + center/darts/waistband),
+   без него — 80 per-line. Конвертировать perimeter-доли в line-relative;
+   reference-файл (20 groups) не передавать напрямую.
+5. Порядок: 4 leg-шва (side/inseam) → readback/3D → center → waistband
+   последним. Darts и waistband self-seam — partial с ratios 0..1
    (whole-line tool отклоняет одинаковые детали). Один вызов — одна пара;
    после каждого `seam_count +1`, линии/geometry неизменны.
 6. `set_arrangement` для 5 деталей на аватар; `get_arrangement` readback.

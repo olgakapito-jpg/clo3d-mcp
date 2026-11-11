@@ -3,8 +3,10 @@
 The schema is taken from a real CLO 2026.1 ExportPatternJSON sample:
 PatternList[].ShapeInfo.LineList carries stable line IDs, and
 SeamLinePairGroupList[].PairList references those IDs with LengthParam ratios.
-ImportPatternJSON is destructive and replaces the scene, so this writer only
-creates a file; the caller decides when to import it.
+Side and inseam edges of the four leg pieces are emitted as one Polyline line
+each, so one seam call can cover the whole edge. ImportPatternJSON is
+destructive and replaces the scene, so this writer only creates a file; the
+caller decides when to import it.
 """
 
 from __future__ import annotations
@@ -65,6 +67,24 @@ def _edge_segments(piece: Piece, edge: str, segments, line_ids):
 
 def _edge_points(piece: Piece, edge: str):
     return [piece.points[i] for i in piece.edges[edge]]
+
+
+def _edge_keys(piece: Piece, edge: str):
+    indices = piece.edges[edge]
+    return [(indices[k], indices[k + 1]) for k in range(len(indices) - 1)]
+
+
+def _merged_line(piece: Piece, edge: str, points, point_ids, ids):
+    indices = piece.edges[edge]
+    line_points = []
+    for position, point_index in enumerate(indices):
+        line_points.append({
+            "ID": point_ids[point_index],
+            "PointType": "Straight" if position in (0, len(indices) - 1) else "Polyline",
+            "GradingRuleID": 0,
+            "Position": _mm(points[point_index]),
+        })
+    return {"ID": ids.next("L"), "PointList": line_points}
 
 
 def _pair_edge(a_piece: Piece, a_edge: str, b_piece: Piece, b_edge: str,
@@ -132,21 +152,43 @@ def to_clo(pattern: PatternSet) -> dict:
     segments_by_piece: dict[str, list] = {}
 
     rows = []
+    merged_line_ids: dict[str, dict[str, str]] = {}
     for piece in pattern.pieces:
         points = list(piece.points)
         point_ids = [ids.next("T") for _ in points]
         line_ids = {}
         lines = []
-        for i, (a, b) in enumerate(zip(points, points[1:] + points[:1])):
+        merge_defs = {}
+        if piece.name != "WAISTBAND":
+            for edge in ("side", "inseam"):
+                keys = _edge_keys(piece, edge)
+                line = _merged_line(piece, edge, points, point_ids, ids)
+                for key in keys:
+                    line_ids[key] = line["ID"]
+                merge_defs[edge] = (keys, min(key[0] for key in keys), line)
+        merged_line_ids[piece.name] = {
+            edge: line["ID"] for edge, (_, _, line) in merge_defs.items()
+        }
+        for i in range(len(points)):
+            key = (i, (i + 1) % len(points))
+            merged_edge = next(
+                (edge for edge, (_, first, _) in merge_defs.items() if i == first),
+                None,
+            )
+            if merged_edge is not None:
+                lines.append(merge_defs[merged_edge][2])
+                continue
+            if any(key in keys for keys, _, _ in merge_defs.values()):
+                continue
             line_id = ids.next("L")
-            line_ids[(i, (i + 1) % len(points))] = line_id
+            line_ids[key] = line_id
             lines.append({
                 "ID": line_id,
                 "PointList": [
                     {"ID": point_ids[i], "PointType": "Straight", "GradingRuleID": 0,
-                     "Position": _mm(a)},
+                     "Position": _mm(points[i])},
                     {"ID": point_ids[(i + 1) % len(points)], "PointType": "Straight",
-                     "GradingRuleID": 0, "Position": _mm(b)},
+                     "GradingRuleID": 0, "Position": _mm(points[(i + 1) % len(points)])},
                 ],
             })
         line_ids_by_piece[piece.name] = line_ids
@@ -181,6 +223,34 @@ def to_clo(pattern: PatternSet) -> dict:
             # Waistband needs a proper multi-piece chain; do not emit a partial guess.
             continue
         a_piece, b_piece = by_name[seam.a], by_name[seam.b]
+        merged_a = merged_line_ids.get(seam.a, {})
+        merged_b = merged_line_ids.get(seam.b, {})
+        if seam.a_edge in merged_a and seam.b_edge in merged_b:
+            a_pts = _edge_points(a_piece, seam.a_edge)
+            b_pts = _edge_points(b_piece, seam.b_edge)
+            aligned = (dist(a_pts[0], b_pts[0]) + dist(a_pts[-1], b_pts[-1])
+                       <= dist(a_pts[0], b_pts[-1]) + dist(a_pts[-1], b_pts[0]))
+            pair = {
+                "First": {
+                    "ShapeID": pattern_ids[seam.a],
+                    "LengthParam": {"fStart": 0.0, "fEnd": 1.0},
+                    "Direction": True,
+                    "LineID": merged_a[seam.a_edge],
+                },
+                "Second": {
+                    "ShapeID": pattern_ids[seam.b],
+                    "LengthParam": {"fStart": 0.0, "fEnd": 1.0},
+                    "Direction": aligned,
+                    "LineID": merged_b[seam.b_edge],
+                },
+            }
+            seam_groups.append({
+                "Name": f"Sewing_{100000 + len(seam_groups) + 1}",
+                "bIsTurned": False,
+                "FoldData": {"iAngle": 180, "iStrength": 5},
+                "PairList": [pair],
+            })
+            continue
         a_segments = _edge_segments(a_piece, seam.a_edge,
                                     segments_by_piece[seam.a], line_ids_by_piece[seam.a])
         b_segments = _edge_segments(b_piece, seam.b_edge,

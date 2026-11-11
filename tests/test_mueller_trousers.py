@@ -134,6 +134,17 @@ def test_clo_json_has_pieces_and_referentially_valid_seams():
     assert all(len(owners) == 1 for owners in point_owner.values())
     names = [piece["Name"] for piece in data["PatternList"]]
     assert names == ["FRONT_L", "BACK_L", "FRONT_R", "BACK_R", "WAISTBAND"]
+    line_counts = {piece["Name"]: len(piece["ShapeInfo"]["LineList"])
+                   for piece in data["PatternList"]}
+    assert line_counts == {"FRONT_L": 15, "BACK_L": 18,
+                           "FRONT_R": 15, "BACK_R": 18, "WAISTBAND": 4}
+    merged = [line for piece in data["PatternList"]
+              if piece["Name"] != "WAISTBAND"
+              for line in piece["ShapeInfo"]["LineList"]
+              if len(line["PointList"]) > 2]
+    assert len(merged) == 8
+    assert all(any(point["PointType"] == "Polyline"
+                   for point in line["PointList"][1:-1]) for line in merged)
     assert len({group["Name"] for group in data["SeamLinePairGroupList"]}) == len(
         data["SeamLinePairGroupList"])
     for group in data["SeamLinePairGroupList"]:

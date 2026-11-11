@@ -313,6 +313,83 @@ def validate_plan(pairs: list[SeamPair], run_delta_warn_mm: float = 1.0) -> list
     return problems + warnings
 
 
+# Group names are the ones in trousers_sewn_reference.json; a fresh CLO
+# re-export may rename them, so refresh this map with the new reference.
+CURVE_LEG_PAIRS = {
+    # group: (pattern_a, line_a, pattern_b, line_b, direction_a, direction_b)
+    "Sewing_580825": ("BACK_L", 4, "FRONT_L", 14, True, False),
+    "Sewing_583232": ("BACK_R", 4, "FRONT_R", 14, True, False),
+    "Sewing_645874": ("FRONT_R", 12, "BACK_R", 6, True, False),
+    "Sewing_694406": ("BACK_L", 6, "FRONT_L", 12, False, True),
+}
+
+# Center-back target lines: original BACK_L/BACK_R lines 18..28 shift to 7..17
+# after the side and inseam merges in clo_json.py.
+CURVE_CENTER_BACK_SHIFT = -11
+CURVE_CENTER_BACK_GROUP = "Sewing_690044"
+
+
+def _whole_span(pattern: str, line: int, direction: bool, length: float) -> LineSpan:
+    return LineSpan(pattern, line, 0.0, 1.0, direction, 0.0, length, length)
+
+
+def build_curve_plan(pairs: list[SeamPair]) -> list[SeamPair]:
+    """Convert the reference seam plan to the curve-edge target topology.
+
+    Side and inseam edges are one line each; center-back lines shift because
+    of the four merges. Center front, darts and waistband keep their ratios.
+    """
+
+    grouped: dict[str, list[SeamPair]] = {}
+    for pair in pairs:
+        grouped.setdefault(pair.group, []).append(pair)
+
+    result: list[SeamPair] = []
+    done: set[str] = set()
+    for pair in pairs:
+        if pair.group in CURVE_LEG_PAIRS:
+            if pair.group in done:
+                continue
+            done.add(pair.group)
+            pattern_a, line_a, pattern_b, line_b, direction_a, direction_b = \
+                CURVE_LEG_PAIRS[pair.group]
+            members = grouped[pair.group]
+            length_a = sum(item.a.length_mm for item in members)
+            length_b = sum(item.b.length_mm for item in members)
+            result.append(SeamPair(
+                group=pair.group,
+                a=_whole_span(pattern_a, line_a, direction_a, length_a),
+                b=_whole_span(pattern_b, line_b, direction_b, length_b),
+                run_length_a_mm=round(length_a, 6),
+                run_length_b_mm=round(length_b, 6),
+                run_length_delta_mm=round(abs(length_a - length_b), 6),
+                whole_line_a=True,
+                whole_line_b=True,
+            ))
+            continue
+        if pair.group == CURVE_CENTER_BACK_GROUP:
+            def shifted(span: LineSpan) -> LineSpan:
+                return LineSpan(
+                    span.pattern,
+                    span.line + CURVE_CENTER_BACK_SHIFT,
+                    span.start_ratio, span.end_ratio, span.direction,
+                    span.start_mm, span.end_mm, span.length_mm,
+                )
+            result.append(SeamPair(
+                group=pair.group,
+                a=shifted(pair.a),
+                b=shifted(pair.b),
+                run_length_a_mm=pair.run_length_a_mm,
+                run_length_b_mm=pair.run_length_b_mm,
+                run_length_delta_mm=pair.run_length_delta_mm,
+                whole_line_a=pair.whole_line_a,
+                whole_line_b=pair.whole_line_b,
+            ))
+            continue
+        result.append(pair)
+    return result
+
+
 def plan_to_dict(pairs: list[SeamPair], target_index: dict[str, int] | None = None) -> dict:
     entries = []
     for pair in pairs:
@@ -358,6 +435,8 @@ def _main(argv: list[str] | None = None) -> int:
                         help="map 0..4 to FRONT_R/BACK_L/FRONT_L/BACK_R/WAISTBAND")
     parser.add_argument("--olga-target", action="store_true",
                         help="add imported-scene pattern indices")
+    parser.add_argument("--curve-target", action="store_true",
+                        help="apply merged side/inseam line indices")
     parser.add_argument("--out", type=Path)
     args = parser.parse_args(argv)
 
@@ -366,6 +445,8 @@ def _main(argv: list[str] | None = None) -> int:
         REFERENCE_NAME_MAP if args.reference_names else None,
     )
     pairs = built.pairs
+    if args.curve_target:
+        pairs = build_curve_plan(pairs)
     problems = validate_plan(pairs)
     print(f"pairs: {len(pairs)}")
     print(f"whole line pairs: {sum(p.whole_line_a and p.whole_line_b for p in pairs)}")

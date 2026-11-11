@@ -7,10 +7,12 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from prototypes.mueller_trousers.seam_plan import (  # noqa: E402
+    CURVE_LEG_PAIRS,
     REFERENCE_NAME_MAP,
     LineSpan,
     SeamPair,
     SeamPlanError,
+    build_curve_plan,
     build_plan,
     decompose_export,
     plan_to_dict,
@@ -170,3 +172,29 @@ def test_same_pattern_whole_line_pair_uses_partial_tool():
     pair = SeamPair("dart", span, span, 100.0, 100.0, 0.0, True, True)
     [entry] = plan_to_dict([pair])["pairs"]
     assert entry["tool"] == "add_seamline_pair_partial"
+
+
+def test_curve_plan_merges_leg_edges_and_remaps_center_back():
+    def pair(group, a_pattern, a_line, b_pattern, b_line):
+        span_a = LineSpan(a_pattern, a_line, 0.0, 1.0, True, 0.0, 100.0, 100.0)
+        span_b = LineSpan(b_pattern, b_line, 0.0, 1.0, True, 0.0, 100.0, 100.0)
+        return SeamPair(group, span_a, span_b, 100.0, 100.0, 0.0, True, True)
+
+    pairs = [
+        pair("Sewing_580825", "BACK_L", 4, "FRONT_L", 26),
+        pair("Sewing_583232", "BACK_R", 4, "FRONT_R", 26),
+        pair("Sewing_645874", "FRONT_R", 12, "BACK_R", 18),
+        pair("Sewing_694406", "BACK_L", 17, "FRONT_L", 12),
+        pair("Sewing_690044", "BACK_L", 18, "BACK_R", 18),
+        pair("Sewing_687376", "FRONT_R", 6, "FRONT_L", 6),
+    ]
+    result = build_curve_plan(pairs)
+    assert len(result) == 6
+    legs = {item.group: item for item in result if item.group in CURVE_LEG_PAIRS}
+    assert (legs["Sewing_580825"].a.pattern, legs["Sewing_580825"].a.line) == ("BACK_L", 4)
+    assert (legs["Sewing_580825"].b.pattern, legs["Sewing_580825"].b.line) == ("FRONT_L", 14)
+    assert (legs["Sewing_583232"].b.line) == 14
+    assert (legs["Sewing_645874"].a.line, legs["Sewing_645874"].b.line) == (12, 6)
+    assert (legs["Sewing_694406"].a.line, legs["Sewing_694406"].b.line) == (6, 12)
+    center = next(item for item in result if item.group == "Sewing_690044")
+    assert (center.a.line, center.b.line) == (7, 7)

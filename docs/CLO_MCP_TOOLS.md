@@ -428,7 +428,8 @@ Live tool gate on build975dcebc4e10: own MCP_SEAM_C/D line0 →
 `{verified:true,seam_count:18}`, readback lines/geometry unchanged.
 Один вызов = **одна пара кромок**, и каждая кромка — **одна `LineList`-линия**.
 Multi-segment edge (кромка, разбитая насечками) требует несколько вызовов;
-merge-lines/edge-path API нет. Для трубы из двух
+если кромка смоделирована одной curve/`Polyline`-линией, один вызов покрывает
+её целиком. Merge-lines/edge-path API нет. Для трубы из двух
 панелей нужны два шва: `A.left↔B.left` и `A.right↔B.right`; `line0↔line0`,
 `bottom↔bottom` или один шов трубу не закрывают. Directions выбирать по
 физическим концам кромок, не предполагать `True/True`. Исторический live gate

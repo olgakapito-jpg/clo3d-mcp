@@ -171,7 +171,9 @@ whole-line. Один сегмент `BACK_R line18` покрыт двумя гр
 `LineList`. Проверено на панели из 5 точек: вызов по `line0` сшил 60.8 мм из
 120 мм кромки, export дал `fEnd=0.15144`. API merge-lines/edge-path не
 предоставляет; `DeletePoint` есть нативно, но не опубликован и уничтожил бы
-насечки. Поэтому multi-segment кромка воспроизводится несколькими парами.
+насечки. Поэтому multi-segment кромка воспроизводится несколькими парами —
+**если она остаётся polyline**. Если кромка смоделирована одной
+`Polyline`-линией, один вызов покрывает её целиком (см. ниже).
 
 `ImportPatternJSON` швы не восстановил: live-импорт 5 деталей дал
 `seam_count_after=0`. Прямая передача reference `LengthParam` в partial tool
@@ -180,6 +182,19 @@ whole-line. Один сегмент `BACK_R line18` покрыт двумя гр
 декомпозиция, конвертация perimeter-долей в line-relative, валидатор
 (`0 <= start < end <= 1`, попадание в линию, нет частичных overlap; точный
 duplicate между группами — warning).
+
+## Curve-edge generator 2026-11-11
+
+`clo_json.py` теперь объединяет `side` и `inseam` каждой ноги в одну
+`Polyline`-линию (промежуточные точки, концы `Straight`): `FRONT_*` 15 линий,
+`BACK_*` 18, `WAISTBAND` 4. `seam_plan.py --curve-target` даёт **38 пар**:
+4 leg whole-line + 6 center front + 11 center back + 4 darts + 12 waistband +
+1 self. Live replay: 38 вызовов, `seam_count=38`, `simulate(120)` после
+`Leg_*` + `Body_Waist_L`/180 — чистый front/back/side без дыр.
+
+Цена: side-кромка 1089.6 → 1091.0 мм (+1.4), inseam +0.1 мм; насечки на
+merged-кромках теряются как отдельные точки (остаются Polyline-вершинами).
+`BACK_R line18` отдан center back, duplicate устранён.
 
 ## Staged replay 2026-11-11
 

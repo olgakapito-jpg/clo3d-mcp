@@ -82,8 +82,9 @@ if unavailable, read its `SKILL.md` directly. Do not load unrelated skills.
 - Seam ratios and seam export live in different spaces: partial-seam input is
   line-relative and ascending (`start < end`), while exported `LengthParam` is
   a perimeter fraction that includes the line's prefix offset. Never feed an
-  exported/reference `LengthParam` back as an input ratio; decompose
-  multi-line reference runs into per-line pairs. There is no seam delete API.
+  exported/reference `LengthParam` back as an input ratio. Decompose multi-line
+  reference runs into per-line pairs, or model each edge as one curve line and
+  validate its length; there is no seam delete API.
 - No blocking pipe operations, sleeps, network requests or dependency installs
   in UI callbacks. A long synchronous CLO API call can still block the UI.
 - One-shot native diagnostics: one run per verified session, a distinct builtins

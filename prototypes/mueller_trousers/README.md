@@ -79,9 +79,25 @@ python -m prototypes.mueller_trousers --size 40 `
 - `geometry.py` — 2D-хелперы, Безье, площадь, проверка простого полигона;
 - `draft.py` — построение 4 половинок и пояса, насечки, grainline, план швов;
 - `dxf.py` — DXF R12 writer + JSON sidecar;
+- `clo_json.py` — CLO pattern JSON; side/inseam кромки каждой ноги
+  экспортируются одной `Polyline`-линией (промежуточные точки), остальные
+  линии — обычные сегменты;
 - `seam_plan.py` — декомпозиция экспортированных CLO seam groups в per-line
   пары, конвертация perimeter-долей в line-relative ratios и валидатор;
+  `--curve-target` переводит план на merged-edge топологию (38 пар);
 - `__main__.py` — CLI.
+
+## Curve edges
+
+`clo_json.py` объединяет `side` и `inseam` каждой из четырёх ног в одну линию:
+`FRONT_*` 15 линий, `BACK_*` 18, `WAISTBAND` 4. Промежуточные точки получают
+`PointType: "Polyline"`, концы — `Straight`. Это даёт один seam-вызов на
+кромку вместо 10–12. Длина side-кромки меняется на ~1.4 мм (curve
+interpolation), inseam — на ~0.1 мм; проверять после импорта.
+
+Насечки на merged-кромках больше не отдельные точки линии: они теряются как
+насечки, но остаются в геометрии как Polyline-вершины. Это осознанный
+компромисс прототипа.
 
 ## Импорт в CLO
 
@@ -94,9 +110,10 @@ python -m prototypes.mueller_trousers --size 40 `
 5. При необходимости добавить припуск средствами CLO; DXF содержит линию шва.
 6. Посадить детали на аватар через arrangement points и сшить. Готовый план:
    `python -m prototypes.mueller_trousers.seam_plan export.json
-   --reference-names --olga-target --out seam_plan.json`. Он раскладывает
-   reference-группы на per-line пары и проверяет ratios/покрытие; reference
-   `LengthParam` напрямую в API не подавать. Вытачки и self-seam пояса —
+   --reference-names --curve-target --olga-target --out seam_plan.json`.
+   `--curve-target` даёт 38 пар (4 leg whole-line + center/darts/waistband);
+   без него — 80 per-line пар для polyline-топологии. Reference `LengthParam`
+   напрямую в API не подавать. Вытачки и self-seam пояса —
    `add_seamline_pair_partial` с ratios 0..1: whole-line tool отклоняет
    одинаковые pattern indices.
 7. Сначала 2 боковых и 2 шаговых шва, затем центр, затем пояс; после каждого
